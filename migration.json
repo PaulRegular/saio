@@ -1,35 +1,35 @@
 {
   "source_repository": "https://github.com/PaulRegular/tinyAM",
-  "source_branch": "comp-assessments",
-  "source_commit": "34470212e1102f3f31bf3f08c26a8a72a985c948",
+  "source_branch": "main",
+  "source_commit": "78f3d347331b0e770d55a855de4c5b90307fd400",
   "reviewed_main_commit": "78f3d347331b0e770d55a855de4c5b90307fd400",
   "source_path": "analysis/comp_assessments",
   "schema_version": "1",
   "tables": [
     {
       "name": "assessments.csv",
-      "bytes": 135184,
-      "sha256": "139fe1770d65c566d805b8a6905b7eed92f2dacb4cb6750763c68f27c6bdd165"
+      "bytes": 34466,
+      "sha256": "dd25d6b0d49362782013689fdee7c784bb3da9bdfba5dab8ec34545ede4eb472"
     },
     {
       "name": "assumptions.csv",
-      "bytes": 1074241,
-      "sha256": "385ffd7f600b5b0d607326b7d3438b201330a679e41d82f55d27171aa7f9b2aa"
+      "bytes": 416960,
+      "sha256": "83df9f09cca2c39cd21a726b76a7fdcc8b6fad76088992f7bd4922de7b878027"
     },
     {
       "name": "inputs.csv",
-      "bytes": 548948870,
-      "sha256": "07ed4207e8878d96e9302c529dfecb69490b746f1ae282fcd00e670b1825eec3"
+      "bytes": 87414373,
+      "sha256": "c20c30cb932140c37842f5c8ab5c3fa35e6dba95d28078b296a6f97a8c471bea"
     },
     {
       "name": "outputs.csv",
-      "bytes": 525183576,
-      "sha256": "f10c3d7071c6f5cf560edb1286a6efcbc3ba7efe9f0fc6ae7561801cb3ce1afd"
+      "bytes": 44089822,
+      "sha256": "f0341cb8176b5b4f8487798248b877ab5165bbcea2e23ae43c37ca700dcfba3f"
     },
     {
       "name": "stocks.csv",
-      "bytes": 79821,
-      "sha256": "7b3ddc206bb663a357bce4968d00002541cd53fb7f96ccec026f57d03b4e7aab"
+      "bytes": 10906,
+      "sha256": "68d54b82d8167c3994e0295dbc1caf6f03b0b74cd46b57803d45693a4f0a0d23"
     }
   ],
   "source_tests": [
@@ -349,5 +349,6 @@
     "test_sog_herring_source.R",
     "test_yellowfin_sole_source.R"
   ],
-  "provenance_manifests": 414
+  "provenance_manifests": 414,
+  "purpose": "Frozen reviewed tinyAM source snapshot; current importers are not intended for this historical data view."
 }
