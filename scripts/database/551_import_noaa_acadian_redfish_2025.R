@@ -18,7 +18,7 @@ output_file <- "2025_RED_UNIT_FIG_BaseWHAMFiguresTables.html"
 output_name <- file.path("figures", output_file)
 output_sha256 <- "009dd6a38215b2e4ce2eb8f10dc51e2fa5959542cfd198af7a8e938fd5ed679b"
 
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "database", "candidate_register_io.R"), local = TRUE)
 
 read_table <- function(path) {
   utils::read.csv(path, stringsAsFactors = FALSE, check.names = FALSE,
@@ -567,7 +567,7 @@ if (!dry_run && (candidate_data$eligibility[candidate_row] != "eligible" ||
   stop("The selected NOAA candidate is not ready for this first source import.", call. = FALSE)
 }
 inventory <- read_table(inventory_path)
-inventory_row <- which(inventory$unit_key == paste0("candidate:", stock_id))
+inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
 selected <- read_table(selected_path)
 selected_row <- which(selected$candidate_unit_id == stock_id)
 if (length(inventory_row) != 1L || length(selected_row) != 1L) {
@@ -670,7 +670,7 @@ if (!dry_run) {
     candidate_data[candidate_row, , drop = FALSE], candidate_id)
 
   inventory$import_status[inventory_row] <- "partial"
-  replace_csv_row(inventory_path, "unit_key", paste0("candidate:", stock_id),
+  replace_csv_row(inventory_path, "unit_key", inventory$unit_key[inventory_row],
     inventory_row, inventory[inventory_row, , drop = FALSE])
 
   selected$curation_status[selected_row] <- "partial_source_import"

@@ -1,4 +1,5 @@
 root <- "."
+dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "discovery_ices_celtic_sea_herring_2026")
 candidate_id <- "ICES:her.27.irls"
@@ -8,8 +9,8 @@ report_url <- "https://doi.org/10.17895/ices.pub.31424315"
 report_reference <- "ICES HAWG 2026, section 6 and Tables 6.6.1.1-6.6.1.4"
 survey <- "Celtic Sea Pelagic Ecosystem Survey (CSHAS)"
 
-source(file.path(root, "scripts", "database", "pacific_tables.R"))
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "database", "pacific_tables.R"), local = TRUE)
+source(file.path(root, "scripts", "database", "candidate_register_io.R"), local = TRUE)
 
 sha256_file <- function(path) {
   result <- system2("certutil.exe", c("-hashfile", shQuote(path), "SHA256"),
@@ -388,7 +389,7 @@ existing_stocks <- utils::read.csv(file.path(database, "stocks.csv"), stringsAsF
 existing_assessments <- utils::read.csv(file.path(database, "assessments.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 if (!stock_id %in% existing_stocks$stock_id && !assessment_id %in% existing_assessments$assessment_id) {
-  append_pacific_case(stock, assessment, assumptions, input_data, outputs)
+  if (!dry_run) append_pacific_case(stock, assessment, assumptions, input_data, outputs)
 } else {
   if (sum(existing_stocks$stock_id == stock_id, na.rm = TRUE) != 1L ||
       sum(existing_assessments$assessment_id == assessment_id, na.rm = TRUE) != 1L) {
@@ -450,44 +451,45 @@ replace_discovery_row <- function(path, row_index, row, key_column, key) {
   }
 }
 
-candidates_path <- file.path(root, "discovery", "candidates.csv")
-candidates <- utils::read.csv(candidates_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-candidate_row <- which(candidates$candidate_id == candidate_id)
-if (length(candidate_row) != 1L) stop("Expected one Celtic Sea herring candidate row.", call. = FALSE)
-candidates$import_status[candidate_row] <- "partial"
-candidates$review_date[candidate_row] <- "2026-11-03"
-candidates$output_evidence[candidate_row] <- paste(
-  "HAWG Table 6.6.1.4 provides annual catch, SSB, total biomass, Fbar ages 2-5 and age-1 recruitment through 2025.",
-  "No uncertainty intervals or fitted N-at-age/F-at-age values were recovered."
-)
-if (!grepl("Imported report-table inputs and outputs", candidates$notes[candidate_row], fixed = TRUE)) {
-  candidates$notes[candidate_row] <- paste(
-    candidates$notes[candidate_row],
-    "Imported report-table inputs and outputs. The 2019 acoustic index row and 2025 catch input/output disagree internally; source values are retained pending the native run files."
+if (!dry_run) {
+  candidates_path <- file.path(root, "discovery", "candidates.csv")
+  candidates <- utils::read.csv(candidates_path, stringsAsFactors = FALSE,
+    na.strings = c("", "NA"), check.names = FALSE)
+  candidate_row <- which(candidates$candidate_id == candidate_id)
+  if (length(candidate_row) != 1L) stop("Expected one Celtic Sea herring candidate row.", call. = FALSE)
+  candidates$import_status[candidate_row] <- "partial"
+  candidates$review_date[candidate_row] <- "2026-11-03"
+  candidates$output_evidence[candidate_row] <- paste(
+    "HAWG Table 6.6.1.4 provides annual catch, SSB, total biomass, Fbar ages 2-5 and age-1 recruitment through 2025.",
+    "No uncertainty intervals or fitted N-at-age/F-at-age values were recovered."
   )
+  if (!grepl("Imported report-table inputs and outputs", candidates$notes[candidate_row], fixed = TRUE)) {
+    candidates$notes[candidate_row] <- paste(
+      candidates$notes[candidate_row],
+      "Imported report-table inputs and outputs. The 2019 acoustic index row and 2025 catch input/output disagree internally; source values are retained pending the native run files."
+    )
+  }
+  replace_candidate_register_row(candidates_path, candidate_row,
+    candidates[candidate_row, , drop = FALSE], candidate_id)
+
+  inventory_path <- file.path(root, "discovery", "inventory_units.csv")
+  inventory <- utils::read.csv(inventory_path, stringsAsFactors = FALSE,
+    na.strings = c("", "NA"), check.names = FALSE)
+  inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
+  inventory$import_status[inventory_row] <- "partial"
+  replace_discovery_row(inventory_path, inventory_row,
+    inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
+
+  selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+  selected <- utils::read.csv(selected_path, stringsAsFactors = FALSE,
+    na.strings = c("", "NA"), check.names = FALSE)
+  selected_row <- which(selected$candidate_id == candidate_id)
+  if (length(selected_row) != 1L) stop("Expected one selected Celtic Sea herring row.", call. = FALSE)
+  selected$review_date[selected_row] <- "2026-11-03"
+  selected$curation_status[selected_row] <- "partial_source_import"
+  replace_discovery_row(selected_path, selected_row,
+    selected[selected_row, , drop = FALSE], "candidate_id", candidate_id)
 }
-replace_candidate_register_row(candidates_path, candidate_row,
-  candidates[candidate_row, , drop = FALSE], candidate_id)
 
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-inventory <- utils::read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-inventory_row <- which(inventory$unit_key == paste0("candidate:", stock_id))
-if (length(inventory_row) != 1L) stop("Expected one Celtic Sea herring inventory row.", call. = FALSE)
-inventory$import_status[inventory_row] <- "partial"
-replace_discovery_row(inventory_path, inventory_row,
-  inventory[inventory_row, , drop = FALSE], "unit_key", paste0("candidate:", stock_id))
-
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
-selected <- utils::read.csv(selected_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-selected_row <- which(selected$candidate_id == candidate_id)
-if (length(selected_row) != 1L) stop("Expected one selected Celtic Sea herring row.", call. = FALSE)
-selected$review_date[selected_row] <- "2026-11-03"
-selected$curation_status[selected_row] <- "partial_source_import"
-replace_discovery_row(selected_path, selected_row,
-  selected[selected_row, , drop = FALSE], "candidate_id", candidate_id)
-
-cat("Imported partial Celtic Sea herring source records:", nrow(input_data), "inputs,",
+cat(if (dry_run) "Dry run parsed Celtic Sea herring source records:" else "Imported partial Celtic Sea herring source records:", nrow(input_data), "inputs,",
   nrow(assumptions), "assumptions, and", nrow(outputs), "outputs.\n")

@@ -54,3 +54,24 @@ stopifnot(nrow(after_remove_last) == 1L,
 
 unlink(path)
 cat('Candidate register updates preserve quoted newlines, skip blank CSV lines, and remove exact records safely.\n')
+
+inventory <- data.frame(unit_key = "candidate:case", candidate_unit_id = "case",
+  matched_stock_id = NA_character_, candidate_ids = "ICES:case | NOAA:case")
+stopifnot(candidate_inventory_row(inventory, "ICES:case", "case") == 1L,
+  candidate_inventory_row(inventory, "NOAA:case", "case") == 1L)
+inventory$unit_key <- "stock:case"
+inventory$candidate_unit_id <- NA_character_
+inventory$matched_stock_id <- "case"
+stopifnot(candidate_inventory_row(inventory, "ICES:case", "case") == 1L)
+conflicting_key <- inventory
+conflicting_key$unit_key <- "stock:another_stock"
+for (case in list(
+  list(inventory, "absent", "case"),
+  list(inventory, "ICES:case", "wrong_stock"),
+  list(conflicting_key, "ICES:case", "case"),
+  list(rbind(inventory, inventory), "ICES:case", "case")
+)) {
+  error <- tryCatch(do.call(candidate_inventory_row, case), error = identity)
+  stopifnot(inherits(error, "error"))
+}
+cat("Inventory lookup supports candidate and stock keys while rejecting ambiguous or conflicting units.\n")

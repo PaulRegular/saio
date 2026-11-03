@@ -1,5 +1,11 @@
 root <- "."
+source_paths <- c(list.files("database", pattern = "[.]csv$", full.names = TRUE),
+  list.files("discovery", pattern = "[.]csv$", full.names = TRUE))
+source_hashes <- tools::md5sum(source_paths)
 import_env <- new.env(parent = globalenv())
+import_env$commandArgs <- function(trailingOnly = FALSE) {
+  if (trailingOnly) "--dry-run" else base::commandArgs(trailingOnly = FALSE)
+}
 source(file.path(root, "scripts", "database", "550_import_ices_celtic_sea_herring_2026.R"),
   local = import_env
 )
@@ -141,9 +147,10 @@ stopifnot(
   candidates$import_status[candidates$candidate_id == "ICES:her.27.irls"] == "partial",
   length(strsplit(candidate_note, "Imported report-table inputs and outputs.", fixed = TRUE)[[1L]]) == 2L,
   selected$curation_status[selected$candidate_id == "ICES:her.27.irls"] == "partial_source_import",
-  inventory$import_status[inventory$unit_key == paste0("candidate:", stock_id)] == "partial",
+  inventory$import_status[import_env$candidate_inventory_row(inventory, "ICES:her.27.irls", stock_id)] == "partial",
   grepl("The 2019 acoustic input table prints age-2 abundance as 98,229", review, fixed = TRUE),
   grepl("Both values are imported in their separate source contexts without correction", review, fixed = TRUE)
 )
 
 cat("ICES 2026 Celtic Sea herring source import, coverage, units, source conflicts, and official-output checks passed.\n")
+stopifnot(identical(source_hashes, tools::md5sum(source_paths)))

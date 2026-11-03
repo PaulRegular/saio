@@ -1,3 +1,17 @@
+candidate_inventory_row <- function(inventory, candidate_id, stock_id) {
+  ids <- strsplit(as.character(inventory$candidate_ids), " | ", fixed = TRUE)
+  row <- which(vapply(ids, function(x) candidate_id %in% x, logical(1L)))
+  if (length(row) != 1L ||
+      !inventory$unit_key[row] %in% paste0(c("candidate:", "stock:"), stock_id) ||
+      !stock_id %in% c(
+    inventory$matched_stock_id[row], inventory$candidate_unit_id[row]
+  )) {
+    stop("Expected one inventory unit for candidate ", candidate_id,
+      " and stock ", stock_id, ".", call. = FALSE)
+  }
+  row
+}
+
 csv_record_bounds <- function(bytes) {
   if (!length(bytes)) stop('Candidate register is empty.', call. = FALSE)
 

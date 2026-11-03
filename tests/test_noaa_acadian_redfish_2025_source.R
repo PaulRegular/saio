@@ -1,4 +1,7 @@
 root <- "."
+source_paths <- c(list.files("database", pattern = "[.]csv$", full.names = TRUE),
+  list.files("discovery", pattern = "[.]csv$", full.names = TRUE))
+source_hashes <- tools::md5sum(source_paths)
 import_env <- new.env(parent = globalenv())
 import_env$commandArgs <- function(trailingOnly = FALSE) {
   if (trailingOnly) "--dry-run" else base::commandArgs(trailingOnly = FALSE)
@@ -181,9 +184,10 @@ stopifnot(
   sum(inputs$assessment_id == assessment_id) == nrow(x),
   sum(outputs$assessment_id == assessment_id) == nrow(y),
   candidate$import_status[candidate$candidate_id == "NOAA:10455"] == "partial",
-  inventory$import_status[inventory$unit_key == paste0("candidate:", stock_id)] == "partial",
+  inventory$import_status[import_env$candidate_inventory_row(inventory, "NOAA:10455", stock_id)] == "partial",
   selected$curation_status[selected$candidate_unit_id == stock_id] == "partial_source_import",
   grepl("source-supplied effective sample size", review, fixed = TRUE)
 )
 
 cat("NOAA Acadian redfish 2025 source, provenance, input/output, and derived-series tests passed.\n")
+stopifnot(identical(source_hashes, tools::md5sum(source_paths)))
