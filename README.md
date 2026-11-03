@@ -35,4 +35,4 @@ The reviewed and preliminary tinyAM translations remain in tinyAM. Their governi
 
 ## Attribution and reuse
 
-Retain the source attribution and any source-specific reuse terms. This migration does not assign a new blanket licence to third-party assessment material. Code originating in tinyAM retains its original attribution; see the original repository for its licence.
+Retain the source attribution and any source-specific reuse terms. This migration does not assign a new blanket licence to third-party assessment material. Code originating in tinyAM retains its original attribution and GPL (>= 3) licence, preserved in CODE_LICENSE.md.
