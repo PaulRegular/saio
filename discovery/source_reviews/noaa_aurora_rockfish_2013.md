@@ -2,7 +2,7 @@
 
 ## Screening decision
 
-**Identity:** new NOAA/PFMC candidate; no matching canonical tinyAM stock was found.
+**Identity:** new NOAA/PFMC candidate.
 
 **Latest assessment:** the accepted coastwide 2013 Stock Synthesis assessment, with data through 2012. The 2025 Groundfish SAFE and NMFS's February 2026 assessment-priority report still identify 2013 as the most recent assessment. The Council's Amendment 37 action defines Aurora rockfish as coastwide in the Pacific Coast Groundfish FMP; NMFS review of that amendment was still underway at the time of this review. The 2013 model also treated the U.S. Pacific Coast population as a single stock, off Washington, Oregon and California. No separate older stock-unit fallback is indicated by the evidence reviewed.
 

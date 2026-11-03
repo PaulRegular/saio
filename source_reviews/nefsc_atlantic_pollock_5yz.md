@@ -25,7 +25,3 @@ The native output file supplies January 1 N-at-age, directed and discard F-at-ag
 - [Official ASAP3 output file](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2024&species_id=7&stock_id=6&review_type_id=3&info_type_id=3&map_type_type_id=&map_type_id=&filename=2024_POK_UNIT_MOD_BaseASAPOutput.rep)
 - [2024 pollock update report (draft; supporting details only)](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2024&species_id=7&stock_id=6&review_type_id=3&info_type_id=-1&map_type_id=&filename=2024_POK_UNIT_RPT_Update_2024_09_20.pdf)
 - [2026 data and projection update](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2026&species_id=7&stock_id=6&review_type_id=7&info_type_id=-1&map_type_id=&filename=data_projection_update_pollock_20260817.pdf)
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/nefsc_atlantic_pollock_5yz.md). They do not determine source completeness or official run selection.

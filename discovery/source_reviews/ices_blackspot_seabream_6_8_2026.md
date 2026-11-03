@@ -38,8 +38,7 @@ age-specific model inputs or population outputs. The decision is based on the
 current official assessment record; the older 2024 table does not supply the
 missing age-specific series.
 
-No canonical stock, assessment, input, or output records were added. No tinyAM
-translation was attempted.
+No canonical stock, assessment, input, or output records were added.
 
 ## Sources
 

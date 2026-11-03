@@ -45,9 +45,7 @@ histories begin in 1940 for Washington, 1892 for Oregon, and 1875 for both
 California components.
 
 Catch-at-age and age-specific survey indices are not all provided as direct
-observation matrices. Some tinyAM inputs would require documented
-reconstruction from catch totals, age compositions, conditional age-at-length
-samples, and aggregate survey indices. Preserve the original likelihood inputs
+observation matrices. Preserve the original likelihood inputs
 and regional settings. Natural mortality and other assumptions differ among
 the regional models and sexes.
 
@@ -55,8 +53,7 @@ The official archives provide sex-specific abundance-at-age and
 biomass-at-age. California spawning output is reported in millions of eggs,
 not spawning biomass in tonnes. The case is eligible for source curation
 because age-based inputs can be reconstructed from the native data and numeric
-age-specific outputs are available. This does not mean the tinyAM likelihood
-would match Stock Synthesis exactly.
+age-specific outputs are available.
 
 ## Screening decision
 
@@ -70,9 +67,7 @@ correspondence unresolved, and do not pool observations or biology across model
 components. Keep NOAA:10402, NOAA:11302, and NOAA:14408 as ambiguous,
 ineligible historical rows. The prior register entry NOAA:166727 was invalid as
 a stock key and has been removed; it was a taxonomic identifier, not a Stock
-SMART stock row. No tinyAM translation has been attempted.
-
-## Sources
+SMART stock row. ## Sources
 
 - [NOAA Stock SMART changelog](https://noaa-edab.github.io/stocksmart/news/index.html)
 - [PFMC groundfish assessment documents and model files](https://www.pcouncil.org/stock-assessments-star-reports-stat-reports-rebuilding-analyses-terms-of-reference/groundfish-stock-assessment-documents/)

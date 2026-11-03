@@ -48,8 +48,6 @@ catch numbers-at-age, age-specific survey indices, fixed M, survey timing, and
 comparable official outputs. It is not yet ready for numerical
 import because the input matrices require figure digitization and unit/coverage
 validation. No canonical assessment, input, or output rows have been added, and
-no tinyAM translation has been attempted.
-
 The ICES SAG XML endpoint returned HTTP 503 during retrieval. The official graph,
 source-data, advice pages, and MFRI report were cached instead. Their URLs,
 revision descriptions, retrieval date, sizes, and SHA-256 checksums are in

@@ -30,10 +30,7 @@ and northern Spanish coasts and that the model used length compositions from
 2009–2023, commercial landings, and a standardized Portuguese polyvalent-fleet
 CPUE index. Its base case set empirical weight-at-age unavailable, borrowed
 length-weight and maturity relationships from the Strait of Gibraltar GFCM
-model, and used an age-specific M curve derived from that model. The model's
-age structure is therefore inferred from length data and borrowed biological
-assumptions, rather than supported by the age-disaggregated observations
-required for the current tinyAM comparison scope.
+model, and used an age-specific M curve derived from that model.
 
 The benchmark is useful detailed documentation, but it is not identified as
 the run underlying the later 2026 advice. The current 2026 advice-linked
@@ -51,8 +48,7 @@ benchmark's aggregate model outputs do not change that input limitation.
 This decision does not assert that unreviewed age samples do not exist
 elsewhere.
 
-No canonical stock, assessment, input, or output records were added. No
-tinyAM translation was attempted.
+No canonical stock, assessment, input, or output records were added.
 
 ## Sources
 

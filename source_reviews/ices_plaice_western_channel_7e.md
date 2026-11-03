@@ -123,14 +123,10 @@ is retained solely to establish current monitoring/advice status.
 
 ## Translation limit
 
-The source does not support a current age-structured tinyAM fit: current
-catch-at-age and biological surfaces are not recovered, while the official
-rule does not estimate annual N/F/M-at-age, recruitment or absolute SSB.
 The aggregate biomass index cannot be split into invented age-specific
 number indices. MSE operating models and earlier trial SAM fits are not
 substituted for official annual estimates.
 
-No tinyAM fit, agreement statistics or comparison dashboard is claimed.
 Preparation returns no stock specification, and tests ensure that the native
 indicators do not fill standard SSB/F/N comparison tables. This is a source
 and assessment-structure shortfall rather than numerical non-convergence.

@@ -47,7 +47,7 @@ specifies catch-at-age and three age-specific survey series. The numeric files
 needed to verify the actual observations and biological surfaces are not in
 the reviewed public repository snapshot. A Category 1 or SMS model label is
 not a substitute for those values. No canonical stock, assessment, input or
-output records were added, and no tinyAM translation was attempted.
+output records were added was attempted.
 
 ## Sources
 

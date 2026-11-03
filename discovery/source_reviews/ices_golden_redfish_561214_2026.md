@@ -62,8 +62,6 @@ records, 4,479 input rows, 2,784 output rows and 19 assumption rows. The
 assessment is marked current and applied. Input and output completeness remain
 partial because the spring total-biomass index, exact timing fractions, full
 native SAM configuration and age-specific uncertainty were not recovered.
-No tinyAM translation has been attempted.
-
 All source values remain separate from downstream transformations. The cached
 HTML sources, source URLs, retrieval date, assessment identifiers, revisions
 and SHA-256 checksums are recorded in the gitignored local cache

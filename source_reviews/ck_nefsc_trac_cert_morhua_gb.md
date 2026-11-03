@@ -149,13 +149,8 @@ unavailable age observations.
 There are 1,440 recovered inputs (1,410 for the framework, including 414
 approximate M points), 22 assumptions and ten outputs across the three
 events. All completeness statuses remain
-**partial**. Missing selected NTS catch-at-age, survey age compositions and
-annual CVs, complete biology, the exact native M input array and numerical
-population outputs prevent a
-source-faithful tinyAM fit and dashboard. No fit or completed translation is
-claimed. Future translation should first recover those arrays, then document
-how tinyAM approximates separate totals and compositions, fleets, correlated
-recruitment innovations, initial states and source bias corrections. It must
+**partial**. No fit or completed translation is
+claimed. It must
 start from package defaults and retain diagnostics for any permitted retry.
 
 ## Sources and cache

@@ -15,7 +15,7 @@ The latest DFO stock assessment located is the 2023 Okanagan Chinook assessment,
 
 ## Screening decision
 
-The inventory entry is a distinct new DFO Okanagan Chinook SMU candidate, with assessment year 2023. It is **ineligible for the age-disaggregated assessment set** on the evidence located: the current assessment uses aggregate spawning abundance/status information, does not have cohort-specific escapement and recruitment, and does not supply fishery catch-at-age, age-specific population outputs, or the biological and mortality surfaces needed for a tinyAM-style age-structured model. This does not imply that no age sampling exists; it means the latest assessment's available data and outputs are not an age-structured production assessment. The 2019 Recovery Potential Assessment is retained as historical context for the same unit and is not used to fill gaps in the current assessment.
+The inventory entry is a distinct new DFO Okanagan Chinook SMU candidate, with assessment year 2023. This does not imply that no age sampling exists; it means the latest assessment's available data and outputs are not an age-structured production assessment. The 2019 Recovery Potential Assessment is retained as historical context for the same unit and is not used to fill gaps in the current assessment.
 
 No canonical stock or assessment data are added. The NOAA Stock SMART aggregate remains unreviewed and unlinked; there is not enough evidence for a one-to-one crosswalk. Revisit this screen if DFO or the Okanagan Nation Alliance publishes run-matched age data or an age-structured assessment.
 

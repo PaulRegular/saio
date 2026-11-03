@@ -13,7 +13,7 @@ The 2024 report includes updated assessment tables for Berners River (1989–202
 
 ADF&G samples age, sex, length, and weight from subsets of smolts and returning adults, and uses coded-wire-tag recoveries plus fishery sampling, weirs, or standardized escapement surveys to estimate stock contributions to catch and total run. Those age samples describe escapement and fish size; the reviewed production assessment does not report a catch-at-age likelihood or an age-specific survey abundance index. The 2024 assessment outputs contain no annual N-at-age, F-at-age, or recruitment-at-age series. No run-matched weight-at-age or maturity-at-age surface is identified as a model input.
 
-Berners River and Hugh Smith Lake are therefore **ineligible for the age-disaggregated assessment set** despite age sampling in the monitoring programs. The information reviewed does not support reconstructing catch-at-age without inventing age compositions for harvested fish. Ford Arm Lake is excluded from current-unit consideration because its stock assessment program was discontinued in 2016. No canonical stock, assessment, input, or output records were added, and no tinyAM translation was attempted.
+Berners River and Hugh Smith Lake are therefore **ineligible for the age-disaggregated assessment set** despite age sampling in the monitoring programs. The information reviewed does not support reconstructing catch-at-age without inventing age compositions for harvested fish. Ford Arm Lake is excluded from current-unit consideration because its stock assessment program was discontinued in 2016. No canonical stock, assessment, input, or output records were added was attempted.
 
 ## Cached sources
 

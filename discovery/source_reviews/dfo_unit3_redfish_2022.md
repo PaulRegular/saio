@@ -12,7 +12,7 @@ The 2022 status update uses total landings and the DFO summer RV survey. It repo
 
 The mature biomass index is based on survey abundance at sizes above 22 cm fork length and a combined-sex length-weight relationship derived from 1992-2019 data. This is a size-based maturity proxy and length-weight conversion, not maturity-at-age or weights-at-age. The report's relative fishing mortality metric is landings divided by a smoothed mature biomass index; it is not age-specific F. No natural-mortality process is fitted.
 
-The 2015 framework proceedings document data review and exploratory modelling, but state that Unit 3 model development and a stock-status assessment were planned for 2016-2017. They do not establish run-matched age-specific model inputs or outputs for the current status update. The case is therefore ineligible for the current age-disaggregated tinyAM candidate set on the public sources reviewed. It remains a useful candidate for a future length-based analysis if detailed data become available.
+The 2015 framework proceedings document data review and exploratory modelling, but state that Unit 3 model development and a stock-status assessment were planned for 2016-2017. They do not establish run-matched age-specific model inputs or outputs for the current status update. It remains a useful candidate for a future length-based analysis if detailed data become available.
 
 ## Sources
 

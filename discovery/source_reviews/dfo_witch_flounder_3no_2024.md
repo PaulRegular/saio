@@ -12,7 +12,7 @@ The latest detailed full assessment located is the 2024 NAFO assessment, with mo
 - **Survey indices:** The model uses aggregate biomass indices in thousands of tonnes from four series: Campelen spring (late), Campelen fall, Campelen spring (early), and modified Campelen spring. The report documents non-comparable and incomplete years; the modified Campelen spring series combines selected years from 2014, 2016, 2018 and 2022-2023. No age-specific survey-abundance likelihood is used.
 - **Age data:** The report says ageing has not been available for Canadian RV surveys since 1994. Commercial and survey length compositions and length-based recruitment proxies are described, but the accepted assessment likelihood is not age structured.
 - **Biology:** The source reports length-composition and size-based information. Age-specific weights and maturity are not inputs to the accepted production model.
-- **Mortality and timing:** The surplus-production model estimates biomass dynamics, carrying capacity and population growth; it does not estimate age-specific M or F-at-age. Observations are annual survey series, with no within-year timing fractions specified for a tinyAM-style age model.
+- **Mortality and timing:** The surplus-production model estimates biomass dynamics, carrying capacity and population growth; it does not estimate age-specific M or F-at-age.
 
 ## Outputs
 
@@ -20,7 +20,7 @@ The 2024 detailed assessment reports aggregate posterior reference points and tr
 
 ## Screening decision
 
-This entry is screened **ineligible** for the age-disaggregated tinyAM candidate set. The current official assessment is an aggregate Bayesian surplus-production model based on catch and survey biomass indices. It does not use catch-at-age, age-specific survey abundance, or age-specific biology. The NAFO 3NO unit is distinct from the stock records already in the canonical database. No numerical canonical records were added during this inventory audit.
+The current official assessment is an aggregate Bayesian surplus-production model based on catch and survey biomass indices. It does not use catch-at-age, age-specific survey abundance, or age-specific biology. The NAFO 3NO unit is distinct from the stock records already in the canonical database. No numerical canonical records were added during this inventory audit.
 
 The DFO inventory row is retained as a discovery entry, while the 2024 detailed assessment and 2026 status advice are cached locally. The 2026 advice is not treated as a new full assessment: it states the next full assessment will be in 2028.
 

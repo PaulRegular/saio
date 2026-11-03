@@ -32,7 +32,3 @@ The database records native SAM N-at-age and F-at-age estimates with conditional
 The native summary definitions were checked against the reported population surfaces for every modeled year. With N in thousands of fish and weights in kg per fish, `sum(N * stock weight * maturity)` exactly reproduces SAM SSB in tonnes; `sum(N * stock weight)` exactly reproduces total biomass; and mean F over ages 1–3 exactly reproduces SAM Fbar. No extra factor of 1,000 is applied.
 
 The separate SAG summary event spans 1980–2025. Its 2023 SSB is 1,534 tonnes, compared with 1,590.003 tonnes in the detailed benchmark. The SAG page does not provide age-specific inputs or outputs and does not identify the age range for its aggregate F series. Its F value for 2025 is blank and is omitted rather than imputed. This summary is not used as the translation reference.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_whiting_irish_sea_2025.md). They do not determine source completeness or official run selection.

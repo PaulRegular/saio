@@ -19,18 +19,8 @@ one area, two sexes, 140 population ages, and a January spawning month.
 - The six fishery fleets include retained and discard streams and use catch
   biomass in metric tonnes. Fishery conditional age-at-length (CAAL)
   observations enter the likelihood. Marginal age compositions are present
-  for fit evaluation but are not a separate age-composition likelihood.
-  These data do not provide a direct annual catch-at-age input; a tinyAM
-  catch-at-age series would need to be reconstructed from catches, sampled
-  ages, and weights, with fleet coverage gaps kept explicit.
-- Four survey indices are included: Triennial, Alaska slope, Northwest slope,
-  and WCGBTS. Survey age and length observations and their observation timing
-  are documented in the report and native files. The native assessment does
-  not directly fit an age-specific abundance index, so any such tinyAM input
-  would be a documented reconstruction from aggregate survey indices and
-  age compositions.
-- The assessment derives weight-at-age from its growth and weight-at-length
-  relationships and uses a length-based maturity relationship. Natural
+  for fit evaluation but are not a separate age-composition likelihood. These data do not provide a direct annual catch-at-age input. Survey age and length observations and their observation timing
+  are documented in the report and native files. Natural
   mortality is sex-specific: female M is estimated, while male M is fixed at
   0.036 per year following likelihood-profile analysis. The report explores
   additional M scenarios as a major uncertainty.
@@ -42,7 +32,7 @@ one area, two sexes, 140 population ages, and a January spawning month.
 
 This case is eligible for source curation because the official assessment
 contains age-composition inputs, biological information, and fitted
-age-specific outputs. A tinyAM translation would approximate the source
+age-specific outputs. A would approximate the source
 likelihood and must preserve the single combined complex rather than model
 the two constituent species as two new assessment cases.
 

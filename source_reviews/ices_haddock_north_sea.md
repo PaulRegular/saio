@@ -83,7 +83,7 @@ Recruitment is resampled from 2000–2025 for advice rather than using the fitte
 
 Report section 8.6 explains these differences.
 
-The fitted assessment and advice forecast are distinct products. Forecast adjustments must not be substituted into the official historical state estimates used for comparison with tinyAM.
+The fitted assessment and advice forecast are distinct products.
 
 ## Age surfaces and observation-weight checks
 
@@ -156,7 +156,7 @@ All 648 summary/interval checks and 981 N/F surface crosschecks passed.
 
 Structural validation, the source-specific validator and the state-uncertainty importer passed.
 
-The canonical assessment model and numerical inputs have not been changed by the tinyAM translation revisions.
+The canonical assessment model and numerical inputs have not been changed by the revisions.
 
 Completeness remains partial because the physical scale of standardized survey indices and full marginal state uncertainty remain unresolved.
 
@@ -194,7 +194,7 @@ This finding supersedes the earlier description of catchability without density 
 
 Implementation reference: [SAM predobs.hpp](https://github.com/fishfollower/SAM/blob/1cc464b80f6f/stockassessment/inst/include/SAM/predobs.hpp).
 
-The tinyAM translation does not currently include these estimated powers. They remain an important identifiable source of observation-model disagreement.
+The does not currently include these estimated powers. They remain an important identifiable source of observation-model disagreement.
 
 ## Initial-state semantics resolved
 
@@ -207,9 +207,6 @@ Those first-year states remain latent random effects integrated through the Lapl
 A broad first-state normal prior is added only when calculating observation residuals. It is not a regular assessment prior and should not be presented as part of the fitted assessment likelihood.
 
 The native configuration checks pass.
-
-tinyAM now integrates the older first-year states without an initial density;
-its estimated fixed-effect r0 anchor remains distinct from SAM's first-year vector.
 
 Implementation references:
 
@@ -232,7 +229,7 @@ The simplified model is intended to evaluate how well a compact age-structured s
 
 The canonical record represents the official 2026 Northern Shelf haddock SAM assessment, using the verified native model and available source inputs.
 
-The revised tinyAM translation fits ages 0–8+ over 1972–2026, with random-walk recruitment, IID cohort-survival deviations and grouped survival-process SDs, correlated F random walks, fixed natural mortality, and both standardized survey indices.
+The revised fits ages 0–8+ over 1972–2026, with random-walk recruitment, IID cohort-survival deviations and grouped survival-process SDs, correlated F random walks, fixed natural mortality, and both standardized survey indices.
 
 These changes substantially narrow the difference between the two models' core population-process assumptions.
 
@@ -243,7 +240,3 @@ The official assessment inputs, outputs and canonical source-review findings rem
 ## Initial abundance
 
 The cached official SAM fit has `initState = 0` and no `initN` parameters.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_haddock_north_sea.md). They do not determine source completeness or official run selection.

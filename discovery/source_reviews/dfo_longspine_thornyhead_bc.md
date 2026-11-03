@@ -2,7 +2,7 @@
 
 ## Unit and current assessment status
 
-The DFO inventory entry identifies Longspine Thornyhead (*Sebastolobus altivelis*) in the Pacific Region. No matching canonical tinyAM stock record was found. The 2024 DFO groundfish activity report says a stock assessment had been requested but was not scheduled; it also reports that an acceptable ageing protocol was not available. Earlier DFO research documents exist, but no recent age-structured production assessment was located.
+The DFO inventory entry identifies Longspine Thornyhead (*Sebastolobus altivelis*) in the Pacific Region. The 2024 DFO groundfish activity report says a stock assessment had been requested but was not scheduled; it also reports that an acceptable ageing protocol was not available. Earlier DFO research documents exist, but no recent age-structured production assessment was located.
 
 ## Age data and outputs
 

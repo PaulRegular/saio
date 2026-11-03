@@ -21,7 +21,7 @@ abundance index is used in the current advice.
 **Screened ineligible for the age-disaggregated assessment set.** Aggregate
 landings and landings advice are available, but the current advice is not an
 age-structured population assessment and does not report comparable population
-or age-specific outputs. No canonical data or tinyAM translation were added.
+or age-specific outputs. No canonical data were added.
 
 ## Sources
 

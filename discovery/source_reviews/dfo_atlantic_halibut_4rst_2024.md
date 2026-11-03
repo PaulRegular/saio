@@ -71,9 +71,7 @@ This unit is **ineligible for the age-indexed candidate set**. The latest
 assessment is classified as a delay-difference model, and the reviewed
 run-specific source does not document age-indexed catch, survey observations,
 or age-specific population outputs. The availability of otolith samples and
-age data for growth does not establish those assessment inputs. Aggregate
-outputs from the 2024 assessment remain source-recoverable, but they do not
-make this a suitable age-indexed tinyAM candidate. No canonical numerical
+age data for growth does not establish those assessment inputs. No canonical numerical
 records were imported during this inventory screen.
 
 ## Sources

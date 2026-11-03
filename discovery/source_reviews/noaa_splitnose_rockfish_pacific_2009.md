@@ -18,7 +18,7 @@ The assessment report provides annual fitted numbers-at-age by sex and aggregate
 
 ## Screening decision
 
-This is a new current-unit candidate, screened **ineligible** for the age-disaggregated tinyAM source set. The assessment has useful survey age-at-length inputs and fitted numbers-at-age, but the fishery age data were excluded from the accepted base model and only used in a sensitivity run. The report's reconstructed catches and fishery length compositions do not support an accepted-run catch-at-age reconstruction. No canonical stock, assessment, input, or output records were added, and no tinyAM translation was attempted.
+The assessment has useful survey age-at-length inputs and fitted numbers-at-age, but the fishery age data were excluded from the accepted base model and only used in a sensitivity run. The report's reconstructed catches and fishery length compositions do not support an accepted-run catch-at-age reconstruction. No canonical stock, assessment, input, or output records were added was attempted.
 
 ## Sources and local cache
 

@@ -8,10 +8,10 @@ The 2024 [SAFE chapter](https://files.npfmc.org/SAFE/2024/BSAIflathead.pdf) and 
 
 ## Inputs and screening decision
 
-The 2024 assessment reports combined flathead sole/Bering flounder fishery catches and flathead-sole-only marginal fishery age compositions for 2000–2001, 2004–2007, and 2009–2021. Catch-at-age is not supplied as a direct series; a tinyAM catch-age input would need to be reconstructed from catch totals and the age compositions and must disclose that the species bases differ.
+The 2024 assessment reports combined flathead sole/Bering flounder fishery catches and flathead-sole-only marginal fishery age compositions for 2000–2001, 2004–2007, and 2009–2021. Catch-at-age is not supplied as a direct series.
 
 The survey has aggregate biomass, marginal length compositions and conditional age-at-length (CAAL) observations. The survey marginal age compositions are not used in the likelihood. An age-specific survey index would therefore be a downstream approximation based on CAAL, lengths and the aggregate biomass, not a direct official index.
 
-The two-sex model fixes M at 0.2, uses externally estimated maturity and weight-length biology, and reports fitted N-at-age and other outputs. The Bering Sea and Aleutian Islands trawl surveys are annual summer surveys; a single fractional timing for tinyAM would be an explicit approximation because the annual source model does not provide one common within-year observation time.
+The two-sex model fixes M at 0.2, uses externally estimated maturity and weight-length biology, and reports fitted N-at-age and other outputs. The Bering Sea and Aleutian Islands trawl surveys are annual summer surveys.
 
 This candidate is eligible for source curation and a translation attempt with these approximations documented. Do not split the complex into separate flathead sole and Bering flounder cases or treat the derived survey age series as an official observed index.

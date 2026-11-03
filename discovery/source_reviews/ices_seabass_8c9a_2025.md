@@ -31,7 +31,7 @@ age-disaggregated source-curation set. The reviewed current official sources
 support a landings-only advice record, not the inputs and fitted outputs needed
 for an age-structured assessment. This is a finding about the public current
 assessment source set, not a claim that age samples do not exist elsewhere. No
-canonical stock, assessment, input, output, or tinyAM translation records were
+canonical stock, assessment, input, output were
 added.
 
 ## Sources

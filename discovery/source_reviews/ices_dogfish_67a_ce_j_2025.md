@@ -28,7 +28,7 @@ recruitment estimates; the Standard Graphs age-specific F field is blank.
 This unit is therefore **ineligible for the age-disaggregated assessment
 set** on the production-assessment evidence reviewed. This finding concerns
 the assessment inputs and outputs, not whether age samples exist in national
-biological monitoring. No canonical numerical data or tinyAM translation
+biological monitoring. No canonical numerical data
 were added.
 
 ## Sources
@@ -38,4 +38,4 @@ were added.
 
 The ignored `sources.csv` manifest records both cached sources' retrieval
 date, URLs, revisions, byte sizes and SHA-256 checksums. No canonical
-database record or tinyAM translation was created.
+database record was created.

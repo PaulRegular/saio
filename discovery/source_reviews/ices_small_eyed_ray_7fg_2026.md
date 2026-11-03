@@ -21,7 +21,6 @@ age-specific natural mortality inputs are reported.
 
 The available evidence describes an aggregate index-based assessment, not an
 age-structured assessment with recoverable age-disaggregated likelihood data.
-It does not support the minimum age-specific input and output set for tinyAM.
 
 ## Screening decision
 

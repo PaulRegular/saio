@@ -23,11 +23,8 @@ data. The model has 17 extraction fisheries and three index fisheries. The
 length compositions span 1965–2022, while the CPUE input contains three
 aggregate fishery-index series. These are not age-specific survey indices.
 
-Together, source catches, length compositions, and conditional age-at-length
-data support an approximate reconstruction of catch numbers-at-age for a
-tinyAM input. This would be a downstream transformation, not a recovered
-native catch-at-age input or a reproduction of the MULTIFAN-CL likelihood.
-The age observations span 2006–2013 and ages 1–10; the diagnostic population
+This would be a downstream transformation, not a recovered
+native catch-at-age input or a reproduction of the MULTIFAN-CL likelihood. The age observations span 2006–2013 and ages 1–10; the diagnostic population
 outputs use 12 age classes. Any reconstruction must preserve the native
 fishery/time structure and state clearly how the sampled age-length
 relationship is applied beyond its observed strata. The fitted MFCL
@@ -51,8 +48,7 @@ biomass, numbers-at-age for ages 1–12 in two areas, and fishing
 mortality-at-age through 2022. These are model outputs and are available for
 comparison. The source report and files provide sufficient original quantities
 for a documented, approximate age-input reconstruction, so the candidate is
-eligible for source curation. This does not establish equivalence between the
-MFCL and tinyAM likelihoods or guarantee a close translation.
+eligible for source curation.
 
 No canonical stock, assessment, input, or output rows were added.
 

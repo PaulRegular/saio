@@ -4,7 +4,7 @@
 
 This document defines the schema for the stock-assessment database in `database/`.
 
-The database preserves, in a tidy and auditable form, the available inputs, assumptions, and outputs of official stock assessments. Age-structured assessments remain important for tinyAM comparisons; source curation also records other official assessment methods when supported by the schema.
+The database preserves, in a tidy and auditable form, the available inputs, assumptions, and outputs of official stock assessments. Source curation records age-structured and other official assessment methods when supported by the schema.
 
 The canonical database contains five CSV files:
 
@@ -277,7 +277,7 @@ abundance_index_cv
 biomass_index_cv
 ```
 
-`index_catch_numbers_at_age` preserves the numerator in a source index stored as catch numbers-at-age and effort. Use `type = index`, `basis = numbers`, and document that these numerator rows are not a second observation series. Pair them with `effort` rows (`type = covariate`, `basis = native_covariate`) when needed to reproduce a per-effort index. `effort` has no age dimension; preserve its native units and do not treat it as a tinyAM observation.
+`index_catch_numbers_at_age` preserves the numerator in a source index stored as catch numbers-at-age and effort. Use `type = index`, `basis = numbers`, and document that these numerator rows are not a second observation series. Pair them with `effort` rows (`type = covariate`, `basis = native_covariate`) when needed to reproduce a per-effort index. `effort` has no age dimension; preserve its native units and do not treat it as an independent abundance observation.
 
 `landings_biomass` and `discard_biomass` distinguish the aggregate components
 of a fishery when both are material inputs. Use the same actual fleet identity,
@@ -292,7 +292,7 @@ An `index_by_age_group` row preserves a native index value that combines
 multiple age classes and cannot be represented as a single-age observation.
 Store the lower age in age and record the full source age interval, including
 any plus group, in notes. This measure is kept for provenance and is not
-passed to tinyAM's single-age index likelihood.
+treated as single-age observations.
 
 `numbers_at_age_group` preserves fish numbers reported for a grouped catch age
 bin. Store the lower age in `age` and the full source interval, including any
@@ -392,13 +392,13 @@ and any equivalent relative log-SD transformation in the notes.
 effect is not documented well enough to interpret as a precision or standard-
 deviation multiplier. Use the corresponding input type, `basis = relative_scale`,
 and retain the supplied value without transforming it. Explain the source
-field and whether tinyAM currently uses it.
+field and its intended source purpose.
 
 `relative_standard_error` stores the source-reported standard error divided by
 the estimate for an age-specific catch or index observation. Use basis =
 `relative_scale`, retain the reported value and unit, and record whether the
 assessment used it as an observation weight. It is a source precision measure,
-not an observation or a tinyAM-estimated standard error.
+not an observation or an independently estimated standard error.
 
 For an aggregate catch or index CV, leave `age` blank and match the same total
 observation by year and its fleet or survey dimensions. Preserve catch
@@ -833,12 +833,12 @@ Natural-scale SEs obtained by the delta method must be identified as such.
 compositions supplied as counts or percentages rather than unit-sum proportions.
 Keep the original units (for example `percent`), row totals, sample sizes and
 age-error codes, and describe the source normalization. Normalization for a
-tinyAM translation belongs outside the canonical tables.
+secondary analysis belongs outside the canonical tables.
 
 `maturity_fecundity_at_age` uses `type = biology`, `basis = kg_per_fish` and
 the original weight units to retain supplied maturity-times-fecundity weights.
 It is not a maturity proportion. Record the source sex fraction, minimum mature
-age and SSB equation separately. Deriving a maturity proportion for tinyAM by
+age and SSB equation separately. Deriving a maturity proportion for another model by
 dividing this product by population weight is an analysis transformation.
 
 `mature_weight_at_age` records a source product of maturity proportion and body

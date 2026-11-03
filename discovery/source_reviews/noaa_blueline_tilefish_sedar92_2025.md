@@ -39,8 +39,7 @@ states that no valid age compositions or abundance indices were available north
 of Cape Hatteras. Its reported outputs are TAC distributions, not N-at-age,
 F-at-age, or recruitment series.
 
-The 2025 analyses therefore do not provide the age-disaggregated likelihood
-inputs required for the current tinyAM source set. No catch-at-age, age-specific
+No catch-at-age, age-specific
 survey index, weights-at-age/maturity-at-age series used in an age-structured
 model, or comparable age-structured outputs were verified for either current
 regional unit. The southern ASPIC results are aggregate point/uncertainty

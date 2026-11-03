@@ -123,13 +123,12 @@ is not imported into the historical series.
 
 ## Translation status
 
-This is a partial source import, not a completed tinyAM fit. Missing current
+Missing current
 empirical stock weights and native quarterly compositions prevent a
 defensible replication-oriented fit. A future annual approximation must
 also address July settlement, strong seasonal mortality and seasonal
 survey/composition timing. It must not pretend July recruitment occurred
-on 1 January, or use the older MSE states to manufacture observations.
-No optimization or starting-value retry is justified before those input
+on 1 January, or use the older MSE states to manufacture observations. No optimization or starting-value retry is justified before those input
 gaps are resolved. All three canonical source-completeness statuses remain
 partial.
 
@@ -138,6 +137,5 @@ it runs no optimizer and constructs no starting values. A standalone local
 dashboard at
 `results/cache/ices_anchovy_gulf_cadiz_2025/dashboard_official_only.html`
 shows the available official SSB, July recruitment and age-3 F with source
-uncertainty. Its Background states that no tinyAM fit or agreement comparison
-is available. Missing observations, population patterns and other states
+uncertainty. Missing observations, population patterns and other states
 remain unavailable rather than being reconstructed from the older MSE run.

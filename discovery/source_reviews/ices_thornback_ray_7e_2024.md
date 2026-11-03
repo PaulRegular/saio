@@ -26,8 +26,7 @@ population, or mortality series reported for this stock's current advice.
 landings and landings advice are available, but the current advice is not an
 age-structured population assessment and does not report comparable population
 or age-specific outputs. The exploratory survey information does not supply an
-age-specific observation series for the official advice. No canonical data or
-tinyAM translation were added.
+age-specific observation series for the official advice.
 
 ## Sources
 

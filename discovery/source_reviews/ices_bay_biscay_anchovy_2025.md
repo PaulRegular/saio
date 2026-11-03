@@ -20,8 +20,7 @@ This unit is **eligible for source curation** in the age-disaggregated assessmen
 | Stock weights | Weight-at-age at spawning from BIOMAN; linear interpolation for missing years | Kilograms; retain separately from fishery catch weights. |
 | Maturity | 0 at age 0; 1 at ages 1, 2, and 3+ | Official age-specific schedule. |
 | Natural mortality | Fixed M0=2.17, M1=0.80, M2=1.20, M3+=2.26 per year | Constant between seasons; M is assumed, not estimated. |
-| Model timing | Two seasons, January-June and July-December; spawning 15 May; age-0 settlement 1 July | BIOMAN and PELGAS are spring indices represented at spawning time; JUVENA is an autumn index. Any one-point fractional-year conversion for tinyAM is an explicit approximation. |
-| Official outputs | SSB, recruitment, apical F with 95% confidence intervals; N-at-age at beginning of year; F-at-age by semester | Summary outputs through 2025, with 2025 catches assumed; N-at-age (ages 0, 1, 2, 3+, thousands of fish) and F-at-age by semester through 2024. M-at-age is fixed input, not an estimated output. |
+| Model timing | Two seasons, January-June and July-December; spawning 15 May; age-0 settlement 1 July | BIOMAN and PELGAS are spring indices represented at spawning time; JUVENA is an autumn index. N-at-age at beginning of year. F-at-age by semester | Summary outputs through 2025, with 2025 catches assumed. N-at-age (ages 0, 1, 2, 3+, thousands of fish) and F-at-age by semester through 2024. M-at-age is fixed input, not an estimated output. |
 
 The reports provide direct age-specific survey series and detailed catch-age information. Extracting the values from the report tables and figures, reconciling the survey index scales, and preserving the 2025 provisional-data caveat are source-curation tasks. They do not require inventing age observations or treating the current assessment as aggregate-only.
 

@@ -1,6 +1,6 @@
 # Pacific Spiny Dogfish, Inside BC
 
-Reviewed 2026-10-29. DFO manages Pacific Spiny Dogfish (currently named *Squalus suckleyi*) as separate inside and outside British Columbia units. This record is the inside unit in the Strait of Georgia and Johnstone Strait (DFO GMA 4B and Statistical Area 12). No corresponding canonical tinyAM stock record was found.
+Reviewed 2026-10-29. DFO manages Pacific Spiny Dogfish (currently named *Squalus suckleyi*) as separate inside and outside British Columbia units. This record is the inside unit in the Strait of Georgia and Johnstone Strait (DFO GMA 4B and Statistical Area 12).
 
 ## Current assessment and age-data screen
 

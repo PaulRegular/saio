@@ -17,9 +17,7 @@ assessment was verified for this additional WBS-labelled row.
 ## Database decision
 
 Keep this row metadata-only. Do not copy eastern Baltic data or assign the row
-to western Baltic cod based on the inconsistent label. No independent tinyAM
-translation or dashboard is supported until an authoritative source resolves
-the stock identity.
+to western Baltic cod based on the inconsistent label.
 
 ## Sources
 

@@ -34,7 +34,7 @@ The 2025 MFRI report is cached as continuity context, not used as a source for 2
 | Fishing mortality | 1955–2025, ages 1–14 | Per year |
 | Summary outputs | 1955–2026 where reported | SSB, B4+, age-3 recruitment; Fbar and harvest rate through 2025 |
 
-The 2021 MUPPET HCR framework uses age 14 as a terminal age without a plus group; the exact 2026 age-14 treatment was not separately recovered. The 2026 MFRI table page reports rounded values. The canonical records preserve those published values and do not reconstruct missing precision. `total_numbers` is derived by summing N-at-age over ages 3–14 for comparison on the tinyAM age grid. A separate `total_numbers_all_ages` series sums ages 1–14. Neither derived series has uncertainty.
+The 2021 MUPPET HCR framework uses age 14 as a terminal age without a plus group; the exact 2026 age-14 treatment was not separately recovered. The 2026 MFRI table page reports rounded values. A separate `total_numbers_all_ages` series sums ages 1–14. Neither derived series has uncertainty.
 
 ## Assumptions and translation limits
 
@@ -46,4 +46,4 @@ Other unavailable details include the exact survey covariance matrices and likel
 
 ## Validation
 
-The importer checks embedded table names, age columns, finite source values, expected row counts, and source dimensions before writing records. Blank source cells are omitted rather than filled. The source test checks the expected year-age coverage, units, provenance, table/report discrepancies, and absence of assessment records outside the selected source run. The associated tinyAM translation uses only ages 3–14; it cannot reproduce the source model's full survey covariance, selectivity blocks, or 2026 MUPPET population structure.
+The importer checks embedded table names, age columns, finite source values, expected row counts, and source dimensions before writing records. Blank source cells are omitted rather than filled. The source test checks the expected year-age coverage, units, provenance, table/report discrepancies, and absence of assessment records outside the selected source run. The associated uses only ages 3–14; it cannot reproduce the source model's full survey covariance, selectivity blocks, or 2026 MUPPET population structure.

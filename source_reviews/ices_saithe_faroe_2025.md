@@ -35,7 +35,3 @@ SSB equals the sum of age-specific abundance times the fitted stock weight and m
 ## Source details retained from the modelling review
 
 During the 2026-10-23 source audit, catch and survey observations were found to have been flattened in age-major order against year-major labels. The importer now matches every observation to the native SAM year, age and fleet map before writing; regression checks include off-diagonal source cells and preserve the source zero catches. Survey numerators are corrected with their matching indices; effort, biological inputs and official outputs retain their source values. The importer can replace this assessment's existing rows without changing other assessments.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_saithe_faroe_2025.md). They do not determine source completeness or official run selection.

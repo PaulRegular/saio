@@ -12,7 +12,7 @@ record do not provide a separate fitted assessment for Subdivision 30.
 
 Keep this historical component metadata-only. The combined 30–31 inputs and
 outputs cannot be copied into a Subdivision 30 assessment without inventing a
-spatial split. Any tinyAM translation or comparison belongs to the combined
+spatial split. Any or comparison belongs to the combined
 stock record.
 
 ## Sources

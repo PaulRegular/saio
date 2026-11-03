@@ -13,7 +13,7 @@ outputs.
 The official run is represented under `afsc_alaska_plaice_bsai`, with sex
 stored as a data dimension. This catalogue row has no distinct assessment
 event; duplicating the male data here would misstate the model as a separate
-stock fit. Associate any tinyAM comparison with the canonical stock.
+stock fit.
 
 ## Sources
 

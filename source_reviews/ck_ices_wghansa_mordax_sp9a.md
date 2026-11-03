@@ -13,8 +13,7 @@ southern stock only; it is not the old combined unit.
 
 Keep the historical combined entry metadata-only. Do not copy southern-stock
 values into it or combine them with western-stock data. The current southern
-stock has a separate, partial source record; its missing inputs prevent a
-completed tinyAM fit. The western successor is separately curated as
+stock has a separate, partial source record. The western successor is separately curated as
 `ices_anchovy_west_iberia_2026`; see its [source review](ices_anchovy_west_iberia_2026.md).
 
 ## Sources

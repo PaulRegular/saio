@@ -27,7 +27,3 @@ The report says natural mortality was calculated with Lorenzen's method at WKIri
 ## Outputs
 
 The assessment report and SAG provide aggregate recruitment at age 0, SSB and Fbar ages 2–4 with 95% confidence limits through 2024. Landings and discards are also retained from the assessment summary. The available sources do not provide N-at-age or F-at-age, so those quantities and their uncertainty are not added or derived. The 2026 catch advice is 586 tonnes for each of 2027 and 2028 and is kept out of the historical assessment output series.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_haddock_irish_sea_7a_2025.md). They do not determine source completeness or official run selection.

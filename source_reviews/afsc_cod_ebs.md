@@ -25,8 +25,7 @@ fleet codes disable the other age rows, including all fishery conditional-age
 samples. The workbook's longer age-composition series must not silently add
 these observations to the fitted likelihood. Conditional ages are biological
 samples, not independent abundance indices. Supplied sample sizes, age-error
-codes, partition and conditioning lengths are retained; control weighting and
-ageing error are not converted into tinyAM precision weights.
+codes, partition and conditioning lengths are retained.
 
 M is fixed at 0.3866, not 0.386. Richards growth and annual L1/K deviations
 produce the model's weights: **WTATAGE is fitted output, not an original input**.
@@ -60,7 +59,3 @@ Original maturity-at-age and empirical stock weights were not supplied to SS.
 Do not label a weight-derived maturity proxy as the official maturity curve.
 Canonical completeness remains partial; source preservation and numerical
 model readiness are separate claims.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/afsc_cod_ebs.md). They do not determine source completeness or official run selection.

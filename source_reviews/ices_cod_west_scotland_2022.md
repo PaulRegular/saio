@@ -44,7 +44,3 @@ Recovered outputs include N, expanded F, q, fitted observations, SSB, total biom
 - [WKBCOD 2023 boundary benchmark](https://doi.org/10.17895/ices.pub.22591423)
 - [Official SAG time series, key 17399](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=17399)
 - [Native production run](https://stockassessment.org/datadisk/stockassessment/userdirs/user3/cod.27.6a_2022/)
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_cod_west_scotland_2022.md). They do not determine source completeness or official run selection.

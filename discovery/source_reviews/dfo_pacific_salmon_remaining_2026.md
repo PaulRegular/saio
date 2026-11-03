@@ -11,7 +11,7 @@ This screen covers the seven DFO Pacific salmon inventory rows left unreviewed a
 - **Skeena-Nass Pink:** identity ambiguous. Current DFO sources distinguish Skeena and Nass Pink units, so the combined inventory label is not treated as a single unit.
 - **Nass and Skeena sockeye:** distinct current aggregates. The 2025 DFO technical report and 2024/056 research document review age-composition data and use age composition to back-calculate brood-year recruitment for stock-recruit analyses. The assessment outputs are spawner/run/recruitment series and benchmarks, not age-specific population N/F/M surfaces; both are ineligible for this age-structured candidate screen.
 - **Stikine sockeye:** distinct transboundary management unit. DFO and ADF&G describe a genetic mark-recapture assessment for stock composition and in-river run abundance. Age/sex/length samples are collected, but the reviewed assessment description does not indicate an age-structured population likelihood or age-specific population outputs; screened ineligible.
-- **Barkley sockeye:** distinct West Coast Vancouver Island - Barkley unit, with a 2024 assessment published as DFO Science Response 2026/022. It is screened ineligible for the age-structured candidate set because the response describes run reconstruction and stock-recruit methods but does not establish the complete age-specific model inputs or N/F-at-age outputs tinyAM needs. See source_reviews/dfo_wcvi_barkley_sockeye_2024.md.
+- **Barkley sockeye:** distinct West Coast Vancouver Island - Barkley unit, with a 2024 assessment published as DFO Science Response 2026/022. See source_reviews/dfo_wcvi_barkley_sockeye_2024.md.
 
 ## Sources
 

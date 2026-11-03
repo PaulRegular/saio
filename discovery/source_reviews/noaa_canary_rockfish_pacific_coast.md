@@ -24,7 +24,7 @@ The native `Report.sso` provides N, biomass, M, fleet-specific F, and model-esti
 
 The assessment reports 95% intervals for recruitment in Table iii (2013–2023) and 2023 spawning output in Table v. Spawning output is not SSB. The native report does not provide age-specific uncertainty intervals, and the archived `derived_posteriors.sso` is a single estimate rather than posterior draws. Those values remain unavailable.
 
-The source record is therefore partial for tinyAM inputs: aggregate catches, aggregate indices, and composition samples are available, but direct observed catch-at-age, direct survey index-at-age, standalone observed weight-at-age, and numerical maturity-at-age inputs are not. The import retains these distinctions and the official fitted surfaces without claiming that the original likelihood has been reproduced.
+The import retains these distinctions and the official fitted surfaces without claiming that the original likelihood has been reproduced.
 
 ## References
 

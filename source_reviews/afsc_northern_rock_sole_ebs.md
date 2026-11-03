@@ -73,7 +73,3 @@ The 2024 reference checks are SSB 271988 t, biomass 1051040 t and combined
 age-1 recruitment 1462.25 million. Canonical units remain those originally
 reported. Completeness stays partial: full ageing-error/control detail,
 auxiliary input arrays and state covariance are not yet exported.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/afsc_northern_rock_sole_ebs.md). They do not determine source completeness or official run selection.

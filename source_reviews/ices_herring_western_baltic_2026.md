@@ -10,7 +10,7 @@ The official native model object is cached locally with the full HAWG 2026 repor
 
 The native object reports SAM 0.12.0, optimizer convergence code 0, and objective value 414.9946.
 
-The canonical assessment database retains the original official-model definitions and age structure. The reduced 0–5+ representation is a downstream tinyAM translation decision, not a change to the official assessment records.
+The canonical assessment database retains the original official-model definitions and age structure. The reduced 0–5+ representation is a downstream decision, not a change to the official assessment records.
 
 ## Inputs and assumptions
 
@@ -30,7 +30,7 @@ Fishing mortality states exhibit AR(1) correlation across ages, with ages 7 and 
 
 HERAS, GERAS, and IBTS/BITS Q1 use correlated age-specific observation errors, while N20 errors are independent.
 
-The official `keyLogFpar` configuration defines catchability sharing across survey and age groups. The revised tinyAM translation preserves the corresponding groups where possible following age aggregation.
+The official `keyLogFpar` configuration defines catchability sharing across survey and age groups. The revised preserves the corresponding groups where possible following age aggregation.
 
 ## Output checks
 
@@ -47,8 +47,6 @@ For 2025, the official assessment reports:
 - Fbar: 0.011 (95% CI 0.008–0.015).
 - Total stock biomass: 266,183 tonnes.
 
-These are official-model outputs, not results from the revised tinyAM fit.
-
 ## Source references
 
 - ICES HAWG 2026, *Report of the Herring Assessment Working Group*, Section 3.6, pp. 173–174 and Tables 3.6.4–3.6.13, pp. 247–256: [cached report](../source_cache/ices_herring_western_baltic_2026/HAWG_2026_Full_Report.pdf).
@@ -58,16 +56,8 @@ These are official-model outputs, not results from the revised tinyAM fit.
 
 ## Remaining limitations
 
-The original age-specific survey plus-group inconsistency has been addressed by aggregating the tinyAM population and observation age structure to 0–5+.
-
 Remaining differences include the official hockey-stick recruitment relationship, cross-age survey observation correlations, the full age-specific F-state structure, and the use of source age-5 biology for the translated 5+ population group.
 
 The source report does not provide complete age-specific uncertainty for the population and mortality surfaces.
 
-Official model states may be used to initialize the tinyAM fit, but any starting values for the translated 5+ state should represent the aggregated older ages rather than the official model's individual age-5 values.
-
 Inspect the current diagnostics and comparison definitions before interpreting this translation.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_herring_western_baltic_2026.md). They do not determine source completeness or official run selection.

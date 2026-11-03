@@ -12,7 +12,7 @@ The local ignored cache is `source_cache/ck_dfo_morhua_3ps/assessment_2024/`. It
 
 DFO's 2025 assessment peer review was held November 4–7, 2025, and its Science Advisory Report 2026/004 was published in January 2026. The report identifies 2024 as the last full assessment, describes the 2025 assessment as a state-space age-based HYBRID model, and notes that a complementary SAM fit was examined as a consistency check. It also reports three material data updates: stock weights were revised to include both inshore and offshore strata; 2023 catch-at-age was corrected; and Sentinel index standardization used additional data.
 
-Table 1 reports aggregate SSB, age-2 recruitment, and mean M and F for ages 5–8 for 2021–2025, plus projected 2026 SSB. These outputs are recorded under the separate `dfo_cod_3ps_2025` assessment ID. The supporting Research Document 2026/047 provides corrected 2023 and 2024 catch-at-age tables and updated catch and survey information through 2025. The two published catch-at-age tables are imported at their exact ages and original fish-count scale. Other supporting tables include commercial weights-at-age and recent survey summaries, but they do not recover the complete annual input matrices and model controls used by HYBRID. Numerical N/F/M-at-age output surfaces are not tabulated. The 2025 record therefore remains partial and is not translated to tinyAM; it does not replace the 2024 detailed comparison record. The 2024 inputs and 2025 outputs are kept in separate assessment records.
+Table 1 reports aggregate SSB, age-2 recruitment, and mean M and F for ages 5–8 for 2021–2025, plus projected 2026 SSB. These outputs are recorded under the separate `dfo_cod_3ps_2025` assessment ID. The supporting Research Document 2026/047 provides corrected 2023 and 2024 catch-at-age tables and updated catch and survey information through 2025. The two published catch-at-age tables are imported at their exact ages and original fish-count scale. Other supporting tables include commercial weights-at-age and recent survey summaries, but they do not recover the complete annual input matrices and model controls used by HYBRID. Numerical N/F/M-at-age output surfaces are not tabulated. it does not replace the 2024 detailed comparison record. The 2024 inputs and 2025 outputs are kept in separate assessment records.
 
 The official 2026/004 PDF is cached under `source_cache/ck_dfo_morhua_3ps/assessment_2025/` with retrieval date and SHA-256 in its manifest. The Publications Canada download URL currently returns an archived-page HTML response; the cached PDF uses DFO's direct library URL.
 ## Official model and inputs
@@ -29,7 +29,7 @@ The import script `scripts/database/073_import_dfo_cod_3ps_2024.R` transcribes A
 - Table A-10: model stock weights, kg per fish, 1959–2024, ages 2–14+.
 - Table A-11: catch weights, kg per fish, 1959–2024; the source prints the last group as age 14 without a plus sign. This is retained as printed and its mapping to the model’s 14+ group is unresolved.
 
-The tables do not give the exact survey timing fractions or all likelihood weights, random-effect covariance settings, priors, and other run controls. Those source gaps keep assumptions and input status `partial`. Do not supply artificial sampling times or treat the summarized index values as exact count units. Any tinyAM timing values must be labelled as translation approximations.
+The tables do not give the exact survey timing fractions or all likelihood weights, random-effect covariance settings, priors, and other run controls. Those source gaps keep assumptions and input status `partial`. Do not supply artificial sampling times or treat the summarized index values as exact count units.
 
 ## Outputs and comparison limits
 
@@ -42,7 +42,3 @@ The detailed report presents historical trajectories mainly as figures and does 
 - Mean M for ages 5–8 in 2020–2024: 0.37, 0.35, 0.35, 0.35, and 0.32 per year; 2024 95% CI 0.31–0.34.
 
 Outputs remain `partial`; the five-year aggregate table improves recent comparison, but the figures are not digitized as exact time series. Total abundance cannot be derived because numerical N-at-age is unavailable. Age-specific N/F/M and annual outputs before 2020 cannot be compared until additional HYBRID output data are recovered.
-
-## Downstream modelling
-
-[tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/dfo_cod_3ps_2024.md) hold model choices and fitting results.

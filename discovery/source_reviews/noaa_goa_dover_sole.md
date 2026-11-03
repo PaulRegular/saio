@@ -20,7 +20,7 @@ A catch-at-age reconstruction would need to transfer a survey-derived age-at-len
 
 The model estimates age- and sex-specific growth, uses a weight-length relationship to derive weight-at-age, and fits an age-based logistic maturity relationship. These are model-derived biological surfaces, not fixed observed weight-at-age and maturity-at-age vectors. Natural mortality is estimated separately for sexes and time blocks, with a recent 2014-2023 block.
 
-The native data file records survey month 6 (June); its month 5 setting is spawning timing, not survey timing. Any fractional-year sampling time for tinyAM would need to be documented as a translation approximation.
+The native data file records survey month 6 (June); its month 5 setting is spawning timing, not survey timing.
 
 ## Available outputs and limitations
 
@@ -28,7 +28,7 @@ The 2023 SAFE tables provide age-3+ total biomass, female spawning biomass, age-
 
 ## Decision
 
-Screened as a new stock unit and ineligible for the current age-input candidate set because fishery catch-at-age cannot be recovered from the documented source inputs without a substantial unverified age-length transfer. This does not mean the age-structured NOAA assessment is unsupported; it means the available public data do not expose the catch-age observations needed for the planned tinyAM age-structured translation.
+Screened as a new stock unit and ineligible for the current age-input candidate set because fishery catch-at-age cannot be recovered from the documented source inputs without a substantial unverified age-length transfer. This does not mean the age-structured NOAA assessment is unsupported.
 
 ## Sources
 

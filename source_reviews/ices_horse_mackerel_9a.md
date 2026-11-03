@@ -27,7 +27,7 @@ The assessment is annual, one-area, and sexes-combined, with ages 0–10 and an 
 
 The model settings report catch CV 0.05, IBTS CV 0.30, DEPM CV 0.40, and CPUE CV 0.14. Catch and IBTS age data use Dirichlet-multinomial weighting with age-reading uncertainty. Recruitment follows Beverton–Holt with sigmaR 0.74 and input steepness 0.8; the initial population uses an equilibrium age structure derived from a 30,000-tonne equilibrium catch. Fishery selectivity is double-normal with two time-varying parameters. Survey selectivity is fixed and dome-shaped.
 
-The source also uses IBTS aggregate biomass and standardized commercial CPUE in biomass. Their numeric series were not tabulated in the detailed report; the CPUE is shown only as a figure. They are therefore recorded as known source-model streams but are not reconstructed or added as observations. The tinyAM fit uses the recoverable IBTS age-specific mean series directly, which is a different observation likelihood from the official model.
+The source also uses IBTS aggregate biomass and standardized commercial CPUE in biomass. Their numeric series were not tabulated in the detailed report; the CPUE is shown only as a figure. They are therefore recorded as known source-model streams but are not reconstructed or added as observations.
 
 ## Recovered outputs and limits
 
@@ -35,4 +35,4 @@ Table 5.4.1.2 reports annual SSB, recruitment, F(1–10), FApical, CVs for SSB/r
 
 The 2026 SAG series supplies recruitment (thousands, age 0), stock size (tonnes), and F (ages 1–10), with low/high values. It extends through 2026; the 2026 row is a forecast. The source table does not label low/high intervals with a confidence level, so the database preserves those bounds without calling them 95% intervals. Aggregate catch is retained, but the 2026 model assumptions, age inputs, native fitted object, and age-specific population outputs remain unavailable.
 
-Both assessment events are marked partial. The database preserves the official source values and their limits; the tinyAM translation is a documented approximation, not a likelihood-level replication.
+Both assessment events are marked partial. The database preserves the official source values and their limits; the is a documented approximation, not a likelihood-level replication.

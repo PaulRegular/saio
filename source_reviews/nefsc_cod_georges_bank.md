@@ -118,7 +118,6 @@ remain partial.
 
 ## Translation status
 
-The record does not support a defensible tinyAM fit yet: original catch and
-survey age arrays, biological matrices and timing are missing. A catch total
+A catch total
 and a known M do not replace those observations. No model is fitted and no
 source-based starting values are generated while these gaps persist.

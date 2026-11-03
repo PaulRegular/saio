@@ -10,13 +10,13 @@ The three models are independent, sex-aggregated Stock Synthesis models. They tr
 
 The assessment estimates growth by age. Its biological information includes weight–length relationships, sparse maturity-at-length data, and posterior-predictive fecundity relationships. After STAR review, natural mortality is fixed at 0.07 in all three models. Recruitment deviations are not estimated. These are assessment assumptions to preserve in any subsequent source extraction; they are not claims that a complete annual age-specific observation matrix is directly published.
 
-The accepted assessment inputs are not a ready-made tinyAM data set. Catch-at-age and age-specific index series would require documented reconstruction from the native catches, compositions, index data and biological relationships. Composition sampling years are sparse relative to the assessment time series, so any reconstruction must retain that limitation and must not be presented as observed annual age-specific data.
+Catch-at-age and age-specific index series would require documented reconstruction from the native catches, compositions, index data and biological relationships. Composition sampling years are sparse relative to the assessment time series, so any reconstruction must retain that limitation and must not be presented as observed annual age-specific data.
 
 ## Outputs and screening decision
 
 The 2025 SAFE gives the latest official status summaries and identifies the 2015 assessment as the latest for all three areas. The 2015 assessment and its supporting tables provide model-specific population-status outputs. Review and extract the area-specific output tables during source curation; do not combine the three area models.
 
-Screen each area as **eligible for source curation**, conditional on verifying the native model data and the detailed output tables. The assessment has age-composition information, age-specific biology, catch and index inputs, and comparable population outputs. This eligibility does not mean catch-at-age or index-at-age is directly available, nor that the inputs are ready for tinyAM translation. No canonical stock, assessment, input or output records are added by this screen.
+Screen each area as **eligible for source curation**, conditional on verifying the native model data and the detailed output tables. The assessment has age-composition information, age-specific biology, catch and index inputs, and comparable population outputs. This eligibility does not mean catch-at-age or index-at-age is directly available, nor that the inputs are ready for. No canonical stock, assessment, input or output records are added by this screen.
 
 ## Sources
 

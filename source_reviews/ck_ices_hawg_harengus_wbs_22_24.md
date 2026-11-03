@@ -16,8 +16,7 @@ second set of records for this component.
 
 ## Database decision
 
-Keep the catalogue row metadata-only. Do not add a duplicate assessment event,
-inputs, outputs, tinyAM fit, or dashboard. Reconsider only if an official
+Keep the catalogue row metadata-only. Reconsider only if an official
 assessment again reports a distinct 22–24 production model with recoverable
 source data.
 

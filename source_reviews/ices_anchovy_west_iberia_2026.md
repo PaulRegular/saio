@@ -44,8 +44,7 @@ not recorded as a model input.
 Completeness is partial: the public 2026 TAF URL printed in the report returned
 404, and the full numerical source inputs and age-structured population states
 were not recovered. The method does not estimate N-at-age, F-at-age,
-recruitment or SSB. A defensible age-structured tinyAM comparison is not yet
-supported and no dashboard was produced.
+recruitment or SSB.
 
 The [2026 working-group report](https://doi.org/10.17895/ices.pub.32614524.v2)
 and [SAG XML](https://sag.ices.dk/SAG_API/StockXmlDownload/23750) are cached

@@ -9,7 +9,7 @@ Assessment center: NOAA Pacific Islands Fisheries Science Center (PIFSC)
 
 The 2019 PIFSC report describes 12 single-species assessments for reef-associated fish around Guam. Its Table 5 lists the same 12 species as Stock SMART IDs 15110, 15113, 15114, 15130–15138. The report explicitly limits its analyses to Guam Island; offshore banks were excluded because data were insufficient. The twelve IDs therefore remain twelve distinct Guam Island species units, rather than one multispecies assessment unit or additional offshore-bank units.
 
-No canonical tinyAM stock record matches these Stock SMART IDs or the same species-area combinations. They are assigned separate provisional candidate-unit identifiers. The Guam bottomfish management-unit complex is a different group and is not crosswalked to these reef-fish records.
+They are assigned separate provisional candidate-unit identifiers. The Guam bottomfish management-unit complex is a different group and is not crosswalked to these reef-fish records.
 
 | Stock SMART ID | Species | Later PIFSC report |
 |---|---|---|
@@ -30,7 +30,7 @@ No canonical tinyAM stock record matches these Stock SMART IDs or the same speci
 
 Nadon's 2019 PIFSC technical memorandum reports data focused on 2013–2017. It uses the growth-type-group length-based spawning-potential-ratio (GTG-LBSPR) approach, combining life-history information, fishery-dependent and fishery-independent size composition, diver-survey abundance/biomass information, and total catch estimates. Six species use meta-analytically estimated life-history parameters because local growth or maturity information was missing or inadequate.
 
-The report estimates current fishing mortality, F30 and spawning-potential ratios; it also gives aggregate biomass and catch-limit distributions for selected species. It does not describe an age-structured model or publish age-specific catch/index likelihood inputs, abundance-at-age, F-at-age, M-at-age, or recruitment series. The reports use size data and aggregate quantities; their life-history information does not establish age-specific model surfaces for tinyAM. Survey timing as a fraction of year is not applicable to an age-specific index that was not used.
+The report estimates current fishing mortality, F30 and spawning-potential ratios; it also gives aggregate biomass and catch-limit distributions for selected species. It does not describe an age-structured model or publish age-specific catch/index likelihood inputs, abundance-at-age, F-at-age, M-at-age, or recruitment series. The reports use size data and aggregate quantities. Survey timing as a fraction of year is not applicable to an age-specific index that was not used.
 
 Ahrens and Nadon's 2023 PIFSC technical memorandum evaluates management strategies for seven Guam priority reef-fish species. It includes *Caranx melampygus*, *Lethrinus olivaceus*, and *Lutjanus fulvus* from this inventory, and describes the same GTG-LBSPR family of length-based methods. It adds later status and management-scenario evidence for those three candidates, but does not provide age-disaggregated assessment inputs or age-specific population outputs. The 2023 report is not used to change the 2019 Stock SMART assessment-year metadata.
 

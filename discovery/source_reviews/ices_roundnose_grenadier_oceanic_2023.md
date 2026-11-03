@@ -22,8 +22,7 @@ The reviewed current advice is landings-only. It does not provide catch-at-age,
 age compositions, age-specific survey indices, age-specific biology, or fitted
 age-structured population outputs. No recruitment, SSB, N-at-age, or F-at-age
 series was identified in the current advice record. No separate detailed
-assessment report or model files were located in this review. This evidence
-does not support a tinyAM age-structured translation.
+assessment report or model files were located in this review.
 
 ## Screening decision
 
@@ -32,7 +31,7 @@ age-disaggregated source-curation set because the current ICES category is
 landings-only and the reviewed advice provides no age-disaggregated inputs or
 fitted population outputs. This is a source-availability screen; it does not
 assert that the species lacks biological age data outside this assessment. No
-canonical stock, assessment, input, output, or tinyAM translation records were
+canonical stock, assessment, input, output were
 added.
 
 ## Sources

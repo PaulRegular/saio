@@ -96,7 +96,7 @@ The data file sets Lbin_method=1 (population-length bins), while the observation
 
 Every positive index observation uses month 7. Length and age composition records use months 1 or 7. Survey timing must therefore be derived from the observation month, not the fleet-definition default. Fishery composition timing and continuous catch timing remain distinct.
 
-The composition schema validator checks finite numeric dimensions, non-negative integer age-error/partition codes, positive supplied sample sizes, observation IDs and ordered conditioning labels. The canonical Pacific cod composition rows retain the native conditioning labels, sample sizes and age-error codes; source and database validation pass. The tinyAM translation uses a pooled age-length key and does not preserve the source conditional-composition likelihood.
+The composition schema validator checks finite numeric dimensions, non-negative integer age-error/partition codes, positive supplied sample sizes, observation IDs and ordered conditioning labels. The canonical Pacific cod composition rows retain the native conditioning labels, sample sizes and age-error codes; source and database validation pass. The uses a pooled age-length key and does not preserve the source conditional-composition likelihood.
 
 ## Canonical coverage and validation
 
@@ -156,19 +156,7 @@ M blocks, but does not contain age-specific N or F. Those surfaces come from
 the reconstructed full Report.sso described above, not from plots or from this
 mismatched cached fit object.
 
-The comparison keeps official SSB in tonnes and scales tinyAM kilograms to
-tonnes by 1e-3. It is approximate because the source aggregate covers ages
-0+ while tinyAM starts at age 1. The dashboard also retains official total
-biomass in tonnes and recruitment in billions, but reports no percent
-difference: age-0 biomass cannot be removed from the aggregate total, and
-source recruitment is age 0 while tinyAM recruitment is age 1. Official M is
-numerically available and matches tinyAM by construction because the reported
-M blocks are supplied as fixed M; it is not an independent model validation.
-N-at-age and F-at-age are now available for age-specific comparison. Any
+it is not an independent model validation. N-at-age and F-at-age are now available for age-specific comparison. Any
 aggregate F calculated from those surfaces must be labelled with its age range
 and weighting definition; it is distinct from reported Sum Apical F. The
 assessment stays partial.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/afsc_cod_goa.md). They do not determine source completeness or official run selection.

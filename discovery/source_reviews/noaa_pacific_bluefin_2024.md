@@ -39,9 +39,7 @@ publicly available in the reviewed sources.
 
 The assessment is therefore screened **ineligible** for the age-disaggregated
 input set. A model's internal age structure and age-derived outputs do not
-substitute for age-disaggregated observations. The public evidence supports
-CPUE and length-based source review, but it does not support a faithful
-age-based tinyAM input translation under the current eligibility rules. No
+substitute for age-disaggregated observations. No
 canonical stock, assessment event, or numerical input/output rows were added.
 
 ## Sources and local cache

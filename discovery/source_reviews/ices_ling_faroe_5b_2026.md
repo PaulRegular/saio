@@ -2,7 +2,7 @@
 
 **Stock unit:** Ling (*Molva molva*) in ICES Division 5.b, the Faroese grounds. This is distinct from Icelandic ling (*lin.27.5a*).
 
-**Assessment:** The 2026 WGDEEP report identifies the final applied SAM run as `lin.27.5b_wgdeep2026_final`, fitted through 2025. ICES advice record 7205 and SAG key 23735 identify the assessment. The run-specific numeric records below come from the 2026 report tables; a native fit object and the exact data object were not recovered from the public run directory. This is therefore a verified but partial source record, not a tinyAM translation.
+**Assessment:** The 2026 WGDEEP report identifies the final applied SAM run as `lin.27.5b_wgdeep2026_final`, fitted through 2025. ICES advice record 7205 and SAG key 23735 identify the assessment. The run-specific numeric records below come from the 2026 report tables; a native fit object and the exact data object were not recovered from the public run directory. This is therefore a verified but partial source record, not a.
 
 ## Inputs and assumptions recorded
 
@@ -30,7 +30,7 @@ Reported units are thousands of fish for recruitment and numbers-at-age, tonnes 
 
 ## Remaining gaps
 
-The native SAM fit/data objects, exact survey index scale and effort definition, exact survey timing fractions, and numeric gear-change downweights remain unresolved. Those details may affect an eventual translation. No tinyAM fitting has been attempted while source curation for the selected batch continues.
+The native SAM fit/data objects, exact survey index scale and effort definition, exact survey timing fractions, and numeric gear-change downweights remain unresolved. Those details may affect an eventual translation.
 
 ## Sources and cached files
 

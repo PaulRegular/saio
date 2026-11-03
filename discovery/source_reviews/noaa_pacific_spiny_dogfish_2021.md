@@ -47,8 +47,7 @@ native fleet table and must be interpreted before assigning a fractional year.
 Screen as a new, eligible source-curation candidate (`noaa_spiny_dogfish_pacific_coast_2021`), not as an already imported assessment. Eligibility relies on a
 documented, approximate age-length-key reconstruction. The available single
 survey-year age sample, fleet differences, sparse age coverage and absence of
-direct annual age indices are material limitations. Do not fabricate age
-observations or alter source values to improve a tinyAM fit. No canonical stock,
+direct annual age indices are material limitations. No canonical stock,
 assessment, input or output rows were added during this screening.
 
 The source checks in

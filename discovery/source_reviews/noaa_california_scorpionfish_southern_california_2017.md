@@ -18,7 +18,7 @@ The model derives age-specific weights from sex-specific growth and length-weigh
 
 The official report and native `Report.sso` provide spawning biomass/output, recruitment, depletion, and model-derived numbers-at-age, catch-at-age and Z-at-age. With base M fixed at 0.235, F-at-age can be derived as Z minus M. These fitted age surfaces are outputs, not observed catch-at-age inputs.
 
-Screening decision: provisionally new and eligible for source curation with explicit, limited reconstructions. Unlike an assessment with length compositions alone, this run has observed CAAL data that can be combined with matching length and index series. The source does not provide direct catch-at-age or an unconditional age-specific survey index. Any tinyAM translation must identify the reconstructed series as approximate, state the survey-to-fishery age-length assumption, and restrict comparisons to the supported period; it must not treat the fitted age outputs as observations.
+Screening decision: provisionally new and eligible for source curation with explicit, limited reconstructions. Unlike an assessment with length compositions alone, this run has observed CAAL data that can be combined with matching length and index series. The source does not provide direct catch-at-age or an unconditional age-specific survey index. Any must identify the reconstructed series as approximate, state the survey-to-fishery age-length assumption, and restrict comparisons to the supported period; it must not treat the fitted age outputs as observations.
 
 ## References
 

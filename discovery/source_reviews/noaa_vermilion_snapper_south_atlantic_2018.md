@@ -51,17 +51,13 @@ not provide age-specific uncertainty for N-at-age or F-at-age.
 
 ## Screening decision
 
-This is a **new, screened, eligible candidate** for detailed source curation.
-The accepted assessment combines annual removals, fishery and survey age
-compositions, aggregate abundance indices, and age-specific biological inputs.
-Those source quantities support a documented catch-at-age reconstruction while
+This is a **new, screened, eligible candidate** for detailed source curation. The accepted assessment combines annual removals, fishery and survey age
+compositions, aggregate abundance indices, and age-specific biological inputs. Those source quantities support a documented catch-at-age reconstruction while
 preserving fleet units and composition weights. The official outputs include
 numeric N-at-age and F-at-age. Eligibility here means the sources warrant
-curation; it does not imply that every series is ready for tinyAM or that the
-assessment's egg-production spawning measure is directly comparable to tinyAM
-SSB.
+curation.
 
-No canonical database values were imported, and no tinyAM translation was
+No canonical database values were imported was
 attempted. Source files are cached locally in the gitignored directory
 `source_cache/discovery_noaa_south_atlantic_vermilion_2026/`; its `sources.csv`
 records source URLs, retrieval dates, revisions, byte sizes, and SHA-256 hashes.

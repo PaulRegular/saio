@@ -131,7 +131,7 @@ The North Sea cod catalogue entry now represents the official three-substock Nor
 
 The canonical database preserves the official substock inputs, fitted outputs, survey age structures, observation uncertainties, and biological-process information without substituting inputs from earlier assessment models.
 
-The revised tinyAM translation fits one combined population over 1983–2022, with IID older-cohort survival deviations, correlated F random walks, fixed supplied M, and monotone non-decreasing survey catchability.
+The revised fits one combined population over 1983–2022, with IID older-cohort survival deviations, correlated F random walks, fixed supplied M, and monotone non-decreasing survey catchability.
 
 The `mono(q_key)` constraint is particularly important: it prevents the reduced observation model from estimating declining catchability at older ages, while allowing flexible increases and plateaus.
 
@@ -147,10 +147,6 @@ Rscript scripts/database/005_validate_north_sea_cod.R
 
 The importer validates all 2,688 native N/F/M values against the detailed report and can be rerun independently of other assessments. Input completeness remains partial.
 
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_cod_north_sea.md). They do not determine source completeness or official run selection.
-
 ## Historical 2025 SAG identifiers
 
-The pre-migration source review records 2025 combined-stock key 19639 and substock keys 19661 (Northwestern), 19662 (Southern) and 19663 (Viking), under advice DOI [10.17895/ices.advice.27202566](https://doi.org/10.17895/ices.advice.27202566). These identify the 2025 run; they do not replace the distinct 2026 identifiers above.
+The earlier 2025 source review records 2025 combined-stock key 19639 and substock keys 19661 (Northwestern), 19662 (Southern) and 19663 (Viking), under advice DOI [10.17895/ices.advice.27202566](https://doi.org/10.17895/ices.advice.27202566). These identify the 2025 run; they do not replace the distinct 2026 identifiers above.

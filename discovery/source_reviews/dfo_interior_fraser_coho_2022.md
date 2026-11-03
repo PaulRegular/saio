@@ -25,9 +25,7 @@ population assessment.
 
 The report notes that scale-age samples are limited, at approximately 100
 samples per CU per year, and that spawner abundance has unrepresented
-observation error and changing survey quality. These issues affect the source
-assessment's uncertainty but do not provide the age-specific population inputs
-required by tinyAM.
+observation error and changing survey quality.
 
 ## Screening decision
 

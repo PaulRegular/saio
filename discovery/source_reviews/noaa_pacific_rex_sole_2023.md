@@ -18,7 +18,7 @@ The assessment uses three aggregate survey-index fleets and a single annual seas
 
 The public native run archive includes `Report.sso` and associated model output files. Its report configuration enables numeric numbers-at-age, catch-at-age, fishing-mortality-at-age and biomass-at-age outputs, as well as fitted age-composition output. The assessment report provides aggregate spawning output and recruitment summaries. Confirm the output scales, year/age coverage and uncertainty conventions against the selected production run before import.
 
-Screening decision: provisionally new and eligible for source curation. The official run supplies age information, survey indices, biological sources and numeric age-specific model outputs. The age-specific catch and survey series needed for an age-based tinyAM input would require documented reconstructions from length compositions and age-length information. This supports further source curation, but does not establish translation readiness. Preserve the native likelihood data and label every reconstructed age series as approximate.
+Screening decision: provisionally new and eligible for source curation. The official run supplies age information, survey indices, biological sources and numeric age-specific model outputs. This supports further source curation, but does not establish translation readiness. Preserve the native likelihood data and label every reconstructed age series as approximate.
 
 The assessment identifies uncertain growth and natural mortality, limited aged samples concentrated in 2007–2019, and a high WCGBTS catchability estimate (3.97) as important limitations. These should be carried into any later audit and comparison.
 

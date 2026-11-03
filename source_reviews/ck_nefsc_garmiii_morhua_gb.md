@@ -68,7 +68,7 @@ or complete age-specific uncertainty arrays. Inputs are marked **complete**
 for the numerical observation and biological arrays documented for the
 selected run; this does not imply that every model setting has been recovered.
 
-No tinyAM translation or fit is included in this database import. No data from
+No or fit is included in this database import. No data from
 the revised 2024 Georges Bank assessment have been copied into this record.
 
 ## Sources and cache

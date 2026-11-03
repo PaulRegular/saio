@@ -10,7 +10,7 @@ The latest published advice update is based on the autumn 2026 acoustic survey. 
 
 The latest detailed MFRI technical report located was published on 12 June 2026. It reports international catch numbers by age group and aggregate catch weight from 1985 onward, and age- and length-specific acoustic stock-size tables for the 2025 autumn and January 2026 surveys. The report cautions that fishery samples can reflect selective catches rather than the overall population. It also provides historical age-specific weight trends as figures and maturity classifications from survey samples. These materials establish that age data exist, but do not verify a complete annual age-specific acoustic input series, numeric age-specific biology, or run-matched age-specific mortality assumptions for the October 2026 update.
 
-No annual fitted N-at-age, F-at-age, or M-at-age series was found in the official output products. The assessment is not a conventional age-structured population model. Eligibility therefore remains unresolved: the age-resolved input evidence may support a tinyAM approximation, but the latest run’s required time series and model assumptions must be verified first. Do not combine the June 2026 initial advice graph with the October survey update as if they represented the same assessment vintage.
+No annual fitted N-at-age, F-at-age, or M-at-age series was found in the official output products. The assessment is not a conventional age-structured population model. Do not combine the June 2026 initial advice graph with the October survey update as if they represented the same assessment vintage.
 
 ## Sources reviewed
 

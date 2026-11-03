@@ -8,9 +8,9 @@ The 2026 WGNSSK assessment is the latest detailed official assessment located fo
 
 The report gives combined catch numbers at age, catch weights, and quarter-1 stock weights for 1982–2025, ages 1–11+, with age 11 as the plus group. It reports an age-specific maturity ogive from ages 0–11+ and fixed natural mortality of 0.1 per year. Stock weights for 1982–2003 are identified as reconstructed. Input tables are rounded; original bootstrap files and exact unrounded values were not recovered.
 
-The report also publishes three commercial LPUE series treated by SAM as fishable-stock-biomass indices: Belgium (2004–2025), France (2005–2025), and UK (1986–2025). They are preserved as inputs but excluded from the tinyAM fit because tinyAM does not support this aggregate biomass-index likelihood. Their index scale is not stated, so no rescaling is applied.
+The report also publishes three commercial LPUE series treated by SAM as fishable-stock-biomass indices: Belgium (2004–2025), France (2005–2025), and UK (1986–2025). Their index scale is not stated, so no rescaling is applied.
 
-The age-specific tuning tables report UK BTS ages 1–6 (1989–2025 except 2022), UK YFS age 1 (1987–2006), and French YFS age 1 (1987–2023). BTS ages 1–3 from 2010 onward are grey and excluded from the official SAM fit. The French survey was sampled in 2024–2025, but those data were unavailable to the assessment. The source annex gives survey timing windows of 0.5–0.75 of the year; a tinyAM translation uses their midpoint, 0.625, as a single sampling-time approximation. The published tables do not state the survey-index units or scaling, so observations are retained without rescaling.
+The age-specific tuning tables report UK BTS ages 1–6 (1989–2025 except 2022), UK YFS age 1 (1987–2006), and French YFS age 1 (1987–2023). BTS ages 1–3 from 2010 onward are grey and excluded from the official SAM fit. The French survey was sampled in 2024–2025, but those data were unavailable to the assessment. The source annex gives survey timing windows of 0.5–0.75 of the year; a uses their midpoint, 0.625, as a single sampling-time approximation. The published tables do not state the survey-index units or scaling, so observations are retained without rescaling.
 
 Table 17.13 reports the SAM age keys, variance sharing, independent F processes across ages, lognormal likelihoods, and a random-walk recruitment process. The full configuration is recorded in `assumptions.csv`; fitted log-q and observation-SD estimates are available in Table 17.15.
 
@@ -23,7 +23,3 @@ Table 17.19 sums to Table 17.16 SSB within rounding for 1982–2020, but not for
 ## Additional source details
 
 The translation follows the age-specific observation-variance keys in Table 17.13 and the pinned TAF configuration: UK BTS age 1, age 2, and ages 3–6 share three variance parameters. Table 17.15 reports different BTS SD estimates for ages 3, 4, and 5–6 (0.0966, 0.0780, and 0.0730), which conflicts with those keys. The recipe does not use those SD estimates as starting values; the report and public TAF snapshot do not resolve the discrepancy. The index scale also remains unresolved, so source q estimates are not used as starts.
-
-## Downstream modelling
-
-[tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_sole_eastern_channel_7d_2026.md) hold model choices and fitting results.

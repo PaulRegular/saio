@@ -1,6 +1,6 @@
 # Inside Yelloweye Rockfish
 
-Reviewed 2026-10-29. DFO's Pacific inventory entry corresponds to the inside Yelloweye Rockfish population in Groundfish Management Area 4B. DFO distinguishes it from the outside population on the basis of genetic and geographic evidence. No canonical tinyAM stock record was found.
+Reviewed 2026-10-29. DFO's Pacific inventory entry corresponds to the inside Yelloweye Rockfish population in Groundfish Management Area 4B. DFO distinguishes it from the outside population on the basis of genetic and geographic evidence.
 
 ## Current advice and detailed model evidence
 
@@ -12,7 +12,7 @@ The report includes biological age and length data and sex-specific maturity-at-
 
 ## Screening decision
 
-Identity is a provisional new unit, but age-disaggregated tinyAM eligibility remains unresolved. Survey age compositions are verified, while the lone commercial age-sampling trip does not establish a representative annual catch-at-age series. The source set also needs verification of numeric weight-at-age, fractional timing, and comparable age-specific fitted outputs. Keep the source record as a follow-up candidate; do not treat the MSE projections as a conventional fitted assessment or fill missing inputs from model states. No canonical assessment or numeric series was imported.
+Survey age compositions are verified, while the lone commercial age-sampling trip does not establish a representative annual catch-at-age series. The source set also needs verification of numeric weight-at-age, fractional timing, and comparable age-specific fitted outputs. Keep the source record as a follow-up candidate; do not treat the MSE projections as a conventional fitted assessment or fill missing inputs from model states. No canonical assessment or numeric series was imported.
 
 ## Sources
 

@@ -27,7 +27,3 @@ The age-specific survey values remain on their native relative-index scales. The
 The M9 object supplies fitted numbers-at-age and fishing mortality at age for 1981–2023. Age 8 is 8+, and ages 7 and 8 share a single fitted F state. Recruitment is abundance at age 1. SSB and Fbar are extracted with the `stockassessment` package table methods; Fbar is ages 2–6. Their low/high bounds are generated as exp(log estimate ± 2 standard errors) on the log scale. The log-scale standard errors for N-at-age and F-at-age are retained with their scale stated in row notes. Total abundance is derived by summing N-at-age, with uncertainty left blank because cross-age covariance was not propagated for that sum.
 
 M is fixed, so the database records its age-specific input and does not present it as an estimated output. The 2026 summary table's low/high values are retained as published; its interval level is not stated. For 2026, the table supplies forecast SSB and recruitment but no bounds or F value.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_turbot_north_sea.md). They do not determine source completeness or official run selection.

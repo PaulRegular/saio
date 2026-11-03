@@ -14,7 +14,7 @@ All three completeness fields remain partial. Report tables provide valuable num
 
 ## Previous detailed run: WBCod2025
 
-The 2025 WGBFAS assessment and its native SAM files remain separately documented below. It was the latest detailed run before the 2026 update and is retained as historical source data; its observations and outputs are not combined with the 2026 report tables. The existing tinyAM translation and dashboard refer to this 2025 run only.
+The 2025 WGBFAS assessment and its native SAM files remain separately documented below. It was the latest detailed run before the 2026 update and is retained as historical source data; its observations and outputs are not combined with the 2026 report tables. The existing and dashboard refer to this 2025 run only.
 
 ## Source selection
 
@@ -49,12 +49,10 @@ weight change, so the native weight values are preserved without converting
 them to an assumed SD or precision multiplier.
 
 The three survey series are BITS Q4 (ages 0–4+, 1999–2024), BITS Q1 (ages
-1–4+, 1996–2025) and FEJUCS pound net (age 0, 2011–2024; 2012 is missing).
-The report describes the BITS observations as CPUE indices. It does not give a
+1–4+, 1996–2025) and FEJUCS pound net (age 0, 2011–2024; 2012 is missing). The report describes the BITS observations as CPUE indices. It does not give a
 physical scale multiplier, so native SAM index units are retained. The fitted
 sampling times are 0.8477816, 0.1653494 and 0.85, respectively. BITS Q1 has
-correlated age residuals in the SAM configuration; tinyAM uses independent
-survey residuals.
+correlated age residuals in the SAM configuration.
 
 Natural mortality is fixed at 1985–2024 values from Table 2.3.21: ages 0–7+
 are 1.318, 0.598, 0.411, 0.324, 0.274, 0.241, 0.218 and 0.201 per year.
@@ -91,11 +89,9 @@ recruitment, SSB, Fbar and TSB reproduce the rounded values in Table 2.3.23.
 The fitted object includes a 2025 age-0 state that is not reported in Table
 2.3.24; that unavailable table cell is not imported as a source estimate.
 
-The tinyAM translation uses an IID recruitment process and cohort deviations,
-IID F states, fixed source M, source survey timings and survey-by-age q groups.
-It cannot reproduce SAM's joint survey residual correlation, native catch
-observation weights, or the exact initial-state and process parameterization.
-tinyAM estimates F at age 0, whereas the source has no F state at age 0. These
+The uses an IID recruitment process and cohort deviations,
+IID F states, fixed source M, source survey timings and survey-by-age q groups. It cannot reproduce SAM's joint survey residual correlation, native catch
+observation weights, or the exact initial-state and process parameterization. These
 are recorded as approximations; no observations are adjusted to improve
 agreement.
 
@@ -103,7 +99,3 @@ The source PDF, extracted text, raw `.dat` inputs, configuration, selected TAF
 revision and fitted SAM object are cached under the gitignored
 `source_cache/ices_cod_western_baltic_2025/` directory. The local manifest
 records retrieval dates, checksums and source URLs.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ck_ices_wgbfas_morhua_bs.md). They do not determine source completeness or official run selection.

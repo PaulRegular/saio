@@ -51,4 +51,4 @@ The locally cached HAWG full report, ICES SAG and advice pages, and scripts from
 
 ## Curation status
 
-The source import is **partial**. Detailed age-specific inputs, fixed biology and mortality, selected model settings, and aggregate official outputs are present. The source-table conflicts, absent raw run files, missing fitted age-specific outputs, and unavailable uncertainty prevent a complete validation of the applied assessment. No tinyAM translation has been started.
+The source import is **partial**. Detailed age-specific inputs, fixed biology and mortality, selected model settings, and aggregate official outputs are present. The source-table conflicts, absent raw run files, missing fitted age-specific outputs, and unavailable uncertainty prevent a complete validation of the applied assessment.

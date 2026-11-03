@@ -44,11 +44,9 @@ The official data script uses `stockassessment::read.ices()` and takes the first
 
 This matches the official fit's stored precision weights and is how the fit is represented in the canonical database.
 
-The age-labelled CV values from the original files are retained separately to document the distinction. They do not replace the fitted precision weights in the tinyAM translation.
+The age-labelled CV values from the original files are retained separately to document the distinction. They do not replace the fitted precision weights in the.
 
 ## Remaining differences and limitations
-
-Despite the closer alignment of fishing-mortality dynamics, several differences remain between tinyAM and the official SAM assessment.
 
 **Survival process:** The official model uses random-walk survival deviations with age-specific variance sharing. The translation instead assumes IID cohort-survival deviations with one shared SD.
 
@@ -56,16 +54,12 @@ Despite the closer alignment of fishing-mortality dynamics, several differences 
 
 **Natural mortality:** The official model estimates M through a GMRF. The translation uses fixed numerical M, including a constant extension of the 2022 values into 2023–2026.
 
-**Catch observation errors:** tinyAM uses a single estimated catch observation SD rather than the source age-specific variance groups.
-
-**Survey observation errors:** tinyAM retains survey-specific SDs and relative precision information but not the official AR(1) age correlation.
-
 **Survey plus groups:** Both IBTS surveys report age 6 as a 6+ group, whereas the population model has an 8+ terminal group. The current translation treats these observations at age 6 rather than explicitly predicting the sum of survey-vulnerable abundance over ages 6–8+. This remains an observation-definition approximation that should be resolved or tested separately.
 
 **Initial abundance:** Older initial ages now use latent states without an
 initial density. The estimated fixed r0 anchor still differs from SAM.
 
-These differences are documented limitations of an illustrative tinyAM translation, not corrections to the official SAM assessment.
+These differences are documented limitations of an illustrative, not corrections to the official SAM assessment.
 
 ## Comparison limits
 
@@ -77,13 +71,8 @@ The native fitted object also supplies fitted catch and survey observations, age
 
 The 2026 intermediate-year recruitment, Fbar and total-biomass estimates and intervals are available from the native SAM summary tables. They are stored as native-model outputs, separately from the report-published SSB row.
 
-The official numerical inputs remain unchanged in the canonical database. The added fitted outputs come directly from the April model object. The carried-forward M assumption and process-model choices belong exclusively to the tinyAM translation.
-
+The official numerical inputs remain unchanged in the canonical database. The added fitted outputs come directly from the April model object. The carried-forward M assumption and process-model choices belong exclusively to the.
 
 ## Initial abundance
 
 The cached official SAM fit has `initState = 0` and no `initN` parameters.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_whiting_north_sea_2026.md). They do not determine source completeness or official run selection.

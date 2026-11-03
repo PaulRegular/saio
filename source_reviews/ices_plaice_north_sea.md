@@ -28,7 +28,7 @@ The official report chapter, survey/assessment XML, and other source files used 
 
 The report identifies BTS and IBTS Q3 as third-quarter surveys, IBTS Q1 as first quarter, and ICES survey descriptions classify SNS as Q3. The database therefore uses quarter midpoints (0.75 and 0.125) as approximate sampling fractions; exact fractions from the official SAM configuration were not recovered. The report does not state numerical units for the survey indices, so their published values remain on their native scale and their database unit is marked unresolved.
 
-The report prints SAM's parameter-sharing matrices and observation-correlation settings. The q matrix is retained as printed in the assumptions table, but its detailed correspondence to each input row is not fully identified in the report. The listed observation-correlation structures are also preserved without assigning their rows to specific surveys. tinyAM's translation uses separate survey-age catchability and survey-level observation SDs, so this is an approximation rather than an exact reproduction of those SAM settings.
+The report prints SAM's parameter-sharing matrices and observation-correlation settings. The q matrix is retained as printed in the assumptions table, but its detailed correspondence to each input row is not fully identified in the report. The listed observation-correlation structures are also preserved without assigning their rows to specific surveys.
 
 ## Database coverage and limits
 

@@ -16,6 +16,6 @@ The official report gives comparable population outputs, including spawning biom
 
 ## Screen decision
 
-Mark this distinct unit as eligible for source curation because the official run-matched archive contains age-at-length samples, annual fishery/survey length compositions, aggregate catches and indices, biological relationships, an estimated mortality assumption, and comparable population outputs. Eligibility is conditional on the documented reconstruction and sparsity caveats above; it does not mean the observations are already tinyAM-ready. No canonical stock, assessment, input or output records were added.
+Mark this distinct unit as eligible for source curation because the official run-matched archive contains age-at-length samples, annual fishery/survey length compositions, aggregate catches and indices, biological relationships, an estimated mortality assumption, and comparable population outputs. Eligibility is conditional on the documented reconstruction and sparsity caveats above. No canonical stock, assessment, input or output records were added.
 
 The authoritative PDFs, native model ZIP and supplementary workbook are cached locally under the gitignored `source_cache/discovery_noaa_longnose_skate_2019/`. `sources.csv` records their URLs, retrieval date, revision, byte size and SHA-256 checksums.

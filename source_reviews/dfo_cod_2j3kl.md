@@ -26,7 +26,7 @@ NAFO division 2J, 3K and 3L. The 2025 values are provisional. Division rows are
 preserved without a duplicate summed total. The report does not provide the
 complete fitted catch-age vector, fleet mapping, age-specific 2026 N/F/M
 surfaces, or native run files, so this remains a summary-only source record and
-is not a tinyAM translation target.
+is not a target.
 
 The 2025 record contains 819 commercial catch numbers-at-age values for ages
 2-14 in 1962-2024, plus all 71 reported 2J3KL landings values from 1954-2024.
@@ -93,12 +93,7 @@ body mass in the Smith Sound biomass equation. Beginning-of-year stock weights
 at survey time: neither Smith-specific weights nor a within-year growth
 surface is supplied. The zero age-0 and age-14-16 sample categories can be
 removed before conversion without changing proportions or reconstructed
-biomass. The age-1 biomass contribution is retained in the denominator even
-when the tinyAM fit starts at age 2.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/dfo_cod_2j3kl.md). They do not determine source completeness or official run selection.
+biomass.
 
 ## Source context
 

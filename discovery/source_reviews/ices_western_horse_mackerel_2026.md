@@ -25,7 +25,7 @@ The 2025 assessment therefore demonstrates a substantial age-based input and out
 
 The stock is recorded as a new, screened candidate, with eligibility unresolved for the current 2026 assessment. The prior 2025 report confirms age-at-catch, age-0 recruitment information, biological inputs, and N/F-at-age outputs, but these cannot be assumed to be the 2026 input arrays. The latest run's catch-at-age, weights, maturity, mortality, survey-index inputs, and any N/F-at-age outputs remain unverified. The current 2026 SAG output is useful but does not fill those input gaps.
 
-Revisit when the detailed 2026 WGWIDE report or run-matched model inputs become public. No canonical assessment, input, or output rows were added, and no tinyAM translation was attempted.
+Revisit when the detailed 2026 WGWIDE report or run-matched model inputs become public. No canonical assessment, input, or output rows were added was attempted.
 
 ## Sources
 

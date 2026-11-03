@@ -77,11 +77,4 @@ The assessment, inputs, and outputs are marked partial because the recovered
 report leaves some units unresolved, does not provide the native executed run,
 and has no numerical uncertainty tables. The source series are otherwise
 transcribed from the report tables without fitted-parameter adjustments or
-invented values. Any tinyAM translation should keep the two source catch fleets
-and three survey identities visible, document approximations to SAM's process
-and observation-correlation structures, and treat area-specific F comparison
-as approximate if the tinyAM population is represented as one combined unit.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_herring_west_scotland_ireland.md). They do not determine source completeness or official run selection.
+invented values.

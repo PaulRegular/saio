@@ -64,11 +64,9 @@ refer to January, with zero fractions of F and M before spawning in the pinned
 configuration. The report's Yield is model-predicted catch, distinct from SAG
 observed catches. No fitted M is manufactured from supplied fixed M.
 
-SAG provides historical lower/upper limits for SSB, age-0 recruitment and Fbar.
-They are retained with their reported meaning; the source data page does not
+SAG provides historical lower/upper limits for SSB, age-0 recruitment and Fbar. They are retained with their reported meaning; the source data page does not
 label their interval level or construction. No SE is inferred. N-at-age and
-F-at-age tables do not supply numerical uncertainty. Source Fbar is arithmetic
-ages 1–2, not tinyAM's population-weighted mean.
+F-at-age tables do not supply numerical uncertainty.
 
 ## Validation and unresolved source details
 
@@ -133,7 +131,3 @@ positive-cell count.
 - [Pinned ICES assessment repository](https://github.com/ices-advice/2026_san.sa.1r/tree/8a556698db2c9c23321980c8fec368c80562b89f).
 - [Pinned smsR source](https://github.com/nissandjac/smsR/tree/a097011f2fff959c9a263e5f6acb49795b9a53ad), survival, recruitment, observation equations and spawning defaults.
 - [2024 sandeel benchmark](https://doi.org/10.17895/ices.pub.21581151.v2), selected regional framework.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_sandeel_area_1r.md). They do not determine source completeness or official run selection.

@@ -1,8 +1,7 @@
 # NOAA Gulf of Alaska Yelloweye Rockfish — 2024 assessment
 
 Reviewed 2026-10-30. NOAA Stock SMART ID 10425 identifies Gulf of Alaska
-Yelloweye Rockfish (*Sebastes ruberrimus*). No canonical tinyAM stock record
-matches this unit. The latest fully accepted completed run in the cached NOAA
+Yelloweye Rockfish (*Sebastes ruberrimus*). The latest fully accepted completed run in the cached NOAA
 Stock SMART inventory is assessment 13892, assessment year 2024, with data
 through 2024. Stock SMART classifies it as an index method (REMA 22.2).
 

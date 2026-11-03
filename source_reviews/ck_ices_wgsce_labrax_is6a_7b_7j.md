@@ -42,14 +42,12 @@ is cached locally alongside the SAG export and advice.
 
 ## Translation decision
 
-This is not an age-structured assessment that tinyAM can translate. The
+The
 published landings history and catch limit are useful management information,
 but they do not provide catch-at-age, abundance indices, biological matrices,
 or fitted population states. Do not convert the aggregate landings to
 age-specific catches or treat the advised landings limit as an estimated
-population output. The canonical record contains the available landings
-context and the advised commercial-landings limit, but no population outputs;
-no tinyAM fit or comparison dashboard is appropriate for this record.
+population output.
 
 ## Sources
 

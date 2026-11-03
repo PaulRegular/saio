@@ -20,7 +20,7 @@ The assessment estimates sex-specific growth and an external length-weight relat
 
 The report publishes spawning biomass and age-0 recruitment series with associated standard deviations from 1916 through 2017, as well as total biomass, age-3+ biomass, depletion, and annual F rate. It explicitly names a sex-specific annual N-at-age CSV, but that file could not be located. The available report therefore supports aggregate comparisons, while age-specific population outputs remain unverified.
 
-The inventory row is marked `screened` and `unresolved`, not eligible or excluded. This is a distinct new stock unit with a clearly age-informed assessment, but the key numerical age-composition matrices and age-specific output file are not accessible from the sources located. It is not yet established that annual catch-at-age or age-specific survey indices can be reconstructed for a defensible tinyAM model. Preserve the verified aggregate values and assumptions if source curation proceeds; do not fill the missing age data from fitted outputs or from the separate British Columbia assessment.
+The inventory row is marked `screened` and `unresolved`, not eligible or excluded. This is a distinct new stock unit with a clearly age-informed assessment, but the key numerical age-composition matrices and age-specific output file are not accessible from the sources located. Preserve the verified aggregate values and assumptions if source curation proceeds; do not fill the missing age data from fitted outputs or from the separate British Columbia assessment.
 
 ## Sources
 

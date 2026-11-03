@@ -1,6 +1,6 @@
 # British Columbia Outside Lingcod, 2025 assessment
 
-Reviewed 2026-10-29. DFO's current outside-water Lingcod assessment covers PMFC Areas 3CD + 5ABCDE and excludes Area 4B. DFO treats the inside Area 4B population as a separate unit. No corresponding canonical tinyAM stock record was found.
+Reviewed 2026-10-29. DFO's current outside-water Lingcod assessment covers PMFC Areas 3CD + 5ABCDE and excludes Area 4B. DFO treats the inside Area 4B population as a separate unit.
 
 ## Current assessment and age-data screen
 

@@ -58,12 +58,9 @@ date and exact 2026 sampling fractions remain flagged rather than treated as
 newly verified settings.
 
 The printed F variance keys are `0 1 2 3 3 3 3 3`: ages 3, 4 and 5 have
-separate innovation SDs, with ages 6–10+ sharing one. tinyAM's retained F
-process has one SD. Separate recruitment and shared older-cohort SDs are
+separate innovation SDs, with ages 6–10+ sharing one. Separate recruitment and shared older-cohort SDs are
 already supported; that simpler N variance grouping is not itself a missing
-capability. The initial-state treatment and F density still differ. The common
-SSB comparison uses official N with the same translated biology as tinyAM;
-it does not imply identical native spawning-time SSB.
+capability. The initial-state treatment and F density still differ.
 
 The report gives official N-at-age for ages 3–10+ and F-at-age for ages 3–8
 and 9+ through 2025 (Tables 14.4.2–14.4.3). It explicitly says F at age 9 and
@@ -71,10 +68,6 @@ and 9+ through 2025 (Tables 14.4.2–14.4.3). It explicitly says F at age 9 and
 provides recruitment-at-age-3, SSB, TSB, and Fbar 4–7 with 95% intervals
 through 2025. The 2026 short-term forecast values are stored separately from
 the historical fitted period.
-
-## Downstream modelling
-
-[Translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_saithe_north_sea.md) hold downstream settings and fitting results.
 
 ## Source context
 

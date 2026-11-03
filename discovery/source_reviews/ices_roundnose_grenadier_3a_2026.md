@@ -31,7 +31,7 @@ support an aggregate survey-index and catch-trend assessment, not the age-based
 inputs and outputs required for this screen. This is a public-source finding;
 it does not claim that age observations or biological samples do not exist
 outside the reviewed assessment materials. No canonical stock, assessment,
-input, output, or tinyAM translation records were added.
+input, output were added.
 
 ## Sources
 

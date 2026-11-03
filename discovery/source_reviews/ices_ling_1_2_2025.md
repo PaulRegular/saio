@@ -10,14 +10,13 @@
 |---|---|---|
 | Landings | 1988–2024, tonnes | Aggregate only; no catch-at-age series was verified in the reviewed assessment products. |
 | Longline biomass index | 2000–2024, kg per 1,000 hooks, with 95% intervals | Aggregate CPUE; no age-specific index was reported. This is a stock-size index, not SSB. |
-| Fishing-pressure proxy | 2002–2024, ratio; described as a length-based proxy | Not an age-specific F surface. |
-| Recruitment, SSB, N-at-age, F-at-age and M-at-age | Not reported in the current SAG output | No age-specific population output is available for a like-for-like tinyAM comparison. |
+| Fishing-pressure proxy | 2002–2024, ratio.
 
-The published output is therefore an aggregate index-based assessment, not an age-disaggregated population assessment suitable for the current tinyAM comparison set. The reviewed products do not establish whether age samples or other biological data exist in national source systems; their absence is not inferred from these aggregate outputs.
+The reviewed products do not establish whether age samples or other biological data exist in national source systems; their absence is not inferred from these aggregate outputs.
 
 ## Screening decision
 
-This is a **new, screened, ineligible candidate** for the age-disaggregated assessment set. The current official output contains no comparable age-specific population or mortality trajectories. It remains in the candidate register to preserve discovery coverage and the reason for exclusion. No canonical source data were imported and no tinyAM translation was attempted.
+This is a **new, screened, ineligible candidate** for the age-disaggregated assessment set. The current official output contains no comparable age-specific population or mortality trajectories. It remains in the candidate register to preserve discovery coverage and the reason for exclusion. No canonical source data were imported was attempted.
 
 ## Sources
 

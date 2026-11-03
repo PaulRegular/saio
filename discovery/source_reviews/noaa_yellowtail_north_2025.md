@@ -17,11 +17,7 @@ composition bins 1–30.
 - The model input has three fishery catch fleets (commercial, at-sea hake,
   recreational), with catch in biomass units reported in metric tonnes. The
   fit uses fishery age and length compositions. It does not use a direct
-  annual catch-at-age observation series; any tinyAM catch-at-age input
-  requires reconstruction from catch totals and sampled age compositions.
-- Four index series are included: an Oregon–Washington hook-and-line survey
-  in numbers, the Triennial and WCGBTS surveys in biomass, and the SMURF
-  recruitment index. Triennial age and length compositions and WCGBTS
+  annual catch-at-age observation series. Triennial age and length compositions and WCGBTS
   conditional age-at-length data are available. An age-specific abundance
   index is not directly observed and would require a clearly documented
   reconstruction from an aggregate index and age information.
@@ -40,9 +36,7 @@ composition bins 1–30.
 
 This is eligible for source curation because the native assessment files
 include observed age-composition data, age-specific biological information,
-and fitted age-specific outputs. A tinyAM version would still be an
-approximation: its catch-at-age and age-indexed index would be reconstructed
-quantities, not the native observation likelihoods.
+and fitted age-specific outputs.
 
 ## Sources and local cache
 

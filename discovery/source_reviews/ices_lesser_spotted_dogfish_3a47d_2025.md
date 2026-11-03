@@ -14,7 +14,7 @@ Section 25.9.2 (printed pages 705–709) identifies the stock assessment as an I
 
 This is a distinct new ICES stock unit, but it is ineligible for the age-disaggregated assessment set. Its latest assessment uses aggregate survey biomass and length-based indicators, with no age-structured population model or age-specific outputs. The report's life-history and survey information do not support reconstructing the missing age-disaggregated assessment observations without inventing model inputs.
 
-No canonical numerical records or tinyAM translation were added. The cached report and provenance are recorded in `source_cache/discovery_ices_dogfish_2025/sources.csv`.
+No canonical numerical records were added. The cached report and provenance are recorded in `source_cache/discovery_ices_dogfish_2025/sources.csv`.
 
 ## Sources
 

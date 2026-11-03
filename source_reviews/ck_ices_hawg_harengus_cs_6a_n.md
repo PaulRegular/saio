@@ -99,7 +99,7 @@ SAG XML and associated pages are cached locally with file hashes and URLs.
 
 The survey-index rule does not estimate population N/F/M-at-age, recruitment,
 or an age-structured population model. A comparison that presents those
-quantities as official estimates would be misleading. A tinyAM translation
+quantities as official estimates would be misleading. A
 and comparison dashboard are not supported by this assessment alone.
 
 ## Sources

@@ -13,7 +13,7 @@ sex-specific population, mortality, and biomass quantities.
 The production inputs and outputs remain under the canonical stock
 `afsc_northern_rock_sole_ebs`, where sex is retained as a data dimension. Do
 not copy the male rows into this catalogue-only stock or describe them as an
-independent fit. Associate any tinyAM comparison with the canonical stock.
+independent fit.
 
 ## Sources
 

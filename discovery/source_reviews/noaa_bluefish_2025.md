@@ -20,7 +20,7 @@ Annual weight-at-age surfaces are plotted for SSB, the commercial and recreation
 
 The fitted parameter tables report numeric annual abundance-at-age (thousands of fish) and total and fleet fishing mortality-at-age for 1985-2024, ages 0-5 and 6+. Aggregate outputs include SSB, recruitment, and fishing mortality. The age-specific tables do not provide cell-level uncertainty intervals.
 
-The WHAM model is annual and the 2025 input figures do not identify fractional-year observation times. Survey-season timing will need to be sourced from the underlying survey documentation if the assessment is translated to tinyAM; any annualization should be documented as an approximation.
+The WHAM model is annual and the 2025 input figures do not identify fractional-year observation times. any annualization should be documented as an approximation.
 
 ## Identity and screening decision
 

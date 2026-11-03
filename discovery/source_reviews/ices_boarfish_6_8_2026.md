@@ -27,7 +27,7 @@ input set. The age-0 recruitment and ages-4-14 F shown in the 2026 ICES graph
 are derived outputs; they do not show that age-specific observations were
 fitted. There is no canonical stock, assessment event, or numerical input or
 output record for this candidate. Model-input assessment, exact run files,
-and any tinyAM translation are outside this identity/eligibility screen.
+and any are outside this identity/eligibility screen.
 
 ## Sources and cache
 

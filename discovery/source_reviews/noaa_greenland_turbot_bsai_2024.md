@@ -25,14 +25,12 @@ some years, but the SAFE says they are excluded from the likelihood because
 mean length-at-age and length-composition data from the same sources are both
 used. The numeric age-composition records and a run-matched reconstruction of
 fishery catch-at-age were not recovered. The assessment therefore remains
-unresolved for the age-disaggregated input screen; its age-structured model
-and age-specific outputs alone do not establish suitable age inputs for
-tinyAM.
+unresolved for the age-disaggregated input screen.
 
 The model fixes natural mortality at 0.112 per year. Growth is estimated from
 survey length-at-age data. Female maturity is specified as a logistic
 length-based ogive with 50% maturity at 60 cm; these are not supplied
-age-specific input vectors. Exact observation timing for a tinyAM translation
+age-specific input vectors. Exact observation timing for a
 is not stated in the reviewed materials.
 
 ## Outputs and limits

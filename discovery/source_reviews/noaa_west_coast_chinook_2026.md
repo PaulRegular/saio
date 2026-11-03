@@ -29,10 +29,7 @@ The latest reviewed public documents are the 2026 Preseason Report I and the
 Review of 2025 Ocean Salmon Fisheries. Preseason Report I gives run-size and
 adult-return forecasts. For Puget Sound it says forecasts are described in
 annual management reports by management unit, not by individual species, and
-that forecasts are generally dominated by age-4 adults. The reviewed reports
-do not expose the annual catch numbers-at-age vectors, an age-specific marine
-survey index, stock weights-at-age, maturity-at-age, or age-specific natural
-mortality needed to verify a tinyAM-ready input set. The reports also do not
+that forecasts are generally dominated by age-4 adults. The reports also do not
 provide a complete N-at-age/F-at-age/M-at-age output surface for these units.
 
 Stock SMART does publish aggregate indicators for some units. In its 2026
@@ -63,7 +60,7 @@ checked.
 
 Source and output scores are discovery evidence, not reconstructed likelihood
 vectors. No age data, model states, or numeric observations were copied into
-the canonical database, and no tinyAM translation was attempted.
+the canonical database was attempted.
 
 ## Additional PFMC Chinook units
 

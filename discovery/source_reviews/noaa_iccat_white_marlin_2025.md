@@ -5,7 +5,7 @@
 **Assessment unit:** Atlantic white marlin; the 2025 assessment combines white marlin and roundscale spearfish because catches and species identification overlap.
 **Latest NOAA Stock SMART assessment:** 2025; operational; full acceptance; JABBA; data through 2023.
 
-NOAA Stock SMART ID 10955 is the Atlantic-wide inventory row. No canonical tinyAM stock matches it. The 2025 ICCAT assessment is the current run. ICCAT's meeting report says the report's conclusions were preliminary pending SCRS adoption, while the current ICCAT assessment listing identifies the 2025 JABBA model as the model used for advice. The meeting also evaluated Stock Synthesis, but explicitly decided not to use its results for stock-status determination because of poor fits, conflicting indices, and strong retrospective patterns.
+NOAA Stock SMART ID 10955 is the Atlantic-wide inventory row. The 2025 ICCAT assessment is the current run. ICCAT's meeting report says the report's conclusions were preliminary pending SCRS adoption, while the current ICCAT assessment listing identifies the 2025 JABBA model as the model used for advice. The meeting also evaluated Stock Synthesis, but explicitly decided not to use its results for stock-status determination because of poor fits, conflicting indices, and strong retrospective patterns.
 
 ## Inputs and outputs
 
@@ -17,7 +17,7 @@ The selected JABBA results report aggregate biomass and fishing-mortality status
 
 ## Screening decision
 
-This is a **new, screened, ineligible candidate** for the age-disaggregated assessment set. The latest operational assessment uses aggregate catches, CPUE and length compositions, and its selected outputs are aggregate biomass and fishing-mortality indicators. The available source evidence does not provide the age-specific observations and population surfaces required for this comparison. No canonical numerical records were added and no tinyAM translation was attempted.
+This is a **new, screened, ineligible candidate** for the age-disaggregated assessment set. The latest operational assessment uses aggregate catches, CPUE and length compositions, and its selected outputs are aggregate biomass and fishing-mortality indicators. The available source evidence does not provide the age-specific observations and population surfaces required for this comparison. No canonical numerical records were added was attempted.
 
 The two official reports and their retrieval date, document revisions, sizes and SHA-256 checksums are recorded in the ignored local cache at `source_cache/discovery_noaa_iccat_white_marlin_2025/sources.csv`.
 

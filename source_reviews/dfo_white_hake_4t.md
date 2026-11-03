@@ -75,7 +75,7 @@ numerical interval series were recovered or digitized.
 Accordingly, `assumptions_status`, `inputs_status`, and `outputs_status` remain
 `partial`. The current record is useful for source review and preserves
 verified quantities, but the grouped catch bins and missing native survey
-inputs do not yet support a faithful tinyAM translation.
+inputs do not yet support a faithful.
 
 ## Validation
 

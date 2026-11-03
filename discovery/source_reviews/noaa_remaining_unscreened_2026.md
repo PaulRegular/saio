@@ -1,8 +1,7 @@
 # NOAA Stock SMART candidates screened 2026-11-02
 
 This review resolves the 17 NOAA rows that were still marked `not_started` in
-the discovery register. It is a source screen only: no canonical stock,
-assessment, input, or output rows were added and no tinyAM fits were run.
+the discovery register.
 
 ## Decisions
 
@@ -12,8 +11,7 @@ assessment, input, or output rows were added and no tinyAM fits were run.
 | 10989 | Caribbean parrotfishes complex | Ineligible | The cited 2009 SEDAR item is a data-evaluation workshop, not an accepted age-structured production assessment with age inputs and population outputs. |
 | 11402 | Bering Sea/Aleutian Islands skate complex | Ambiguous legacy aggregate; ineligible | The 2007 aggregate overlaps the present Alaska skate and Other Skates harvest units. The current assessment treats Alaska skate with an age-structured Tier 3 model and Other Skates with an aggregate Tier 5 biomass method; the old row cannot be assigned to either as a distinct current unit. |
 | 11444 | Bering Sea/Aleutian Islands Other Skates | Ineligible | The 2023 production assessment estimates aggregate biomass from survey indices with the Tier 5 REMA approach. It does not provide an age-disaggregated likelihood or fitted age surfaces. |
-| 11712 | Pacific bigeye thresher | Ineligible | The WCPFC product is a sustainability-risk assessment. It describes catch, CPUE, and observer information and explicitly identifies limited age data; it is not an age-structured population assessment. |
-| 11714 | North Pacific common thresher | Unresolved | The 2018 NOAA assessment is a Stock Synthesis fit with age-length information, but the reviewed source record does not establish that public run-matched data support the required age-specific tinyAM observations and outputs. Verify native input/output files before eligibility. |
+| 11712 | Pacific bigeye thresher | Ineligible | The WCPFC product is a sustainability-risk assessment. It describes catch, CPUE, and observer information and explicitly identifies limited age data. Verify native input/output files before eligibility. |
 | 11724 | Western/Central Pacific oceanic whitetip | Ineligible | The 2025 WCPFC assessment is the latest detailed production fit. It documents catch, aggregate CPUE, and length compositions, not an age-composition likelihood or age-specific abundance series. |
 | 11763 | Atlantic/Gulf scalloped hammerhead | Unresolved | SEDAR 77 later produced age-structured assessment material, but NOAA's 2026 review states that CIE reviewers recommended it not be used for OFL advice. The latest accepted operational assessment in Stock SMART is an aggregate surplus-production model; verify whether SEDAR 77 qualifies for source curation before deciding. |
 | 14821 | California blue/deacon rockfish | Eligible | The 2017 accepted assessment has a public Stock Synthesis model archive, age and length observations, abundance indices, biological assumptions, and comparable population outputs. Keep California separate from Oregon; the 2019 item is a catch update, not a replacement fit. |
@@ -27,9 +25,7 @@ assessment, input, or output rows were added and no tinyAM fits were run.
 | 15577 | Puerto Rico Grouper Unit 6 | Ineligible | The 2014 accepted assessment uses a non-equilibrium mean-length estimator; it does not provide age-disaggregated inputs or fitted population outputs. |
 
 The rockfish cases retain native Stock Synthesis composition inputs for later
-extraction. Conditional age-at-length is not an age-specific abundance index;
-any tinyAM conversion must be justified from the public native data and must
-preserve the source likelihood information. The five eligible rows are eligible
+extraction. The five eligible rows are eligible
 for source curation, not a claim that they are already numerically imported or
 translation-ready. Common thresher remains unresolved pending verification of
 run-matched source files. Scalloped hammerhead also remains unresolved because

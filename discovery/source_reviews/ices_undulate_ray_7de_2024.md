@@ -34,7 +34,7 @@ mortality-, or natural mortality-at-age.
 
 This is a distinct new ICES unit screened **ineligible** for the
 age-disaggregated assessment set. No canonical stock, assessment, input, or
-output records were added, and no tinyAM translation was attempted.
+output records were added was attempted.
 
 ## Sources
 

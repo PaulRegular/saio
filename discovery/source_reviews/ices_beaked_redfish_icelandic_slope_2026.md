@@ -26,7 +26,7 @@ complete numeric input set. Length-disaggregated survey indices cannot be
 treated as age-specific indices, and survey age samples cannot be substituted
 for fishery catch-at-age without source-supported conversion data. The exact
 annual survey timing fractions and age-specific weights/maturity inputs needed
-for a defensible tinyAM translation were also not found.
+for a defensible were also not found.
 
 The report presents SSB, age-3 recruitment, and fishing-mortality trends with
 95% intervals, along with forecast tables. These provide some comparable

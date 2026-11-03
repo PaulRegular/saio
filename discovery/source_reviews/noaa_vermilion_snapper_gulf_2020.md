@@ -64,7 +64,7 @@ does not include annual uncertainty estimates.
 
 The source record is eligible for detailed curation because the accepted run's
 final input files and comparable aggregate outputs are printed in the official
-report. A tinyAM translation will need to distinguish source catch totals and
+report. A will need to distinguish source catch totals and
 composition samples from reconstructed age-specific catch, derive age-specific
 weights from the fixed biology, preserve egg-based spawning output as a native
 definition, and document any survey-timing approximation. No canonical database

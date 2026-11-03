@@ -13,7 +13,7 @@ PDFs and text extractions are cached under `source_cache/dfo_american_plaice_4t_
 
 ## 2016 assessment inputs and model
 
-The source VPA covers 1976–2015 and ages 4–16+, with age 16 as the plus group. The database retains commercial catch-at-age including estimated discards, the DFO research-vessel survey index, the mobile-gear sentinel survey index, January 1 population weights-at-age, and annual maturity-at-age. The catch and survey age values are reported in thousands of fish; weights are kg/fish and maturity values are proportions. The September surveys use a 0.75 sampling-time value for tinyAM preparation, documented as a within-year approximation because the annual sampling dates are not reported.
+The source VPA covers 1976–2015 and ages 4–16+, with age 16 as the plus group. The database retains commercial catch-at-age including estimated discards, the DFO research-vessel survey index, the mobile-gear sentinel survey index, January 1 population weights-at-age, and annual maturity-at-age. The catch and survey age values are reported in thousands of fish; weights are kg/fish and maturity values are proportions.
 
 The RV survey table reports `NA` for every age in 2003. The later indicator report explicitly says 2003 survey data were omitted because an uncalibrated vessel was used. That year is therefore absent from the RV numeric index rows. The mobile-gear sentinel index covers 2003–2015 and uses age-length keys from the corresponding RV surveys.
 
@@ -32,7 +32,3 @@ Figure 21 (printed p. 39) provides annual median M and F for ages 4–9 and 10+.
 The 2024 indicator update reports a three-year moving average of survey-derived biomass for fish at least 30 cm long: 1.25 kg/tow for 2024. This is not SSB and is stored only on its separate indicator-update record.
 
 The 2016 source input streams are represented, but complete model assumptions and outputs remain partial because the native fit, full parameter estimates, and annual F, M, and SSB values are unavailable.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ck_dfo_platessoides_4t.md). They do not determine source completeness or official run selection.

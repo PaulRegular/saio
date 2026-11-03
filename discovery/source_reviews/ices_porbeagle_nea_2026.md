@@ -17,10 +17,6 @@ and no fishing-mortality age; the graph does not report numbers, fishing
 mortality, or natural mortality at age. No age-specific catch, survey, weight,
 maturity, or mortality inputs are documented for this assessment.
 
-The current published materials therefore support an aggregate landings
-history and advice, not the age-disaggregated inputs and outputs required for a
-tinyAM comparison.
-
 ## Screening decision
 
 This stock unit is **ineligible** for the age-disaggregated assessment set.

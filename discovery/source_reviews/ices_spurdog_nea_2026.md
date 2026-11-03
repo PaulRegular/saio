@@ -34,11 +34,8 @@ prove that every input value remained unchanged in 2026.
 | Mortality and timing | The advice's input summary does not specify the natural-mortality formulation or survey timing as fractions of a year. Survey indices are grouped by Q1, Q3, and Q4. | Exact 2026 mortality assumptions and within-quarter observation timing remain unresolved. |
 
 The 2026 model label `Age-length and sex-structured model` describes the model
-structure; it does not establish that its observations are age-disaggregated.
-The latest detailed input list instead identifies catch totals, survey biomass
-indices, and length compositions. The available evidence is insufficient to
-confirm that the 2026 production run supplies the catch-at-age and age-specific
-survey information needed for a tinyAM age-structured comparison.
+structure; it does not establish that its observations are age-disaggregated. The latest detailed input list instead identifies catch totals, survey biomass
+indices, and length compositions.
 
 ## Reported outputs
 
@@ -70,8 +67,7 @@ observation inputs. Keep the candidate unresolved until the 2026 detailed
 production inputs or native files are found; do not mark it eligible based on
 the age–length model label alone.
 
-No canonical assessment, input, or output records were added, and no tinyAM
-translation was attempted. The reviewed official sources and file checksums are
+The reviewed official sources and file checksums are
 listed in the gitignored cache manifest at
 `source_cache/discovery_ices_spurdog_nea_2026/sources.csv`. It points to the
 already cached WGEF 2024 and 2025 reports rather than duplicating those large

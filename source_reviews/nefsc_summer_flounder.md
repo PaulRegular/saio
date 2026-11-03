@@ -26,11 +26,7 @@ contains only the NEFSC Bigelow spring and fall age indices.
   preserved as a separate aggregate series, not as a fifth fleet. The fleet
   age series and published aggregate differ by as much as 941 thousand fish in
   an age-year cell, although annual totals are close. The difference is
-  documented rather than reconciled by altering source values. A tinyAM fit
-  should use either the published aggregate catch or the four fleets, never
-  both together.
-- The NEFSC Bigelow spring and fall age-index rows are transcribed from Tables
-  A40-A41 for 2009-2017 and 2009-2016, respectively. Sampling times 0.25 and
+  documented rather than reconciled by altering source values. Sampling times 0.25 and
   0.75 are seasonal midpoint approximations; the source report does not give
   within-season timing for these series. The other indices used by
   `F2018_BASE_V2` are not yet represented.
@@ -38,11 +34,7 @@ contains only the NEFSC Bigelow spring and fall age indices.
   0.26, 0.25, 0.25, 0.25, 0.25, and 0.24 per year (Table A90). These values
   are stored as source inputs, not as estimated M outputs.
 - Table A90 reports mean November SSB weights at age for 2013-2017. Those
-  published values are stored as the source schedule; using them as a
-  time-invariant weight series across a tinyAM historical fit is an explicit
-  approximation, not an annual official weight surface.
-- Table A86 reports the combined-sex, three-year moving-window maturity ogive
-  through 2016. No 2017 row is reported because 2017 fall maturity data were
+  published values are stored as the source schedule. No 2017 row is reported because 2017 fall maturity data were
   unavailable. A fit that extends through 2017 must state how it handles that
   final year; the conservative comparison period using the available maturity
   data is 1982-2016.
@@ -77,7 +69,3 @@ under `source_cache/nefsc_summer_flounder_2025/`. The importer verifies SHA-256
 checksums and the report overlap. [2025 report](https://asmfc.org/wp-content/uploads/2025/08/SF_Management_Track_Assessment_2025.pdf),
 [peer review](https://www.fisheries.noaa.gov/s3/2025-07/2025-June-Management-Track-Peer-Review-Panel-Report-508.pdf),
 [Stock SMART snapshot](https://github.com/NOAA-EDAB/stocksmart/tree/664c4237e26520b260a090e1821a2cee5d1cdf07).
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/nefsc_summer_flounder.md). They do not determine source completeness or official run selection.

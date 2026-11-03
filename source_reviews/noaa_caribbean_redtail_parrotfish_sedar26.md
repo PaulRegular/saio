@@ -47,7 +47,7 @@ considered its absolute total-mortality estimate unreliable for management.
 This unit is screened **ineligible** for the current age-disaggregated set:
 the production assessment lacks catch-at-age and age-specific abundance
 inputs. The assessment outputs are not a like-for-like age-structured
-comparison target. No canonical database records or tinyAM translation were
+comparison target. No canonical database records were
 added.
 
 ## Sources

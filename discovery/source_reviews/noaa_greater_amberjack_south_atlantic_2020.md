@@ -42,8 +42,7 @@ figures provide recruitment, SSB and fishing-mortality outputs.
 
 The published sources therefore contain enough age-structured material to
 proceed with source curation, while preserving explicit gaps in the recreational
-composition vectors and discard ages. This is a source-curation eligibility
-decision, not a claim that the inputs are already ready for a tinyAM fit.
+composition vectors and discard ages.
 
 ## Timing and other extraction limits
 
@@ -52,9 +51,7 @@ final report does not specify one within-year observation fraction. The index
 methods retain different seasonal structures: the headboat method excludes
 November–April for the terminal closure period, commercial handline
 standardization uses May–June and July–September seasons, and the SERFS video
-index models season from Julian-day quartiles. Any later tinyAM timing value
-must be treated as an explicit approximation informed by those methods, rather
-than copied from a reported common timing parameter.
+index models season from Julian-day quartiles.
 
 The final report lists separate discard series, but an age composition for
 discarded fish was not found in the reviewed sources. The recreational age
@@ -70,7 +67,7 @@ compositions, abundance indices, age-specific biology and mortality, and
 comparable age-specific and aggregate assessment outputs. The exact recreational
 composition vectors, age-specific discards, and a single within-year index
 timing remain unresolved source or translation details and should not be
-fabricated. No canonical stock, assessment, input, output, or tinyAM translation
+fabricated. No canonical stock, assessment, input, output
 records were added during this screen.
 
 ## Sources

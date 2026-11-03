@@ -10,11 +10,11 @@ The 2023 full assessment, 2025 catch report, and 2026 harvest-projection chapter
 
 ## Inputs and source screen
 
-The 2023 assessment reports fishery catch through 2022 and projects 2023 catch. Fishery age compositions are available for 2000–2009, 2011, 2013, 2015, 2017 and 2019–2021. The assessment age grid begins at recruitment age 3 and uses a 40+ plus group. Catch-at-age is not supplied as a direct annual observation series. A tinyAM catch-age series could be reconstructed only for composition years from catch totals and the observed age proportions, while preserving the report's fleet and area definitions and weight units; it must be labelled as a downstream reconstruction.
+The 2023 assessment reports fishery catch through 2022 and projects 2023 catch. Fishery age compositions are available for 2000–2009, 2011, 2013, 2015, 2017 and 2019–2021. The assessment age grid begins at recruitment age 3 and uses a 40+ plus group. Catch-at-age is not supplied as a direct annual observation series. it must be labelled as a downstream reconstruction.
 
 Aleutian Islands survey biomass estimates and age compositions are reported for 1991, 1994, 1997, 2000, 2002, 2004, 2006, 2010, 2012, 2014, 2016, 2018 and 2022. An age-specific survey index could be reconstructed from survey biomass and the corresponding age composition. It is not the native likelihood input, which includes aggregate survey biomass and age composition separately. Survey years are not annual. The assessment defines population and fishery weight-at-age vectors in kg and uses an age-specific maturity vector. The exact vectors and transformations must be checked against source tables/native model materials during extraction.
 
-Natural mortality is estimated with a prior. The full assessment reports M near 0.052, which is carried into the 2026 harvest projection rather than re-estimated there. The annual model's survey timing fraction is not stated; a fractional timing in tinyAM would be an approximation.
+Natural mortality is estimated with a prior. The full assessment reports M near 0.052, which is carried into the 2026 harvest projection rather than re-estimated there. The annual model's survey timing fraction is not stated.
 
 ## Outputs and eligibility
 

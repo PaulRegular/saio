@@ -23,7 +23,7 @@ The cached run/data.RData and run/model.RData objects match years 2002-2025, age
 - Recruitment follows the SAM random-walk model. N process variance is separate for age 1 and shared for ages 2-7.
 - F has an AR(1) age-correlation structure, one shared process variance, separate states at ages 1-5, and a shared state at ages 6-7.
 - M is fixed, age- and year-varying Gislason mortality with a five-year sliding average. The source supplies annual maturity ogives smoothed over a five-year sliding window.
-- Stock weights vary annually and are used in an estimated SAM weight process. tinyAM uses the supplied stock weights as fixed values.
+- Stock weights vary annually and are used in an estimated SAM weight process.
 
 The WGBFAS report defines Fbar over ages 3-5. The cached SAM configuration has fbarRange=3:6; this mismatch is recorded rather than silently changing the source object. The assessment table values are used for reported SSB, recruitment, Fbar, N-at-age, and F-at-age. The 2025 table values are retained as published, although the report does not make clear in these tables whether every 2025 age-specific F value is a fitted estimate or a forecast.
 
@@ -38,7 +38,3 @@ The downloaded SAM object gives different direct point estimates in recent years
 The cached fitted object also reports nine native q estimates. Q1 shares q across ages 3-5, while Q4 shares q across ages 4-7+, represented by model ages 4-7; Q1 ages 1, 2, 6, and 7+ and Q4 ages 1, 2, and 3 each have separate parameters. The last modeled age is 7+, as in the population outputs. The q values are exp(logFpar). Their natural-scale standard errors use the delta method, and the limits are 95% Wald intervals calculated on the log-q scale. The physical survey-index multiplier is unresolved, so the q unit is retained as native index scale per thousand fish with that limitation stated.
 
 These fitted q rows are now included in outputs.csv as native model outputs. They do not resolve the differences between recent fitted SAM population estimates and the WGBFAS report tables, so outputs_status remains partial.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_plaice_baltic_21_32_2026.md). They do not determine source completeness or official run selection.

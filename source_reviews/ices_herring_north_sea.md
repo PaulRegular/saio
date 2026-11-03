@@ -198,14 +198,8 @@ The canonical record represents the official 2026 North Sea autumn-spawning herr
 
 The source tables and documented model configuration support the historical 1947–2025 translation and comparisons, while official numerical outputs also extend into 2026.
 
-The revised tinyAM model uses IID cohort-survival deviations, free initial abundance, correlated F random walks, fixed supplied natural mortality, and translated observation-error groups.
-
 These settings more closely approximate the official assessment's core population dynamics than the previous translation.
 
 The case tests whether a comparatively simple age-structured state-space model can recover broad official stock dynamics without reproducing the complete FLSAM observation likelihood, state-sharing configuration or biological uncertainty.
 
 The source-review and completeness statuses remain partial pending recovery or verification of the unresolved native-model details.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_herring_north_sea.md). They do not determine source completeness or official run selection.

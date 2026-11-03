@@ -12,9 +12,7 @@ These units are screened **ineligible for the multi-age assessment set**. The
 current PFMC report publishes forecast adult run sizes, escapement and fishery
 impacts. The joint Coho FRAM documentation describes one adult age class (age
 3) and seasonal fishery accounting, rather than a fitted population surface
-across multiple ages. This is not evidence that age samples do not exist; it
-means the public current-run sources do not establish the multi-age inputs and
-outputs needed for the present tinyAM comparison.
+across multiple ages. This is not evidence that age samples do not exist.
 
 Stock SMART's metadata require careful interpretation. All 18 entries have
 assessment model labels such as “Cohort Analysis” or “Index Method.” Thirteen

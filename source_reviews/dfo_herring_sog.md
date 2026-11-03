@@ -67,15 +67,12 @@ posterior ensemble N. Exploitation fractions are not instantaneous F-at-age.
 
 ## Translation blocker
 
-tinyAM currently predicts an index at each age. It cannot fit the observed
-aggregate spawning-biomass survey without a different observation equation.
-Allocating it across ages using fitted source N would change observations
+It cannot fit the observed
+aggregate spawning-biomass survey without a different observation equation. Allocating it across ages using fitted source N would change observations
 using estimated parameters. Borrowing fishery compositions would impose
-unverified survey selectivity and would not recover missing survey data.
-Neither is done. A catch-only fit would omit the official model's abundance
+unverified survey selectivity and would not recover missing survey data. Neither is done. A catch-only fit would omit the official model's abundance
 information, so it is not presented as the requested translation.
 
 This is one curated source case, **not a completed runnable translation or
-actual fitting attempt**. No starting values or model adjustments were tried.
-The source and observation-model limitations are explicit shortfalls against
-the twelve-translation target; no tinyAM mathematics is changed to hide them.
+actual fitting attempt**. No starting values or model adjustments were tried. The source and observation-model limitations are explicit shortfalls against
+the twelve-translation target.

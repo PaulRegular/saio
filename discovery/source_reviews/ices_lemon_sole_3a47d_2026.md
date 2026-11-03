@@ -20,9 +20,7 @@ methods may be explored. This screen applies to the current advised method.
 ## Inputs and assumptions
 
 The current assessment summary does not describe a catch-at-age likelihood,
-age-specific survey index, or age-structured population model. It therefore
-does not establish the age-specific catch, survey, weight and maturity inputs
-needed for a tinyAM age-structured translation. Age information that may be
+age-specific survey index, or age-structured population model. Age information that may be
 collected in the fisheries or surveys is not evidence that it is used as an
 age-specific assessment input.
 
@@ -41,7 +39,7 @@ This is a distinct current stock and is **ineligible for the age-disaggregated
 set under the 2026 advised method**. The advice is based on a survey-derived
 stock-size indicator, rather than an age-structured population assessment with
 the required age-specific inputs. No canonical assessment, input, or output
-records have been added, and no tinyAM translation has been attempted.
+records have been added has been attempted.
 
 The WGNSSK report is cached at
 `source_cache/discovery_ices_witch_northsea_2026/wgnssk_witch.pdf`; source URL,

@@ -2,7 +2,7 @@
 
 ## Identity and assessment
 
-Stock SMART 10553 is the NOAA Bering Sea/Aleutian Islands unit of shortraker rockfish (*Sebastes borealis*). It is separate from the Gulf of Alaska stock unit, NOAA 10554. No canonical tinyAM stock, assessment, input, or output record matches either unit.
+Stock SMART 10553 is the NOAA Bering Sea/Aleutian Islands unit of shortraker rockfish (*Sebastes borealis*). It is separate from the Gulf of Alaska stock unit, NOAA 10554.
 
 The November 2024 report describes an operational update using Model 22_2024, the 2022 REMA model updated with 2024 Aleutian Islands bottom-trawl survey biomass and 2023 eastern Bering Sea slope longline relative population weights. The 2024 BSAI Plan Team recommended the authors’ model. The final 2025 SAFE chapter treated 2025 as a catch-report year; the final 2025 SSC report says the next full assessment was scheduled for 2026. As of this review date, the 2024 update is the latest detailed production model available.
 

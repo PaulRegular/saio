@@ -12,7 +12,7 @@ Sources: [2025 WGHANSA report (version 3)](https://ices-library.figshare.com/art
 
 The report's Table 6.3.2.1 gives annual recruitment, SSB, total catch, and F(2–5) for 2000–2025. The 2025 table row is explicitly forecast/preliminary. The matching ICES SAG XML supplies machine-readable point estimates and low/high bounds for recruitment, SSB, and F through 2024; 2025 SSB bounds are also present, while 2025 recruitment and F have no bounds. SAG identifies the bounds as 95%, but neither the interval method nor whether they are confidence or credible intervals is specified. Recruitment in the XML is in fish and is divided by 1,000 to match the report's thousand-fish units. No SEs are reported.
 
-The aggregate catch series is not catch-at-age. The report and SAG outputs do not provide the complete historical age-structured likelihood inputs or age-specific population outputs required for a defensible tinyAM comparison.
+The aggregate catch series is not catch-at-age.
 
 ## Native assessment files and unresolved inputs
 
@@ -20,4 +20,4 @@ The public [ICES TAF repository](https://github.com/ices-advice/2025_pil.27.8abd
 
 Consequently, the following remain unavailable: numerical catch-at-age and age compositions; acoustic and egg survey observations with their fitted likelihood details; the full biological and mortality inputs; exact 2025 control settings; fitted N-at-age and F-at-age; and parameter uncertainty beyond the SAG aggregate bounds. Assessment inputs, assumptions, and outputs therefore remain partial. Do not reconstruct the missing series from report figures or substitute the 2024 assessment's inputs.
 
-The summary-only database record includes aggregate annual catch and aggregate reported outputs, but no tinyAM translation or fit is possible until the original age-structured model files or equivalent official numerical tables are recovered. The cached 2024 report is retained only as historical context and is not mixed into the 2025 record.
+The summary-only database record includes aggregate annual catch and aggregate reported outputs, but or fit is possible until the original age-structured model files or equivalent official numerical tables are recovered. The cached 2024 report is retained only as historical context and is not mixed into the 2025 record.

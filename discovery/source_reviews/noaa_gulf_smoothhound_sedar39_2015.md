@@ -28,7 +28,7 @@ Its official model is not age structured, and the source explicitly says age
 compositions were unavailable. Aggregate observations and age-related life
 history do not constitute age-specific observation inputs. The row remains in
 the candidate register for audit completeness; no canonical inputs, outputs,
-assessment event, or tinyAM translation were added.
+assessment event were added.
 
 ## Sources and provenance
 

@@ -16,7 +16,7 @@ All five model indices are included: NEFSC spring and fall bottom trawl, ASMFC s
 
 The production input fixes Beverton-Holt steepness at 1 (initial value 1, phase -3), estimates the recruitment scaler (phase 3) and annual log recruitment deviations (phase 4), and sets the recruitment-deviation likelihood weight to zero. Expected recruitment is therefore constant, independent of SSB. The supplied annual recruitment CV of 0.5 does not impose a recruitment penalty when its weight is zero. The ASAP3 technical documentation confirms the equation and the sum-to-zero fixed-effect deviation vector; these are not integrated random effects.
 
-Older cohorts follow deterministic survival under F + M, with accumulation into age 9+. Initial older-age abundances are estimated in phase 2. NAA Deviations Flag 1 selects a penalty reference formed from expected first-year recruitment and first-year survival, including the terminal plus-group divisor. Its likelihood weight is 1 and its CV is 0.2; the documented objective includes all initial ages in the log-residual norm. This flag does not activate annual older-cohort process error. Neither tinyAM's deterministic exponential initialization nor unpenalized free initialization reproduces this penalty exactly.
+Older cohorts follow deterministic survival under F + M, with accumulation into age 9+. Initial older-age abundances are estimated in phase 2. NAA Deviations Flag 1 selects a penalty reference formed from expected first-year recruitment and first-year survival, including the terminal plus-group divisor. Its likelihood weight is 1 and its CV is 0.2; the documented objective includes all initial ages in the log-residual norm. This flag does not activate annual older-cohort process error.
 
 These meanings were checked against the author's ASAP3 technical documentation (pp. 3-5, 31, 41-44, including the printed ADMB implementation) and user manual (phase conventions). Both are cached from `cmlegault/ASAPplots` revision `75adfd7cf889a5a2b66b6ef0a4dbe22b51aa2084`, with URLs and SHA256 checksums in `ASAP_manual_manifest.csv`. They establish method semantics; only Run_005 supplies the production settings. The NOAA toolbox archive contains an installer only, which was not executed. Its separate manifest records the inspected revision and checksum.
 
@@ -41,7 +41,3 @@ The public run archive did not include a numerical ASAP .rep output. No full fit
 - [ASAP3 user manual](https://raw.githubusercontent.com/cmlegault/ASAPplots/75adfd7cf889a5a2b66b6ef0a4dbe22b51aa2084/pdf/User_Manual_for_ASAP3.pdf)
 
 The local, gitignored source cache and checksums are recorded in source_cache/ck_nefsc_garmiii_tenuis_gom_gb/manifest.csv.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ck_nefsc_garmiii_tenuis_gom_gb.md). They do not determine source completeness or official run selection.

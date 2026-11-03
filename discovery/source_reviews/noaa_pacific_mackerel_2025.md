@@ -3,8 +3,7 @@
 Reviewed 2026-10-29. NOAA Stock SMART 10163 is the U.S.-managed Pacific
 mackerel sub-stock of *Scomber japonicus* along the Pacific coast north of
 Punta Abreojos, Baja California. It is a transboundary assessment unit that
-includes U.S. and Mexican fisheries. No matching canonical tinyAM stock record
-was found.
+includes U.S. and Mexican fisheries.
 
 ## Latest assessment and inherited data
 

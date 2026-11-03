@@ -67,7 +67,7 @@ official outputs are available. The main limitations are incomplete age
 coverage, the absence of an abundance index in Washington, the approximate
 age-specific form of the Oregon recreational CPUE series, and separate
 component models. Eligibility does not imply direct catch-at-age likelihood
-inputs, a pooled OR/WA model, or a ready tinyAM translation. No canonical
+inputs, a pooled OR/WA model, or a ready. No canonical
 records have been added.
 
 ## Sources and local cache

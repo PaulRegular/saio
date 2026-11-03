@@ -133,14 +133,11 @@ The 2024 Appendix 4 projection code was checked separately. It reproduces
 the fitted age-1 recruitment series for 1982–2023, then reads `BAYALKS` and
 `CSTALKS` workbooks for 2020–2022 to construct alternative projection
 selectivities. The appendix names those files but does not include or link the
-workbooks on its download page. These projection materials do not provide the
-historical catch, index or composition likelihood arrays needed for a 2024
-tinyAM fit; the recruitment vector is a fitted state, not an observation.
+workbooks on its download page. the recruitment vector is a fitted state, not an observation.
 
-No tinyAM model, source-based starts or dashboard is claimed. Translation
+Translation
 requires those original inputs and resolution of the remaining configuration
 and year-alignment questions; observations will not be inferred from fitted N/F.
-
 
 ## Separate 2018 historical assessment
 
@@ -163,13 +160,6 @@ composition sample sizes are not available.
 The published index tables provide numerical values for 1982–2017. The model
 text also describes Maryland YOY and age-1 indices in 1970–1981, but those
 values are not tabulated in the available numerical appendix. They are not
-invented or used in the translation; the tinyAM fit is restricted to the
-1982–2017 overlap where catch, biology and reported population states are
-available. Appendix B10 links YOY indices to age 1 and age-1 indices to age 2.
-Its “VA Age 1” label conflicts with the “NY Age-1” label in Table B5.6 and
+invented or used in the translation. Appendix B10 links YOY indices to age 1 and age-1 indices to age 2. Its “VA Age 1” label conflicts with the “NY Age-1” label in Table B5.6 and
 assessment diagnostics. The translation retains the table label, links the
 series to age 2, and records the discrepancy.
-
-## Downstream modelling
-
-[Historical-assessment translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ck_nefsc_garmiii_saxatilis_gom_chatt.md) are maintained in tinyAM.

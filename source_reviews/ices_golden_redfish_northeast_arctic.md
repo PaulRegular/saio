@@ -83,7 +83,7 @@ The benchmark documents an alternative high-biomass solution reached by
 roughly half of jitter runs. Model 25 was retained after expert review;
 the alternative had high K, low q and much greater biomass. This is an
 identifiability limitation of the official assessment, not something resolved
-by importing its selected output. No tinyAM convergence result is claimed.
+by importing its selected output.
 
 ## Historical states and forecast discrepancies
 
@@ -128,20 +128,15 @@ Sources are retained in the gitignored
 retrieval/verification dates and SHA-256 checksums. Older 2024 Gadget material
 remains cached for context and is not mixed into this assessment event.
 
-## tinyAM translation limit
+## limit
 
 The current assessment uses aggregate biomass data and does not supply
-catch-at-age, current age-specific weights/maturity/M or fitted N/F-at-age.
-A current source-faithful tinyAM age-structured fit cannot be assembled from
-these recovered inputs. Historical Gadget age/length data or states cannot
+catch-at-age, current age-specific weights/maturity/M or fitted N/F-at-age. Historical Gadget age/length data or states cannot
 be substituted without defining a separate historical assessment case.
 
-There is no tinyAM recipe, fit, optimizer result, comparison statistic or
-comparison dashboard for this event. The runner returns no stock specification
+The runner returns no stock specification
 when preparation is requested. Tests ensure the relative states do not become
 absolute SSB/F references and the 2026 state is outside the observed period.
-This is a source/model-structure shortfall, not a numerical fitting failure
-or a reason to change tinyAM's mathematics.
 
 ## Validation
 

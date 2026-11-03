@@ -52,8 +52,7 @@ and depletion-corrected average catch methods.
 The advisory report provides aggregate abundance and biomass estimates with
 5th and 95th percentiles, and Catch-MSY parameter summaries and reference-point
 status for 2016. It does not report annual recruitment or fitted population
-N-at-age and F-at-age outputs. These aggregate outputs do not make the
-assessment a suitable age-disaggregated candidate for tinyAM.
+N-at-age and F-at-age outputs.
 
 The register row is screened **ineligible** for the age-disaggregated
 assessment set because the reviewed production assessment relies on aggregate

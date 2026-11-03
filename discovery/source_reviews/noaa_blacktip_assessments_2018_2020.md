@@ -9,7 +9,7 @@ The NOAA Stock SMART snapshot identifies two separate U.S. assessment units for 
 
 ## Eligibility decision
 
-Both units are **ineligible for the age-disaggregated source-curation set** under the inventory screen. Their model structures and age-specific outputs do not supply age-specific observation inputs. Length compositions alone do not meet the stated age-input criterion. The two NOAA inventory rows remain separately linked to candidate units, with no canonical stock or assessment records created and no tinyAM translation attempted.
+Both units are **ineligible for the age-disaggregated source-curation set** under the inventory screen. Their model structures and age-specific outputs do not supply age-specific observation inputs. Length compositions alone do not meet the stated age-input criterion. The two NOAA inventory rows remain separately linked to candidate units, with no canonical stock or assessment records created attempted.
 
 This decision does not claim that no age, weight, maturity, or mortality biology exists. The assessments use age-specific life-history information: Atlantic blacktip fixes sex- and age-specific natural mortality and derives maturity/pup production from biology; Gulf blacktip reports age-specific natural mortality, maternity/fecundity and weight-at-age schedules. Those are model assumptions, not age-specific observed catch or survey likelihoods.
 

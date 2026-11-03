@@ -5,8 +5,7 @@
 NOAA Stock SMART 11082 and the DFO Pacific halibut sustainability-survey entry
 refer to the single Pacific halibut resource assessed by the International
 Pacific Halibut Commission (IPHC). The Convention Area spans Canada and the
-United States, from California to the northern Bering Sea. Neither inventory
-row matches an existing tinyAM stock record. They are crosswalked to one
+United States, from California to the northern Bering Sea. They are crosswalked to one
 provisional discovery unit, `iphc_pacific_halibut`, and count as one stock unit,
 not two.
 
@@ -51,8 +50,7 @@ public files reviewed.
 
 The FISS is an annual summer survey, conducted over late May-September. Sources
 establish a seasonal timing window but not one single common within-year
-fraction; use of a single tinyAM timing would be an explicit approximation.
-The age structure and observation rows also require care around the IPHC's
+fraction. The age structure and observation rows also require care around the IPHC's
 age-reading conventions: age groups are combined differently before and after
 2002.
 

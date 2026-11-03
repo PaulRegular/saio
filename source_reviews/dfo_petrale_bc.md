@@ -92,7 +92,7 @@ external SS3 outputs and `mcmcresults.RData`; those objects and the native
 production input arrays are not in the inspected tree. The recovered gftrends
 object contains no N-at-age, F-at-age or recruitment. Original catch/survey
 composition arrays, biological inputs, timing, likelihood weights and final
-configuration must be recovered before a faithful tinyAM translation.
+configuration must be recovered before a faithful.
 
 The follow-up inspected related `recruitea`, `gfenvirocor`, `gfcondition` and
 `gfcondition-ms` repositories, readme-based repository search results, and all

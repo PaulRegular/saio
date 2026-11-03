@@ -2,7 +2,7 @@
 
 ## Stock unit and latest assessment
 
-NOAA Stock SMART identifies one Pacific Coast assessment unit for greenstriped rockfish (*Sebastes elongatus*), Stock ID 10566. PFMC Amendment 37, implemented in 2026, retains greenstriped rockfish as one coastwide stock unit in the Pacific Coast Groundfish FMP. The 2009 model treated the outer U.S. West Coast population as one homogeneous stock; its fisheries and survey analyses include regional strata, but these are not separate assessment units. No existing canonical tinyAM stock matches this U.S. unit.
+NOAA Stock SMART identifies one Pacific Coast assessment unit for greenstriped rockfish (*Sebastes elongatus*), Stock ID 10566. PFMC Amendment 37, implemented in 2026, retains greenstriped rockfish as one coastwide stock unit in the Pacific Coast Groundfish FMP. The 2009 model treated the outer U.S. West Coast population as one homogeneous stock; its fisheries and survey analyses include regional strata, but these are not separate assessment units. unit.
 
 Stock SMART records the 2009 assessment as fully accepted, using data through 2008 and Stock Synthesis 3.03a. The 2025 PFMC stock-structure review calls it the first and only benchmark assessment. Preliminary NMFS recommendations published in 2026 still list 2009 as the last assessment and identify greenstriped rockfish as an alternative for a possible 2027 benchmark; that is a future possibility, not a completed production run. The detailed 2009 assessment is therefore the latest official run located for the current unit.
 
@@ -18,7 +18,7 @@ The model timing table lists fishery timing 0.5, early triennial timing 0.6, lat
 
 ## Screening decision
 
-This is a new current-unit candidate, marked ineligible for the age-disaggregated tinyAM source set. The detailed assessment has survey age-at-length observations and fitted numbers-at-age, but no fishery age compositions or accepted-run quantities that support fishery catch-at-age reconstruction. The official model's age structure and output tables do not cure that input gap. No canonical stock, assessment, input, or output records were added, and no translation was attempted.
+The detailed assessment has survey age-at-length observations and fitted numbers-at-age, but no fishery age compositions or accepted-run quantities that support fishery catch-at-age reconstruction. The official model's age structure and output tables do not cure that input gap. No canonical stock, assessment, input, or output records were added, and no translation was attempted.
 
 ## Sources and local cache
 

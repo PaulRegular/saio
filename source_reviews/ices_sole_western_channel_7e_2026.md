@@ -12,7 +12,7 @@ Table 21.2 supplies landings numbers-at-age in thousands of fish for ages 2–12
 
 Table 21.6 contains four active tuning fleets among six listed series. The 2026 settings table uses UK-CBT-late, UK-COT, Q1SWBeam-nonoffset and FSP-UK, with ages 3–11. The source tuning format stores effort followed by age-specific catch numbers. Following FLCore's `readIndicesVPA` convention, the fitted index is catch-at-age divided by effort. The database preserves the raw numerator and effort separately and labels the reconstructed per-effort series as `reconstructed_source_input`. The index scale multiplier and physical count/effort units are not stated, so values are not rescaled.
 
-The assessment settings specify q plateau age 7, lognormal tuning fleets, a tricubic 15-year time taper, and fleet-specific timing windows. The translation uses the window midpoints, filters to the official fleet year and age ranges, excludes Q1 2022, and omits zero-valued indices that tinyAM's lognormal observation model cannot represent. It does not apply the XSA time taper. These differences remain visible in the stock recipe and dashboard background.
+The assessment settings specify q plateau age 7, lognormal tuning fleets, a tricubic 15-year time taper, and fleet-specific timing windows. It does not apply the XSA time taper. These differences remain visible in the stock recipe and dashboard background.
 
 ## Outputs and cross-checks
 

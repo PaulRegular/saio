@@ -22,7 +22,7 @@ This unit is **ineligible for the age-disaggregated inventory** on the
 production-assessment evidence reviewed. The review does not assert that
 biological samples are absent; it establishes that the current assessment
 cannot support the requested age-structured comparison. No canonical
-numerical records or tinyAM translation were added.
+numerical records were added.
 
 ## Sources
 

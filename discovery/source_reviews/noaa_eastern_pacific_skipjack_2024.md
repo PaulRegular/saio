@@ -1,11 +1,9 @@
 # NOAA Stock SMART 10160: Eastern Pacific skipjack, 2024
 
 Reviewed 2026-10-29. The NOAA inventory entry corresponds to the IATTC 2024
-benchmark assessment of eastern Pacific skipjack tuna (*Katsuwonus pelamis*).
-Stock SMART records the IATTC as lead laboratory, identifies the assessment as
+benchmark assessment of eastern Pacific skipjack tuna (*Katsuwonus pelamis*). Stock SMART records the IATTC as lead laboratory, identifies the assessment as
 fully accepted, and reports data through 2023. The official report treats the
-EPO as one stock for assessment and management. No matching canonical tinyAM
-stock record was found.
+EPO as one stock for assessment and management.
 
 ## Assessment and observations
 

@@ -8,13 +8,13 @@ The preferred southern rock sole model in the 2021 assessment was Model 21.1. Th
 
 ## Inputs and outputs
 
-The model covered ages 0-30 and used annual total rock sole catch split evenly between northern and southern rock sole. Fishery inputs were length compositions for 1997-2021, not catch-at-age. Survey inputs include biomass estimates with uncertainty, length compositions, and conditional age-at-length samples for southern rock sole in 1996-2019. The assessment is age-structured internally, but its documented fishery observations do not contain the catch-at-age series required for the current tinyAM translation screen. Survey CAAL does not replace fishery catch-at-age.
+The model covered ages 0-30 and used annual total rock sole catch split evenly between northern and southern rock sole. Fishery inputs were length compositions for 1997-2021, not catch-at-age. Survey inputs include biomass estimates with uncertainty, length compositions, and conditional age-at-length samples for southern rock sole in 1996-2019. The assessment is age-structured internally, but its documented fishery observations do not contain the catch-at-age series required for the current screen. Survey CAAL does not replace fishery catch-at-age.
 
 Female M was fixed at 0.2 and male M was estimated. The preferred 2021 Model 21.1 reported male M of 0.253 in central GOA and 0.271 in western GOA. Maturity was a fixed age-based input and growth used a length-weight relationship, but numeric maturity and weight-at-age vectors were not recovered from these sources. The report provides survey biomass, total biomass, female SSB, M, and harvest-reference outputs by area, but not complete annual N-at-age and F-at-age arrays.
 
 ## Screening decision
 
-This is one current GOA southern rock sole unit represented by three source-list rows. It is provisionally new relative to the canonical database; the existing northern rock sole record is for the Eastern Bering Sea and is not a match. It is screened ineligible for a tinyAM age-structured translation from the recovered official inputs because fishery compositions are lengths and catch is annual total biomass rather than catch-at-age. No unsupported conversion from length composition or survey CAAL to fishery age composition is made.
+This is one current GOA southern rock sole unit represented by three source-list rows. It is provisionally new relative to the canonical database; the existing northern rock sole record is for the Eastern Bering Sea and is not a match. No unsupported conversion from length composition or survey CAAL to fishery age composition is made.
 
 ## Sources and cached files
 

@@ -52,7 +52,7 @@ assessment input set.
 
 The two inventory rows are identity-linked and screened **ineligible** for the
 age-disaggregated assessment set. No canonical stock, assessment, input, or
-output records were added, and no tinyAM translation was attempted.
+output records were added was attempted.
 
 ## Sources
 

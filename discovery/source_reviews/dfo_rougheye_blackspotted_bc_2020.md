@@ -14,7 +14,7 @@ The assessment uses age proportions (weighted age frequencies), not direct annua
 
 The composite base cases vary fixed natural mortality values of 0.035, 0.045 and 0.055 and CPUE process error. Recruitment variability is fixed at 0.9 and stock-recruitment steepness at 0.7. The assessment estimates sex-specific growth and selectivity and derives weight-at-age and maturity-at-age from biological samples. The final report describes aging error and model reweighting. The peer-review proceedings note that seamount age observations were excluded from the final stock definition after being included in a draft, and that limited REBS south ages caused poor MCMC diagnostics and required fixed survey selectivity parameters.
 
-The model is annual. Survey series and seasons are described in the report, but the exact within-year timing needed for tinyAM has not been converted to a verified year fraction.
+The model is annual.
 
 ## Outputs and screening decision
 

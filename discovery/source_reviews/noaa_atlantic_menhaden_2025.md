@@ -20,7 +20,7 @@ The fishing year begins March 1. The 2025 report describes survey-specific seaso
 
 The 2025 single-species update presents recruitment, age-1+ biomass, full F, geometric-mean F for ages 2–4, and fecundity through 2023, primarily as figures. Fecundity is not SSB. No numerical N-at-age or F-at-age output matrix or fitted BAM object was verified in the reviewed sources. The SEDAR 102 ERP model is separate and its outputs must not be substituted.
 
-The inventory row is **screened, with eligibility unresolved**. The current run provides detailed age-composition and landing tables and a possible survey-age reconstruction, but the updated biological arrays for 2018–2023, exact survey timing fractions, and numerical age-specific outputs remain unverified. Keep this unit as a source-search candidate; do not count it as eligible for the first import batch yet. No canonical assessment records or tinyAM translation were added.
+The inventory row is **screened, with eligibility unresolved**. The current run provides detailed age-composition and landing tables and a possible survey-age reconstruction, but the updated biological arrays for 2018–2023, exact survey timing fractions, and numerical age-specific outputs remain unverified. Keep this unit as a source-search candidate; do not count it as eligible for the first import batch yet. No canonical assessment records were added.
 
 ## Sources
 

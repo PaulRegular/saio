@@ -37,7 +37,7 @@ numeric model input file and the auxiliary numbers-at-age outputs have not been
 recovered. The candidate therefore remains eligibility-unresolved pending a
 search for those files or verification that the report data can be digitized
 with sufficient coverage. No canonical assessment, input, or output records
-were added, and no tinyAM translation was attempted.
+were added was attempted.
 
 ## Sources
 

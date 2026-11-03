@@ -1,6 +1,6 @@
 # Pacific Spiny Dogfish, Outside BC
 
-Reviewed 2026-10-29. DFO assesses Pacific Spiny Dogfish (Squalus suckleyi) as separate inside and outside British Columbia stocks. This case is the outside stock in PMFC major areas 3CD5ABCDE. No corresponding canonical tinyAM stock record was found.
+Reviewed 2026-10-29. DFO assesses Pacific Spiny Dogfish (Squalus suckleyi) as separate inside and outside British Columbia stocks. This case is the outside stock in PMFC major areas 3CD5ABCDE.
 
 ## Current assessment and age-data screen
 

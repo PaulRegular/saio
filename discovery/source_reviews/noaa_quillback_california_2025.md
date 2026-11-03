@@ -15,24 +15,13 @@ bins 1–60.
 ## Evidence and limits
 
 - The model uses total removals in metric tonnes for 1916–2024. Fishery
-  age-composition observations include commercial ages from 2007–2024.
-  These compositions are not direct catch-at-age observations; any tinyAM
-  catch-at-age series must be reconstructed from catch totals and sampled
-  age compositions.
-- California recreational, CCFRP, and ROV relative-abundance series are
-  included, along with fishery-independent age and length samples. The
-  native data records July survey observations. The assessment does not
-  directly use age-specific abundance indices, so age-indexed tinyAM data
-  would be a documented reconstruction from aggregate indices and age
-  information.
-- The native `natage.csv` supplies year-specific length-at-age growth input.
-  The model derives weight-at-age from growth and its length-weight
+  age-composition observations include commercial ages from 2007–2024. These compositions are not direct catch-at-age observations. The
+  native data records July survey observations. The model derives weight-at-age from growth and its length-weight
   relationship; `Report.sso` includes biomass-at-age output. Maturity uses a
   length-based logistic relationship. Natural mortality is fixed at 0.068
   per year in the base model; the report identifies M and steepness as fixed
   at prior values and explores M in its uncertainty analysis.
-- Survey index observations are recorded in July; spawning is in January.
-  Preserve survey timing when converting observations to fractional-year
+- Survey index observations are recorded in July; spawning is in January. Preserve survey timing when converting observations to fractional-year
   values.
 - `Report.sso` includes annual numbers-at-age, catch-at-age, biomass-at-age,
   and F-at-age. The report gives spawning output and recruitment estimates
@@ -40,7 +29,7 @@ bins 1–60.
 
 This is eligible for source curation because the official model files
 provide age-composition inputs, biological data, and fitted age-specific
-outputs. A tinyAM translation would approximate the source likelihood;
+outputs. A would approximate the source likelihood;
 catch-at-age and age-specific indices would be reconstructed rather than
 directly observed.
 

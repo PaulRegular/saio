@@ -16,7 +16,7 @@ The data file includes seasonal fishery catches for two pooled MexCal fleets, in
 
 The only fishery-independent likelihood data in the base model are the acoustic-trawl summer and spring biomass indices. In the native file these are biomass-unit observations with lognormal errors; the summer series covers 2015–2021 and spring surveys are available in 2017 and 2021 (mapped to the corresponding biological semesters). Survey-specific age compositions and weights-at-age are supplied. The report explains that age compositions were derived from abundance-at-length using survey-specific age-length keys, with composition sample sizes weighted by positive trawl clusters. Therefore, age-specific abundance indices can be reconstructed from the aggregate biomass index, age composition and weight-at-age, but this is a documented derivation rather than a direct age-specific index likelihood. Other index data in the archive are alternatives or supporting series and were not used in the base model.
 
-Maturity is fixed at approximately 0.726, 0.931, 0.985 and 0.997 for ages 0, 1, 2 and 3+, respectively; fecundity is fixed at one gram of eggs per gram of body weight. The base model estimates one uniform natural-mortality parameter; the reported estimate is 0.414 per year. Steepness is fixed at 0.6 and equilibrium recruitment is estimated. The input file records a Stock Synthesis survey timing field and assigns observations to biological semesters, but the report does not give an unambiguous within-semester calendar fraction for translating this to tinyAM.
+Maturity is fixed at approximately 0.726, 0.931, 0.985 and 0.997 for ages 0, 1, 2 and 3+, respectively; fecundity is fixed at one gram of eggs per gram of body weight. The base model estimates one uniform natural-mortality parameter; the reported estimate is 0.414 per year. Steepness is fixed at 0.6 and equilibrium recruitment is estimated.
 
 ## Official outputs
 
@@ -26,7 +26,7 @@ The report states that the base model converged with total likelihood 54.444 and
 
 ## Screening decision
 
-Mark the unit new and source-curation eligible, with import still not started. The official native archive provides the age compositions, seasonal catches, weights and fixed maturity inputs, and the report gives age-structured population outputs. Catch-at-age and age-specific survey abundance require documented reconstruction from those native quantities; preserve the official likelihood inputs if the database import proceeds. This eligibility decision does not claim exact tinyAM equivalence, and no canonical assessment or numerical data have been imported in this discovery screen.
+Mark the unit new and source-curation eligible, with import still not started. The official native archive provides the age compositions, seasonal catches, weights and fixed maturity inputs, and the report gives age-structured population outputs. Catch-at-age and age-specific survey abundance require documented reconstruction from those native quantities; preserve the official likelihood inputs if the database import proceeds.
 
 ## Sources
 

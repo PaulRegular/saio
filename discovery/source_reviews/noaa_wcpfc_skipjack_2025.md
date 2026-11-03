@@ -10,12 +10,9 @@ assessment is therefore the relevant source for this screen.
 The 2025 MULTIFAN-CL assessment is internally age-structured, but its observed
 data likelihoods are catch-conditioned fishery catches, length-frequency data,
 aggregate fishery CPUE, and tag release/recapture data. The official assessment
-report says the model uses 32 extraction fisheries and 10 CPUE index fisheries.
-It does not use observed catch-at-age or an age-specific abundance index. The
+report says the model uses 32 extraction fisheries and 10 CPUE index fisheries. It does not use observed catch-at-age or an age-specific abundance index. The
 public TAF inputs confirm length frequencies in 2-cm fork-length bins for
-1972–2024, with no age-composition or age-length-key likelihood. Without
-age-observation information, these length-only observations do not support a
-verified catch-at-age reconstruction for tinyAM.
+1972–2024, with no age-composition or age-length-key likelihood.
 
 Age-specific weight, maturity, and reproductive-potential surfaces are derived
 inside the assessment from estimated growth, a length-weight relationship, a
@@ -25,9 +22,7 @@ derived surfaces are not observed age-specific inputs.
 
 The public TAF diagnostic outputs do include recruitment, biomass and spawning
 biomass, N-at-age for ages 1–16 across eight regions, and annual F-at-age
-through 2024. These outputs do not make the underlying likelihood inputs
-age-disaggregated, so the current unit is screened ineligible for the
-age-structured tinyAM candidate set. No canonical database values were added.
+through 2024. No canonical database values were added.
 
 One input-quality caveat remains: the pinned TAF CPUE CSV contains a single
 record with `year = 36` and `season = 14.333`. This anomaly should be resolved

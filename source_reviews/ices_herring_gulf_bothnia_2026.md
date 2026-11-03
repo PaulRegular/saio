@@ -37,18 +37,13 @@ of the benchmark does not supply the missing 2026 native model files.
   counts for the SS3 age-composition input; no composition sample sizes or
   effective likelihood weights were recovered.
 - Table 4.3.4 gives annual catch weights in kg per fish for ages 0–16 and
-  17+, 1963–2025. A separate stock-weight surface was not recovered. The
-  tinyAM recipe uses catch weights as a documented stock-weight proxy and
-  applies the reported age-15 weight to its 15+ group.
-- Table 4.3.5 gives annual maturity proportions for ages 1–16 and 17+,
-  1980–2025. The published ogives are retained without smoothing or
+  17+, 1963–2025. A separate stock-weight surface was not recovered. The published ogives are retained without smoothing or
   extrapolation.
 - The 2021 benchmark uses a time-invariant, age-varying M curve with values
   0.563, 0.472, 0.332, 0.290, 0.267, and 0.257 at age midpoints 0.5, 1.5,
   3.5, 5.5, 8.5, and 15.5. The database reconstructs ages 0–20 by linear
   interpolation and holds the terminal value above age 15.5. This is a fixed
-  benchmark input, not an estimated M output from the 2026 assessment.
-  The final settings table (printed p. 10) labels the same values as age
+  benchmark input, not an estimated M output from the 2026 assessment. The final settings table (printed p. 10) labels the same values as age
   classes 0.5, 1, 3, 5, 8 and 15; the supporting working document (printed
   p. 43) uses midpoints. Evaluating the midpoint curve at modeled age + 0.5
   gives the same ages 0–20 vector as interpolating the final table at integer
@@ -67,15 +62,8 @@ of the benchmark does not supply the missing 2026 native model files.
   the period and age range, but does not publish the numeric series in a table;
   exact identity with its production input array and digitization error cannot
   be verified. The figure's uncertainty bars are not imported as observation
-  errors, and no likelihood weights are inferred. The aggregate series is
-  preserved in the database but is not used in the tinyAM likelihood, which
-  currently uses age-specific index observations.
-- The report describes hybrid F and an unweighted Fbar over ages 3–7. The
+  errors, and no likelihood weights are inferred. The
   ICES SAG provides annual recruitment at age 0, SSB, and Fbar for 1963–2025
   with a 90% central interval. It does not provide fitted N-at-age, F-at-age,
   or estimated M-at-age surfaces in the recovered output tables. Therefore
   total abundance and age-specific mortality comparisons cannot be derived.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_herring_gulf_bothnia_2026.md). They do not determine source completeness or official run selection.

@@ -1,6 +1,5 @@
 # Southern Gulf spring-spawning herring
 
-
 ## Assessment record
 
 The canonical database represents the official 2024 assessment to 2023, the most recent assessment with detailed numerical tables recovered for this stock.
@@ -23,7 +22,7 @@ The assessment covers 1978–2023 and ages 2–11+, with age 11 as the plus grou
 
 The 2023 mobile-gear spring catch-at-age is reconstructed as zero because the annual landings table reports no mobile-gear spring catch that year. This is identified as a reconstruction rather than an independently reported catch-at-age series.
 
-The translation combines the two fishing gears into one total catch-at-age stream. The source SCA observation model uses total catch and age-composition likelihoods rather than the independent age-specific lognormal likelihood used by tinyAM.
+The translation combines the two fishing gears into one total catch-at-age stream.
 
 ### Survey observations and acoustic units
 
@@ -38,7 +37,7 @@ Table 15 does not identify a numerical scale multiplier. DFO Research Document 2
 
 For example, the 1994 age-4 observation is 100,087 in the earlier table and 100,062 in the 2024 report; the 2006 age-4 observation is 24,601 in both. These differences are consistent with historical revisions rather than a change in units.
 
-The canonical database therefore retains the published 2024 acoustic index values in thousand fish. The shared converter multiplies them by 1,000 before fitting tinyAM.
+The canonical database therefore retains the published 2024 acoustic index values in thousand fish.
 
 A separate biomass-scale check supports this interpretation. The 2023 acoustic age-index values sum to 55,619 thousand fish, while a later official spring biomass estimate of 7,358 t implies an average weight of approximately 0.132 kg per fish. Treating the table as individual fish would imply approximately 132 kg per fish.
 
@@ -69,8 +68,6 @@ DFO Research Document 2022/068 describes the SCA model used as methodological co
 Recruitment enters at age 2 and varies annually.
 
 Older cohorts are propagated through survival, with initial-cohort deviations handled separately from the ordinary annual recruitment process.
-
-The documented SCA does not contain the same independently estimated older-cohort survival deviations used by tinyAM.
 
 ### Fishing mortality
 
@@ -135,7 +132,7 @@ The acoustic biomass likelihood is lognormal, uses ages 4–8, and carries likel
 
 The 2024 supporting document does not confirm that these age groupings and weights remained unchanged in every respect.
 
-These features are not reproduced by the current tinyAM translation, which uses age-specific lognormal survey observations.
+These features are not reproduced by the current, which uses age-specific lognormal survey observations.
 
 ## Biological inputs and derived comparison outputs
 
@@ -147,7 +144,7 @@ The documented beginning-year stock-weight construction combines fixed- and mobi
 
 The complete fitted stock-weight surface and precise gear-combination rule were not published.
 
-The tinyAM translation constructs a fit-only approximation by combining positive gear weights using catch-number-weighted arithmetic means. When both gear catches are zero, it uses the arithmetic mean of available positive gear weights.
+The constructs a fit-only approximation by combining positive gear weights using catch-number-weighted arithmetic means. When both gear catches are zero, it uses the arithmetic mean of available positive gear weights.
 
 Missing weights are interpolated within age.
 
@@ -167,7 +164,7 @@ The canonical database includes derived total January 1 abundance and biomass, o
 
 It also includes January 1 mature biomass, calculated from the reported biomass-at-age and knife-edge maturity schedule.
 
-These derived values use the source's published biomass surface, not tinyAM's approximate stock weights. They are identified as derived source outputs, without additional uncertainty estimates.
+They are identified as derived source outputs, without additional uncertainty estimates.
 
 The source's published biomass-at-age represents January 1 biomass.
 
@@ -183,10 +180,6 @@ The common-definition SSB comparison therefore uses January 1 mature biomass. It
 The relevant source documents, cached numerical files and manifest are retained under `source_cache/dfo_sgsl_herring_spring_2023/`.
 
 The stock does not yet have a verified Charbonneau identifier in the local crosswalk, so no identifier is assigned.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/dfo_herring_4tvn_spring.md). They do not determine source completeness or official run selection.
 
 ## Source context
 

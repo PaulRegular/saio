@@ -2,7 +2,7 @@
 
 ## Stock unit and latest assessment
 
-NOAA Stock SMART identifies one Pacific Coast unit of Sebastes zacentrus. No existing canonical tinyAM stock record matches this U.S. unit. Its latest detailed assessment is the 2013 data-moderate exSSS assessment, using data through 2012 and published in 2015. Stock SMART lists the run as fully accepted. The 2025 Pacific Coast Groundfish SAFE confirms that the 2013 assessment was used to set harvest specifications; the 2026 Amendment 37 analysis also identifies the coastwide data-moderate assessment as the most recent. The assessment report assumes a single coastwide stock for its assessment model; its north/south allocation to management complexes is not a second assessment unit.
+NOAA Stock SMART identifies one Pacific Coast unit of Sebastes zacentrus. unit. Its latest detailed assessment is the 2013 data-moderate exSSS assessment, using data through 2012 and published in 2015. Stock SMART lists the run as fully accepted. The 2025 Pacific Coast Groundfish SAFE confirms that the 2013 assessment was used to set harvest specifications; the 2026 Amendment 37 analysis also identifies the coastwide data-moderate assessment as the most recent. The assessment report assumes a single coastwide stock for its assessment model; its north/south allocation to management complexes is not a second assessment unit.
 
 ## Age-specific inputs and outputs
 

@@ -31,10 +31,7 @@ and length-frequency data. Species-specific U.S. Virgin Islands landings and
 indices could not be developed from the group-reported landings.
 
 The SEDAR 26 reviewer concluded that the available data were too limited for
-standard fishery stock-assessment models. The report does not provide the
-age-disaggregated catch and survey inputs, age-specific abundance and fishing
-mortality outputs, or spawning-biomass series needed for an age-structured
-tinyAM comparison. Life-history literature and length-based total-mortality
+standard fishery stock-assessment models. Life-history literature and length-based total-mortality
 analyses do not supply those missing model surfaces.
 
 Both units are screened ineligible for the age-disaggregated comparison set.

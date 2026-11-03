@@ -40,7 +40,7 @@ assessment set. The latest current-unit assessment is category 5, and its
 published products provide aggregate catches only, without age-disaggregated
 observations or age-specific population and mortality outputs. It remains in
 the discovery register; no older or neighbouring saithe unit is substituted.
-No canonical data were added, and no tinyAM translation was attempted.
+No canonical data were added was attempted.
 
 Source URLs, revisions, retrieval dates, file sizes, and SHA-256 checksums are
 recorded in the gitignored local cache at

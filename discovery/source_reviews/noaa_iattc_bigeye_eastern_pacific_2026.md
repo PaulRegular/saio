@@ -6,7 +6,7 @@
 **Latest accepted assessment located:** IATTC 2026 update; data through 2025
 **NOAA Stock SMART:** assessment year 2026; Full acceptance; Operational; model SS
 
-NOAA Stock SMART row 11685 is the U.S. inventory record for the Eastern Pacific bigeye stock assessed by IATTC. It is one regional stock unit, separate from Atlantic and Western/Central Pacific bigeye. No matching canonical tinyAM stock record was found.
+NOAA Stock SMART row 11685 is the U.S. inventory record for the Eastern Pacific bigeye stock assessed by IATTC. It is one regional stock unit, separate from Atlantic and Western/Central Pacific bigeye.
 
 ## Inputs and model observations
 
@@ -22,7 +22,7 @@ The update uses an aggregate longline index; a single annual survey timing is no
 
 ## Screening decision
 
-This is a **new, screened, ineligible candidate** for the age-disaggregated input set. The current accepted assessment is an operational Stock Synthesis update, but its fitted composition data are lengths, and its abundance index is aggregate. No observed catch-at-age or age-specific abundance input was verified. No canonical database values were imported and no tinyAM translation was attempted.
+This is a **new, screened, ineligible candidate** for the age-disaggregated input set. The current accepted assessment is an operational Stock Synthesis update, but its fitted composition data are lengths, and its abundance index is aggregate. No observed catch-at-age or age-specific abundance input was verified. No canonical database values were imported was attempted.
 
 The assessment report is cached in the ignored local source cache directory source_cache/discovery_noaa_iattc_bigeye_2026/; sources.csv records its official URL, retrieval date, pinned document revision, byte size (verified by the screening script), and SHA-256.
 

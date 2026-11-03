@@ -37,13 +37,7 @@ catch weights, population weights, maturity, M, and survey index series.
   multiplier because the index scale is not specified. 1-JAN is preserved
   as sampling time 0.0. Native stream labels remain in observation_id.
 - The data file encodes zero index cells as numeric 0 but has no separate
-  missingness flag. Those values remain 0 in the canonical database. The
-  tinyAM recipe omits zero index cells from its lognormal likelihood because
-  the source does not establish whether each cell is a true zero or a missing
-  observation.
-- The VPA control vector PARTIAL RECRUIT and MFSPAWN pair are retained as
-  assumptions. The released files do not resolve how every control value maps
-  to tinyAM's model inputs. Survey weight factors are all one.
+  missingness flag. Those values remain 0 in the canonical database. Survey weight factors are all one.
 
 The source report notes that Canadian bottom-trawl discards were unavailable,
 Canadian scallop-dredge discard precision was uncertain, and no Canadian age
@@ -95,7 +89,3 @@ surfaces remain unavailable, so the existing 2022 translation is unaffected.
 The [NOAA Stock SMART snapshot](https://github.com/NOAA-EDAB/stocksmart/tree/664c4237e26520b260a090e1821a2cee5d1cdf07)
 is cached locally under `source_cache/ck_nefsc_americanus_5z/` with revision
 and checksum in `stocksmart_manifest.csv`.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/nefsc_winter_flounder_georges_bank.md). They do not determine source completeness or official run selection.

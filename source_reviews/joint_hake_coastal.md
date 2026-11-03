@@ -105,7 +105,3 @@ The local dashboard retains native posterior SSB and explicitly approximate
 common-age sums of marginal medians. F-at-age and Fbar comparisons remain
 unavailable. Available credible intervals are retained only on their native
 quantities; no uncertainty is attached to sums or pooled posterior medians.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/joint_hake_coastal.md). They do not determine source completeness or official run selection.

@@ -1,6 +1,6 @@
 # NOAA Gulf Gag Grouper: SEDAR 72 SRFS run
 
-Reviewed 2026-10-30. NOAA Stock SMART row 10348 identifies Gulf of Mexico Gag Grouper (*Mycteroperca microlepis*). It is a separate management unit from South Atlantic Gag, listed in Stock SMART row 10349. No existing canonical tinyAM stock record was found.
+Reviewed 2026-10-30. NOAA Stock SMART row 10348 identifies Gulf of Mexico Gag Grouper (*Mycteroperca microlepis*). It is a separate management unit from South Atlantic Gag, listed in Stock SMART row 10349.
 
 SEDAR 105 is the current Gulf Gag assessment project and remains underway in 2026. The most recent completed production model used for advice is the SEDAR 72 amendment run incorporating Florida's State Reef Fish Survey (SRFS), completed in September 2022 with data through 2019. The Gulf SSC reviewed the run in July 2022 and found it consistent with best scientific information; NOAA's 2024 Amendment 56 rule used its projections for revised reference points and catch advice. NOAA still identifies SEDAR 72 as the most recent population assessment in its 2026 season notice. The 2022 run updates the 2021 base model by replacing Florida private-mode MRIP-FES catches and discards with calibrated SRFS estimates and correcting the recreational headboat data series.
 

@@ -71,9 +71,7 @@ repository was inspected at commit
 [`57e8e9775bf9fdd8b965a07ba434f3fc40675c93`](https://github.com/pbs-software/pbs-awatea/commit/57e8e9775bf9fdd8b965a07ba434f3fc40675c93);
 its tree contains no Bocaccio run files. The numeric age-composition values
 would therefore need to be recovered from the report figures or another
-run-specific source. More importantly for tinyAM's aggregate catch-at-age
-input, the source assessment has a second catch stream with no age composition.
-Assigning the trawl proportions to this other catch would be an unsupported
+run-specific source. Assigning the trawl proportions to this other catch would be an unsupported
 allocation, while omitting it would leave part of the official removals
 unrepresented.
 

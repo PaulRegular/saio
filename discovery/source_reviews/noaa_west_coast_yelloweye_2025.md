@@ -50,11 +50,9 @@ output; the assessment report rounds this to 478 and gives a 95% interval of
 384-571 billion eggs in Table 20. Spawning output is not relabelled as SSB.
 Age-specific uncertainty is unavailable.
 
-This record remains partial for tinyAM source readiness: there is no direct
-annual catch-at-age, no age-specific index, and no observed weight-at-age or
-maturity-at-age vector. The native composition likelihood cannot be treated
+The native composition likelihood cannot be treated
 as a set of independent age-index observations without additional
-reconstruction. No such reconstruction or tinyAM translation is included in
+reconstruction. No such reconstruction is included in
 this database import.
 
 ## Sources and local cache

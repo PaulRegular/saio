@@ -14,7 +14,7 @@ The m24 assessment reports commercial catch biomass in tonnes for 1961–2024. F
 
 Survey biomass is available for 1990–1999 (triennial), 2001–2021 (biennial) and 2023. Survey age compositions are available for 1990–1999 (triennial), 2003–2021 (biennial) and 2023. An age-specific survey index can be reconstructed from the aggregate biomass and corresponding age compositions; it is not the native aggregate-index likelihood. The m24 model uses updated survey biomass treatment and age-specific biological schedules. Weight-at-age is derived from survey growth and length-weight information for combined sexes. Maturity is an updated age ogive based on Conrath (2019) and earlier studies; the 2024 report describes the model's biological inputs. Exact age vectors and age-grid endpoint should be verified during extraction.
 
-Natural mortality is estimated; the preferred m24 estimate is approximately 0.0595 and the report includes an M prior. The assessment uses annual GOA bottom-trawl survey observations but does not specify a single within-year timing fraction for tinyAM. Any fractional timing used in a translation would be an explicit approximation.
+Natural mortality is estimated; the preferred m24 estimate is approximately 0.0595 and the report includes an M prior. Any fractional timing used in a translation would be an explicit approximation.
 
 ## Outputs and eligibility
 

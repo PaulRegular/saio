@@ -29,8 +29,7 @@ comparable population or mortality output series. This decision describes
 what was available in the reviewed assessment sources; it does not establish
 that age samples or other records do not exist elsewhere.
 
-No canonical stock, assessment, input, or output records were added. No
-tinyAM translation was attempted.
+No canonical stock, assessment, input, or output records were added.
 
 ## Sources
 

@@ -58,9 +58,7 @@ Other required input data also remain unavailable as numerical source series:
 catch age/length compositions, survey observations, and complete biological
 input surfaces. The report describes their type and coverage but does not
 provide all values in a reusable form. Estimated catch-at-age is not treated
-as an observed input. The assessment is marked `inputs_status = partial`; it is
-not ready for a tinyAM fit, and no translation is created until the remaining
-input limitations are resolved or explicitly accepted.
+as an observed input. The assessment is marked `inputs_status = partial`.
 
 The WGBFAS 2025 report says no new advice was requested for this stock and
 reprints its age-specific N and F tables as not updated in 2024. It provides
@@ -106,16 +104,13 @@ remains metadata-only, and no data are copied between the two entries.
 ## Current 2026 index assessment
 
 The current assessment uses a GAM-standardized combined BITS Q1/Q4 biomass
-index in kg/hour from 1991–2025, including the eastern part of subdivision 24.
-The index combines numbers-at-length with annual weight-at-length. The SAG
+index in kg/hour from 1991–2025, including the eastern part of subdivision 24. The index combines numbers-at-length with annual weight-at-length. The SAG
 stock-size field is this survey index, not SSB. It is recorded as an input and
 as the same reported indicator; these are not independent series. The ICES SAG
-export also provides 1946–2025 landings and 1966–2025 discards, in tonnes.
-They are contextual catch series, with recent data incomplete: the working
+export also provides 1946–2025 landings and 1966–2025 discards, in tonnes. They are contextual catch series, with recent data incomplete: the working
 group reports Russian landings missing for 2022–2025 and limited discard
 sampling. No age-specific population states or separate seasonal survey series
-are available from the current method. No tinyAM fit or dashboard is supported
-by the current aggregate index alone.
+are available from the current method.
 
 The 2026 record is now the selected current assessment for this stock; the
 2024 Stock Synthesis assessment remains a separate historical record. The

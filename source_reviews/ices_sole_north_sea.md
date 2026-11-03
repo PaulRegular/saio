@@ -4,7 +4,7 @@
 
 The stock is ICES `sol.27.4`, Solea solea in Subarea 4 (North Sea), matched to the existing Charbonneau–Keith catalogue record `ck_ices_wgnssk_solea_ns_4`. The latest detailed production assessment recovered is WGNSSK 2026. Its Stock Synthesis 3 model uses data through 2025 and reports population estimates through 2025, with 2026 advice-year summary values. The current advice is ICES 2027 advice based on assessment key 23777. The 2024 WKBFLATFISH benchmark introduced the Stock Synthesis 3 reference model.
 
-The previous detailed run is WGNSSK 2025, with data through 2024 and a 2025 forecast. It remains in the database as a historical assessment and as the basis for the existing tinyAM translation; its source data are not carried forward into the 2026 record.
+The previous detailed run is WGNSSK 2025, with data through 2024 and a 2025 forecast. It remains in the database as a historical assessment and as the basis for the existing; its source data are not carried forward into the 2026 record.
 
 ## Sources and local cache
 
@@ -20,8 +20,7 @@ The PDFs, extracted text and SAG HTML/XML are cached locally under the gitignore
 - Landings-at-age: 1957–2025, ages 0–10+, in thousand fish. Discards-at-age: 2002–2025, ages 0–10+, in thousand fish. Age 0 is explicitly reported as zero. Earlier discards are reconstructed in total from landings, but an age allocation is not tabulated.
 - Landings weights, discard weights and stock weights: 1957–2025, ages 0–10+, in kg per fish. The report gives age-0 landings weight as 0.01 kg. Quarter-2 catch weights are used as stock weights at the start and end of spawning.
 - Maturity and natural mortality: fixed, age-specific values for ages 0–10+. Maturity is knife-edged at age 3. M follows the reported Lorenzen formulation, with exponent −0.288; the values in Table 16.8 are the source values, not estimated surfaces.
-- BTS and combined COAST (SNS + DYFS) abundance indices: one annual aggregate value per survey for 1990–2025. The report does not specify a physical scale multiplier, so the reported relative scale is retained. Both are Q3 surveys; tinyAM timing is represented as 0.625.
-- The 2016 age-reading-error matrix retained by the assessment is recorded from Table 16.1. Its rows follow ages 0–10 in order and its columns are labelled 0–10. The printed rows for ages 9 and 10 sum to 0.991 and 0.910; they are preserved as printed and not normalized.
+- BTS and combined COAST (SNS + DYFS) abundance indices: one annual aggregate value per survey for 1990–2025. The report does not specify a physical scale multiplier, so the reported relative scale is retained. Both are Q3 surveys. Its rows follow ages 0–10 in order and its columns are labelled 0–10. The printed rows for ages 9 and 10 sum to 0.991 and 0.910; they are preserved as printed and not normalized.
 
 ## 2026 outputs and assumptions
 
@@ -38,8 +37,7 @@ The 2026 source record is partial because native SS3 files, full likelihood deta
 - Landings-at-age: 1957–2024, ages 1–10+, in thousand fish. Discards-at-age: 2002–2024, ages 1–10+, in thousand fish. Age 0 is not reported in these catch tables and is left absent.
 - Landings weights-at-age: ages 1–10+, 1957–2024. The report explicitly gives age-0 landings weight as a constant 0.01 kg; that value is recorded for each year. Discard weights and stock weights cover ages 0–10+ and 1957–2024. All weights are in kg per fish.
 - Maturity and natural mortality are fixed age vectors for ages 0–10+. Maturity is knife-edged at age 3. M is not estimated; the reported rates follow the size-based Lorenzen formulation, with exponent −0.288 and scaling based on maximum validated age 26.
-- The age-specific survey series are the Q3 BTS index (ages 0–10+, 1990–2024) and the Q3 COAST index combining SNS and DYFS (ages 0–5, 1990–2024). The report’s index tables do not state a physical multiplier, so original values are retained as relative-index units. TinyAM represents Q3 with the quarter midpoint, 0.625.
-- Aggregate BTS and COAST index series from Tables 16.8b and 16.9b are retained separately. The report says aggregate survey-biomass indices also inform model scale; their reported values closely match the rounded sums of the age-specific tables. Their dependence is unresolved, so tinyAM must not fit both representations without a deliberate choice.
+- The age-specific survey series are the Q3 BTS index (ages 0–10+, 1990–2024) and the Q3 COAST index combining SNS and DYFS (ages 0–5, 1990–2024). The report’s index tables do not state a physical multiplier, so original values are retained as relative-index units. The report says aggregate survey-biomass indices also inform model scale; their reported values closely match the rounded sums of the age-specific tables.
 
 ## 2025 historical outputs and assumptions
 
@@ -51,8 +49,4 @@ The production model is single-area and single-sex, with separate landings and d
 
 Both assessment records remain partial. For 2026, the numerical catch-at-age, weight, fixed biology, aggregate-index and age-specific output tables are present, but native SS3 files, full likelihood details and age-specific uncertainty are unavailable. For 2025, the original source extraction and its limits are retained as historical data. Fixed M is an input, not an estimated M output.
 
-A 2026 tinyAM fit has not been attempted. The recovered BTS and COAST observations are aggregate biomass indices; the current tinyAM translation supports age-specific index observations or aggregate biomass indices paired with age compositions. No matching 2026 age-composition series was recovered. Assigning these totals to ages or deriving compositions from fitted abundance would invent observations, while fitting catch alone would omit the assessment's survey likelihood. The existing tinyAM fit is for the historical 2025 assessment only.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_sole_north_sea.md). They do not determine source completeness or official run selection.
+The recovered BTS and COAST observations are aggregate biomass indices; the current supports age-specific index observations or aggregate biomass indices paired with age compositions. No matching 2026 age-composition series was recovered. Assigning these totals to ages or deriving compositions from fitted abundance would invent observations, while fitting catch alone would omit the assessment's survey likelihood.

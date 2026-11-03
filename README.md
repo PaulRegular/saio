@@ -4,24 +4,24 @@ SAIO preserves publicly available inputs, model assumptions and outputs from sto
 
 Repository: https://github.com/PaulRegular/saio
 
-Clone this repository with Git LFS beside tinyAM. On the development laptop it lives at `C:/Users/paulr/Documents/saio`, alongside `C:/Users/paulr/Documents/tinyAM`. The downloaded source cache remains local and ignored by Git.
+Clone this repository with Git LFS in any suitable local directory. Downloaded authoritative source files remain local and ignored by Git.
 
 ## Scope and verification
 
-The database was constructed with substantial agentic-AI assistance. Not all records have been exhaustively human-verified. Check values, definitions and provenance against authoritative assessment sources before research use. Extraction completeness and translation success are separate from scientific verification.
+The database was constructed with substantial agentic-AI assistance. Not all records have been exhaustively human-verified. Check values, definitions and provenance against authoritative assessment sources before research use. Extraction completeness is separate from scientific verification.
 
 ## Contents
 
-- database/: five canonical source tables; see DATABASE_STRUCTURE.md.
-- PROTOCOL.md: stock selection, source recovery and validation.
+- database/: five canonical source tables; see [DATABASE_STRUCTURE.md](DATABASE_STRUCTURE.md).
+- [PROTOCOL.md](PROTOCOL.md): stock selection, source recovery and validation.
 - discovery/: inventories, stock-unit crosswalks and screening decisions.
 - scripts/database/: reproducible importers and the canonical validator.
-- source_reviews/: official source interpretation and unresolved gaps; see [review ownership](source_reviews/README.md).
-- tests/: source checks that do not require tinyAM.
-- provenance/: tracked retrieval manifests copied from the local source cache.
+- source_reviews/: official source interpretation and unresolved gaps; see [review guidance](source_reviews/README.md).
+- tests/: standalone source and reader checks.
+- provenance/: tracked retrieval manifests.
 - source_cache/: ignored local PDFs, native files and fitted objects.
 
-Use Git LFS when cloning. From the SAIO repository root, run:
+From the repository root, run:
 
 ```r
 source("scripts/database/002_validate_database.R")
@@ -29,14 +29,12 @@ source("R/read_database.R")
 database <- read_database()
 ```
 
-The validator requires cli. Individual importers document their source-specific dependencies and expected cached files. No fitting or tinyAM installation is needed for canonical validation.
+The validator requires cli. Individual importers document their source-specific dependencies and expected cached files. Canonical validation does not fit an assessment model. Importers with preview controls use `SAIO_DATABASE_DRY_RUN` or `SAIO_IMPORT_DRY_RUN`; check the script for the required value (`true` or `1`).
 
-## Migration and provenance
+## Versioned source records
 
-The initial snapshot is an exact copy of the canonical CSVs at tinyAM comp-assessments commit 34470212e1102f3f31bf3f08c26a8a72a985c948. migration.json records table sizes and SHA-256 hashes. Historical commits remain available in the [original repository](https://github.com/PaulRegular/tinyAM/tree/34470212e1102f3f31bf3f08c26a8a72a985c948/analysis/comp_assessments); history has not been rewritten. This repository begins with the preserved source snapshot.
-
-The reviewed and preliminary tinyAM translations remain in tinyAM. Their [translation protocol](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/TINYAM_TRANSLATION.md) and [stock model notes](https://github.com/PaulRegular/tinyAM/tree/main/analysis/comp_assessments/translation_notes) are maintained there. Source curation does not require tinyAM.
+Git commits identify source revisions and Git LFS stores the canonical CSV contents. Record the revision used in any secondary analysis. Retrieval URLs, dates, checksums and pinned native revisions belong in source provenance. Cached authoritative files are not rewritten to suit a downstream model.
 
 ## Attribution and reuse
 
-Retain the source attribution and any source-specific reuse terms. This migration does not assign a new blanket licence to third-party assessment material. Code originating in tinyAM retains its original attribution and GPL (>= 3) licence, preserved in CODE_LICENSE.md.
+Retain source attribution and any source-specific reuse terms. No blanket licence is assigned to third-party assessment material. Repository code retains its original attribution and GPL (>= 3) licence, preserved in [CODE_LICENSE.md](CODE_LICENSE.md).

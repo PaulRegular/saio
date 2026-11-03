@@ -2,8 +2,7 @@
 
 ## Unit and current analysis
 
-NOAA Stock SMART identifies stock 10239 as Gulf of Mexico lane snapper. No
-matching canonical tinyAM stock record was found. Stock SMART's latest listed
+NOAA Stock SMART identifies stock 10239 as Gulf of Mexico lane snapper. Stock SMART's latest listed
 assessment year is 2023, but the latest official analysis located is the 2026
 SEDAR 49 interim analysis, which informed catch advice for 2026-2028. The
 Gulf Council's Standing Scientific and Statistical Committee considered that
@@ -36,9 +35,8 @@ interim method and finding directly.
 This current unit is ineligible for the age-disaggregated assessment set:
 the current official method is index-based, ages and lengths do not directly
 inform the interim analysis, and age-specific population inputs and outputs
-were not found. This decision concerns age-structured tinyAM source
-eligibility; the 2026 analysis remains an official source for aggregate catch
-advice. No numerical records were imported and no tinyAM translation was
+were not found. the 2026 analysis remains an official source for aggregate catch
+advice. No numerical records were imported was
 attempted.
 
 ## Sources

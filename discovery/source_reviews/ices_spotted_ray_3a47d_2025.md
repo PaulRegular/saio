@@ -21,7 +21,7 @@ model is a surplus-production assessment rather than an age-structured model.
 The report also notes that the 2022 catch observation is an outlier and that
 first-index OSA residual tests show dependence; those are model-quality caveats
 to preserve if the aggregate assessment is curated later. No canonical
-numerical records or tinyAM translation were added.
+numerical records were added.
 
 ## Sources
 

@@ -46,19 +46,14 @@ The 2018 assessment PDF and extracted text are cached under
   in 1968-1978, and filled age-years with zero catch using the 1992-2016 mean.
 - Table A4 supplies annual Canadian maturity-at-age ogives for the northern
   spawning contingent. This surface is applied to the combined-stock numbers
-  in the tinyAM translation, as in the recovered assessment inputs.
+  in the, as in the recovered assessment inputs.
 - Tables A38-A39 supply the spring trawl numbers-at-age. The full published
   ages 1-10 are retained in the database; the final ASAP model uses ages 3-10
   for Albatross and ages 3-7 for Bigelow. The translation applies a constant
   timing of 95.7/365, based on the report's time-series mean survey day. This is
   a timing approximation, not annual survey dates.
 - Table A40's 17 reported range-wide egg/ichthyoplankton SSB observations are
-  stored as aggregate biomass-index data. They are omitted from the tinyAM fit
-  because tinyAM requires an age-specific index and no age composition is
-  available to allocate these values.
-- Tables A42-A45 provide official SSB, January-1 and exploitable biomass,
-  numbers-at-age, F-at-age, Fbar, and the time-constant selectivity schedule.
-  M=0.2 per year is fixed in the assessment, not estimated; the database stores
+  stored as aggregate biomass-index data. M=0.2 per year is fixed in the assessment, not estimated; the database stores
   that explicit assumption and its implied age-year surface separately from
   fitted outputs.
 
@@ -69,7 +64,3 @@ The 2018 assessment PDF and extracted text are cached under
 - [NOAA Stock Assessment Support Information portal](https://apps-nefsc.fisheries.noaa.gov/saw/sasi.php); the 2025 archive contains the report and Run 8 diagnostic plots, not native inputs or model files
 - [2023 Atlantic Mackerel Management Track Assessment](https://repository.library.noaa.gov/view/noaa/70900/noaa_70900_DS1.pdf)
 - [NOAA Atlantic mackerel science and current status](https://www.fisheries.noaa.gov/species/atlantic-mackerel/science)
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/nefsc_atlantic_mackerel.md). They do not determine source completeness or official run selection.

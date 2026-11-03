@@ -50,7 +50,7 @@ The source model uses a Beverton–Holt recruitment relationship with bottom-wat
 
 ## Validation and translation decision
 
-All three completeness statuses remain partial. No tinyAM translation or comparison dashboard is claimed: aggregate catches do not provide catch-at-age, and the selected production biology cannot be filled from the rejected candidate. Ffull is not relabelled as an arithmetic or population-weighted Fbar; its precise averaging convention remains unresolved. The useful next source is a native age-based-M production input/output archive or matching official numerical tables.
+All three completeness statuses remain partial. No or comparison dashboard is claimed: aggregate catches do not provide catch-at-age, and the selected production biology cannot be filled from the rejected candidate. Ffull is not relabelled as an arithmetic or population-weighted Fbar; its precise averaging convention remains unresolved. The useful next source is a native age-based-M production input/output archive or matching official numerical tables.
 
 The focused source test checks every Table 1 output, terminal intervals, adjusted/native separation, projection years, units, recruitment age, partial statuses and the absence of candidate-run provenance or invented age states. The source cache remains gitignored. `manifest.csv` records current URLs, retrieval times, SHA-256 checksums and the NOAA download restriction with its successful Council-hosted alternative. Earlier cached archives without original retrieval provenance are retained for investigation; their numerical candidates are not canonical sources for this production record.
 

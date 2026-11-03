@@ -18,7 +18,7 @@ The report confirms that the 2023 advice recommended zero catches for
 2024–2027. That precautionary advice is not an estimate of N-at-age, F-at-age,
 M-at-age, SSB or recruitment. The unit is **ineligible for the age-disaggregated
 inventory** on the production-assessment evidence reviewed. No canonical
-numerical records or tinyAM translation were added.
+numerical records were added.
 
 ## Sources
 

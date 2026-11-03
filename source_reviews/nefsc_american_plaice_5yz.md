@@ -29,10 +29,7 @@ pre-review material, and management adoption for advice has not been verified.
 Run29F4 has one commercial catch series. Total catch numbers are in thousand
 fish and number proportions-at-age cover ages 1–10 and 11+. The source
 effective sample size is 100. The canonical database retains the aggregate
-catch and composition as separate inputs; tinyAM reconstructs catch-at-age by
-multiplying each annual total by its reported number proportions. The source
-aggregate catch error and composition likelihood are not reproduced as
-separate tinyAM likelihoods.
+catch and composition as separate inputs.
 
 Four NEFSC survey series are retained: spring Albatross, spring Bigelow, fall
 Albatross, and fall Bigelow. Aggregate biomass indices are in kg/tow; number
@@ -59,7 +56,7 @@ series. The recorded values are 0.25, 0.75, 0.25, and 0.75 for spring
 Albatross, spring Bigelow, fall Albatross, and fall Bigelow, respectively.
 The age-composition tables support the series order, but no source evidence
 resolved whether the Bigelow timing values or labels are wrong. The source
-values remain unchanged and the tinyAM translation uses those recorded
+values remain unchanged and the uses those recorded
 fractions.
 
 ## Outputs and uncertainty
@@ -72,8 +69,7 @@ the same year. Total abundance is derived by summing the marginal N-at-age
 point estimates; no uncertainty is reconstructed because the exported object
 does not provide the cross-age covariance needed for the sum. M is an input,
 not a fitted output. Native Fbar is the arithmetic mean of F-at-age over ages
-6–9; the dashboard also shows a common N-weighted F mean derived from source
-N/F-at-age and tinyAM N/F-at-age, while retaining native Fbar separately.
+6–9.
 
 The 2024 and 2026 summary tables report no numerical uncertainty. The database
 keeps their values, years, units, and provenance separate from the detailed
@@ -118,7 +114,3 @@ age-specific surfaces were not recovered. It cannot replace the historical
 Run29F4 as a model-ready input, and its comparison dashboard remains a
 candidate-run comparison. The 2026 assessment ID retains the word
 `provisional` for identifier stability, not as its present review status.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/nefsc_american_plaice_5yz.md). They do not determine source completeness or official run selection.

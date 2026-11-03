@@ -29,8 +29,7 @@ average with a 20% precautionary buffer.
 advice does not use age-specific catch or abundance data and reports no
 age-specific population or mortality outputs. The surveys described in the
 report do not change that classification because they are not inputs to a
-current age-structured assessment. No canonical assessment data or tinyAM
-translation were added.
+current age-structured assessment.
 
 ## Sources
 

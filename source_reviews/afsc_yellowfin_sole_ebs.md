@@ -54,8 +54,7 @@ already-centered main effects.
 
 A source observation-model difference is retained explicitly: survey biomass
 is predicted at mid-year, but survey age proportions use begin-year N without
-survival to the survey date. Multiplying its biomass by its age proportions
-therefore gives an approximation for tinyAM, not an equivalent likelihood.
+survival to the survey date.
 
 ## Outputs and remaining gaps
 
@@ -71,7 +70,3 @@ Completeness remains partial: the full ageing-error and control inventory,
 all biological sampling support and state covariance have not been exported.
 This does not imply that absent stochastic survival or inactive growth effects
 are unknown.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/afsc_yellowfin_sole_ebs.md). They do not determine source completeness or official run selection.

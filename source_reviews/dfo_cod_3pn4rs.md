@@ -158,7 +158,3 @@ and biological constraints. `057_cache_dfo_cod_3pn4rs_sources.R` retrieves the
 additional public survey archives and maturity report and records their URLs
 and checksums. The source record remains partial because most official indices
 and some exact likelihood settings have not been recovered.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/dfo_cod_3pn4rs.md). They do not determine source completeness or official run selection.

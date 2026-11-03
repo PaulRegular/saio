@@ -17,8 +17,7 @@ The 2025 report confirms that the latest advice was issued in 2023 and
 recommended zero catches for 2024–2027 under the precautionary approach. This
 conservation recommendation is not an estimate of population-at-age, SSB or
 recruitment. The unit is **ineligible for the age-disaggregated inventory** on
-the production-assessment evidence reviewed. No canonical numerical records or
-tinyAM translation were added.
+the production-assessment evidence reviewed.
 
 ## Sources
 

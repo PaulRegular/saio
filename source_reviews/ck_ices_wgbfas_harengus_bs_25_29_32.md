@@ -34,7 +34,7 @@ WGBFAS report and 2026 annexes were also retained there for revision context.
 | Commercial catch-at-age | 1974–2025, ages 1–8+, thousand fish | WGBFAS Table 4.2.5. The Stock Annex identifies catch-at-age as age-composition data used alongside total catch in tonnes, not as an independent total-catch likelihood. Age 8 is the plus group. Russian catch age compositions are missing for 2022–2025; the report estimates that about 26% of the 2025 catch lacks composition. |
 | Catch and stock weights | 1974–2025, ages 0–8+, kg/fish | WGBFAS Table 4.2.6. The source sets stock weight equal to catch weight. The Stock Annex says pre-1974 values repeat 1974; the annual-report prose says 1973, which is not included in the published table. The imported history follows the Stock Annex and is labelled reconstructed. |
 | Maturity | 1974–2025, ages 0–9, proportion mature at year start | WGBFAS Table 4.2.8. The table gives a constant 1974–1983 ogive. The report prose says those years repeat 1984, but the published 1974 and 1984 values differ (age-1 maturity 0.0954 versus 0.0872). The database preserves the explicit tabled SS3 inputs and extends pre-1974 values from 1974 as the Stock Annex states. |
-| BIAS acoustic index | 2000, 2006–2007, 2009–2025; ages 1–8+, million fish | WGBFAS Table 4.2.9. The printed age-0 zeros are retained as source data; the tinyAM translation omits them from the lognormal observation table. The survey covers subdivisions 25–27, 28.2, 29 and 32. The report says October, but gives no exact within-year fraction. |
+| BIAS acoustic index | 2000, 2006–2007, 2009–2025; ages 1–8+, million fish | WGBFAS Table 4.2.9. The printed age-0 zeros are retained as source data; the omits them from the lognormal observation table. The survey covers subdivisions 25–27, 28.2, 29 and 32. The report says October, but gives no exact within-year fraction. |
 | Natural mortality | 1974–2021 by year and age 0–8+, per year | WGBFAS Tables 4.2.7a–c, expanded to pre-1974 values equal to 1974 and 2022–2025 values equal to 2021, as specified in the report. The three source scenarios are retained separately as `fixed_mortality_low`, `fixed_mortality_medium` and `fixed_mortality_high`. |
 
 The report explains that annual total catches have stated standard errors of
@@ -91,7 +91,3 @@ Annex's early weight extension. Numerical tabled inputs were retained where
 available; for historical weight values the Stock Annex's 1974 extension was
 used and the report-text difference is documented above. These choices should
 be revisited if the native SS3 input files become public.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ck_ices_wgbfas_harengus_bs_25_29_32.md). They do not determine source completeness or official run selection.

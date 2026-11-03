@@ -3,7 +3,7 @@
 ## Identity and latest assessment
 
 NOAA Stock SMART 10158 identifies Western Atlantic skipjack (*Katsuwonus
-pelamis*). No corresponding canonical tinyAM stock record was found. ICCAT's
+pelamis*). ICCAT's
 assessment calendar lists the last assessment as 2022 and the advice method as
 Stock Synthesis 3.30.18. The latest executive summary located states that the
 last eastern and western skipjack assessments were conducted in 2022 and

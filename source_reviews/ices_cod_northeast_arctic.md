@@ -91,7 +91,3 @@ https://github.com/fishfollower/SAM/blob/1cc464b80f6f/stockassessment/inst/inclu
 ## Source context
 
 The cached official SAM fit has `initState = 0` and no `initN` parameters. Its initial-state likelihood is documented above.
-
-## Downstream modelling
-
-[Translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_cod_northeast_arctic.md) hold downstream settings and fitting results.

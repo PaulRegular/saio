@@ -34,10 +34,7 @@ north model and 1975–2022 in the south model. These are observed composition
 records in the fitted data, not annual catch numbers-at-age.
 
 The assessments also use aggregate indices and length compositions. They do not
-provide direct annual survey abundance-at-age input series. A tinyAM catch-age
-or index-at-age table therefore needs an explicit reconstruction from the
-matching catch or index totals, length compositions, and the age and growth
-information; the transformation must retain the composition's source and
+provide direct annual survey abundance-at-age input series. the transformation must retain the composition's source and
 sampling basis. Do not label reconstructed quantities as directly observed
 age-specific indices or catch.
 
@@ -59,9 +56,7 @@ input or output rows were added in this screening step.
 ## Screening decision
 
 Screen this as one new eligible California assessment family for source
-curation. The fitted archive has direct age-composition inputs and detailed
-age-specific outputs, while the annual catch-at-age and survey abundance-at-age
-series required by tinyAM are not direct input tables. Their reconstruction is
+curation. Their reconstruction is
 supportable from native model inputs but must be documented and kept distinct
 from observed quantities. This is stronger age evidence than the single
 survey-year age-length key available for Pacific Coast spiny dogfish, but it

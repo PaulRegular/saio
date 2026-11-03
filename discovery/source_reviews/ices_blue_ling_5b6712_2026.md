@@ -46,7 +46,7 @@ length-indicator trend assessment, and its published current-run products do
 not provide the age-disaggregated inputs or population outputs needed for the
 comparison set. No older assessment is substituted for the current run. The
 candidate remains in the discovery register. No canonical assessment, input,
-or output values were added, and no tinyAM translation was attempted.
+or output values were added was attempted.
 
 The source URLs, revisions, retrieval date, file sizes, and SHA-256 checksums
 are recorded in the gitignored local cache at

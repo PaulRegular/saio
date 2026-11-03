@@ -40,9 +40,7 @@ weight-at-age inputs and numeric annual N-at-age/F-at-age output arrays were
 not verified during this screen.
 
 The assessment and peer-review report include annual F and egg-production
-trajectories, reference points and stock-status diagnostics. These values
-could be useful if SEDAR 82 is confirmed as the applicable production run, but
-egg production must remain clearly distinguished from tinyAM's biomass SSB.
+trajectories, reference points and stock-status diagnostics.
 
 ## Sources
 

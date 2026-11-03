@@ -2,7 +2,7 @@
 
 ## Screening decision
 
-**Identity:** new NOAA/PFMC Pacific Coast candidate; no matching canonical tinyAM stock was found.
+**Identity:** new NOAA/PFMC Pacific Coast candidate.
 
 **Latest assessment:** the fully accepted 2013 benchmark assessment used data through 2012. NOAA Stock SMART retains a 2010 DB-SRA entry and a separate 2013 assessment; the 2025 Groundfish SAFE lists 2013 as the most recent assessment informing management. The 2013 assessment treated Brown rockfish as one coastwide U.S. stock. The Council's Amendment 37 action also defines the current Pacific Coast Groundfish FMP unit as coastwide; NMFS review was pending at the time of this screen.
 

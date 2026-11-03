@@ -6,7 +6,7 @@
 **Assessment area:** IATTC northern EPO, north of 5°S and east of 145°W; described in the report as the northeast Pacific stock.
 **Latest NOAA Stock SMART assessment:** 2010; assessment ID 5266; data through 2008; Stock Synthesis; full acceptance. The IATTC detailed status report uses data through 2009 and information available on 30 October 2010.
 
-No canonical tinyAM stock matches this IATTC unit. NOAA's current species page identifies the Eastern Tropical Pacific as a separate striped marlin stock and lists the 2010 IATTC assessment as its latest assessment. The WCNPO striped marlin row is a separate western and central Pacific unit, so it is not merged with this candidate.
+NOAA's current species page identifies the Eastern Tropical Pacific as a separate striped marlin stock and lists the 2010 IATTC assessment as its latest assessment. The WCNPO striped marlin row is a separate western and central Pacific unit, so it is not merged with this candidate.
 
 ## Inputs and outputs
 
@@ -20,7 +20,7 @@ The report publishes annual spawning biomass and recruitment results through 200
 
 This is a **new, screened, ineligible candidate** for the age-disaggregated assessment set. Although the production assessment is an age-structured Stock Synthesis model and provides some age-indexed fitted results, its population likelihood is based on catch, aggregate CPUE and length compositions. The assessment report explicitly says there were no age-at-length data; no catch-at-age, population age composition, age-specific abundance index, or defensible age reconstruction was found. The official report's biomass and recruitment tables do not replace the missing age-specific population inputs.
 
-No canonical numerical records were added and no tinyAM translation was attempted. The IATTC assessment and status report, retrieval date, byte sizes, and SHA-256 checksums are recorded in the ignored local cache at `source_cache/discovery_noaa_iattc_striped_marlin_2010/sources.csv`.
+No canonical numerical records were added was attempted. The IATTC assessment and status report, retrieval date, byte sizes, and SHA-256 checksums are recorded in the ignored local cache at `source_cache/discovery_noaa_iattc_striped_marlin_2010/sources.csv`.
 
 ## Sources
 

@@ -39,8 +39,7 @@ provides an aggregate biomass index and length-based pressure proxy, without
 age-specific model inputs or population outputs. The source pages do not
 support constructing a catch-at-age or age-specific abundance series.
 
-No canonical stock, assessment, input, or output records were added. No tinyAM
-translation was attempted.
+No canonical stock, assessment, input, or output records were added.
 
 ## Sources
 

@@ -113,7 +113,3 @@ Routine fitting reads canonical records and never invokes either script.
 Source tests check fleet and survey coverage, composition normalization, sex
 dimensions, timing, units, the effective maturity cutoff, provisional catches,
 subset/published uncertainty and absence of fabricated population outputs.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/dfo_canary_bc.md). They do not determine source completeness or official run selection.

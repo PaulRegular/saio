@@ -2,7 +2,7 @@
 
 ## Identity and latest assessment
 
-NOAA Stock SMART identifier 10559 is the Gulf of Alaska dusky rockfish (*Sebastes variabilis*) unit. It is geographically and biologically distinct from dusky rockfish outside the Gulf of Alaska. No canonical tinyAM stock or numerical assessment record currently matches this unit.
+NOAA Stock SMART identifier 10559 is the Gulf of Alaska dusky rockfish (*Sebastes variabilis*) unit. It is geographically and biologically distinct from dusky rockfish outside the Gulf of Alaska.
 
 The latest full assessment located is the November 2024 SAFE assessment, recommended model m22.5a. The September 2026 SAFE chapter is a pre-dissemination peer-review harvest projection; its cover says it has not been formally disseminated by NMFS. It states that no new assessment model was run, uses updated catches to project from the 2024 assessment, and schedules the next assessment for 2027. The 2026 projection is therefore a current advice/output supplement, not a replacement for the 2024 assessment inputs or fitted time series.
 
@@ -22,7 +22,7 @@ Natural mortality is fixed at M = 0.07 per year. The report does not specify a f
 
 The 2024 SAFE provides annual maximum-likelihood estimates for female spawning biomass, total age-4+ biomass, fully selected fishing mortality, and age-4 recruitment, plus MCMC means and 95% credible intervals for those quantities. It does not provide numerical N-at-age or F-at-age output surfaces. The pre-dissemination 2026 projection supplies updated catch and projected total and spawning biomass through 2031, without refitting the assessment.
 
-**Eligible for source curation.** The official full assessment provides catch biomass, fishery and survey age compositions, survey biomass with uncertainty, weight-at-age and maturity-at-age bases, fixed natural mortality, and comparable population outputs. Before importing values, reconcile the reported fishery-age years, retrieve or document a defensible maturity source, and continue searching for the survey timing. No canonical values or tinyAM translation were added in this discovery screen.
+**Eligible for source curation.** The official full assessment provides catch biomass, fishery and survey age compositions, survey biomass with uncertainty, weight-at-age and maturity-at-age bases, fixed natural mortality, and comparable population outputs. Before importing values, reconcile the reported fishery-age years, retrieve or document a defensible maturity source, and continue searching for the survey timing. No canonical values were added in this discovery screen.
 
 ## Sources
 
@@ -30,4 +30,3 @@ The 2024 SAFE provides annual maximum-likelihood estimates for female spawning b
 - [2026 GOA Dusky Rockfish harvest projection](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=12.+GOA+Dusky+Rockfish.pdf&p=ed574dbd-35fa-43dc-99f0-a80909caf4d5.pdf).
 - [NOAA 2024 North Pacific Groundfish Stock Assessments](https://www.fisheries.noaa.gov/alaska/population-assessments/2024-north-pacific-groundfish-stock-assessments).
 - [NOAA Stock SMART](https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10559).
-

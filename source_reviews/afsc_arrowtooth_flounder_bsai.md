@@ -49,12 +49,9 @@ convention is not fully established; do not infer it solely from MCMC limits.
 Table 6.6's underlining identifies active survey data, verified visually:
 EBS shelf 1992–2022 (2020 missing), slope 2002–2016, and Aleutian Islands
 1991–2022. Keep earlier un-underlined estimates as explicitly inactive source
-context. Preserve each series and its CV; do not interpret CV as log SD.
-Within-year timing fractions were not verified and remain missing.
-Regional q shares are externally derived from random-effects survey biomasses:
+context. Preserve each series and its CV; do not interpret CV as log SD. Within-year timing fractions were not verified and remain missing. Regional q shares are externally derived from random-effects survey biomasses:
 0.825 shelf, 0.08 slope and 0.095 AI, with an additional bottom-temperature
-effect on shelf q. Their full activation/covariance is unresolved; they are
-not silently replaced by free tinyAM q coefficients.
+effect on shelf q. Their full activation/covariance is unresolved.
 
 Fishery likelihood inputs are length compositions. The report describes few
 fishery otoliths, no accepted fishery age-composition likelihood, survey ages
@@ -87,13 +84,10 @@ spawning time.
 
 ## Translation blocker
 
-The source record is useful, but not model-ready. A tinyAM fit requires
-verified catch-at-age (or numerical catch lengths with a defensible observed
-age–length key), survey age inputs and timing. Generating catch or survey
+The source record is useful, but not model-ready. Generating catch or survey
 observations from the fitted N/F surface would fit the source estimates rather
 than its data. No such reconstruction or default timing is used.
 
 This is one partial curated case, **not a completed runnable translation or
-actual fitting attempt**. No starting-value retry or model rescue was tried.
-The missing inputs remain an explicit shortfall against the twelve-translation
-target; they are separate from tinyAM's unsupported catch-length likelihood.
+actual fitting attempt**. No starting-value retry or model rescue was tried. The missing inputs remain an explicit shortfall against the twelve-translation
+target.

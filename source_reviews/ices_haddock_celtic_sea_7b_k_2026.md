@@ -30,7 +30,3 @@ Input, assumption, and output extraction are complete for the assessment run. Th
 ## Discovery inventory screening
 
 The ICES 2026 inventory entry had.27.7b-k matches this existing canonical stock and is screened eligible. The run-matched source review and canonical validation test document the required age-based inputs, assumptions, survey timing and fitted outputs. This is an existing-stock match, not an additional stock unit.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_haddock_celtic_sea_7b_k_2026.md). They do not determine source completeness or official run selection.

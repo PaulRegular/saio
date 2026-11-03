@@ -45,10 +45,7 @@ stock to category 5; WGCSE 2026 also notes poor model fits and strong
 retrospective revisions. The historical 2019 SAG XML and benchmark report
 are cached. The historical 7.j–k source tables have been imported separately
 under the [catalogue record](ck_ices_wgsce_solea_is7jk.md), with unresolved
-landings-number scale and catch-total discrepancies explicitly documented.
-The older model must not be presented as the 2026 assessment. A translation of the current advice rule into an
-age-structured tinyAM fit is not supported, and there is no current official
-population trajectory for a dashboard comparison.
+landings-number scale and catch-total discrepancies explicitly documented. The older model must not be presented as the 2026 assessment.
 
 ## Sources
 

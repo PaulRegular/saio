@@ -38,16 +38,14 @@ trawl series is split into an early index (1987-2008) and a late index
 (2009-2024). Trawl age and length samples were available for 2008-2024
 (`N = 519`), but the assessment fitted survey length compositions rather than
 an age-composition likelihood. The G-FISHER video index has associated length
-compositions, not empirical age observations. A tinyAM age-specific index
-would therefore need an explicit age-composition reconstruction and would be
-an approximation to the likelihood used by SEDAR.
+compositions, not empirical age observations.
 
 Growth is estimated internally using age-at-length information. Weight and
 maturity are modeled as functions of length rather than supplied as
 weight-at-age and maturity-at-age vectors. Deriving age-specific biology would
 require the model growth relationship. Natural mortality is fixed at a target
 of 0.36 per year and scaled by age with a Lorenzen relationship through age
-15. Survey timing fractions suitable for tinyAM were not found; the
+15. the
 assessment's continuous-fishing assumption and July 1 settlement do not
 specify those fractions.
 
@@ -63,10 +61,7 @@ reported series are point estimates.
 This unit is eligible for source curation because the public assessment and
 supporting data papers provide removals, fishery age-at-length data,
 aggregate abundance indices, trawl survey age samples, biology, mortality
-assumptions, and comparable annual population outputs. This is a source
-curation decision, not a finding that the observations can be translated
-faithfully to tinyAM: catch-at-age, age-specific survey indices, weight-at-age,
-and maturity-at-age all require documented reconstruction. No canonical
+assumptions, and comparable annual population outputs. No canonical
 assessment data were imported, and the unit has not been selected for an
 import batch.
 

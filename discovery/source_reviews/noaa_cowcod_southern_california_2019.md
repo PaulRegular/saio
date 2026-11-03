@@ -40,7 +40,7 @@ likelihood, which fits conditional age-at-length and length compositions
 separately. It is not a direct catch-at-age likelihood. That difference must
 remain explicit if this unit is later selected for import or translation.
 
-No tinyAM translation was attempted. Source files, retrieval date, versions,
+Source files, retrieval date, versions,
 sizes and SHA-256 checksums are recorded in
 `source_cache/discovery_noaa_cowcod_southern_california_2019/sources.csv`.
 

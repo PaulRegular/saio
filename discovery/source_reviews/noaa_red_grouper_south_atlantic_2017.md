@@ -42,7 +42,7 @@ analyses for assessment quantities.
 
 The assessment inputs are annual indices derived from sources with different
 sampling seasons. The report does not give one common within-year survey
-fraction. Any later tinyAM translation must preserve source timing where
+fraction. Any later must preserve source timing where
 available or label the chosen single-fraction timing as an approximation.
 
 ## Decision
@@ -50,7 +50,7 @@ available or label the chosen single-fraction timing as an approximation.
 This is a **new, eligible source-curation candidate**, not a canonical database
 record yet. Eligibility reflects the recoverable assessment inputs and outputs
 and documented age-specific reconstructions; it does not mean every fleet-year
-has complete age observations or that a tinyAM translation will be exact. No
+has complete age observations or that a will be exact. No
 assessment event, input series, output series, or fit was added in this screen.
 
 ## Sources and local cache

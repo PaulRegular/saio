@@ -52,13 +52,8 @@ substituted for the 2026 run.
 AFWG Table 2.3.7 supplies B/Bmsy and F/Fmsy for 1977–2025 with 95% limits;
 these relative quantities must not be interpreted as absolute SSB or
 instantaneous F. The precise point-estimate convention for these reported
-values has not been verified. The report also gives estimated MSY and its 95% interval.
-The 2026 forecast is kept out of historical outputs. The official fit does
-not estimate population N or F at age or recruitment. While age-specific
-catch information exists, an age-structured tinyAM fit would be a new model
-rather than a translation of the official SPiCT assessment, and no matching
-official age-specific outputs are available for comparison. No tinyAM fit or
-comparison dashboard is claimed for this assessment.
+values has not been verified. The report also gives estimated MSY and its 95% interval. The 2026 forecast is kept out of historical outputs. The official fit does
+not estimate population N or F at age or recruitment.
 
 The AFWG report, extracted text, SAG XML and 2024 benchmark report are cached
 locally under `source_cache/ck_ices_afwg_morhua_coastnor_1_2/assessment_2026/`

@@ -37,7 +37,7 @@ older series without reviewing those revisions.
 
 The available materials do not yet identify one production fitted N/F/M-at-age surface for the complete 4VWX management unit. The 2022 framework is an ensemble of alternative operating models for only SWNS/BoF, while other components are represented by separate indicators. Treating one reconstructed operating model as a stock-wide official assessment would change the assessment scope and select one scenario from the reference set without an official basis.
 
-The partial 2025 import does not provide age-specific observations or biological surfaces for a tinyAM fit. A component-specific approximation requires the actual production input update and official reference OM outputs, with ensemble and population definitions resolved. No fitting, source-based starting values, or dashboard has been attempted. Source tests verify the reported values, units, component separation and that the acoustic indicator does not become a fitted SSB comparison.
+A component-specific approximation requires the actual production input update and official reference OM outputs, with ensemble and population definitions resolved. No fitting, source-based starting values, or dashboard has been attempted. Source tests verify the reported values, units, component separation and that the acoustic indicator does not become a fitted SSB comparison.
 
 The source PDFs and pinned code/data archive are cached under `source_cache/ck_dfo_mar_harengus_4vwx/`; checksums and URLs are recorded in `accessible_sources_manifest.csv`. The cache remains local and gitignored.
 
@@ -51,4 +51,3 @@ The source PDFs and pinned code/data archive are cached under `source_cache/ck_d
 - [DFO Research Document 2023/022: Framework for Conditioning SWNS/BoF Herring Operating Models](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41206903.pdf)
 - [Pinned public operating-model repository](https://github.com/z5a1n/herring_OM_conditioning/tree/515857664de2719f7fd1b227b41862b82673ac56)
 - [Current CSAS assessment schedule](https://csas-scas.dfo-mpo.gc.ca/)
-

@@ -18,7 +18,7 @@ The 2026 report describes catch in tonnes and quarterly length distributions by 
 
 The report says age data from the Norwegian autumn slope survey (EggaN) are used in model tuning. The archived model code includes EggaN age–length-distribution likelihoods. Its survey age–length data file spans 2001–2023 (ages 0–41), but the example likelihood removes 2001 and 2007. The paired indices are aggregate biomass or abundance series, so these data may support a documented age-composition reconstruction if the exact 2026 run inputs and expansion basis are confirmed.
 
-The model estimates sex-specific growth and maturity-at-length; it does not report a directly observed, run-matched stock weight-at-age or maturity-at-age table. Natural mortality is fixed at 0.12 for females and 0.16 for males. The 2026 report describes one annual model step and quarterly commercial distributions. A single fractional-year survey timing suitable for tinyAM is not specified.
+The model estimates sex-specific growth and maturity-at-length; it does not report a directly observed, run-matched stock weight-at-age or maturity-at-age table. Natural mortality is fixed at 0.12 for females and 0.16 for males. The 2026 report describes one annual model step and quarterly commercial distributions.
 
 ## Official outputs
 
@@ -28,9 +28,7 @@ The 2026 advice reports recruitment at age 2, female spawning-stock biomass, fis
 
 This is a distinct new candidate with **eligibility unresolved** for the age-disaggregated source-curation set. The current assessment uses survey age information, and the archived source includes partial sampled catch age–length data. However, the current report documents catches and fishery length distributions rather than a full catch-at-age likelihood; the archive is not verified as the 2026 run, and the available data do not yet establish a complete, run-matched input set with age-specific biology and a supported fishery catch-age reconstruction. The unresolved status reflects those specific gaps; the GADGET age–length label alone is not being treated as proof of age-at-age inputs.
 
-No canonical stock, assessment, input, or output records were added. No tinyAM translation was attempted.
-
-## Sources
+No canonical stock, assessment, input, or output records were added. ## Sources
 
 - Institute of Marine Research, [JRN-AFWG Report 2026](https://www.hi.no/hi/nettrapporter/imr-vniro-2026-5), Greenland halibut chapter.
 - Institute of Marine Research, [Greenland halibut advice for 2027–2028](https://www.hi.no/en/hi/nettrapporter/imr-vniro-en-2026-4).

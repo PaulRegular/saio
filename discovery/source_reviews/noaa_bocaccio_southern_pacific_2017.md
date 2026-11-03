@@ -1,6 +1,6 @@
 # NOAA Stock SMART 10413: Southern Pacific Coast bocaccio, 2017 fit / 2025 projection
 
-Reviewed 2026-10-29. NOAA Stock SMART 10413 is the Southern Pacific Coast bocaccio stock, *Sebastes paucispinis*. No matching canonical tinyAM stock record was found; the DFO British Columbia bocaccio unit is geographically distinct.
+Reviewed 2026-10-29. NOAA Stock SMART 10413 is the Southern Pacific Coast bocaccio stock, *Sebastes paucispinis*. the DFO British Columbia bocaccio unit is geographically distinct.
 
 ## Current unit and latest assessment
 
@@ -14,7 +14,7 @@ The 2017 update retained fixed length-weight, maturity and fecundity relationshi
 
 The 2017 assessment reports spawning output, recruitment and exploitation/status trajectories. The 2025 catch-only projection gives spawning output and stock-status estimates for the updated catch/projection path through 2036. Its outputs are projections from the 2017 fit, not new estimated population states. The published reports do not provide numeric annual N-at-age and F-at-age tables; the 2017 model archive includes the native data and control files but no fitted output files.
 
-This unit is eligible for source curation because the current official age-structured fit contains observed CAAL data, aggregate abundance indices, biological inputs, mortality assumptions and official population outputs. Import should preserve CAAL as the source likelihood and separately document any conversion to tinyAM catch-at-age; no catch-age reconstruction has been imported or presumed complete.
+This unit is eligible for source curation because the current official age-structured fit contains observed CAAL data, aggregate abundance indices, biological inputs, mortality assumptions and official population outputs. no catch-age reconstruction has been imported or presumed complete.
 
 ## Sources and cache
 

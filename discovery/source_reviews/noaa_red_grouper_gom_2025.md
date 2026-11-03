@@ -1,8 +1,7 @@
 # Gulf of Mexico red grouper, SEDAR 88
 
 Reviewed 2026-10-30. NOAA Stock SMART 10331 is the Gulf of Mexico management
-unit. It is distinct from South Atlantic red grouper (Stock SMART 10332); no
-canonical tinyAM record currently covers the Gulf unit.
+unit. It is distinct from South Atlantic red grouper (Stock SMART 10332).
 
 The most recent full production assessment is SEDAR 88, completed in 2025 with
 data through 2022 and assessed using Stock Synthesis 3.30.21.0. Stock SMART
@@ -54,8 +53,7 @@ surfaces appear only in figures, and annual uncertainty for the population
 time series was not found in the reviewed tables. No SEDAR-linked Stock
 Synthesis input/control/output bundle or fitted model object was located.
 
-This candidate is crosswalked as a new stock unit, but its tinyAM eligibility
-remains unresolved. The age-composition and aggregate-index inputs are valuable
+The age-composition and aggregate-index inputs are valuable
 for source curation, but the assessment does not fit age-specific survey indices,
 and the pooled indices lack a single documented fractional sampling time. Its
 distinct SSB definition and

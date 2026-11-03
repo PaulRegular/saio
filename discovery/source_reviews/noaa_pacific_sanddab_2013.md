@@ -1,12 +1,12 @@
 # Pacific Sanddab, U.S. Pacific Coast
 
-Reviewed 2026-10-29. NOAA Stock SMART 10190 and the Pacific Fishery Management Council's 2026 stock definitions identify the U.S. Pacific Coast unit as coastwide. No corresponding canonical tinyAM stock record was found.
+Reviewed 2026-10-29. NOAA Stock SMART 10190 and the Pacific Fishery Management Council's 2026 stock definitions identify the U.S. Pacific Coast unit as coastwide.
 
 ## Assessment and current advice
 
 The latest detailed age-structured model located is the 2013 Stock Synthesis assessment, with data through 2012. It fits commercial and recreational catches, survey biomass indices, length compositions, and conditional age-at-length compositions. The report includes sex-specific retained-fish age compositions for the California trawl fleet in 2003 and 2007-2008 and for the Oregon/Washington trawl fleet in 1995-2012 with gaps; ages are grouped 0-11. The NWFSC survey age data are conditional age-at-length, not an age-specific abundance index. The report also describes growth, length-weight, maturity, and mortality inputs and provides annual spawning-biomass, depletion and exploitation outputs.
 
-The limitations affect whether this assessment is suitable for a tinyAM source comparison. The age samples are from retained fish, while total catches include discards, so they do not establish total catch-at-age. Numerical Stock Synthesis inputs and full numeric N-at-age/F-at-age outputs were not found among the public files. The 2013 STAR Panel did not recommend the model for management because its biomass scale was uncertain relative to fishery-independent surveys. The assessment was accepted for status determination only. The 2016 PFMC SAFE states that harvest specifications continued to use a Category 3 approach; the available 2027-2028 Council draft also lists a Category 3 contribution based on the 2011 method revision.
+The age samples are from retained fish, while total catches include discards, so they do not establish total catch-at-age. Numerical Stock Synthesis inputs and full numeric N-at-age/F-at-age outputs were not found among the public files. The 2013 STAR Panel did not recommend the model for management because its biomass scale was uncertain relative to fishery-independent surveys. The assessment was accepted for status determination only. The 2016 PFMC SAFE states that harvest specifications continued to use a Category 3 approach; the available 2027-2028 Council draft also lists a Category 3 contribution based on the 2011 method revision.
 
 ## Screening decision
 

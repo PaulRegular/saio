@@ -26,7 +26,7 @@ The two Q1 series are distinct survey fleets and remain separate. The source mod
 
 The fitted precision vector has finite relative weights for 316 survey observations. The database stores those weights on their native rows. SAM scales log-index observation SD by 1/sqrt(weight) where a weight is provided. Other observations have no supplied relative weight. The source bundle also contains survey_variance.txt; the fit-aligned weights, rather than a reconstructed reordering of that file, are stored as the likelihood inputs.
 
-Original fitted input surfaces are retained for stock, catch, landings and discard weights; maturity; natural mortality; landings fractions; and the fractions of F and M applied before spawning. These are the values supplied to the native fit, not tinyAM extensions.
+Original fitted input surfaces are retained for stock, catch, landings and discard weights; maturity; natural mortality; landings fractions; and the fractions of F and M applied before spawning.
 
 ## Model assumptions
 
@@ -42,9 +42,7 @@ The 2025 fitted SAM age-0 abundance and recruitment are about 385,197 thousand f
 
 The source PDFs and native run are cached locally under source_cache/ices_whiting_6a_2025/. The document manifest records retrieval URLs, date, byte size and SHA-256. Model-file provenance is recorded in the native bundle's model/source_manifest.csv.
 
-## tinyAM comparison limits
-
-The database record preserves the native fitted inputs and outputs. The tinyAM translation is a separate approximation. In particular, it uses an IID abundance process and independent survey residuals, cannot reproduce SAM's Q4 age-correlated observation errors exactly, and represents supplied M as fixed. Survey catchability sharing, age plus groups, and all year-age input surfaces are retained where tinyAM can represent them.
+The database record preserves the native fitted inputs and outputs. The is a separate approximation. In particular, it uses an IID abundance process and independent survey residuals, cannot reproduce SAM's Q4 age-correlated observation errors exactly, and represents supplied M as fixed.
 
 ## Discovery inventory screening
 

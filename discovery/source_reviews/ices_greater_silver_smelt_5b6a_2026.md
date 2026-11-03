@@ -49,7 +49,7 @@ survey.dat, but that raw file is absent from the pinned public repository.
 The published survey table does not identify the measurement unit, and the
 numeric survey file is not public. Exact annual survey timing fractions
 therefore remain unresolved and must be checked during source curation before
-a tinyAM translation.
+a.
 
 ## Decision
 

@@ -26,7 +26,3 @@ The model's catch likelihood shares one observation variance over ages 2–9 and
 Recruitment is age 1. The N process gives age 1 its own variance key and shares another key over ages 2–10. SAM estimates F for ages 2–10, with ages 7–9 sharing one latent state and an AR(1) correlation across fitted age states. The F process variance is separate for age 2 and shared for ages 3–10. Fbar is the arithmetic mean over ages 3–7. Natural mortality is fixed at 0.2 per year at all ages and years. Annual stock, catch, landings, and discard weights, maturity, landings fractions, and spawning-time mortality fractions are retained as supplied. The pre-spawning fractions for F and M are zero.
 
 SAM SSB is reproduced by `sum(N * stockMeanWeight * maturity)` in tonnes, total biomass by `sum(N * stockMeanWeight)`, and Fbar by averaging F over ages 3–7. Recruitment equals beginning-of-year N at age 1. These checks match the native SAM reporting tables over every fitted year. Total abundance is also stored as a derived source output by summing the official N-at-age surface over ages 1–10+; no uncertainty is assigned to this derived total.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_cod_faroe_plateau_2025.md). They do not determine source completeness or official run selection.

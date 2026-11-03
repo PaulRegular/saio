@@ -66,7 +66,7 @@ source set. The completed 2023 assessment does not use catch-at-age, fishery
 age compositions, survey age compositions or an age-specific abundance index.
 Its sparse survey length-at-age samples are used for growth, not as population
 age-composition observations. No canonical stock, assessment, input or output
-records were added, and no tinyAM translation was attempted.
+records were added was attempted.
 
 The reviewed source files are cached locally in the gitignored directory
 `source_cache/discovery_noaa_bsai_alaska_skate_2026/`; `sources.csv` records

@@ -94,8 +94,7 @@ No SEs or intervals have been inferred from these point estimates.
 
 ## Remaining source and translation gaps
 
-1. Numerical model weights and current maturity at ages 2–5 are unpublished.
-   The framework describes young-age biology but does not supply the complete
+1. Numerical model weights and current maturity at ages 2–5 are unpublished. The framework describes young-age biology but does not supply the complete
    current numerical vector. The limited fit therefore starts at age 6 and
    cannot reproduce the full age-2+ population model.
 2. Table 6.19 contains aggregate deep-pelagic survey comparisons and means,
@@ -105,9 +104,7 @@ No SEs or intervals have been inferred from these point estimates.
    into the two source fleet likelihoods must be recovered for a closer
    source-faithful translation; the current approximation uses total catch once.
 4. Current production observation selection, variance settings and the full
-   native configuration have not been recovered. The source's published
-   survey-selectivity shape is represented by an estimated log-linear age
-   trend in tinyAM. Survey coverage and species-identification qualifications
+   native configuration have not been recovered. Survey coverage and species-identification qualifications
    in the source still apply.
 5. Aggregated 19+ reporting does not recover the source's explicit older-age
    state and biological surfaces. Native SSB is retained; no claim is made that
@@ -117,7 +114,3 @@ The partial import supports a restricted, converged age-6+ approximation and
 dashboard, not a source-faithful age-2+ replication. The source completeness
 statuses remain partial, and the substantial F and SSB scale differences
 should remain visible in any use of this comparison.
-
-## Downstream modelling
-
-[tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ck_ices_afwg_mentella_deep_1_2.md) hold model choices and fitting results.

@@ -25,7 +25,7 @@ The assessment uses quarterly time steps, five model areas, and 40 quarterly age
 
 **Eligible for source curation.** The detailed run provides the age-length observations, length compositions, aggregate CPUE, biological surfaces and age-specific fitted outputs needed to assess a documented approximation. Catch-at-age is not a direct likelihood input: any age-composition reconstruction must retain the sampled-strata limits and visible pooling assumptions. The assessment's 2026 advice review is pending at SC23, so the outputs must not be presented as already adopted management advice.
 
-This is a discovery screen only. It does not select the stock for a later import batch, create canonical records, or establish that tinyAM can reproduce the MFCL model.
+This is a discovery screen only.
 
 ## Sources and cache
 

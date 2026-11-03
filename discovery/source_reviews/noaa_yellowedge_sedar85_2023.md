@@ -1,6 +1,6 @@
 # NOAA Yellowedge Grouper inventory unit: SEDAR 85
 
-Reviewed 2026-10-30. NOAA Stock SMART row 10323 identifies the Gulf of Mexico management unit for *Hyporthodus flavolimbatus* (listed under the older *Epinephelus flavolimbatus* name). No matching tinyAM canonical stock record was found. The assessment treats eastern and western Gulf areas as model subregions within one management unit.
+Reviewed 2026-10-30. NOAA Stock SMART row 10323 identifies the Gulf of Mexico management unit for *Hyporthodus flavolimbatus* (listed under the older *Epinephelus flavolimbatus* name). The assessment treats eastern and western Gulf areas as model subregions within one management unit.
 
 The latest official fitted assessment located is the SEDAR 85 operational assessment, completed in November 2023 using data through 2021. The Gulf SSC reviewed it in February 2024. The 2024 executive summary and additional projections derive advice and projection scenarios from that fitted assessment; they are not a new population-model fit. The SEDAR assessment report describes an age-structured Stock Synthesis model with four commercial fleets (vertical line and longline, each divided into east and west Gulf areas), annual age compositions, aggregate CPUE and bottom-longline abundance indices, and age-based biology.
 

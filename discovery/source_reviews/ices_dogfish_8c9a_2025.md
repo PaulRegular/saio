@@ -30,8 +30,7 @@ recruitment series.
 This unit is therefore **ineligible for the age-disaggregated assessment
 set** on the production-assessment evidence reviewed. The finding concerns
 the assessment's inputs and outputs; it does not establish that age samples
-are absent from national biological sampling. No canonical numerical data or
-tinyAM translation were added.
+are absent from national biological sampling.
 
 ## Sources
 
@@ -39,5 +38,4 @@ tinyAM translation were added.
 - [ICES Advice and Scenarios Database, stock advice 3507](https://asd.ices.dk/viewAdvice/3507), the prior 2023 advice entry; ICES states that fishing-opportunity advice was not requested.
 
 The ignored `sources.csv` manifest records the cached report's retrieval date,
-URL, revision, byte size and SHA-256 checksum. No canonical database record or
-tinyAM translation was created.
+URL, revision, byte size and SHA-256 checksum.

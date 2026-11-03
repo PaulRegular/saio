@@ -38,10 +38,7 @@ and was not represented as locally cached.
 ## Screening decision
 
 This is a distinct, current U.S. indicator-stock unit, not a match to the DFO
-coho candidates or the separate NOAA West Coast coho management units. It is
-screened **ineligible** for the multi-age comparison set: the latest accepted run
-does not provide the age-indexed assessment inputs and population outputs needed
-for a tinyAM comparison. The existence of age samples in the research program
+coho candidates or the separate NOAA West Coast coho management units. The existence of age samples in the research program
 does not by itself make this assessment age structured. No canonical numerical
 assessment data were added.
 

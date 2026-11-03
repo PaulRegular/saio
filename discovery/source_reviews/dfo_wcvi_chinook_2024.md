@@ -1,6 +1,6 @@
 # West Coast of Vancouver Island natural-origin Chinook (2024 assessment)
 
-The DFO Pacific inventory row `DFO:Pacific:Chinook Salmon - West Coast of Vancouver Island` identifies the natural-origin WCVI Chinook Stock Management Unit (SMU), *Oncorhynchus tshawytscha*. No matching canonical tinyAM stock is present. The latest detailed public assessment located is the 2024 assessment, documented in Research Document 2026/020 (published April 2026); the earlier 2025 Science Response 2025/021 is also retained locally.
+The DFO Pacific inventory row `DFO:Pacific:Chinook Salmon - West Coast of Vancouver Island` identifies the natural-origin WCVI Chinook Stock Management Unit (SMU), *Oncorhynchus tshawytscha*. The latest detailed public assessment located is the 2024 assessment, documented in Research Document 2026/020 (published April 2026); the earlier 2025 Science Response 2025/021 is also retained locally.
 
 The detailed report describes three Conservation Units within the SMU and a mixture of enumeration, catch, escapement, and biological sampling programmes. Age, sex, origin, stock, and body-size data are collected from fisheries, hatcheries, and rivers. The run-reconstruction approach combines catch and escapement totals with time- and area-specific biological samples to apportion fish among ages and populations. Supporting data and R code are published in the assessment repository.
 

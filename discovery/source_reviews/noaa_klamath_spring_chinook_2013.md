@@ -32,8 +32,7 @@ harvest, and run-size estimates from 1980 through 2023, separated into grilse,
 adults, and totals. These broad bins are not a full age composition or
 numbers-at-age series and do not provide an age-specific abundance index for the
 NOAA assessment. The 2013 review also states that ocean exploitation-rate
-information was unavailable for spring-run fish; it does not provide the
-age-specific fishing or natural mortality inputs required by tinyAM.
+information was unavailable for spring-run fish.
 
 No matching stock-specific annual weight-at-age or maturity-at-age inputs were
 found in the reviewed official assessment sources. No age-specific N, F, M, or
@@ -43,13 +42,10 @@ inventing inputs.
 
 ## Decision
 
-Classify NOAA:10610 as **ineligible** for the age-structured candidate set.
-The reviewed official sources do not expose the full age-specific inputs,
-biology, mortality assumptions, or fitted age-specific outputs required for a
-tinyAM translation. This screening result does not claim that no age observations
+Classify NOAA:10610 as **ineligible** for the age-structured candidate set. This screening result does not claim that no age observations
 exist anywhere; it records that they were not recovered as inputs to the
 identified official assessment. No stock, assessment, input, or output records
-were added to the canonical database, and no tinyAM translation was attempted.
+were added to the canonical database was attempted.
 
 ## Sources
 

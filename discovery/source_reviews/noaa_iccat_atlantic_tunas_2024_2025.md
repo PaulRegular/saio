@@ -1,6 +1,6 @@
 # NOAA inventory rows for Atlantic yellowfin and bigeye tuna (ICCAT assessments)
 
-Reviewed 2026-10-30. NOAA Stock SMART rows 10166 (Atlantic yellowfin) and 10169 (Atlantic bigeye) are inventory records for single Atlantic-wide ICCAT stock units. They are not separate U.S. regional assessment units. No existing canonical tinyAM stock record matches either unit.
+Reviewed 2026-10-30. NOAA Stock SMART rows 10166 (Atlantic yellowfin) and 10169 (Atlantic bigeye) are inventory records for single Atlantic-wide ICCAT stock units. They are not separate U.S. regional assessment units.
 
 ## Atlantic yellowfin tuna
 

@@ -124,7 +124,7 @@ existing stock row.
 
 ## Translation and comparison limit
 
-No tinyAM recipe or fit is claimed. Current catch-at-age, annual stock-weight
+Current catch-at-age, annual stock-weight
 and maturity surfaces and a verified numerical M specification have not been
 recovered for a source-faithful age-structured translation. Original raised
 catch-length data are also absent, and length frequencies cannot be allocated

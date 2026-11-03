@@ -44,10 +44,7 @@ the 2026 advice; do not treat the 2024 report as a detailed report for the
   SSB trajectories. The acoustic age series are survey indices, not fitted
   population states.
 
-This is a distinct DFO unit, but it is ineligible for the age-structured
-tinyAM comparison set: the current official assessment is index-based and does
-not provide comparable age-structured population outputs or age-specific
-mortality assumptions. This screening decision does not imply that the
+This screening decision does not imply that the
 underlying acoustic or commercial biological data are unavailable for other
 uses.
 

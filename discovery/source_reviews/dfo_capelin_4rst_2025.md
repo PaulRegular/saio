@@ -39,8 +39,7 @@ under `source_cache/discovery_dfo_capelin_4rst/`. The 2026/014 advisory report
 was reviewed through the official publication viewer; local direct-download
 attempts returned HTML rather than the PDF.
 
-This distinct stock is ineligible for the age-structured tinyAM comparison set
-because the latest assessment has no age data and is index-based. This does not
+This does not
 mean its reported aggregate indices are unavailable for future source
 curation.
 

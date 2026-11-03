@@ -1,6 +1,5 @@
 # North Sea Norway pout: 2026 source review
 
-
 Stock: Norway pout in ICES Subarea 4 and Division 3.a (`nop.27.3a4`).
 
 ## Assessment selected
@@ -13,7 +12,7 @@ The cached fitted run matches the reported final model settings and the 2012 Q4 
 
 Quarterly fitted population states span 1984 Q1–2025 Q4. Catch and survey observations extend through 2025 Q3, although individual survey series have different terminal years.
 
-The official fitted summary reports optimizer convergence code 0, objective 1547.746 and the message "relative convergence (4)". These are native SESAM diagnostics, not diagnostics from the tinyAM translation.
+The official fitted summary reports optimizer convergence code 0, objective 1547.746 and the message "relative convergence (4)". These are native SESAM diagnostics, not diagnostics from the.
 
 The cached fit also contains 1,092 fitted observation predictions in
 `fit$rep$predObs`, aligned row-for-row with the 1,092 observations in
@@ -58,7 +57,7 @@ Commercial catch-at-age is reported quarterly in millions of fish, covering ages
 
 Catch observations extend through 2025 Q3. The fourth quarter of 2025 is unavailable in the selected fitted data.
 
-The tinyAM translation therefore ends in 2024, the last year with complete quarterly catch observations available for annual aggregation.
+The therefore ends in 2024, the last year with complete quarterly catch observations available for annual aggregation.
 
 ### Survey observations
 
@@ -88,8 +87,6 @@ The IBTS other-countries Q3 series also contains an observation combining ages 2
 
 This is retained in the canonical database as an age-group index, not incorrectly assigned to age 2 alone.
 
-tinyAM does not currently implement a grouped-age index likelihood, so this observation is excluded from the translation fit.
-
 These unresolved details keep the input completeness status partial.
 
 ## Official SESAM model structure
@@ -103,8 +100,6 @@ Recruitment enters at age 0 in Q3, rather than at the beginning of the calendar 
 Population-process variance is shared across ages 0–2 and is separate for age 3+.
 
 The age-3 state represents the plus group.
-
-This structure requires quarterly survival and recruitment accounting that is not reproduced exactly by the annual tinyAM model.
 
 ### Fishing mortality
 
@@ -190,17 +185,7 @@ Thirteen native catchability point estimates are also recorded from `fit$pl$logQ
 
 ## Remaining translation limitations
 
-The principal differences between the official SESAM benchmark and the revised tinyAM translation are:
-
-- Quarterly SESAM population dynamics are reduced to annual transitions.
-- Recruitment enters in Q3 in the source but is represented in an annual age-0 state in tinyAM.
-- The source N-process variance grouping is only partly reproduced because recruitment uses a separate process.
-- The source F process is quarterly, uses two innovation-variance groups and includes large-increment adjustments.
-- The translation fits annualized catch rather than quarterly catch observations.
-- A grouped age-2–3+ survey index is omitted from the tinyAM likelihood.
-- One reported 2025 survey-series endpoint differs between the benchmark text and the selected fitted object.
-- Annual-equivalent biological inputs depend on the documented quarterly exposure conventions.
-- The annual abundance comparison cannot include Q1 age-0 N on a like-for-like basis.
+The principal differences between the official SESAM benchmark and the revised are:
 
 These differences are limitations of the simplified model, not errors in the official assessment.
 
@@ -221,7 +206,3 @@ Earlier local Windows retrieval problems with the public benchmark PDF did not p
 ## Record summary
 
 The canonical record represents the official February 2026 SESAM benchmark for North Sea Norway pout, with quarterly fitted states extending from 1984 through 2025
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_norway_pout_north_sea.md). They do not determine source completeness or official run selection.

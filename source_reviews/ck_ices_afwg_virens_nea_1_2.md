@@ -76,7 +76,3 @@ The common-definition SSB comparison uses the same official N, weight and
 maturity surfaces and the start-of-year convention implied by the zero
 pre-spawning mortality fractions. Dashboard comparisons retain native
 aggregates and label these common-definition summaries separately.
-
-## Downstream modelling
-
-[tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ck_ices_afwg_virens_nea_1_2.md) hold model choices and fitting results.

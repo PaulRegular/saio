@@ -69,9 +69,7 @@ and discard series; fixed M-at-age inputs for ages 0–5 and the age-6+ value;
 2026 SSB, age-0 recruitment, and Fbar outputs; and a small set of
 model-definition and reference-point assumptions. Inputs, assumptions, and
 outputs remain marked partial. This is a source-curation record, not a
-translation-ready age-structured data set. No tinyAM fit is attempted until
-the database batch is curated and the missing age-specific inputs are
-recovered or documented as unavailable.
+translation-ready age-structured data set.
 
 ## Sources and cached files
 

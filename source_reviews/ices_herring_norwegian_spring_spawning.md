@@ -38,12 +38,10 @@ timing is 0.13 for NASF, 0.42 for IESNS Barents, 0.38 for IESNS Norwegian Sea,
 and 0.75 for BESS. Exact fitted fleet settings were not recovered.
 
 Relative standard errors for catch and the tabulated surveys are stored as
-source precision information; tinyAM estimates its own observation errors.
-RFID relative errors are tabulated, but its numerical index estimates are only
+source precision information. RFID relative errors are tabulated, but its numerical index estimates are only
 shown in a figure and are not transcribed. The native SAM fit and exact process,
 q-sharing, and uncertainty settings were not recovered.
 
-For a tinyAM comparison, source ages above age 12 are combined into age 12+.
 The published age-12 stock weight and maturity are used as proxies for the
 12+ group because no abundance-by-single-age surface above age 12 supports a
 defensible weighted biological average. Maturity cohorts are mapped to
@@ -66,9 +64,3 @@ folder:
 
 The 2025 record remains available as the preceding detailed assessment. Its
 benchmark is [WKBMACNSSH 2025](https://doi.org/10.17895/ices.pub.29279615).
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_herring_norwegian_spring_spawning.md). They do not determine source completeness or official run selection.
-
-The separate [2025 source notes](ices_herring_norwegian_spring_2025.md) retain the earlier run's coverage, survey definitions and source trail.

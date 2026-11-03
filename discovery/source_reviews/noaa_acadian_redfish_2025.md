@@ -4,7 +4,7 @@
 - **Official assessment:** 2025 Management Track, Stock SMART assessment 14070
 - **Run:** Run 5, WHAM 2.1.0.9002, commit `47506172e9a55376137501608e645ddae8a574e9`
 - **Fitted years:** 1963–2024
-- **Status:** Source inputs curated; outputs partial; no tinyAM translation started.
+- **Status:** Source inputs curated; outputs partial; started.
 
 ## Assessment identity and sources
 
@@ -91,8 +91,6 @@ reported in the machine-readable tables.
 - A fitted model object was not recovered. The pinned model code, native inputs,
   fitted age tables, and parameter table are available.
 - Full uncertainty for annual N, F, total abundance, recruitment, and SSB is not
-  available in the extracted tables. SSB and total abundance uncertainty are
-  not reconstructed.
-- No tinyAM settings or fit have been produced yet. Any future translation
+  available in the extracted tables. Any future translation
   should compare the source scale, age grid, survey timing, and the spawning
   biomass definition explicitly.

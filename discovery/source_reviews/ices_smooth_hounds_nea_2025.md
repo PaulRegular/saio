@@ -23,7 +23,7 @@ in each of 2026 and 2027. Those aggregate indicators and advice do not provide
 N-at-age, F-at-age, M-at-age, SSB, or recruitment. The unit is **ineligible
 for the age-disaggregated inventory** on the current-assessment evidence
 reviewed. The record may still be relevant to a future non-age-structured
-database collection. No canonical numerical records or tinyAM translation
+database collection. No canonical numerical records
 were added.
 
 ## Sources

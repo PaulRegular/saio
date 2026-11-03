@@ -41,8 +41,7 @@ meet the age-disaggregated-input requirement for this inventory.
 - **Outputs:** the accepted JABBA model reports annual aggregate exploitable
   biomass, harvest rate, status, reference points and projections. The
   supplemental Opakapaka model reports aggregate biomass, harvest rate and
-  status; the report does not supply the observed age inputs needed for a
-  defensible tinyAM age-based fit.
+  status.
 
 The case is screened **ineligible** for the age-disaggregated assessment set.
 This decision is about the observed likelihood data, not whether the report

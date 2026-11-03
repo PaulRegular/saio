@@ -14,7 +14,7 @@ The source does not provide catch numbers-at-age or age compositions from which 
 
 The 2022 report provides aggregate time-series figures through 2021 for SSB, fully selected F, age-1 recruitment, catch, and survey biomass indices. It reports 2021 SSB of 690 mt and fully selected F of 0.004. The report says approximate 90% lognormal intervals are not shown because MCMC is not fully developed for SCALE. It does not provide N-at-age or F-at-age surfaces. These aggregate outputs are useful for general source review but do not compensate for the missing age-disaggregated inputs.
 
-Screening result: **new U.S. assessment unit; ineligible for the age-disaggregated candidate set**. The conclusion is about the observation structure available for tinyAM screening, not the assessment's validity for U.S. management. No canonical stock, assessment, input, or output data were added.
+Screening result: **new U.S. assessment unit; ineligible for the age-disaggregated candidate set**. management. No canonical stock, assessment, input, or output data were added.
 
 The 2022 assessment PDF and Fall 2022 panel report are cached under the gitignored `source_cache/discovery_noaa_atlantic_wolffish_2022/`. The NOAA Institutional Repository page and source text for the 2009 status review were accessible, but its direct PDF download returned Access Denied; that attempt and source URL are recorded in the cache manifest. NOAA Stock SMART metadata are available from the pinned snapshot cached under `source_cache/discovery_noaa_stocksmart/`.
 

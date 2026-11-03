@@ -2,7 +2,7 @@
 
 ## Stock identity and latest assessment
 
-NOAA Stock SMART ID 10457 is listed as Shortspine Thornyhead - Gulf of Alaska (*Sebastolobus alascanus*). The official 2024 assessment is for the Gulf of Alaska thornyhead management complex, which includes shortspine (*S. alascanus*) and longspine (*S. altivelis*). The Tier 5 assessment uses shortspine as the representative species and does not fit a species-specific age-structured model. No matching canonical tinyAM record or other inventory identity was found. The candidate is provisionally new as a management unit, with the species-complex relationship noted explicitly.
+NOAA Stock SMART ID 10457 is listed as Shortspine Thornyhead - Gulf of Alaska (*Sebastolobus alascanus*). The official 2024 assessment is for the Gulf of Alaska thornyhead management complex, which includes shortspine (*S. alascanus*) and longspine (*S. altivelis*). The Tier 5 assessment uses shortspine as the representative species and does not fit a species-specific age-structured model. The candidate is provisionally new as a management unit, with the species-complex relationship noted explicitly.
 
 The latest detailed assessment is the November 2024 GOA SAFE chapter, using bottom-trawl biomass data through 2023 and longline relative-population-weight data through 2023. Models 22.a and 24.2 are compared; Model 24.2 is recommended for the updated biomass estimates. The source is cached locally at `source_cache/discovery_noaa_goa_thornyhead_2024/`; its ignored manifest records the retrieval date and SHA-256.
 

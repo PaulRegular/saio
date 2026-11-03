@@ -49,9 +49,7 @@ input tables, but direct PDF requests from this environment redirect to an
 archived-page notice. The local ignored source cache preserves the existing
 2024 HCR PDF and records the failed PDF downloads for Research Documents
 2026/025 and 2026/029, Science Response 2026/015, and Science Advisory Report
-2023/037. Those HTML notices are access records, not substitutes for the PDFs.
-The case is therefore a partial source import and is not ready for a tinyAM
-fit. Resume by obtaining the four official PDFs or corresponding run-matched
+2023/037. Those HTML notices are access records, not substitutes for the PDFs. Resume by obtaining the four official PDFs or corresponding run-matched
 data files, then transfer and validate the tabulated arrays.
 
 ## Sources

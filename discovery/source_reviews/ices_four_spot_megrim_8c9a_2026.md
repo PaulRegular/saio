@@ -44,7 +44,7 @@ the current assessment graph supplies comparable official outputs. The missing
 run-matched numerical catch and survey matrices and exact survey timing remain
 source follow-ups. Eligibility indicates that the assessment merits source
 curation; it does not mean every numerical matrix has already been recovered.
-No canonical database rows or tinyAM translation were added.
+No canonical database rows were added.
 
 ## Sources
 

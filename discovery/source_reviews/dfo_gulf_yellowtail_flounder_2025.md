@@ -30,7 +30,7 @@ Only the age-5+ terminal biomass and the recent aggregate F statement are import
 
 ## Translation status
 
-This assessment is not ready for a tinyAM fit. The official summary confirms suitable types of age-specific inputs, but the numerical series, plus-group definitions, weights, maturity, survey timing and exact likelihood settings remain unavailable. A later translation must wait for recoverable run-matched data or the detailed report PDF. It must preserve age-5+ biomass as a distinct reported metric and must not label it SSB.
+The official summary confirms suitable types of age-specific inputs, but the numerical series, plus-group definitions, weights, maturity, survey timing and exact likelihood settings remain unavailable. A later translation must wait for recoverable run-matched data or the detailed report PDF. It must preserve age-5+ biomass as a distinct reported metric and must not label it SSB.
 
 ## Sources
 

@@ -85,10 +85,7 @@ HAWG PDF is shared with the sandeel cache and identified in the manifest.
 ## Translation status
 
 The current rule has no estimated population N/F/M-at-age or recruitment
-surface. A tinyAM age-structured model would be a new assessment rather than a
-faithful translation of this rule, and there are no official population states
-for the requested comparison. No tinyAM fit or comparison dashboard is
-currently supported.
+surface.
 
 ## Sources
 

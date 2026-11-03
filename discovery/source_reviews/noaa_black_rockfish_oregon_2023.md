@@ -68,7 +68,7 @@ survey-abundance indices are not direct source observations; age compositions
 remain composition samples. The report's spawning-output measure is in eggs,
 not spawning biomass in tonnes. Weight and maturity surfaces are model-derived,
 not separately observed input tables. These differences must remain explicit
-if a later tinyAM translation is attempted.
+if a later is attempted.
 
 ## Sources and local cache
 
@@ -82,4 +82,4 @@ checksums, and the revision/archive identity.
 - [PFMC groundfish assessment documents](https://www.pcouncil.org/stock-assessments-star-reports-stat-reports-rebuilding-analyses-terms-of-reference/groundfish-stock-assessment-documents/)
 - [Stock Synthesis 3.30 manual](https://nmfs-ost.github.io/ss3-doc/SS330_User_Manual_release.html)
 
-No tinyAM translation or model fit was attempted as part of this source import.
+No or model fit was attempted as part of this source import.

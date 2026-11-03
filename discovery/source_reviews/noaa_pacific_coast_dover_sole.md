@@ -33,7 +33,7 @@ Female natural mortality is fixed at 0.108 per year. Male natural mortality is e
 
 The stock and assessment are recorded as new and current, with source inputs, assumptions, and outputs marked **partial**. The native files provide more detail than is expanded in the canonical assumptions table: selectivity, retention, catchability, likelihood weights, variance adjustments, and parameter activation remain available in the cached control and summary files but are not all transcribed parameter by parameter.
 
-The official assessment does not contain observed catch-at-age, a direct age-specific survey abundance index, observed stock weight-at-age, or observed maturity-at-age. A future tinyAM translation would need documented downstream reconstructions from catches/compositions and aggregate index/composition data, and would approximate the source model's two-sex, size-structured likelihood, conditional-age-at-length observations, ageing-error treatment, and fleet structure. The fitted N/F/M and biological surfaces are outputs and must not be reused as observations.
+The official assessment does not contain observed catch-at-age, a direct age-specific survey abundance index, observed stock weight-at-age, or observed maturity-at-age. A future would need documented downstream reconstructions from catches/compositions and aggregate index/composition data, and would approximate the source model's two-sex, size-structured likelihood, conditional-age-at-length observations, ageing-error treatment, and fleet structure. The fitted N/F/M and biological surfaces are outputs and must not be reused as observations.
 
 ## Sources
 

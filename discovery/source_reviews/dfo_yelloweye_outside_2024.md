@@ -1,6 +1,6 @@
 # Outside Yelloweye Rockfish
 
-Reviewed 2026-10-29. DFO's Pacific inventory entry corresponds to the outside Yelloweye Rockfish population in British Columbia. It is a distinct current stock unit from Inside Yelloweye Rockfish. No canonical tinyAM stock record was found.
+Reviewed 2026-10-29. DFO's Pacific inventory entry corresponds to the outside Yelloweye Rockfish population in British Columbia. It is a distinct current stock unit from Inside Yelloweye Rockfish.
 
 ## Latest assessment and accessible detail
 

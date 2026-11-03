@@ -76,19 +76,11 @@ The native temperature vector is recorded by BTS year. Its unit is not stated in
 The official report's historical outputs are retained in their native units:
 N-at-age (ages 1–9 and a reported 10+ group), age-1 recruitment, female SSB,
 and one age-3+ biomass total for each year from 1964–2024. The 10+ report row
-is not age 10. In comparisons it maps to the sum of tinyAM ages 10–15, while
-the tinyAM model plus group remains age 15. Total abundance is calculated
-from all official N groups and compared with tinyAM abundance across ages
-1–15. Recruitment is matched at age 1.
+is not age 10. Recruitment is matched at age 1.
 
 SAFE Table 26's age-3+ biomass is stored as biomass_by_age_group, with age
-blank and age_group set to 3+. It is compared with tinyAM biomass summed over
-ages 3–15. Female SSB is available for both fits over ages 1–15. The current
-tinyAM translation sets `obs$maturity$spawn_time = 0.25` and scales supplied
-maturity by 0.5, matching the source's female spawning-time biomass convention.
-The SSB comparison is now marked `matched` in the sense of its biomass
-definition, **not** as a claim of identical fitted SSB estimates or likelihoods.
-Printed CV fields are not converted to standard errors; uncertainty is
+blank and age_group set to 3+. Female SSB is available for both fits over ages 1–15. The SSB comparison is now marked `matched` in the sense of its biomass
+definition, **not** as a claim of identical fitted SSB estimates or likelihoods. Printed CV fields are not converted to standard errors; uncertainty is
 unavailable for these source outputs.
 
 Annual official F-at-age was reconstructed from the fitted parameter file
@@ -106,7 +98,3 @@ from figures. F uncertainty is unavailable. No Fbar comparison is reported
 because a common age range and weighting definition have not been established.
 The record remains partial because other official inputs, assumptions and
 uncertainty are not fully represented.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/afsc_pollock_ebs.md). They do not determine source completeness or official run selection.

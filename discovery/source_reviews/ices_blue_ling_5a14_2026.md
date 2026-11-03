@@ -24,7 +24,7 @@ The report states that there is no reliable age-composition data and no reliable
 weight-at-age data for blue ling. It also states that stock maturity-at-age and
 stock weight-at-age are unavailable because of difficulties in ageing. The
 assessment therefore does not provide the age-disaggregated observations and
-biological inputs needed for a defensible tinyAM translation.
+biological inputs needed for a defensible.
 
 ## Official outputs
 
@@ -38,9 +38,7 @@ Advice record 7206 recommends 1,898 tonnes for the 2026/2027 fishing year.
 This is a distinct, new candidate and is **ineligible for the age-disaggregated
 set**. The assessment is age-length based, but its public observations are
 length distributions and length-disaggregated survey indices; reliable
-age-composition, weight-at-age, and maturity-at-age data are not available. No
-canonical assessment, input, or output rows have been added, and no tinyAM
-translation has been attempted.
+age-composition, weight-at-age, and maturity-at-age data are not available.
 
 Cached sources are gitignored. URLs, revision descriptions, retrieval date,
 sizes, and SHA-256 checksums are in

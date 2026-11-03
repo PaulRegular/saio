@@ -32,16 +32,12 @@ historical run for this separate 7.j–k catalogue record only.
 ## Recovered historical inputs and outputs
 
 The 2019 report provides landings numbers and weights at ages 2–16+ for
-1993–2018, an Irish VMS commercial index and the fixed M and maturity ogive.
-The XSA combined ages 10+ and used index ages 3–9 in 2006–2018. The original
-age tables are preserved without assuming how the 10+ weights were computed.
-Weights are in kg, as labelled in Figure 33.5. The landings table does not
+1993–2018, an Irish VMS commercial index and the fixed M and maturity ogive. The XSA combined ages 10+ and used index ages 3–9 in 2006–2018. The original
+age tables are preserved without assuming how the 10+ weights were computed. Weights are in kg, as labelled in Figure 33.5. The landings table does not
 label its numbers scale. Multiplying numbers by weights gives approximately
 246 tonnes in 1993, matching the reported 246 tonnes if the numbers are in
 thousands. But the same calculation gives approximately 296 tonnes for 1999,
-while the reported total is 200 tonnes. Until the discrepancy and number
-scale are resolved, the table is retained on its reported, unspecified scale
-and must not be silently converted into tinyAM observations.
+while the reported total is 200 tonnes.
 
 The source reports annual SSB, recruitment and Fbar for 1993–2018 and N and
 F at age for 2009–2018. These are historical 7.j–k XSA values; 2019 advice

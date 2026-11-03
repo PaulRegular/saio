@@ -56,9 +56,7 @@ All four assessments use an aggregate spawning-biomass index. The assessment
 reports do not provide a survey age composition or an age-specific abundance
 index. Fishery and test-fishery age compositions are not survey compositions,
 so allocating the aggregate spawn index among ages would add an unsupported
-selectivity assumption. These regions are therefore ineligible for the current
-tinyAM age-indexed translation, even though their official assessment models
-and biological inputs are age structured. Keep source curation separate from
+selectivity assumption. Keep source curation separate from
 that translation blocker; do not manufacture an age-indexed survey series.
 
 Downloaded reference files and checksums are recorded in the gitignored

@@ -3,7 +3,7 @@
 Source review: 2026-10-19.
 Assessment record: `ices_cod_irish_sea_2026`.
 
-The source record is partial and is not fit-ready for a tinyAM translation.
+The source record is partial and is not fit-ready for a.
 
 ## Identity and official run
 
@@ -36,7 +36,3 @@ The source weight table has one missing cell (2019 age 0). No authoritative repl
 ## Discovery inventory screening
 
 The 2026 ICES inventory entry cod.27.7a matches this existing Division 7.a Irish Sea stock and is screened eligible for source curation. Age-based catch, survey, weight, maturity and fixed-M information plus aggregate official outputs are available from current report tables. Native SS3 data/control files and fitted age-specific N/F outputs remain unavailable; the exact likelihood is therefore not recoverable.
-
-## Downstream modelling
-
-[Translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_cod_irish_sea.md) document approximation choices and fitting results.

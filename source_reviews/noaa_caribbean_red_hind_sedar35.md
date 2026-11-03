@@ -39,15 +39,12 @@ annual weight-at-age and maturity-at-age inputs for such a model.
 ## Outputs and screening
 
 The report contains aggregate CPUE and survey indices, length-based mortality
-estimates, and per-recruit reference points. It does not report annual
-abundance-at-age, fishing mortality-at-age, estimated natural mortality-at-age,
-recruitment, or spawning-biomass series that could be compared with a
-tinyAM age-structured fit.
+estimates, and per-recruit reference points.
 
 This candidate is screened **ineligible** for the current age-disaggregated
 comparison set. The source assessment is not age structured and lacks the
 required age-specific observations and biological surfaces. No canonical stock,
-assessment, input, or output records and no tinyAM translation were added.
+assessment, input, or output records were added.
 
 ## Sources
 

@@ -36,4 +36,4 @@ Identity was checked against the official ICES stock codes, current assessment d
 - [ICES 2026 Standard Graphs source data for thornback ray, Division 8.c](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=25835).
 - [ICES 2026 Standard Graphs source data for thornback ray, Division 9.a](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=25858).
 
-The reviewed pages are cached locally under the gitignored `source_cache/discovery_ices_bay_biscay_elasmobranchs_2026/`. Its `sources.csv` manifest records URLs, retrieval date, record revision, file sizes, and SHA-256 checksums. No canonical data or tinyAM translation was added.
+The reviewed pages are cached locally under the gitignored `source_cache/discovery_ices_bay_biscay_elasmobranchs_2026/`. Its `sources.csv` manifest records URLs, retrieval date, record revision, file sizes, and SHA-256 checksums. No canonical data was added.

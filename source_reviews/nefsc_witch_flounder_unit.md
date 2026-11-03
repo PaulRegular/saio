@@ -50,7 +50,7 @@ status is not treated as an independently fitted assessment.
 The official empirical method does not provide fitted N-at-age, F-at-age,
 SSB or recruitment. Neither its aggregate biomass indicator nor a rejected
 or informational age-based model can serve as an official age-structured
-comparison. A tinyAM translation and dashboard are not supported by the
+comparison. A and dashboard are not supported by the
 recovered production assessment.
 
 The assessment, 2026 data update, 2016 benchmark draft and extraction text are

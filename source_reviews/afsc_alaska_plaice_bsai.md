@@ -56,7 +56,3 @@ their natural-scale marginal ADMB standard errors; no state uncertainty or
 combined-sex confidence intervals are invented. Completeness remains partial
 because the full covariance and some model-control details are not exported
 to the canonical tables.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/afsc_alaska_plaice_bsai.md). They do not determine source completeness or official run selection.

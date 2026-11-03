@@ -23,7 +23,7 @@ The 2023 report describes REMA as a random-effects model applied to biomass esti
 
 ## Decision
 
-Classify `NOAA:11005` as the distinct **Other skates** current stock unit and **ineligible** for age-structured source curation. Its catch and survey biomass are useful for the current management assessment but do not meet the database's age-disaggregated input requirement. Keep Big skate and Longnose skate as their own stock units under `NOAA:10727` and `NOAA:10730`. These three units share a SAFE chapter but are not regional variants or duplicate stock cases. No canonical stock, assessment, input, or output records were added, and no tinyAM translation was attempted.
+Classify `NOAA:11005` as the distinct **Other skates** current stock unit and **ineligible** for age-structured source curation. Its catch and survey biomass are useful for the current management assessment but do not meet the database's age-disaggregated input requirement. Keep Big skate and Longnose skate as their own stock units under `NOAA:10727` and `NOAA:10730`. These three units share a SAFE chapter but are not regional variants or duplicate stock cases. No canonical stock, assessment, input, or output records were added was attempted.
 
 ## Cached sources
 

@@ -28,16 +28,9 @@ inputs and fitted configuration used here.
   for ages 1-7+ from 1980-2025. Catch at ages 1 and 2 is missing through 2003;
   those unavailable cells are omitted from the input table, not treated as zero.
 - The model fits two tuning series. The French OTDEF Q2+3+4 commercial LPUE
-  index is aggregate, with one observation per year from 2002-2025. It is
-  retained as a relative biomass index on its native kg/hour scale, but is not
-  translated to tinyAM because tinyAM currently fits age-specific indices.
-- The combined Irish IGFS and French EVHOE Q4 VAST series is age-specific for
-  ages 1-3 over 2003-2025. Its model timing is 0.855. Table 7.6 also displays
+  index is aggregate, with one observation per year from 2002-2025. Its model timing is 0.855. Table 7.6 also displays
   age 4, but the final SAM object uses only ages 1-3. The report shows 0.000
-  for age 3 in 2025; SAM represents that log-scale observation as missing, so
-  it is omitted from the input table and from the tinyAM fit.
-- The SAM object supplies annual stock weights, catch weights, landings
-  weights, discard weights and maturity. The report identifies the numerical
+  for age 3 in 2025. The report identifies the numerical
   input tables as Tables 7.2-7.4. Missing discard-weight cells are omitted;
   reported zero values remain zero.
 - Natural mortality is fixed at 0.501, 0.330, 0.264, 0.233, 0.211, 0.211 and
@@ -53,7 +46,7 @@ inputs and fitted configuration used here.
   and ages 3-7; VAST uses one SD group and an age-correlated AR residual
   structure. Both fitted indices and catch use lognormal likelihoods.
 
-## Outputs and tinyAM translation
+## Outputs
 
 The database includes SAM N-at-age, F-at-age, SSB, total stock biomass,
 age-1 recruitment, Fbar and fitted catch/index predictions. The total-abundance
@@ -63,7 +56,7 @@ approximations from the conditional log-state uncertainty in the SAM fit
 object. SSB, total biomass, recruitment and Fbar retain the source 95%
 confidence limits.
 
-The tinyAM recipe fits 1980-2025 at ages 1-7+, using catch and VAST. It uses
+It uses
 source fixed M, source stock weights and maturity, a zero spawning time, three
 catch SD groups, age-specific q for VAST, one VAST SD group, an IID N process,
 random-walk recruitment and a correlated-random-walk F process. The aggregate
@@ -74,7 +67,3 @@ initial-state treatment are also simplified.
 ## Discovery inventory screening
 
 The ICES 2026 inventory entry cod.27.7e-k matches this existing canonical stock and is screened eligible. The run-matched source review and canonical validation test document the required age-based inputs, assumptions, survey timing and fitted outputs. This is an existing-stock match, not an additional stock unit.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_cod_celtic_sea_2026.md). They do not determine source completeness or official run selection.

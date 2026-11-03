@@ -1,6 +1,6 @@
 # NOAA Scamp inventory units: SEDAR 68OA
 
-Reviewed 2026-10-30. NOAA Stock SMART rows 10324 (Gulf of Mexico) and 10326 (South Atlantic) represent separate regional management units. SEDAR 68 operational assessments model Scamp (*Mycteroperca phenax*) jointly with Yellowmouth Grouper (*M. interstitialis*) because species identification in catches is uncertain. No canonical tinyAM stock record matches either taxon.
+Reviewed 2026-10-30. NOAA Stock SMART rows 10324 (Gulf of Mexico) and 10326 (South Atlantic) represent separate regional management units. SEDAR 68 operational assessments model Scamp (*Mycteroperca phenax*) jointly with Yellowmouth Grouper (*M. interstitialis*) because species identification in catches is uncertain.
 
 ## Gulf of Mexico unit
 

@@ -83,7 +83,3 @@ log-M innovations begin in 1972 and have a fixed SD of 0.075. The official
 assessment reports terminal M of 0.81 for ages 5–8 and 0.85 for ages 9+.
 
 The source models age-2 recruitment as lagged SSB times an AR1 recruitment rate.
-
-## Downstream modelling
-
-[Mortality and recruitment choices](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/dfo_cod_4t4vn.md) are maintained in tinyAM.

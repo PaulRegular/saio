@@ -28,7 +28,3 @@ The importer reads the published report tables and the final SAM tuning data in 
 - The report provides age-specific N and F point estimates for 1994-2025, age-3 recruitment, SSB, Fbar ages 4-8, total biomass, and q. Aggregate recruitment, SSB, Fbar and total-biomass tables include 95% limits; age-specific N and F do not have reported uncertainty intervals.
 
 Source assumptions record the SAM process configuration, q-sharing, observation variances, relative weights, SSB timing, and unresolved initial-state distribution. The assessment row is marked complete for inputs and outputs and partial for assumptions because the exact fitted object and initial-state integration could not be verified.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_cod_northern_coastal_2026.md). They do not determine source completeness or official run selection.

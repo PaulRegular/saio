@@ -66,7 +66,3 @@ recovered. Annual survey weights remain original survey inputs; they are not
 relabeled as native population weights. Input, assumption and output statuses
 remain partial. These gaps differ from confirmed fixed q, an absent length
 likelihood and deterministic older-age survival.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/afsc_pollock_ai.md). They do not determine source completeness or official run selection.

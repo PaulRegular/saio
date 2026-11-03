@@ -26,7 +26,7 @@ This is a conclusion about the production assessment's inputs and outputs; it
 does not establish that age samples do not exist outside the assessment.
 Age-specific weights, maturity, natural mortality, and survey timing are not
 assessment inputs for the reviewed category 3 index method. No canonical data
-or tinyAM translation were added.
+were added.
 
 The ICES advice PDF and Standard Graphs source page were retrieved on
 2026-10-30 and cached in

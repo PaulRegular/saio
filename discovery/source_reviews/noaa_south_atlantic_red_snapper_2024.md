@@ -69,7 +69,7 @@ preserve the native catch totals and compositions, keep the aggregate survey
 indices distinct from age compositions, and retain the egg-based spawning
 output definition. It should not label reconstructed values as direct observed
 catch-at-age or convert spawning output to biomass without source support. The
-candidate remains unimported and has no tinyAM translation in this discovery
+candidate remains unimported and has in this discovery
 screen.
 
 ## Sources

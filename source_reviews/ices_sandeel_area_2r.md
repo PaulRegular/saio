@@ -138,7 +138,3 @@ clarification changes notes only; numerical values and fit inputs are unchanged.
 - [Pinned production repository](https://github.com/ices-advice/2026_san.sa.2r/tree/7a77f3b7a2e2fc2cb6609bbe234f8de9b97dac3f).
 - [Pinned smsR](https://github.com/nissandjac/smsR/tree/a097011f2fff959c9a263e5f6acb49795b9a53ad), survival, observation, recruitment and reporting equations.
 - [2024 sandeel benchmark](https://doi.org/10.17895/ices.pub.21581151.v2).
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_sandeel_area_2r.md). They do not determine source completeness or official run selection.

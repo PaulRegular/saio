@@ -21,7 +21,7 @@ Run S60_BASE_18 modeled 1963–2014 with four fishery fleets. The model assumed 
 
 The database contains the four reported catch-at-age series (Tables A13, A16, A18 and A20), the available fleet catch biomass (Tables A22 and A25), annual catch-weighted weight-at-age (Table A24), the MAT3 maturity schedule, fixed M = 0.20 at ages 0-7+, N-at-age (Table A56), F-at-age (Table A57), SSB and age-0 recruitment (Table A55). The 2014 SSB and F 90% MCMC probability intervals are entered only where the report gives them. The report's age-specific outputs use a 7+ plus group. The 2015 report's explicit fixed maturity schedule for pre-1981 years is recorded as a reconstructed source input and labeled accordingly.
 
-Table A32 adds the NEFSC fall survey stratified mean numbers per tow at ages 0-8 for 1984-2014. The two-page table was recovered using the PDF's column positions because plain-text extraction drops blank age columns. Blank cells were recorded as zero; the age values reproduce each annual total within 0.05 fish per tow, allowing for printed rounding. Age 8 remains a source age and must be combined with age 7 when translating to the model's 7+ group. The report says HBB index lengths were calibrated to ALB equivalents from 2009 onward. The official report describes fall sampling in September-November; the tinyAM approximation uses 0.8 as the seasonal midpoint.
+Table A32 adds the NEFSC fall survey stratified mean numbers per tow at ages 0-8 for 1984-2014. The two-page table was recovered using the PDF's column positions because plain-text extraction drops blank age columns. Blank cells were recorded as zero; the age values reproduce each annual total within 0.05 fish per tow, allowing for printed rounding. Age 8 remains a source age and must be combined with age 7 when translating to the model's 7+ group. The report says HBB index lengths were calibrated to ALB equivalents from 2009 onward. The official report describes fall sampling in September-November.
 
 The final run omitted NEFSC spring, MADMF spring, RIDFW spring and fall, and VIMS ChesMMAP indices. Table A32 supplies one active NEFSC fall age-index series, but the remaining active survey streams, their aggregate indices and CV adjustments, and complete ASAP control settings have not yet been imported. Consequently the 2015 record remains partial for assumptions, inputs and outputs. No native S60_BASE_18 data/model archive was found in the available NOAA and SASI materials.
 
@@ -50,7 +50,3 @@ age compositions or model controls.
 The [NOAA archive snapshot](https://github.com/NOAA-EDAB/stocksmart/tree/664c4237e26520b260a090e1821a2cee5d1cdf07)
 is cached in `source_cache/nefsc_scup_2025/` with its revision and checksum in
 `stocksmart_manifest.csv`.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ck_nefsc_saw_chrysops_usatl.md). They do not determine source completeness or official run selection.

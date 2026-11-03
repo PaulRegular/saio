@@ -175,8 +175,6 @@ renderer configured resolves those environment-only dashboard failures.
 separately as above. Logs are retained beside the dashboard. The broader
 assessment-analysis sweep was not repeated for this milestone; its previously
 documented unrelated baseline failures are not claimed to be resolved.
-No tinyAM core mathematics/API, other stock specifications, shared aggregate
-tables or the user's readiness-table edits were changed.
 
 ## Yield reporting clarification
 
@@ -195,7 +193,3 @@ clarification changes notes only; numerical values and fit inputs are unchanged.
 - [Pinned production repository](https://github.com/ices-advice/2026_san.sa.3r/tree/93847fb928ebf02f995c503e67f52bc2dd1398cc).
 - [Declared smsR source](https://github.com/nissandjac/smsR/tree/a097011f2fff959c9a263e5f6acb49795b9a53ad).
 - [Sandeel benchmark, published 2024](https://doi.org/10.17895/ices.pub.21581151.v2).
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_sandeel_area_3r.md). They do not determine source completeness or official run selection.

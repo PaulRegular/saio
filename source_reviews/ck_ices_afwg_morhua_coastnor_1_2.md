@@ -55,7 +55,7 @@ survey timing, and detailed VPA configuration remain unresolved. The report
 also describes an alternative total-catch run including estimated recreational
 catches; those age-specific values are not imported as independent inputs to
 the commercial run. Their relationship to the conflicting summary needs further
-checking. A tinyAM translation may be possible as an approximation using the
+checking. A may be possible as an approximation using the
 age-specific observations, but comparison is limited by the unresolved official
 SSB and age-specific outputs; no fit or dashboard has been produced yet.
 

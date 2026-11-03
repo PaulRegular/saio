@@ -16,7 +16,7 @@ SEDAR 58 reports population, fishing-mortality, biomass, recruitment and referen
 
 ## Screening interpretation
 
-The source provides age-composition observations that are fitted in an age-structured model, total catch, an abundance index, age-specific biological inputs and official model outputs. It qualifies for future source curation. A tinyAM translation will need to preserve the distinction between general-recreational age compositions, pooled commercial length compositions and aggregate headboat CPUE; it should not imply that commercial catch-at-age was observed.
+The source provides age-composition observations that are fitted in an age-structured model, total catch, an abundance index, age-specific biological inputs and official model outputs. It qualifies for future source curation. A will need to preserve the distinction between general-recreational age compositions, pooled commercial length compositions and aggregate headboat CPUE; it should not imply that commercial catch-at-age was observed.
 
 ## Sources
 

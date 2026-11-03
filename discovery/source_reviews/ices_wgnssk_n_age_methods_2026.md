@@ -32,10 +32,8 @@ or annual N/F-at-age outputs. This unit is screened separately from
 
 ## Screening decision
 
-These are current assessment units, but their 2026 advised methods do not
-provide the age-disaggregated inputs needed for a defensible tinyAM population
-model. They are screened ineligible for that set. No canonical numerical
-records or tinyAM translations were added.
+They are screened ineligible for that set. No canonical numerical
+recordss were added.
 
 The report PDF, source URL, retrieval date, and checksum are cached in
 `source_cache/discovery_ices_witch_northsea_2026/sources.csv`.

@@ -8,7 +8,7 @@ Stock Synthesis assessment (assessment ID 11658, version 3.30.16.00) as the
 latest run, using data through 2020. The detailed report is titled for the
 California U.S. West Coast. It discusses North and South management complexes
 split at 40°10′ N; keep that assessment extent distinct from the broader
-Stock SMART label. No canonical tinyAM stock or assessment record was found.
+Stock SMART label.
 
 ## Assessment data and outputs
 
@@ -32,7 +32,7 @@ one aggregate survey index, and length compositions, with no age-composition
 likelihood. Retain the age-indexed model outputs as audit evidence; do not
 convert this assessment into a canonical age-data record.
 
-No tinyAM translation was attempted and no canonical database records were
+No canonical database records were
 added. The report and model archive provenance, retrieval date, sizes, and
 SHA-256 hashes are in
 `source_cache/discovery_noaa_squarespot_rockfish_pacific_2021/sources.csv`.

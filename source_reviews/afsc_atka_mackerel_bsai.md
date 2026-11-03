@@ -61,7 +61,3 @@ the adjacent 2022 comparison columns are excluded.
 Completeness remains partial because original unrounded inputs, full composition
 weights and state covariance were not recovered. This is distinct from the
 confirmed absence of a fitted length likelihood or a stochastic N process.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/afsc_atka_mackerel_bsai.md). They do not determine source completeness or official run selection.

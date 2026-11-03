@@ -11,9 +11,7 @@ mortality outputs distinguish females and males.
 ## Database decision
 
 The available official inputs and outputs remain under the canonical stock
-`afsc_arrowtooth_flounder_bsai`. Do not duplicate a sex-specific subset as a
-separate assessment or tinyAM fit. Associate any tinyAM comparison with the
-canonical stock; its source review records the remaining production-input
+`afsc_arrowtooth_flounder_bsai`. its source review records the remaining production-input
 gaps.
 
 ## Sources

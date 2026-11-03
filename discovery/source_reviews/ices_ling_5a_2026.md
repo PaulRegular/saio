@@ -44,7 +44,7 @@ Public sources document age-specific catches and survey indices, relevant
 weights and maturity, fixed M, survey timing, and comparable official outputs.
 It is not ready for numerical import: input values are mostly figure-based and
 catch age sampling has a documented gap. No canonical assessment, input, or
-output rows have been added, and no tinyAM translation has been attempted.
+output rows have been added has been attempted.
 
 Cached sources are gitignored. URLs, revision descriptions, retrieval date,
 sizes, and SHA-256 checksums are in

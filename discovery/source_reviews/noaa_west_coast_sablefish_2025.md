@@ -68,7 +68,7 @@ The canonical record is partial: catch numbers-at-age and standalone maturity
 proportions are unavailable, and the aggregate survey indices plus age
 compositions are not a directly observed age-specific abundance series. Fitted
 N/F/M surfaces are assessment outputs, not source observations. These limits
-must remain explicit in any later tinyAM translation.
+must remain explicit in any later.
 
 ## Sources and local cache
 

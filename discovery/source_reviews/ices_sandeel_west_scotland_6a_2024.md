@@ -31,7 +31,7 @@ This is a distinct new ICES unit, screened **ineligible** for the current
 age-disaggregated source-curation set. The basis is the current category-6
 advice and the absence of age-structured inputs and fitted population outputs
 in the reviewed assessment sources. No canonical stock, assessment, input,
-output, or tinyAM translation records were added.
+output were added.
 
 ## Sources
 

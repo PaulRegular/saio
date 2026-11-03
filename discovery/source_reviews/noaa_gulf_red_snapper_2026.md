@@ -54,8 +54,7 @@ age-structured production assessment, fleet catch totals, fishery
 age-at-length compositions, survey indices and compositions, age-based biology,
 and population outputs. The source record should preserve the assessment's
 native totals and conditional compositions; it should not fabricate
-catch-at-age or age-specific fitted outputs. Survey timing suitable for a
-tinyAM translation still needs to be established. The candidate is not part of
+catch-at-age or age-specific fitted outputs. The candidate is not part of
 a selected import batch, and no canonical numerical records were imported.
 
 ## Sources

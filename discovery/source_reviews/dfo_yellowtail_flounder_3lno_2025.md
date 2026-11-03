@@ -20,7 +20,7 @@ The 2025 report gives aggregate Bayesian posterior estimates and 95% credible in
 
 ## Screening decision
 
-This entry is screened **ineligible** for the age-disaggregated tinyAM candidate set. The current official assessment has no catch-at-age or age-specific survey index, and its available maturity and weight information is by length. The official 3LNO identity is distinct from the yellowtail units already in the database. No canonical assessment values were added because this inventory audit records discovery and screening only.
+The current official assessment has no catch-at-age or age-specific survey index, and its available maturity and weight information is by length. The official 3LNO identity is distinct from the yellowtail units already in the database. No canonical assessment values were added because this inventory audit records discovery and screening only.
 
 The 2025 assessment uses modified Campelen survey units, and its table of model inputs and report provides aggregate model results. These do not supply the age-disaggregated observations and biology required by the screening criteria. The report notes aging has not occurred since 2001, which does not establish that no historical age data exist; it does establish that a current age-disaggregated assessment was not used.
 

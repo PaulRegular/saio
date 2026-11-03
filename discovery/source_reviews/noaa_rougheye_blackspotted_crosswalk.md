@@ -62,7 +62,7 @@ are eligible for source curation. This does not select them for the later
 20-stock batch.
 
 Exact fractional-year timing for the GOA and BSAI surveys remains a follow-up
-before any tinyAM translation. The eligibility screen here concerns whether
+before any. The eligibility screen here concerns whether
 the current assessment has recoverable age-disaggregated inputs and comparable
 age-specific outputs; it does not certify translation readiness.
 

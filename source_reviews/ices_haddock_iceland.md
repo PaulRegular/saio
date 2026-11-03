@@ -1,6 +1,5 @@
 # Icelandic haddock (had.27.5a)
 
-
 ## Assessment record
 
 The 2025 benchmark is retained as a historical assessment record. The 2026 official assessment is now the current detailed record; see [the 2026 source review](ices_haddock_iceland_2026.md). The two runs retain separate inputs and outputs.
@@ -35,14 +34,7 @@ The official reference biomass represents fish measuring at least 45 cm and is d
 
 ## Remaining translation limitations
 
-The principal differences between the official assessment and the revised tinyAM translation are:
-
-- The exact official N and F process covariance and parameter-sharing structures have not been fully recovered.
-- tinyAM uses a simplified catch and survey observation likelihood.
-- Exact survey sampling fractions and calibrated survey-index units remain unavailable.
-- Native spawning-time SSB differs from the common-definition mature biomass used for comparison.
-- The official length-based reference biomass cannot be reproduced exactly from age-specific inputs.
-- Full age-specific uncertainty from the official assessment was not recovered.
+The principal differences between the official assessment and the revised are:
 
 These differences describe the limits of the translation rather than problems with the official SAM assessment.
 
@@ -59,12 +51,8 @@ The numerical MFRI table exports used for the 2025 record are cached under the g
 
 This historical record represents the 2025 benchmark SAM assessment for Icelandic haddock. The current detailed assessment is the separate 2026 run.
 
-The revised tinyAM translation fits 1979–2024, ages 1–12+, with random-walk recruitment, IID cohort-survival deviations, free initial abundance, correlated F random walks and fixed natural mortality.
+The revised fits 1979–2024, ages 1–12+, with random-walk recruitment, IID cohort-survival deviations, free initial abundance, correlated F random walks and fixed natural mortality.
 
 Catch and survey observations retain the source age structure and biological inputs, with simplified observation-error models and approximate survey timing.
 
 The translation is intended to test whether a compact age-structured state-space model can reproduce broad official population dynamics without duplicating every feature of the official SAM configuration.
-
-## Downstream modelling
-
-The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_haddock_iceland.md). They do not determine source completeness or official run selection.

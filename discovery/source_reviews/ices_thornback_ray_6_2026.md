@@ -10,8 +10,6 @@ The advice record identifies the assessment as Category 3. The advice limits
 landings to 51 tonnes in each year and states that corresponding catches
 cannot be quantified.
 
-## Inputs and outputs relevant to tinyAM
-
 ICES Standard Graphs and its associated XML describe the stock-size quantity
 as `B_index`, in kilograms per square kilometre. The annual series contains an
 aggregate biomass index with 95% intervals and reported landings in tonnes.
