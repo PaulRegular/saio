@@ -87,7 +87,7 @@ review <- list(
     'in the canonical stocks table. The 2026 WGNSSK report identifies the current advised',
     'method as a survey-based stock-size indicator using SURBAR relative SSB and the chr',
     'rule; it is not an age-structured population assessment with the age-specific inputs',
-    'required for tinyAM. Screen ineligible for the age-disaggregated set.'),
+    'Screen ineligible for the age-disaggregated set.'),
   notes = paste('The assessment has used the SURBAR-based DLS method since 2023. The report',
     'states that the stock will be benchmarked in 2026-2027, when other methods may be',
     'explored. This review applies to the current 2026 advised method only. The WGNSSK',

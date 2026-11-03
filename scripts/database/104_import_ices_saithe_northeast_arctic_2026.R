@@ -479,7 +479,7 @@ assumptions <- do.call(rbind, list(
   new_assumption("F", "Fbar_ages", "4-7", paste(source_ref_cfg, "$fbarRange")),
   new_assumption("M", "mortality_structure", "Fixed M=0.2 per year for ages 3-12; not estimated", "data/nm.dat; run/model.RData fit$data$natMor", "The numerical input is constant across years and age classes."),
   new_assumption("biology", "maturity_and_spawning", "Annual maturity-at-age at year start; no F or M is applied before spawning", "data/mo.dat, data/pf.dat, data/pm.dat; fit$data$propMat/propF/propM", "The source proportion-before-spawning arrays are zero."),
-  new_assumption("catch", "observation_likelihood", "Lognormal with one shared catch observation variance and a prediction-variance link", paste(source_ref_cfg, "$obsLikelihoodFlag, $keyVarObs, $predVarObsLink; stockassessment source obs.hpp"), "Relative observation weights are retained where supplied; the prediction-variance link is not represented by tinyAM."),
+  new_assumption("catch", "observation_likelihood", "Lognormal with one shared catch observation variance and a prediction-variance link", paste(source_ref_cfg, "$obsLikelihoodFlag, $keyVarObs, $predVarObsLink; stockassessment source obs.hpp"), "Relative observation weights are retained where supplied."),
   new_assumption("catch", "fleet", "One combined catch series (FLT1)", "data/cn.dat; run/model.RData fit$data$aux"),
   new_assumption("index", "surveys", "Two Norwegian acoustic series: FLT13 (1994-2001) and FLT14 (2002-2025)", "data/survey.dat; run/model.RData fit$data$aux"),
   new_assumption("index", "survey_timing", "0.8 for both survey series; source window 0.75-0.85", "data/survey.dat; run/model.RData fit$data$sampleTimes"),

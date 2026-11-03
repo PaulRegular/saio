@@ -182,7 +182,7 @@ if (length(weighted)) {
     sampling_time = sample_times[aux$fleet[weighted]],
     source_reference = paste0(model_url, "; fit$data$weight and fit$data$aux"),
     transformation = "Derived as 1/sqrt(native precision weight), matching the relative SD multiplier in the SAM lognormal likelihood.",
-    notes = "The multiplier applies to the estimated observation SD; observations with no native precision weight use a multiplier of 1 in tinyAM."
+    notes = "The multiplier applies to the estimated observation SD. Absence of a native precision weight is retained as missing source information."
   ))
 }
 
@@ -400,7 +400,7 @@ assumptions <- do.call(rbind, list(
   ),
   assumption(
     "F", "age_process_correlation", "AR(1) across ages", config_ref,
-    "corFlag=2; tinyAM does not reproduce this cross-age covariance."
+    ""
   ),
   assumption(
     "F", "age_state_sharing", "ages 0-6 have separate states; ages 7 and 8 share one F state", config_ref,

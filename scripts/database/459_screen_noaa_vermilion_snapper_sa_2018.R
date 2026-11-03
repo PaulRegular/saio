@@ -206,7 +206,7 @@ review <- list(
     'assessment schedule identify a future update; they do not replace SEDAR 55 outputs. The',
     'age-composition and landings inputs are suitable for a documented catch-at-age reconstruction,',
     'with official fleet units and weighting preserved. Spawning stock is in eggs. No canonical',
-    'data were imported and no tinyAM translation was attempted. The review files are cached in',
+    'data were imported was attempted. The review files are cached in',
     'the gitignored source_cache directory with retrieval dates and SHA-256 checksums.')
 )
 

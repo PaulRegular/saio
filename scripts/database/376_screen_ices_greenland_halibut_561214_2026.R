@@ -77,7 +77,7 @@ review <- list(
     'maturity-at-age series is not documented.'),
   mortality_evidence = 'Natural mortality is fixed at M = 0.15.',
   timing_evidence = paste('GADGET uses two equal within-year time steps. A single fractional-year',
-    'timing for a tinyAM annual index is not documented.'),
+    ''),
   output_evidence = paste('ICES 2026 source data report age-5 recruitment and F for ages 9-14,',
     'plus annual total biomass, SSB, catches, and uncertainty bounds. Annual N-at-age and',
     'F-at-age surfaces were not located.'),
@@ -95,7 +95,7 @@ review <- list(
     'adjacent Northeast Arctic and NAFO stocks. Current MFRI and ICES sources, retrieval',
     'date, revisions, sizes, and SHA-256 checksums are in',
     'source_cache/discovery_ices_greenland_halibut_2026/sources.csv. No canonical numerical',
-    'records or tinyAM translation were added.')
+    'records were added.')
 )
 
 is_initial <- register$match_status[row] == 'unreviewed' &&

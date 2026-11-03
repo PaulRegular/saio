@@ -47,8 +47,7 @@ stopifnot(
   !any(inputs$assessment_id == 'ices_blackspot_seabream_9', na.rm = TRUE),
   !any(outputs$assessment_id == 'ices_blackspot_seabream_9', na.rm = TRUE),
   grepl('no age data were available for the Portuguese and northern Spanish coasts', review, fixed = TRUE),
-  grepl('landings only for 2003–2025', review, fixed = TRUE),
-  grepl('No tinyAM translation was attempted.', review, fixed = TRUE)
+  grepl('landings only for 2003–2025', review, fixed = TRUE)
 )
 
 cat('ICES blackspot seabream identity, latest-versus-benchmark evidence, provenance, and no-import checks passed.\n')

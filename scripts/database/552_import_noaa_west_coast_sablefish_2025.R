@@ -266,7 +266,7 @@ for (i in seq_len(nrow(cpue))) {
       source_type = "native_model",
       source_reference = paste0(native_ref, "CPUE data; fleet ", code),
       notes = paste0("Aggregate survey biomass index retained on its native scale. Source month ",
-        month, "; tinyAM-style sampling-time fraction (month - 1) / 12 = ", timing, "."))
+        month, "", timing, "."))
     add_input(type = "index", measure = "log_index_sd", basis = "log_scale",
       survey = survey, season = month_name(month), year = cpue$year[i],
       year_basis = "calendar_year", value = cpue$se_log[i],
@@ -484,7 +484,7 @@ for (row in assumption_values) {
     source_reference = if (row$component == "outputs") {
       paste0(report_url, "; ", native_url)
     } else paste0(native_ref, "data/control/weight input; ", report_url),
-    notes = "Source values and scope are preserved; no tinyAM translation has been started.")
+    notes = "Source values and scope are preserved.")
 }
 for (code in names(index_names)) {
   rows <- cpue[as.character(as.integer(cpue$fleet)) == code, ]
@@ -625,7 +625,7 @@ if (!dry_run) {
   candidate$notes[candidate_row] <- paste(
     "Source files and checksums are cached under the gitignored",
     "discovery_noaa_sablefish_2025 directory. The report says SS3 3.30.24 while",
-    "the bundle identifies 3.30.23.1. No tinyAM translation has been started.")
+    "the bundle identifies 3.30.23.1. ")
   replace_candidate_register_row(candidate_path, candidate_row,
     candidate[candidate_row, , drop = FALSE], candidate_id)
 

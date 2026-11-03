@@ -102,7 +102,7 @@ review <- list(
   weights_evidence = paste('The model derives weights-at-age from internally estimated length-at-age and a specified weight-length relationship. The public TAF biology surface is a model-derived output, not an observed weight-at-age input.'),
   maturity_evidence = paste('Age-specific maturity and reproductive potential are computed internally from a maturity-at-length ogive, growth, and a body-size fecundity adjustment. The public age-specific biology surface is derived by the model, not an observed maturity-at-age input.'),
   mortality_evidence = paste('Natural mortality-at-age follows an inverse-length Lorenzen pattern with its asymptotic scale estimated internally and assumed invariant across time and region. The ensemble varies natural mortality and other structural assumptions.'),
-  timing_evidence = paste('The population model is quarterly from 1972 through 2024. The 10 CPUE index fisheries are aggregate relative-abundance series; no age-specific survey timing can be mapped into tinyAM.'),
+  timing_evidence = paste('The population model is quarterly from 1972 through 2024. The 10 CPUE index fisheries are aggregate relative-abundance series.'),
   output_evidence = paste('The pinned diagnostic TAF outputs provide annual recruitment, biomass and spawning biomass, N-at-age for ages 1-16 across eight regions, and annual F-at-age through 2024. These are fitted outputs; they do not supply the missing age-disaggregated observation inputs.'),
   detailed_source_url = paste(
     'https://meetings.wcpfc.int/node/26679',
@@ -112,7 +112,7 @@ review <- list(
     'https://github.com/PacificCommunity/ofp-sam-skj-2025-ensemble',
     sep = '; '),
   review_date = '2026-11-02',
-  decision_reason = paste('The 2025 assessment is the latest accepted production run and has public fitted outputs, but its observation likelihoods are catch, length frequency, aggregate CPUE, and tagging. It does not use observed age compositions or an age-specific abundance index. The assessment is internally age-structured, but that does not provide tinyAM-ready age-disaggregated observations; screen this unit as ineligible.'),
+  decision_reason = paste('The 2025 assessment is the latest accepted production run and has public fitted outputs, but its observation likelihoods are catch, length frequency, aggregate CPUE, and tagging. It does not use observed age compositions or an age-specific abundance index. screen this unit as ineligible.'),
   notes = paste('NOAA Stock SMART ID 11691 identifies the Western and Central Pacific skipjack management unit assessed by SPC for WCPFC. The NOAA inventory snapshot still lists the 2022 assessment through 2021; WCPFC accepted the 2025 assessment through 2024 as the latest run. Its 2025 diagnostic TAF archive is pinned to commit f33de3a9d6f3acb02a0717340c1cc325f89f2eb6 and cached with the official assessment report, background data-input report, acceptance record, and SHA-256 manifest in source_cache/discovery_noaa_wcpfc_skipjack_2025. The raw TAF CPUE file has one anomalous year/season row noted above. No canonical stock or numerical assessment records were added.')
 )
 

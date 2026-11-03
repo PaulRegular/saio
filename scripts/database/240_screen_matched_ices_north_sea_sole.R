@@ -31,7 +31,7 @@ x$mortality_evidence[i] <- paste0(
   'M is fixed by age using the reported Lorenzen formulation with exponent -0.288; it is not estimated.'
 )
 x$timing_evidence[i] <- paste0(
-  'Both surveys are Q3; tinyAM preparation uses 0.625 as a quarter-midpoint approximation.'
+  'Both surveys are Q3.'
 )
 x$output_evidence[i] <- paste0(
   'The report gives official N-at-age and F-at-age for 1957-2025; ICES SAG supplies recruitment, ',

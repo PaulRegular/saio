@@ -80,7 +80,7 @@ review <- data.frame(
   detailed_source_url = 'https://doi.org/10.17895/ices.advice.25019546; https://doi.org/10.17895/ices.pub.26935504',
   review_date = '2026-10-30',
   decision_reason = 'Ineligible for the age-disaggregated assessment set. The latest advice is Category 5 and explicitly states no assessment, with landings as input data. WGEF says there is no reliable survey trend and the beam-trawl survey is not used to provide advice; no age-specific population or mortality outputs are reported.',
-  notes = 'The 2024 advice covers 2025–2028 and remains the latest official advice listed for this unit in the 2026 ICES inventory. WGEF reports that blonde ray is patchily distributed in Division 7.e and identifies no reliable survey trend. No canonical records or tinyAM translation were added. Advice and WGEF sources are cached locally with source manifests.',
+  notes = 'The 2024 advice covers 2025–2028 and remains the latest official advice listed for this unit in the 2026 ICES inventory. WGEF reports that blonde ray is patchily distributed in Division 7.e and identifies no reliable survey trend. No canonical records were added. Advice and WGEF sources are cached locally with source manifests.',
   stringsAsFactors = FALSE,
   check.names = FALSE
 )

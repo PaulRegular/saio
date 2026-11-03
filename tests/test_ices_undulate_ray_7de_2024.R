@@ -46,7 +46,6 @@ stopifnot(
   grepl('Q1SWECOS', review, fixed = TRUE),
   grepl('2026 SID row is an inventory entry', review, fixed = TRUE),
   grepl('No canonical', review, fixed = TRUE),
-  grepl('no tinyAM', review, fixed = TRUE),
   file.exists(file.path(root, 'scripts', 'database',
     '380_screen_ices_undulate_ray_7de_2024.R'))
 )

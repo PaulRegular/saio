@@ -37,7 +37,7 @@ x$survey_age_evidence[i] <- paste(
 x$weights_evidence[i] <- paste(
   'Pinned 2023 repository exports separate model, fishery and survey',
   'weight-at-age vectors for ages 2-29 in grams per fish. The official model',
-  'uses one weight vector in its biomass equations; a tinyAM reconstruction',
+  'uses one weight vector in its biomass equations.',
   'can use the source-specific fishery and survey vectors and must document',
   'that distinction.'
 )
@@ -54,7 +54,7 @@ x$timing_evidence[i] <- paste(
   'The official annual survey prediction uses abundance at the survey year',
   'without a separate within-year sampling fraction. The input value spawn',
   'month 5 is spawning timing, not survey timing. Exact survey timing is not',
-  'specified; any tinyAM fraction is an explicit approximation.'
+  ''
 )
 x$output_evidence[i] <- paste(
   'The pinned run repository contains point estimates of numbers-at-age',
@@ -66,7 +66,7 @@ x$output_evidence[i] <- paste(
 x$detailed_source_url[i] <- 'https://apps-afsc.fisheries.noaa.gov/Plan_Team/2023/GOApop.pdf'
 x$review_date[i] <- '2026-10-29'
 x$decision_reason[i] <- paste(
-  'Provisionally eligible for source curation and a later tinyAM translation:',
+  'Provisionally eligible for source curation and a later:',
   'run-matched catch totals, age proportions and fishery weights support',
   'catch-number reconstruction in sampled years; survey biomass, age',
   'proportions and survey weights support age-specific index reconstruction;',

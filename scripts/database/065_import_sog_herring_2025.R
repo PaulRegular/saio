@@ -110,5 +110,5 @@ assessment <- pacific_database_row("assessments",assessment_id=id,stock_id=stock
   assessment_url=report,framework_url=report,data_url=reference,model_url=reference,
   repository_url="https://github.com/pbs-assess/herringfsar",
   assumptions_status="partial",inputs_status="partial",outputs_status="partial",
-  notes="Detailed public operating-model ensemble underpinning 2025 full MSE; 1951-2023 historical states. Interim DIM through 2025 reported separately, not mixed. No original survey age compositions or posterior ensemble N/F draws; aggregate spawning-biomass index currently unsupported by tinyAM observation model.")
+  notes="Detailed public operating-model ensemble underpinning 2025 full MSE; 1951-2023 historical states. Interim DIM through 2025 reported separately, not mixed. No original survey age compositions or posterior ensemble N/F draws.")
 append_pacific_case(stock,assessment,assumptions,do.call(rbind,inputs),do.call(rbind,outputs))

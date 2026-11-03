@@ -62,7 +62,7 @@ review <- list(
   detailed_source_url = 'https://doi.org/10.17895/ices.pub.30137623',
   review_date = '2026-10-30',
   decision_reason = paste('The latest 2025 WGEF report documents a converged continuous-time SPiCT surplus-production assessment using total catches and aggregate seasonal survey-biomass indices. It contains no catch-at-age, age-composition likelihood, or age-specific population outputs. The unit is ineligible for the age-disaggregated set.'),
-  notes = paste('WGEF reports the assessment used total catch (landings plus dead discards), two aggregate survey indices, and a length-derived fishing proxy; the reported relative biomass and fishing pressure are not SSB or F-at-age. The 2025 assessment informs advice for 2026-2027. No canonical numerical records or tinyAM translation were added. The report PDF is shared in source_cache/discovery_ices_dogfish_2025/sources.csv; its manifest revision includes section 15.9.5.'))
+  notes = paste('WGEF reports the assessment used total catch (landings plus dead discards), two aggregate survey indices, and a length-derived fishing proxy; the reported relative biomass and fishing pressure are not SSB or F-at-age. The 2025 assessment informs advice for 2026-2027. No canonical numerical records were added. The report PDF is shared in source_cache/discovery_ices_dogfish_2025/sources.csv; its manifest revision includes section 15.9.5.'))
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&
   candidates$screening_status[row] == 'not_started' &&

@@ -97,7 +97,7 @@ review <- list(
     'The 2024 source page was checked as a prior-year cross-check; it does not replace or fill the',
     'current 2026 record. Cached source URLs, assessment keys, revisions, retrieval date, sizes, and',
     'SHA-256 checksums are recorded under source_cache/discovery_ices_blackspot_seabream_6_8_2026/.',
-    'No canonical numerical data or tinyAM translation were added.')
+    'No canonical numerical data were added.')
 )
 
 is_initial <- register$match_status[row] == 'unreviewed' &&

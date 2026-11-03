@@ -79,7 +79,7 @@ rows <- lapply(seq_along(ids), function(j) {
       'https://www.pcouncil.org/documents/2024/08/status-of-the-pacific-coast-groundfish-fishery-stock-assessment-and-fishery-evaluation-july-2025.pdf/; ',
       'https://www.pcouncil.org/documents/2022/09/status-of-the-pacific-coast-groundfish-fishery-stock-assessment-and-fishery-evaluation-july-2022.pdf/'),
     review_date = today,
-    decision_reason = paste0('Eligible for source curation as a distinct ', tolower(area), ' area model. The 2015 full assessment supplies annual catch, area-specific fishery-dependent indices, age/length compositions, biological relationships, mortality assumptions, and comparable population outputs. Catch-at-age and age-specific index reconstruction are conditional and potentially sparse; this is not a tinyAM-readiness decision.'),
+    decision_reason = paste0('Eligible for source curation as a distinct ', tolower(area), ' area model. The 2015 full assessment supplies annual catch, area-specific fishery-dependent indices, age/length compositions, biological relationships, mortality assumptions, and comparable population outputs. Catch-at-age and age-specific index reconstruction are conditional and potentially sparse; this is not a model-readiness decision.'),
     notes = paste0('The NOAA Stock SMART 2019 label is not a newer full assessment: the 2019 action was a catch-only projection based on the 2015 assessment, and the 2025 SAFE still lists 2015 as the most recent assessment. Keep the ', tolower(area), ' model separate from the other two areas. No canonical records were added.')
   )
 })

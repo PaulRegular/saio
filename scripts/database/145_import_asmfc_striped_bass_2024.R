@@ -131,7 +131,7 @@ assumption <- function(component, setting, value, notes, reference = "Main repor
 }
 assumptions <- rbind(
   assumption("population", "years_ages_and_sexes", "1982-2023; ages 1-15+; both-sex abundance, female SSB", "Native source initial abundance follows an exponential/cohort construction, with a terminal plus group."),
-  assumption("N", "recruitment_process", "IID normal log recruitment deviations, constrained to sum zero", "Appendix 2 also describes a bias constraint and a first-recruit penalty; these are not automatically equivalent to an unconstrained tinyAM IID process."),
+  assumption("N", "recruitment_process", "IID normal log recruitment deviations, constrained to sum zero", "Appendix 2 also describes a bias constraint and a first-recruit penalty."),
   assumption("N", "survival_process", "Deterministic cohort survival after recruitment", "No independent older-cohort process variance is identified in the published model equations."),
   assumption("F", "fleet_structure", "Separate Chesapeake Bay and Ocean F and selectivity", "Bay: 1982-1984, 1985-1989, 1990-1995, 1996-2019, 2020-2023. Ocean: 1982-1984, 1985-1989, 1990-1996, 1997-2019, 2020-2023. The separate-2023-block sensitivity is excluded."),
   assumption("M", "fixed_age_specific_M", "Fixed vector from main Table 4", "Natural mortality is a source biological input, not an estimated output."),

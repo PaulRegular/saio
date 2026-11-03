@@ -32,7 +32,7 @@ updates <- list(
     weights = 'Commercial catch weights and RV survey weights are reported by age; the latter extend beyond the ages used by the VPA.',
     maturity = 'A static maturity ogive and spawning weights are available from the 2016 framework per-recruit analysis; they are proxies for population SSB calculations, not annual VPA observation inputs.',
     mortality = 'M is fixed at 0.2 per year except ages 10-11+, where it changes by period from 0.3 to 0.9 per year.',
-    timing = 'The 2016 production report does not give annual survey fractions; a tinyAM midyear value is an explicit approximation.',
+    timing = 'The 2016 production report does not give annual survey fractions.',
     output = 'The 2016 report provides F-at-age and Fbar through 2015, N-at-age and age-4+ biomass through 2016, and terminal q; annual N/F/biomass uncertainty is not reported. 2024 advice adds only a 2022 model-based SSB value.',
     sources = 'https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40722697.pdf; https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40613215.pdf; https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41306132.pdf',
     reason = 'Matched to the current 4X5Y unit. The 2024 advice is newer but summary-only; the 2016 VPA is the latest detailed age-structured production assessment recovered. Catch/index and official outputs are available, while maturity is a framework proxy, one survey cell and annual uncertainty remain unresolved.'

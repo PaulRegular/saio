@@ -278,7 +278,7 @@ if (any(!is.finite(inputs_new$value)) || any(inputs_new$value < 0) || any(!is.fi
   stop("Imported observations and estimates must be finite and non-negative.", call. = FALSE)
 }
 
-if (identical(Sys.getenv("TINYAM_IMPORT_DRY_RUN"), "true")) {
+if (identical(Sys.getenv("SAIO_IMPORT_DRY_RUN"), "true")) {
   cat("Dry run: inputs", nrow(inputs_new), "outputs", nrow(outputs_new), "assumptions", nrow(assumptions_new), "\n")
 } else {
   data.table::fwrite(assessments, assessments_file, quote = TRUE, na = "", eol = "\r\n")

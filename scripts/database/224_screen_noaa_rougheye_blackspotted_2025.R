@@ -41,7 +41,7 @@ x$weights_evidence[i] <- paste(
 x$maturity_evidence[i] <- paste(
   'The model uses a length-based maturity relationship documented in the',
   '2025 report; age-specific maturity can be derived from the model growth',
-  'surface if required for a tinyAM approximation.'
+  ''
 )
 x$mortality_evidence[i] <- paste(
   'Female natural mortality is estimated. Male natural mortality is fixed at',

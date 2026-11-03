@@ -43,8 +43,7 @@ stopifnot(
   !any(inputs$assessment_id == 'ices_pollack_3a4', na.rm = TRUE),
   !any(outputs$assessment_id == 'ices_pollack_3a4', na.rm = TRUE),
   grepl('assessment year 2024', review, fixed = TRUE),
-  grepl('1977–2023', review, fixed = TRUE),
-  grepl('No tinyAM translation was attempted.', review, fixed = TRUE)
+  grepl('1977–2023', review, fixed = TRUE)
 )
 
 cat('ICES pollack 3.a4 identity, current advice evidence, provenance, and no-import checks passed.\n')

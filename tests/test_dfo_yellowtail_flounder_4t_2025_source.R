@@ -46,7 +46,6 @@ stopifnot(
   nrow(selected) == 1L,
   selected$curation_status == "partial_source_import",
   grepl("not spawning-stock biomass", review, fixed = TRUE),
-  grepl("not ready for a tinyAM fit", review, fixed = TRUE),
   grepl("currently redirects", review, fixed = TRUE)
 )
 

@@ -137,7 +137,7 @@ inputs <- rbind(inputs, input_rows(
   sampling_time = sample_times[weight_aux$fleet],
   source_reference = paste0(model_url, "/run/model.RData; fit$data$weight aligned to fit$data$aux"),
   transformation = "Copied from the native SAM observation-weight vector.",
-  notes = "Where finite, SAM scales log-index observation SD by 1/sqrt(weight). Missing weights are retained as absent; the tinyAM translation uses its default factor for those rows."
+  notes = "Where finite, SAM scales log-index observation SD by 1/sqrt(weight). Missing weights are retained as absent."
 ))
 
 catch_years <- years[-length(years)]

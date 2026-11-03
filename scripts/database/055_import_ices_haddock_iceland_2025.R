@@ -185,13 +185,13 @@ outputs_add <- rbind(
   output_row("biomass", "SSB", summary$year,
     value = summary$ssb,
     unit = "tonnes", source_reference = paste(source_name, "Assessment summary"),
-    notes = "Published aggregate spawning biomass. Low/high values are retained as published; interval coverage is not specified in the table. The source uses pre-spawning mortality fractions; tinyAM comparisons derive a separately labelled common-definition mature biomass from N and shared biology.",
+    notes = "Published aggregate spawning biomass. Low/high values are retained as published; interval coverage is not specified in the table. The source uses pre-spawning mortality fractions.",
     lwr = summary$low_ssb, upr = summary$high_ssb
   ),
   output_row("biomass", "reference_biomass", summary$year,
     value = summary$refbio,
     unit = "tonnes", source_reference = paste(source_name, "Assessment summary"),
-    notes = "Published biomass of fish at least 45 cm; low/high values are retained as published, with interval coverage unspecified. No equivalent length-based tinyAM quantity is available.",
+    notes = "Published biomass of fish at least 45 cm; low/high values are retained as published, with interval coverage unspecified.",
     lwr = summary$low_refbio, upr = summary$high_refbio
   ),
   output_row("recruitment", "recruitment", summary$year,

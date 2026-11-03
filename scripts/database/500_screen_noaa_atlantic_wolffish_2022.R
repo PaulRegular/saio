@@ -59,7 +59,7 @@ row <- data.frame(
   import_status = 'not_started',
   catch_age_evidence = 'The 2022 SCALE update fits total catch and catch-size distributions; no catch numbers-at-age or source-supported reconstruction from age compositions was found. Catch is predominantly discards since 2010, with an 8% discard mortality assumption.',
   survey_age_evidence = 'The assessment uses one age-1 recruitment index plus NEFSC spring/fall and Massachusetts DMF spring adult survey indices. The report describes size and age data used to inform the SCALE model, but does not provide a full age-specific abundance-index matrix. The historical NOAA status review states age-based abundance measures could not be developed.',
-  weights_evidence = 'The SCALE model uses growth and size-at-age information, but the current run report does not provide a recoverable age-specific weight surface for a tinyAM age model.',
+  weights_evidence = '',
   maturity_evidence = 'The assessment update changed the maturity knife-edge to 52 cm from 50 cm; a recoverable maturity-at-age series is not provided in the current run report.',
   mortality_evidence = 'The current report does not document a natural-mortality-at-age surface or its exact treatment; no such age-specific input was found in the reviewed sources.',
   timing_evidence = 'The reviewed report describes annual survey indices but does not provide within-year observation timing fractions for an age-structured observation model.',

@@ -134,7 +134,7 @@ review <- list(
     'production-run input arrays and assessment report were not located. The latest',
     'detailed input basis found (2024) documents aggregate catches, biomass indices,',
     'and length compositions, not the age-disaggregated observations needed to establish',
-    'tinyAM readiness. Keep age-input eligibility unresolved until 2026 production inputs',
+    'Keep age-input eligibility unresolved until 2026 production inputs',
     'or native files are checked; the age-length model label alone is insufficient.'),
   notes = paste('Northeast Atlantic dgs.27.nea is distinct from the NOAA/DFO Northwest',
     'Atlantic spiny dogfish unit despite sharing Squalus acanthias. The 2025 WGEF report',
@@ -142,7 +142,7 @@ review <- list(
     'in 2026. The current 2026 SAG has assessment key 25850 and terminal historical year',
     '2025. The 2024 advice text cache is extracted from the original official PDF. The',
     'source manifest points to shared cached WGEF 2024 and 2025 PDFs to avoid duplicate',
-    'large files. No canonical records were added and no tinyAM translation was attempted.')
+    'large files. No canonical records were added was attempted.')
 )
 
 current <- lapply(names(review), function(column) as.character(candidates[[column]][row]))

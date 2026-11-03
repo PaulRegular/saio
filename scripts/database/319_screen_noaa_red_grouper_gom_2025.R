@@ -84,7 +84,7 @@ review <- list(
     'SEDAR 88 is the latest full, accepted production assessment (completed in 2025,',
     'data through 2022). It provides age-composition inputs, aggregate abundance',
     'indices, biology and annual population outputs. The 2026 StockSMART monitoring',
-    'row is marked Remand and is not a replacement production run. tinyAM eligibility',
+    'row is marked Remand and is not a replacement production run.',
     'remains unresolved because no fitted survey-age observations or single fractional',
     'timing for the pooled indices were found, and SSB is reported as egg production',
     'rather than biomass.'

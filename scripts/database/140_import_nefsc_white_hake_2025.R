@@ -368,7 +368,7 @@ add_assumption(assessment_id = assessment_id, component = "index",
 add_assumption(assessment_id = assessment_id, component = "index",
   setting = "catchability", value = "five survey-specific q levels; annual q deviations inactive",
   source_reference = paste(input_ref, "Phase for Catchability in 1st Year; Phase for Catchability Deviations"),
-  notes = "The q-deviation phase is -5; tinyAM's survey-by-age q structure is an approximation.")
+  notes = "The q-deviation phase is -5.")
 add_assumption(assessment_id = assessment_id, component = "recruitment",
   setting = "recruitment_and_initial_states",
   value = "constant expected age-1 recruitment; steepness fixed at 1; annual recruitment deviations estimated without a recruitment penalty",
@@ -383,7 +383,7 @@ add_assumption(assessment_id = assessment_id, component = "N",
   setting = "initial_abundance",
   value = "initial older-age abundances estimated with a lognormal penalty around first-year equilibrium survival",
   source_reference = paste(input_ref, "Phase for N in 1st Year; NAA Deviations Flag; Lambda for N in 1st Year Deviations; CV for N in 1st Year Deviations; ASAP3 Technical Documentation pp. 43-44"),
-  notes = "Phase 2 estimates initial older-age abundances. Flag 1 sets the penalty reference from expected first-year recruitment and cumulative first-year survival, with a plus-group divisor 1-exp(-Z[1,9]). Lambda is 1 and supplied CV is 0.2 (log SD sqrt(log(1+0.2^2))). The documented objective uses all initial ages in its norm; this is not tinyAM's unpenalized free or deterministic exp initialization.")
+  notes = "Phase 2 estimates initial older-age abundances. Flag 1 sets the penalty reference from expected first-year recruitment and cumulative first-year survival, with a plus-group divisor 1-exp(-Z[1,9]). Lambda is 1 and supplied CV is 0.2 (log SD sqrt(log(1+0.2^2))). The documented objective uses all initial ages in its norm.")
 add_assumption(assessment_id = assessment_id, component = "model",
   setting = "selected_run", value = "2025 Management Track Run_005; ASAP 3.0",
   source_reference = input_ref,

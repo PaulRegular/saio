@@ -78,7 +78,7 @@ review <- list(
     'approach. Although age and stock composition enter annual salmon run',
     'reconstruction, the published assessment does not establish the complete',
     'age-specific catch, survey, biological, and mortality inputs or annual',
-    'N-at-age/F-at-age outputs required for a defensible tinyAM age-structured',
+    '',
     'population translation. Screen ineligible for this age-disaggregated set.'
   ),
   notes = paste(
@@ -89,7 +89,7 @@ review <- list(
     'The official PDF is readable through the Government Publications page,',
     'but direct local retrieval returned an archived-page interstitial rather',
     'than the PDF, so it was not cached. No canonical inputs/outputs were added',
-    'and no tinyAM translation was attempted. See',
+    'and was attempted. See',
     'discovery/source_reviews/dfo_wcvi_barkley_sockeye_2024.md.'
   )
 )

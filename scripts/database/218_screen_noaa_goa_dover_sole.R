@@ -47,7 +47,7 @@ x$mortality_evidence[i] <- paste(
 )
 x$timing_evidence[i] <- paste(
   'The native data file records survey month 6 (June); the assessment uses',
-  'spawning month 5. These are distinct timings. A tinyAM survey fraction',
+  'spawning month 5. These are distinct timings.',
   'would need to be documented as a translation approximation.'
 )
 x$output_evidence[i] <- paste(

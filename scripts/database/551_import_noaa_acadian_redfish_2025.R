@@ -665,7 +665,7 @@ if (!dry_run) {
     "discovery_noaa_acadian_redfish_2025 directory. Native WHAM inputs are complete;",
     "assumptions and outputs remain partial because the physical index multiplier",
     "and age-year uncertainty are not available. Derived abundance and SSB have",
-    "no uncertainty. No tinyAM translation has been started.")
+    "no uncertainty. ")
   replace_candidate_register_row(candidate_path, candidate_row,
     candidate_data[candidate_row, , drop = FALSE], candidate_id)
 

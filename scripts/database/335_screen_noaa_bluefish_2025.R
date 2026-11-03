@@ -156,7 +156,7 @@ review <- list(
   timing_evidence = paste(
     'The 2025 WHAM assessment is annual and its input bundle does not record',
     'fractional-year observation times. The index names identify the survey',
-    'series, but tinyAM translation will need survey-season timing from the',
+    'series, but will need survey-season timing from the',
     'underlying survey documentation and must label any annualization as an',
     'approximation.'),
   output_evidence = paste(

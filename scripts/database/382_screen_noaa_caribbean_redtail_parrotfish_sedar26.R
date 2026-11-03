@@ -97,7 +97,7 @@ review <- list(
     'regional components for Puerto Rico, St. Thomas/St. John, and St. Croix; these are not counted',
     'as additional candidate units. The detailed report, CIE review, project pages, retrieval date,',
     'file sizes, and SHA-256 checksums are recorded under source_cache/',
-    'discovery_noaa_redtail_parrotfish_2012/. No canonical numerical records or tinyAM translation',
+    'discovery_noaa_redtail_parrotfish_2012/. No canonical numerical records',
     'were added.'))
 
 initial <- register$match_status[row] == 'unreviewed' &&

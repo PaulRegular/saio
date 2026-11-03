@@ -79,7 +79,7 @@ row <- data.frame(
     '13942 (2024, data through 2024). NOAA classifies it as index-based (model category 2)',
     'with no composition data reported for the assessment. The 2024 detailed report and Q4 2025',
     'status update provide aggregate management-status information, not the age-specific inputs',
-    'and population outputs required for tinyAM; the unit is ineligible for the age-structured set.'),
+    'the unit is ineligible for the age-structured set.'),
   notes = paste('The named Far North Migrating reporting unit is not a single named river stock and',
     'overlaps broadly with multiple transboundary and coastwide Chinook populations; no one-to-one',
     'match to a canonical DFO or NOAA river stock is supported. The detailed 2024 status report',

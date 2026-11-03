@@ -693,7 +693,7 @@ candidate$matched_stock_id <- stock_id
 candidate$match_status <- "new"
 candidate$import_status <- "partial"
 candidate$catch_age_evidence <- paste("The 2023 native model archive contains annual catch biomass plus raw length and age compositions.",
-  "Age composition is conditional on length in many rows; catch-at-age is not supplied directly and no tinyAM reconstruction was made.")
+  "Age composition is conditional on length in many rows.")
 candidate$survey_age_evidence <- paste("Six aggregate lognormal index series are represented; five use the biomass scale and Tag uses the number scale.",
   "No age-specific survey-abundance index is supplied; the age-composition data remain separate.")
 candidate$weights_evidence <- paste("The parametric model archive supplies generated annual beginning-/mid-season population weights and fleet-specific weights in wtatage.ss_new.",

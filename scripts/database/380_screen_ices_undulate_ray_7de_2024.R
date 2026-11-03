@@ -98,7 +98,7 @@ review <- list(
     'Standard Graphs assessment key 19173 identify the current run; the 2022 WKELASMO benchmark',
     'documents the aggregate production-model approach. Cached source URLs, revisions, retrieval date,',
     'sizes, and SHA-256 checksums are recorded under source_cache/discovery_ices_undulate_ray_7de_2024/.',
-    'No canonical numerical records or tinyAM translation were added.')
+    'No canonical numerical records were added.')
 )
 
 is_initial <- register$match_status[row] == 'unreviewed' &&

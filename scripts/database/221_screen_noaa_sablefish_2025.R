@@ -28,7 +28,7 @@ x$survey_age_evidence[i] <- paste(
   'NWFSC Slope Survey, and the annual WCGBTS. Marginal survey age compositions',
   'are included in the native input in bins 0-50; WCGBTS sampling covers',
   '2003-2024 except 2020. There is no directly observed age-specific abundance',
-  'index; a tinyAM age-indexed series would need an explicit reconstruction',
+  '',
   'from an aggregate index and survey age composition.'
 )
 x$weights_evidence[i] <- paste(
@@ -50,7 +50,7 @@ x$timing_evidence[i] <- paste(
   'The native survey observations include month fields. The listed survey',
   'indices are timed in July for early Triennial and NWFSC Slope, August for',
   'late Triennial, and July for WCGBTS; the model spawns in January. Any',
-  'tinyAM conversion to a fractional year must document its timing convention.'
+  ''
 )
 x$output_evidence[i] <- paste(
   'The 2025 Report.sso includes annual numbers-at-age, catch-at-age, F-at-age',
@@ -67,7 +67,7 @@ x$decision_reason[i] <- paste(
   'fishery and survey age compositions, biological inputs, survey timing, and',
   'age-specific fitted outputs. Mark eligible for source curation and a',
   'documented age-structured approximation; this does not imply that its raw',
-  'likelihood inputs map directly to tinyAM.'
+  ''
 )
 x$notes[i] <- paste(
   'The 2025 assessment uses data through 2024 and is a two-sex age-structured',

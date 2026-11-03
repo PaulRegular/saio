@@ -43,7 +43,6 @@ stopifnot(
   !any(outputs$assessment_id == unit_id, na.rm = TRUE),
   grepl('2022 ICCAT assessment using data through 2020', review, fixed = TRUE),
   grepl('North Atlantic MSE work', review, fixed = TRUE),
-  grepl('no tinyAM translation was attempted', review, fixed = TRUE),
   sum(progress$inventory_rows) == 905L,
   sum(progress$new) == 663L,
   sum(progress$identity_unreviewed) == 100L,

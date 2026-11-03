@@ -108,7 +108,7 @@ for (table in catch_tables) {
       source_reference = paste0("NEFSC Reference Document 15-08, Table A", table$number,
         ", p. ", table$page),
       notes = paste0("Reported ages 0-10 are retained. The final ASAP model uses ages 0-7+; ",
-        "tinyAM translation aggregates source ages 7-10 into age 7+."))
+        ""))
   }
 }
 
@@ -178,7 +178,7 @@ for (i in seq_len(nrow(fall_index))) {
     year_basis = "calendar_year", age = fall_index$age[i], value = fall_index$value[i],
     unit = "fish per tow", source_type = "official_table",
     source_reference = fall_index$source_reference[i],
-    notes = "Stratified mean fish per tow. Published blank cells are represented as zero; omit zero index cells from tinyAM's log-scale likelihood. HBB values from 2009 onward are calibrated to ALB equivalents.")
+    notes = "Stratified mean fish per tow. Published blank cells are represented as zero. HBB values from 2009 onward are calibrated to ALB equivalents.")
 }
 for (age in 0:7) add_input(assessment_id = assessment_2015, type = "M",
   measure = "natural_mortality_at_age", basis = "per_year", age = age,

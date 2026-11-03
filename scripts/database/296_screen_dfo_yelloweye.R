@@ -63,7 +63,7 @@ review <- list(
       'inside unit. The detailed 2021/008 rebuilding analysis and its pinned',
       'source repository document age-structured SRA operating models and',
       'survey age-composition data. Eligibility remains unresolved for the',
-      'age-disaggregated tinyAM candidate set because commercial age samples',
+      '',
       'cover only one trip and do not establish annual catch-at-age; a numeric',
       'weight-at-age series, survey timing, and comparable age-specific outputs',
       'also remain unverified.'

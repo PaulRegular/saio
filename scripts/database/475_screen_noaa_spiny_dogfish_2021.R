@@ -141,7 +141,7 @@ review <- list(
   weights_evidence = 'The model archive reports sex-specific weight-at-age derived from fitted growth and fixed weight-length relationships. Preserve its model-derived status and two-sex structure.',
   maturity_evidence = 'Maturity is specified as a length-logistic biological relationship; maturity-at-age is model-derived and should retain the sex-specific life-history definitions and source values.',
   mortality_evidence = 'Natural mortality is fixed at 0.065 per year for both sexes; the 2021 assessment does not estimate M.',
-  timing_evidence = 'The model uses one 12-month season, a January spawning month, season-long fishery catches, and survey timing codes in the native fleet table. Convert these timing fields explicitly before creating tinyAM observations; no fractional-year value is assigned in this screen.',
+  timing_evidence = 'The model uses one 12-month season, a January spawning month, season-long fishery catches, and survey timing codes in the native fleet table. no fractional-year value is assigned in this screen.',
   output_evidence = 'The official Report.sso includes age-specific catch, numbers, fishing mortality, biomass, and end-year biological surfaces. The 2021 report provides spawning-output summaries and uncertainty; outputs do not substitute for age-specific observed inputs.',
   detailed_source_url = paste(
     'https://www.pcouncil.org/documents/2022/01/status-of-the-pacific-spiny-dogfish-shark-resource-off-the-continental-u-s-pacific-coast-in-2021-october-19-2021.pdf/;',

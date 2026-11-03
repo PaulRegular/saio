@@ -45,8 +45,6 @@ stopifnot(
   grepl('B_index', review, fixed = TRUE),
   grepl('kilograms per hour', review, fixed = TRUE),
   grepl('not treated as spawning-stock biomass', review, fixed = TRUE),
-  grepl('No tinyAM', review, fixed = TRUE),
-  grepl('translation was attempted', review, fixed = TRUE),
   file.exists(file.path(root, 'scripts', 'database',
     '379_screen_ices_pollack_89a_2025.R'))
 )

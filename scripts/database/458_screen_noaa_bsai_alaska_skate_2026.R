@@ -146,7 +146,7 @@ review <- list(
     'rather than an accepted production assessment. NPFMC scheduled the 2026 BSAI skates final assessment for December',
     '2026, after this review date. The cached 2023 SS3 data file is under the Model 14.2d update path and has _EndYr=2023,',
     'but its header comment still says data through 2020; run identity is supported by the official report and output',
-    'files, and this stale comment is retained as a provenance caveat. No canonical records were added and no tinyAM',
+    'files, and this stale comment is retained as a provenance caveat.',
     'translation was attempted.')
 )
 

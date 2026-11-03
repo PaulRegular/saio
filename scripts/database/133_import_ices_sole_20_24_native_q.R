@@ -127,7 +127,7 @@ if (nrow(existing_q)) {
   q_rows <- q_rows[FALSE, , drop = FALSE]
 }
 
-if (identical(Sys.getenv("TINYAM_DATABASE_DRY_RUN"), "true")) {
+if (identical(Sys.getenv("SAIO_DATABASE_DRY_RUN"), "true")) {
   cat("Dry run passed: ", nrow(q_rows), " new native q rows would be written.\n", sep = "")
   print(q_rows[c("survey", "age", "age_group", "value", "se", "lwr", "upr")])
 } else if (nrow(q_rows)) {

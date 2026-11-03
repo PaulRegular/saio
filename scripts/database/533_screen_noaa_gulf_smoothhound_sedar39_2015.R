@@ -55,7 +55,7 @@ review <- data.frame(
     '2012) as fully accepted. The assessment is for a Gulf of Mexico Mustelus',
     'spp. complex; species identification was limited. No matching canonical',
     'stock record was found. This is an inventory-only candidate screen; no',
-    'canonical data or tinyAM translation was added.'),
+    'canonical data was added.'),
   stringsAsFactors = FALSE)
 
 if (anyDuplicated(register$candidate_id) || anyDuplicated(review$candidate_id))

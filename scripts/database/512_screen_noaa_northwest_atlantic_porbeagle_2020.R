@@ -77,7 +77,7 @@ row <- data.frame(
     'age-specific abundance-index likelihood. The ICM constructs an assumed',
     'age-structured population from life-history information but does not fit',
     'age-disaggregated observations; age-based biological and output surfaces needed',
-    'for tinyAM were not verified.'),
+    ''),
   notes = paste('ICCAT identifies the Northwest Atlantic status estimates as based on 2018, even though',
     'the 2024-2025 summary carries catch information through 2024. The Northeast',
     'Atlantic ICES unit is distinct. No canonical numerical records were added.'),

@@ -183,8 +183,7 @@ stopifnot(
   candidate$import_status[candidate$candidate_id == "NOAA:10455"] == "partial",
   inventory$import_status[inventory$unit_key == paste0("candidate:", stock_id)] == "partial",
   selected$curation_status[selected$candidate_unit_id == stock_id] == "partial_source_import",
-  grepl("source-supplied effective sample size", review, fixed = TRUE),
-  grepl("no tinyAM translation started", review, fixed = TRUE)
+  grepl("source-supplied effective sample size", review, fixed = TRUE)
 )
 
 cat("NOAA Acadian redfish 2025 source, provenance, input/output, and derived-series tests passed.\n")

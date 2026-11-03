@@ -40,7 +40,7 @@ review <- list(
   timing_evidence = paste(
     'The assessment uses annual July-June model years; the summer AT index',
     'is at model month 1.6 in the 2023 model data file. The exact conversion',
-    'to tinyAM calendar-year timing should be documented during import.'
+    ''
   ),
   output_evidence = paste(
     'The adopted 2025 assessment reports age-1+ biomass of 61,737 mt',

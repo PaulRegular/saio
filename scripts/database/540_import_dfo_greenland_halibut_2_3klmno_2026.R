@@ -1,7 +1,7 @@
 root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "discovery_dfo_greenland_halibut_2_3klmno_2025")
-dry_run <- identical(Sys.getenv("TINYAM_IMPORT_DRY_RUN"), "1")
+dry_run <- identical(Sys.getenv("SAIO_IMPORT_DRY_RUN"), "1")
 
 manifest <- utils::read.csv(
   file.path(cache, "sources.csv"), stringsAsFactors = FALSE,
@@ -478,7 +478,7 @@ mp_assumptions <- rbind(mp_assumptions,
     notes = "Estimated in the SCAA base-case operating-model fit; the MP weights surveys by inverse squared SD."),
   assumption_block(mp_id, "survey", "MP inverse-variance survey weight", mp_weights,
     "NAFO Scientific Council Report 2026, SCS Doc. 26/12, Table i.3, p. 35", survey = mp_survey,
-    notes = "Source-reported 1/sigma^2 values; retained as MP control weights, not tinyAM observation weights."),
+    notes = "Source-reported 1/sigma^2 values, retained as management-procedure control weights."),
   assumption_block(mp_id, "management_procedure", "MP index calculation", "Target rule averages the latest 3 available years; target is the 2011-2015 mean; slope uses a log-linear trend over the latest 5 available years; missing survey values are omitted.",
     "NAFO Scientific Council Report 2026, SCS Doc. 26/12, pp. 32-35"),
   assumption_block(mp_id, "management_procedure", "MP output scope", "Annual survey-based TAC advice; no age-structured population model was refit for the 2026 advice.",

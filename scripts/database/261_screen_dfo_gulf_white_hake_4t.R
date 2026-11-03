@@ -56,7 +56,7 @@ review <- list(
   timing_evidence = paste(
     'The RV survey is conducted in September and the Mobile Sentinel survey',
     'in August. The reports do not specify exact within-month fractions of',
-    'year; any tinyAM timing values would be documented approximations.'
+    ''
   ),
   output_evidence = paste(
     'The Science Advisory Report gives 2022 SSB as 6.1 kt and reports annual',

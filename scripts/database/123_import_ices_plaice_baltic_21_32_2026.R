@@ -224,7 +224,7 @@ input_parts <- c(observation_rows, list(weight_rows,
   matrix_inputs(dat$stockMeanWeight, "weight", "weight_at_age", "kg_per_fish",
     "kg per fish", years, ages, paste0(run_url, "; fit$data$stockMeanWeight; data/sw.dat"),
     "Copied the native annual stock-weight surface, after combining ages 7 and older into 7+.",
-    "SAM estimates a stock-weight process from these observations; tinyAM will use the recorded surface as fixed input."
+    "SAM estimates a stock-weight process from these observations."
   ),
   matrix_inputs(dat$catchMeanWeight, "catch_weight", "weight_at_age", "kg_per_fish",
     "kg per fish", years[-length(years)], ages,

@@ -191,7 +191,7 @@ assumptions <- do.call(rbind, list(
   assumption_rows("biology", "spawning_time_mortality", "propF = 0 and propM = 0", paste0(model_url, "/run/model.RData; fit$data$propF and fit$data$propM"), "No annual F or M is applied before the spawning point in this model input."),
   assumption_rows("catch", "observation_model", "Lognormal total catch-at-age", cfg_ref, "One catch observation SD is shared across ages 0–6."),
   assumption_rows("index", "observation_model", "Lognormal age-specific indices", cfg_ref, "NIGFS-Q1 and NIGFS-Q4 use relative precision weights; NIMIK has no supplied weight. NIMIK has 28 fitted observations in 30 model slots; 2020 and 2022 are missing."),
-  assumption_rows("index", "observation_correlation", "ID, AR, AR, ID by fleet", cfg_ref, "Residual age correlation is used for NIGFS-Q1 and NIGFS-Q4; tinyAM translation treats index residuals as independent."),
+  assumption_rows("index", "observation_correlation", "ID, AR, AR, ID by fleet", cfg_ref, "Residual age correlation is used for NIGFS-Q1 and NIGFS-Q4."),
   assumption_rows("index", "catchability_age_groups", "Q1: age 1, ages 2–5, age 6; Q4: age 0, ages 1–3, age 4, age 5, age 6; NIMIK: age 0", cfg_ref, "Preserved as q_key groups in the translation."),
   assumption_rows("index", "survey_timing", "NIGFS-Q1 0.23; NIGFS-Q4 0.855; NIMIK 0.48", paste0(model_url, "/run/model.RData; fit$data$sampleTimes"), "Proportion of year from the annual model start."),
   assumption_rows("biology", "annual_inputs", "Stock, catch, landings, and discard weights; maturity; M; landings fraction; spawning-time fractions", paste0(model_url, "/run/model.RData; fit$data"), "Native source surfaces are stored without smoothing or interpolation."),

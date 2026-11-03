@@ -121,7 +121,7 @@ inputs <- list(
   age_rows(as.numeric(age_data$year), as.numeric(age_data$age),
     as.numeric(age_data$caa_1000), "catch", "numbers_at_age", "numbers",
     "thousand fish", "model_repository/data/2025/cn.dat; csv/2025/Intrants_at_age_2025.csv",
-    "Catch-at-age input for the source composition likelihood; not a tinyAM fit-ready likelihood equivalent. Age 10 is 10+."),
+    "Catch-at-age input for the source composition likelihood. Age 10 is 10+."),
   age_rows(as.numeric(age_data$year), as.numeric(age_data$age),
     as.numeric(age_data$prop_mature), "maturity", "maturity_at_age", "proportion",
     "proportion mature", "model_repository/data/2025/mo.dat; csv/2025/Intrants_at_age_2025.csv",
@@ -229,7 +229,7 @@ assumptions <- do.call(rbind, list(
     "Uses lower and upper bounds reconstructed from Canadian catch, U.S. catch, and an unaccounted-catch allowance."),
   assumption("catch", "catch_at_age_likelihood", "Continuation-ratio logit age composition",
     "CCAM_repository/inst/include/predobs.hpp; model_repository/data/2025/cn.dat",
-    "The source model uses catch-at-age as a composition likelihood. tinyAM's direct lognormal catch observation is an approximation."),
+    "The source model uses catch-at-age as a composition likelihood."),
   assumption("mortality", "natural_mortality", "Fixed 0.28 per year at ages 1-10+",
     "model_repository/data/2025/nm.dat",
     "The source M surface is constant and supplied, not estimated."),
@@ -239,7 +239,7 @@ assumptions <- do.call(rbind, list(
     "model_repository/data/2025/pm.dat"),
   assumption("index", "index_definition", "Aggregate total egg production (TEP)",
     "model_repository/data/2025/tep.dat; CCAM_repository/inst/include/predobs.hpp",
-    "The predicted index sums abundance, maturity, female fraction and fecundity across ages after mortality to sampling time. The TEP routine adds F only where keySel < 0; this run assigns nonnegative keys 0-4. tinyAM's age-specific index equation cannot represent it."),
+    "The predicted index sums abundance, maturity, female fraction and fecundity across ages after mortality to sampling time. The TEP routine adds F only where keySel < 0; this run assigns nonnegative keys 0-4."),
   assumption("index", "tep_native_unit", "Trillion eggs",
     paste("DFO Research Document 2022/068 Table S9", tep_units_url,
       "DFO Research Document 2025/054 section 3.3", framework_url,
@@ -404,7 +404,7 @@ new_assessment <- data.frame(
     "The official 2025 assessment is represented by the pinned DFO mackerel_assessment repository run, with annual inputs and fitted exports through 2025.",
     "DFO Research Document 2025/054 documents the preceding 2024 assessment and is used only for method and age-group context.",
     "The 2026/040 Science Advisory Report PDF download currently resolves to archived HTML; its official catalogue record is retained, and the pinned native run supplies numerical inputs and outputs.",
-    "The aggregate TEP likelihood is not represented by tinyAM's age-specific index equation and is excluded from translation. M is fixed input, not an estimated M output."
+    "M is fixed input, not an estimated M output. The source TEP likelihood is aggregate, not age-specific."
   ), stringsAsFactors = FALSE
 )
 

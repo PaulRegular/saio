@@ -46,12 +46,12 @@ x$review_date[i] <- '2026-10-29'
 x$decision_reason[i] <- paste0(
   'Matched to the current western Baltic spring-spawning herring unit and official 2026 HAWG SAM run. ' ,
   'Age-disaggregated commercial catch, four survey series, annual biology, fixed M, timing and ' ,
-  'official population outputs are verified. The tinyAM translation aggregates population and ' ,
+  'official population outputs are verified. The aggregates population and ' ,
   'observation ages to resolve the differing survey plus groups; this is recorded separately.'
 )
 x$notes[i] <- paste0(
   'See source_reviews/ices_herring_western_baltic_2026.md. The official ' ,
-  'population model is ages 0-8+, whereas the documented tinyAM translation uses ages 0-5+; ' ,
+  'population model is ages 0-8+, whereas the documented uses ages 0-5+; ' ,
   'preserve that as a translation approximation, not a source-data change.'
 )
 

@@ -92,8 +92,7 @@ stopifnot(
   all(abs(unique(as.numeric(output$value[output$measure == 'natural_mortality_at_age' & output$sex == 'female'])) - 0.19) < 1e-8),
   all(abs(unique(as.numeric(output$value[output$measure == 'natural_mortality_at_age' & output$sex == 'male'])) - 0.17) < 1e-8),
   grepl('billion eggs', source_review, fixed = TRUE),
-  grepl('not age-specific abundance indices', source_review, fixed = TRUE),
-  grepl('no tinyAM translation', source_review, ignore.case = TRUE)
+  grepl('not age-specific abundance indices', source_review, fixed = TRUE)
 )
 
 cat('NOAA Oregon Black Rockfish 2023 source coverage, units, and provenance checks passed.\n')

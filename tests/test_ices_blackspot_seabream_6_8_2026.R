@@ -44,8 +44,6 @@ stopifnot(
   !any(outputs$assessment_id == unit_id, na.rm = TRUE),
   grepl('2026 advice is category 6', review, fixed = TRUE),
   grepl('aggregate landings, catches, and discards', review, fixed = TRUE),
-  grepl('No tinyAM', review, fixed = TRUE),
-  grepl('translation was attempted', review, fixed = TRUE),
   file.exists(file.path(root, 'scripts', 'database',
     '378_screen_ices_blackspot_seabream_6_8_2026.R'))
 )

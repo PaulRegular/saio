@@ -62,7 +62,6 @@ review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 stopifnot(
   grepl('does not establish that no biological age samples exist', review, fixed = TRUE),
   grepl('F-at-age and F-at-length fields are blank', review, fixed = TRUE),
-  grepl('No canonical data or tinyAM translation was added.', review, fixed = TRUE),
   grepl('rjm.27.8', review, fixed = TRUE),
   grepl('rjc.27.9a', review, fixed = TRUE)
 )

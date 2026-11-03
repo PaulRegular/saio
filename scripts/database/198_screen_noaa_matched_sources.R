@@ -174,7 +174,7 @@ review$timing_evidence <- c(
   'Selected 2025 assessment timing is not fully verified from run-matched numeric inputs.',
   'Timing is described, but exact fitted observation arrays and selected-run alignment remain unavailable.',
   'Survey timing in the 2018 source is documented; seasonal midpoints are explicitly identified as approximations.',
-  'The report identifies September-November fall sampling; tinyAM uses 0.8 as a documented midpoint approximation.',
+  'The report identifies September-November fall sampling.',
   'Native timing definitions are known; age-specific observations are not available in a form suitable for reconstruction.',
   'Native source documents survey timing; monthly timing and transformations are recorded in the stock review.',
   'Summer survey observation timing is approximated at 0.5; the source report and model settings are retained.',

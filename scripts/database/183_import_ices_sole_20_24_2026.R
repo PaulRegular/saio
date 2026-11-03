@@ -241,7 +241,7 @@ if (anyDuplicated(paste(outputs_new$assessment_id, outputs_new$type, outputs_new
   outputs_new$year, outputs_new$age, sep = "\r"))) stop("Duplicate output keys in new rows.", call. = FALSE)
 if (any(!is.finite(inputs_new$value)) || any(inputs_new$value < 0) || any(!is.finite(outputs_new$value))) stop("Imported values must be finite and non-negative.", call. = FALSE)
 
-if (identical(tolower(Sys.getenv("TINYAM_IMPORT_DRY_RUN")), "true")) {
+if (identical(tolower(Sys.getenv("SAIO_IMPORT_DRY_RUN")), "true")) {
   cat("Dry run: inputs", nrow(inputs_new), "outputs", nrow(outputs_new), "assumptions", nrow(assumption_rows), "\n")
   quit(save = "no")
 }

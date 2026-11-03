@@ -45,7 +45,7 @@ review <- list(
   timing_evidence = paste(
     'The model is annual and distinguishes seasonal survey programs (including',
     'summer and fall trawl surveys). A single fractional survey timing for a',
-    'tinyAM representation is not specified in the reviewed report.'
+    ''
   ),
   output_evidence = paste(
     'The final report gives annual, area-specific total biomass, exploitable',

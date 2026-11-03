@@ -147,7 +147,7 @@ review <- list(
     'species-identification and catch-reporting overlap. ICCAT marked the',
     'meeting report preliminary pending SCRS adoption; the current ICCAT',
     'assessment listing identifies JABBA as the model used for advice.',
-    'No canonical database values were added and no tinyAM translation was',
+    'No canonical database values were added was',
     'attempted. Official reports are cached under',
     'source_cache/discovery_noaa_iccat_white_marlin_2025/.'
   )

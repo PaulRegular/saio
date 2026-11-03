@@ -155,13 +155,13 @@ shared_inputs <- paste0(
   'The 2023 California Stock Synthesis data file has four fishery catch fleets ',
   'with annual catch in biomass units, length compositions, and fitted age ',
   'composition records. These are not observed annual catch numbers-at-age. ',
-  'A catch-at-age series for tinyAM would require a documented reconstruction ',
+  '',
   'from model catches, length compositions, and age-at-length information.')
 shared_surveys <- paste0(
   'The assessment uses aggregate survey indices and length data. The native ',
   'model also fits age-composition records, including conditional age-at-length ',
   'observations; the data do not contain a direct annual abundance-at-age index. ',
-  'Any age-specific index for tinyAM would require a documented reconstruction ',
+  '',
   'from the matching aggregate index, length composition, and age information.')
 shared_weights <- paste0(
   'The model uses sex-specific growth and length-weight relationships; the ',
@@ -207,7 +207,7 @@ review <- list(
     'sub-area models. The 2023 production archives directly include fitted age ',
     'compositions (conditional age-at-length and marginal-age records) and ',
     'age-specific official outputs. Catch-at-age and annual survey abundance-at-age ',
-    'are not direct input series; any tinyAM age-specific observations require ',
+    'are not direct input series.',
     'documented reconstruction from the native catch/index totals, length ',
     'compositions, and age data. The source provides ages 0-50, fixed M, and ',
     'model-derived biological age surfaces.'),

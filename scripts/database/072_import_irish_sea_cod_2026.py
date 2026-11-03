@@ -274,7 +274,7 @@ for survey, ages, period, season in [
 assumption("index", "Q1_CV", "One annual CV is reported beside the age 1-4 index vector and is repeated across its ages in the canonical long table; the current SS3 likelihood allocation is not independently verified.", f"{report}; Table 6.13", survey="NIGFS-WIBTS-Q1 (G7144)")
 assumption("index", "FSP_effective_sample_size", "0.2 in the stock annex configuration; current 2026 setting not independently verified.", f"{annex}; Table C-2", survey="UK FSP (B7897)")
 assumption("index", "FSP_year_coverage", "The assessment text summarizes 2004-2025; Table 6.13 contains observations beginning in 2005. The canonical database follows the numerical table.", f"{report}; section 6.1 and Table 6.13", survey="UK FSP (B7897)")
-assumption("index", "aggregate_Q1_CPUE", "Aggregate CPUE and its native-scale SD are reported; tinyAM's age-specific index likelihood does not directly represent this aggregate series.", f"{report}; Table 6.13", survey="NIGFS-WIBTS-Q1 CPUE (G7144)")
+assumption("index", "aggregate_Q1_CPUE", "Aggregate CPUE and its native-scale SD are reported; this is one aggregate observation, not an age-specific series.", f"{report}; Table 6.13", survey="NIGFS-WIBTS-Q1 CPUE (G7144)")
 assumption("assessment", "source_file_availability", "Detailed report tables and the current stock annex are available, but native 2026 SS3 data/control files were not recovered; exact likelihood weights and fitted model configurations remain unresolved.", report_doi)
 assumption("assessment", "output_coverage", "Annual SSB, age-0 recruitment and Fbar 2-4 with 95% confidence limits are tabulated; age-specific N/F and estimated M outputs are not available in the recovered sources.", f"{report}; Table 6.14")
 

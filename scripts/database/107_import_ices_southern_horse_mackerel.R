@@ -147,7 +147,7 @@ inputs24 <- list(
   make_input(id24, "catch", "total_biomass", "biomass", annual[, 9L], "tonnes",
     year = years, fleet = "Combined Spanish and Portuguese catch",
     source_reference = "WGHANSA 2024, Table 5.4.1.2, pp. 242-243",
-    notes = "Official input-catch totals retained alongside catch-at-age; not passed as a second catch series in tinyAM."),
+    notes = "Official input-catch totals retained alongside catch-at-age."),
   make_input(id24, "index", "total_biomass", "biomass", c(52.91, 148.81, 185.49, 75.26),
     "thousand tonnes", year = c(2013L, 2016L, 2019L, 2022L), survey = "BIOMAN DEPM egg survey",
     source_reference = "WGHANSA 2024, Table 5.3.2.1, p. 239",

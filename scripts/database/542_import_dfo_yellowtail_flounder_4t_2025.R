@@ -6,7 +6,7 @@ stock_id <- "dfo_yellowtail_flounder_4t"
 candidate_id <- "DFO:Gulf:Yellowtail Flounder - NAFO 4T"
 report_url <- "https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41331849.pdf"
 research_document_url <- "https://publications.gc.ca/pub?id=9.964766&sl=0"
-dry_run <- identical(Sys.getenv("TINYAM_IMPORT_DRY_RUN"), "1")
+dry_run <- identical(Sys.getenv("SAIO_IMPORT_DRY_RUN"), "1")
 
 stock <- pacific_database_row("stocks", stock_id = stock_id,
   charbonneau_id = NA_character_, authority = "DFO",
@@ -128,7 +128,7 @@ candidate_text <- prepare_record_update(candidate_path, "candidate_id", candidat
     maturity_evidence = "RV maturity-at-age is identified for 1985-2025; numerical values and sex treatment were not recovered.",
     mortality_evidence = "The summary describes time-varying, age-dependent M, with groups 4-7, 8-9 and 10+; annual values and process details were not recovered.",
     output_evidence = "The 2025 summary reports age-5+ biomass of 8,269 t (95% CI 5,666-10,872) and F ages 4-10+ = 0 since 2023. Numerical historical N, recruitment, SSB and mortality trajectories were not accessible.",
-    decision_reason = "Partial source import completed from the official summary. The detailed report PDF link currently redirects to an archived notice; numerical model inputs and historical trajectories remain unavailable, so no tinyAM translation is ready.",
+    decision_reason = "Partial source import completed from the official summary. The detailed report PDF link currently redirects to an archived notice; numerical model inputs and historical trajectories remain unavailable, so is ready.",
     notes = "Current DFO 4T unit; imported the official 2025 age-5+ biomass estimate and recent F=0 statement only. Detailed numerical inputs and historical outputs remain blocked by unavailable Research Document 2026/054 PDF. See discovery/source_reviews/dfo_gulf_yellowtail_flounder_2025.md."
   ))
 

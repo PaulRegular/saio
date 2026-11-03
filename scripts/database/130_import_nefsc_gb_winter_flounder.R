@@ -208,7 +208,7 @@ input_rows[[length(input_rows) + 1L]] <- make_input(
   age = NA_real_, value = catch_2022_table, unit = "metric tons",
   source_type = "official_table",
   source_reference = "2022 Management Track Assessment, Table 1, pp. 1-2",
-  notes = "Published total catch for assessment; retained as a report summary and not as a second tinyAM catch observation."
+  notes = "Published total catch for assessment."
 )
 
 years_2025_table <- 2015:2024

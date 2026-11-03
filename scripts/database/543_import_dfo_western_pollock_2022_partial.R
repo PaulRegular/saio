@@ -9,7 +9,7 @@ sar_url <- "https://publications.gc.ca/collections/collection_2023/mpo-dfo/fs70-
 data_url <- "https://publications.gc.ca/collections/collection_2026/mpo-dfo/fs70-5/Fs70-5-2026-025-eng.pdf"
 model_url <- "https://publications.gc.ca/collections/collection_2026/mpo-dfo/fs70-5/Fs70-5-2026-029-eng.pdf"
 hcr_url <- "https://publications.gc.ca/collections/collection_2026/mpo-dfo/fs70-7/Fs70-7-2026-015-eng.pdf"
-dry_run <- identical(Sys.getenv("TINYAM_IMPORT_DRY_RUN"), "1")
+dry_run <- identical(Sys.getenv("SAIO_IMPORT_DRY_RUN"), "1")
 
 stock <- pacific_database_row("stocks", stock_id = stock_id,
   charbonneau_id = NA_character_, authority = "DFO",

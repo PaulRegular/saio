@@ -245,7 +245,7 @@ add_rse <- function(table_id, years, ages, survey = NA_character_, fleet = NA_ch
     "relative_scale", x$year, x$age, x$value, "relative standard error",
     survey = survey, fleet = fleet,
     source_reference = paste(report_url, "Table", table_id),
-    transformation = "Relative standard errors are retained as published; tinyAM does not apply these external SAM weights.",
+    transformation = "Relative standard errors are retained as published.",
     notes = "Sampling precision for the official assessment input, not an abundance observation."
   )
 }

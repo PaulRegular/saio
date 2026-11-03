@@ -130,13 +130,13 @@ review <- list(
     'and Washington 2021 benchmark models. Both accepted component archives provide catch, length and conditional ' ,
     'age-at-length data and age-specific outputs. Catch-at-age is reconstructable only for compatible sampled years; ' ,
     'the Washington component has no independent abundance index. Preserve the component distinction and these ' ,
-    'limits; eligibility does not imply a pooled assessment or ready tinyAM translation.'),
+    'limits; eligibility does not imply a pooled assessment or ready.'),
   notes = paste0(
     'The June 2025 Council meeting record retains the current managed stock as Vermilion rockfish (OR/WA); the ' ,
     '2021 production assessments separately modeled Oregon (Stock SMART 15338) and Washington (15339), with ' ,
     'distinct state-area data and population outputs. They are linked as one candidate_unit_id and are not counted ' ,
     'as separate current stock units. Council and NMFS material identifies 2021 as the latest benchmark through ' ,
-    'the reviewed 2026 recommendations. This is an inventory screen only; no canonical records or tinyAM ' ,
+    'the reviewed 2026 recommendations. This is an inventory screen only.' ,
     'translation were added. Washington sources and provenance are cached in ' ,
     'source_cache/discovery_noaa_vermilion_rockfish_washington_2021/sources.csv.'))
 

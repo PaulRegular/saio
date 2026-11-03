@@ -137,7 +137,7 @@ review <- list(
     'IATTC describes the unit as the northern EPO/northeast Pacific, bounded north',
     'of 5 degrees S and east of 145 degrees W. The separate NOAA western and central',
     'Pacific striped marlin inventory row is not the same unit. No canonical values',
-    'were added and no tinyAM translation was attempted. Reports are cached under',
+    'were added was attempted. Reports are cached under',
     'source_cache/discovery_noaa_iattc_striped_marlin_2010/.'
   )
 )

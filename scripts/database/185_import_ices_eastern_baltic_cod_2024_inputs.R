@@ -5,7 +5,7 @@ assessment_id <- "ices_cod_eastern_baltic_2024"
 report_url <- "https://doi.org/10.17895/ices.pub.25764978"
 report_file <- file.path(cache, "WGBFAS_2024.pdf")
 expected_sha256 <- "AE2E5188E7AF13A8A5DB913771E83D23164F22BCD9C5B431101FA94F780C7478"
-dry_run <- identical(tolower(Sys.getenv("TINYAM_IMPORT_DRY_RUN")), "true")
+dry_run <- identical(tolower(Sys.getenv("SAIO_IMPORT_DRY_RUN")), "true")
 
 if (!requireNamespace("digest", quietly = TRUE) || !requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install digest and pdftools to import the cached report tables.", call. = FALSE)
@@ -161,8 +161,8 @@ if (assessments$inputs_status[assessment_index] != "not_started") {
 }
 assessments$inputs_status[assessment_index] <- "partial"
 assessments$notes[assessment_index] <- sub(
-  "Original observation inputs are not recovered, so this record is not ready for tinyAM fitting.",
-  "Some aggregate catch quantities are recovered, but the full model inputs remain unavailable, so this record is not ready for tinyAM fitting.",
+  "",
+  "Some aggregate catches are recovered, but full model inputs remain unavailable.",
   assessments$notes[assessment_index],
   fixed = TRUE
 )

@@ -134,7 +134,7 @@ if (nrow(existing)) {
   rows <- rows[FALSE, , drop = FALSE]
 }
 
-if (identical(Sys.getenv("TINYAM_DATABASE_DRY_RUN"), "true")) {
+if (identical(Sys.getenv("SAIO_DATABASE_DRY_RUN"), "true")) {
   cat("Dry run passed: ", nrow(rows), " new fitted predictions would be written.\n", sep = "")
   print(table(rows$type, rows$measure))
 } else if (nrow(rows)) {

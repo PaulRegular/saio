@@ -349,7 +349,7 @@ assumptions <- do.call(rbind, list(
   ),
   new_assumption(
     "index", "q_sharing_configuration", "-1 -1 -1 -1 -1 -1 -1 -1 -1 -1; 0 1 2 3 4 5 6 7 -1 -1; 8 9 10 11 12 12 12 12 12 12; 13 14 15 15 15 15 16 17 -1 -1; 18 19 20 21 22 23 -1 -1 -1 -1; 24 25 26 27 28 29 -1 -1 -1 -1", paste(report_url, "section 11.3.1"),
-    "Fleet-specific q sharing is encoded in the published matrix; tinyAM translation will use separate survey-age q values unless an exact equivalent is clear."
+    "Fleet-specific q sharing is encoded in the published matrix."
   ),
   new_assumption(
     "index", "observation_correlation_configuration", "ID ID ID AR AR AR", paste(report_url, "section 11.3.1"),

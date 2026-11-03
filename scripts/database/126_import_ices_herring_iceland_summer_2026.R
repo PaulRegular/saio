@@ -349,7 +349,7 @@ append_rows <- function(path, rows) {
 }
 append_rows(paths[["inputs"]], inputs_add)
 append_rows(paths[["outputs"]], outputs_add)
-if (identical(Sys.getenv("TINYAM_DATABASE_DRY_RUN"), "true")) {
+if (identical(Sys.getenv("SAIO_DATABASE_DRY_RUN"), "true")) {
   cat("Dry run passed: ", nrow(inputs_add), " inputs and ", nrow(outputs_add),
     " outputs validated; database files were not changed.\n", sep = "")
 } else {

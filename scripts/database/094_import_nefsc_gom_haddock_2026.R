@@ -239,4 +239,4 @@ append_new_rows(assumptions_path, assumptions)
 append_new_rows(outputs_path, outputs)
 
 cat("Imported partial official 2026 Gulf of Maine haddock catch, assumptions, summaries, and projections.\n")
-cat("Age-structured inputs and outputs remain unavailable; no tinyAM fit is implied.\n")
+cat("Age-structured inputs and outputs remain unavailable.")

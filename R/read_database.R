@@ -65,7 +65,7 @@ read_committed_database <- function() {
     function(name) {
       path <- file.path("database", name)
       tempfile_path <- tempfile(
-        pattern = "tinyAM_committed_database_",
+        pattern = "saio_committed_database_",
         fileext = ".csv"
       )
       on.exit(unlink(tempfile_path), add = TRUE)
@@ -85,7 +85,7 @@ read_committed_database <- function() {
         "^version https://git-lfs.github.com/spec/v1$", first_line
       )) {
         hydrated_path <- tempfile(
-          pattern = "tinyAM_committed_database_lfs_",
+          pattern = "saio_committed_database_lfs_",
           fileext = ".csv"
         )
         on.exit(unlink(hydrated_path), add = TRUE)

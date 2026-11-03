@@ -84,7 +84,7 @@ assumptions <- rbind(
   assumption("index", "stock_status_indicator", "Three-year moving mean, German Bank and Scots Bay", "Reported 2022-2024 mean is 296430 t; this is an acoustic index rather than a fitted SSB estimate.", "p. 5"),
   assumption("index", "2021_2024_revision", "Scots Bay acoustic estimates corrected for survey turnover", "Use the 2025 update's values; do not append newer values to an unchanged older acoustic series.", "p. 3"),
   assumption("index", "sampling_time", "unknown", "The summary gives spawning-season context but no verified numerical model timing. No midpoint is invented."),
-  assumption("assessment", "source_gaps", "Production 2019-2020 inputs, native fitted reference states and complete model configuration unavailable", "The archived source data cannot supply a current source-faithful tinyAM fit or N/F/M comparison."))
+  assumption("assessment", "source_gaps", "Production 2019-2020 inputs, native fitted reference states and complete model configuration unavailable", ""))
 assessment <- blank("assessments.csv")
 assessment$stock_id <- stock_id; assessment$assessment_year <- 2025
 assessment$terminal_year <- assessment$estimate_terminal_year <- 2024

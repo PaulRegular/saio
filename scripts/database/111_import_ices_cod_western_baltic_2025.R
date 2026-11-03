@@ -176,7 +176,7 @@ catch_weights <- input_rows(
   fleet = "Total catch",
   source_reference = paste0(model_url, "/run/model.RData; fit$data$weight"),
   transformation = "Copied the native SAM data weight without conversion.",
-  notes = "The model object assigns 1 through 2019 and 0.1 in 2020-2024. The report does not explain the weight's exact likelihood-scale interpretation; tinyAM's catch likelihood does not currently apply it."
+  notes = "The model object assigns 1 through 2019 and 0.1 in 2020-2024. The report does not explain the weight's exact likelihood-scale interpretation."
 )
 
 inputs <- do.call(rbind, c(list(observations, catch_weights), list(
@@ -206,8 +206,8 @@ assumptions <- do.call(rbind, list(
   assumption_rows("population", "years_and_ages", "1985-2025; ages 0-7", paste0(model_url, "/run/model.RData; fit$data and fit$pl"), "Catch observations end in 2024; the fitted model contains population estimates through 2025. Age 7 is the catch and survey plus group where configured."),
   assumption_rows("population", "terminal_catch_year", "2024", paste0(model_url, "/data/cn.dat"), "Catch ends in 2024; Q1 observations and the fitted population surface extend through 2025."),
   assumption_rows("population", "recruitment_age", "1", cfg_ref, "The report labels recruitment as age 1. No year shift is applied."),
-  assumption_rows("N", "process_variance_sharing", "Separate age 0; shared ages 1-7", cfg_ref, "SAM keyVarLogN assigns age 0 one variance and ages 1-7 another; tinyAM uses IID cohort deviations as an approximation."),
-  assumption_rows("N", "initial_state", "initState=0", cfg_ref, "Native SAM configuration; tinyAM uses its standard exponential initialization."),
+  assumption_rows("N", "process_variance_sharing", "Separate age 0; shared ages 1-7", cfg_ref, "SAM keyVarLogN assigns age 0 one variance and ages 1-7 another."),
+  assumption_rows("N", "initial_state", "initState=0", cfg_ref, "Native SAM configuration."),
   assumption_rows("F", "process", "Independent log-F states; corFlag=0", cfg_ref, "SAM estimates log-F state at ages 1-7; age 0 has no F state and ages 5-7 share one state. One process variance is shared across fitted ages."),
   assumption_rows("F", "Fbar_ages", "3-5", cfg_ref, "Native SAM Fbar age range. The report cautions that F is unreliable for this stock and uses harvest rate for advice."),
   assumption_rows("M", "process", "Fixed natural mortality", paste0(model_url, "/data/nm.dat; Table 2.3.21"), "M is not estimated by SAM; age-specific annual values are retained in inputs.csv."),
@@ -215,7 +215,7 @@ assumptions <- do.call(rbind, list(
   assumption_rows("catch", "observation_model", "Lognormal", cfg_ref, "Catch is represented on the log scale in SAM; ages 1 and 2-7 have separate observation-variance groups."),
   assumption_rows("catch", "observation_weights", "1 through 2019; 0.1 in 2020-2024", paste0(model_url, "/run/model.RData; fit$data$weight"), "Copied as source observation likelihood weights; their exact scaling interpretation is unresolved in the report."),
   assumption_rows("index", "observation_model", "Lognormal age-specific CPUE indices", cfg_ref, "The SAM fit uses the source log-index observations."),
-  assumption_rows("index", "observation_correlation", "BITS Q4: ID; BITS Q1: AR across ages; FEJUCS: ID", cfg_ref, "The Q1 age residual correlation is not represented in tinyAM."),
+  assumption_rows("index", "observation_correlation", "BITS Q4: ID; BITS Q1: AR across ages; FEJUCS: ID", cfg_ref, ""),
   assumption_rows("index", "catchability_age_groups", "BITS Q4 ages 0-4; BITS Q1 ages 1-4; FEJUCS age 0", cfg_ref, "SAM estimates q by available survey-age cell; no density-dependent q power is enabled."),
   assumption_rows("index", "survey_timing", "BITS Q4 0.8477816; BITS Q1 0.1653494; FEJUCS 0.85", paste0(model_url, "/run/model.RData; fit$data$sampleTimes"), "Sampling times are represented as fractions of the model year."),
   assumption_rows("biology", "maturity", "Fixed ogive; age 7+ = 1.00", paste0(tables_url, "; Table 2.3.20 and mo.dat"), "The report describes a fixed maturity ogive based on the 1998-2023 mean."),

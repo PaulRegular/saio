@@ -48,7 +48,7 @@ review <- list(
   ),
   timing_evidence = paste(
     'The model uses one annual 12-month season and three survey fleets. Verify the exact',
-    'within-year timing encoded by the final native input before assigning a tinyAM survey',
+    '',
     'fraction; do not infer it from the survey field season.'
   ),
   output_evidence = paste(

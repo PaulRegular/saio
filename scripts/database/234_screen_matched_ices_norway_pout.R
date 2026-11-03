@@ -13,12 +13,12 @@ x$eligibility[i] <- 'eligible'
 x$import_status[i] <- 'imported'
 x$catch_age_evidence[i] <- paste0(
   'The 2026 SESAM benchmark uses quarterly commercial catch-at-age for 1984-2025 Q3, ',
-  'ages 0-3+, in millions of fish. TinyAM annualizes complete observations through 2024.'
+  'ages 0-3+, in millions of fish.'
 )
 x$survey_age_evidence[i] <- paste0(
   'The fitted object contains 424 survey rows across five fleets, with age-specific and ',
   'one grouped ages-2-3+ series. Grouped rows are retained in the database and excluded ',
-  'from the current tinyAM likelihood.'
+  ''
 )
 x$weights_evidence[i] <- paste0(
   'Stock weights vary by age and quarter and are constant across years; catch weights vary ',
@@ -55,7 +55,7 @@ x$decision_reason[i] <- paste0(
 x$notes[i] <- paste0(
   'See source_reviews/ices_norway_pout_north_sea.md. The current ',
   'detailed benchmark is distinct from the 2025 production-advice assessment; grouped ',
-  'ages 2-3+ cannot be passed as individual ages to tinyAM.'
+  ''
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

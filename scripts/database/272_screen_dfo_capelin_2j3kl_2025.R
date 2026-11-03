@@ -70,7 +70,7 @@ review <- list(
     'as index-based and uses a forecast model for acoustic biomass. Catch-at-age',
     'is supporting fishery biology rather than a population-model likelihood, and',
     'the assessment does not provide population age surfaces or age-specific M.',
-    'It is therefore outside the current age-structured tinyAM comparison set.'
+    ''
   ),
   notes = paste(
     'The 2026/025 advice presents the 2025 survey and states that additional',

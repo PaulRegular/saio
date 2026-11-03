@@ -53,7 +53,7 @@ review <- list(
   timing_evidence = paste(
     'The FISS is an annual summer survey conducted across late May-September; the',
     'assessment is annual. Sources establish a seasonal window but not one common',
-    'within-year sampling fraction. Any single tinyAM timing would be an explicit',
+    'within-year sampling fraction.',
     'approximation, ideally using area/year survey dates.'
   ),
   output_evidence = paste(
@@ -75,7 +75,7 @@ review <- list(
   decision_reason = paste(
     'NOAA Stock SMART 11082 and the DFO Pacific halibut inventory entry refer to',
     'the same IPHC Convention Area resource spanning Canada and the United States;',
-    'neither maps to a canonical tinyAM stock, so these two inventory rows are one',
+    '',
     'provisional new unit. The current official assessment is IPHC-2026-SA-01, a',
     'four-model 2025 assessment. Public commercial age frequencies, area-specific',
     'landings, FISS age samples, an area-specific FISS abundance index, biology, and',

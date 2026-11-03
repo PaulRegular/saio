@@ -171,7 +171,7 @@ outputs <- rbind(
     summary$`Low Recruitment`, summary$`High Recruitment`, age = 3L,
     source_name = "Recruitment (age 3, thousands)", notes = "Age-3 recruitment. Bounds are preserved without assigning a confidence level."),
   summary_output("harvest_rate", "mortality", summary$HR, "proportion",
-    source_name = "Harvest rate", notes = "Reported harvest-rate series; not treated as a tinyAM mortality estimate.")
+    source_name = "Harvest rate", notes = "Reported harvest-rate series; not an instantaneous fishing-mortality estimate.")
 )
 
 N <- outputs[outputs$type == "population" & outputs$measure == "numbers_at_age", , drop = FALSE]
@@ -188,7 +188,7 @@ derive_total_N <- function(min_age, max_age, measure, note) {
   )
 }
 derived_N <- rbind(
-  derive_total_N(3, 14, "total_numbers", "Derived by summing N-at-age over ages 3-14, matching the tinyAM age grid; uncertainty is unavailable."),
+  derive_total_N(3, 14, "total_numbers", "Derived by summing N-at-age over ages 3-14; uncertainty is unavailable."),
   derive_total_N(1, 14, "total_numbers_all_ages", "Derived by summing N-at-age over all reported ages 1-14; uncertainty is unavailable and this definition differs from the translated age range.")
 )
 outputs <- rbind(outputs, derived_N)

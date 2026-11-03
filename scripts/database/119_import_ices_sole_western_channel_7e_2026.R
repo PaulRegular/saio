@@ -378,8 +378,8 @@ assumptions$notes <- c(
   "Index observations older than 15 years are excluded/downweighted by the XSA taper.",
   "The report's 2026 settings table configures all four fleets on ages 3-11; specific year ranges differ by fleet.",
   "XSA catchability is constrained to a plateau from age 7.",
-  "Stored alpha/beta timing windows are not exact single sampling times; the tinyAM recipe uses interval midpoints.",
-  "The assessment specifies lognormal index fits; tinyAM uses its available index likelihood, with zero per-age values omitted from fitting.",
+  "Stored alpha/beta timing windows are not exact single sampling times.",
+  "The assessment specifies lognormal index fits.",
   "Natural mortality is fixed at 0.1 for all modeled ages and years; not estimated.")
 
 assessment_row <- data.frame(

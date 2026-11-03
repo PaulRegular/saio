@@ -167,7 +167,7 @@ input_rows[[length(input_rows) + 1L]] <- add_aggregate_input(
   "total_biomass", "biomass", "Range-wide egg/ichthyoplankton SSB index",
   egg_ssb[, 1L], egg_ssb[, 2L], "metric tons",
   paste(source_name, "Table A40, report pp. 113-114"),
-  "Combined U.S.-Canadian survey SSB estimates; the source table has years without an estimate. This aggregate index is preserved in the database but excluded from the tinyAM age-specific fit."
+  "Combined U.S.-Canadian survey SSB estimates; the source table has years without an estimate."
 )
 inputs_add <- do.call(rbind, input_rows)
 
@@ -337,12 +337,12 @@ assumptions_add <- data.frame(
     "Current detailed assessment in the canonical database; the newer 2025 assessment is retained separately as summary-only.",
     "Age 10 is treated as 10+ as specified by the official model.",
     "The assessment did not identify a stock-recruitment relationship for projections; its annual assessment recruitment series is the age-1 population estimate.",
-    "tinyAM uses the published combined catch-at-age once; the original model's catch likelihood and age-composition treatment are simplified.",
+    "the original model's catch likelihood and age-composition treatment are simplified.",
     "The table's fully recruited F is the common value at ages 6-10+.",
-    "tinyAM estimates an age-time F surface with an AR1 process instead of the official single time-invariant selectivity curve.",
+    "",
     "This fixed value is retained as an input and repeated in outputs only as the explicit fixed model surface; it was not estimated.",
-    "The official model uses the Canadian maturity surface; tinyAM applies it directly to all combined-stock ages.",
-    "The reported combined catch/SSB weights are used for tinyAM SSB; these are not January-1 weight-at-age.",
+    "The official model uses the Canadian maturity surface.",
+    "these are not January-1 weight-at-age.",
     "Albatross ages 3-10 and Bigelow ages 3-7 are retained in the translation; age rows outside the official series are kept in the database.",
     "The aggregate SSB index cannot be translated into age-specific indices without inventing an age composition, so the fit excludes it.",
     "This is a constant approximation from the report's time-series average, not annual sampling-date information.",

@@ -49,7 +49,7 @@ review <- data.frame(
     'The random-effects biomass model uses a fixed mortality rate for harvest specifications, not an estimated age-specific M surface.',
     'The complex combines Tier 5 and Tier 6 components; it has no common age-specific M process.'),
   timing_evidence = rep(
-    'Catch and survey information is annual or summarized over survey periods. The reviewed sources do not specify one fractional survey timing for a tinyAM age-structured model.',
+    'Catch and survey information is annual or summarized over survey periods.',
     4L),
   output_evidence = c(
     'Official outputs are catch-based harvest specifications and complex/component status summaries, not annual age-specific abundance, fishing mortality, recruitment, or spawning biomass trajectories.',

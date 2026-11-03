@@ -180,7 +180,7 @@ if (grepl(old_configuration_note, assessment_note, fixed = TRUE)) {
   )
 }
 
-if (identical(Sys.getenv("TINYAM_DATABASE_DRY_RUN"), "true")) {
+if (identical(Sys.getenv("SAIO_DATABASE_DRY_RUN"), "true")) {
   cat("Dry run passed: ", updated_n, " N and ", updated_f,
     " F rows require conditional uncertainty updates.\n", sep = "")
 } else {

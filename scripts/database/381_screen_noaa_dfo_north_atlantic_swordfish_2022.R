@@ -95,7 +95,7 @@ review <- list(
     'meeting assessed Mediterranean and South Atlantic swordfish and addressed North Atlantic MSE, not',
     'a new North Atlantic stock-status run. Cached URLs, revisions, retrieval date, file sizes, and',
     'SHA-256 checksums are recorded under source_cache/discovery_swordfish_north_atlantic_2022/.',
-    'No canonical numerical records or tinyAM translation were added.')
+    'No canonical numerical records were added.')
 )
 
 initial <- vapply(rows, function(i) register$match_status[i] == 'unreviewed' &&

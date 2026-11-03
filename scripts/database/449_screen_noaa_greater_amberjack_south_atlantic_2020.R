@@ -93,7 +93,7 @@ review <- list(
   mortality_evidence = 'SAR Table 1 reports age-dependent natural mortality treated as input. The assessment uses the Charnov et al. curve based on updated von Bertalanffy growth; M is not a time-varying estimated process.',
   timing_evidence = paste('All three indices enter as year-level annual observations; the report does not specify one within-year observation fraction.',
     'Index methods retain seasonal structure: headboat data exclude November-April in the terminal closure period, commercial handline standardization uses May-June and July-September seasons, and the video index models season from Julian-day quartiles.',
-    'A single tinyAM timing fraction would require an explicit documented approximation.'),
+    ''),
   output_evidence = 'The final SAR reports estimated abundance at age (Table 6, 1000 fish, ages 1-10, 1980-2017), biomass at age (Table 7, 1000 lb), and status outputs including recruitment, SSB, and F (Table 8 and figures).',
   detailed_source_url = paste('https://www.fisheries.noaa.gov/species/greater-amberjack/resources;',
     'https://sedarweb.org/assessments/sedar-59/;',

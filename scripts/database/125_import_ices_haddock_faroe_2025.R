@@ -273,7 +273,7 @@ assumptions <- do.call(rbind, list(
   assumption_rows("index", "observation_model", "Lognormal age-specific indices",
     cfg_reference, "Native index values and scales are retained."),
   assumption_rows("index", "observation_correlation", "Catch ID; summer AR(1); spring AR(1)",
-    cfg_reference, "The translated tinyAM model uses independent index residuals."),
+    cfg_reference, ""),
   assumption_rows("index", "catchability_age_groups",
     "Summer: ages 1–6 distinct, ages 7–8 shared; spring: ages 1–5 distinct, ages 6–7 shared",
     cfg_reference, "Read from keyLogFpar; no q parameter is fitted for unsampled ages."),

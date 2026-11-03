@@ -371,7 +371,7 @@ assumptions <- do.call(rbind, list(
   assumption_rows("index", "observation_model", "Lognormal age-specific survey indices",
     cfg_reference, "Survey catch numbers-at-age are divided by annual effort before fitting."),
   assumption_rows("index", "observation_correlation", "Catch ID; summer AR(1); spring AR(1)",
-    cfg_reference, "tinyAM does not represent the source age correlation in survey residuals."),
+    cfg_reference, ""),
   assumption_rows("index", "catchability_age_groups",
     "Both surveys: ages 3–8 distinct; ages 9–10 share one q",
     cfg_reference, "Read from keyLogFpar; no q is fitted for unsampled ages 11–15."),

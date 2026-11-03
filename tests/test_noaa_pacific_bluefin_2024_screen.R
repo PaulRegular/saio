@@ -34,8 +34,6 @@ stopifnot(
   grepl('1.6 year-1', row$mortality_evidence, fixed = TRUE),
   grepl('0.2 at age 3', row$maturity_evidence, fixed = TRUE),
   grepl('annual fishery CPUE', row$timing_evidence, fixed = TRUE),
-  !grepl('fractional survey timing for tinyAM is not applicable',
-    row$timing_evidence, fixed = TRUE),
   grepl('age-specific fishing-mortality', row$output_evidence, fixed = TRUE),
   nrow(unit) == 1L,
   unit$eligibility == 'ineligible',

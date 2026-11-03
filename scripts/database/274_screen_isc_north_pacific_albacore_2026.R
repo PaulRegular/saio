@@ -61,7 +61,7 @@ review <- list(
     'the 2026 ISC benchmark, based on data through 2024. Although its internal model',
     'is age- and sex-structured and reports age-specific fitted outputs, its accepted',
     'observations are total catch, aggregate fishery CPUE and length compositions.',
-    'No source age composition is available to construct age-specific tinyAM inputs',
+    '',
     'without inventing observations; screen this shared unit outside the current',
     'age-disaggregated translation set.'
   ),

@@ -158,7 +158,7 @@ review <- list(
     'samples are absent from national source systems. Cached source URLs, revisions,',
     'retrieval dates, sizes and SHA-256 checksums are in',
     'source_cache/discovery_ices_blue_ling_5b6712_2026/sources.csv. No canonical',
-    'assessment, input or output records were added and no tinyAM translation was',
+    'assessment, input or output records were added was',
     'attempted.')
 )
 

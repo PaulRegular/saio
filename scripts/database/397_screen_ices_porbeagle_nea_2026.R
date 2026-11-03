@@ -98,7 +98,7 @@ review <- data.frame(
   notes = paste('The advice applies to 2027-2030 and is the current 2026 ICES assessment of the Northeast',
     'Atlantic and adjacent-waters porbeagle unit. Current advice and Standard Graphs pages, retrieval',
     'date, revisions, byte sizes, and SHA-256 checksums are recorded under',
-    'source_cache/discovery_ices_porbeagle_nea_2026/. No canonical numerical records or tinyAM',
+    'source_cache/discovery_ices_porbeagle_nea_2026/.',
     'translation were added.'),
   stringsAsFactors = FALSE,
   check.names = FALSE)

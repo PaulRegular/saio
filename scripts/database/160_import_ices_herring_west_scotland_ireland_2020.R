@@ -7,7 +7,7 @@ report_url <- "https://doi.org/10.17895/ices.pub.6105"
 prior_report_url <- "https://doi.org/10.17895/ices.pub.5460"
 framework_url <- "https://doi.org/10.17895/ices.pub.5261"
 taf_url <- "https://taf.ices.dk/app/stock#!/"
-dry_run <- identical(tolower(Sys.getenv("TINYAM_IMPORT_DRY_RUN")), "true")
+dry_run <- identical(tolower(Sys.getenv("SAIO_IMPORT_DRY_RUN")), "true")
 
 verify <- function(file, expected) {
   path <- file.path(cache, file)
@@ -362,7 +362,7 @@ assumptions <- do.call(rbind, list(
     "M-at-age is an input, not an estimated SAM output."),
   assumption("index", "catchability_sharing", "Age-specific q within each survey; ages 8 and 9 share q; no q for absent survey-age cells", paste(report_url, "Table 4.6.10")),
   assumption("index", "observation_error", "Lognormal likelihood; MS_HERAS age-specific SD groups and Q1/Q4 age groups; AR(1) residual correlation for the three survey fleets", paste(report_url, "Table 4.6.10"),
-    "The tinyAM fit uses separate survey/age SD groups but does not reproduce the source AR(1) residual correlations across ages."),
+    ""),
   assumption("biology", "spawning", "F and M fractions before spawning are each 0.67 at every modeled age and year", paste(report_url, "Tables 4.6.5-4.6.7"),
     "The translation uses spawn_time=0.67, consistent with both source fractions."),
   assumption("index", "survey_timing", "MS_HERAS 0.52-0.57; IBTS_Q1 0.00-0.25; IBTS_Q4 0.75-1.00", paste(report_url, "Table 4.6.8"),

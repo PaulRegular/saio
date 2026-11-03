@@ -18,7 +18,7 @@ x$catch_age_evidence[i] <- paste0(
 x$survey_age_evidence[i] <- paste0(
   'The assessment includes age-specific UK BTS indices for ages 1-6, UK YFS age 1, and ' ,
   'French YFS age 1. Three commercial LPUE biomass indices are also documented, but are ' ,
-  'not age-specific and are not directly represented by tinyAM.'
+  ''
 )
 x$weights_evidence[i] <- paste0(
   'Catch and stock weights-at-age cover 1982-2025; stock weights for 1982-2003 are ' ,
@@ -31,7 +31,7 @@ x$mortality_evidence[i] <- paste0(
   'Natural mortality is fixed at 0.1 per year.'
 )
 x$timing_evidence[i] <- paste0(
-  'The 2025 stock annex gives survey timing windows of 0.5-0.75; the reviewed tinyAM recipe ' ,
+  'The 2025 stock annex gives survey timing windows of 0.5-0.75.' ,
   'uses their midpoint, 0.625, as an explicit approximation.'
 )
 x$output_evidence[i] <- paste0(
@@ -51,11 +51,11 @@ x$decision_reason[i] <- paste0(
   'Matched to the current ICES 7.d sole unit and its detailed 2026 assessment. Age-disaggregated ' ,
   'catch and tuning indices, biology, fixed M, timing windows and official population outputs are ' ,
   'recovered. Commercial aggregate biomass indices and SAM-specific variance sharing are not ' ,
-  'fully representable in tinyAM; those are translation limits rather than missing age inputs.'
+  'those are translation limits rather than missing age inputs.'
 )
 x$notes[i] <- paste0(
   'See source_reviews/ices_sole_eastern_channel_7d_2026.md. The source ' ,
-  'review records unresolved SSB-at-age table discrepancies and a non-converged tinyAM fit; neither ' ,
+  '' ,
   'is a reason to alter the official inputs or suppress the source-based eligibility classification.'
 )
 

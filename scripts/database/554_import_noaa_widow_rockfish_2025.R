@@ -390,7 +390,7 @@ add_assumption("biology", "age_at_50_percent_maturity", "5.47 years",
 add_assumption("biology", "maturity_and_fecundity",
   "Fitted biological relationships; no standalone maturity-at-age input series",
   paste0(report_ref, "BIOLOGY report:42; Biology_at_age_in_endyr report:47"),
-  "Spawning output is not interchangeable with tinyAM SSB without a documented common definition.")
+  "")
 add_assumption("recruitment", "steepness", "0.72 fixed",
   source_ref, "Stock-recruit steepness is fixed in the base model.")
 add_assumption("recruitment", "recruitment_SD", "0.60",

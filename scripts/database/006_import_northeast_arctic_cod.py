@@ -112,7 +112,7 @@ assumption('population','initial_state','initState=0: no explicit first-state pr
 assumption('recruitment','treatment','Stochastic log recruitment; no stock–recruit relationship','stockRecruitmentModelCode=0; no constant recruitment breaks.')
 assumption('N','process_variance_sharing','Age 3 separate; ages 4–15 share a variance','keyVarLogN=0,1,1,1,1,1,1,1,1,1,1,1,1')
 assumption('F','state_sharing','Separate ages 3–13; ages 14 and 15 share a state','keyLogFsta=0,1,2,3,4,5,6,7,8,9,10,11,11',fleet='Residual catch')
-assumption('F','process','Independent log-F random-walk innovations across represented age states','corFlag=0; this source-model process is not tinyAM approx_rw.',fleet='Residual catch',reference=run+'conf/model.cfg')
+assumption('F','process','Independent log-F random-walk innovations across represented age states','corFlag=0; independent log-F random-walk innovations across represented age states.',fleet='Residual catch',reference=run+'conf/model.cfg')
 assumption('F','process_variance_sharing','Age 3 separate from older represented F states','keyVarF determines the two innovation variances.',fleet='Residual catch')
 assumption('F','Fbar_age_range','5–10')
 assumption('M','treatment','Fixed input within SAM: background 0.2 plus external iterative cannibalism mortality',reference=report+'; section 3.3; Table 3.17')

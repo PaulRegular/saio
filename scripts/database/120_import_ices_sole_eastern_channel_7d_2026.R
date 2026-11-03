@@ -358,7 +358,7 @@ commercial_inputs <- do.call(rbind, lapply(names(commercial), function(name) {
       x$value, "native relative biomass index (scale unit unresolved)", fleet = name,
       source_reference = paste(report_ref, paste0("Table 17.", match(name, names(commercial)) + 6L)),
       transformation = "Transcribed directly from the commercial LPUE series; no rescaling or conversion to absolute biomass.",
-      notes = "The SAM treats this as a fishable-stock-biomass index. tinyAM has no aggregate FSB-index likelihood; it remains in the database and is excluded from the translation."
+      notes = "The SAM treats this as an aggregate fishable-stock-biomass index, not an age-specific index."
     ),
     input_rows(
       "covariate", "effort", "native_covariate", x$year, NA_integer_, x$effort,
@@ -452,9 +452,9 @@ assumption_values <- data.frame(
     "SAM configuration keyLogFpar, survey fleets.",
     "SAM configuration keyVarObs, all fleets.",
     "SAM configuration obsCorStruct and keyCorObs.",
-    "The tinyAM translation uses the midpoint 0.625 as a single survey-time approximation.",
+    "The fraction 0.625 is a survey-window midpoint approximation.",
     "The assessment's biomass-index timing interval is not a point time.",
-    "Commercial series are retained as inputs but not fitted by tinyAM.",
+    "Commercial series are retained as source inputs.",
     "The source table also retains excluded BTS cells for provenance.",
     "SAM keyQpow is empty.",
     "Annual stock weight surface is published in Table 17.6.",
@@ -551,7 +551,7 @@ assessment_row <- data.frame(
     "The detailed report provides the full input tables, SAM settings, at-age outputs, and aggregate summary; source tables are rounded.",
     "Table 17.19 SSB-at-age values for 2021-2025 do not sum to Table 17.16 annual SSB and appear misaligned; the raw table is preserved and output completeness is partial.",
     "The pinned public TAF repository contains processing/configuration code but does not track bootstrap input data or the fitted SAM object.",
-    "The three commercial fishable-stock-biomass indices are preserved, although tinyAM cannot fit that aggregate observation structure.",
+    "The three commercial fishable-stock-biomass indices are preserved as aggregate source inputs.",
     "See source_reviews/ices_sole_eastern_channel_7d_2026.md."
   ),
   stringsAsFactors = FALSE

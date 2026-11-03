@@ -236,7 +236,7 @@ ssb_weight_rows <- data.frame(
   source_type = "official_table",
   source_reference = "66th SAW 2018 assessment, Table A90, report p. 241",
   transformation = "Use the published November spawning-stock-biomass weights at age.",
-  notes = "These are 2013-2017 mean SSB weights, not annual historical stock weights. The tinyAM translation treats this published reference-period schedule as constant across its fitted years.",
+  notes = "These are 2013-2017 mean SSB weights, not annual historical stock weights.",
   observation_id = "", length_bin = NA_real_, length_bin_lower = NA_real_,
   length_bin_upper = NA_real_, sample_size = NA_real_, age_error = NA_real_,
   partition = NA_real_, stringsAsFactors = FALSE
@@ -387,7 +387,7 @@ assumptions_add <- rbind(assumptions_add, data.frame(
   setting = "spawning_weight_schedule",
   value = "2013-2017 mean November SSB weights at age, ages 0-7+",
   source_reference = "66th SAW 2018 assessment, Table A90, report p. 241",
-  notes = "The values are preserved as a static source schedule for tinyAM because an annual SSB-weight surface is not transcribed from the assessment report.",
+  notes = "Values are preserved as a static source schedule; an annual SSB-weight surface is not transcribed from the assessment report.",
   stringsAsFactors = FALSE
 ))
 

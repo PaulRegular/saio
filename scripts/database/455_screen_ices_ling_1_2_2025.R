@@ -121,7 +121,7 @@ review <- list(
     'https://doi.org/10.17895/ices.pub.29086478.v3'),
   review_date = '2026-10-31',
   decision_reason = paste('This is a distinct new Northeast Arctic stock unit. The latest public advice is the 2025 ICES advice for 2026–2027; its linked 2025 SAG assessment is Category 3.21 with ModelType None and ModelName Other. The official output is aggregate longline CPUE, landings, and a length-based fishing-pressure proxy, without age-specific assessment outputs. It is ineligible for the age-disaggregated assessment set, while remaining in the discovery register. This decision describes the reviewed assessment products; it does not claim that age samples are absent from all national source systems.'),
-  notes = paste('The ICES advice was posted 2025-06-12. The 2025 SAG source describes stock size as B_index and the unit as kilograms per 1,000 hooks; do not interpret this series as SSB. The current outputs do not provide a comparable age-structured population trajectory for tinyAM. No canonical stock, assessment, input, or output records were added. Source files, revisions, retrieval dates, sizes, and SHA-256 hashes are in the gitignored local cache at source_cache/discovery_ices_ling_1_2_2025.')
+  notes = paste('The ICES advice was posted 2025-06-12. The 2025 SAG source describes stock size as B_index and the unit as kilograms per 1,000 hooks; do not interpret this series as SSB. No canonical stock, assessment, input, or output records were added. Source files, revisions, retrieval dates, sizes, and SHA-256 hashes are in the gitignored local cache at source_cache/discovery_ices_ling_1_2_2025.')
 )
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&

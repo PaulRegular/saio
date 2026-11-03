@@ -135,7 +135,7 @@ review <- list(
     'The 2026 update adds 2024-2025 catch, longline index, and length',
     'composition data to the 2024 benchmark without other model modifications.',
     'The 36 reference models are reported as converged with positive-definite',
-    'Hessians. No canonical database values were imported and no tinyAM',
+    'Hessians.',
     'translation was attempted. The public report is cached locally under',
     'source_cache/discovery_noaa_iattc_bigeye_2026/ with its retrieval date',
     'and SHA-256 in sources.csv.'

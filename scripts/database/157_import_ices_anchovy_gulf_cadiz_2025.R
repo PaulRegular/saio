@@ -197,7 +197,7 @@ assessment$is_current <- assessment$is_applied <- "TRUE"; assessment$framework_y
 assessment$assessment_url <- advice_url; assessment$framework_url <- annex_url
 assessment$data_url <- sag_url; assessment$repository_url <- repo_url
 assessment$assumptions_status <- assessment$inputs_status <- assessment$outputs_status <- "partial"
-assessment$notes <- "Current southern stock following 2024 split of former Division 9.a unit. Verified 2025 report/SAG values only; 2025 includes assumed interim catch and omits fishery age compositions/weights. Missing native seasonal compositions/weights prevent a defensible tinyAM fit. Older MSE object kept separately, not imported. See source_reviews/ices_anchovy_gulf_cadiz.md."
+assessment$notes <- "Current southern stock following 2024 split of former Division 9.a unit. Verified 2025 report/SAG values only; 2025 includes assumed interim catch and omits fishery age compositions/weights. Older MSE object kept separately, not imported. See source_reviews/ices_anchovy_gulf_cadiz.md."
 stocks <- read.csv(file.path(database, "stocks.csv"), colClasses = "character", na.strings = "", check.names = FALSE)
 stock <- blank("stocks.csv"); stock$stock_id <- stock_id; stock$charbonneau_id <- NA_character_
 stock$authority <- "ICES"; stock$authority_stock_id <- "ane.27.9aS"

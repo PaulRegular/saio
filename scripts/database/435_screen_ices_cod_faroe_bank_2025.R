@@ -98,7 +98,7 @@ review <- list(
     '(Subdivision 5.b.1), which is already represented in the canonical database. No exact canonical stock match',
     'or verified Charbonneau–Keith match was found. The official ICES advice PDF and ICES Standard Graphs source',
     'page, including retrieval dates and checksums, are cached under',
-    'source_cache/discovery_ices_cod_faroe_bank/. No canonical data or tinyAM translation were added.')
+    'source_cache/discovery_ices_cod_faroe_bank/. No canonical data were added.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

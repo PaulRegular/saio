@@ -73,7 +73,7 @@ review <- list(
   decision_reason = paste('The latest detailed assessment located is in the 2025 WGEF report. It updates the',
     'length-based assessment using 2023-2024 length observations and aggregate survey biomass indices. The production assessment does not use age-disaggregated inputs or report age-specific population outputs, so this unit is ineligible for the age-disaggregated set. This does not establish that age samples are absent outside the assessment.'),
   notes = paste('The 2025 WGEF report explicitly states that a new assessment was done for this stock in',
-    '2025. ICES did not receive a request for fishing-opportunity advice for 2026-2027; the report presents the assessment indicators and rule-based calculation. The candidate is a distinct ICES unit and has no exact match in the canonical stock table. The report PDF is cached under source_cache/discovery_ices_dogfish_2025/ with retrieval date and SHA-256 in sources.csv. No canonical data or tinyAM translation were added.')
+    '2025. ICES did not receive a request for fishing-opportunity advice for 2026-2027; the report presents the assessment indicators and rule-based calculation. The candidate is a distinct ICES unit and has no exact match in the canonical stock table. The report PDF is cached under source_cache/discovery_ices_dogfish_2025/ with retrieval date and SHA-256 in sources.csv. No canonical data were added.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

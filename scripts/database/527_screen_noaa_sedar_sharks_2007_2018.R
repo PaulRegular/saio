@@ -100,7 +100,7 @@ life_history_m <- paste(
 annual_timing <- paste(
   'Catch and abundance series are annual or season-specific. The reviewed',
   'assessment documentation does not provide a single source-supported',
-  'fractional survey timing that maps to tinyAM.' )
+  '' )
 
 reviews <- rbind(
   review_row('NOAA:10670', 'noaa_atlantic_sharpnose_combined', 'new',
@@ -163,7 +163,7 @@ reviews <- rbind(
     life_history_weights,
     'Maturity-at-age and pup production are life-history inputs described in the report.',
     life_history_m,
-    'The assessment uses within-year/monthly dynamics, but a single survey fraction for the aggregate indices is not specified for tinyAM conversion.',
+    '',
     'The report describes an age-structured model and population outputs, but NOAA Stock SMART marks the 2013 model as remanded. It is not a fully accepted age-specific output set.',
     paste('https://apps-st.fisheries.noaa.gov/stocksmart/?stockid=10692', sedar34_bonnethead_url, sedar13_url, sep = '; '),
     'Ineligible: the age frequencies were used to construct selectivity rather than fitted as observed catch-at-age, and Stock SMART records the 2013 run as remanded.',

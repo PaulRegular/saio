@@ -21,13 +21,13 @@ x$catch_age_evidence[i] <- paste(
   'Fishery length compositions and conditional age-at-length samples are',
   'available, with marginal fishery age compositions in some years. These',
   'are composition observations, not annual observed catch-at-age; any',
-  'tinyAM catch-age series requires a documented reconstruction.'
+  ''
 )
 x$survey_age_evidence[i] <- paste(
   'The native model has recreational and survey indices, length compositions,',
   'and survey conditional age-at-length observations, including WCGBTS and',
   'IPHC data. The source does not provide a direct age-specific abundance',
-  'index; age-indexed tinyAM observations require an explicit reconstruction',
+  '',
   'from aggregate indices and compositions.'
 )
 x$weights_evidence[i] <- paste(

@@ -312,13 +312,13 @@ input_parts <- c(obs_rows, list(
     "kg per fish", years, ages,
     paste0(model_url, "; fit$data$stockMeanWeight; data/sw.dat"),
     "Copied annual SAM stock-weight observations.",
-    notes = "The source SAM estimates a stock-weight process from these annual observations; tinyAM treats the supplied values as fixed weights."
+    notes = "The source SAM estimates a stock-weight process from these annual observations."
   ),
   matrix_input(dat$catchMeanWeight, "catch_weight", "weight_at_age", "kg_per_fish",
     "kg per fish", years, ages,
     paste0(model_url, "; fit$data$catchMeanWeight; data/cw.dat"),
     "Copied annual SAM catch-weight observations.",
-    notes = "The source SAM estimates a catch-weight process from these annual observations; tinyAM treats the supplied values as fixed weights."
+    notes = "The source SAM estimates a catch-weight process from these annual observations."
   ),
   matrix_input(dat$landMeanWeight, "catch_weight", "landings_weight_at_age", "kg_per_fish",
     "kg per fish", years, ages,

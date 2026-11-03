@@ -116,7 +116,7 @@ review <- list(
     'fixed assumption rather than an estimated age-specific M output.'),
   timing_evidence = paste('The report identifies the spring survey in March and stock weights',
     'from the autumn survey in October. These provide seasonal timing; a month-midpoint',
-    'fractional-year convention is an approximation if used for a tinyAM translation.'),
+    'fractional-year convention is an approximation if used for a.'),
   output_evidence = paste('ICES 2026 Standard Graphs report recruitment at age 5 (thousands),',
     'SSB (tonnes), and F for ages 6-14 with uncertainty. The source reports aggregate',
     'population/mortality outputs, not annual N-at-age or F-at-age surfaces.'),

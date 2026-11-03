@@ -23,7 +23,7 @@ x$catch_age_evidence[i] <- paste(
   'the combined trawl fishery has age-frequency observations. The 2019 report',
   'shows weighted catch age proportions in figures, not a numeric array; the',
   'other-fishery removals cannot be allocated at age without an unsupported',
-  'assumption. A complete tinyAM catch-at-age series is therefore unresolved.'
+  'assumption.'
 )
 x$survey_age_evidence[i] <- paste(
   'The assessment uses six fishery-independent biomass-index series, four',

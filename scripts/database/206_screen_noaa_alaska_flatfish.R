@@ -56,7 +56,7 @@ x$timing_evidence[i] <- c(
   'The assessment uses annual BSAI trawl-survey observations; a fractional within-year timing is not established by the reviewed source.',
   'Annual assessment and survey timing details are recorded in the existing source review; no new age-specific catch observation is supported.',
   'The GOA bottom-trawl survey is a summer survey; the report does not give a single observation fraction for the annual model, so translation timing would be an explicit approximation.',
-  'Bering Sea and Aleutian Islands trawl surveys are summer surveys in a one-season annual assessment; an exact tinyAM fractional timing is not specified in the brief update.',
+  'Bering Sea and Aleutian Islands trawl surveys are summer surveys in a one-season annual assessment.',
   'The GOA bottom-trawl survey is conducted in summer; any fractional timing would need to be stated as an approximation.'
 )
 x$output_evidence[i] <- c(

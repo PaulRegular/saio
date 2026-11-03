@@ -26,7 +26,7 @@ x$survey_age_evidence[i] <- paste(
   'abundance series with age and length information from fishery-independent',
   'sampling. Survey index observations are recorded in July in the native',
   'data. The model does not directly fit age-specific abundance indices;',
-  'an age-indexed tinyAM series would require a documented reconstruction.'
+  ''
 )
 x$weights_evidence[i] <- paste(
   'The native natage.csv provides year-specific length-at-age growth input,',

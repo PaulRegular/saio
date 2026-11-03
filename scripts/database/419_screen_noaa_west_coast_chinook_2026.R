@@ -158,7 +158,7 @@ review_values <- lapply(seq_along(rows), function(i) {
       screens$stock_id[i]),
     review_date = '2026-10-30', decision_reason = reason,
     notes = paste0('Candidate identity is based on distinct NOAA Stock SMART stock ID ',
-      screens$stock_id[i], ' and the matching stock name and scientific name in the 2026 operational metadata; no canonical Oncorhynchus tshawytscha stock exists in the current database. Stock SMART metadata are cached at the NOAA-EDAB source revision in discovery_noaa_stocksmart/sources.csv. The current PFMC reports and NOAA data dictionary are cached under source_cache/discovery_noaa_puget_sound_chinook_2026/sources.csv. Metadata are screening evidence only; no numerical records or tinyAM observations were added.')
+      screens$stock_id[i], 'and the matching stock name and scientific name in the 2026 operational metadata; no canonical Oncorhynchus tshawytscha stock exists in the current database. Stock SMART metadata are cached at the NOAA-EDAB source revision in discovery_noaa_stocksmart/sources.csv. The current PFMC reports and NOAA data dictionary are cached under source_cache/discovery_noaa_puget_sound_chinook_2026/sources.csv. Metadata are screening evidence only.')
   )
 })
 

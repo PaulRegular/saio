@@ -39,7 +39,7 @@ x$mortality_evidence[i] <- c(
   'Natural mortality is estimated in the model; the author-preferred m24 reports M near 0.0595 and includes an M prior likelihood. The estimate is not a fixed input.'
 )
 x$timing_evidence[i] <- c(
-  'The model uses annual BSAI bottom-trawl survey observations. The reports identify survey years but do not establish a single within-year observation fraction; a tinyAM timing fraction would need to be documented as an approximation.',
+  'The model uses annual BSAI bottom-trawl survey observations. The reports identify survey years but do not establish a single within-year observation fraction.',
   'The model uses annual GOA bottom-trawl survey biomass and age-composition observations. The report gives survey years but not one fractional observation timing for the annual model; any fraction used in translation would be an explicit approximation.'
 )
 x$output_evidence[i] <- c(

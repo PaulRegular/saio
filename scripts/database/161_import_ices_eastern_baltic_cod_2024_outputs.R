@@ -6,7 +6,7 @@ assessment_id <- "ices_cod_eastern_baltic_2024"
 report_url <- "https://doi.org/10.17895/ices.pub.25764978"
 report_file <- file.path(cache, "WGBFAS_2024.pdf")
 expected_sha256 <- "AE2E5188E7AF13A8A5DB913771E83D23164F22BCD9C5B431101FA94F780C7478"
-dry_run <- identical(tolower(Sys.getenv("TINYAM_IMPORT_DRY_RUN")), "true")
+dry_run <- identical(tolower(Sys.getenv("SAIO_IMPORT_DRY_RUN")), "true")
 
 if (!requireNamespace("digest", quietly = TRUE) || !requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install digest and pdftools to import the cached report tables.", call. = FALSE)
@@ -291,7 +291,7 @@ assessment[1L, ] <- list(
     "The model terminal year is 2024 to include BITS Q1 data; 2024 catch was assumed equal to 2023 catch.",
     "The 2025 WGBFAS report republishes the age-specific tables as not updated in 2024, and no newer numerical N/F-at-age tables were found.",
     "The 2026 advice uses a survey-index trend method and is recorded in the source review; it does not provide an age-structured output surface.",
-    "Original observation inputs are not recovered, so this record is not ready for tinyAM fitting."
+    ""
   )
 )
 assessment <- assessment[, assessment_header, drop = FALSE]

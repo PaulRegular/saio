@@ -158,7 +158,7 @@ review <- list(
     'source-data page, and advice record 3935 identify assessment key 19486. The',
     'SAG export contains 22 annual fish-data rows for 2003-2024, with only landings',
     'and discards populated. No canonical assessment, input, or output records were',
-    'added and no tinyAM translation was attempted.'))
+    'added was attempted.'))
 
 current <- lapply(names(review), function(column)
   as.character(candidates[[column]][row]))

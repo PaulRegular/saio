@@ -56,7 +56,7 @@ x$decision_reason[i] <- paste0(
 )
 x$notes[i] <- paste0(
   'See source_reviews/ices_plaice_english_channel_7d_2026.md. ',
-  'The 2026 record is distinct from the historical 2025 tinyAM translation; native SS3 ',
+  'The 2026 record is distinct from the historical 2025; native SS3 ',
   'outputs are not recovered.'
 )
 

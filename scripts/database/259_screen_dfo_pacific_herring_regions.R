@@ -98,7 +98,7 @@ reviews <- lapply(names(areas), function(id) {
       'DFO identifies this as a separate current major herring assessment region, and',
       'the canonical database has no matching Pacific herring unit; the other inventory',
       'organizations list Atlantic Clupea harengus, not Clupea pallasii. This is a',
-      'provisional new source-curation candidate. It is ineligible for the current tinyAM',
+      'provisional new source-curation candidate.',
       'age-indexed translation because the official abundance observation is aggregate',
       'spawn biomass and no survey age composition was recovered. Preserve the verified',
       'source data for database curation; do not allocate the aggregate index to ages.'

@@ -60,7 +60,7 @@ review <- list(
   review_date = '2026-10-29',
   decision_reason = paste(
     'NOAA Stock SMART 10158 represents the Western Atlantic skipjack unit',
-    'assessed by ICCAT in 2022; no canonical tinyAM stock record was found.',
+    'assessed by ICCAT in 2022.',
     'The model is age-structured internally but fits catch-at-size, size',
     'compositions, and aggregate CPUE. The official data-preparatory report',
     'states no catch-at-age was planned, and no age-specific survey input is',

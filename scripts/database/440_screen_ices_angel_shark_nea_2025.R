@@ -62,7 +62,7 @@ review <- list(
   detailed_source_url = 'https://doi.org/10.17895/ices.pub.30137623',
   review_date = '2026-10-30',
   decision_reason = paste('The 2025 WGEF report, section 22, is the latest detailed source located. It describes no benchmarked quantitative assessment and no commercial catch composition or effort data. An earlier exploratory Tralee Bay analysis used recreational tagging data but is not a current age-structured production assessment. The unit is ineligible for the age-disaggregated set.'),
-  notes = paste('ICES provides species-level advice for angel shark across the Northeast Atlantic. The WGEF report confirms the 2023 advice of zero catches for 2024-2027. No canonical numerical records or tinyAM translation were added. The report PDF is shared in source_cache/discovery_ices_dogfish_2025/sources.csv; the manifest revision covers sections 22, 23, 25.9.3 and 25.9.5.'))
+  notes = paste('ICES provides species-level advice for angel shark across the Northeast Atlantic. The WGEF report confirms the 2023 advice of zero catches for 2024-2027. No canonical numerical records were added. The report PDF is shared in source_cache/discovery_ices_dogfish_2025/sources.csv; the manifest revision covers sections 22, 23, 25.9.3 and 25.9.5.'))
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&
   candidates$screening_status[row] == 'not_started' &&

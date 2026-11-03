@@ -39,7 +39,7 @@ review <- list(
   ),
   timing_evidence = paste(
     'The model is quarterly over 2006-2023. Index and composition data are',
-    'quarterly or assigned to quarters; tinyAM annual survey timing cannot',
+    'quarterly or assigned to quarters.',
     'be copied directly from this model.'
   ),
   output_evidence = paste(

@@ -68,7 +68,7 @@ salmon <- list(
     'ordinary survey timing fractions are not directly applicable.'),
   output_evidence=paste0('WGNAS 2026 tables report regional PFA, returns and spawners with medians ',
     'and 5th/95th percentiles. Return/spawner tables extend through 2025; NAC PFA through 2024; ',
-    'NEAC PFA tables include forecasts through 2029. These are not tinyAM N/F/M-at-age surfaces.'),
+    'NEAC PFA tables include forecasts through 2029.'),
   detailed_source_url='https://iceslibrary.figshare.com/articles/report/Working_Group_on_North_Atlantic_Salmon_WGNAS_/32034120',
   review_date=today)
 rows <- list()
@@ -77,7 +77,7 @@ rows[['ICES:sal.nac.all']] <- modifyList(salmon, list(
     '1SW/MSW. WGC weights/fork lengths are mixed-stock fishery samples, not verified as direct NAC inputs.'),
   decision_reason=paste0('Eligible for source curation: the current joint WGNAS 2026 assessment ',
     'provides sea-age-resolved catch/return evidence and official population outputs. NAC is ',
-    'one component of the basin-scale assessment, not a separate run or tinyAM readiness decision.'),
+    'one component of the basin-scale assessment, not a separate assessment run.'),
   notes=paste0('Grouped with sal.neac.all under one candidate_unit_id so this joint assessment is ',
     'counted once. The report covers 2025; 2SW is a proxy for all MSW.')))
 rows[['ICES:sal.neac.all']] <- modifyList(salmon, list(
@@ -85,7 +85,7 @@ rows[['ICES:sal.neac.all']] <- modifyList(salmon, list(
     'model was not verified. WGC fishery weights/fork lengths are not substituted for NEAC inputs.'),
   decision_reason=paste0('Eligible for source curation: the current joint WGNAS 2026 assessment ',
     'provides sea-age-resolved catch/return evidence and official population outputs. NEAC is ',
-    'one component of the basin-scale assessment, not a separate run or tinyAM readiness decision.'),
+    'one component of the basin-scale assessment, not a separate assessment run.'),
   notes=paste0('Grouped with sal.nac.all under one candidate_unit_id so this joint assessment is ',
     'counted once. The report covers 2025; 2SW is a proxy for all MSW.')))
 rows[['ICES:sal.wgc.all']] <- list(

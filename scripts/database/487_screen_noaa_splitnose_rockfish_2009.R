@@ -114,7 +114,7 @@ review <- list(
     'source set.'),
   notes = paste('One coastwide U.S. Pacific Coast assessment unit is used; north/south management apportionments do not',
     'establish separate biological assessment units. The 2009 report contains many model outputs but no source-supported',
-    'accepted-run fishery catch-at-age. No canonical stock, assessment, input, or output records were added and no tinyAM',
+    'accepted-run fishery catch-at-age.',
     'translation was attempted. Official sources and provenance are cached in',
     'source_cache/discovery_noaa_splitnose_rockfish_2009/sources.csv.'))
 

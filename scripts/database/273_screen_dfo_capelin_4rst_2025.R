@@ -62,7 +62,7 @@ review <- list(
     'The 4RST unit is distinct from 2J+3KL, but the latest 2025 assessment',
     'explicitly states that age data are unavailable and uses empirical mature-',
     'biomass and fishing-mortality indices rather than an age-structured population',
-    'model. It is outside the age-structured tinyAM comparison set.'
+    'model.'
   ),
   notes = paste(
     'The latest source is DFO Science Advisory Report 2026/014, based on the 2025',

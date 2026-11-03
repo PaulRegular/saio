@@ -318,7 +318,7 @@ stocks$common_name[at] <- "Eastern Georges Bank Atlantic cod"
 stocks$area[at] <- "DFO 5Zejm; US statistical areas 551, 552, 561, 562"
 stocks$region[at] <- "Eastern Georges Bank, transboundary Canada-US waters"
 stocks$ocean[at] <- "Northwest Atlantic"
-stocks$notes[at] <- "Charbonneau-Keith NEFSC-TRAC-CERT_morhua_GB; source PDF label GB 5Ze Gadus morhua.pdf identifies the eastern transboundary unit. Current DFO EGB framework is distinct from the broader NOAA domestic Georges Bank model. Detailed framework data end in 2023; summary-only 2025 and 2026 updates are separate. Missing selected age data and biology prevent a source-faithful tinyAM fit."
+stocks$notes[at] <- "Charbonneau-Keith NEFSC-TRAC-CERT_morhua_GB; source PDF label GB 5Ze Gadus morhua.pdf identifies the eastern transboundary unit. Current DFO EGB framework is distinct from the broader NOAA domestic Georges Bank model. Detailed framework data end in 2023; summary-only 2025 and 2026 updates are separate. Selected age data and biology remain unavailable."
 write_rows <- function(file, x, id) {
   path <- file.path(database, file)
   contents <- rawToChar(readBin(path, "raw", n = file.info(path)$size))

@@ -98,7 +98,7 @@ review <- list(
     'cannot be quantified. Standard Graphs labels the stock-size series B_index in kg/hour; generic',
     'SSB table headings are not interpreted as spawning-stock biomass. Cached source URLs, assessment',
     'key, retrieval date, sizes, and SHA-256 checksums are recorded under',
-    'source_cache/discovery_ices_pollack_89a_2025/. No canonical numerical data or tinyAM translation',
+    'source_cache/discovery_ices_pollack_89a_2025/. No canonical numerical data',
     'were added.')
 )
 

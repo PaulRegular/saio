@@ -122,7 +122,7 @@ obs_rows <- lapply(sort(unique(observations$fleet)), function(fleet_id) {
         sampling_time = ifelse(grouped$quarter == 1L, 0.125, 0.625),
         source_reference = paste0(model_url, "; fit$data$obs, ageFrom, ageTo, fleet"),
         transformation = "Copied the fitted observation grouped over its source age interval.",
-        notes = "The source ageFrom=2 and ageTo=3 row is one 2-3+ index group; it is retained in the database and omitted from tinyAM conversion because tinyAM has no grouped-age index likelihood."
+        notes = "The source ageFrom=2 and ageTo=3 row is one 2-3+ index group, not two single-age observations."
       )
       rbind(direct_rows, group_rows)
     } else {

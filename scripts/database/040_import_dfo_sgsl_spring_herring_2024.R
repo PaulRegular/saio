@@ -155,7 +155,7 @@ inputs <- rbind(
     "number per net-haul",
     survey = "Spring fixed-gear CPUE",
     season = "spring", source_table = 13,
-    notes = "Age-specific CPUE values. The source SCA used the aggregate index with age composition; direct age-specific use is a tinyAM approximation."
+    notes = "Age-specific CPUE values. The source SCA used the aggregate index with age composition."
   ),
   long_rows(acoustic, 2:10, 2:10, "index", "numbers_at_age", "numbers",
     "thousand fish",

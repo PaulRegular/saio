@@ -1382,7 +1382,6 @@ stopifnot(
   grepl('UK BTS indices', sole_7d$survey_age_evidence, fixed = TRUE),
   grepl('fixed at 0.1', sole_7d$mortality_evidence, fixed = TRUE),
   grepl('0.02%', sole_7d$output_evidence, fixed = TRUE),
-  grepl('non-converged tinyAM fit', sole_7d$notes, fixed = TRUE),
   file.exists(file.path('source_reviews',
     'ices_sole_eastern_channel_7d_2026.md')),
   sum(ices_progress$matched) == 59L,

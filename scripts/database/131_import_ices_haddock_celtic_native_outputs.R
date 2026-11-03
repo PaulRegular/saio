@@ -198,7 +198,7 @@ if (!grepl(completion_note, old_note, fixed = TRUE)) {
   updated_assessments$notes[assessment_index] <- paste(old_note, completion_note)
 }
 
-if (identical(Sys.getenv("TINYAM_DATABASE_DRY_RUN"), "true")) {
+if (identical(Sys.getenv("SAIO_DATABASE_DRY_RUN"), "true")) {
   cat(
     "Dry run passed: ", nrow(new_q), " q rows, ", nrow(new_catch),
     " catch predictions, ", nrow(new_index),

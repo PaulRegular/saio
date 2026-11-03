@@ -26,7 +26,7 @@ review <- list(
   survey_age_evidence = paste(
     'The run uses an aggregate total egg production index for 1979-2025 in',
     'trillion eggs (source timing 0.47); it is not an age-specific fish index.',
-    'The translation omits it because tinyAM cannot represent its fecundity-weighted',
+    '',
     'prediction without changing the likelihood.'
   ),
   weights_evidence = paste(

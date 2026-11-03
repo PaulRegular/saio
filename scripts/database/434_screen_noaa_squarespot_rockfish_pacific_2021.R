@@ -118,7 +118,7 @@ review <- list(
   notes = paste('NOAA Stock SMART labels the stock Pacific Coast; the detailed assessment is titled for the California',
     'U.S. West Coast and discusses northern and southern management complexes divided at 40 degrees 10 minutes N.',
     'The model uses two sexes, 41 ages, deterministic recruitment, one removal fleet and one abundance-index fleet.',
-    'No canonical records or tinyAM translation were added. The PDF and native model archive are cached in',
+    'No canonical records were added. The PDF and native model archive are cached in',
     'source_cache/discovery_noaa_squarespot_rockfish_pacific_2021/sources.csv.'))
 
 initial <- register$match_status[row] == 'unreviewed' &&

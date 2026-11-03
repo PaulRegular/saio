@@ -84,7 +84,7 @@ review <- list(
     '2026/022) and its detailed Research Document 2026/054. This is a distinct',
     'current DFO stock unit, not a match to the DFO-NEFSC Georges Bank or NOAA',
     'Southern New England/Mid-Atlantic units. Model inputs include aggregate',
-    'catch/index series plus age compositions, so tinyAM age-specific observations',
+    '',
     'require explicit source-based reconstruction. The detailed Research Document',
     'and Science Response PDFs redirected to the Government Publications archive',
     'notice when downloaded on 2026-10-29; their official catalogue records are',

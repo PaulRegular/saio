@@ -90,7 +90,7 @@ review <- list(
   maturity_evidence = 'Age-related life-history information is fixed in the supplementary Opakapaka model. The report does not document observed maturity-at-age as an assessment likelihood input.',
   mortality_evidence = 'Natural mortality is treated as fixed life-history information in the supplementary Opakapaka model; the accepted Deep 7 JABBA model is aggregate and does not estimate M-at-age.',
   timing_evidence = 'The main model uses July-June fishing years. BFISH surveys occur in early fall of calendar years 2016-2022 and are assigned to the beginnings of fishing years 2017-2023. These are aggregate indices, so age-specific observation timing is not applicable.',
-  output_evidence = 'The accepted JABBA model reports annual exploitable biomass, harvest rate, stock status, and reference points through 2023, with projections through 2029. The supplementary Opakapaka age-structured model reports biomass, harvest rate, and stock status; the report does not provide the age-disaggregated inputs required for an age-based tinyAM translation.',
+  output_evidence = 'The accepted JABBA model reports annual exploitable biomass, harvest rate, stock status, and reference points through 2023, with projections through 2029. The supplementary Opakapaka age-structured model reports biomass, harvest rate, and stock status; the report does not provide the age-disaggregated inputs required for an age-based.',
   detailed_source_url = paste('https://repository.library.noaa.gov/view/noaa/56878/noaa_56878_DS1.pdf',
     'https://repository.library.noaa.gov/view/noaa/56878',
     'https://www.fisheries.noaa.gov/s3/2024-07/Benchmark-Stock-Assessment-for-the-Main-Hawaiian-Islands-Deep-7-Bottomfish-Complex-in-2024-Chair-Report-508.pdf',

@@ -175,9 +175,9 @@ static_biology <- function(measure, values, unit, notes) {
 inputs <- rbind(
   inputs,
   static_biology("weight_at_age", spawn_weight, "kg/fish",
-    "Spawning stock weight-at-age reported for per-recruit analysis, not as an annual VPA input. Used as a time-invariant biological proxy in the tinyAM translation."),
+    "Spawning stock weight-at-age reported for per-recruit analysis, not as an annual VPA input."),
   static_biology("maturity_at_age", maturity, "proportion",
-    "Maturity-at-age reported for per-recruit analysis, not an estimated VPA surface. Used to represent the assessment's age-4+ biomass convention in tinyAM.")
+    "Maturity-at-age reported for per-recruit analysis, not an estimated VPA surface. The assessment reports age-4+ biomass.")
 )
 
 m_values <- matrix(0.2, nrow = length(model_years), ncol = 11,
@@ -200,7 +200,7 @@ assumptions <- do.call(rbind, list(
   assumption("index", "survey_input", "DFO Summer RV swept-area abundance-at-age index; model ages 1-10, 1985-2015", "DFO Research Document 2017/006, pp. 8-10; Table 8"),
   assumption("index", "zero_observations", "Zero survey-index cells are treated as missing", "DFO Research Document 2017/006, pp. 8-10"),
   assumption("index", "catchability", "Age-specific q estimated for ages 1-10", "DFO Research Document 2017/006, Table 11, p. 24"),
-  assumption("index", "timing", "Summer survey; exact within-year timing is not specified in the recovered assessment files", "DFO Research Document 2017/006, pp. 8-10", "The tinyAM translation uses 0.5 as a midyear approximation."),
+  assumption("index", "timing", "Summer survey; exact within-year timing is not specified in the recovered assessment files", "DFO Research Document 2017/006, pp. 8-10", "The fraction 0.5 is a midyear timing approximation."),
   assumption("M", "natural_mortality", "Fixed at 0.2 except ages 10-11+ at 0.3, 0.6, and 0.9 in 2000-2004, 2005-2009, and 2010-2015", "DFO Research Document 2017/006, Table 13, p. 26"),
   assumption("F", "plus_group", "F11+ is set from F10 using a Fratio; the 1985-1994 ratio is 2 and later ratios follow the assessment formulation", "DFO Research Document 2017/006, pp. 8-10; DFO Research Document 2017/026, pp. 16-17"),
   assumption("population", "terminal_N", "Terminal-year population abundance is estimated for ages 2-11+; age 1 in 2016 is assigned as a geometric mean excluding the exceptional 2013 year class", "DFO Research Document 2017/006, Table 11, p. 24; Table 13, p. 26"),

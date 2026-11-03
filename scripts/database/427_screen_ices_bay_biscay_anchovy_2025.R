@@ -108,7 +108,7 @@ register$maturity_evidence[row] <- paste0(
 register$mortality_evidence[row] <- paste0(
   'Natural mortality is fixed at M0=2.17, M1=0.80, M2=1.20, and M3+=2.26 per year, constant between seasons. Ages 1-2 use published estimates, age 0 is derived using the Gislason relationship, and age 3+ was estimated at the 2024 benchmark and retained.')
 register$timing_evidence[row] <- paste0(
-  'The model has two seasons (January-June and July-December), spawning on 15 May, and age-0 recruitment settlement on 1 July. BIOMAN and PELGAS are spring surveys represented at spawning time; JUVENA is an autumn survey conducted in September-October. Converting survey windows to a single tinyAM fractional year would be an explicit approximation.')
+  'The model has two seasons (January-June and July-December), spawning on 15 May, and age-0 recruitment settlement on 1 July. BIOMAN and PELGAS are spring surveys represented at spawning time; JUVENA is an autumn survey conducted in September-October.')
 register$output_evidence[row] <- paste0(
   'The 2025 report provides annual SSB, recruitment, and apical F with 95% confidence intervals through 2025 (2025 catch is assumed); beginning-of-year N-at-age for ages 0, 1, 2, 3+ through 2024 (thousands of fish); and F-at-age by semester through 2024. Fixed M-at-age is an input, not an estimated output. The official ICES Standard Graphs and source-data pages provide additional aggregate comparison series.')
 register$detailed_source_url[row] <- paste(urls, collapse = '; ')

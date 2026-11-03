@@ -237,7 +237,7 @@ input_data <- list(
     catch_numbers$value, "thousand fish", fleet = "Commercial catch",
     region = "Subdivisions 30 and 31", source_reference = paste(report_url, "Table 4.3.3"),
     transformation = "Transcribed without rescaling from the official catch-at-age table.",
-    notes = "Published age-specific catch numbers; these raw quantities are retained as provenance for the proportions used by SS3 and are not a separate tinyAM likelihood when total catch and proportions are selected. Age 15 represents 15+."
+    notes = "Published age-specific catch numbers, retained as provenance for the proportions used by SS3. They are not an independent second series when totals and proportions represent the same catches. Age 15 represents 15+."
   ),
   input_rows(
     "catch", "proportion_at_age", "proportion_numbers", catch_numbers$year,
@@ -254,7 +254,7 @@ input_data <- list(
     fleet = "Commercial catch", region = "Subdivisions 30 and 31",
     source_reference = paste(report_url, "Table 4.3.4"),
     transformation = "Transcribed as reported; age 17 represents 17+.",
-    notes = "The report identifies these as weights in catches. The stock-weight surface used in the tinyAM translation is approximated from this series because a distinct fitted stock-weight surface was not recovered."
+    notes = "The report identifies these as weights in catches. A distinct fitted stock-weight surface was not recovered; catch weights must not be presented as verified stock weights."
   ),
   input_rows(
     "maturity", "maturity_at_age", "proportion", maturity$year,
@@ -322,7 +322,7 @@ assumption_values <- data.frame(
     "Unknown; source report does not give effective sample sizes or the age-composition likelihood weights",
     "Fixed age-varying vector from the 2021 benchmark, constant over time",
     "BIAS (ICES code A1588)", "2007-2025", "1-15+ in assessment",
-    "Late September to early October; tinyAM uses 0.75 as an approximate within-year time",
+    "Late September to early October; 0.75 is a season-level timing approximation, not a recovered native sampling fraction",
     "Table 4.3.6 values are already area-corrected; do not apply AREA_CORR_FACTOR again",
     "Annual catch weights are available; a distinct stock-weight surface was not recovered",
     "Annual maturity ogives from 1980; source observations are sampled before spawning",
@@ -341,21 +341,21 @@ assumption_values <- data.frame(
   ),
   notes = c(
     "Assessment key 22377; stock code her.27.3031; assessment year 2026; terminal fitted year 2025.",
-    "The tinyAM fit is limited to 1980-2025 because age compositions are not reported before 1980.",
+    "Numerical age compositions are not reported before 1980.",
     "The age-specific initial population configuration is not fully available in the public report.",
     "Recruitment age is shown as 0 in the ICES SAG source metadata.",
     "The report identifies hybrid F and SS3 version 3.30.22.1.",
-    "TinyAM Fbar is population-weighted and is not directly equivalent to the unweighted source Fbar.",
+    "",
     "SAG catches are in tonnes and are retained separately from catch composition.",
     "Age-specific raw values are retained in inputs; proportions are reconstructed for the SS3 composition structure.",
     "The numerical catch-composition sample sizes and weighting are unresolved.",
     "Values are linearly interpolated at age midpoints from the benchmark's six breakpoints.",
     "The survey is the joint Finnish-Swedish hydroacoustic survey coordinated within BIAS.",
     "Years 2021-2025 have reduced spatial coverage compared with 2016-2020.",
-    "The canonical table also retains the age-0 index; tinyAM uses ages 1-15+.",
+    "The canonical table also retains the age-0 index.",
     "The source gives a survey season but no exact model fraction; 0.75 is a translation midpoint assumption.",
     "Annual area correction factors are preserved in the ignored local transcription cache and not applied twice.",
-    "TinyAM uses catch weights as the closest available proxy; this differs from a directly verified source stock-weight definition.",
+    "this differs from a directly verified source stock-weight definition.",
     "The report says 1980-1982 maturity values are constant; reported values are retained without further smoothing.",
     "The source XML gives ConfidenceIntervalDefinition = 90%; no SE is reported.",
     "The assessment summary contains no fitted N-at-age, F-at-age, or estimated M-at-age time series."

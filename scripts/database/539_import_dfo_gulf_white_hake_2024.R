@@ -451,7 +451,7 @@ append_rows <- function(rows, path) {
     col.names = FALSE, append = TRUE, na = ""
   )
 }
-if (identical(Sys.getenv("TINYAM_IMPORT_DRY_RUN"), "1")) {
+if (identical(Sys.getenv("SAIO_IMPORT_DRY_RUN"), "1")) {
   cat(
     "Dry run validated ", nrow(assumptions), " assumptions, ",
     nrow(inputs), " inputs (", sum(is.na(suppressWarnings(as.numeric(inputs$value)))),

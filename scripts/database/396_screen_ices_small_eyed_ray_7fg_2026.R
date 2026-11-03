@@ -102,7 +102,7 @@ review <- data.frame(
   notes = paste('The official 2026 ICES advice and Standard Graphs pages, retrieval date, revisions, file sizes,',
     'and SHA-256 checksums are recorded under source_cache/discovery_ices_small_eyed_ray_7fg_2026/.',
     'This 7.f-7.g stock unit is distinct from the 7.d-7.e assessment. No canonical numerical records or',
-    'tinyAM translation were added.'),
+    ''),
   stringsAsFactors = FALSE,
   check.names = FALSE)
 

@@ -5,7 +5,7 @@ model <- file.path(cache, "model_files")
 processed <- file.path(model, "processed")
 assessment_id <- "noaa_goa_pop_2023"
 stock_id <- "afsc_goa_pacific_ocean_perch"
-dry_run <- identical(Sys.getenv("TINYAM_IMPORT_DRY_RUN"), "1")
+dry_run <- identical(Sys.getenv("SAIO_IMPORT_DRY_RUN"), "1")
 
 manifest <- utils::read.csv(
   file.path(cache, "sources.csv"), stringsAsFactors = FALSE,

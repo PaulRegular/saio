@@ -171,7 +171,7 @@ inputs <- rbind(
       "Values are transcribed as published. Table 10 duplicates Table 6",
       "exactly for every year, age and region, despite identifying mobile",
       "gear. This is treated as a suspected publication transcription error;",
-      "the values are retained for provenance but are not used in the tinyAM fit."
+      ""
     )
   ),
   input_rows(

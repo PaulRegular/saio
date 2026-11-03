@@ -54,7 +54,7 @@ new <- data.frame(
   sampling_time = "", source_type = "official_table", source_reference = source_reference,
   transformation = "", notes = paste0(
     "Published catch numbers at age, reported in million fish and rounded to 0.01 million. ",
-    "The official model fits age-1-2 and age-10+ pooled compositions; this finer report table is retained separately and used for the tinyAM translation."
+    "The official model fits age-1-2 and age-10+ pooled compositions; this finer report table is retained separately and used for the."
   ), observation_id = "", length_bin = "", length_bin_lower = "",
   length_bin_upper = "", sample_size = "", age_error = "", partition = "",
   stringsAsFactors = FALSE, check.names = FALSE

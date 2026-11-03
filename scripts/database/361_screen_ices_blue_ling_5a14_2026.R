@@ -116,7 +116,7 @@ review <- list(
     'with observed age composition. Its inputs are length distributions and length-',
     'disaggregated indices; reliable weight-at-age and maturity-at-age data are unavailable.',
     'Although official biomass, recruitment, and F summaries are published, the required',
-    'age-disaggregated inputs are not available for a defensible tinyAM translation. Screen',
+    'age-disaggregated inputs are not available for a defensible. Screen',
     'ineligible for the age-disaggregated set.'),
   notes = paste('The 2025 benchmark changed the advice basis to an age-length GADGET model.',
     'The 2026 MFRI technical report describes two model components, quarterly time steps,',

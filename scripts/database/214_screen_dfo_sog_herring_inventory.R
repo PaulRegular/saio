@@ -64,7 +64,7 @@ x$decision_reason[i] <- paste(
   'dfo_herring_sog_2025 assessment. Its production model has age-specific',
   'fishery compositions, but its only abundance observation is total',
   'spawning biomass; native survey age samples are missing and their age',
-  'likelihood weights are zero. tinyAM requires an age-specific index and',
+  'likelihood weights are zero.',
   'cannot fit this aggregate spawning-biomass observation, so the case is not',
   'eligible for the current age-indexed translation screen.'
 )

@@ -121,7 +121,7 @@ review <- list(
   notes = paste('This candidate is the U.S. Southern California Bight unit south of Point Conception and is distinct',
     'from any stock north of the boundary or in Mexican waters. The model is one-sex with a 60+ accumulator age,',
     'deterministic recruitment, and a 2018 terminal data year; 2019 output is the assessment estimate. No canonical',
-    'records or tinyAM translation were added. Cached reports and the native model archive are listed in',
+    'records were added. Cached reports and the native model archive are listed in',
     'source_cache/discovery_noaa_cowcod_southern_california_2019/sources.csv.'))
 
 initial <- register$match_status[row] == 'unreviewed' &&

@@ -323,14 +323,14 @@ append_rows <- function(path, rows) {
   columns <- names(utils::read.csv(path, nrows = 0, check.names = FALSE))
   if (!setequal(names(rows), columns)) stop("Column mismatch in ", basename(path), call. = FALSE)
   rows <- rows[columns]
-  if (identical(Sys.getenv("TINYAM_DATABASE_DRY_RUN"), "true")) return(invisible(rows))
+  if (identical(Sys.getenv("SAIO_DATABASE_DRY_RUN"), "true")) return(invisible(rows))
   utils::write.table(rows, path, sep = ",", quote = TRUE, row.names = FALSE,
     col.names = FALSE, append = TRUE, na = "")
   invisible(rows)
 }
 
 paths <- file.path(database, c("stocks.csv", "assessments.csv", "assumptions.csv", "inputs.csv", "outputs.csv"))
-if (identical(Sys.getenv("TINYAM_DATABASE_DRY_RUN"), "true")) {
+if (identical(Sys.getenv("SAIO_DATABASE_DRY_RUN"), "true")) {
   rows <- list(assessment_add, assumptions_add, inputs_add, outputs_add)
   for (i in seq_along(rows)) append_rows(paths[i + 1L], rows[[i]])
   cat("Dry run passed: ", nrow(inputs_add), " inputs and ", nrow(outputs_add),

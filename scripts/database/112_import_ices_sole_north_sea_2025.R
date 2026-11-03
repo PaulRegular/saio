@@ -216,7 +216,7 @@ inputs[[length(inputs) + 1L]] <- survey_age_rows(
 )
 inputs[[length(inputs) + 1L]] <- survey_total_rows(
   bts_total, "BTS Q3", "16.8b",
-  "The assessment report also identifies aggregate survey biomass indices as model inputs. These aggregate values closely match the rounded sums of the at-age index table; preserve them as a separate source series, but do not fit both series in tinyAM without resolving their dependence."
+  "The assessment report also identifies aggregate survey biomass indices as model inputs. These aggregate values closely match the rounded sums of the at-age index table. They are preserved as a separate source series; their dependence must be resolved before joint use."
 )
 inputs[[length(inputs) + 1L]] <- survey_age_rows(
   coast_age, 0:5, "COAST (SNS + DYFS)", "16.9a",
@@ -224,7 +224,7 @@ inputs[[length(inputs) + 1L]] <- survey_age_rows(
 )
 inputs[[length(inputs) + 1L]] <- survey_total_rows(
   coast_total, "COAST (SNS + DYFS)", "16.9b",
-  "The assessment report also identifies aggregate survey biomass indices as model inputs. These aggregate values closely match the rounded sums of the at-age index table; preserve them as a separate source series, but do not fit both series in tinyAM without resolving their dependence."
+  "The assessment report also identifies aggregate survey biomass indices as model inputs. These aggregate values closely match the rounded sums of the at-age index table. They are preserved as a separate source series; their dependence must be resolved before joint use."
 )
 
 inputs <- do.call(rbind, inputs)
@@ -245,10 +245,10 @@ assumptions <- do.call(rbind, list(
   assumption_rows("population", "stock_recruitment", "Beverton-Holt; fixed steepness h=0.6646", report_url, "Steepness was taken from FishLife correlations for Solea solea; it was not estimated in the production assessment."),
   assumption_rows("population", "spawning_stock_biomass_timing", "Start of year", report_url, "Fecundity is assumed proportional to individual weight."),
   assumption_rows("F", "fleets", "Landings and discards", report_url, "Two fleets are represented in the SS3 model."),
-  assumption_rows("F", "selectivity", "Landings time-varying random walk; discards time-invariant; both constant from age 5", report_url, "The tinyAM translation approximates the landings selectivity process through its available F process settings."),
+  assumption_rows("F", "selectivity", "Landings time-varying random walk; discards time-invariant; both constant from age 5", report_url, ""),
   assumption_rows("index", "surveys", "BTS Q3 and COAST (SNS + DYFS) Q3", report_url, "BTS ages 0-10+; COAST ages 0-5. SNS and DYFS are combined into the COAST index."),
   assumption_rows("index", "age_specific_index_model", "Delta-lognormal GAM-standardized indices", report_url, "The report describes age-specific abundance indices and aggregate survey-biomass indices as model inputs. Aggregate series are retained separately; their dependence on age-specific indices is unresolved."),
-  assumption_rows("index", "survey_timing", "Q3 represented as 0.625", report_url, "Both indices are labelled Q3 in the assessment documentation; 0.625 is the quarter midpoint used by tinyAM."),
+  assumption_rows("index", "survey_timing", "Q3 represented as 0.625", report_url, "Both indices are labelled Q3 in the assessment documentation; 0.625 is a quarter-midpoint approximation, not a recovered native sampling fraction."),
   assumption_rows("index", "catchability_age_groups", "Survey q constant from age 5", report_url, "The source model sets survey catchability constant for ages 5 and older."),
   assumption_rows("biology", "age_reading_error", "Time-invariant 2016 exchange matrix", report_url, "The 2025 assessment retains the 2016 age-reading error matrix. The numerical matrix was not recoverable from the cached source tables."),
   assumption_rows("M", "natural_mortality", "Fixed age-specific Lorenzen formulation; not estimated", paste0(report_url, "; ", framework_url), "M_a follows W_a^-0.288 and is scaled using the maximum validated age of 26; annual rates are in inputs.csv."),

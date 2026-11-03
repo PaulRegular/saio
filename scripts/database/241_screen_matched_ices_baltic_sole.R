@@ -32,7 +32,7 @@ x$mortality_evidence[i] <- paste0(
 )
 x$timing_evidence[i] <- paste0(
   'Exact tuning-series sampling times are not labelled in recovered source tables; ' ,
-  'a tinyAM timing approximation must be identified explicitly.'
+  ''
 )
 x$output_evidence[i] <- paste0(
   'The 2026 report provides fitted N-at-age and F-at-age for 1984-2025 and aggregate ' ,

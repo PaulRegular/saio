@@ -71,7 +71,7 @@ row <- data.frame(
   mortality_evidence = paste('The 2023 reference case estimates age-specific M from a Lorenzen curve',
     'anchored at M=0.36 at age 6 under a 15-year maximum-age assumption.'),
   timing_evidence = paste('The model uses four within-year seasons and sets spawning at the beginning of',
-    'month 6. CPUE observations are fleet-specific; row-level timing for a tinyAM',
+    'month 6. CPUE observations are fleet-specific.',
     'index translation was not verified.'),
   output_evidence = paste('The 2023 assessment and later SCRS summaries report aggregate SSB, recruitment,',
     'and fishing-mortality status. Numeric annual N-at-age, F-at-age, and M-at-age',

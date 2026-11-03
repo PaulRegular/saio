@@ -239,7 +239,7 @@ inputs_add <- do.call(rbind, list(
   catch_weight_surface,
   matrix_rows(acoustic, 0:8, "numbers_at_age", "index", "numbers",
     "million fish", "ICES WGBFAS 2026, Table 4.2.9, p. 277",
-    notes = "BIAS October acoustic tuning index. Age 0 entries are reported as zero; the tinyAM translation omits those zero log-scale observations.",
+    notes = "BIAS October acoustic tuning index. Age 0 entries are reported as zero.",
     survey = "BIAS"),
   expand_m(m_scenarios[["M_M1_010_All"]], "M_M1_010_All", "fixed_mortality_medium"),
   expand_m(m_scenarios[["M_M1_020_All"]], "M_M1_020_All", "fixed_mortality_high"),
@@ -450,7 +450,7 @@ assumptions_add <- do.call(rbind, list(
   assumption("M", "scenario_high", "M_M1_020_All", "Stored as fixed_mortality_high; average annual M1 is 0.2."),
   assumption("M", "boundary_years", "1903-1973 = 1974; 2022-2025 = 2021", "The Stock Annex and 2026 report state the fixed boundary-year extensions; the tabled annual M scenarios are retained."),
   assumption("catch", "total_catch", "Total landed weight in tonnes; 1903-last data year", "The 2026 Stock Annex confirms catch biomass is an official input. Report Table 4.2.11a provides 1904-2025 values but not 1903."),
-  assumption("catch", "observation_error", "0.2 initial; 0.1 for 1903-1973; 0.05 from 1974", "The Stock Annex calls these standard errors; it does not specify their scale in the accessible text. tinyAM does not reproduce this annual total-catch likelihood."),
+  assumption("catch", "observation_error", "0.2 initial; 0.1 for 1903-1973; 0.05 from 1974", "The Stock Annex calls these standard errors; it does not specify their scale in the accessible text."),
   assumption("catch", "age_compositions", "Commercial catch-at-age numbers, 1974-2025, ages 1-8+", "Non-sampled catches use the same age distribution as sampled catches in the same subdivision and quarter. Russian Federation age composition is unavailable for 2022-2025; about 26% of total catch lacks composition in 2025."),
   assumption("catch", "composition_sample_size", "Trips sampled", "Annual values are defined as number of trips in national sources but the numeric series and corresponding composition weighting are not published in the recovered files."),
   assumption("catch", "composition_weighting", "Dirichlet-multinomial", "The Stock Annex reports a Dirichlet-multinomial error distribution as additional weighting of age compositions."),
@@ -506,7 +506,7 @@ append_rows <- function(name, rows) {
   write.table(rows[columns], path, sep = ",", quote = TRUE,
     row.names = FALSE, col.names = FALSE, append = TRUE, na = "")
 }
-if (identical(Sys.getenv("TINYAM_IMPORT_DRY_RUN"), "1")) {
+if (identical(Sys.getenv("SAIO_IMPORT_DRY_RUN"), "1")) {
   cat("Parsed Central Baltic herring 2026: ", nrow(inputs_add), " inputs, ",
     nrow(assumptions_add), " assumptions, and ", nrow(outputs_add), " outputs.\n", sep = "")
   quit(save = "no", status = 0L)

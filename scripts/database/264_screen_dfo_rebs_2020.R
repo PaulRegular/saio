@@ -52,7 +52,7 @@ review <- list(
   ),
   timing_evidence = paste(
     'The model is annual and uses several synoptic and historical survey series. Survey-specific',
-    'timing has not been mapped to a verified tinyAM fractional-year value.'
+    ''
   ),
   output_evidence = paste(
     'The report contains MPD/MCMC stock-status results and population/age-structure figures',

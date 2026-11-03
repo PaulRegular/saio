@@ -145,7 +145,7 @@ review <- list(
     'Current ICES assessment year 2026, advice record 4079, Stock Assessment Graphs key 21311. The public TAF',
     'output commit is 51bd58e56d3d9623626b6b0a0a47028f095cc0e1; its data.R script is pinned in the source cache',
     'manifest. The HAWG 2026 report is shared with the English Channel sprat cache to avoid duplicate storage.',
-    'Numeric TAF inputs have not been reconstructed. No canonical data were added and no tinyAM translation was attempted.')
+    'Numeric TAF inputs have not been reconstructed. No canonical data were added was attempted.')
 )
 
 same_review <- all(vapply(names(review), function(column)

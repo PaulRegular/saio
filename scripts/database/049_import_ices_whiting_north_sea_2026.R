@@ -171,7 +171,7 @@ log_sd_rows <- input_rows(
   unit = "relative log-scale SD factor", survey = fleet_names[aux$fleet[survey_obs]],
   sampling_time = sample_times[aux$fleet[survey_obs]],
   source_reference = paste0(model_url, "; fit$data$weight"),
-  transformation = "Derived as 1/sqrt(relative precision weight) for the tinyAM relative-SD input.",
+  transformation = "Derived as 1/sqrt(relative precision weight), a relative observation-SD multiplier.",
   notes = "This is a relative scaling factor, not an estimated final observation SD."
 )
 

@@ -38,7 +38,7 @@ review <- data.frame(
     'Age-specific natural mortality is a life-history input derived from invariant methods; the assessment does not estimate an age-specific M process from age observations.'),
   timing_evidence = c(
     'The report includes annual catch and abundance-index series but does not specify a single within-year survey timing fraction for the aggregate indices.',
-    'The model represents fleet catches by month and season length. The annual relative-abundance indices do not provide a single fractional survey timing value for tinyAM.'),
+    'The model represents fleet catches by month and season length.'),
   output_evidence = c(
     'SEDAR 65 reports an age-structured Stock Synthesis assessment with recruitment, spawning-stock fecundity and population/fishing-mortality outputs. These fitted age surfaces do not replace the missing age-disaggregated observation inputs.',
     'The SSASPM reports numbers-at-age and recruitment, total abundance, spawning-stock fecundity, and apical fishing mortality. The report does not provide an age-disaggregated observation likelihood.'),

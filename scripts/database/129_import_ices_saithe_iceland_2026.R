@@ -405,7 +405,7 @@ assumptions_new <- do.call(rbind, list(
     "No physical unit multiplier is stated in the 2026 report; raw source values are preserved."),
   make_assumption("index", "sampling_time",
     "Unknown",
-    "The source documents a March spring survey but does not give the SAM sampling fraction; tinyAM uses 0.20 as a month-midpoint approximation.",
+    "The source documents a March spring survey but does not give the SAM sampling fraction; 0.20 is a month-midpoint approximation.",
     survey = "IS-SMB", season = "spring"),
   make_assumption("index", "observation_covariance",
     "Default data weighting is reported; exact 2026 observation covariance is unavailable",

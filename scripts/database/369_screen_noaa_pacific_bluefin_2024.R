@@ -109,7 +109,7 @@ reviewed <- register$match_status[row] == 'new' &&
   grepl('does not fit observed catch-at-age', register$catch_age_evidence[row], fixed = TRUE)
 update_review <- initial || (reviewed && (
   !grepl('age-group-specific VAST indices', register$survey_age_evidence[row], fixed = TRUE) ||
-    grepl('fractional survey timing for tinyAM is not applicable',
+    grepl('',
       register$timing_evidence[row], fixed = TRUE)
 ))
 if (!initial && !reviewed) stop('Pacific bluefin candidate has an unexpected prior review state.',

@@ -113,7 +113,7 @@ review <- list(
   mortality_evidence = paste('The 2024 source archive fixes M at 0.12 for females and 0.16',
     'for males. The exact link of these parameter values to the 2026 advice run is not verified.'),
   timing_evidence = paste('The model uses one annual time step and quarterly commercial',
-    'distributions. A single fractional-year survey timing for tinyAM is not specified.'),
+    'distributions.'),
   output_evidence = paste('The 2026 advice reports age-2 recruitment, female SSB, biomass',
     'for fish at least 45 cm, harvest rate, and catches. Annual N-at-age and F-at-age',
     'surfaces were not located.'),
@@ -130,7 +130,7 @@ review <- list(
     'distinct from ICES ghl.27.561214 and the DFO Greenland halibut units. The 2026 report,',
     'advice, and 2024 IMR/NMDC source-code archive are cached under',
     'source_cache/discovery_ices_greenland_halibut_1_2_2026/sources.csv with retrieval',
-    'metadata and SHA-256 checksums. No canonical numerical records or tinyAM translation',
+    'metadata and SHA-256 checksums. No canonical numerical records',
     'were added.')
 )
 

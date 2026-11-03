@@ -81,7 +81,7 @@ review <- data.frame(
   detailed_source_url = 'https://doi.org/10.17895/ices.advice.25019522; https://doi.org/10.17895/ices.pub.26935504',
   review_date = '2026-10-30',
   decision_reason = 'Ineligible for the age-disaggregated assessment set. The latest advice is Category 5 and explicitly states no assessment, with landings as input data. The Q1 survey is described as qualitative information, not a quantitative input to advice; no age-specific population or mortality outputs are reported.',
-  notes = 'The 2024 advice covers 2025–2028 and remains the latest official advice listed for this unit in the 2026 ICES inventory. WGEF reports that stock boundaries are unclear but provides advice separately for Division 7.e. Its exploratory beam-trawl survey does not change the assessment classification. No canonical records or tinyAM translation were added. Full advice and WGEF report are cached locally with source manifests.',
+  notes = 'The 2024 advice covers 2025–2028 and remains the latest official advice listed for this unit in the 2026 ICES inventory. WGEF reports that stock boundaries are unclear but provides advice separately for Division 7.e. Its exploratory beam-trawl survey does not change the assessment classification. No canonical records were added. Full advice and WGEF report are cached locally with source manifests.',
   stringsAsFactors = FALSE,
   check.names = FALSE
 )

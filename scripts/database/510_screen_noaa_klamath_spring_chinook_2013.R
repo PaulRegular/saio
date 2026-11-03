@@ -101,7 +101,7 @@ row <- data.frame(
     'NOAA Q4 FY2025 Appendix E still lists 2013 as the last assessment. The',
     'reviewed assessment and CDFW aggregate tables do not provide the age-specific',
     'inputs, biology, mortality assumptions, or population outputs required for',
-    'tinyAM. The stock is ineligible for the age-structured candidate set.'),
+    'The stock is ineligible for the age-structured candidate set.'),
   notes = paste('The NOAA 2013 review characterizes recent abundance using adult',
     '(age > 2) spawner escapement, geometric means, and log-linear trends. CDFW',
     '1980-2023 tables separate grilse, adults, and totals, not a full age series.',

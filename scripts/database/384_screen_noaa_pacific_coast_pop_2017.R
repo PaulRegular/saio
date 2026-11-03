@@ -92,7 +92,7 @@ review <- list(
   notes = paste('This is a single U.S. West Coast stock unit, separate from British Columbia and Alaska',
     'Pacific ocean perch. Do not treat projections reported for years after 2017 as later assessments.',
     'The base model fixed steepness at 0.72; the report discusses large sensitivity to this assumption.',
-    'No canonical records or tinyAM translation were added. Cached source files and checksums are listed in',
+    'No canonical records were added. Cached source files and checksums are listed in',
     'source_cache/discovery_noaa_pacific_coast_pop_2017/sources.csv.'))
 
 initial <- register$match_status[row] == 'unreviewed' &&

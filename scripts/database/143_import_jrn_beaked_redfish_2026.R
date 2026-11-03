@@ -218,7 +218,7 @@ assessment$is_current <- assessment$is_applied <- "TRUE"; assessment$framework_y
 assessment$assessment_url <- report_url; assessment$framework_url <- framework_url
 assessment$data_url <- report_url
 assessment$assumptions_status <- assessment$inputs_status <- assessment$outputs_status <- "partial"
-assessment$notes <- "Latest detailed JRN-AFWG production assessment. Published N, rounded fleet coefficients/selectivities and stock summaries recovered. Young-age biology, numerical deep-pelagic age compositions, exact fleet-input assembly and native configuration remain unavailable. Age-6 recruitment unit conflict is retained explicitly. No tinyAM fit or guessed source inputs are claimed."
+assessment$notes <- "Latest detailed JRN-AFWG production assessment. Published N, rounded fleet coefficients/selectivities and stock summaries recovered. Young-age biology, numerical deep-pelagic age compositions, exact fleet-input assembly and native configuration remain unavailable. Age-6 recruitment unit conflict is retained explicitly."
 stocks <- read.csv(file.path(database, "stocks.csv"), colClasses = "character", na.strings = "", check.names = FALSE)
 at <- which(stocks$stock_id == stock_id)
 stopifnot(length(at) == 1L, stocks$charbonneau_id[at] == "ICES-AFWG_mentella_DEEP 1,2")

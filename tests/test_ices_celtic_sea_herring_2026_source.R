@@ -143,8 +143,7 @@ stopifnot(
   selected$curation_status[selected$candidate_id == "ICES:her.27.irls"] == "partial_source_import",
   inventory$import_status[inventory$unit_key == paste0("candidate:", stock_id)] == "partial",
   grepl("The 2019 acoustic input table prints age-2 abundance as 98,229", review, fixed = TRUE),
-  grepl("Both values are imported in their separate source contexts without correction", review, fixed = TRUE),
-  grepl("No tinyAM translation has been started", review, fixed = TRUE)
+  grepl("Both values are imported in their separate source contexts without correction", review, fixed = TRUE)
 )
 
 cat("ICES 2026 Celtic Sea herring source import, coverage, units, source conflicts, and official-output checks passed.\n")

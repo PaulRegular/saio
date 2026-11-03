@@ -213,7 +213,7 @@ inputs <- list(
   new_input("weight", "weight_at_age", "kg_per_fish", stock_weights$year,
     stock_weights$age, stock_weights$value, "kg per fish",
     source_reference = paste(report_url, "Table 4.4.4.2"),
-    notes = "Annual stock weight-at-age values. tinyAM uses the published age-12 value for its 12+ group; older age-specific source values remain recorded."
+    notes = "Annual stock weight-at-age values. Older age-specific source values remain recorded."
   ),
   new_input("maturity", "maturity_at_age", "proportion", maturity$year,
     maturity$age, maturity$value, "proportion",
@@ -269,7 +269,7 @@ for (spec in index_spec) {
     transformation = "Direct age-specific abundance estimate copied from the report table.",
     notes = paste(
       "Approximate timing from the reported season:", spec$season,
-      "(", spec$time, "of year). Index ages above the tinyAM plus group are summed."
+      "(", spec$time, "of year)."
     )
   )
 }
@@ -283,7 +283,7 @@ add_rse <- function(table_id, ages, survey = NA_character_, fleet = NA_character
     x$value, "relative standard error",
     survey = survey, fleet = fleet,
     source_reference = paste(report_url, paste("Table", table_id)),
-    transformation = "Relative standard errors are retained as published; tinyAM does not apply these external SAM weights.",
+    transformation = "Relative standard errors are retained as published.",
     notes = "Source-model sampling precision, not an observation on the abundance scale."
   )
 }
@@ -329,7 +329,7 @@ assumptions <- do.call(rbind, list(
   new_assumption("catch", "catch_streams", "One aggregate catch-at-age series", report_url),
   new_assumption(
     "catch", "observation_error", "Lognormal with age-year sampling uncertainty", report_url,
-    "Published relative standard errors are retained, but tinyAM fits its own observation SDs."
+    "Published relative standard errors are retained."
   ),
   new_assumption(
     "F", "process", "SAM state-space F process; exact transition keys unresolved", benchmark_url,
@@ -368,7 +368,7 @@ assumptions <- do.call(rbind, list(
   ),
   new_assumption(
     "index", "external_precision", "Relative standard errors", report_url,
-    "Tables 4.4.8.2-5 report relative errors used for SAM weighting; tinyAM currently does not apply these external weights."
+    "Tables 4.4.8.2-5 report relative errors used for SAM weighting."
   ),
   new_assumption(
     "index", "catchability_structure", "Unknown", benchmark_url,

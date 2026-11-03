@@ -148,7 +148,7 @@ review <- list(
     'The 2024 ICCAT report describes an Atlantic-wide single stock and data through',
     '2022. The reported biological assumptions do not substitute for population age',
     'compositions or age-specific output surfaces. No canonical values were added',
-    'and no tinyAM translation was attempted. Official reports are cached under',
+    'and was attempted. Official reports are cached under',
     'source_cache/discovery_noaa_iccat_blue_marlin_2024/.'
   )
 )

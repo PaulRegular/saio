@@ -211,7 +211,7 @@ write_assessment_file <- function(path, rows) {
   }
 }
 
-if (identical(Sys.getenv("TINYAM_DATABASE_DRY_RUN"), "true")) {
+if (identical(Sys.getenv("SAIO_DATABASE_DRY_RUN"), "true")) {
   action <- if (all(present)) "already match" else "would be added"
   cat("Dry run passed:", nrow(forecast_outputs), "forecast output rows", action,
     "; outputs_status would be complete.\n"

@@ -135,7 +135,7 @@ review <- list(
     '2023 report uses Istiophorus albicans for Atlantic sailfish. The candidate-unit',
     'crosswalk is based on the matching common name and western Atlantic area; this',
     'screen does not assert that the names are taxonomic synonyms. No canonical',
-    'values were added and no tinyAM translation was attempted. The report is cached',
+    'values were added was attempted. The report is cached',
     'under source_cache/discovery_noaa_iccat_west_sailfish_2023/.'
   )
 )
