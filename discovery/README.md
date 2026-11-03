@@ -2,8 +2,7 @@
 
 `candidates.csv` is a discovery register, not a canonical assessment table. Its
 rows are source-list entries and are not automatically verified distinct new stock
-units, eligible age-structured assessments, or a selected import batch. Some rows
-have been screened; others still need identity reconciliation or source review.
+units, eligible age-structured assessments, or a selected import batch. The dated inventory below has been screened; unresolved identities and source gaps remain explicit.
 `candidate_unit_id` links inventory rows only when reviewed evidence confirms a
 shared stock unit; blank values are unresolved or not yet crosswalked. Do not
 overwrite the register after review has begun.
@@ -16,7 +15,9 @@ The initial snapshot was retrieved on 2026-10-28 from:
 | ICES SID | 274 published stock entries | `source_cache/discovery_ices_sid/stock_list_2026.json`, SHA-256 `913D6A3EEAB9449AE3CD0DD15661A150D36FF79B6E6A9BA78D86D46BA1035F42` | Published 2026 stock list includes assessments and advice that may not use age observations. |
 | DFO Sustainability Survey | 198 selected stocks, plus one supplementary Pacific IFMP entry for coastwide yellowtail rockfish | `source_cache/discovery_dfo_sustainability/survey_2024.html`, SHA-256 `A10E65EEF028C2A524973FFCFA155915D673AE3AB9A9F1312581449E29644A28` | The 2024 survey covers only selected managed stocks, including non-finfish. Supplement with regional CSAS inventories. Official IDs and scientific names require review. |
 
-## Current inventory status
+## Inventory snapshot: 2026-11-02
+
+Use `candidates.csv`, `inventory_units.csv` and `inventory_progress.csv` for recorded statuses. The narratives below document dated source reviews; they are not a live work queue or a new curation target.
 
 As of 2026-11-02, the inventory has 905 source-list rows. These are not unique stock counts.
 `inventory_progress.csv` breaks row-level identity, screening, and eligibility

@@ -16,7 +16,7 @@ The database was constructed with substantial agentic-AI assistance. Not all rec
 - PROTOCOL.md: stock selection, source recovery and validation.
 - discovery/: inventories, stock-unit crosswalks and screening decisions.
 - scripts/database/: reproducible importers and the canonical validator.
-- source_reviews/: source interpretation and unresolved gaps.
+- source_reviews/: official source interpretation and unresolved gaps; see [review ownership](source_reviews/README.md).
 - tests/: source checks that do not require tinyAM.
 - provenance/: tracked retrieval manifests copied from the local source cache.
 - source_cache/: ignored local PDFs, native files and fitted objects.
@@ -35,7 +35,7 @@ The validator requires cli. Individual importers document their source-specific 
 
 The initial snapshot is an exact copy of the canonical CSVs at tinyAM comp-assessments commit 34470212e1102f3f31bf3f08c26a8a72a985c948. migration.json records table sizes and SHA-256 hashes. Historical commits remain available in the [original repository](https://github.com/PaulRegular/tinyAM/tree/34470212e1102f3f31bf3f08c26a8a72a985c948/analysis/comp_assessments); history has not been rewritten. This repository begins with the preserved source snapshot.
 
-The reviewed and preliminary tinyAM translations remain in tinyAM. Their governing document is analysis/comp_assessments/TINYAM_TRANSLATION.md there. The source protocol's references to that document refer to this downstream workflow.
+The reviewed and preliminary tinyAM translations remain in tinyAM. Their [translation protocol](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/TINYAM_TRANSLATION.md) and [stock model notes](https://github.com/PaulRegular/tinyAM/tree/main/analysis/comp_assessments/translation_notes) are maintained there. Source curation does not require tinyAM.
 
 ## Attribution and reuse
 

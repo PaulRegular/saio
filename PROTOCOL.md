@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines the standing protocol for adding, reviewing, and revising stock assessments in ``.
+This document defines the standing protocol for adding, reviewing, and revising stock assessments in SAIO.
 
 The governing question is:
 
@@ -43,7 +43,7 @@ recorded. For each stock, follow this order:
    change and the fallback's limits; never use it to fill gaps in the
    latest-unit record.
 5. After the source record and its gaps are documented, use
-   `TINYAM_TRANSLATION.md` to assess whether a tinyAM translation is useful and
+   [the tinyAM translation protocol][tinyam-protocol] to assess whether a tinyAM translation is useful and
    supportable. Translation readiness, fit, or agreement does not decide which
    stock unit or assessment is curated, and must not delay recoverable source
    work.
@@ -71,20 +71,24 @@ Do not postpone recoverable assessment data while trying to make a tinyAM
 translation converge or agree better.
 
 Follow the schema and controlled vocabularies in `DATABASE_STRUCTURE.md`.
-The [scope and provenance statement](README.md#scope-and-provenance) applies
+The [scope and provenance statement](README.md#scope-and-verification) applies
 to all records and their downstream use. Extraction and automated checks do
 not substitute for verification against the authoritative sources.
 
 Use this protocol to curate or repair source records. Follow
-`TINYAM_TRANSLATION.md` for translating those records, fitting tinyAM models,
-and comparing results. New extraction, validation, translation, and analysis
-code should use R. Keep source-import scripts separate from the routine
+[the tinyAM translation protocol][tinyam-protocol] for translating those records, fitting tinyAM models,
+and comparing results. New source extraction and validation code should use R. Keep source-import scripts separate from the routine
 database-to-model workflow; fitting must not depend on rerunning an importer
 or reading source-cache files directly.
 
-At the start of work in this folder, read this protocol and
+Stock-specific downstream settings, initialization attempts, fit diagnostics
+and comparison statistics belong in the analysis repository. Source reviews
+here retain official assumptions, source reconstructions and unresolved data
+gaps; they do not depend on a successful downstream model.
+
+At the start of work in this repository, read this protocol and
 `DATABASE_STRUCTURE.md`. Before preparing or fitting a tinyAM translation, read
-`TINYAM_TRANSLATION.md` as well. Complete source curation independently of the
+[the tinyAM translation protocol][tinyam-protocol] as well. Complete source curation independently of the
 translation attempt: recover and record available authoritative data first,
 then assess whether tinyAM can represent and fit the assessment.
 
@@ -667,7 +671,7 @@ This exception concerns reconstruction of the official assessment, not preparati
 
 These restrictions apply to canonical source records. Derived tinyAM
 observations, settings, comparisons, and fitted results belong in analysis
-outputs, as described in `TINYAM_TRANSLATION.md`.
+outputs, as described in [the tinyAM translation protocol][tinyam-protocol].
 
 ------------------------------------------------------------------------
 
@@ -825,7 +829,7 @@ tinyAM M treatment outside the canonical tables.
 Curation is the first priority and does not depend on a tinyAM model being
 fitted. After source curation, when translation is requested and the available
 data and assessment method support a defensible approximation, follow
-`TINYAM_TRANSLATION.md` through validation, fitting, diagnostics and comparison.
+[the tinyAM translation protocol][tinyam-protocol] through validation, fitting, diagnostics and comparison.
 Record missing source data, an unsupported method, or numerical failure as a
 separate translation outcome; continue curation of other stocks. Do not count
 a missing or unsuccessful translation as a failure to curate verified source
@@ -915,3 +919,5 @@ A final multi-assessment report should state:
 - major missing data or unresolved assumptions.
 
 Do not stop merely because the workflow has been demonstrated successfully on a subset.
+
+[tinyam-protocol]: https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/TINYAM_TRANSLATION.md
