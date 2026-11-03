@@ -29,7 +29,9 @@ source("R/read_database.R")
 database <- read_database()
 ```
 
-The validator requires cli. Individual importers document their source-specific dependencies and expected cached files. Canonical validation does not fit an assessment model. Importers with preview controls use `SAIO_DATABASE_DRY_RUN` or `SAIO_IMPORT_DRY_RUN`; check the script for the required value (`true` or `1`).
+The validator requires cli. Individual importers document their source-specific dependencies and expected cached files. Canonical validation does not fit an assessment model. Importers with preview controls use `--dry-run`, `SAIO_DATABASE_DRY_RUN` or `SAIO_IMPORT_DRY_RUN`; check the script for its supported control and required value (`true` or `1`). Previews parse and validate sources without updating the database or discovery register.
+
+The inventory test checks the current register and derived summaries without rerunning screening decisions. Stock-specific source tests remain in their own files. After authorized register changes, regenerate `discovery/inventory_progress.csv` and `discovery/inventory_units.csv` with `195_summarize_discovery.R` and `196_summarize_inventory_units.R` before validating the inventory.
 
 ## Versioned source records
 

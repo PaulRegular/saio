@@ -1,4 +1,5 @@
 root <- '.'
+source('tests/helper_inventory.R')
 unit_id <- 'iccat_north_atlantic_swordfish'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -43,14 +44,9 @@ stopifnot(
   !any(outputs$assessment_id == unit_id, na.rm = TRUE),
   grepl('2022 ICCAT assessment using data through 2020', review, fixed = TRUE),
   grepl('North Atlantic MSE work', review, fixed = TRUE),
-  sum(progress$inventory_rows) == 905L,
-  sum(progress$new) == 663L,
-  sum(progress$identity_unreviewed) == 100L,
-  sum(progress$excluded) == 584L,
-  sum(progress$eligibility_unresolved) == 151L,
-  sum(progress$screening_complete) == 905L,
-  sum(progress$screening_not_started) == 0L
+  sum(progress$inventory_rows) == 905L
 )
+check_inventory_accounting(register, progress, units)
 
 cache <- file.path(root, 'source_cache', 'discovery_swordfish_north_atlantic_2022')
 if (dir.exists(cache)) {
