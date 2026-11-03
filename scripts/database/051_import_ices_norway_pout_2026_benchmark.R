@@ -1,7 +1,7 @@
 assessment_id <- "ices_norway_pout_north_sea_2026_benchmark"
 stock_id <- "ices_norway_pout_north_sea"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 cache <- file.path(base, "source_cache", assessment_id, "native")
 report_url <- "https://doi.org/10.17895/ices.pub.32019630"
 report_pdf <- "https://ices-library.figshare.com/ndownloader/files/64519302"

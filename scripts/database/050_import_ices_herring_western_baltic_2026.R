@@ -1,7 +1,7 @@
 assessment_id <- "ices_herring_western_baltic_2026"
 stock_id <- "ices_herring_western_baltic"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 cache <- file.path(base, "source_cache", assessment_id)
 
 report_url <- "https://backend.orbit.dtu.dk/ws/portalfiles/portal/440308463/HAWG_2026_-_Full_Report.pdf"

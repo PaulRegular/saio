@@ -7,7 +7,7 @@ stock_graph_url <- "https://standardgraphs.ices.dk/ViewCharts.aspx?key=22637"
 repository_url <- "https://github.com/ices-taf/2026_cod.27.1-2coastN_assessment"
 
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 database_dir <- file.path(base, "database")
 report_file <- file.path(
   base, "source_cache", "ck_ices_afwg_morhua_coastnor_1_2",

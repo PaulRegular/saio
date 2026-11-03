@@ -1,6 +1,6 @@
 assessment_id <- "ices_norway_pout_north_sea_2026_benchmark"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 database <- file.path(base, "database")
 model_url <- paste0(
   "https://stockassessment.org/datadisk/stockassessment/userdirs/user3/",

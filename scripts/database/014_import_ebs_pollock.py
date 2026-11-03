@@ -5,7 +5,7 @@ import json
 import sys
 from pathlib import Path
 
-root=Path(sys.argv[1])/'analysis/comp_assessments'
+root=Path(sys.argv[1])
 cache=root/'source_cache/afsc_pollock_ebs_2024'
 assessment='afsc_pollock_ebs_2024'; stock_id='afsc_pollock_ebs'
 revision='44e0cb0ac8698e1d3954273e8aaf760d7c76cba5'

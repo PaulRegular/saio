@@ -1,7 +1,7 @@
 assessment_id <- "ices_plaice_baltic_21_32_2026"
 stock_id <- "ices_plaice_baltic_21_32"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 cache <- file.path(base, "source_cache", "ices_plaice_baltic_21_32_2026")
 run_file <- file.path(cache, "run__model.RData")
 data_file <- file.path(cache, "run__data.RData")

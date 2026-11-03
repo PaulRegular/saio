@@ -1,5 +1,5 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-database_dir <- file.path(root, "analysis", "comp_assessments", "database")
+database_dir <- file.path(root, "database")
 read_table <- function(name) read.csv(
   file.path(database_dir, name), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE

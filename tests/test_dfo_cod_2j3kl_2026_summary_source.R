@@ -1,8 +1,8 @@
 testthat::test_that("Northern cod 2026 summary data stay separate from the detailed run", {
   root <- normalizePath(getwd())
-  while (!file.exists(file.path(root, "analysis", "comp_assessments", "database", "assessments.csv"))) {
+  while (!file.exists(file.path(root, "database", "assessments.csv"))) {
     parent <- dirname(root)
-    if (identical(parent, root)) testthat::fail("Could not locate the assessment database.")
+    if (identical(parent, root)) stop("Could not locate the assessment database.")
     root <- parent
   }
   old_wd <- getwd()

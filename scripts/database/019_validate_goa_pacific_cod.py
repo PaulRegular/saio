@@ -8,7 +8,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 root=Path(sys.argv[1])
-folder=root/'analysis/comp_assessments'
+folder=root
 rows=list(csv.DictReader((folder/'database/inputs.csv').open(encoding='utf-8-sig')))
 current=[r for r in rows if r['assessment_id']=='afsc_cod_goa_2026']
 assert len(current)==12689
@@ -54,7 +54,7 @@ for r in mortality:
  assert float(r['value'])==(.84 if elevated else .5)
  assert float(r['se'])==(.053 if elevated else .023)
  assert not r['lwr'] and not r['upr']
-previous_blob=subprocess.check_output(['git','show','HEAD:analysis/comp_assessments/database/inputs.csv'],cwd=root)
+previous_blob=subprocess.check_output(['git','show','HEAD:database/inputs.csv'],cwd=root)
 if previous_blob.startswith(b'version https://git-lfs.github.com/spec/v1'):
  match=re.search(rb'oid sha256:([0-9a-f]{64})',previous_blob)
  assert match, 'Could not read the committed LFS pointer for inputs.csv'

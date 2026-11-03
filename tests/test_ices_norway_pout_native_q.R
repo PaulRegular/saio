@@ -1,5 +1,5 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-database_dir <- file.path(root, "analysis", "comp_assessments", "database")
+database_dir <- file.path(root, "database")
 assessment_id <- "ices_norway_pout_north_sea_2026_benchmark"
 read_table <- function(name) read.csv(
   file.path(database_dir, name), stringsAsFactors = FALSE,
@@ -12,7 +12,7 @@ q <- outputs[
     outputs$measure == "q", , drop = FALSE
 ]
 fit_env <- new.env(parent = baseenv())
-load(file.path(root, "analysis", "comp_assessments", "source_cache",
+load(file.path(root, "source_cache",
   assessment_id, "native", "sum.RData"), envir = fit_env)
 fit <- fit_env$sesamsum
 survey_names <- c(

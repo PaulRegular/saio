@@ -1,7 +1,7 @@
 assessment_id <- "ices_saithe_faroe_2025"
 stock_id <- "ck_ices_nwwg_virens_fa5b"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 cache <- file.path(base, "source_cache", "ck_ices_nwwg_virens_fa5b_2025")
 database <- file.path(base, "database")
 run_url <- paste0(

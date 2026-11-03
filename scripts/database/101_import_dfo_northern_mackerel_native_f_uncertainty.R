@@ -1,6 +1,6 @@
 assessment_id <- "dfo_northern_mackerel_2025"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 cache <- file.path(base, "source_cache", assessment_id)
 model_revision <- "435d10bcb6ee64e0d94c77f6854e0d37f53e4b8b"
 ccam_revision <- "1bcb06473343c13ebeebecdb54acd905220aeb61"

@@ -1,7 +1,8 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-database <- file.path(root, "analysis", "comp_assessments", "database")
-read_table <- function(name) data.table::fread(
-  file.path(database, name), na.strings = c("", "NA"), data.table = FALSE
+database <- file.path(root, "database")
+read_table <- function(name) read.csv(
+  file.path(database, name), na.strings = c("", "NA"),
+  stringsAsFactors = FALSE, check.names = FALSE
 )
 
 assessment_id <- "ices_sole_north_sea_2026_summary"
@@ -20,8 +21,8 @@ discards <- source_inputs[source_inputs$fleet == "Discards" & source_inputs$type
 landings_weight <- source_inputs[source_inputs$measure == "landings_weight_at_age", ]
 discard_weight <- source_inputs[source_inputs$measure == "discard_weight_at_age", ]
 stock_weight <- source_inputs[source_inputs$measure == "weight_at_age", ]
-bts <- source_inputs[source_inputs$survey == "BTS Q3", ]
-coast <- source_inputs[source_inputs$survey == "COAST (SNS + DYFS)", ]
+bts <- source_inputs[which(source_inputs$survey == "BTS Q3"), ]
+coast <- source_inputs[which(source_inputs$survey == "COAST (SNS + DYFS)"), ]
 n_at_age <- source_outputs[source_outputs$measure == "numbers_at_age", ]
 f_at_age <- source_outputs[source_outputs$measure == "fishing_mortality_at_age", ]
 total_numbers <- source_outputs[source_outputs$measure == "total_numbers", ]

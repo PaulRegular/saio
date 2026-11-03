@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 from collections import defaultdict
 
-root = Path(sys.argv[1]) / 'analysis/comp_assessments'
+root = Path(sys.argv[1])
 cache = root / 'source_cache/afsc_cod_goa_2026'
 assessment = 'afsc_cod_goa_2026'
 stock_id = 'afsc_cod_goa'

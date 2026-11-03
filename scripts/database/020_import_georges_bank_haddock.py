@@ -1,7 +1,7 @@
 """Import verified 2026 Georges Bank haddock summaries; retain incomplete status."""
 import csv,io,re,sys
 from pathlib import Path
-root=Path(sys.argv[1])/'analysis/comp_assessments'
+root=Path(sys.argv[1])
 cache=root/'source_cache/nefsc_haddock_georges_bank_2026'
 assessment='nefsc_haddock_georges_bank_2026'
 stock_id='nefsc_haddock_georges_bank'

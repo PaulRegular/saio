@@ -1,7 +1,7 @@
 assessment_id <- "ices_whiting_west_scotland_2025"
 stock_id <- "ck_ices_wgsce_merlangus_cs27_6a"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 cache <- file.path(base, "source_cache", "ices_whiting_6a_2025")
 model_dir <- file.path(cache, "model")
 model_url <- paste0(

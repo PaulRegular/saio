@@ -2,7 +2,7 @@ assessment_id <- "ices_whiting_irish_sea_2025_benchmark"
 summary_id <- "ices_whiting_irish_sea_2025_sag_summary"
 stock_id <- "ck_ices_wgcse_merlangus_cs7a"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 cache <- file.path(base, "source_cache", stock_id)
 database <- file.path(base, "database")
 

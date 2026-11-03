@@ -1,7 +1,7 @@
 assessment_id <- "ices_whiting_north_sea_2026"
 stock_id <- "ices_whiting_north_sea"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 cache <- file.path(base, "source_cache", assessment_id)
 model_url <- paste0(
   "https://stockassessment.org/datadisk/stockassessment/userdirs/user3/",

@@ -1,12 +1,12 @@
 testthat::test_that("Northern cod Capelin covariate uses reported values when available", {
   root <- normalizePath(getwd())
-  while (!file.exists(file.path(root, "analysis", "comp_assessments", "database", "inputs.csv"))) {
+  while (!file.exists(file.path(root, "database", "inputs.csv"))) {
     parent <- dirname(root)
     if (identical(parent, root)) stop("Could not locate the assessment database.")
     root <- parent
   }
   inputs <- read.csv(
-    file.path(root, "analysis", "comp_assessments", "database", "inputs.csv"),
+    file.path(root, "database", "inputs.csv"),
     stringsAsFactors = FALSE, na.strings = "", check.names = FALSE
   )
   capelin <- inputs[

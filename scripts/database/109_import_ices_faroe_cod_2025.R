@@ -1,7 +1,7 @@
 assessment_id <- "ices_cod_faroe_plateau_2025"
 stock_id <- "ck_ices_nwwg_morhua_fapl5b1"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 cache <- file.path(base, "source_cache", stock_id)
 run_cache <- file.path(cache, "run_2025_official")
 database <- file.path(base, "database")

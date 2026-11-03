@@ -1,5 +1,5 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-database_dir <- file.path(root, "analysis", "comp_assessments", "database")
+database_dir <- file.path(root, "database")
 read_table <- function(name) read.csv(
   file.path(database_dir, name), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE
@@ -18,7 +18,7 @@ summary <- assessments[assessments$assessment_id == summary_id, , drop = FALSE]
 source_inputs <- inputs[inputs$assessment_id == assessment_id, , drop = FALSE]
 source_outputs <- outputs[outputs$assessment_id == assessment_id, , drop = FALSE]
 fit_env <- new.env(parent = baseenv())
-load(file.path(root, "analysis", "comp_assessments", "source_cache",
+load(file.path(root, "source_cache",
   assessment_id, "run", "model.RData"), envir = fit_env)
 fit <- fit_env$fit
 summary_outputs <- outputs[outputs$assessment_id == summary_id & outputs$measure %in% c("recruitment", "SSB", "Fbar"), , drop = FALSE]

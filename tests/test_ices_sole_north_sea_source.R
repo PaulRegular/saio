@@ -1,5 +1,5 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-database <- file.path(root, "analysis", "comp_assessments", "database")
+database <- file.path(root, "database")
 stocks <- read.csv(file.path(database, "stocks.csv"), stringsAsFactors = FALSE)
 assessments <- read.csv(file.path(database, "assessments.csv"), stringsAsFactors = FALSE)
 assumptions <- read.csv(file.path(database, "assumptions.csv"), stringsAsFactors = FALSE)

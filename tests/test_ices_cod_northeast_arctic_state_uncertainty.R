@@ -1,6 +1,6 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 assessment_id <- "ices_cod_northeast_arctic_2026"
-database_dir <- file.path(root, "analysis", "comp_assessments", "database")
+database_dir <- file.path(root, "database")
 outputs <- read.csv(
   file.path(database_dir, "outputs.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE
@@ -10,7 +10,7 @@ assessment <- read.csv(
   na.strings = c("", "NA"), check.names = FALSE
 )
 fit_env <- new.env(parent = baseenv())
-load(file.path(root, "analysis", "comp_assessments", "source_cache",
+load(file.path(root, "source_cache",
   assessment_id, "baserun_model.RData"), envir = fit_env)
 fit <- fit_env$fit
 

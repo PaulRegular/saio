@@ -1,6 +1,6 @@
 assessment_id <- "jrn_afwg_haddock_northeast_arctic_2026"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 cache <- file.path(
   base, "source_cache", "ck_ices_afwg_aeglefinus_nea_1_2", "assessment_2026"
 )

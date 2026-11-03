@@ -1,5 +1,5 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-pdf_file <- file.path(root, "analysis", "comp_assessments", "source_cache", "ck_ices_wgbfas_solea_ns_iiia_22_24", "assessment_2026", "WGBFAS_2026_Sole_20-24.pdf")
+pdf_file <- file.path(root, "source_cache", "ck_ices_wgbfas_solea_ns_iiia_22_24", "assessment_2026", "WGBFAS_2026_Sole_20-24.pdf")
 pdf_pages <- pdftools::pdf_text(pdf_file)
 page_lines <- lapply(pdf_pages, function(page) trimws(strsplit(gsub("\\u00a0", " ", page), "\\n")[[1L]]))
 year_pattern <- "^(19|20)[0-9]{2}$"
@@ -246,7 +246,7 @@ if (identical(tolower(Sys.getenv("TINYAM_IMPORT_DRY_RUN")), "true")) {
   quit(save = "no")
 }
 
-database <- file.path(root, "analysis", "comp_assessments", "database")
+database <- file.path(root, "database")
 inputs_file <- file.path(database, "inputs.csv")
 outputs_file <- file.path(database, "outputs.csv")
 assumptions_file <- file.path(database, "assumptions.csv")

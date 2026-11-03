@@ -2,7 +2,7 @@ assessment_id <- "ices_sole_north_sea_2025"
 summary_id <- "ices_sole_north_sea_2026_summary"
 stock_id <- "ck_ices_wgnssk_solea_ns_4"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-base <- file.path(root, "analysis", "comp_assessments")
+base <- root
 database <- file.path(base, "database")
 cache <- file.path(base, "source_cache", "ices_sole_north_sea_2025")
 report_file <- file.path(cache, "wgnssk_2025_sole_4.txt")
