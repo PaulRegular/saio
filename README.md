@@ -2,6 +2,10 @@
 
 SAIO preserves publicly available inputs, model assumptions and outputs from stock assessments. Current curated coverage is finfish, with an emphasis on age-disaggregated information.
 
+Repository: https://github.com/PaulRegular/saio
+
+Clone this repository with Git LFS beside tinyAM. On the development laptop it lives at `C:/Users/paulr/Documents/saio`, alongside `C:/Users/paulr/Documents/tinyAM`. The downloaded source cache remains local and ignored by Git.
+
 ## Scope and verification
 
 The database was constructed with substantial agentic-AI assistance. Not all records have been exhaustively human-verified. Check values, definitions and provenance against authoritative assessment sources before research use. Extraction completeness and translation success are separate from scientific verification.
