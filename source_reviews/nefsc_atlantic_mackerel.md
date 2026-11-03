@@ -62,26 +62,6 @@ The 2018 assessment PDF and extracted text are cached under
   that explicit assumption and its implied age-year surface separately from
   fitted outputs.
 
-## tinyAM fit and comparison
-
-The stock recipe fits 1968-2016, ages 1-10+, with an IID N process, AR1 F
-deviations around an age-specific mean, fixed M=0.2, one lognormal catch
-observation error, and separate catchability by survey-age. The official model's
-time-constant fishery selectivity and its catch and age-composition likelihoods
-are not represented directly. The aggregate egg SSB index is also omitted.
-Accordingly this is a simplified comparison model, not a reproduction of ASAP.
-
-The fit converged (optimizer code 0, relative convergence), with maximum
-absolute gradient 0.00066, successful sdreport, and a positive-definite Hessian.
-The terminal-year trajectory comparisons are strong for several quantities
-(SSB trend correlation 0.95; N-at-age aggregate 0.88), but scale differences
-remain material: terminal SSB is about 29% lower and terminal Fbar about 35%
-higher in tinyAM. Recruitment comparisons use age 1 on both sides and have a
-more modest trend correlation (0.61). M matches exactly by construction because
-both models use fixed M=0.2; that agreement is not an independent validation.
-These differences should be read alongside the structural approximations
-above.
-
 ## Sources
 
 - [SAW-64 Atlantic mackerel assessment, NEFSC Reference Document 18-06](https://doi.org/10.25923/swk4-1e81)
@@ -89,3 +69,7 @@ above.
 - [NOAA Stock Assessment Support Information portal](https://apps-nefsc.fisheries.noaa.gov/saw/sasi.php); the 2025 archive contains the report and Run 8 diagnostic plots, not native inputs or model files
 - [2023 Atlantic Mackerel Management Track Assessment](https://repository.library.noaa.gov/view/noaa/70900/noaa_70900_DS1.pdf)
 - [NOAA Atlantic mackerel science and current status](https://www.fisheries.noaa.gov/species/atlantic-mackerel/science)
+
+## Downstream modelling
+
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/nefsc_atlantic_mackerel.md). They do not determine source completeness or official run selection.

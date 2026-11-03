@@ -29,7 +29,6 @@ The age-0 acoustic series is reported already shifted to the following year as a
 
 The canonical record contains catch-at-age, catch and stock weight-at-age, annual M-at-age, static maturity, four age-specific index fleets, SAM process and sharing settings, and reported N, F, recruitment, SSB, and Fbar outputs. Total abundance is derived by summing the reported N-at-age values for ages 1-8, with age 8 representing 8+; its values inherit the report's rounding and have no separate uncertainty. The WGBFAS report does not tabulate fitted q values, fitted observation predictions, or age-specific uncertainty for N and F. Output completeness therefore remains partial. The low/high bounds reported for recruitment, SSB, and Fbar are retained as published; the chapter does not identify their confidence level.
 
+## Downstream modelling
 
-## Translation review — 2026-10-17
-
-Applied the documented 40% pre-spawning fraction for both F and M. Common-definition SSB now uses official N/F/M with the translated biology; native SSB/intervals remain separate. This corrects a biological definition, so its statistics must not be presented as a like-for-like improvement over the previous January-1 comparison.
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_sprat_baltic.md). They do not determine source completeness or official run selection.

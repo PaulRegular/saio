@@ -1,13 +1,10 @@
-# Norwegian spring-spawning herring
+# Norwegian spring-spawning herring: historical 2025 assessment
 
 ## Assessment represented
 
-The canonical record uses the official 2025 ICES assessment, configured at
-WKBMACNSSH 2025. It is the most recent official assessment with detailed inputs
-and outputs recoverable for this database. Its fitted catch series ends in
-2024; estimated N, F, and summary series extend through 2025. The official 2026
-assessment is recorded separately because only its summary series was
-recovered. Its values do not replace the detailed 2025 record.
+The separate historical record uses the official 2025 ICES assessment, configured at
+WKBMACNSSH 2025. This note preserves the earlier detailed run; the 2026 assessment is now current. Its fitted catch series ends in
+2024; estimated N, F, and summary series extend through 2025. The newer detailed 2026 record is documented in [the current source review](ices_herring_norwegian_spring_spawning.md). Its values do not replace this historical 2025 record.
 
 The assessment is for Norwegian spring-spawning herring (*Clupea harengus*) in
 ICES Subareas 1, 2, and 5 and Divisions 4.a and 14.a. The reported model ages
@@ -18,8 +15,7 @@ numbers-at-age, F-at-age, recruitment, SSB, catch, and Fbar.
 
 The catch table reports numbers-at-age for 1950–2024 in thousand fish and
 source age groups 0–14 and 15+. The official fit uses 1988–2024. The database
-retains ages 2–15+ as reported so later translations can combine ages 12 and
-older for tinyAM's 12+ group. Catch weights are retained separately.
+retains ages 2–15+ as reported without substituting the model's 12+ group for the reported ages. Catch weights are retained separately.
 
 The report gives standard natural mortality of 0.9 per year at age 2 and 0.15
 per year at ages 3 and older. It also refers to annual mortality deviations in
@@ -40,23 +36,16 @@ records approximate seasonal timing: 0.13 for NASF, 0.42 for IESNS Barents,
 were not recovered.
 
 The report includes relative standard errors for catch and the surveys.
-These are stored as source precision information; tinyAM will estimate its own
-observation errors and will not apply the SAM external weights. RFID relative
+These are stored as source precision information. RFID relative
 errors are available, but the numeric index series is only shown in a figure,
 so no RFID observations are transcribed. The official native SAM object and
 its exact process, q-sharing, and uncertainty settings were not recovered.
 
-For a tinyAM comparison, age-specific catch and index values above age 12 are
-summed into age 12+. The published age-12 stock weight and maturity are used
-as proxies for the 12+ group because no abundance-by-single-age surface above
-age 12 is available for a defensible weighted biological average. Maturity
-birth cohorts are mapped to calendar year by `cohort = year - age`; this
-preserves the source cohort pattern on the year-age grid.
 
 ## Source files cached locally
 
 The following files are in the gitignored
-`analysis/comp_assessments/source_cache/ices_herring_norwegian_spring_2026/`
+`source_cache/ices_herring_norwegian_spring_2026/`
 folder for reference:
 
 | File | Source or use |

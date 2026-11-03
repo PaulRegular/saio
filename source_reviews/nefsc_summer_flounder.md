@@ -51,23 +51,6 @@ contains only the NEFSC Bigelow spring and fall age indices.
   provides terminal-year 90% MCMC intervals for aggregate F and SSB, but no
   matched age-specific uncertainty table was recovered.
 
-## Translation status
-
-The source inputs and outputs above have been added to the canonical database.
-The initial tinyAM translation uses the published aggregate catch series once,
-the Bigelow spring/fall age indices, and the static SSB-weight approximation.
-Its 1982-2016 fit did not pass tinyAM's convergence check: the optimizer
-returned code 0 with objective 757.41 and maximum gradient 0.00045, but the
-Hessian was not positive definite (24 fixed and 552 random effects). The
-standard-error calculation returned, but it is not treated as a successful
-fit. No model-comparison dashboard was generated. No alternate settings were
-tried to force convergence.
-
-The official run retained more observations and assessment detail than this
-tinyAM translation can represent. Any later comparison should be limited to
-definitions and years that can be matched; in particular, the available
-maturity schedule ends in 2016.
-
 ## Sources
 
 - [66th SAW Summer Flounder Assessment Report (2018)](https://repository.library.noaa.gov/view/noaa/23031/noaa_23031_DS1.pdf)
@@ -94,3 +77,7 @@ under `source_cache/nefsc_summer_flounder_2025/`. The importer verifies SHA-256
 checksums and the report overlap. [2025 report](https://asmfc.org/wp-content/uploads/2025/08/SF_Management_Track_Assessment_2025.pdf),
 [peer review](https://www.fisheries.noaa.gov/s3/2025-07/2025-June-Management-Track-Peer-Review-Panel-Report-508.pdf),
 [Stock SMART snapshot](https://github.com/NOAA-EDAB/stocksmart/tree/664c4237e26520b260a090e1821a2cee5d1cdf07).
+
+## Downstream modelling
+
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/nefsc_summer_flounder.md). They do not determine source completeness or official run selection.

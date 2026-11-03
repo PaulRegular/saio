@@ -83,29 +83,6 @@ Completeness remains partial: full ungrouped N at ages 40–46+, age-state
 uncertainty, and some initialization/control semantics are not exported. The
 source review distinguishes these gaps from confirmed inactive likelihoods.
 
-## tinyAM translation
+## Downstream modelling
 
-The recipe uses 1960–2024 and ages 3–40+, the observed/exported terminal age
-group. It reconstructs age-specific catch and survey indices from the original
-biomass, compositions and weights. Source length samples, ageing error,
-composition likelihoods, spline penalties and priors are omitted. Survey time
-0.5 approximates the source's annual-average survival. Recruitment has separate
-mean periods before/after 1990, with estimated IID variation; survival is
-deterministic, initial abundance is free, F has independent temporal random
-walks, and M is an estimated constant without the source prior. Maturity is
-held at the official fitted logistic curve, with a female fraction of 0.5
-and spawning time 0.25. These choices are explicit in the dashboard background.
-
-Preparation and the default-first/retry, plus-group, reference-alignment and
-comparison-definition regression tests pass. The first default-initialization
-attempt was manually stopped after more than seven hours without a returned fit;
-numerical checks were unavailable. The single permitted source-start retry began
-at 17:36 local and used aligned official N and F values. The attempt cache
-recorded no returned result by 18:52 local on 2026-10-20, when no R/Rscript
-process remained. Exact termination time and cause are unknown, so the objective,
-gradient, standard errors, Hessian and convergence are unavailable. No agreement
-statistics or dashboard are claimed. A later default-initialization attempt was
-started on 2026-10-23. Its current attempt record still says that it started
-without returning a result, so its objective, gradient, standard errors, Hessian
-and convergence remain unavailable. No further retry has been made while this
-attempt is pending, and no data or model assumptions were changed.
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/afsc_pop_bsai.md). They do not determine source completeness or official run selection.

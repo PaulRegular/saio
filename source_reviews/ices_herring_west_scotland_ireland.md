@@ -82,30 +82,6 @@ and three survey identities visible, document approximations to SAM's process
 and observation-correlation structures, and treat area-specific F comparison
 as approximate if the tinyAM population is represented as one combined unit.
 
-## tinyAM translation result
+## Downstream modelling
 
-The translation combines the two catch-number fleets by year and age for the
-tinyAM fit; the database retains the fleet-specific inputs. It fits one pooled
-correlated F process, preserves the three surveys and their q/SD sharing, and
-uses independent survey-age residuals because tinyAM does not represent the
-source AR(1) correlation across survey ages. Source F-at-age is summed across
-the two areas only for the common total-F comparison. The fit uses package-
-default starting values; no retry was made because the default fit passed
-numerical checks.
-
-The default fit converged (optimizer code 0; maximum absolute gradient 0.000716;
-positive-definite Hessian). The dashboard and fitted object are cached locally
-under `results/cache/ices_herring_west_scotland_ireland_2020/`. Observation
-predictions are close to their inputs on average, but the derived population
-series disagree substantially with the official outputs. Mean absolute percent
-differences are 276.7% for N-at-age, 217.0% for total abundance, 197.3% for
-biomass, 184.6% for SSB, and 266.5% for recruitment. Their terminal differences
-are especially large and trend correlations are 0.535, 0.099, 0.392, 0.457,
-and 0.119, respectively. Approximate total F-at-age differs by 54.9% on average
-(terminal difference -78.4%; correlation 0.430), while the common N-weighted
-Fbar differs by 45.2% (terminal difference -76.4%; correlation 0.600). Fixed M
-is reused from the input and is not an independent fit comparison. These
-results indicate weak agreement despite numerical convergence; the age-specific
-source F output remains available by area in the canonical database. The
-source report provides no numerical uncertainty tables, so none are shown for
-the Official series.
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_herring_west_scotland_ireland.md). They do not determine source completeness or official run selection.

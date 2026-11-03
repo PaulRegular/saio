@@ -27,14 +27,10 @@ The database contains start-of-year N-at-age and F-at-age from the fitted SAM ob
 
 Input, assumption, and output extraction are complete for the assessment run. The canonical outputs include start-of-year N-at-age and F-at-age, recruitment, SSB, total stock biomass, Fbar, total abundance, fitted catch and survey-index predictions, and age-specific q estimates for ages 0–7. Predictions are aligned to the 448 rows in the fitted object fit$data$aux; three rows have missing observations but native SAM predictions are available, while age-0 catch rows are omitted from the fitted observation array and have no prediction here. The q surface is reconstructed from the fitted keyLogFpar mapping and log-q estimates/SEs in the same way as stockassessment::qtable(). The package qtable method drops dimensions for this single-survey fit, so the mapping is kept explicit. Natural-scale q SEs use the delta method and its limits are 95% Wald intervals on log q. The native fit reports point predictions without prediction uncertainty.
 
-## tinyAM fit diagnostics
-
-The package-default initialization was attempted first and failed during optimization with repeated NA/NaN gradient and function evaluations. One retry kept the same observations, formulas, and model settings, using year- and age-aligned official N-at-age, F-at-age, and index-derived q values as starting values. The initial attempts returned no optimizer status, objective, or standard errors, and no dashboard was produced. Their logs are cached locally at `results/cache/ices_haddock_celtic_sea_7b_k_2026/initialization_attempts.rds`.
-
-Review of the failed attempts found a concrete observation mismatch: the translation passed 35 zero catch cells as observations, while the native SAM data object omits their log observations. These are the 33 age-0 cells and two older-age zeros. The stock translation now marks those exact zero catch cells as missing for fitting, while the original zero values remain unchanged in the canonical input table. The default fit and its single source-start retry were rerun after this correction on 2026-10-26; both still failed with NA/NaN gradient or function evaluations. A direct check of the corrected default starting point produced a finite TMB objective (1103.989) and finite gradient, so the invalid evaluations arise later in the optimizer search. The zero-cell mismatch was real, but it was not the only cause. Neither fit attempt returned a final objective, optimizer status, or standard errors, and the assessment is still not ready for a dashboard. No further rescue settings were tried.
-
-The tinyAM process estimates F at age 0, whereas SAM fixes age-0 F to zero. This remains a model-structure difference and was not changed as part of the zero-observation correction.
-
 ## Discovery inventory screening
 
 The ICES 2026 inventory entry had.27.7b-k matches this existing canonical stock and is screened eligible. The run-matched source review and canonical validation test document the required age-based inputs, assumptions, survey timing and fitted outputs. This is an existing-stock match, not an additional stock unit.
+
+## Downstream modelling
+
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_haddock_celtic_sea_7b_k_2026.md). They do not determine source completeness or official run selection.

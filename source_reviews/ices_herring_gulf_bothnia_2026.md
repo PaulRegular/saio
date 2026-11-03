@@ -76,35 +76,6 @@ of the benchmark does not supply the missing 2026 native model files.
   or estimated M-at-age surfaces in the recovered output tables. Therefore
   total abundance and age-specific mortality comparisons cannot be derived.
 
-## Translation limits
+## Downstream modelling
 
-The initial tinyAM model uses years 1980–2025 and ages 1–15+, matching the
-reported catch-composition age range. Recruitment is therefore represented
-at age 1, not the source assessment's age 0, and recruitment is not treated
-as a like-for-like comparison. The BIAS index is translated to thousand fish
-by the shared unit converter; the script assigns within-year time 0.75 as an
-approximation for the reported late-September/early-October survey.
-
-tinyAM reconstructs catches by combining annual total biomass, age-number
-proportions, and catch weights, then fits the resulting age-specific catches
-with its lognormal likelihood. This does not reproduce SS3's total-catch and
-age-composition likelihoods or their unknown precision settings. tinyAM uses
-one shared estimated error for the acoustic index and age-specific
-catchability; the assessment's exact index weighting is unavailable. SSB is
-compared only as an approximate aggregate because tinyAM starts at age 1,
-uses catch weight as its stock-weight proxy, and the report does not expose
-the exact spawning-time settings. Source Fbar is unweighted, whereas tinyAM's
-Fbar is abundance-weighted; it is not a direct comparison.
-
-## Initial tinyAM fit
-
-The package-default initialization converged (optimizer code 0, objective
-561.3017, maximum absolute gradient 0.000285, positive-definite Hessian;
-26 fixed and 1,365 random effects). The only numeric aggregate comparison is
-approximate SSB: mean absolute percent difference 28.6%, terminal difference
-+34.6%, and annual trend correlation 0.20 over 1980–2025. This is a sizable
-disagreement under the documented differences above; no source observations
-or starting values were changed to improve it. Recruitment and Fbar are marked
-non-equivalent, and the M match is only the reused fixed input. The cached
-dashboard and fitted object are available locally under
-`results/cache/ices_herring_gulf_bothnia_2026/`.
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_herring_gulf_bothnia_2026.md). They do not determine source completeness or official run selection.

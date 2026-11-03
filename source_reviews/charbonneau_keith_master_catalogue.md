@@ -57,10 +57,4 @@ Original authoritative PDFs are cached with retrieval details and checksums
 under the corresponding current assessment directories; the plaice benchmark
 is also cached under `source_cache/ck_ices_wgcse_platessa_is7e/`.
 
-This review adds no completed translations or successful fits. Arrowtooth
-flounder remains source-blocked, northern rock sole's translation has failed
-numerical checks, and Alaska plaice's current translation remains an
-approximation. The herring and Baltic plaice source reviews retain their
-own limitations. Reviewed relationships prevent counting empty component
-rows as ten additional distinct current assessments while leaving genuine
-source gaps visible.
+Reviewed relationships prevent counting empty component rows as ten additional distinct current assessments. They establish stock identity only, not source completeness or downstream model readiness. Each primary source review retains its own gaps.

@@ -27,12 +27,6 @@ Recruitment is age 1. The N process gives age 1 its own variance key and shares 
 
 SAM SSB is reproduced by `sum(N * stockMeanWeight * maturity)` in tonnes, total biomass by `sum(N * stockMeanWeight)`, and Fbar by averaging F over ages 3–7. Recruitment equals beginning-of-year N at age 1. These checks match the native SAM reporting tables over every fitted year. Total abundance is also stored as a derived source output by summing the official N-at-age surface over ages 1–10+; no uncertainty is assigned to this derived total.
 
-## tinyAM approximation
+## Downstream modelling
 
-The translation retains the model years and age groups, both survey identities and timing, observed catch and index scales, source age-sharing for q and observation SDs, available annual biology, and fixed source M. It uses a separate random-walk recruitment process and one shared IID SD for older cohort-survival deviations, plus correlated random-walk F with mean F defined over ages 3–7. The recruitment and survival processes each have their own SD, corresponding to SAM's separate age-1 recruitment variance and shared age-2–10 survival variance. These settings do not reproduce SAM's initial-state treatment or full covariance conventions.
-
-tinyAM has independent index residuals, so it does not represent the summer survey's AR(1) age correlation. The source model has no estimated F state at age 1; tinyAM's F model includes age 1, so that boundary is an approximation. The source model's observation slots omitted because they are missing remain missing in tinyAM. Source values are used only as comparison references. The fit tries package defaults first and uses one aligned source-based retry only if numerical checks fail.
-
-## tinyAM fitting result
-
-The 2026-10-22 attempt failed with package defaults, then failed again with one source-based retry. Both `nlminb` calls stopped after NA/NaN function or gradient evaluations; neither returned optimizer diagnostics, a fixed-effect gradient, or an uncertainty report. The initial objective and gradient evaluations were finite for both starting vectors, so the invalid evaluations arose during the optimizer search. No fitted tinyAM model or dashboard was produced, and no additional starting-value retries or model changes were made.
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_cod_faroe_plateau_2025.md). They do not determine source completeness or official run selection.

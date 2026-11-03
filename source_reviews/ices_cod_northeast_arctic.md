@@ -88,10 +88,10 @@ Exact source files:
 https://github.com/fishfollower/SAM/blob/1cc464b80f6f/stockassessment/inst/include/SAM/n.hpp
 https://github.com/fishfollower/SAM/blob/1cc464b80f6f/stockassessment/inst/include/SAM/f.hpp
 
-## Initial abundance
+## Source context
 
-The cached official SAM fit has `initState = 0` and no `initN` parameters.
-The translation retains `init = "free"`, estimating older initial abundances
-as fixed effects. This differs from integrating the source initial states
-without an initial density; first-year recruitment remains an estimated fixed
-effect in tinyAM.
+The cached official SAM fit has `initState = 0` and no `initN` parameters. Its initial-state likelihood is documented above.
+
+## Downstream modelling
+
+[Translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_cod_northeast_arctic.md) hold downstream settings and fitting results.

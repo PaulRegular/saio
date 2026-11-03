@@ -92,50 +92,6 @@ does not populate standard recruitment. The age-2 summary agrees with N in
 millions; an eventual age-6 comparison should use same-year official N6.
 No SEs or intervals have been inferred from these point estimates.
 
-## Limited tinyAM translation
-
-The maintained recipe is
-`scripts/translation/stocks/jrn_redfish_beaked_2026.R`. It fits 1992–2025
-at ages 6–19+, using the non-overlapping total catch-at-age series once,
-fixed M = 0.05, published age-6+ weight and maturity, and the ecosystem and
-winter number indices for ages 6–15. The million-fish indices are converted
-to thousand fish by the shared observation converter. It does not alter
-observations using fitted q. The source's age-2 recruitment is not represented
-or renamed as tinyAM recruitment; entry at age 6 is an age-range boundary.
-
-The source framework says the ecosystem and winter survey selectivity is high
-for young fish and declines at older ages. The tinyAM recipe estimates a
-separate intercept and log-linear age effect for each survey. This allows a
-decline and is a compact approximation to the source's survey-specific
-selectivity curves. The source fleet structure, selectivity processes,
-catch-weight likelihood, and observation weights are not represented.
-
-The default-start fit converged and its Hessian was positive definite. It had
-41 fixed effects, 509 random effects, an objective of 1031.742, and a maximum
-absolute gradient of 0.00134. The optimizer returned code 0 with relative
-convergence (4), and uncertainty estimation succeeded. Residual checks still
-flagged some age/series groups with standardized residual spread outside
-0.5–1.5 and some residuals above three standard deviations. Numerical
-convergence is not evidence of close replication.
-
-| Comparison | Status | Median absolute percent difference | Terminal mean percent difference | Trend correlation |
-|---|---|---:|---:|---:|
-| N at ages 6–19+ | Approximate | 31.6% | -44.9% | 0.926 |
-| F at ages 6–19+ | Approximate | 55.8% | +85.9% | 0.819 |
-| Fbar, ages 12–18 | Approximate | 38.4% | +90.5% | 0.790 |
-| SSB, common definition at ages 6–19+ | Approximate | 46.4% | -50.7% | 0.983 |
-
-The common-definition source SSB is calculated without uncertainty from
-reported age-6+ N, fixed weight and maturity. The source's native SSB remains
-available in the dashboard. Fixed M is shown as an input-consistency check;
-its agreement is not evidence of estimated-M performance. Recruitment and
-whole-stock abundance or biomass are non-equivalent because tinyAM starts at
-age 6. Age-specific biomass is unavailable from the source outputs.
-
-The dashboard and fitted object are cached locally under
-`results/cache/jrn_redfish_beaked_2026/`; they are generated outputs and are
-not committed.
-
 ## Remaining source and translation gaps
 
 1. Numerical model weights and current maturity at ages 2–5 are unpublished.
@@ -161,3 +117,7 @@ The partial import supports a restricted, converged age-6+ approximation and
 dashboard, not a source-faithful age-2+ replication. The source completeness
 statuses remain partial, and the substantial F and SSB scale differences
 should remain visible in any use of this comparison.
+
+## Downstream modelling
+
+[tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ck_ices_afwg_mentella_deep_1_2.md) hold model choices and fitting results.

@@ -28,20 +28,6 @@ Table 3 in the same 2025 working paper reports a 2025-2028 management projection
 
 The public run archive did not include a numerical ASAP .rep output. No full fitted N-at-age or F-at-age surface was found in the report tables. Those outputs and their uncertainty remain unavailable; figures are not digitized and estimates are not reconstructed from SSB or recruitment. The output status is therefore partial.
 
-## tinyAM translation
-
-The translation uses the complete 1963–2024 year and 1–9+ age grid, source M, maturity, spawning timing, weights, all five indices, index timing, and available catch-age data. It keeps the original annual catch-biomass and index-CV inputs in the canonical database. Since tinyAM's catch observations are age-specific, its recipe uses native catch numbers-at-age from 1989–2024; total catch biomass from 1963–1988 cannot be fitted as an independent aggregate observation. Source zero catch and survey-age values are retained in the database and omitted from tinyAM's lognormal observation rows, which cannot represent exact zeros.
-
-The source combines total-index and age-composition likelihoods; tinyAM represents the available age-specific numbers as direct age-index observations with an estimated log-scale SD shared within each survey. The source aggregate CV is retained in the database but is not supplied as an age-specific SD. This does not reproduce ASAP's multinomial composition likelihood or effective-sample-size weighting. The recipe uses a constant IID recruitment mean, consistent with fixed steepness 1, but its integrated recruitment density differs from the source's unpenalized fixed-effect deviations. IID older-cohort process error and deterministic exponential initialization remain approximations to the source survival and penalized initial-age structure. AR1 F with age-specific means and survey-by-age q are also simplified.
-
-Numerical comparisons are defined for SSB and age-1 recruitment. Fbar is retained as native context but is non-equivalent: the source reports an arithmetic mean over ages 6-9+, while tinyAM reports an abundance-weighted mean. Missing official N-at-age and F-at-age prevent reconciling these definitions or deriving total abundance. Fixed M is an input check only.
-
-The constant-mean recruitment review still failed numerical checks with both package defaults (maximum gradient about 9, evaluation limit) and one source-start retry (gradient 45.6, false convergence, non-positive-definite Hessian). These results are not a successful comparison. The retry now retains recruitment in the canonical thousand-fish scale; the previous extra multiplier of 1000 was incorrect. Source observations and all other model assumptions were held fixed. Local trial diagnostics, warnings and the earlier fit files are retained under `results/cache/nefsc_white_hake_2025/recruitment_review/`; the earlier serialized fit could not be read, while the new fit passed a write/read round-trip check. The recorded earlier default/source-start diagnostics remain readable.
-
-A separate one-change trial set `N_settings$process = "off"` with every other setting and observation unchanged. Both attempts again failed (false convergence, gradients about 2.53e12 and 1.15e9, non-positive-definite Hessians). This candidate is not retained as an improvement; its fit, attempt diagnostics and exploratory dashboard remain in the local `survival_review/` cache. These outcomes do not identify a single cause or justify altering the source data. White Hake remains a numerically unresolved translation, not a completed comparison.
-
-The recipe explicitly enables comparison with the published aggregate SSB because the full source age range, spawning time, weights and maturity are retained. Without that declaration, the shared reference helper correctly refuses to infer an aggregate definition from missing official N/F-at-age, leaving SSB blank. A source-specific regression check verifies all 62 reported SSB values on the matching tonne scale. Source CV-derived SEs remain in the native reporting reference; common-definition reporting does not infer joint uncertainty from missing age states.
-
 ## Sources
 
 - [Final September 2025 Management Track Peer Review Panel Report](https://www.fisheries.noaa.gov/s3/2025-11/September-2025-Management-Track-Peer-Review-Panel-Report_Final-508.pdf)
@@ -55,3 +41,7 @@ The recipe explicitly enables comparison with the published aggregate SSB becaus
 - [ASAP3 user manual](https://raw.githubusercontent.com/cmlegault/ASAPplots/75adfd7cf889a5a2b66b6ef0a4dbe22b51aa2084/pdf/User_Manual_for_ASAP3.pdf)
 
 The local, gitignored source cache and checksums are recorded in source_cache/ck_nefsc_garmiii_tenuis_gom_gb/manifest.csv.
+
+## Downstream modelling
+
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ck_nefsc_garmiii_tenuis_gom_gb.md). They do not determine source completeness or official run selection.

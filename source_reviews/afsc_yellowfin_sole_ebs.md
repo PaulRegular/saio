@@ -72,46 +72,6 @@ all biological sampling support and state covariance have not been exported.
 This does not imply that absent stochastic survival or inactive growth effects
 are unknown.
 
-## tinyAM translation
+## Downstream modelling
 
-The recipe represents female ages 2–20+ over 1982–2023. Joint-sex original
-age samples and sex-specific weights convert the total biomass observations
-to female numbers before filtering ages. Male observations are omitted from
-the fit; both sexes remain in the canonical tables. This avoids imposing an
-equal adult sex ratio on spawning biomass or averaging fixed female M with
-estimated male M. Comparisons of N, total abundance and recruitment are
-explicitly female quantities, not combined-sex stock totals.
-
-The recipe retains original female biology, May 1 spawning, fixed female M,
-the three centered q covariates and supplied biomass log SDs. Its independent
-F random walks, constant-mean age-2 recruitment, rising logistic survey curve
-and age-specific lognormal observations approximate the source selectivity,
-Ricker and composition likelihoods. The source's different times for biomass
-and age proportions remain a limitation. Full native outputs are retained;
-modeled-age female SSB is derived without uncertainty and checked against
-native SSB using a bound for printed N/F/SSB rounding.
-
-The latest tracked fit diagnostic uses database revision `00cc998` and records
-two failed attempts. Package starts failed the fixed-effect covariance and Hessian
-checks (gradient 8.06e11). The aligned female N/F source-start retry returned
-code 1, objective 9602.126, gradient 6.99e11 and a non-positive-definite
-Hessian. An SD-report object exists, but fixed-effect uncertainty is unavailable.
-The fit is not interpretable as a successful assessment.
-
-The local cache contains different objectives (12255.88 and 10402.38) from the
-tracked diagnostic, and the source review previously cited yet another pair.
-Those fit and dashboard artifacts are not reconciled to the latest run and must
-not be used as current comparisons. The shared comparison summary and population
-series contain no valid yellowfin rows.
-
-A cached exploratory dashboard and historical comparison snapshot remain
-locally available for diagnosis only. They are not part of the current shared
-comparison tables and do not establish agreement. Potential
-limitations include the initial abundance/F boundary, independent F states,
-the source's inconsistent composition/index timing and the omitted joint
-composition likelihood. These results do not isolate a single cause.
-
-An exponential-initialization sensitivity with package-default starts and all
-other settings unchanged was stopped after more than four minutes without a
-returned fit. It produced no diagnostics and remains unevaluated; no conclusion
-about that initializer is drawn and no model change is retained.
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/afsc_yellowfin_sole_ebs.md). They do not determine source completeness or official run selection.

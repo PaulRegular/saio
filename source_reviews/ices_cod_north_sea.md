@@ -1,7 +1,6 @@
 # North Sea / Northern Shelf cod source review
 
 Source verification: 2026-10-29.
-Translation revision: 2026-10-14.
 
 This review covers the detailed 2025 assessment event already represented in the database and the later 2026 official assessment. The 2025 event remains a separate historical record; its inputs are not assumed to be the 2026 assessment inputs.
 
@@ -48,35 +47,6 @@ Recruitment and fishing mortality use temporally structured processes. The F spe
 Substock and quarterly composition observations use additive logistic-normal likelihoods. Stock weights, maturity, and natural mortality are fitted GMRF processes. Consequently, Tables 4.11–13 contain biological estimates rather than original inputs.
 
 Recreational removals are excluded from the fitted assessment.
-
-## tinyAM translation of the 2025 assessment
-
-The recipe fits 1983–2022 and ages 1–7+ as one population. Recruitment is a
-separate RW; older-cohort survival departures are IID with a common SD and
-free initial abundances. Source substock relationships are not represented.
-F follows age-correlated random walks, rather than the source's complete
-shared/scaled substock selectivity model. Its shared-selectivity code 4 combines
-a cubic age effect with a stationary AR1 temporal level and is not identical
-to `cor_rw`.
-
-Only the mixed Q3+Q4 survey is fitted, retaining timing 0.75 and supplied
-relative SDs. The six substock/recruitment index streams are omitted. Ordered
-`mono(q_key)` imposes non-decreasing age catchability; this is a translation
-assumption, not a recovered source constraint. Ordering must follow increasing
-survey ages. The constraint reduces age-q flexibility without imposing a
-specific logistic curve.
-
-The supplied estimated M surface is treated as fixed, motivating the restricted
-period with complete M. Weight and maturity are arithmetic means across available
-Northwestern, Southern and Viking values, not abundance-weighted substock
-aggregates. Biological GMRF uncertainty is omitted. Combined commercial catch
-uses one independent lognormal SD; correlated catch errors, substock landings
-and quarterly composition likelihoods are not reproduced.
-
-For comparisons, source N, recruitment and biomass are summed across substocks;
-F/M-at-age are N-weighted. Substock Fbar uses relative abundance at ages 2–4.
-Intervals are not combined. These derived quantities support broad comparisons,
-not exact equivalence with the original multistock model.
 
 ## 2025 numerical output source and verification
 
@@ -176,3 +146,11 @@ Rscript scripts/database/005_validate_north_sea_cod.R
 ```
 
 The importer validates all 2,688 native N/F/M values against the detailed report and can be rerun independently of other assessments. Input completeness remains partial.
+
+## Downstream modelling
+
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_cod_north_sea.md). They do not determine source completeness or official run selection.
+
+## Historical 2025 SAG identifiers
+
+The pre-migration source review records 2025 combined-stock key 19639 and substock keys 19661 (Northwestern), 19662 (Southern) and 19663 (Viking), under advice DOI [10.17895/ices.advice.27202566](https://doi.org/10.17895/ices.advice.27202566). These identify the 2025 run; they do not replace the distinct 2026 identifiers above.

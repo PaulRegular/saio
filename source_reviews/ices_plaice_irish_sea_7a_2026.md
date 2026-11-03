@@ -28,14 +28,12 @@ The two aggregate NIGFS SSB indices cannot be used by the current tinyAM age-spe
 
 The fit also supplies 659 fitted catch and survey predictions aligned to `fit$data$aux`. This includes seven UK BTS rows and one Q4 row with missing observations; their predictions are model outputs, not additional observations. Catch predictions are in thousand fish, UK BTS predictions remain on its unspecified native scale, and NIGFS predictions are in kg per 3 miles. The aggregate NIGFS indices remain in the database but are omitted from tinyAM because no source-supported age allocation exists. The source record is complete for the fitted data, fixed biological inputs, and recoverable population, mortality, q, and observation-prediction outputs; the translation audit separately identifies the omitted aggregate-index likelihood and other model simplifications.
 
-## tinyAM translation
-
-The translation retains 1981–2025 and ages 1–8+, fits the UK BTS series, and uses the official fixed M, weights, and maturity. It uses tinyAM random walks for N and recruitment, correlated-RW F, a shared UK BTS observation SD, and q by age. This approximates SAM's process covariance, boundary integration, and observation model; the exact SAM likelihood and age-state sharing are not reproduced. The aggregate NIGFS indices are omitted because they lack age composition. SSB, recruitment, abundance, and N/F-at-age can be compared on the common model grid. Fixed M is shown as an input, not treated as evidence of fitted agreement. Native arithmetic Fbar is not like-for-like with tinyAM's abundance-weighted Fbar.
-
-The default-start fit converged (optimizer code 0, objective 302.221, maximum absolute gradient 0.000117, successful standard-error estimation, and a positive-definite Hessian). No starting values were supplied. The fit emitted a support warning because F-increment age correlation was near a boundary. Trend correlations were high for N-at-age (0.966), F-at-age (0.992), SSB (0.965), recruitment (0.974), and total abundance (0.958), but scale differences were large: mean absolute percent differences were 91.6%, 38.3%, 71.5%, 84.1%, and 59.1%, respectively. Fixed M is identical by construction and is not counted as evidence of agreement. These results indicate good trajectory shape but substantial scale disagreement under this simplified translation; no settings were tuned to the official estimates.
-
 ## Discovery inventory screening
 
 The ICES 2026 inventory entry ple.27.7a matches the existing canonical Irish Sea plaice stock and is screened eligible. The assessment satisfies the age-structured source-readiness screen: it has fitted catch numbers-at-age, an age-specific UK BTS Q3 index, run-matched weight and fixed biological/mortality inputs, explicit survey timing, and fitted population/mortality outputs. The aggregate NIGFS Q1/Q4 indices are documented separately and do not need invented age allocations because the official fit also has an age-specific survey index. The candidate-register review date is 2026-10-29; the source review does not alter the canonical assessment data.
 
 The 2021 stock annex is cached at source_cache/ices_plaice_irish_sea_7a_2026/ple_27_7a_stock_annex_2021.pdf; the local manifest records its Figshare URL, DOI revision, retrieval date and SHA-256.
+
+## Downstream modelling
+
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_plaice_irish_sea_7a_2026.md). They do not determine source completeness or official run selection.

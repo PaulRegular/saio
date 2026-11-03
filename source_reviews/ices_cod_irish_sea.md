@@ -27,18 +27,16 @@ The report provides age-specific index series for NIGFS-WIBTS-Q1 (ages 1–4), N
 
 The 2026 report and stock annex summarize model structure, selectivity, survey ages and some effective-sample-size settings. The native SS3 data/control files were not recovered, so exact likelihood definitions, observation weights and current parameter activation remain uncertain. These assumptions are explicitly marked partial.
 
-## Outputs and readiness
+## Outputs and source gaps
 
 Table 6.14 reports annual SSB, age-0 recruitment and Fbar ages 2–4 with pointwise 95% confidence limits. The reported summary values were cross-checked against the official ICES SAG export for key 23721, within report rounding. The source report and SAG export do not provide recoverable age-specific N-at-age or F-at-age; M is fixed rather than estimated.
 
-The source table contains one missing cell in the weight surface (2019 age 0). No authoritative value was found, so it remains missing in the database. The translation fits ages 0–6+ over 1968–2018, where weight and maturity are complete. It retains Q1 ages 1–4, Q4 age 0 and UK FSP Q1 ages 2–6+, with timing approximated at 0.125, 0.875 and 0.125. Catch years 2003–2005 are excluded as in the assessment. The 2020 weights were marked by the report as unavailable for model use; the fitted period ends before them.
-
-Index scale multipliers and exact likelihood allocations are unresolved. The native Q1 CV and FSP effective sample size are not used because their current likelihood roles were not recovered; tinyAM estimates a separate index observation SD by survey. Catch-at-age remains in thousand fish. The official Beverton-Holt recruitment blocks are represented by a random-walk recruitment process, and the source selectivity process is approximated with an AR1 temporal F process and a shared mean for ages 3+.
-
-The default-initialization fit converged (optimizer code 0, maximum gradient 0.000364, positive-definite Hessian). Over 1968–2018, approximate SSB agreement was mean absolute percent difference 36.5%, terminal difference -9.3%, and trend correlation 0.971. Age-0 recruitment agreement was weaker: mean absolute percent difference 61.0%, terminal difference +1568%, and trend correlation 0.731. The simpler recruitment process remains an important limitation; no starting values were supplied.
-
-The comparison period does not include the assessment's terminal 2019–2025 estimates. Official aggregate SSB timing is not stated, while tinyAM calculates beginning-of-year mature biomass, so SSB is approximate. Recruitment is age-aligned but its published point-estimate convention is unspecified, so it is also approximate. Official age-specific N and F are unavailable. Official Fbar is ages 2–4, while tinyAM Fbar is abundance-weighted and the required official N-at-age is unavailable; therefore the Fbar values are not compared. M is fixed at the published input values and shown as an input rather than a fitted output. The maintained translation and structural checks are in `scripts/translation/stocks/ices_cod_irish_sea_2026.R` and `tests/test_irish_sea_cod_translation.R`; source values are validated by `tests/test_irish_sea_cod_source.R`.
+The source weight table has one missing cell (2019 age 0). No authoritative replacement was found, so it remains missing. Exact index scale multipliers and current likelihood roles of the Q1 CVs and FSP effective sample sizes remain unresolved. Official age-specific N and F were not recovered.
 
 ## Discovery inventory screening
 
 The 2026 ICES inventory entry cod.27.7a matches this existing Division 7.a Irish Sea stock and is screened eligible for source curation. Age-based catch, survey, weight, maturity and fixed-M information plus aggregate official outputs are available from current report tables. Native SS3 data/control files and fitted age-specific N/F outputs remain unavailable; the exact likelihood is therefore not recoverable.
+
+## Downstream modelling
+
+[Translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_cod_irish_sea.md) document approximation choices and fitting results.

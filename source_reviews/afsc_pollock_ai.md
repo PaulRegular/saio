@@ -67,43 +67,6 @@ relabeled as native population weights. Input, assumption and output statuses
 remain partial. These gaps differ from confirmed fixed q, an absent length
 likelihood and deterministic older-age survival.
 
-## tinyAM translation and numerical result
+## Downstream modelling
 
-The translation uses 1978–2018 and ages 1–15+, ending at the latest matching
-age observations. Aggregate-only survey/catch observations after 2018 cannot
-enter this approximation. It retains original catch weights and uses the
-recorded annual survey weights as an explicit population-weight approximation.
-It fits deterministic survival, free initial abundance, a Beverton–Holt median
-recruitment curve with estimated parameters and IID SD, independent F random
-walks and one estimated M. The source fixed steepness, M prior, q normalization,
-F penalties, composition likelihood and ageing error are not reproduced.
-Survey time 0.5 approximates summer; March spawning and GOA maturity are retained.
-
-Default initialization failed (code 1, objective 642.037, gradient 2.53e8 and
-a non-positive-definite Hessian). The one permitted retry changed only starting N
-and M. It reduced the objective to 625.738 and the gradient to 2.18e-5, but
-still failed with code 1, a non-positive-definite Hessian and unavailable
-fixed-parameter covariance. The SD-report object does not provide usable
-uncertainty in this case. Both attempt records are retained; no further model
-tuning or initialization retry was conducted.
-
-A source-prior sensitivity approximated the reported M prior (mean 0.2, CV 0.2)
-with a moment-matched lognormal penalty on log M, holding the observations and
-other model settings fixed. The package-start attempt failed (code 1, objective
-635.205, gradient 4,976 and non-positive-definite Hessian). A single aligned
-source-start retry reached objective 628.863 and gradient 3.31e-5, but still
-failed the fixed-parameter covariance check (code 1; no usable uncertainty).
-The resulting N scale was orders of magnitude beyond the official estimate, so
-its point comparisons are not interpretable. This prior approximation alone
-does not resolve the q/N/M identifiability problem; it was not retained.
-
-Usable predictions permit an **exploratory** dashboard with the numerical failure
-visible. N rises to roughly 10^12–10^16 fish, F falls to 10^-12–10^-8 and survey
-q to 10^-10–10^-8. Unit checks confirm this is an extreme fitted scale trade-off,
-not confusion between the report's billions, recruitment millions and tinyAM's
-individual fish. Removing the source's fixed-q normalization and M prior is an
-important identifiability limitation of this approximation. It must not be
-interpreted as a successful reproduction. Native SSB is labelled approximate
-because population weights differ; historical F-at-age is unavailable and
-arithmetic Fbar is non-equivalent. All available abundance/SSB comparisons and
-estimated M are flagged for review; missing F comparisons are not passes.
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/afsc_pollock_ai.md). They do not determine source completeness or official run selection.

@@ -1,7 +1,6 @@
 # Northern Shelf (North Sea) haddock: 2026 source review
 
 Source verification retained from the official-run review.
-Translation revision: 2026-10-14.
 
 Status: canonical record `ices_haddock_north_sea_2026` imported. Completeness remains partial because a calibrated physical unit for the survey indices has not been established and available state uncertainty is conditional rather than fully marginal.
 
@@ -73,26 +72,6 @@ Post-review standardizations use a `log(HaulDur + 5)` offset. The selected Q1 mo
 An independent reviewer recommended the SAM settings subsequently adopted in the official 2026 configuration.
 
 The standardized survey indices are retained on their native numerical scales because the publications do not specify calibrated physical abundance units.
-
-## Current tinyAM translation
-
-The recipe retains 1972–2026 and ages 0–8+, RW recruitment, IID survival
-residuals, and integrated older initial abundance. `N_sd_key` in population
-covariates shares survival SD over destination ages 1–7, with a separate 8+
-SD. First-year recruitment remains an estimated fixed effect; SAM initial-state
-integration is not claimed to be identical.
-
-F follows `cor_rw` with one shared SD. Supplied annual M, stock weights,
-maturity and zero pre-spawning mortality fractions are retained. The shared
-age-correlation structure approximates SAM; first-state and integration
-conventions may still differ.
-
-Catch uses one lognormal SD. Both delta-GAM survey series retain native scales,
-ages, timing and relative precision factors, with survey-by-age q and one
-estimated SD level per survey. Missing observations are excluded from the
-likelihood. Source density-dependent q powers at Q1 age 1 and Q3+Q4 ages 0–1
-are omitted, and exact observation-variance sharing differs. Ordinary q does
-not reproduce a power relationship between abundance and an index.
 
 ## Forecast distinction
 
@@ -264,6 +243,7 @@ The official assessment inputs, outputs and canonical source-review findings rem
 ## Initial abundance
 
 The cached official SAM fit has `initState = 0` and no `initN` parameters.
-The translation uses `init = "latent"`: older first-year log-abundances are
-integrated without an initial density. First-year recruitment remains an
-estimated fixed effect, so this is not complete SAM initial-state equivalence.
+
+## Downstream modelling
+
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_haddock_north_sea.md). They do not determine source completeness or official run selection.

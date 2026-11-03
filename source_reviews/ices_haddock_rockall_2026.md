@@ -29,12 +29,10 @@ Tables 8.16 and 8.17 provide final SAM numbers-at-age (thousands of fish) and F-
 
 The database has partial input, assumption and output completeness. The stock-weight observation inputs are now represented, but the fitted stock-weight surface and exact 2026 survey timing are not recoverable from the public sources; uncertainty is not given for age-specific N and F or defined for the summary bounds. The translation can compare SSB, recruitment and age-specific N/F over the common 1991–2025 period, but the stock-weight proxy and simplified tinyAM likelihood must be clearly identified in its dashboard.
 
-## tinyAM fit and comparison review
-
-The retained fit uses package-default starting values and converged at database revision `6b33b16`: optimizer code 0 (`relative convergence (4)`), objective 679.281, maximum absolute gradient 0.001647, successful standard-error calculation, and a positive-definite Hessian. It has 18 fixed effects and 552 random effects. No explicit starting parameters were used. An initial preparation attempt exposed an unused age-1 N-SD category under exponential N0 initialization; the final model uses one shared N-process SD for the active age-2–8 survival states. A diagnostic advisory remains: F-increment age correlation is within 0.05 of a boundary, so its uncertainty and age-correlation structure need caution.
-
-The dashboard is cached locally at `results/cache/ices_haddock_rockall_2026/dashboard.html`. The most relevant comparisons show high temporal correlations for F (0.949), Fbar (0.966), N-at-age (0.961), and approximate common-definition SSB (0.954). Recruitment is approximate and has 27.1% mean absolute percent difference (correlation 0.908). Total abundance has 18.9% mean absolute percent difference, but its terminal difference is 60.7% and correlation is 0.881. Approximate SSB's terminal difference is 73.5%; this uses the catch-weight proxy because the full official stock-weight surface is unavailable. These differences are visible in the dashboard and should be reviewed; fixed-M agreement is exact by construction and is not evidence that the fit recovered M.
-
 ## Discovery inventory screening
 
 The ICES 2026 inventory entry had.27.6b matches this existing Division 6.b stock and is screened eligible for source curation with explicit approximations. Age-based catch, survey, catch-weight observations, fixed biology/M and fitted N/F/annual outputs are documented; the fitted stock-weight surface and exact 2026 survey fractions remain unavailable.
+
+## Downstream modelling
+
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_haddock_rockall_2026.md). They do not determine source completeness or official run selection.

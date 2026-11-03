@@ -18,14 +18,6 @@ Four of five survey indices are active: Albatross spring (1970–2008), Bigelow 
 
 The native output file supplies January 1 N-at-age, directed and discard F-at-age, and annual January 1 biomass, SSB, and exploitable biomass. Total F-at-age is stored as directed F plus discard F. The reported Fbar is an unweighted mean over ages 5–7. Total abundance is derived by summing the reported N-at-age values; recruitment is represented by age-1 abundance in the same year. These derived quantities have no added uncertainty. The native output file does not provide complete time-by-age uncertainty surfaces, so the output record is partial and no age-specific standard errors are invented.
 
-## tinyAM translation choices
-
-The translation combines catch and dead-discard numbers-at-age into one total-removals series. It uses the four active survey series and source survey timing, but approximates the source's biomass-index/composition likelihood as age-specific abundance indices. The model uses one F process in place of ASAP's six selectivity blocks and estimates survey-by-age q effects in place of the source survey-specific annual q deviations. It also uses tinyAM's own process and observation-error structures. The source totals, age compositions, biological surfaces, and official outputs remain unchanged in the canonical database; transformations for fitting are performed only in the stock translation script.
-
-## tinyAM fit status
-
-The 2026-10-21 fit did not pass numerical convergence checks. The package-default initialization returned optimizer code 1 (`false convergence (8)`), objective 3154.205, maximum gradient 168,801, and a non-positive-definite Hessian with non-finite fixed-parameter covariance. The single policy-permitted retry with year- and age-aligned source N and F starts also failed: optimizer code 1, objective 3140.939, maximum gradient 5.57 billion, NA/NaN function evaluations, and a non-positive-definite Hessian. An exploratory dashboard was rendered from that failed fit for inspection only; its large differences are not a valid agreement result. The fit and attempt diagnostics are cached locally under `results/cache/nefsc_pollock_5yz_2024/`.
-
 ## Sources
 
 - [Final September 2024 Management Track peer-review panel report](https://www.fisheries.noaa.gov/s3/2024-10/2024-Management-Track-Peer-Review-Panel-Report_10_8_24_508.pdf)
@@ -33,3 +25,7 @@ The 2026-10-21 fit did not pass numerical convergence checks. The package-defaul
 - [Official ASAP3 output file](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2024&species_id=7&stock_id=6&review_type_id=3&info_type_id=3&map_type_type_id=&map_type_id=&filename=2024_POK_UNIT_MOD_BaseASAPOutput.rep)
 - [2024 pollock update report (draft; supporting details only)](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2024&species_id=7&stock_id=6&review_type_id=3&info_type_id=-1&map_type_id=&filename=2024_POK_UNIT_RPT_Update_2024_09_20.pdf)
 - [2026 data and projection update](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2026&species_id=7&stock_id=6&review_type_id=7&info_type_id=-1&map_type_id=&filename=data_projection_update_pollock_20260817.pdf)
+
+## Downstream modelling
+
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/nefsc_atlantic_pollock_5yz.md). They do not determine source completeness or official run selection.

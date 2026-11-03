@@ -31,6 +31,6 @@ The canonical record includes reported 1985–2015 fishing mortality at age and 
 
 The 2024 advice reports model-based SSB of 33,531 t for 2022, attributed to a 2022 model run. It also uses the 2024 summer survey and a management procedure for catch advice. The available summary does not provide a full numerical age-specific fit suitable for a separate tinyAM replication.
 
-## tinyAM translation
+## Downstream modelling
 
-The recipe uses 1985–2015, ages 1–11+, the source catch and survey index series, fixed source M, age-specific q, and the framework's per-recruit maturity and spawning weights as a proxy. tinyAM's catch likelihood and AR(1) F process are simplifications of ADAPT VPA, which treats catch-at-age as VPA input and estimates population states through its own VPA formulation. It also uses one midyear survey timing approximation. These differences are documented in the model background and mean that agreement is descriptive rather than a likelihood replication.
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/dfo_haddock_4x5y.md). They do not determine source completeness or official run selection.

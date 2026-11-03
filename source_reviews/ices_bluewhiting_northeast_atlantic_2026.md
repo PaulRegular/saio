@@ -65,6 +65,7 @@ as a substitute for those values.
 ## Initial abundance
 
 The cached official SAM fit has `initState = 0` and no `initN` parameters.
-The translation uses `init = "latent"`: older first-year log-abundances are
-integrated without an initial density. First-year recruitment remains an
-estimated fixed effect, so this is not complete SAM initial-state equivalence.
+
+## Downstream modelling
+
+[tinyAM model notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_bluewhiting_northeast_atlantic_2026.md) document the downstream initial-state approximation.

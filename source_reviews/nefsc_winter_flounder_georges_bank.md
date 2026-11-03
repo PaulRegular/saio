@@ -70,32 +70,6 @@ and projections for 2025-2028. It does not provide recoverable N-at-age,
 F-at-age, survey indices or biological input surfaces. These rows are not
 mixed with the 2022 VPA input matrices.
 
-## tinyAM translation
-
-The recipe fits the detailed 2022 VPA input period, years 1982-2021 and ages
-1-7, with age 7 as the plus group. It uses the source catch numbers, annual
-weights and maturity, fixed M=0.3, and the three native survey series. tinyAM
-uses an IID abundance process, an AR1 F process, survey- and age-specific q,
-and a shared catch observation SD. These are documented approximations to the
-VPA estimation procedure.
-
-The native MFSPAWN = 0.25 0.25 pair is preserved but not interpreted as a
-tinyAM spawning time. The SSB comparison is therefore approximate. Recruitment
-uses the same age-1 calendar-year definition. FFull is compared only as an
-approximate ages-4-6 metric because official age-specific F values are not
-available to rebuild a common weighted average. Fixed M agreement checks the
-source input mapping, not estimation.
-
-The first fit used package default initialization with no `start_par`. It
-returned optimizer code 1 (false convergence), objective 1618.301, maximum
-absolute gradient 0.000215, a successful `sdreport`, and a positive-definite
-Hessian; it is not classified as converged. One retry from the first fit's
-estimates returned optimizer code 0 (relative convergence), but the Hessian
-was not positive definite and fixed-parameter covariance was unavailable.
-The default fit is retained for the exploratory dashboard; neither fit passes
-the numerical checks. No source observation or model assumption was changed
-to improve agreement.
-
 ## Sources and cached files
 
 - [2022 Georges Bank winter flounder Management Track assessment](https://repository.library.noaa.gov/view/noaa/55264/noaa_55264_DS1.pdf)
@@ -121,3 +95,7 @@ surfaces remain unavailable, so the existing 2022 translation is unaffected.
 The [NOAA Stock SMART snapshot](https://github.com/NOAA-EDAB/stocksmart/tree/664c4237e26520b260a090e1821a2cee5d1cdf07)
 is cached locally under `source_cache/ck_nefsc_americanus_5z/` with revision
 and checksum in `stocksmart_manifest.csv`.
+
+## Downstream modelling
+
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/nefsc_winter_flounder_georges_bank.md). They do not determine source completeness or official run selection.

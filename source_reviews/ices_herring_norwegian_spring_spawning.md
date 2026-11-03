@@ -49,36 +49,6 @@ The published age-12 stock weight and maturity are used as proxies for the
 defensible weighted biological average. Maturity cohorts are mapped to
 calendar year by `cohort = year - age` in the translation.
 
-## tinyAM translation
-
-The current-run approximation is defined in
-`scripts/translation/stocks/ices_herring_norwegian_spring_2026.R`. It fits
-1988–2025 at ages 2–12, using IID N with free initial abundance, an F random
-walk, and the standard age-specific M pattern as fixed. Catch and the four
-numerical survey series are fitted with tinyAM observation errors; SAM's
-relative-error weights and unavailable annual M deviations are not reproduced.
-The fit uses package-default starting values; no source-based retry was needed.
-
-The fit converged (optimizer code 0, objective 1059.441, maximum absolute
-gradient 0.00111). The Hessian was positive definite and `sdreport` succeeded;
-the fit had 53 fixed and 825 random effects and took 3.6 seconds. Numerical
-convergence does not remove the model differences above. Residual checks flag
-some groups with unusual standardized-residual spread, residuals above three
-standard deviations, and adjacent-year residual correlation.
-
-Over 1988–2025, common-definition SSB had 10.75% mean absolute percent
-difference, +0.16% terminal difference, and 0.965 trend correlation.
-Recruitment had 46.22%, +50.21%, and 0.743; total abundance had 20.03%,
-+8.55%, and 0.798. N-at-age had 21.82% mean absolute percent difference and
-0.943 mean within-age trend correlation; F-at-age had 29.27%, -21.82%
-terminal difference, and 0.816. Fbar had 13.59%, -0.90%, and 0.923. Fixed M
-matches its supplied baseline by construction and is not evidence that tinyAM
-estimated or reproduced the source's annual M deviations. These comparisons
-describe this documented approximation; they are not fit targets.
-
-The fit, initialization diagnostics, and dashboard are cached locally under
-`results/cache/ices_herring_norwegian_spring_2026/`.
-
 ## Source files cached locally
 
 The authoritative report and derived table extracts are in the gitignored
@@ -96,3 +66,9 @@ folder:
 
 The 2025 record remains available as the preceding detailed assessment. Its
 benchmark is [WKBMACNSSH 2025](https://doi.org/10.17895/ices.pub.29279615).
+
+## Downstream modelling
+
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_herring_norwegian_spring_spawning.md). They do not determine source completeness or official run selection.
+
+The separate [2025 source notes](ices_herring_norwegian_spring_2025.md) retain the earlier run's coverage, survey definitions and source trail.

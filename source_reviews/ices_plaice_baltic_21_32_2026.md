@@ -39,8 +39,6 @@ The cached fitted object also reports nine native q estimates. Q1 shares q acros
 
 These fitted q rows are now included in outputs.csv as native model outputs. They do not resolve the differences between recent fitted SAM population estimates and the WGBFAS report tables, so outputs_status remains partial.
 
-## tinyAM translation
+## Downstream modelling
 
-The translation retains the 2002-2025, ages 1-7+ observation grid; Q1 and Q4 timing; source q and observation-variance sharing; fixed time-varying M; and source maturity and weight surfaces. It uses random-walk recruitment, IID N-process errors, an AR(1) F process, exponential initial abundance, and the official Fbar ages 3-5.
-
-The translation cannot reproduce the full SAM state-space structure, age-correlated F random walk, estimated stock-weight process, or all source likelihood details. These are stated in the stock recipe and comparison dashboard. No observations are adjusted to improve agreement, and no explicit starting values are used.
+The tinyAM settings and fitting results are maintained in [tinyAM translation notes](https://github.com/PaulRegular/tinyAM/blob/main/analysis/comp_assessments/translation_notes/ices_plaice_baltic_21_32_2026.md). They do not determine source completeness or official run selection.
