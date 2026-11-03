@@ -1,0 +1,4 @@
+file,url,retrieved_date,sha256,bytes
+SF_Management_Track_Assessment_2025.pdf,https://asmfc.org/wp-content/uploads/2025/08/SF_Management_Track_Assessment_2025.pdf,2026-10-27,6423D73924D765CA5742AC5B97C178799A4D8F699EA923203693B294A8FDE652,313417
+peer_review_2025.pdf,https://www.fisheries.noaa.gov/s3/2025-07/2025-June-Management-Track-Peer-Review-Panel-Report-508.pdf,2026-10-27,7F91A0074C88516DB6FC97B57F6BFF8BAA4A40887BBFEDEE975C9B994A55D1AE,383232
+stock_assessment_data.rda,https://raw.githubusercontent.com/NOAA-EDAB/stocksmart/664c4237e26520b260a090e1821a2cee5d1cdf07/data/stock_assessment_data.rda,2026-10-27,141DB3599CBF37AF3E019BD53D2323D829A719B273E8AB0226B73F6AD18620B0,855121

@@ -1,0 +1,8 @@
+"file","url","retrieval_date","sha256","represented_assessment"
+"WKBNSCS_2025.pdf","https://doi.org/10.17895/ices.pub.28715180","2026-10-21","1050f337742f84da88307e4116c6eab35458261e6dd0f613934d39515ccab87e","2025 WKBNSCS benchmark"
+"model.RData","https://stockassessment.org/datadisk/stockassessment/userdirs/user3/whg.27.7a_WKBNSCS_final/run/model.RData","2026-10-21","5febd058bd54cc917181679720e6e4f459b652e891d595fdbe7606dd2091d9e6","2025 WKBNSCS benchmark"
+"data.RData","https://stockassessment.org/datadisk/stockassessment/userdirs/user3/whg.27.7a_WKBNSCS_final/run/data.RData","2026-10-21","62ced86471d426f331c3f7d6ab5fba61336e2e54c19e7c457572d67ed68eb177","2025 WKBNSCS benchmark"
+"model.cfg","https://stockassessment.org/datadisk/stockassessment/userdirs/user3/whg.27.7a_WKBNSCS_final/conf/model.cfg","2026-10-21","f9899ba7261b7da87d8e81e07ff9c423e57576cff24e6f7edfcc4da3505947b1","2025 WKBNSCS benchmark"
+"ver","https://stockassessment.org/datadisk/stockassessment/userdirs/user3/whg.27.7a_WKBNSCS_final/run/ver","2026-10-21","a19206052ac0ea1cecb69f46f4c1c69e128faaa5d67b6a9cb26ef3726a421668","2025 WKBNSCS benchmark"
+"Makefile","https://stockassessment.org/datadisk/stockassessment/userdirs/user3/whg.27.7a_WKBNSCS_final/Makefile","2026-10-21","f12d2602d6cf5669250a0e9d20c8fc694b403adbf19d92c144063917f337ffdb","2025 WKBNSCS benchmark"
+"ICES_SAG_2025.html","https://sg.ices.dk/ViewSourceData.aspx?key=20997","2026-10-21","18050cad6a45fae2cf45f90fb9694a6cb58b6681bc42aadc64bd1dfa4ee271d7","2025 SAG summary update"

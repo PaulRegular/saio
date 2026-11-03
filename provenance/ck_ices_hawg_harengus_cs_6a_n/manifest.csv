@@ -1,0 +1,14 @@
+cached_file,source_url,retrieval_date,sha256,note
+SAG_19370_2025.xml,https://sag.ices.dk/SAG_API/StockXmlDownload/19370,2026-10-27,2b436a5aa506132d14af71fa03cc002b92d4072e890b671a837ab3ff69c0c8f7,2025 assessment export
+SAG_21308_2026.xml,https://sag.ices.dk/SAG_API/StockXmlDownload/21308,2026-10-27,c7f395bd956061adaf54d8aa9fe2b0a64751b4adfcc559ad2e03597e6adc2b59,2026 assessment export; associated advice marked invalid
+SAG_19370_2025.html,https://standardgraphs.ices.dk/ViewSourceData.aspx?key=19370,2026-10-27,c5268f81babff9493393017e768908cc35a436ce02a84ab094a968ab28cb64b9,2025 SAG source data
+SAG_19370_charts.html,https://standardgraphs.ices.dk/ViewCharts.aspx?key=19370,2026-10-27,77733baea704641a8bba3eb1478f5d627a48cb0c8028aedfff2647d78bde1336,2025 SAG charts and correct advice DOI
+ICES_advice_4063_2026.html,https://asd.ices.dk/viewAdvice/4063,2026-10-27,27beab7a9f20e56d552d20795b3d560b81206e9125214f2c7c9bdef4cb1a94a5,2026 6aN advice status Invalid
+advice_2025_metadata.json,https://api.figshare.com/v2/articles/27202632,2026-10-27,307728ddee78d115a71f6d58c519c1bc12e614f013f6aeec452aeb6b759d3e05,2025 advice metadata
+ICES_advice_6aN_2025.pdf,https://ndownloader.figshare.com/files/54092687,2026-10-27,db7cc2c149f9d40e6239dbb7d070f90869ee3ce44f6a5ef6906d1dff28c904ef,2025 adopted ACOM advice
+../ck_ices_hawg_dubius_ns/2025_san.sa.4/HAWG_2025.pdf,https://ndownloader.figshare.com/files/62333386,2026-10-25,06967082a29ef54ffb33ce7d2e8f89a4695dd6d1ca70f3e78510c03c6c813097,HAWG 2025 version 5; shared cached file
+../ck_ices_hawg_harengus_cs6_a_s_7b_c/HAWG_2026_full_report.pdf,https://backend.orbit.dtu.dk/ws/portalfiles/portal/440308463/HAWG_2026_-_Full_Report.pdf,2026-10-27,0af113dedfea05c1dabc75402ebd5846d4a6ea931e121ca9e9702b0811c9832e,HAWG 2026; shared cached file
+../ck_ices_hawg_harengus_cs6_a_s_7b_c/HAWG_2026_full_report.txt,https://backend.orbit.dtu.dk/ws/portalfiles/portal/440308463/HAWG_2026_-_Full_Report.pdf,2026-10-27,7b2b8995006e738e6868b25c086e255f387bdf060189543ee6a05593cac3c9a3,Searchable text extracted from 2026 report; not official artifact
+HAWG_2025_pages_347_370.txt,https://ndownloader.figshare.com/files/62333386,2026-10-27,2de6bd9016778d1fee45081af6de45564aaa31926fdfe372d913bec5a4df1c81,Text extracted from 2025 report pages; not official artifact
+advice_2026_metadata.json,https://api.figshare.com/v2/articles/32133586,2026-10-27,69c685727a7066f1c2f61bebda12c9ef0fd8c51f007a890751c98ceac9ae76f6,2026 advice metadata
+ICES_advice_6aN_2026.pdf,https://ndownloader.figshare.com/files/64135162,2026-10-27,4018d15d446a0d27aeb077594cc1f9b4a9b615c388e8073cb2339625351db7d8,2026 ICES advice; ASD record marked Invalid

@@ -1,0 +1,7 @@
+source_cache/
+results/
+.Rhistory
+.RData
+.Rproj.user/
+*.rds
+*.html

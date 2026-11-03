@@ -1,0 +1,22 @@
+base<-".";db<-file.path(base,"database");id<-"nefsc_scup_2025"
+url<-"https://raw.githubusercontent.com/NOAA-EDAB/stocksmart/664c4237e26520b260a090e1821a2cee5d1cdf07/data/stock_assessment_data.rda"
+file<-file.path(base,"source_cache/nefsc_scup_2025/stock_assessment_data_664c4237.rda")
+stopifnot(digest::digest(readBin(file,"raw",n=file.info(file)$size),algo="sha256",serialize=FALSE)=="141db3599cbf37af3e019bd53d2323d829a719b273e8ab0226b73f6ad18620b0")
+e<-new.env(parent=emptyenv());load(file,envir=e);x<-e$stock_assessment_data;x<-x[x$stock_name=="Scup - Atlantic Coast" & x$assessment_year==2025,]
+stopifnot(nrow(x)==164,all(x$stock_id==10286),all(x$assessment_id==13935),!anyDuplicated(x[c("metric","year")]))
+get<-function(m){z<-x[x$metric==m,];z<-z[order(z$year),];stopifnot(identical(as.integer(z$year),1984:2024),all(is.finite(z$value)));z}
+catch<-get("Catch");ssb<-get("Abundance");f<-get("Fmort");rec<-get("Recruitment")
+stopifnot(all(ssb$description=="Spawning Stock Biomass - Retrospective Adjusted"),all(f$description=="F Rate for Fully Selected Fish - Retrospective Adjusted"),all(rec$description=="Number of Recruits - Age 0"))
+i<-data.table::fread(file.path(db,"inputs.csv"),na.strings=c("","NA"),blank.lines.skip=TRUE,data.table=FALSE);i<-i[i$assessment_id==id & i$source_type=="official_table",]
+o<-data.table::fread(file.path(db,"outputs.csv"),na.strings=c("","NA"),blank.lines.skip=TRUE,data.table=FALSE);o<-o[o$assessment_id==id & o$source_type=="official_table",]
+for(y in 2015:2024) stopifnot(abs(sum(i$value[i$year==y])-catch$value[catch$year==y])<=1)
+for(y in 2015:2023) stopifnot(o$value[o$measure=="SSB" & o$year==y]==ssb$value[ssb$year==y],abs(o$value[o$measure=="Fbar" & o$year==y]-f$value[f$year==y])<1e-6)
+for(y in 2015:2024) stopifnot(o$value[o$measure=="recruitment" & o$year==y]==rec$value[rec$year==y])
+stopifnot(tail(ssb$value,1)==235613,abs(tail(f$value,1)-.098)<1e-6,o$value[o$measure=="SSB" & o$year==2024]==163470)
+blank<-function(file,n){cols<-names(read.csv(file.path(db,file),nrows=0));z<-as.data.frame(matrix("",n,length(cols)),stringsAsFactors=FALSE);names(z)<-cols;z$assessment_id<-id;z}
+c<-catch[catch$year<2015,];ins<-blank("inputs.csv",nrow(c));ins$type<-"catch";ins$measure<-"total_biomass";ins$basis<-"biomass";ins$fleet<-"All removals";ins$year<-c$year;ins$year_basis<-"calendar_year";ins$value<-c$value;ins$unit<-"tonnes";ins$source_type<-"official_machine_readable";ins$source_reference<-url;ins$notes<-"Stock SMART aggregate total for 2025 assessment; do not combine with overlapping fleet components."
+out<-function(z,type,measure,unit,age="",group="",note){z<-z[z$year<2015,];q<-blank("outputs.csv",nrow(z));q$type<-type;q$measure<-measure;q$year<-z$year;q$value<-if(measure=="stocksmart_reported_Ffull")round(z$value,3) else z$value;q$unit<-unit;q$age<-age;q$age_group<-group;q$source_type<-"official_machine_readable";q$source_reference<-url;q$notes<-note;q}
+caveat<-"Stock SMART labels the series retrospectively adjusted. Its 2015-2023 values match unadjusted Table 1, whereas the 2024 value is adjusted; the historical adjustment convention is unresolved. Kept separate from unadjusted model series."
+outs<-rbind(out(ssb,"biomass","stocksmart_reported_SSB","tonnes",note=caveat),out(f,"mortality","stocksmart_reported_Ffull","per year",group="age 4",note=paste(caveat,"Rounded to three decimals to remove binary storage noise.")),out(rec,"recruitment","recruitment","thousand fish",age=0,note="Stock SMART 2025 age-0 recruitment; all 2015-2024 values match the assessment report. No uncertainty reported."))
+append_selected<-function(file,z){p<-file.path(db,file);raw<-rawToChar(readBin(p,"raw",n=file.info(p)$size));l<-strsplit(raw,"\n",fixed=TRUE)[[1]];l<-l[!(startsWith(l,paste0('"',id,'",')) & grepl(url,l,fixed=TRUE))];tmp<-tempfile(tmpdir=db);on.exit(unlink(tmp),add=TRUE);write.table(z,tmp,sep=",",quote=TRUE,row.names=FALSE,col.names=FALSE,na="",fileEncoding="UTF-8");repl<-readLines(tmp,encoding="UTF-8",warn=FALSE);bytes<-charToRaw(paste0(paste(c(l,repl),collapse="\n"),if(endsWith(raw,"\n"))"\n" else ""));writeBin(bytes,tmp);if(!file.copy(tmp,p,overwrite=TRUE))stop("write failed")}
+if(identical(Sys.getenv("TAM_SOURCE_DRY_RUN"),"1"))cat("Scup 2025 source checks passed:",nrow(ins),"inputs and",nrow(outs),"outputs.\n") else {append_selected("inputs.csv",ins);append_selected("outputs.csv",outs);cat("Imported scup 2025 archive history.\n")}

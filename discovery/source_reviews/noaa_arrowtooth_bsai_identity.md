@@ -1,0 +1,5 @@
+# Bering Sea and Aleutian Islands arrowtooth flounder identity match
+
+NOAA Stock SMART ID 10003 maps to the existing canonical stock `afsc_arrowtooth_flounder_bsai`; it is not a separate new stock. Stock SMART labels the species *Reinhardtius stomias*, whereas the official assessment and canonical record use *Atheresthes stomias*. The common name, Bering Sea/Aleutian Islands area and run history establish the match. The existing detailed review is [afsc_arrowtooth_flounder_bsai.md](../../source_reviews/afsc_arrowtooth_flounder_bsai.md), and the canonical record has partial inputs and outputs.
+
+The most recent full production assessment reviewed there is Model 18.9 (2022). Fishery likelihoods use catch biomass and length compositions; no accepted fishery age-composition input was verified. Survey age samples in selected years do not satisfy the catch-age requirement. The 2024 and 2026 documents are off-cycle projections, not new full fits. This inventory row is matched, already represented in the database, and ineligible as a new age-input case.

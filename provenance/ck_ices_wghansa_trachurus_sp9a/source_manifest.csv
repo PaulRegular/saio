@@ -1,0 +1,5 @@
+"file","source_url","retrieved_on","sha256","size_bytes","assessment_id","status","notes"
+"WGHANSA_2024v2.pdf","https://doi.org/10.17895/ices.pub.26003356.v3","2026-10-21","9cec1c351652a98723678ff9ff6b237fb2a2aaef8656551b9189fc5649c148a0","65779430","ices_horse_mackerel_9a_2024","retrieved","WGHANSA 2024 report; model data through 2023."
+"WKBHMB_2024_v2.pdf","https://doi.org/10.17895/ices.pub.25002482.v2","2026-10-21","0fd177c85b845e1d01398931f013a5b26d3944fea60ad8e47bfcba00738413f4","31873216","ices_horse_mackerel_9a_2024","retrieved","Benchmark report; biological and model methods."
+"ICES_SAG_2026_source.html","https://sg.ices.dk/ViewSourceData.aspx?key=23760","2026-10-21","c74c481b37df3a80533d84ff3b809dc24de3f7b68d196fb9be7aee8cec6db906","104529","ices_horse_mackerel_9a_2026","retrieved","Official summary source table; assessment year 2026."
+"","https://github.com/ices-taf/2024_hom.27.9a_assessment","2026-10-21","","","ices_horse_mackerel_9a_2024","unavailable","Repository referenced by the report was not recoverable at the reviewed URL (404); no model bundle imported."

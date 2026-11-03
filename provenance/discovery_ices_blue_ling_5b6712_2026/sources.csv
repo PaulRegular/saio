@@ -1,0 +1,6 @@
+"file","url","revision","retrieved_on","sha256","bytes"
+"ICES_SID_year_2026.json","https://sid.ices.dk/services/year/2026","ICES SID year 2026 snapshot generated 2026-10-31; bli.27.5b6712 key 22623","2026-10-31","c5d9816e40f393ed3664dcb92710b75a47e0dd4961eb29fe3524570ae2cd5efc","324362"
+"ICES_standard_graphs_2026_key_22623.html","https://standardgraphs.ices.dk/ViewCharts.aspx?key=22623","ICES Standard Graphs assessment year 2026, bli.27.5b6712 key 22623","2026-10-31","b3adf4ab09e3691de1493be98fc84bc4de403f201349d3bd0c819b1d45a42afd","637282"
+"ICES_source_data_2026_key_22623.html","https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22623","ICES Standard Graphs source data, 2026, bli.27.5b6712 key 22623","2026-10-31","22ddcda8b713701fa176bf2b2664e7c7846ee42b8fa83b6a2c0a988bafa2b744","91462"
+"ICES_SAG_22623.xml","https://sag.ices.dk/SAG_API/StockXmlDownload/22623","ICES SAG XML assessment year 2026, bli.27.5b6712 key 22623","2026-10-31","f8654375d81d31c2d380b16d19e5fe0f85128f248b2442a90e11cbbc37071106","101536"
+"ICES_advice_record_6156.html","https://asd.ices.dk/viewAdvice/6156","ICES Advice and Scenarios Database record 6156, assessment year 2026","2026-10-31","ac965f724b93e5fd1c3f8a2efa9ecdbea1b7a116ddb80f424510da3340446897","31686"

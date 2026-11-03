@@ -1,0 +1,6 @@
+"file","source_url","retrieved_date","sha256","bytes","notes"
+"ices_sag_2026_bss_27_6a7bj.html","https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22635","2026-10-27","42de205fdffc1a8133862731d768bc71430b1f51a88e77e83058b2202fefefa9","47692","Official annual source table; landings only."
+"ices_sag_2026_bss_27_6a7bj.xml","https://sag.ices.dk/SAG_API/StockXmlDownload/22635","2026-10-27","22be8449406f9f1eaa9aa24455b28dc5e2d4e2b669aff3e9b8793cadda8ce897","45312","Official machine-readable ICES SAG export."
+"ices_advice_2026_bss_27_6a7bj.html","https://asd.ices.dk/viewAdvice/7207","2026-10-27","98993ef9869775537c5f0c9bcbf5a6f1c3e67d2a213f95013de94fdf626c692f","31683","Official advice page for 2027-2029; PDF target returned an empty response."
+"ices_advice_2017_bss_27_6a7bj.pdf","https://www.nwwac.ie/_fileupload/Seabass/2019_Dublin/ICES_Seabass_2017_6a7bj.pdf","2026-10-27","9beab6008152767d0e2e7c85e835a2dcd3f0b9677ac224028d52ef921c6379ef","773143","Earlier official advice; confirms no abundance or exploitation assessment."
+"WGCSE_2026_seabass_6a7bj.pdf","https://ndownloader.figshare.com/files/66387200","2026-10-27","e410ae5badc76d766885a058e0119a932053b334e46bf74484cb554f17f0dc61","536032","ICES WGCSE 2026 report section 4, from https://doi.org/10.17895/ices.pub.32625759."

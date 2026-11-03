@@ -1,0 +1,11 @@
+# Norway pout in Division 6.a: 2026 discovery review
+
+ICES `nop.27.6a`, *Trisopterus esmarkii* in Division 6.a (West of Scotland), is a separate assessment unit from `nop.27.3a4`, the North Sea, Skagerrak and Kattegat unit already represented in the database. The ICES Stock Information Database rolling list retains the two codes separately.
+
+The 2022 ICES–DG MARE assessment schedule lists `nop.27.6a` as a category 6.3 assessment for 2024, with precautionary advice and the stated output `PA/Stock status only`. The signed 2025 UK–ICES memorandum schedules the next assessment for June 2027 and identifies the unit as category 3. These official records support treating the 2024 entry as the latest current-unit advice cycle; they do not establish that age observations are absent from all source datasets.
+
+The reviewed official records do not provide run-specific catch-at-age, age-specific survey observations, age-specific biological inputs, or age-specific population and mortality outputs for this unit. The documented stock-status-only output is insufficient for the age-structured input/output eligibility criteria used in this inventory. The row is therefore screened ineligible for the current age-structured candidate pool, with the scope of that finding limited to the latest identified official assessment cycle. Do not match it to the North Sea unit or infer age data from a stock label, model category, or other stock's assessment.
+
+The ICES–DG MARE schedule and signed UK–ICES memorandum are cached in `source_cache/discovery_ices_norway_pout_6a/`; `sources.csv` records their URLs, retrieval date and SHA-256 checksums. The live ICES SID rolling list is also linked below as the identity cross-check; the pinned SID inventory snapshot is the register's source row. This review adds no canonical stock or numerical assessment data.
+
+Sources: [ICES 2022–2024 assessment schedule](https://www.ices.dk/about-ICES/Documents/Cooperation%20agreements/EU/2022_DGMARE_ICES_Grant-web.pdf); [signed UK–ICES memorandum, 2025](https://www.ices.dk/about-ICES/global-cooperation/Documents/UK-ICES_MoU_2025_signed_web.pdf); [ICES SID rolling assessment list](https://sid.ices.dk/manage/rollingissues.aspx).

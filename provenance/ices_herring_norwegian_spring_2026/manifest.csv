@@ -1,0 +1,6 @@
+file,source_url,retrieved_on,source_type,sha256,notes
+wgwide_2026_nssh.pdf,https://ndownloader.figshare.com/files/69495972,2026-10-28,source_pdf,d219b3a5861910fcf1aa225e7c5ceb24d098be6f6f2cfe9542680684b078da52,WGWIDE 2026 Norwegian spring-spawning herring report; DOI 10.17895/ices.pub.33882730.v1
+wgwide_2026_nssh_extracted_text.txt,https://doi.org/10.17895/ices.pub.33882730.v1,2026-10-28,derived_text,bb184d23db1b1d00dca6cf73c7caa9202a8af886bdb2b01f2081874a2887ba49,Local text extraction from the cached report PDF
+wgwide_2026_age_tables.csv,https://doi.org/10.17895/ices.pub.33882730.v1,2026-10-28,derived_tables,d61cbdae5eacc9a088cee6d405851dedaaf28307f19c25751d6029f443256eea,Age-aligned table extraction from report pages 47-80; blank cells retained
+wgwide_2026_summary.csv,https://doi.org/10.17895/ices.pub.33882730.v1,2026-10-28,derived_table,073b0a332d3608525f53e8259952e3bd680f646f97d71ac0dbca0a00e752ca81,Summary table 4.5.1.4 extraction from report pages 81-82
+ices_stock_assessment_graph_data_25912.xml,https://standardgraphs.ices.dk/ViewSourceData.aspx?key=25912,2026-10-28,official_machine_readable,8bf9c23c85888c2bdc7d5c63ca6c07c11d5a35059d39d5845b09399a79fdf4f9,ICES Stock Assessment Graphs time series; summary total biomass retained

@@ -1,0 +1,4 @@
+source,url,retrieved_on,bytes,sha256,revision,notes
+assessment_2025.pdf,https://www.pcouncil.org/documents/2026/01/status-of-yelloweye-rockfish-off-the-u-s-west-coast-in-2025.pdf/,2026-10-29,7667272,83A752124DC9BD6B22A1462A7D14293A5393886F662ADF0456BD9F888C401CDF,,Official 2025 assessment report; data through 2024.
+model_files_2025.zip,https://www.pcouncil.org/documents/yelloweye-rockfish-update-assessment-2025-model-files/,2026-10-29,5793010,62C7ADF7B8C9A0015A4CDDCC4904CA457A6ABFE09168AECBC8D1A0C6F3CBBCE2,,Official native Stock Synthesis files; pinned source archive.
+model_repository,https://github.com/pfmc-assessments/Sebastes_ruberrimus_2025,2026-10-29,,,9356e8267c23a1a5d33bb76f261fcd5622db062c,Repository revision pinned for provenance; full repository not downloaded because of size.

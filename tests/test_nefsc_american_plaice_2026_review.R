@@ -1,0 +1,4 @@
+db<-"database"; read_db<-function(f)data.table::fread(file.path(db,f),na.strings=c("","NA"),blank.lines.skip=TRUE,data.table=FALSE)
+id<-"nefsc_american_plaice_5yz_2026_mt_provisional";a<-subset(read_db("assessments.csv"),assessment_id==id);i<-subset(read_db("inputs.csv"),assessment_id==id);o<-subset(read_db("outputs.csv"),assessment_id==id);s<-subset(read_db("assumptions.csv"),assessment_id==id)
+stopifnot(nrow(a)==1,a$is_current,!a$is_applied,nrow(i)==33,sum(i$measure=="total_biomass")==11,i$value[i$fleet=="Total catch" & i$year==2025]==1564,all(i$unit=="metric tonnes"),o$value[o$measure=="Bmsy"]==12711,o$lwr[o$measure=="Bmsy"]==10267,o$upr[o$measure=="msy"]==5826,all(c("peer_review_outcome","model_update")%in%s$setting))
+cat("American plaice 2026 peer review, catch and reference-point checks passed.\n")

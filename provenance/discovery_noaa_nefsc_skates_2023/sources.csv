@@ -1,0 +1,4 @@
+file,url,retrieved_on,bytes,sha256,revision,notes
+skate_complex_assessment_2023_draft.pdf,https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&fileId=9056,2026-11-01,537358,a1eb1efc5f293f86d3038b67105092fbae6c83674ef278b0f2e5ee7310657477,"Draft management-track assessment report, compiled 2023-10-03","Detailed assessment summary; explicitly marked peer-review draft."
+skate_pdt_memo_to_ssc_2023.pdf,https://d23h0vhsm26o6d.cloudfront.net/2_231004-Skate-PDT-memo-to-SSC-re-ABCr.pdf,2026-11-01,376961,0f2a060705ec536d174b31ecd149ea7e90427d674003b6cdeb20c267ecb5b7e2,"PDT memo, 2023-10-04","Summarizes catch allocation, survey indices and assessment limits."
+stocksmart_data_dictionary.pdf,https://apps-st.fisheries.noaa.gov/stocksmart/StockSMART_DataDictionary.pdf,2026-11-01,127437,4ff9c33549e84023c58c1dbcd3f5913a671c60c25c0bec4a2cfb851ea201b32e,"NOAA Stock SMART dictionary, 2020-08-27","Defines composition-input and model-category metadata."

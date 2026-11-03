@@ -1,0 +1,5 @@
+db<-"database"; read_db<-function(f)data.table::fread(file.path(db,f),na.strings=c("","NA"),blank.lines.skip=TRUE,data.table=FALSE)
+id<-"nefsc_yellowtail_georges_bank_2025"; i<-subset(read_db("inputs.csv"),assessment_id==id);o<-subset(read_db("outputs.csv"),assessment_id==id)
+c<-subset(i,source_type=="official_machine_readable"); h<-subset(o,source_type=="official_machine_readable")
+stopifnot(nrow(c)==80,nrow(h)==126,identical(sort(c$year),1935:2014),all(table(h$measure)==42),all(h$year>=1973 & h$year<=2014),all(h$age[h$measure=="recruitment"]==1),all(h$age_group[h$measure=="Ffull"]=="4-6"),all(is.na(h$se)),all(is.na(h$lwr)),all(is.na(h$upr)),all(c$unit=="tonnes"))
+cat("Georges Bank yellowtail 2025 historical source coverage passed.\n")

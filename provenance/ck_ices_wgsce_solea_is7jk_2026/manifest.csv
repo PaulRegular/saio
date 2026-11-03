@@ -1,0 +1,9 @@
+"file","source_url","retrieved_date","sha256","bytes","notes"
+"wgcse_2026_sole_7h-k.pdf","https://ndownloader.figshare.com/files/66387266","2026-10-23","cf5f831c106cc49b3c9b520be5904bbb2e92752a37fb6e648378f0a9329f9d3a","2610412","Official WGCSE stock chapter"
+"ices_advice_2026_sole_7h-k.html","https://asd.ices.dk/viewAdvice/6146","2026-10-23","3e202886f52955cf7e95cdbc1c0938e7580218f95f3b18311aacb00103807b40","35907","Official ICES Advice and Scenarios Database page"
+ices_sag_2026_23719.xml,https://sag.ices.dk/SAG_API/StockXmlDownload/23719,2026-10-27,6bd47d1b337eade34393d4e2dae59235e8a6bf7cc018cfcef6d8deaa0404c4d1,124423,Current category-5 advice source data.
+ices_sag_2019_13006.xml,https://sag.ices.dk/SAG_API/StockXmlDownload/13006,2026-10-27,206a5b562c32e0ec96619acd182dcd2d40bc8289995bd94550961ee0cb9fcd9a,50197,Historical age-based assessment source data; pending review.
+WKFlatNSCS_2020.pdf,https://www.vliz.be/imisdocs/publications/362763.pdf,2026-10-27,c33d9853143f77903bf164ea6f1f74f6a9f15dda8b46ed45cf6d6ffbf3c618c6,75012527,"ICES 2020 benchmark, DOI 10.17895/ices.pub.5976."
+WGCSE_2019.pdf,https://archimer.ifremer.fr/doc/00505/61665/65580.pdf,2026-10-27,fe996eff5cd44ad841d5fdf406f0d909d9b22c3c9f21a0fa061591027d35ff2b,41319876,ICES 2019 WGCSE report DOI 10.17895/ices.pub.4982.
+WGCSE_2019_sole_pages_761_779.txt,derived from WGCSE_2019.pdf,2026-10-27,c0c692ff79c1212da13159cdcf47ac77e938a824cf7fb3b2b2e4fd36b5742131,352745,pypdf layout text of PDF pages 761-779.
+WGCSE_2019_sole_pages_761_779_plain.txt,derived from WGCSE_2019.pdf,2026-10-27,d06c9149e4963da08eea1f6df4f9f8bc10413a97224ac1101a10e868c165c1fe,29337,pypdf plain text of report PDF pages 761-779.

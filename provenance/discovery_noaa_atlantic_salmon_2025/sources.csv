@@ -1,0 +1,3 @@
+source_id,url,description,retrieved_on,file,bytes,sha256,remote_checksum,access_status
+usasac_2026_zip,https://www.fisheries.noaa.gov/s3/2026-05/usasac_salmon_2026_0.zip,USASAC Atlantic salmon database ZIP (updated 2026-05-29),2026-10-30,USASAC_database_2026-05.zip,540922,a372d61fde09ec43c428d31ffcd2fdaca614b66609e4242a9f81dd29b68552be,,cached locally; checksum verified
+usasac_report_37,https://repository.library.noaa.gov/view/noaa/70571/noaa_70571_DS1.pdf,USASAC Report 37 (2024 activities; published 2025),2026-10-30,,,,sha-512:b8a424127e22f4f61da6e491b7290ac4fba92b14cca1d511b38c489f14cc9df0a2df5ecea581a1d608062cc7ff9e3da4c25a6343e3be60630e672459d69652fa,HTTP 403 from direct download; NOAA repository record and searchable PDF text accessible

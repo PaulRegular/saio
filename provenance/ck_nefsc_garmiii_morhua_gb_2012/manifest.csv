@@ -1,0 +1,4 @@
+file_name,source_url,retrieved_date,sha256,represented_assessment,status,notes
+SAW55_report_2013.pdf,https://repository.library.noaa.gov/view/noaa/4432/noaa_4432_DS1.pdf,2026-10-27,549582645c201d844aa9a1ec5b9c3ec561c9d53132fb7f29f03b939758534824,NEFSC SAW55 Georges Bank cod Base ASAP 2012,cached,Official assessment report; source tables used for input and output extraction.
+SAW55_summary_2013.pdf,https://repository.library.noaa.gov/view/noaa/4330/noaa_4330_DS1.pdf,2026-10-27,A0D010F1FD0CEF6CABD394C6CE60E2BC5271D88C8D1D163C9000FFA20EA68D09,NEFSC SAW55 assessment summary 2012,cached,Official peer-review summary.
+NOT_CACHED,https://repository.library.noaa.gov/view/noaa/5293/noaa_5293_DS1.pdf,2026-10-27,,NEFSC Georges Bank cod 2015 operational review,download_restricted,Direct NOAA IR download returned Access Denied; used only to review later status and did not supply numerical values.

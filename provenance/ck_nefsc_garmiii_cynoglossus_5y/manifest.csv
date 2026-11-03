@@ -1,0 +1,7 @@
+"file","url","retrieved","sha256","revision","status","bytes"
+"witch_flounder_2024_unit_report.pdf","https://d23h0vhsm26o6d.cloudfront.net/13d.-2024_WIT_UNIT_RPT_09_02_203738.pdf","2026-10-27","fb8d1128686e9dede40b6fadfe22030b0c7add8449f8c09148c8543b1e481e95","2024 Witch Flounder Unit Report; current empirical approach","downloaded","610136"
+witch_2026_data_update.pdf,https://d23h0vhsm26o6d.cloudfront.net/1c_data_update_template_v2_1_2b_witch_flounder.pdf.pdf,2026-10-27,849de7b32f1686d4753e907155b7ebe41a799ff0c835c4b31148d35be71696ab,"2026 data update, not a fitted assessment",downloaded,144069
+witch_2016_benchmark_draft.pdf,https://d23h0vhsm26o6d.cloudfront.net/1.8-DRAFT-WitchFl_WP_B1_SAW62_AssessmentReport_Nov9_2016.pdf,2026-10-27,65fe1cce237fca5d06c6af9ba8a79464f6ea27a98934d080ba2b2e603da29405,2016 benchmark draft and stock boundary,downloaded,27274895
+witch_2024_peer_review.pdf,https://www.fisheries.noaa.gov/s3/2024-10/2024-Management-Track-Peer-Review-Panel-Report_10_8_24_508.pdf,2026-10-27,27a77b0c9c4d9ec8cc6557c9a05cb1116422bd7dfa693c5b3e950a20568c00df,Peer review of 2024 assessment,downloaded,614188
+witch_2024_layout.txt,derived from witch_flounder_2024_unit_report.pdf,2026-10-27,644e640e7b353dd8f8ad5c55a57d38e08490e127ff123e8933f613e0f6a212f4,pypdf text extraction of pinned 2024 report,derived,13771
+witch_2026_layout.txt,derived from witch_2026_data_update.pdf,2026-10-27,fbc495fdca2198c1fc72753c4705ee9392fd825ce4d52c61fe2f265e34d0273e,pypdf text extraction of pinned 2026 update,derived,14984

@@ -1,0 +1,6 @@
+"file","url","retrieved","md5","revision","status"
+"science_advisory_report_2025_002.pdf","https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4127961x.pdf","2026-10-17","420561c80491c69000cf800bec4abe0e","","downloaded"
+"ssb_posterior_2024.rds","https://raw.githubusercontent.com/pbs-assess/gftrends/7f1c59b8cc3895a3477204ac16da6cf15e2466c6/data-raw/petrale-sole-bc-mcmc-2024.rds","2026-10-17","ac515841c33668a98e77075af90aef83","7f1c59b8cc3895a3477204ac16da6cf15e2466c6","downloaded"
+"gftrends_process_raw_data.R","https://raw.githubusercontent.com/pbs-assess/gftrends/7f1c59b8cc3895a3477204ac16da6cf15e2466c6/data-raw/process-raw-data.R","2026-10-17","a3e3799c49252fd15948dacdc808048f","7f1c59b8cc3895a3477204ac16da6cf15e2466c6","downloaded"
+"catalogue/Master.csv","https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/Master.csv","2026-10-17","430d85ba1f4144fc87bca098c8090699","7e4daca3cbfc14ce7fa0b28ed824eebe7113249b","downloaded"
+"catalogue/metadata_no_age_corection.csv","https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/PLOS_2026_analysis/metadata_no_age_corection.csv","2026-10-17","778fa50d37a51a5fe9de72d7ed604b51","7e4daca3cbfc14ce7fa0b28ed824eebe7113249b","downloaded"

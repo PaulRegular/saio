@@ -1,0 +1,5 @@
+"file","url","retrieval_date","revision","bytes","sha256","retrieved_utc"
+"ICES_Advice_7177.html","https://asd.ices.dk/viewAdvice/7177","2026-10-30","ICES 2026 advice record 7177 for mon.27.8c9a",66491,"f19c36ae2ea5f2734297543d09d60d0ee613dc8c09ab0fa9133ba5df02973988","2026-10-30"
+"ICES_StockGraphs_22608.html","https://standardgraphs.ices.dk/ViewCharts.aspx?key=22608","2026-10-30","ICES Stock Assessment Graphs, assessment year 2026, key 22608",1665453,"28a4e966993ea15c36b4996d2b40f4d596b62208c3a77fb0b47cef3e7e8e2d98","2026-10-30"
+"ICES_SourceData_22608.html","https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22608","2026-10-30","ICES Stock Assessment Graphs source data, assessment year 2026, key 22608",109070,"1be0a6f39285719124187e65d20427beb9fbf2ff6c2c00c2d008bc4105a8a8c7","2026-10-30"
+"ICES_StockAssessment_22608.xml","https://sag.ices.dk/SAG_API/StockXmlDownload/22608","2026-10-30","ICES Stock Assessment Graphs XML assessment data, assessment year 2026, key 22608",86396,"24b34875208ee9d2443ccffc1698814d38de3a6e5c92c54b613189581790f327","2026-10-30"

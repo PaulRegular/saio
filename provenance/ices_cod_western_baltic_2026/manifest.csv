@@ -1,0 +1,3 @@
+assessment_id,cached_file,source_url,retrieval_date,sha256,notes
+ices_cod_western_baltic_2026,wgbfas_2026_report.pdf,https://literatur.thuenen.de/digbib_extern/dn071152.pdf,copied 2026-10-27 from existing local cache,7E8A6AC51F72ABF7D1F026E0997F764267F07690CB2B78E32E073E13FD658732,Official WGBFAS 2026 report; original retrieval date not recorded here
+ices_cod_western_baltic_2026,wgbfas_2026_report.txt,https://literatur.thuenen.de/digbib_extern/dn071152.pdf,copied 2026-10-27 from existing local cache,9F698DDD731CA982FBD70D0D3E85B8EBDA0D15FF88648D997F0A7669C111DBBD,Text extracted from cached PDF; verify numerical values against PDF

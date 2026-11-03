@@ -1,0 +1,4 @@
+"file","url","retrieval_date","revision","sha256","status"
+"catalogue_data.csv","https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/PLOS_2026_analysis/ICM_data_NE_atlantic_stocks.csv","2026-10-24","7e4daca3cbfc14ce7fa0b28ed824eebe7113249b","cc60491e5ca9f47cb10265767d104e2c092d1dc7104081792af64a35a1a5a983","cached"
+"HAWG_2016.pdf","https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/PDFs/ICES/HAWG%20Report%202016.pdf","2026-10-24","7e4daca3cbfc14ce7fa0b28ed824eebe7113249b","65afc305b2a1038c48feca7d97e6af9f9e4fcef72b09e328aa58ea1e22cd5b3c","cached"
+"HAWG_repository.json","https://api.github.com/repos/ICES-dk/wg_HAWG","2026-10-24","","824138f916e968240b40ddc1743ce342eca73954b8d27b56f004f9675f28e8ac","cached"

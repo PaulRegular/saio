@@ -1,0 +1,5 @@
+file,url,retrieved_on,sha256,assessment,status,notes
+WGCSE_2026_Cod_7e-k.pdf,https://ndownloader.figshare.com/files/66387218,2026-10-21,249FC042A4C095F255E06D56FBEC45B12C5CAD9BB4830881CBC457FD44870E46,ICES WGCSE 2026 Cod_CS_WG2026,cached,Official stock chapter; ICES Figshare item DOI 10.17895/ices.pub.32625759.v1
+SAM_Cod_CS_WG2026_model.RData,https://stockassessment.org/datadisk/stockassessment/userdirs/user3/Cod_CS_WG2026/run/model.RData,2026-10-21,1C2171D0FDCA39A946C5159162B2CF439B875BD8EFF86A7301466E5FFB2050E9,ICES WGCSE 2026 Cod_CS_WG2026,cached,Converged official fitted SAM object; stockassessment 0.12.0; RemoteSha 1cc464b80f6f
+WKCELTIC_Benchmark_2020.pdf,https://ndownloader.figshare.com/files/33482654,2026-10-21,D38E17C38C8F662289AEF4C1162510EC2C76D473225CAAB5EACE1B6448906815,ICES WKCELTIC 2020,cached,Official benchmark report; Figshare item DOI 10.17895/ices.pub.5983
+not_downloaded,https://www.ices.dk/sites/pub/Publication%20Reports/Stock%20Annexes/2020/cod-7e-k_SA_2020.pdf,2026-10-21,,ICES Cod 7.e-k stock annex,failed_http_401,ICES archive rejected the request; no alternate accessible copy found

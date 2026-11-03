@@ -1,0 +1,4 @@
+"file","url","retrieved","sha256","assessment","source_type","bytes","status"
+"ICES_SAG_23721_2026.json","https://sag.ices.dk/SAG_API/api/StockDownload?assessmentKey=23721","2026-10-19","4e7913d54362104b4e9e9488dfe19c70ff4898cd4b9693e65ed677bca9423322","Official ICES Stock Assessment Graphs machine-readable data for cod.27.7a, 2026 assessment","official_machine_readable","169880","cached"
+"WGCSE_2026_Cod_7a.pdf","https://ndownloader.figshare.com/files/66387206","2026-10-19","75cfd78716fab2bd57f7b3b041e59a9ece8b33644f5d05c83e83075cd96f8381","ICES WGCSE 2026 cod in Division 7.a assessment chapter","official_document","1572854","cached"
+"ICES_Stock_Annex_cod_27_7a_2025.pdf","https://ndownloader.figshare.com/files/55604981","2026-10-19","ab51ca1fcd40140c86b0c5e441ea11b14b206de1f64e9b4d92483b58d72ed4c4","Current stock annex, last updated May 2025; model framework and biological inputs","official_document","504332","cached"

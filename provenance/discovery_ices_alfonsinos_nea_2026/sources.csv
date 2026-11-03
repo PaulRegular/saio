@@ -1,0 +1,5 @@
+"file","url","retrieval_date","revision","sha256"
+"ICES_Advice_6154.html","https://asd.ices.dk/viewAdvice/6154","2026-10-30","ICES 2026 advice record 6154, valid for 2027-2028","e6ba7427c53288212bd2ac9aa8b850ab93cfb8a81ae98afa03960519a21500eb"
+"ICES_StockGraphs_22402.html","https://standardgraphs.ices.dk/ViewCharts.aspx?key=22402","2026-10-30","ICES Stock Assessment Graphs, assessment year 2026, key 22402","c44faaa963a606e729069bb50888e14dea69419d07ce952305d45941b300f5fa"
+"ICES_SourceData_22402.html","https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22402","2026-10-30","ICES Stock Assessment Graphs source data, assessment year 2026, key 22402","1ee915e403c5a91ed085c455715882e940dd3f1412c39af53897c47777dc4597"
+"ICES_StockAssessment_22402.xml","https://sag.ices.dk/SAG_API/StockXmlDownload/22402","2026-10-30","ICES Stock Assessment Graphs XML assessment data, assessment year 2026, key 22402","24fbb06772ea0995d13599492e9af24764251c47fb201075ce13447c9ccb395c"

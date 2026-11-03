@@ -1,0 +1,5 @@
+"file","url","retrieved_on","bytes","sha256"
+"ICES_2025_advice.html","https://asd.ices.dk/viewAdvice/3920","2026-10-31","31693","3cf3266056c5fa4a81d4dab1043459e5b144598faed7e7cc2397d515d84315f7"
+"SAG_2025_charts.html","https://standardgraphs.ices.dk/ViewCharts.aspx?key=19602","2026-10-31","171601","846143461c427402019a4492de48f56b37f4a085ae8ed9f81cf1b9c203acddef"
+"SAG_2025_source_data.html","https://standardgraphs.ices.dk/ViewSourceData.aspx?key=19602","2026-10-31","55789","514e9a7d60963871b9238c8395f501c6f698cfb8ec42dac6e40db1dd32f0b81d"
+"SAG_2025_stock.xml","https://sag.ices.dk/SAG_API/StockXmlDownload/19602","2026-10-31","78477","5d0299fd4a42b498e17202f09b915ce2607a3b9ee884aa7cc180748b97d1ef45"

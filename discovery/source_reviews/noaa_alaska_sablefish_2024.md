@@ -1,0 +1,19 @@
+# NOAA Alaska sablefish (2024)
+
+## Identity and assessment
+
+Stock SMART 10956 is the single federal Alaska sablefish population spanning the Bering Sea, Aleutian Islands, and Gulf of Alaska. NOAA describes this as one assessment population; the regions are management areas within it. It is separate from the NOAA Pacific Coast sablefish assessment. No canonical tinyAM stock or assessment currently represents NOAA 10956.
+
+The latest full operational assessment located is the 2024 update, author-recommended Model 23.5. The final 2025 Gulf of Alaska SAFE catch-report chapter says no assessment was conducted in 2025 and that the 2024 model was rolled forward for specifications. Its catch-through date is 8 November 2025. The 2024 final report and final model input/output repository are cached in `source_cache/discovery_noaa_alaska_sablefish_2024_2025/`; `sources.csv` records direct URLs, retrieval date, pinned GitHub revision where applicable, byte size, and SHA-256.
+
+## Assessment inputs and outputs
+
+The age- and sex-structured statistical catch-at-age model tracks ages 2 through 31+ for females and males. The final input file and ADMB model files are public at the pinned repository revision. Annual fixed-gear and trawl catches are in tonnes for 1960–2024; non-commercial catch is included from 1977. The fitted age observations include sex-aggregated U.S. fixed-gear fishery proportions-at-age for 1999–2023, NOAA domestic longline survey age compositions for 1996–2023, and Japanese–U.S. cooperative survey age compositions in selected years from 1981 to 1993. The input sample size for each fitted composition is 20. Fixed-gear age compositions are weighted by catch numbers across management areas; the trawl fishery contributes length compositions rather than an age composition. A later import must preserve these distinctions and document any tinyAM fleet/catch-at-age reconstruction.
+
+The NOAA domestic longline survey has relative population numbers (RPNs) for 1979–2023; the cooperative survey and trawl survey provide additional series. Survey age compositions and RPNs permit an age-specific abundance reconstruction for the observed survey years, subject to reproducing the assessment's regional weighting and extrapolation for areas not surveyed annually. The model has no 2024 survey index. Survey values are annual; the report and model inputs do not provide a fractional within-year timing value, so timing remains unresolved for translation.
+
+The final report provides fixed sex-specific length-at-age and round weight-at-age, plus female maturity-at-age for ages 2–31+ as biological inputs. Natural mortality is estimated as a single scalar with a prior; the 2024 report gives a 0.114 MLE and MCMC mean near 0.11. The model's reported outputs include numeric female and male numbers-at-age for 1960–2024, and annual age-2 recruitment, total age-2+ biomass, and female spawning biomass. The final report gives 95% MCMC credible intervals for these aggregate series (recruitment through 2023; biomass and spawning biomass through 2024). Its annual fishing-mortality result is fully selected F; a published numeric F-at-age table was not located.
+
+## Screening decision
+
+This is a distinct new current management unit and is eligible for the age-disaggregated candidate set. It has directly fitted fishery and survey age compositions, annual abundance indices, age-specific biological inputs, and official age-specific abundance and aggregate population outputs. The candidate is not yet imported: fleet coverage is incomplete for age compositions, gear-specific catch reconstruction needs verification, annual timing is unresolved, and the meaning and units of each native series must be checked during curation. No canonical records were added in this screening step.

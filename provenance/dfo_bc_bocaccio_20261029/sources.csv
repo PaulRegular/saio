@@ -1,0 +1,5 @@
+"file","url","retrieved_on","bytes","sha256","status"
+"science_response_2024_update.pdf","https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41260284.pdf","2026-10-29","5159913","e25ddef785fb69ed34d89f1b15a1f8d72a5462348214bc2c4b5916fbb53fdd3a","downloaded"
+"science_response_2022_001_2021_update.pdf","https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41041835.pdf","2026-10-29","4025558","cb43ccdd64a2e0afa476a439b162d97d574e3e81079eacefff5cbb4b5e60b650","downloaded"
+"resdoc_2022_001_2019_assessment.pdf","https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41058185.pdf","2026-10-29","16590947","fe336f914cf8dc390ed29b10936f9af2d323b766a4952772c937bb9dc1e1fb3a","downloaded"
+"PBSawatea repository tree","https://github.com/pbs-software/pbs-awatea/tree/57e8e9775bf9fdd8b965a07ba434f3fc40675c93","2026-10-29","","","reviewed; generic model package only, no Bocaccio run files"
