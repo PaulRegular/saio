@@ -42,3 +42,16 @@ The full HAWG report is cached in the shared Celtic Sea herring source folder. T
 - [Older 2024 ICES-advice code snapshot](https://github.com/ices-advice/2024_her.27.nirs/tree/808b6c896474f7210c7f95ee4c7aef5046aaf491/2024_her.27.nirs_assessment)
 
 This review is based on sources retrieved 2026-10-29.
+
+## Annual-reference follow-up, 2026-11-03
+
+The imported annual arrays use `year_basis = model_year`. The associated
+`model_years` assumption describes 1 April through 31 March, whereas the
+cached HAWG summary-table footnote describes September spawning biomass as
+affected by fisheries between 1 January and spawning. These statements do not
+establish that catch-year labels and population-state dates share the same
+annual origin. The annual origin and the relationship between the catch,
+survey and population series require verification from the applied SAM data
+construction or stock annex before assigning new timing fractions. The
+original labels, numbers and existing assumptions remain unchanged pending
+that check; a calendar-year reinterpretation is not inferred here.
