@@ -42,3 +42,13 @@ The official [ICES 2026 NWWG report](https://doi.org/10.17895/ices.pub.32414577)
 The public [ICES SAG summary for inshore key 20951](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=20951) and [offshore key 19562](https://sg.ices.dk/ViewSourceData.aspx?key=19562) are cited only to distinguish the 2025 assessments from the 2026 report. Neither is the source of the imported 2026 values.
 
 The 2026 advice pages and other Greenland cod chapter PDFs remain cached as described in the source manifest.
+
+## Native-object retrieval follow-up, 2026-11-03
+
+With `stockassessment` installed, `fitfromweb()` was tried again for the named
+`NWWG26_WOSC_v1` and `NWWG25_N-WISC` runs. Both failed while receiving the
+`run/model.RData` response from the source host. The attempted URLs and failure
+messages are cached in `sam_retrieval_2026_11_03.csv` alongside the existing
+sources. This access failure does not establish that the native objects lack
+the required arrays; their contents remain unverified and no values or
+completeness statuses were changed.

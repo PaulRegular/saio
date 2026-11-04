@@ -31,6 +31,19 @@ The source model's SSB definition changes at the terminal year: 1961–2022 use 
 
 The native sources retain catch biomass, fishery age proportions and weights, plus aggregate survey indices and survey proportions/weights. A derived age series is possible only in years where the required source quantities overlap. Length compositions are separate likelihood inputs; exact survey timing remains unresolved.
 
+## Native survey-equation check, 2026-11-03
+
+The pinned `Model_20_1.tpl` predicts survey biomass as
+`q_srv1 * (natage(year) * elem_prod(srv1_sel, wt))` (line 575), and predicts
+survey age proportions from selected `natage(year)` (line 594). The population
+recursion carries annual survivors into `natage(year + 1)` (lines 536–538).
+Neither survey prediction applies mortality between the population-state date
+and sampling. Thus the effective observation time in these equations is the
+beginning of the annual population step. This is an equation convention, not
+a recovered survey calendar date or a newly supplied input timing field.
+Spawning month 5 remains a separate biological convention. The original
+numeric inputs and missing survey-calendar fraction are unchanged.
+
 ## Sources
 
 - [2023 GOA Pacific ocean perch assessment update](https://apps-afsc.fisheries.noaa.gov/Plan_Team/2023/GOApop.pdf)
