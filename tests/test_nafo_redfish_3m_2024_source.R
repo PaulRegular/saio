@@ -53,8 +53,14 @@ stopifnot(nrow(s) == 1L, s$authority == "NAFO", s$authority_stock_id == "redfish
   c$import_status == "partial", c$inventory_assessment_year == 2024L)
 
 manifest <- read_small("provenance/nafo_redfish_3m_2024/manifest.csv")
-stopifnot(nrow(manifest) == 8L, all(nchar(manifest$sha256) == 64L),
-  any(grepl("scr24-032.pdf", readLines("source_reviews/nafo_redfish_3m_2024.md"), fixed = TRUE)))
+review <- paste(readLines("source_reviews/nafo_redfish_3m_2024.md"), collapse = "\n")
+stopifnot(nrow(manifest) == 9L, all(nchar(manifest$sha256) == 64L),
+  any(manifest$cached_file == "nafo_scr26_010_blim_reference_point.pdf"),
+  any(manifest$source_url == "https://www.nafo.int/Portals/0/PDFs/sc/2026/scr26-010.pdf"),
+  any(grepl("scr24-032.pdf", review, fixed = TRUE)),
+  grepl("26/027", review, fixed = TRUE), grepl("returned 404", review, fixed = TRUE),
+  grepl("1988–2017", review, fixed = TRUE), grepl("1990–2007 and 2009–2018", review, fixed = TRUE),
+  grepl("not a new production XSA", review, fixed = TRUE))
 
 
 
