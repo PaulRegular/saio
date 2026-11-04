@@ -7,6 +7,40 @@ units, eligible age-structured assessments, or a selected import batch. The date
 shared stock unit; blank values are unresolved or not yet crosswalked. Do not
 overwrite the register after review has begun.
 
+## Inventory snapshot: 2026-11-04
+
+The screened register now contains 932 source-list rows from DFO, ICES, NAFO,
+and NOAA. These are inventory entries, not unique stock counts. The NAFO
+addition contributes 27 rows; no numerical assessment inputs or outputs were
+added to the canonical database during discovery.
+
+| Organization | Rows | Matched rows | New rows | Ambiguous identity | Identity unreviewed | Eligible rows | Ineligible rows | Eligibility unresolved |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| DFO | 199 | 24 | 59 | 18 | 98 | 21 | 147 | 31 |
+| ICES | 274 | 61 | 210 | 3 | 0 | 60 | 185 | 29 |
+| NAFO | 27 | 1 | 25 | 1 | 0 | 5 | 22 | 0 |
+| NOAA | 432 | 29 | 387 | 14 | 2 | 89 | 252 | 91 |
+| **Total** | **932** | **115** | **681** | **36** | **100** | **175** | **606** | **151** |
+
+Every row has a screening decision. `inventory_units.csv` now contains 755
+linked unit keys covering 802 source rows; 130 source rows remain without a
+unit crosswalk. Row statuses and linked-unit counts are different summaries;
+the register and the source reviews retain the identity decisions and their
+evidence.
+
+The NAFO register has 22 finfish entries and five non-finfish scope exclusions.
+Four new finfish units meet the discovery screen for source curation: cod 3M,
+cod 3NO, beaked redfish 3M, and American plaice 3LNO. A fifth eligible entry,
+Greenland halibut SA2+3KLMNO, matches the existing DFO canonical unit. Seven
+other NAFO rows crosswalk to existing DFO candidate units, and NAFO redfish SA1
+remains identity-ambiguous. The full unit-by-unit decisions and evidence are
+in [the NAFO inventory review](source_reviews/nafo_inventory_2026.md).
+
+The NAFO review includes Commission stocks, coastal-state advice requests, and
+Scientific Council advice units. It is a screened source inventory, not a
+claim that every row is an independent NAFO assessment dataset or a direct
+reproduction of NAFO's headline stock count.
+
 The initial snapshot was retrieved on 2026-10-28 from:
 
 | Source | Entries | Local cached source and provenance | Coverage limit |

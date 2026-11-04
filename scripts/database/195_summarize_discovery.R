@@ -13,6 +13,8 @@ is_dfo <- x$organization == 'DFO'
 region[is_dfo] <- sub('^DFO:([^:]+):.*$', '\\1', x$candidate_id[is_dfo])
 is_ices <- x$organization == 'ICES'
 region[is_ices] <- x$assessment_area[is_ices]
+is_nafo <- x$organization == 'NAFO'
+region[is_nafo] <- x$assessment_area[is_nafo]
 region[!is.na(region)] <- trimws(gsub('[[:space:]]+', ' ', region[!is.na(region)]))
 region[is.na(region) | !nzchar(trimws(region))] <- 'Unspecified'
 key <- data.frame(organization = x$organization, source_region = region, stringsAsFactors = FALSE)

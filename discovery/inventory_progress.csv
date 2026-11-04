@@ -57,14 +57,34 @@
 "ICES","Greenland Sea stock (subareas 2, 5, and 14)",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
 "ICES","Greenland Sea, Icelandic Waters",4,0,4,0,0,1,2,1,1,0,0,4,0,4,0,1,2,1,0,0
 "ICES","Greenland Sea, Oceanic Northeast Atlantic",2,0,1,1,0,1,1,1,0,0,0,2,0,1,1,1,0,0,0,0
-"ICES","Icelandic slope; ICES Subarea 14 and Division 5.a (East of Greenland and Iceland grounds)",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
+"ICES","ICES divisions 7.b-k, 8.a-b, and 8.d (west and southwest of Ireland, Bay of Biscay)",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
 "ICES","Icelandic Waters",7,4,3,0,0,6,0,3,1,0,0,7,5,3,0,3,0,0,0,0
 "ICES","Icelandic Waters, Norwegian Sea",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
-"ICES","ICES divisions 7.b-k, 8.a-b, and 8.d (west and southwest of Ireland, Bay of Biscay)",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
+"ICES","Icelandic slope; ICES Subarea 14 and Division 5.a (East of Greenland and Iceland grounds)",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
 "ICES","Oceanic Northeast Atlantic",3,0,3,0,0,0,3,0,0,0,0,3,0,3,0,0,3,0,0,0
 "ICES","Oceanic Northeast Atlantic and northern Reykjanes Ridge",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
 "ICES","Southern Bay of Biscay and Atlantic Iberian waters East",1,0,1,0,0,1,0,1,0,0,0,1,0,1,0,1,0,0,0,0
 "ICES","Subarea 6 (West of Scotland)",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Denmark Strait and East Greenland",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Division 3M",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Division 3M (Flemish Cap)",3,0,3,0,0,2,1,2,0,0,0,3,0,3,0,2,1,0,0,0
+"NAFO","Division 3O",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Division 6G",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Divisions 2J3KL (Canadian management unit)",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Divisions 3LN",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Divisions 3LNO",3,0,3,0,0,1,2,1,0,0,0,3,0,3,0,1,2,0,0,0
+"NAFO","Divisions 3LNO and Subdivision 3Ps",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Divisions 3NO",3,0,3,0,0,1,2,1,0,0,0,3,0,3,0,1,2,0,0,0
+"NAFO","Divisions 3NO and Subdivision 3Ps",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Subarea 1",2,0,1,1,0,0,2,0,0,0,0,2,0,2,0,0,1,0,0,1
+"NAFO","Subarea 1A inshore - Disko Bay",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Subarea 1A inshore - Upernavik",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Subarea 1A inshore - Uummannaq",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Subarea 2 and Divisions 3KLMNO",1,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,1
+"NAFO","Subareas 0 and 1",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Subareas 0 and 1 offshore",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Subareas 2 and 3",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"NAFO","Subareas 3 and 4",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
 "NOAA","AFSC",89,13,72,2,2,18,67,10,4,0,0,89,13,64,3,6,50,4,2,2
 "NOAA","NEFSC",55,15,39,1,0,10,30,4,15,0,0,55,16,33,1,4,20,8,0,1
 "NOAA","NEFSC / SEFSC",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0

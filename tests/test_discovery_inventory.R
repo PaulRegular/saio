@@ -10,7 +10,7 @@ selected <- read_table("discovery/selected_batch_01_2026.csv")
 # Source-list membership is distinct from current stock and import status.
 stopifnot(nrow(register) > 0L, !anyNA(register$candidate_id),
   !anyDuplicated(register$candidate_id), !any(register$candidate_id == "candidate_id"),
-  all(register$organization %in% c("NOAA", "ICES", "DFO")),
+  all(register$organization %in% c("NOAA", "ICES", "DFO", "NAFO")),
   all(register$match_status %in% c("unreviewed", "matched", "new", "ambiguous")),
   all(register$screening_status %in% c("not_started", "in_progress", "screened")),
   all(register$eligibility %in% c("unresolved", "eligible", "ineligible")),
@@ -49,5 +49,54 @@ stopifnot(identical(selected$candidate_unit_id, selected_rows$candidate_unit_id)
   all(selected_rows$eligibility == "eligible"),
   all(selected_rows$import_status %in% c("partial", "imported")),
   all(selected$curation_status == "partial_source_import"))
+
+nafo <- register[register$organization == "NAFO", , drop = FALSE]
+stopifnot(nrow(nafo) == 27L, !anyDuplicated(nafo$candidate_id),
+  !anyNA(nafo$official_stock_id), all(nzchar(nafo$official_stock_id)),
+  all(nafo$screening_status == "screened"),
+  all(nafo$inventory_url == "https://www.nafo.int/Science/Science-Advice/Stock-advice"),
+  all(nafo$retrieved_on == "2026-11-04"), all(nafo$review_date == "2026-11-04"),
+  any(nafo$eligibility == "eligible"), any(nafo$eligibility == "ineligible"),
+  all(c("NAFO") %in% progress$organization))
+for (id in c("NAFO:cod.3M", "NAFO:cod.3NO", "NAFO:redfish.3M",
+  "NAFO:american_plaice.3LNO")) {
+  stopifnot(lookup(id)$eligibility == "eligible")
+}
+for (id in c("NAFO:american_plaice.3M", "NAFO:redfish.3LN",
+  "NAFO:redfish.3O", "NAFO:yellowtail_flounder.3LNO",
+  "NAFO:witch_flounder.3NO", "NAFO:capelin.3NO",
+  "NAFO:thorny_skate.3LNOPs", "NAFO:white_hake.3NO3Ps",
+  "NAFO:greenland_halibut.1A-Uummannaq", "NAFO:wolffish.SA1")) {
+  stopifnot(lookup(id)$eligibility == "ineligible")
+}
+stopifnot(lookup("NAFO:greenland_halibut.SA2-3KLMNO")$matched_stock_id ==
+    "dfo_greenland_halibut_2_3klmno",
+  lookup("NAFO:greenland_halibut.SA2-3KLMNO")$match_status == "matched",
+  lookup("NAFO:redfish.SA1")$match_status == "ambiguous")
+crosswalks <- c(
+  "NAFO:redfish.3LN" = "DFO:Newfoundland and Labrador:Redfish - NAFO 3LN",
+  "NAFO:redfish.3O" = "DFO:Newfoundland and Labrador:Redfish - NAFO 3O",
+  "NAFO:yellowtail_flounder.3LNO" = "DFO:Newfoundland and Labrador:Yellowtail Flounder - NAFO 3LNO",
+  "NAFO:witch_flounder.3NO" = "DFO:Newfoundland and Labrador:Witch Flounder - NAFO 3NO",
+  "NAFO:thorny_skate.3LNOPs" = "DFO:Newfoundland and Labrador:Thorny Skate - NAFO 3LNO",
+  "NAFO:white_hake.3NO3Ps" = "DFO:Newfoundland and Labrador:White Hake - NAFO 3NOPs",
+  "NAFO:greenland_halibut.SA0-1-offshore" = "DFO:Arctic:Greenland Halibut - NAFO 0A and 0B"
+)
+for (nafo_id in names(crosswalks)) {
+  stopifnot(lookup(nafo_id)$candidate_unit_id ==
+      lookup(unname(crosswalks[[nafo_id]]))$candidate_unit_id)
+}
+prior_units <- unique(register$candidate_unit_id[register$organization != "NAFO" &
+  !is.na(register$candidate_unit_id) & nzchar(register$candidate_unit_id)])
+nafo_units <- unique(nafo$candidate_unit_id[!is.na(nafo$candidate_unit_id) &
+  nzchar(nafo$candidate_unit_id)])
+stopifnot(length(nafo_units) == 27L,
+  length(intersect(nafo_units, prior_units)) == 8L,
+  length(setdiff(nafo_units, prior_units)) == 19L)
+redfish3ln_unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id == "nafo_redfish_3ln", ]
+stopifnot(nrow(redfish3ln_unit) == 1L,
+  grepl("DFO", redfish3ln_unit$organizations, fixed = TRUE),
+  grepl("NAFO", redfish3ln_unit$organizations, fixed = TRUE))
+cat("NAFO inventory coverage, screening decisions and DFO crosswalks passed.\n")
 
 cat("Current discovery identities, source evidence, unit deduplication and summary accounting passed.\n")
