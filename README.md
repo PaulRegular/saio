@@ -1,42 +1,96 @@
 # SAIO — Stock Assessment Inputs and Outputs Database
 
-SAIO preserves publicly available inputs, model assumptions and outputs from stock assessments. Current curated coverage is finfish, with an emphasis on age-disaggregated information.
+SAIO brings together publicly available data and results from official fish stock assessments. It is intended for stock assessment biologists and researchers who want to find, understand and reuse assessment inputs and outputs.
 
-Repository: https://github.com/PaulRegular/saio
+The collection currently focuses on finfish and age-disaggregated information: catch and survey data, weights, maturity, mortality assumptions, and estimates of abundance, recruitment, fishing mortality and spawning-stock biomass. Coverage varies among stocks. Records retain their source units, biological definitions and references to the original assessment material.
 
-Clone this repository with Git LFS in any suitable local directory. Downloaded authoritative source files remain local and ignored by Git.
+## How the database is organized
+
+The database consists of five linked CSV tables in the [database folder](database/).
+
+| Table | What it contains |
+|---|---|
+| [stocks.csv](database/stocks.csv) | Stock names, scientific names, assessment authorities, official stock codes and geographic areas. Start here to find a stock. |
+| [assessments.csv](database/assessments.csv) | The assessment years and model runs available for each stock, links to the source documents and files, and the completeness of each record. |
+| [inputs.csv](database/inputs.csv) | Numerical inputs supplied to the official assessment, such as catch-at-age, survey indices, age or length compositions, weights, maturity and supplied natural mortality. |
+| [assumptions.csv](database/assumptions.csv) | Biological and statistical assumptions, including mortality treatments, recruitment, selectivity, observation errors and parameter sharing. |
+| [outputs.csv](database/outputs.csv) | Official assessment estimates and reported indicators, with available uncertainty. Examples include numbers-at-age, fishing mortality, recruitment and spawning-stock biomass. |
+
+Each stock has a `stock_id`. A stock can have several assessments, each with its own `assessment_id`. Use that assessment identifier to select the corresponding inputs, assumptions and outputs. Keep different assessment runs separate, even when they describe the same stock.
+
+Inputs and outputs are stored in **long format**: each row describes one value for a particular quantity and, where applicable, year, age, fleet, survey, sex, region and season. For example, an abundance-at-age series has separate rows for each year and age. The `type` and `measure` columns identify the quantity, `value` gives its numerical value, and `unit` gives its scale.
+
+## Finding an assessment
+
+Find the stock in `stocks.csv`, then look up its `stock_id` in `assessments.csv`. Check the area as well as the species name: separate assessment units may share a common name.
+
+The assessment table distinguishes:
+
+- **`assessment_year`**: the assessment/advice year, which can differ from the publication year of the detailed report.
+- **`terminal_year`**: the last year of data used by that assessment.
+- **`is_current`**: the selected assessment with publicly accessible detailed information for that stock record. It may predate newer summary-only advice. Check the notes for stock-boundary changes or historical records.
+- **`is_applied`**: whether the assessment was used for advice in its assessment cycle.
+
+The `inputs_status`, `assumptions_status` and `outputs_status` columns describe how much of the official assessment has been captured. A `partial` record contains useful information but has documented gaps; `complete` refers to extraction coverage, rather than independent scientific verification. Some stocks have catalogue information only and no assessment data yet.
+
+Assessment records link to the original reports and, where available, data files and assessment objects. The [source reviews](source_reviews/) explain what was recovered, how values were interpreted or reconstructed, and what remains unavailable. Additional stocks being investigated are listed separately under [discovery](discovery/).
+
+## Getting the data
+
+For individual tables, open a CSV from the [database folder](database/) and use GitHub's **Download raw file** control. Save the files you need locally. The smaller stock and assessment tables can be inspected in a spreadsheet; R is more practical for the large input and output tables.
+
+For a complete local copy, use Git with [Git LFS](https://git-lfs.com/) installed. Git LFS retrieves the large CSV files:
+
+```sh
+git lfs install
+git clone https://github.com/PaulRegular/saio.git
+```
+
+The CSV files remain ordinary text tables on your computer. Downloaded assessment PDFs and other cached source documents are not included; use the source links in the assessment records to obtain the originals.
+
+## Accessing a stock in R
+
+From a local copy of SAIO, set R's working directory to the `saio` folder. You can search the two small catalogue tables before loading the larger data tables:
+
+```r
+stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE)
+assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE)
+
+subset(stocks, grepl("cod", common_name, ignore.case = TRUE),
+  select = c(stock_id, common_name, area, authority))
+
+subset(assessments, stock_id == "dfo_cod_2j3kl",
+  select = c(assessment_id, assessment_year, terminal_year,
+    is_current, inputs_status, outputs_status))
+```
+
+For example, the detailed 2025 Northern cod assessment has the identifier `dfo_cod_2j3kl_2025`. The supplied R helpers read the five tables and select the records for that assessment:
+
+```r
+source("R/read_database.R")
+database <- read_database()
+cod <- read_assessment("dfo_cod_2j3kl_2025", database)
+
+unique(cod$inputs[c("type", "measure", "unit")])
+unique(cod$outputs[c("type", "measure", "unit")])
+
+ssb <- subset(cod$outputs, measure == "SSB")
+head(ssb[c("year", "value", "lwr", "upr", "unit", "notes")])
+```
+
+The helpers load the full database before selecting an assessment, so allow time and memory for the large tables. The selected records are available as `cod$stocks`, `cod$assessment`, `cod$inputs`, `cod$assumptions` and `cod$outputs`. You can also read any CSV directly with your preferred software.
+
+## Interpreting the records
+
+- **Check units and observation types.** Fish counts, thousands of fish, biomass indices and composition samples have different meanings. An age composition is not an abundance index. Stock weights and catch weights serve different biological purposes.
+- **Keep the source dimensions.** Fleets, surveys, sexes, regions and seasons may represent separate observations or populations. A terminal age can represent a plus group; check `age_group` and the notes. `sampling_time` records the within-year fraction where known, with approximations identified in the notes.
+- **Treat missing values as missing.** A blank value is not zero. Blank years or ages can also indicate a time-invariant or aggregate quantity. The `year_basis` field identifies calendar-year, model-year or cohort indexing for inputs.
+- **Check output definitions and uncertainty.** Recruitment age, spawning time, sex convention and the age range used for mean F can differ among assessments. `se` is a standard error; its scale is documented in the notes. `lwr` and `upr` retain available interval limits, with their level and construction described where known. Missing uncertainty has not been filled in.
+
+Use `source_reference`, `source_type`, `transformation` and `notes` to trace a record to its source and understand any reconstruction. Detailed column definitions are in [DATABASE_STRUCTURE.md](DATABASE_STRUCTURE.md); source-selection and recovery rules are in [PROTOCOL.md](PROTOCOL.md).
 
 ## Scope and verification
 
-The database was constructed with substantial agentic-AI assistance. Not all records have been exhaustively human-verified. Check values, definitions and provenance against authoritative assessment sources before research use. Extraction completeness is separate from scientific verification.
+SAIO is a growing collection, not an exhaustive inventory of all assessments. The database was compiled with substantial AI assistance, and not all records have been independently checked by a person. Verify the values and definitions relevant to your work against the authoritative sources before research use. Automated checks and extraction-completeness labels do not establish scientific equivalence among assessments.
 
-## Contents
-
-- database/: five canonical source tables; see [DATABASE_STRUCTURE.md](DATABASE_STRUCTURE.md).
-- [PROTOCOL.md](PROTOCOL.md): stock selection, source recovery and validation.
-- discovery/: inventories, stock-unit crosswalks and screening decisions.
-- scripts/database/: reproducible importers and the canonical validator.
-- source_reviews/: official source interpretation and unresolved gaps; see [review guidance](source_reviews/README.md).
-- tests/: standalone source and reader checks.
-- provenance/: tracked retrieval manifests.
-- source_cache/: ignored local PDFs, native files and official assessment objects.
-
-From the repository root, run:
-
-```r
-source("scripts/database/002_validate_database.R")
-source("R/read_database.R")
-database <- read_database()
-```
-
-The validator requires cli and checks source-table structure and consistency. Individual importers document their source-specific dependencies and expected cached files. Importers with preview controls use `--dry-run`, `SAIO_DATABASE_DRY_RUN` or `SAIO_IMPORT_DRY_RUN`; check the script for its supported control and required value (`true` or `1`). Previews parse and validate sources without updating the database or discovery register.
-
-The inventory test checks the current register and derived summaries without rerunning screening decisions. Stock-specific source tests remain in their own files. After authorized register changes, regenerate `discovery/inventory_progress.csv` and `discovery/inventory_units.csv` with `195_summarize_discovery.R` and `196_summarize_inventory_units.R` before validating the inventory.
-
-## Versioned source records
-
-Git commits identify source revisions and Git LFS stores the canonical CSV contents. Record the revision used in any secondary analysis. Retrieval URLs, dates, checksums and pinned native revisions belong in source provenance. Cached authoritative files retain their original content and provenance.
-
-## Attribution and reuse
-
-Retain source attribution and any source-specific reuse terms. No blanket licence is assigned to third-party assessment material. Repository code retains its original attribution and GPL (>= 3) licence, preserved in [CODE_LICENSE.md](CODE_LICENSE.md).
+Record the database revision used in your analysis and retain a copy of those tables so later updates do not change your results. Cite the original assessment sources as well as SAIO, and retain their attribution and any source-specific reuse terms. No blanket licence is assigned to third-party assessment material. Repository code retains its attribution and GPL (>= 3) licence in [CODE_LICENSE.md](CODE_LICENSE.md).
