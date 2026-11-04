@@ -10,7 +10,7 @@ Cached sources, retrieval dates and checksums are in `provenance/nafo_american_p
 
 ## 2026 interim-monitoring data
 
-The current monitoring record preserves the rounded 2017–2025 catch totals as published in thousands of tonnes. It does not expand these totals into catch-at-age.
+The current monitoring record preserves the report's rounded 2017–2023 catch totals in thousands of tonnes. For 2024 and 2025, the report also gives STACFIS catches of 376 t and 574 t in the text, while the table rounds them to 0.4 and 0.6 thousand tonnes. The database uses the more precise text values, converted to 0.376 and 0.574 thousand tonnes, and records that conversion. These totals are not expanded into catch-at-age.
 
 The 2026 Spanish spring-survey report for Division 3NO provides total biomass and abundance indices for 2021–2025 with their reported standard deviations. These are aggregate survey indicators, not age-specific XSA observations. The 2026 Spanish Division 3L report provides total biomass estimates for 2018, 2019 and 2023–2025. Only the total point estimates are imported because its Table 20 overprints a second table and does not support reliable separation of the reported SD row. No SD is inferred. The Canadian survey report was reviewed, but no new numeric age-specific index series was recoverable for this import. No surveys were conducted in the 3L Spanish series during 2020–2022.
 

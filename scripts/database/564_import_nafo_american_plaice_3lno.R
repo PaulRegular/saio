@@ -133,13 +133,23 @@ for (year in catch_years) for (age in 5:15) {
 
 # Current 2026 interim monitoring sources
 monitor_inputs <- list()
-monitor_catch <- c(1.2, 1.0, 1.2, 1.2, 1.6, 0.8, 0.6, 0.4, 0.6)
-for (year in 2017:2025) monitor_inputs[[length(monitor_inputs) + 1L]] <- add_input(
-  monitoring_id, "catch", "total_biomass", "biomass", monitor_catch[[year - 2016L]],
-  "1000 tonnes", year, fleet = "NAFO Divisions 3LNO fisheries",
-  source_reference = "NAFO SCS Doc. 26/12, American plaice monitoring section, pp. 161–164",
-  notes = "Rounded total catch as reported in thousands of tonnes; this is a monitoring series, not catch-at-age for a 2026 full assessment."
-)
+monitor_catch <- c(1.2, 1.0, 1.2, 1.2, 1.6, 0.8, 0.6, 0.376, 0.574)
+for (year in 2017:2025) {
+  precise_text_catch <- year %in% 2024:2025
+  catch_note <- if (precise_text_catch) {
+    paste0("STACFIS reports ", c(`2024` = 376, `2025` = 574)[[as.character(year)]],
+      " tonnes in the text; converted to 1000 tonnes. This is a monitoring series, not catch-at-age for a 2026 full assessment.")
+  } else {
+    "Rounded total catch as reported in thousands of tonnes; this is a monitoring series, not catch-at-age for a 2026 full assessment."
+  }
+  monitor_inputs[[length(monitor_inputs) + 1L]] <- add_input(
+    monitoring_id, "catch", "total_biomass", "biomass", monitor_catch[[year - 2016L]],
+    "1000 tonnes", year, fleet = "NAFO Divisions 3LNO fisheries",
+    source_reference = "NAFO SCS Doc. 26/12, American plaice monitoring section, pp. 160–161",
+    transformation = if (precise_text_catch) "Converted the text value in tonnes to 1000 tonnes by dividing by 1000; the report table rounds these catches to 0.1 thousand tonnes." else "None; retained the report table value in 1000 tonnes.",
+    notes = catch_note
+  )
+}
 
 survey_3no <- "EU-Spain spring bottom-trawl survey, NAFO Divisions 3NO"
 biomass_3no <- c(27475, 8228, 35187, 41277, 35664)
