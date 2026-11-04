@@ -35,6 +35,8 @@ The `inputs_status`, `assumptions_status` and `outputs_status` columns describe 
 
 Assessment records link to the original reports and, where available, data files and assessment objects. The [source reviews](source_reviews/) explain what was recovered, how values were interpreted or reconstructed, and what remains unavailable. Additional stocks being investigated are listed separately under [discovery](discovery/).
 
+For the Greenland halibut unit in NAFO Subarea 2 and Divisions 3KLMNO, see the [stock source review](source_reviews/dfo_greenland_halibut_2_3klmno.md).
+
 ## Getting the data
 
 For individual tables, open a CSV from the [database folder](database/) and use GitHub's **Download raw file** control. Save the files you need locally. The smaller stock and assessment tables can be inspected in a spreadsheet; R is more practical for the large input and output tables.
