@@ -84,7 +84,7 @@ values agree with the report table within its rounding. The earlier values are
 now in the 2025 record; report values, projections and their uncertainty are
 unchanged. F is rounded to three decimal places to remove binary storage noise;
 no uncertainty is inferred. The 2025 age-specific inputs and fitted age
-surfaces remain unavailable, so the existing 2022 translation is unaffected.
+surfaces remain unavailable, and remain distinct from the 2022 detailed record.
 
 The [NOAA Stock SMART snapshot](https://github.com/NOAA-EDAB/stocksmart/tree/664c4237e26520b260a090e1821a2cee5d1cdf07)
 is cached locally under `source_cache/ck_nefsc_americanus_5z/` with revision

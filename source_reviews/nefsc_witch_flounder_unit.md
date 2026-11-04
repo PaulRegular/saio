@@ -45,13 +45,9 @@ catch estimates differ, for example 2023 commercial discards are 85 versus
 89 tonnes. The 2026 data update was presented to the council's SSC; its
 status is not treated as an independently fitted assessment.
 
-## Translation decision
+## Official output definitions
 
-The official empirical method does not provide fitted N-at-age, F-at-age,
-SSB or recruitment. Neither its aggregate biomass indicator nor a rejected
-or informational age-based model can serve as an official age-structured
-comparison. A and dashboard are not supported by the
-recovered production assessment.
+The official empirical method does not provide fitted N-at-age, F-at-age, SSB or recruitment. Its aggregate biomass indicator is not a population SSB estimate. Rejected or informational age-based models are not official production outputs.
 
 The assessment, 2026 data update, 2016 benchmark draft and extraction text are
 cached with provenance and checksums under `source_cache/ck_nefsc_garmiii_cynoglossus_5y/`.

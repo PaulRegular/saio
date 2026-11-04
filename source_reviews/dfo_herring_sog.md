@@ -29,8 +29,7 @@ Retain each fishery's catch in thousand tonnes, raw biological age-sample
 counts and original empirical kg/fish weights. A sample count is not an
 abundance observation. Missing native −1 samples are omitted, while genuine
 zero counts remain zero. The source pools rare age bins and uses correlated
-composition errors. Its three catch fleets occur at different times, which a
-single annual Baranov catch is only an approximation to.
+composition errors. Its three catch fleets occur at different times.
 
 The original combined surface/dive index measures **total spawning biomass**
 in thousand tonnes. All native survey age samples are missing (−1), and both
@@ -65,14 +64,6 @@ Component MPD N is retained under separate OM-specific measures. The native
 posterior files omit N draws; component modes are not averaged and called
 posterior ensemble N. Exploitation fractions are not instantaneous F-at-age.
 
-## Translation blocker
+## Source coverage and gaps
 
-It cannot fit the observed
-aggregate spawning-biomass survey without a different observation equation. Allocating it across ages using fitted source N would change observations
-using estimated parameters. Borrowing fishery compositions would impose
-unverified survey selectivity and would not recover missing survey data. Neither is done. A catch-only fit would omit the official model's abundance
-information, so it is not presented as the requested translation.
-
-This is one curated source case, **not a completed runnable translation or
-actual fitting attempt**. No starting values or model adjustments were tried. The source and observation-model limitations are explicit shortfalls against
-the twelve-translation target.
+The recovered abundance observation is aggregate spawning biomass. No survey age composition or age-specific abundance series was recovered. Allocating the index using estimated population N would replace observations with model estimates; fishery compositions do not establish the missing survey selectivity.

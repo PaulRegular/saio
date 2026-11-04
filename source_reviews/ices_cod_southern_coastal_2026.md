@@ -47,7 +47,7 @@ model and prior configuration remain unavailable. The cached 2024 benchmark
 describes the original priors but its three-index specification must not be
 substituted for the 2026 run.
 
-## Outputs and translation
+## Official outputs and source coverage
 
 AFWG Table 2.3.7 supplies B/Bmsy and F/Fmsy for 1977–2025 with 95% limits;
 these relative quantities must not be interpreted as absolute SSB or

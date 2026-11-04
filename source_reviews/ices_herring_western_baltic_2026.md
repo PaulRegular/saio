@@ -56,8 +56,4 @@ For 2025, the official assessment reports:
 
 ## Remaining limitations
 
-Remaining differences include the official hockey-stick recruitment relationship, cross-age survey observation correlations, the full age-specific F-state structure, and the use of source age-5 biology for the translated 5+ population group.
-
 The source report does not provide complete age-specific uncertainty for the population and mortality surfaces.
-
-Inspect the current diagnostics and comparison definitions before interpreting this translation.

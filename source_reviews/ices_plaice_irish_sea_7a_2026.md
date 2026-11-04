@@ -26,7 +26,7 @@ Official fitted N-at-age and F-at-age are stored for 1981–2025. Total abundanc
 
 The native fit now supplies nine q estimates: seven age-specific UK BTS values and one aggregate SSB-index q for each NIGFS quarter. The q estimates are exponentiated `logFpar` parameters; their standard errors are delta-method values and their intervals are 95% Wald intervals on the log scale. UK BTS's physical index scale is not stated, so its q unit remains a native index scale per thousand fish. The aggregate q units are the native survey-index units per tonne SSB.
 
-The fit also supplies 659 fitted catch and survey predictions aligned to `fit$data$aux`. This includes seven UK BTS rows and one Q4 row with missing observations; their predictions are model outputs, not additional observations. Catch predictions are in thousand fish, UK BTS predictions remain on its unspecified native scale, and NIGFS predictions are in kg per 3 miles. The source record is complete for the fitted data, fixed biological inputs, and recoverable population, mortality, q, and observation-prediction outputs; the translation audit separately identifies the omitted aggregate-index likelihood and other model simplifications.
+The fit also supplies 659 fitted catch and survey predictions aligned to `fit$data$aux`. This includes seven UK BTS rows and one Q4 row with missing observations; their predictions are model outputs, not additional observations. Catch predictions are in thousand fish, UK BTS predictions remain on its unspecified native scale, and NIGFS predictions are in kg per 3 miles. The source record is complete for the fitted data, fixed biological inputs, and recoverable population, mortality, q, and observation-prediction outputs.
 
 ## Discovery inventory screening
 

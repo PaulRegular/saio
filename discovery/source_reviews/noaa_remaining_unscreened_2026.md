@@ -27,7 +27,7 @@ the discovery register.
 The rockfish cases retain native Stock Synthesis composition inputs for later
 extraction. The five eligible rows are eligible
 for source curation, not a claim that they are already numerically imported or
-translation-ready. Common thresher remains unresolved pending verification of
+complete source records. Common thresher remains unresolved pending verification of
 run-matched source files. Scalloped hammerhead also remains unresolved because
 SEDAR 77 is not the accepted OFL basis.
 

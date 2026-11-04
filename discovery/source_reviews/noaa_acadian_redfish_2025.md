@@ -91,6 +91,4 @@ reported in the machine-readable tables.
 - A fitted model object was not recovered. The pinned model code, native inputs,
   fitted age tables, and parameter table are available.
 - Full uncertainty for annual N, F, total abundance, recruitment, and SSB is not
-  available in the extracted tables. Any future translation
-  should compare the source scale, age grid, survey timing, and the spawning
-  biomass definition explicitly.
+  available in the extracted tables. Source scale, age grid, survey timing and spawning-biomass definitions remain distinct properties of the reported quantities.

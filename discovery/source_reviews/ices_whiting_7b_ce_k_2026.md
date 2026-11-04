@@ -25,7 +25,7 @@ The Stock Annex identifies SAM, an annual age-0 to 7+ model, a Q4 VAST survey in
 
 The production chapter's fixed M values are 1.22, 0.86, 0.65, 0.50, 0.43, 0.40, 0.38 and 0.36 per year. They match the earlier WKCELT2014 reference Lorenzen values in Stock Annex Table B.2.2; that table also lists different later mean-weight estimates. The production chapter's maturity vector is 0, 0.61, 0.94, 0.97, 0.97, 1, 1 and 1. Annex Table B.2.1 instead lists a pooled vector with 0.95 at age 5 and a WGCSE knife-edge vector. Because the chapter reports values for this production assessment, those values are preserved; the source difference remains explicit rather than silently reconciled.
 
-The Annex lists `Lf.dat` landings fractions at age, but the run-matched numerical series was not recovered. It also notes modeled early discard numbers. The imported inputs, assumptions and outputs are therefore marked **partial**. A downstream translation can use the verified series only with explicit approximations; source completeness does not imply translation readiness.
+The Annex lists `Lf.dat` landings fractions at age, but the run-matched numerical series was not recovered. It also notes modeled early discard numbers. The imported inputs, assumptions and outputs are therefore marked **partial**. The recovered series do not supply those missing run-matched inputs.
 
 ## Validation
 

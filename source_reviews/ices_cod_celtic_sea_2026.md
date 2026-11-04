@@ -56,14 +56,6 @@ approximations from the conditional log-state uncertainty in the SAM fit
 object. SSB, total biomass, recruitment and Fbar retain the source 95%
 confidence limits.
 
-It uses
-source fixed M, source stock weights and maturity, a zero spawning time, three
-catch SD groups, age-specific q for VAST, one VAST SD group, an IID N process,
-random-walk recruitment and a correlated-random-walk F process. The aggregate
-commercial LPUE likelihood and VAST's age-correlated observation errors are
-not represented. The source's exact age-state sharing, F covariance and N
-initial-state treatment are also simplified.
-
 ## Discovery inventory screening
 
 The ICES 2026 inventory entry cod.27.7e-k matches this existing canonical stock and is screened eligible. The run-matched source review and canonical validation test document the required age-based inputs, assumptions, survey timing and fitted outputs. This is an existing-stock match, not an additional stock unit.

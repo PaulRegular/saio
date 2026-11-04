@@ -36,9 +36,9 @@ The 2025 MFRI report is cached as continuity context, not used as a source for 2
 
 The 2021 MUPPET HCR framework uses age 14 as a terminal age without a plus group; the exact 2026 age-14 treatment was not separately recovered. The 2026 MFRI table page reports rounded values. A separate `total_numbers_all_ages` series sums ages 1–14. Neither derived series has uncertainty.
 
-## Assumptions and translation limits
+## Official assumptions and source gaps
 
-The 2026 report describes MUPPET as a separable statistical catch-at-age model, with gradual temporal changes in F and correlated residuals for survey indices. M is fixed at 0.2 per year. The report identifies catch-at-age aggregated across 20 métiers and the October survey ages 3–13. The 2021 MUPPET configuration provides March and October sampling-time values of 0.2 and 0.8 and four selectivity periods. These historical settings are retained as translation assumptions with explicit notes; the exact 2026 production settings could not be verified.
+The 2026 report describes MUPPET as a separable statistical catch-at-age model, with gradual temporal changes in F and correlated residuals for survey indices. M is fixed at 0.2 per year. The report identifies catch-at-age aggregated across 20 métiers and the October survey ages 3–13. The 2021 MUPPET configuration provides March and October sampling-time values of 0.2 and 0.8 and four selectivity periods. These historical settings are retained with explicit run-vintage notes; the exact 2026 production settings could not be verified.
 
 The 2026 report text says pre-1985 stock weights and maturity were held constant at 1985 values, while its published machine-readable tables show varying pre-1985 values. The table series are preserved unchanged; the conflict remains unresolved. The report narrative gives 2026 SSB as 371,000 tonnes, whereas the machine-readable summary table reports 377,277 tonnes. The database keeps the table value and records the discrepancy. The table's high/low bounds are preserved without labeling their probability level.
 

@@ -36,7 +36,7 @@ The 2018 assessment PDF and extracted text are cached under
 `source_cache/nefsc_atlantic_mackerel_2018/`; the 2025 materials are under
 `source_cache/nefsc_atlantic_mackerel_2025/`.
 
-## Database records and translation choices
+## Database records and source definitions
 
 - Table A28 supplies combined U.S.-Canadian catch at ages 1-10+, in thousand
   fish. Table A33 supplies the combined catch/SSB weight-at-age used for the
@@ -46,12 +46,10 @@ The 2018 assessment PDF and extracted text are cached under
   in 1968-1978, and filled age-years with zero catch using the 1992-2016 mean.
 - Table A4 supplies annual Canadian maturity-at-age ogives for the northern
   spawning contingent. This surface is applied to the combined-stock numbers
-  in the, as in the recovered assessment inputs.
+  in the recovered assessment inputs.
 - Tables A38-A39 supply the spring trawl numbers-at-age. The full published
   ages 1-10 are retained in the database; the final ASAP model uses ages 3-10
-  for Albatross and ages 3-7 for Bigelow. The translation applies a constant
-  timing of 95.7/365, based on the report's time-series mean survey day. This is
-  a timing approximation, not annual survey dates.
+  for Albatross and ages 3-7 for Bigelow. The recorded timing of 95.7/365 is based on the report's time-series mean survey day. It is an approximation, not annual survey dates.
 - Table A40's 17 reported range-wide egg/ichthyoplankton SSB observations are
   stored as aggregate biomass-index data. M=0.2 per year is fixed in the assessment, not estimated; the database stores
   that explicit assumption and its implied age-year surface separately from

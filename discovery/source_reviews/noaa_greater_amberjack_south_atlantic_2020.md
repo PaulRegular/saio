@@ -66,7 +66,7 @@ catch totals, commercial age compositions, plotted recreational age
 compositions, abundance indices, age-specific biology and mortality, and
 comparable age-specific and aggregate assessment outputs. The exact recreational
 composition vectors, age-specific discards, and a single within-year index
-timing remain unresolved source or translation details and should not be
+timing remain unresolved source details and should not be
 fabricated. No canonical stock, assessment, input, output
 records were added during this screen.
 

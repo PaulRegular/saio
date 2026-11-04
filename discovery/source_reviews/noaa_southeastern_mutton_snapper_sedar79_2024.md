@@ -49,7 +49,7 @@ SEDAR 79-DW-22 documents age, growth, and mortality methods.
 The assessment is annual, spawning peaks in June, and juvenile settlement is
 assigned to January. A shared within-year fraction for all abundance indices
 is not established by the reviewed sources; individual index timing should be
-checked before translation.
+verified from the source files.
 
 ## Reported outputs and limitations
 

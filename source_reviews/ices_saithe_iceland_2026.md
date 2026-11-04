@@ -9,7 +9,7 @@ The latest detailed production assessment is MFRI's 2026 assessment of saithe in
 - **Catch:** Table 5 reports commercial catch numbers-at-age for 1980–2025, ages 3–14+, in thousand fish. Age 14 is the plus group.
 - **Stock weight:** Table 8 reports 1980–2026 values in grams per fish. The values are stored in the reported unit.
 - **Maturity:** Table 9 reports proportions-at-age for 1980–2026.
-- **Survey:** Table 10 reports the spring SMB abundance index by age for 1985–2026, ages 3–14+. The physical scale multiplier is not stated, so the values remain on the published index scale. The 28 blank age-year cells are retained as missing observations. The source identifies a March survey but not the exact SAM sampling fraction; the uses 0.20 as a month-midpoint approximation.
+- **Survey:** Table 10 reports the spring SMB abundance index by age for 1985–2026, ages 3–14+. The physical scale multiplier is not stated, so the values remain on the published index scale. The 28 blank age-year cells are retained as missing observations. The source identifies a March survey but not the exact SAM sampling fraction; the database records 0.20 as a month-midpoint approximation.
 - **Natural mortality:** M is fixed at 0.2 per year for all modeled ages.
 - **Catch weights:** Table 6 is supplementary; the report does not identify it as an input to this assessment, so it is not treated as a fitted input.
 

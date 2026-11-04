@@ -131,12 +131,6 @@ The North Sea cod catalogue entry now represents the official three-substock Nor
 
 The canonical database preserves the official substock inputs, fitted outputs, survey age structures, observation uncertainties, and biological-process information without substituting inputs from earlier assessment models.
 
-The revised fits one combined population over 1983–2022, with IID older-cohort survival deviations, correlated F random walks, fixed supplied M, and monotone non-decreasing survey catchability.
-
-The `mono(q_key)` constraint is particularly important: it prevents the reduced observation model from estimating declining catchability at older ages, while allowing flexible increases and plateaus.
-
-The comparison evaluates whether this simpler configuration can approximate broad official stock dynamics. It does not reproduce the official three-substock likelihood, selectivity model, or full uncertainty.
-
 Cached sources remain gitignored. The source-specific importer requires Python with pdfplumber and base R:
 
 ```sh

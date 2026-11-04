@@ -177,29 +177,14 @@ Canonical records currently follow the published fitted coverage and retain 1972
 
 The native fitted object or FLSAM partial-index likelihood should be inspected before changing the canonical series or declaring input completeness.
 
-## Remaining translation limitations
+## Remaining source gaps
 
-The revised translation is closer to the official FLSAM process structure, but it is not an exact reproduction.
-
-The main remaining differences are:
-
-- **Observation coverage:** Four regional larval indices and their partial spawning-component likelihoods are omitted.
-- **Fishing mortality:** Correlated random-walk increments are represented, but the official age-specific variance sharing and common F state at ages 7–8 are not.
-- **Observation errors:** The official IBTS-Q3 cross-age correlation is omitted.
-- **Survey timing:** Sampling fractions for the four age-structured indices are approximations, not independently recovered native values.
-- **SSB definition:** Official spawning-time fractions remain unavailable.
-- **Native assessment recovery:** Complete current-run FLSAM inputs and fitted objects have not been recovered for a direct likelihood-level comparison.
-
-These are documented limitations of the simplified translation, not errors in the official assessment.
+Sampling fractions for the four age-structured indices are seasonal approximations, not independently recovered native values. Official spawning-time fractions and complete current-run FLSAM inputs and fitted objects remain unavailable.
 
 ## Record summary
 
 The canonical record represents the official 2026 North Sea autumn-spawning herring single-fleet FLSAM assessment.
 
-The source tables and documented model configuration support the historical 1947–2025 translation and comparisons, while official numerical outputs also extend into 2026.
-
-These settings more closely approximate the official assessment's core population dynamics than the previous translation.
-
-The case tests whether a comparatively simple age-structured state-space model can recover broad official stock dynamics without reproducing the complete FLSAM observation likelihood, state-sharing configuration or biological uncertainty.
+The source input tables cover the historical period 1947–2025, while official numerical outputs extend into 2026.
 
 The source-review and completeness statuses remain partial pending recovery or verification of the unresolved native-model details.

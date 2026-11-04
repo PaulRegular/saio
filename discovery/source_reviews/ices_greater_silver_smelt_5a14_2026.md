@@ -29,8 +29,7 @@ survey timing would be an approximation.
 
 The WKBDEEP 2025 benchmark selected fixed natural mortality `M = 0.1`. The
 benchmark discusses `M = 0.15` as an alternative within the profile-likelihood
-range, so the fixed value and its sensitivity should remain explicit in any
-translation.
+range, the selected value and sensitivity remain distinct source settings.
 
 ## Official outputs
 

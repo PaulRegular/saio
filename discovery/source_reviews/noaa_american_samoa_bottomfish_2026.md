@@ -87,7 +87,7 @@ assessment-output series was located for this review.
 
 No American Samoa stock, assessment, input, or output rows were added to the
 canonical database. The 2026 update is a source-screening result, not a
-translation-ready age-data case.
+complete age-disaggregated source record.
 
 ## Sources and cache
 

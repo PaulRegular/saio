@@ -135,7 +135,7 @@ DFO vessel/gear change. The 2026 assessment excludes the 2025 NMFS fall survey
 point after reviewing its timing and coverage. Earlier framework inputs must
 not silently stand in for those revised observation arrays.
 
-## Validation and translation status
+## Validation and source coverage
 
 The importer is `scripts/database/147_import_dfo_eastern_georges_bank_cod.R`.
 It verifies cached source hashes and table dimensions, preserves original
@@ -146,12 +146,7 @@ their missing years, selected q, source output definitions, missing
 uncertainty, omitted averages and conflicting values, and the remaining
 unavailable age observations.
 
-There are 1,440 recovered inputs (1,410 for the framework, including 414
-approximate M points), 22 assumptions and ten outputs across the three
-events. All completeness statuses remain
-**partial**. No fit or completed translation is
-claimed. It must
-start from package defaults and retain diagnostics for any permitted retry.
+There are 1,440 recovered inputs (1,410 for the framework, including 414 approximate M points), 22 assumptions and ten outputs across the three events. All completeness statuses remain **partial**.
 
 ## Sources and cache
 

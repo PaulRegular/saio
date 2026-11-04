@@ -7,8 +7,7 @@ The latest full native WHAM fit recovered for this stock is the
 11+. The cached fit contains its native input and model objects. Run29F4 was
 one of three research-track candidates (29F2, 29F4, and 29F5); the available
 evidence does not establish which candidate was selected for the management
-advice run. The database therefore labels the represented run as a candidate,
-and the translation dashboard compares against this run only.
+advice run. The database therefore labels the represented run as a candidate.
 
 The 2024 Management Track update is later and supplies aggregate commercial
 landings, discards, total catch, SSB, recruitment, and Fbar values through
@@ -55,9 +54,7 @@ The survey season labels and native timing values disagree for the middle two
 series. The recorded values are 0.25, 0.75, 0.25, and 0.75 for spring
 Albatross, spring Bigelow, fall Albatross, and fall Bigelow, respectively.
 The age-composition tables support the series order, but no source evidence
-resolved whether the Bigelow timing values or labels are wrong. The source
-values remain unchanged and the uses those recorded
-fractions.
+resolved whether the Bigelow timing values or labels are wrong. The source values remain unchanged; the label/timing discrepancy remains unresolved.
 
 ## Outputs and uncertainty
 
@@ -110,7 +107,5 @@ catch for 2015–2025. The total overlaps the components and is not an extra
 fleet. The total catch in 2025 (1,564 t) and reference point estimates match
 the peer review. The 90% reference-point intervals in Table 3 are retained.
 The 2026 record remains partial: native catch-at-age, survey arrays and fitted
-age-specific surfaces were not recovered. It cannot replace the historical
-Run29F4 as a model-ready input, and its comparison dashboard remains a
-candidate-run comparison. The 2026 assessment ID retains the word
+age-specific surfaces were not recovered. It does not supply the historical Run29F4 input arrays or establish that Run29F4 was the selected advice run. The 2026 assessment ID retains the word
 `provisional` for identifier stability, not as its present review status.

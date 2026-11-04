@@ -17,7 +17,7 @@ commercial discards, recreational landings, and recreational discards. It
 retains a large set of fishery-independent indices. The database currently
 contains only the NEFSC Bigelow spring and fall age indices.
 
-## Data and translation decisions
+## Data definitions and processing
 
 - Catch-at-age values are transcribed from Tables A3, A6, A10, A23, A28, and
   A32. Fleet tables report ages 0-10; ages 7-10 are summed to the official
@@ -35,9 +35,7 @@ contains only the NEFSC Bigelow spring and fall age indices.
   are stored as source inputs, not as estimated M outputs.
 - Table A90 reports mean November SSB weights at age for 2013-2017. Those
   published values are stored as the source schedule. No 2017 row is reported because 2017 fall maturity data were
-  unavailable. A fit that extends through 2017 must state how it handles that
-  final year; the conservative comparison period using the available maturity
-  data is 1982-2016.
+  unavailable. The recovered annual maturity series ends in 2016; no 2017 maturity row is inferred.
 - Tables A87-A89 provide annual SSB, recruitment, F-at-age, and January 1
   abundance-at-age through 2017. Recruitment is at true age 0. The report
   provides terminal-year 90% MCMC intervals for aggregate F and SSB, but no
@@ -61,8 +59,7 @@ also supplies commercial and recreational landings and discards for those
 11 years. These components overlap the total catch and must not be fitted
 as an additional fleet. F values were rounded to three decimal places to
 remove binary storage noise. Uncertainty was not inferred from plotted bands.
-The latest run's age-specific inputs and outputs remain unavailable; the 2018
-age-based record and its unconverged translation remain separate.
+The latest run's age-specific inputs and outputs remain unavailable; the 2018 age-based record remains separate.
 
 The report, peer review and pinned Stock SMART snapshot are cached locally
 under `source_cache/nefsc_summer_flounder_2025/`. The importer verifies SHA-256

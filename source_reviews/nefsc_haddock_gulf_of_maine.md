@@ -36,11 +36,11 @@ The 2024 NOAA bundle remains useful for understanding input streams but is not a
 
 The 2024 summary table reports a different model's catch, SSB, full F, and recruitment through 2023. These values are not substituted for the 2026 fitted outputs, which include model changes and updated data. The 2026 peer-review report notes that additional 2018–2023 commercial age-composition and weight-at-age data were incorporated in the 2026 assessment after being excluded from the 2024 Management Track fit.
 
-## Cache and translation status
+## Cache and source coverage
 
 The 2024 and 2026 NOAA Stock Assessment Information System (SASI) listings, both assessment bundles, and the September 2026 peer-review report are cached under `source_cache/nefsc_haddock_gulf_of_maine_2026/`. The local `manifest.csv` records source URLs, retrieval and verification dates, and SHA-256 checksums. The source bundles contain reports and figures, not native input tables or a fitted WHAM object.
 
-The partial database import preserves the recent aggregate catch series, historical SSB/F/recruitment tables, reference points, and reported projections. Inputs remain partial: there are no numerical catch-at-age or survey series, survey weights, biological age surfaces, or exact model age grid. Outputs remain partial: no full N-at-age or F-at-age surfaces or numerical historical uncertainty estimates were recovered. A faithful `fit_tam()` translation and comparison dashboard therefore cannot yet be produced. Continue searching NOAA SASI and linked model/data systems; do not fill these gaps by digitizing charts or borrowing the 2024/2022 numerical model inputs.
+The partial database import preserves the recent aggregate catch series, historical SSB/F/recruitment tables, reference points, and reported projections. Inputs remain partial: there are no numerical catch-at-age or survey series, survey weights, biological age surfaces, or exact model age grid. Outputs remain partial: no full N-at-age or F-at-age surfaces or numerical historical uncertainty estimates were recovered. Continue searching NOAA SASI and linked model/data systems; do not fill these gaps by digitizing charts or borrowing the 2024/2022 numerical model inputs.
 
 Sources:
 

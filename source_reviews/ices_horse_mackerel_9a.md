@@ -35,4 +35,4 @@ Table 5.4.1.2 reports annual SSB, recruitment, F(1–10), FApical, CVs for SSB/r
 
 The 2026 SAG series supplies recruitment (thousands, age 0), stock size (tonnes), and F (ages 1–10), with low/high values. It extends through 2026; the 2026 row is a forecast. The source table does not label low/high intervals with a confidence level, so the database preserves those bounds without calling them 95% intervals. Aggregate catch is retained, but the 2026 model assumptions, age inputs, native fitted object, and age-specific population outputs remain unavailable.
 
-Both assessment events are marked partial. The database preserves the official source values and their limits; the is a documented approximation, not a likelihood-level replication.
+Both assessment events are marked partial. The database preserves official source values and their reported limits.

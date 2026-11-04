@@ -12,7 +12,7 @@ The cached fitted run matches the reported final model settings and the 2012 Q4 
 
 Quarterly fitted population states span 1984 Q1–2025 Q4. Catch and survey observations extend through 2025 Q3, although individual survey series have different terminal years.
 
-The official fitted summary reports optimizer convergence code 0, objective 1547.746 and the message "relative convergence (4)". These are native SESAM diagnostics, not diagnostics from the.
+The official fitted summary reports optimizer convergence code 0, objective 1547.746 and the message "relative convergence (4)". These are native SESAM diagnostics.
 
 The cached fit also contains 1,092 fitted observation predictions in
 `fit$rep$predObs`, aligned row-for-row with the 1,092 observations in
@@ -56,8 +56,6 @@ The canonical importer uses the observations retained in the selected fitted run
 Commercial catch-at-age is reported quarterly in millions of fish, covering ages 0–3+.
 
 Catch observations extend through 2025 Q3. The fourth quarter of 2025 is unavailable in the selected fitted data.
-
-The therefore ends in 2024, the last year with complete quarterly catch observations available for annual aggregation.
 
 ### Survey observations
 
@@ -179,15 +177,7 @@ Natural mortality is an externally supplied input surface and is not described a
 
 The canonical record preserves the quarterly source outputs.
 
-Annualized comparison definitions are documented separately so that differing reference times and age-0 recruitment conventions are not concealed.
-
 Thirteen native catchability point estimates are also recorded from `fit$pl$logQ`, expanded with `exp()` and mapped through the saved `fit$data$keyLogQ`. The rows preserve separate fleet keys and shared age groups; age 3 is the 3+ group. The saved object does not provide usable q uncertainty: `fit$plsd$logQ` duplicates the point estimates, so standard errors and intervals remain unavailable. The physical survey-index units are not specified.
-
-## Remaining translation limitations
-
-The principal differences between the official SESAM benchmark and the revised are:
-
-These differences are limitations of the simplified model, not errors in the official assessment.
 
 ## Sources
 

@@ -17,13 +17,13 @@ PDF copies, retrieval date, URLs, and SHA-256 checksums are recorded in the giti
 
 ## Inputs and model structure
 
-The 2016 ADAPT VPA used commercial fishery catch-at-age for ages 1–11+ and DFO Summer RV swept-area abundance-at-age indices for ages 1–10 over 1985–2015. The canonical database retains the reported source tables at finer age and year resolution: catch and commercial weights at ages 1–16, RV abundance indices at ages 1–13, and RV weights at ages 0–14, covering the years printed in each table. The source abundance indices are in thousands of fish. The 1.2 vessel/gear conversion for 1970–1981 is already included in the reported indices. The fit recipe selects the assessment years and age ranges and pools source catch ages 11–16 into age 11+.
+The 2016 ADAPT VPA used commercial fishery catch-at-age for ages 1–11+ and DFO Summer RV swept-area abundance-at-age indices for ages 1–10 over 1985–2015. The canonical database retains the reported source tables at finer age and year resolution: catch and commercial weights at ages 1–16, RV abundance indices at ages 1–13, and RV weights at ages 0–14, covering the years printed in each table. The source abundance indices are in thousands of fish. The 1.2 vessel/gear conversion for 1970–1981 is already included in the reported indices.
 
 Natural mortality is fixed at 0.2 per year except for ages 10–11+: 0.3 in 2000–2004, 0.6 in 2005–2009, and 0.9 in 2010–2015. The assessment estimates age-specific survey catchability for ages 1–10. It treats zero survey index cells as missing. The plus-group fishing mortality is defined using a Fratio, including a ratio of 2 for 1985–1994. Annual survey timing fractions are not reported in the recovered production assessment.
 
 The 2016 report's Table 8 prints the 2014 age-1 index as `16,8470`; the matching 2016 framework Table 8 gives `168,470`, which is used. The assessment report prints `12,4322` for the 2015 age-2 index. That value remains unresolved and is omitted from the numeric database rather than guessed. This one missing source cell is within the assessment's age 1–10 index range.
 
-Table 15 of the framework report supplies maturity and spawning weight-at-age for per-recruit calculations. They are not represented as annual input surfaces used by the 2016 VPA. The fit comparison therefore treats SSB as approximate; the official model reports its native age-4+ biomass measure.
+Table 15 of the framework report supplies maturity and spawning weight-at-age for per-recruit calculations. They are not represented as annual input surfaces used by the 2016 VPA. The official model reports native age-4+ biomass.
 
 ## Outputs and remaining gaps
 

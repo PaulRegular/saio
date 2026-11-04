@@ -40,7 +40,7 @@ model year. The advice values are recorded as management outputs, but no
 population-state outputs are claimed. The stock-specific working-group report
 is cached locally alongside the SAG export and advice.
 
-## Translation decision
+## Source coverage
 
 The
 published landings history and catch limit are useful management information,

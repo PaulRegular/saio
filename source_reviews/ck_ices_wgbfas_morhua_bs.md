@@ -14,7 +14,7 @@ All three completeness fields remain partial. Report tables provide valuable num
 
 ## Previous detailed run: WBCod2025
 
-The 2025 WGBFAS assessment and its native SAM files remain separately documented below. It was the latest detailed run before the 2026 update and is retained as historical source data; its observations and outputs are not combined with the 2026 report tables. The existing and dashboard refer to this 2025 run only.
+The 2025 WGBFAS assessment and its native SAM files remain separately documented below. It was the latest detailed run before the 2026 update and is retained as historical source data; its observations and outputs are not combined with the 2026 report tables.
 
 ## Source selection
 
@@ -88,12 +88,6 @@ and maximum absolute fixed-effect gradient below `4e-12`. Its 2024–2025 age-1
 recruitment, SSB, Fbar and TSB reproduce the rounded values in Table 2.3.23.
 The fitted object includes a 2025 age-0 state that is not reported in Table
 2.3.24; that unavailable table cell is not imported as a source estimate.
-
-The uses an IID recruitment process and cohort deviations,
-IID F states, fixed source M, source survey timings and survey-by-age q groups. It cannot reproduce SAM's joint survey residual correlation, native catch
-observation weights, or the exact initial-state and process parameterization. These
-are recorded as approximations; no observations are adjusted to improve
-agreement.
 
 The source PDF, extracted text, raw `.dat` inputs, configuration, selected TAF
 revision and fitted SAM object are cached under the gitignored

@@ -14,7 +14,7 @@ Scenarios Database record advises catches of 136 tonnes in each of 2027–2029.
 The 2023 stock-assessment graph series contains landings and discard history,
 not fitted abundance, recruitment, SSB, or fishing-mortality-at-age surfaces.
 
-## Database and translation decision
+## Database coverage
 
 The historical catalogue label and the current 7.h–k advice unit have not
 been established as identical. The broader current unit is represented
@@ -46,13 +46,9 @@ on the 2019 recruitment figure, so 2019 projection values are omitted. The
 reported 2018 age-2 weight and several observations are zero; they are
 preserved as published, with no replacement values invented.
 
-## Translation status
+## Remaining source gaps
 
-The 2019 assessment is a potential historical comparison, but a defensible
-fit requires resolving the number scale and catch-total inconsistency, the
-10+ group construction, and zero weights/observations. No model or dashboard
-is claimed until those issues are resolved and the relevant translation
-instructions have been followed.
+The number scale, catch-total inconsistency, 10+ group construction and zero weights/observations in the historical 2019 assessment remain unresolved.
 
 The WGCSE 2026 report, advice page, and their checksums are cached under
 `source_cache/ck_ices_wgsce_solea_is7jk_2026/`.

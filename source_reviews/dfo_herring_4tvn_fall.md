@@ -56,11 +56,7 @@ region. This is visually confirmed in the PDF and is inconsistent with the
 distinct mobile-gear data in the 2020–2021 assessment's Table 10. No verified
 2022–2023 correction or source model file has been located.
 
-The canonical database retains the Table 10 values as published and flags the
-duplication in every row. The translation uses the
-complete 2024 fixed-gear catch series only, so catch inputs are a documented
-subset of the official assessment. Mobile-gear weight data are available
-through 2022; the 2023 mobile weight row is unavailable.
+The canonical database retains the Table 10 values as published and flags the duplication in every row. Mobile-gear weight data are available through 2022; the 2023 mobile weight row is unavailable.
 
 ## Model assumptions and outputs
 

@@ -146,16 +146,7 @@ byte-identical, and hashes excluding this event and its stock row confirmed
 that all unrelated canonical records were unchanged. Source checks cover
 identity, all historical values against the advice, catch totals, native
 units/bounds, the extra reported year and exclusion from age-based references.
-Eight focused assessment-analysis scripts passed, including the new source
-check, the preceding Celtic Sea plaice check, reference alignment, plus groups,
-comparison definitions, default-first initialization and unit conversion.
 
-No package source or model mathematics changed, so the full package suite and
-R CMD check were not repeated for this source-only milestone. Their preceding
-Area 4 reporting results were 2,936 passes and Status: OK, with package tests
-run separately. The full assessment-analysis suite was not rerun; previously
-recorded unrelated failures remain unresolved. The user's readiness-table
-edits were preserved, and shared comparison results were not regenerated.
 ## Sources
 
 - [Final 2026 advice](https://doi.org/10.17895/ices.advice.30932315.v1), especially Tables 1, 5, 8 and 9.

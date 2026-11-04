@@ -22,8 +22,6 @@ The assessment covers 1978–2023 and ages 2–11+, with age 11 as the plus grou
 
 The 2023 mobile-gear spring catch-at-age is reconstructed as zero because the annual landings table reports no mobile-gear spring catch that year. This is identified as a reconstruction rather than an independently reported catch-at-age series.
 
-The translation combines the two fishing gears into one total catch-at-age stream.
-
 ### Survey observations and acoustic units
 
 The two survey series are:
@@ -41,13 +39,13 @@ The canonical database therefore retains the published 2024 acoustic index value
 
 A separate biomass-scale check supports this interpretation. The 2023 acoustic age-index values sum to 55,619 thousand fish, while a later official spring biomass estimate of 7,358 t implies an average weight of approximately 0.132 kg per fish. Treating the table as individual fish would imply approximately 132 kg per fish.
 
-The later biomass estimate is used only for validation and is not introduced as an observation in the 2024 model translation.
+The later biomass estimate provides a scale cross-check only; it is not a verified 2024-run biomass input.
 
 ### Acoustic biomass provenance
 
 The Open Government acoustic biomass CSV and its dictionary report spring biomass in tonnes over 1994–2025.
 
-These values are retained separately from the fitted 2024 assessment. In particular, 2024–2025 observations are not inserted into the 2024 translation.
+The later CSV values remain separate from the 2024 assessment record. Its 2024–2025 observations are not inputs to the 2024 run.
 
 The latest CSV is not confirmed to reproduce every historical biomass input used by the official 2024 SCA model.
 
@@ -132,9 +130,7 @@ The acoustic biomass likelihood is lognormal, uses ages 4–8, and carries likel
 
 The 2024 supporting document does not confirm that these age groupings and weights remained unchanged in every respect.
 
-These features are not reproduced by the current, which uses age-specific lognormal survey observations.
-
-## Biological inputs and derived comparison outputs
+## Biological inputs and derived source outputs
 
 ### Weights and maturity
 
@@ -144,21 +140,7 @@ The documented beginning-year stock-weight construction combines fixed- and mobi
 
 The complete fitted stock-weight surface and precise gear-combination rule were not published.
 
-The constructs a fit-only approximation by combining positive gear weights using catch-number-weighted arithmetic means. When both gear catches are zero, it uses the arithmetic mean of available positive gear weights.
-
-Missing weights are interpolated within age.
-
-For an ordinary interior cell, beginning-year weight at age a in year t is calculated as the geometric mean of the combined gear weight at age a−1 in year t−1 and age a in year t.
-
-Age 2 and the first model year use available same-year values because preceding cells are unavailable.
-
-This procedure is an inference, not a fully verified source calculation.
-
-Its median absolute percentage difference from weights implied by the published biomass and abundance surfaces is 0.073%, compared with 2.63% for the earlier equal geometric gear mean.
-
-Source biomass divided by abundance is used to evaluate the weight approximation, not as a fitted model input.
-
-### Population comparison definitions
+### Derived population outputs
 
 The canonical database includes derived total January 1 abundance and biomass, obtained by summing the reported ages 2–11+.
 
@@ -168,7 +150,7 @@ They are identified as derived source outputs, without additional uncertainty es
 
 The source's published biomass-at-age represents January 1 biomass.
 
-The common-definition SSB comparison therefore uses January 1 mature biomass. It is not the official assessment's April 1 SSB, which would require pre-spawning survival calculated from the unavailable fitted M surface.
+January 1 mature biomass is distinct from the official assessment's April 1 SSB. Reconstructing April 1 SSB would require pre-spawning survival from the unavailable fitted M surface.
 
 ## Sources
 

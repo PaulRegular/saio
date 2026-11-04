@@ -17,7 +17,7 @@ The selected JABBA results report aggregate biomass and fishing-mortality status
 
 ## Screening decision
 
-This is a **new, screened, ineligible candidate** for the age-disaggregated assessment set. The latest operational assessment uses aggregate catches, CPUE and length compositions, and its selected outputs are aggregate biomass and fishing-mortality indicators. The available source evidence does not provide the age-specific observations and population surfaces required for this comparison. No canonical numerical records were added was attempted.
+This is a **new, screened, ineligible candidate** for the age-disaggregated assessment set. The latest operational assessment uses aggregate catches, CPUE and length compositions, and its selected outputs are aggregate biomass and fishing-mortality indicators. The available source evidence does not provide the age-specific observations and population surfaces required for this comparison. No canonical numerical records were added.
 
 The two official reports and their retrieval date, document revisions, sizes and SHA-256 checksums are recorded in the ignored local cache at `source_cache/discovery_noaa_iccat_white_marlin_2025/sources.csv`.
 

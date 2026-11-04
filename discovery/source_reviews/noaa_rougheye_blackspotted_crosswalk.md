@@ -10,7 +10,7 @@ North Pacific stock and not two species-level candidates per region.
 | Current unit | Current NOAA row | Related inventory rows | Latest detailed official assessment located | Screening result |
 |---|---|---|---|---|
 | U.S. West Coast | `NOAA:14516` | `NOAA:10539` (2010 legacy label) | 2025 adopted assessment, data through 2024 | Eligible; the age-structured assessment pools both species. |
-| Gulf of Alaska | `NOAA:11443` | `NOAA:10538` (2007 legacy label) | 2023 full age-structured assessment; 2024 SAFE is a harvest projection based on it | Eligible for source curation; verify exact survey timing before translation. |
+| Gulf of Alaska | `NOAA:11443` | `NOAA:10538` (2007 legacy label) | 2023 full age-structured assessment; 2024 SAFE is a harvest projection based on it | Eligible for source curation; exact survey timing remains unverified. |
 | BSAI | `NOAA:11382` | `NOAA:15394` (EBS component); `NOAA:15395` (historical AI row) | 2024 SAFE update, retaining the 2022 full assessment | Eligible only for the Aleutian Islands age-structured component; EBS uses Tier 5 and has no age-specific population output. |
 
 The historical West Coast label is linked to the current U.S. coastwide complex
@@ -61,10 +61,7 @@ cases, while the current GOA and West Coast rows and the AI component of BSAI
 are eligible for source curation. This does not select them for the later
 20-stock batch.
 
-Exact fractional-year timing for the GOA and BSAI surveys remains a follow-up
-before any. The eligibility screen here concerns whether
-the current assessment has recoverable age-disaggregated inputs and comparable
-age-specific outputs; it does not certify translation readiness.
+Exact fractional-year timing for the GOA and BSAI surveys remains unresolved. Eligibility here records evidence for recoverable age-disaggregated inputs and comparable age-specific outputs, not complete numerical source recovery.
 
 ## Sources and local cache
 

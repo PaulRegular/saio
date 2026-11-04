@@ -44,22 +44,11 @@ The official data script uses `stockassessment::read.ices()` and takes the first
 
 This matches the official fit's stored precision weights and is how the fit is represented in the canonical database.
 
-The age-labelled CV values from the original files are retained separately to document the distinction. They do not replace the fitted precision weights in the.
+The age-labelled CV values from the original files are retained separately to document the distinction. They do not replace the fitted precision weights in the canonical record.
 
-## Remaining differences and limitations
+## Survey age groups
 
-**Survival process:** The official model uses random-walk survival deviations with age-specific variance sharing. The translation instead assumes IID cohort-survival deviations with one shared SD.
-
-**Fishing-mortality process:** Both models now permit correlated annual F increments across ages, but their process covariance and variance-sharing configurations need not be identical.
-
-**Natural mortality:** The official model estimates M through a GMRF. The translation uses fixed numerical M, including a constant extension of the 2022 values into 2023–2026.
-
-**Survey plus groups:** Both IBTS surveys report age 6 as a 6+ group, whereas the population model has an 8+ terminal group. The current translation treats these observations at age 6 rather than explicitly predicting the sum of survey-vulnerable abundance over ages 6–8+. This remains an observation-definition approximation that should be resolved or tested separately.
-
-**Initial abundance:** Older initial ages now use latent states without an
-initial density. The estimated fixed r0 anchor still differs from SAM.
-
-These differences are documented limitations of an illustrative, not corrections to the official SAM assessment.
+Both IBTS surveys report a terminal 6+ group, whereas the population model has an 8+ terminal group. The source survey observations retain their grouped-age definition.
 
 ## Comparison limits
 
@@ -71,7 +60,7 @@ The native fitted object also supplies fitted catch and survey observations, age
 
 The 2026 intermediate-year recruitment, Fbar and total-biomass estimates and intervals are available from the native SAM summary tables. They are stored as native-model outputs, separately from the report-published SSB row.
 
-The official numerical inputs remain unchanged in the canonical database. The added fitted outputs come directly from the April model object. The carried-forward M assumption and process-model choices belong exclusively to the.
+The official numerical inputs remain unchanged in the canonical database. The added fitted outputs come directly from the April model object.
 
 ## Initial abundance
 

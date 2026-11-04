@@ -2,12 +2,7 @@
 
 ## Production source
 
-**Current comparison status: blocked (2026-10-17).** A complete matching
-historical population comparison has not been recovered. A subsequent search
-found regional biomass draws for 3CD and 5DE, but not the matching 5ABC series
-(see the follow-up below).
-The source record stays in the database; it is excluded from comparison
-tables and figures. Earlier fitting results below are historical experiments.
+**Source coverage (2026-10-17): partial.** A complete matching historical population series has not been recovered. A subsequent search found regional biomass draws for 3CD and 5DE, but not the matching 5ABC series (see the follow-up below). The source record remains in the database.
 
 The detailed 2023 assessment was published as
 [Research Document 2025/004](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41282565.pdf).
@@ -75,8 +70,7 @@ latter as integer 9 and calculates reproductive output separately from mature
 biomass. Its code explicitly stores both `SSB_yr` and `SSB_B_yr`. The public
 reporting code also handles `SpawnBio`, while the paper tables label B in
 tonnes. Without the final posterior extraction, do not silently equate those
-quantities or "repair" the official assessment. Published values are retained
-as reported and SSB comparison is marked non-equivalent.
+quantities or "repair" the official assessment. Published values are retained as reported; the native spawning-output definition remains unresolved.
 
 ## Available historical outputs
 

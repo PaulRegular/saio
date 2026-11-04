@@ -16,7 +16,7 @@ The detailed Research Document is still labelled in press in the public assessme
 
 ## Screening decision
 
-Record this as a distinct new Yukon Chinook SMU candidate, not as the whole Yukon–Porcupine major stock and not as the older Yukon mainstem-only unit in DFO Research Document 2022/031. Screening is complete and the candidate remains **eligibility unresolved**: the public materials contain substantial age-resolved source information and an age-structured spawner-recruitment analysis, but the exact production-run catch and age matrices, conventional weight/maturity surfaces, mortality assumptions, and final numeric age-specific outputs are not aligned and verified together. This is a documented source-evidence limitation, not a claim that the assessment lacks age data. Do not import values or select this unit for the translation batch until the final detailed run and its files can be reconciled.
+Record this as a distinct new Yukon Chinook SMU candidate, not as the whole Yukon–Porcupine major stock and not as the older Yukon mainstem-only unit in DFO Research Document 2022/031. Screening is complete and the candidate remains **eligibility unresolved**: the public materials contain substantial age-resolved source information and an age-structured spawner-recruitment analysis, but the exact production-run catch and age matrices, conventional weight/maturity surfaces, mortality assumptions, and final numeric age-specific outputs are not aligned and verified together. This is a documented source-evidence limitation, not a claim that the assessment lacks age data. Do not import values until the final detailed run and its files can be reconciled.
 
 ## Sources and cache
 

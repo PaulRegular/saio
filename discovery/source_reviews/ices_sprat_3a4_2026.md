@@ -27,7 +27,7 @@ values, units or coverage. Direct unauthenticated requests to the TAF
 repository proxy returned HTTP 401. No values were reconstructed from code or
 other sources.
 
-## Official outputs and comparison limits
+## Official outputs and coverage limits
 
 The current ICES Stock Assessment Graphs source table reports age-0
 recruitment in thousands, SSB in tonnes, landings, and F for ages 1-2 through
@@ -35,9 +35,7 @@ recruitment in thousands, SSB in tonnes, landings, and F for ages 1-2 through
 2026 report summarizes 2025 SSB as 199,809 tonnes and F1-2 as 1.51. The
 reviewed graph table does not report N-at-age or a full F-at-age surface.
 
-These aggregate outputs provide useful comparison targets if the numeric
-assessment inputs can be recovered. They are not enough to create canonical
-input records or claim a completed age-disaggregated comparison case.
+These aggregate outputs do not supply the missing numerical assessment inputs. No canonical input rows are inferred from them.
 
 ## Screening decision
 

@@ -62,13 +62,7 @@ numeric F-at-age. The report plots N-at-age but does not provide a numeric N-at-
 table or downloadable fitted population arrays. The aggregate population table
 does not include annual uncertainty estimates.
 
-The source record is eligible for detailed curation because the accepted run's
-final input files and comparable aggregate outputs are printed in the official
-report. A will need to distinguish source catch totals and
-composition samples from reconstructed age-specific catch, derive age-specific
-weights from the fixed biology, preserve egg-based spawning output as a native
-definition, and document any survey-timing approximation. No canonical database
-values have been imported.
+The source record is eligible for detailed curation because the official report prints the accepted run's final inputs and comparable aggregate outputs. Catch totals and composition samples are distinct source observations. Age-specific weights require calculation from fixed biology; spawning output is egg-based, and exact survey timing remains unresolved. No canonical database values have been imported.
 
 ## Sources
 

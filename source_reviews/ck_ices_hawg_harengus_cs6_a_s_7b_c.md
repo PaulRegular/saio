@@ -82,7 +82,7 @@ The 2025 and 2026 advice PDFs and SAG XML, 2026 HAWG report, and the relevant
 2025 report pages are cached locally with URLs and checksums. The 2025 full
 HAWG PDF is shared with the sandeel cache and identified in the manifest.
 
-## Translation status
+## Source coverage
 
 The current rule has no estimated population N/F/M-at-age or recruitment
 surface.

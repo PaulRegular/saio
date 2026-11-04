@@ -43,9 +43,7 @@ weights for FLT14 ages 3–7 in 2003–2024. With `fixVarToWeight = 0`, SAM divi
 the log-observation SD by the square root of each weight; rows without a
 weight use multiplier 1. The raw StoX CV matrix is preserved separately. Its
 values match the fitted weights as a set after the documented CV conversion,
-but the year-age pairing does not match the native model weights. The
-translation uses the weights aligned to the fitted observations and does not
-infer a pairing for the separate CV table.
+but the year-age pairing does not match the native model weights.
 
 The model uses a Beverton–Holt stock-recruit relationship with a three-year
 lag. Age-3 recruitment and ages 4–12 survival innovations have separate
@@ -71,8 +69,4 @@ columns are retained as given; their interval level is not identified in the
 cached table. The 2026 forecast recruitment and SSB are taken from ICES SAG;
 age-specific forecast values and forecast intervals are not available.
 
-The source age surfaces allow total abundance to be derived over ages 3–12.
-The common-definition SSB comparison uses the same official N, weight and
-maturity surfaces and the start-of-year convention implied by the zero
-pre-spawning mortality fractions. Dashboard comparisons retain native
-aggregates and label these common-definition summaries separately.
+The source age surfaces allow total abundance to be derived over ages 3–12. Official N, weight and maturity surfaces and zero pre-spawning mortality fractions establish the source beginning-of-year mature-biomass definition.

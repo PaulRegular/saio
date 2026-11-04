@@ -14,4 +14,4 @@ The survey has aggregate biomass, marginal length compositions and conditional a
 
 The two-sex model fixes M at 0.2, uses externally estimated maturity and weight-length biology, and reports fitted N-at-age and other outputs. The Bering Sea and Aleutian Islands trawl surveys are annual summer surveys.
 
-This candidate is eligible for source curation and a translation attempt with these approximations documented. Do not split the complex into separate flathead sole and Bering flounder cases or treat the derived survey age series as an official observed index.
+This candidate is eligible for source curation with these potential reconstructions documented. Do not split the complex into separate flathead sole and Bering flounder cases or treat the derived survey age series as an official observed index.

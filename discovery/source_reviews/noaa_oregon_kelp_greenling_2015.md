@@ -20,7 +20,7 @@ There is a source-level age-grid discrepancy to resolve before extraction: the m
 
 The report provides aggregate spawning biomass, depletion, recruitment, SPR and reference-point outputs. For 2015 it reports spawning biomass of 316 mt (approximate 95% interval 116-516 mt), depletion of 0.80 (0.59-1.00), and recruitment of 1,413 thousand (0-3,318 thousand). It does not provide a numeric fitted N-at-age or F-at-age table, and the public sources located do not include the fitted `Report.sso`. Fixed M is available as an input assumption, not an estimated M trajectory.
 
-Screening decision: provisionally new and eligible for **source curation** because the official report reproduces run-specific age compositions, catches, biological assumptions and comparable aggregate outputs. Translation readiness is not established by this screen. The missing independent survey, approximate age-splitting of fishery CPUE, incomplete age-composition coverage across fleets, lack of numeric fitted age surfaces, and unresolved age-grid discrepancy must remain explicit. The register does not treat catch totals or compositions as a fabricated age-specific index.
+Screening decision: provisionally new and eligible for **source curation** because the official report reproduces run-specific age compositions, catches, biological assumptions and comparable aggregate outputs. The missing independent survey, approximate age-splitting of fishery CPUE, incomplete age-composition coverage across fleets, lack of numeric fitted age surfaces, and unresolved age-grid discrepancy must remain explicit. The register does not treat catch totals or compositions as a fabricated age-specific index.
 
 ## References
 

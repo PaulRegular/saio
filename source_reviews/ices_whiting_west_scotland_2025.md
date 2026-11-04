@@ -42,7 +42,7 @@ The 2025 fitted SAM age-0 abundance and recruitment are about 385,197 thousand f
 
 The source PDFs and native run are cached locally under source_cache/ices_whiting_6a_2025/. The document manifest records retrieval URLs, date, byte size and SHA-256. Model-file provenance is recorded in the native bundle's model/source_manifest.csv.
 
-The database record preserves the native fitted inputs and outputs. The is a separate approximation. In particular, it uses an IID abundance process and independent survey residuals, cannot reproduce SAM's Q4 age-correlated observation errors exactly, and represents supplied M as fixed.
+The database record preserves the native fitted inputs and outputs.
 
 ## Discovery inventory screening
 

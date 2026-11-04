@@ -40,10 +40,7 @@ Table 8 reports annual apical F, total biomass and peak-spawning SSB through
 reviewed report does not tabulate uncertainty by age. It does report uncertainty
 analyses for assessment quantities.
 
-The assessment inputs are annual indices derived from sources with different
-sampling seasons. The report does not give one common within-year survey
-fraction. Any later must preserve source timing where
-available or label the chosen single-fraction timing as an approximation.
+The assessment inputs are annual indices derived from sources with different sampling seasons. The report does not give one common within-year survey fraction. Source timing is retained where available; any single-fraction timing would be an approximation.
 
 ## Decision
 

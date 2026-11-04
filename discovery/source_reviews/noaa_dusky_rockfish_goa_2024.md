@@ -16,7 +16,7 @@ The model uses bottom-trawl survey biomass from the VAST geostatistical model fo
 
 Mean weight-at-age is derived outside the assessment model from combined-sex survey size-at-age data. The report supplies the weight-growth equation in grams with parameters W∞ = 1928 g, κ = 0.190, t0 = 0.607, and b = 3.0. The assessment fits female maturity-at-age conditionally with a logistic curve and binomial likelihood, using combined female observations cited to Lunsford (1997, personal communication) and Chilton (2010). The reported age at 50% maturity is 10.3. The SAFE shows the fitted curve in Figure 12-9 but does not tabulate the combined raw observations or the full coefficient pair.
 
-Natural mortality is fixed at M = 0.07 per year. The report does not specify a fractional within-year survey timing, so that remains unresolved for any translation needing a timing fraction.
+Natural mortality is fixed at M = 0.07 per year. The report does not specify a fractional within-year survey timing, so that remains unresolved.
 
 ## Outputs and screening decision
 

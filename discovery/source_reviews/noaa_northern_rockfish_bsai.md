@@ -18,7 +18,7 @@ Natural mortality is estimated with a prior. The full assessment reports M near 
 
 ## Outputs and eligibility
 
-The 2023 SAFE reports fitted age-structured outputs, including population numbers at age, recruitment, fishing mortality and female spawning biomass. The 2026 projection report also provides age-3+ total biomass, female spawning biomass, exploitation summaries and future projections. These are sufficient to make the BSAI unit provisionally eligible for source curation and a later translation attempt, provided all catch-age and survey-index reconstruction is explicit. No values have been imported into the canonical database.
+The 2023 SAFE reports fitted age-structured outputs, including population numbers at age, recruitment, fishing mortality and female spawning biomass. The 2026 projection report also provides age-3+ total biomass, female spawning biomass, exploitation summaries and future projections. These are sufficient to make the BSAI unit provisionally eligible for source curation, provided all catch-age and survey-index reconstruction is explicit. No values have been imported into the canonical database.
 
 Sources:
 

@@ -14,11 +14,11 @@ The m24 assessment reports commercial catch biomass in tonnes for 1961–2024. F
 
 Survey biomass is available for 1990–1999 (triennial), 2001–2021 (biennial) and 2023. Survey age compositions are available for 1990–1999 (triennial), 2003–2021 (biennial) and 2023. An age-specific survey index can be reconstructed from the aggregate biomass and corresponding age compositions; it is not the native aggregate-index likelihood. The m24 model uses updated survey biomass treatment and age-specific biological schedules. Weight-at-age is derived from survey growth and length-weight information for combined sexes. Maturity is an updated age ogive based on Conrath (2019) and earlier studies; the 2024 report describes the model's biological inputs. Exact age vectors and age-grid endpoint should be verified during extraction.
 
-Natural mortality is estimated; the preferred m24 estimate is approximately 0.0595 and the report includes an M prior. Any fractional timing used in a translation would be an explicit approximation.
+Natural mortality is estimated; the preferred m24 estimate is approximately 0.0595 and the report includes an M prior. Exact within-year timing remains unresolved; a fractional-year value has not been recovered.
 
 ## Outputs and eligibility
 
-The 2024 m24 assessment reports age-specific population abundance, age-2 recruitment, age-2+ total biomass, female spawning biomass and mortality estimates. Key population time series include uncertainty intervals. These outputs and the input structure make the GOA unit provisionally eligible for source curation and a later translation attempt, with catch-at-age and age-specific survey index marked as documented reconstructions. No values have been imported into the canonical database.
+The 2024 m24 assessment reports age-specific population abundance, age-2 recruitment, age-2+ total biomass, female spawning biomass and mortality estimates. Key population time series include uncertainty intervals. These outputs and the input structure make the GOA unit provisionally eligible for source curation, with catch-at-age and age-specific survey index marked as documented reconstructions. No values have been imported into the canonical database.
 
 Sources:
 

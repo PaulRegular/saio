@@ -16,7 +16,7 @@ The 2013 report identifies the run as Stock Synthesis 3.24o, with commercial lan
 
 The domestic trawl fishery supplied conditional age-at-length observations in 2003, 2008 and 2009. The assessment used 61 observed age bins, 0-60; the population dynamics input uses 80 ages. Survey age observations came from the NWFSC shelf-slope survey in 2003, 2005, 2007 and 2009-2012. They were conditional ages-at-length, with length compositions and survey abundance indices. The report does not provide annual age-specific survey abundance as a directly observed series.
 
-The source documents sex-specific growth and length-weight relationships and length-based maturity. Natural mortality was fixed at 0.0350 per year for females and 0.0371 for males. Numeric age-specific weight and maturity surfaces are not supplied as standalone observed input series; they would require an explicitly documented translation from the source biological relationships.
+The source documents sex-specific growth and length-weight relationships and length-based maturity. Natural mortality was fixed at 0.0350 per year for females and 0.0371 for males. Numeric age-specific weight and maturity surfaces are not supplied as standalone observed input series; they would require an explicitly documented calculation from the source biological relationships.
 
 The accepted assessment's Table 13 reports annual total and summary biomass, spawning biomass, depletion, age-0 recruitment (thousands of fish), and exploitation rate for 1916-2012. The report provides point estimates for these summary series. It does not provide annual numeric N-at-age or F-at-age tables in the reviewed materials. The 2025 SAFE repeats management quantities based on the 2013 assessment; it is not a new fit.
 

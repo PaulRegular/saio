@@ -69,8 +69,4 @@ quantities. The current OR/WA stock candidate is **new and eligible for source
 curation**; this screen covers its Oregon component and does not create a
 canonical stock or import numerical values.
 
-Translation would require retaining the incomplete age-sample coverage, the
-recreational CPUE index's fishery-dependent basis and approximate index-at-age
-construction as explicit limitations. The source archive and report are
-sufficient to continue source curation without using estimated population
-states as observations.
+The source has incomplete age-sample coverage and fishery-dependent recreational CPUE. An index split by age would be a reconstruction, not a directly observed age-specific survey series. The archive and report support continued source curation; estimated population states are not observations.

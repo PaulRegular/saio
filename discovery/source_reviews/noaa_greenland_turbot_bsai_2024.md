@@ -38,8 +38,7 @@ is not stated in the reviewed materials.
 The SAFE reports age-0 recruitment and numbers-at-age, as well as total
 age-1+ biomass, female spawning biomass and aggregate fishing mortality.
 These are useful official outputs, but the run-matched numerical
-age-composition inputs and catch-at-age needed to support an age-disaggregated
-translation remain unavailable. This is a source-readiness decision, not a
+age-composition inputs and catch-at-age needed to support an age-disaggregated source record remain unavailable. This is a source-readiness decision, not a
 claim that the official Stock Synthesis assessment is not age structured.
 
 ## Sources

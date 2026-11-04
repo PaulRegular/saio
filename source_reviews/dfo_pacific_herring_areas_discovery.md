@@ -50,14 +50,13 @@ does not provide numerical fitted N-at-age or F-at-age arrays. For PRD, the
 2024; a machine-readable historical output series and age-specific fitted
 N/F arrays were not recovered.
 
-## Translation screen and source cache
+## Survey definitions and source cache
 
 All four assessments use an aggregate spawning-biomass index. The assessment
 reports do not provide a survey age composition or an age-specific abundance
 index. Fishery and test-fishery age compositions are not survey compositions,
 so allocating the aggregate spawn index among ages would add an unsupported
-selectivity assumption. Keep source curation separate from
-that translation blocker; do not manufacture an age-indexed survey series.
+selectivity assumption. No age-indexed survey series is inferred from these sources.
 
 Downloaded reference files and checksums are recorded in the gitignored
 source_cache/discovery_dfo_pacific_herring_2026/sources.csv. The local cache

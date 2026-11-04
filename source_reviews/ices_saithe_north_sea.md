@@ -57,10 +57,7 @@ for catch and the age-specific survey. Fbar is ages 4–7. The configuration
 date and exact 2026 sampling fractions remain flagged rather than treated as
 newly verified settings.
 
-The printed F variance keys are `0 1 2 3 3 3 3 3`: ages 3, 4 and 5 have
-separate innovation SDs, with ages 6–10+ sharing one. Separate recruitment and shared older-cohort SDs are
-already supported; that simpler N variance grouping is not itself a missing
-capability. The initial-state treatment and F density still differ.
+The printed F variance keys are `0 1 2 3 3 3 3 3`: ages 3, 4 and 5 have separate innovation SDs, with ages 6–10+ sharing one. Recruitment has a separate process SD; older cohorts share another.
 
 The report gives official N-at-age for ages 3–10+ and F-at-age for ages 3–8
 and 9+ through 2025 (Tables 14.4.2–14.4.3). It explicitly says F at age 9 and

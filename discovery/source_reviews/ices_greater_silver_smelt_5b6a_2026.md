@@ -53,8 +53,7 @@ a.
 
 ## Decision
 
-Eligible for source curation as a new assessment unit. This is not yet a
-translation-readiness decision. The detailed report supports the core catch,
+Eligible for source curation as a new assessment unit. The detailed report supports the core catch,
 survey, biology, and mortality records, plus comparable official outputs for
 SSB, recruitment, Fbar, N-at-age, and F-at-age. The canonical input series
 remain partial because numeric weights for ages 10–21+, ten blank catch-age

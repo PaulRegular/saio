@@ -38,7 +38,7 @@ outputs, so an age reconstruction is supportable for the overlapping sampled
 fleet-years. The reconstruction would differ from the assessment's original
 likelihood, which fits conditional age-at-length and length compositions
 separately. It is not a direct catch-at-age likelihood. That difference must
-remain explicit if this unit is later selected for import or translation.
+remain explicit in any later source extraction.
 
 Source files, retrieval date, versions,
 sizes and SHA-256 checksums are recorded in

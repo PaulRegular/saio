@@ -29,11 +29,11 @@ Table F.4 reports posterior quantiles for the composite base case, pooling 10,00
 
 Annual SSB and age-0 recruitment trajectories are shown in figures but not tabulated numerically. Numerical N-at-age and instantaneous F-at-age series were not recovered. M is fixed in the five component runs and is not an estimated output; the report's fishing-pressure summaries are exploitation rates, not F-at-age.
 
-## Remaining source gaps and translation limits
+## Remaining source gaps
 
-No run-matched native Stock Synthesis input/output bundle or numeric age-composition matrices were located. Commercial and survey age compositions are shown in figures, but exact age vectors, effective sample sizes and the original annual catch vector are unavailable. The catch table is rounded. The survey tables report both bootstrap and analytic CVs without identifying the version used in the production run. The fixed weight-at-age surface can be reconstructed from the recorded biological parameters, but the report's age-class convention must be followed and the result verified before a translation uses it. Exact numeric annual SSB/recruitment and age-specific N/F outputs remain unavailable.
+No run-matched native Stock Synthesis input/output bundle or numeric age-composition matrices were located. Commercial and survey age compositions are shown in figures, but exact age vectors, effective sample sizes and the original annual catch vector are unavailable. The catch table is rounded. The survey tables report both bootstrap and analytic CVs without identifying the version used in the production run. The fixed weight-at-age surface can be reconstructed from the recorded biological parameters, but the report's age-class convention must be followed and the result verified before it is treated as a verified age-specific source surface. Exact numeric annual SSB/recruitment and age-specific N/F outputs remain unavailable.
 
-This is a partial source record: it contains run-specific catch, index, biological, assumption and reference-point data, but does not reproduce the complete official likelihood inputs or output trajectories. The evidence supports a later, clearly labelled approximate translation using the aggregate index series and reconstructed biological surface. It does not support treating the survey compositions as age-specific abundance indices or claiming an exact model replication.
+This is a partial source record: it contains run-specific catch, index, biological, assumption and reference-point data, but does not recover the complete official likelihood inputs or output trajectories. The survey compositions are samples, not standardized age-specific abundance indices.
 
 ## Sources
 

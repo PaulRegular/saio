@@ -20,7 +20,7 @@ The 2026 age-specific input and output matrices are documented separately in the
 - **Spring survey:** IS-SMB, March, 1985–2025.
 - **Autumn survey:** IS-SMH, October, 1995–2024.
 - **Survey units:** Official tables label indices as numbers but do not establish calibrated physical units. Values are retained on their native scales.
-- **Survey timing:** The translation records 0.20 for March and 0.80 for October, based on survey months. These are approximations, not verified native SAM sampling fractions.
+- **Survey timing:** The database records 0.20 for March and 0.80 for October, based on survey months. These are approximations, not verified native SAM sampling fractions.
 - **Natural mortality:** Fixed at 0.2 per year for all ages.
 - **Spawning timing:** The official assessment uses pre-spawning mortality fractions of 0.4 for F and 0.3 for M.
 - **Outputs:** Summary tables provide recruitment, SSB and length-based reference biomass, with reported uncertainty. Age-specific output uncertainty was not recovered.
@@ -31,12 +31,6 @@ No uncertainty is calculated for this sum. The newer 2026 record remains
 separate and has its own reported age-specific population series.
 
 The official reference biomass represents fish measuring at least 45 cm and is distinct from total age-structured biomass.
-
-## Remaining translation limitations
-
-The principal differences between the official assessment and the revised are:
-
-These differences describe the limits of the translation rather than problems with the official SAM assessment.
 
 ## Sources reviewed
 
@@ -50,9 +44,3 @@ The numerical MFRI table exports used for the 2025 record are cached under the g
 ## Record summary
 
 This historical record represents the 2025 benchmark SAM assessment for Icelandic haddock. The current detailed assessment is the separate 2026 run.
-
-The revised fits 1979–2024, ages 1–12+, with random-walk recruitment, IID cohort-survival deviations, free initial abundance, correlated F random walks and fixed natural mortality.
-
-Catch and survey observations retain the source age structure and biological inputs, with simplified observation-error models and approximate survey timing.
-
-The translation is intended to test whether a compact age-structured state-space model can reproduce broad official population dynamics without duplicating every feature of the official SAM configuration.

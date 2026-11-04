@@ -101,9 +101,7 @@ values are preserved.
 
 The native `2r` data folder, unrounded arrays, zero-catch flags and fitted
 `sas.rds` are absent from the public pinned repository. All three canonical
-completeness statuses remain **partial**. Detailed report/configuration
-coverage supports a limited annual translation, not exact reconstruction
-of the native likelihood.
+completeness statuses remain **partial**. The missing native arrays prevent exact reconstruction of the source likelihood.
 
 The published configuration supplies `surveySD`, `catchSD` and `estSD`,
 but the declared pinned builder accepts `surveyCV`, `catchCV` and `estCV`

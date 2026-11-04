@@ -33,11 +33,11 @@ survey timing fractions are invented. The 2025 report corrects the 2021–2024
 Scots Bay turnover calculation, so its indicators must not be appended to an
 older series without reviewing those revisions.
 
-## Translation readiness
+## Source coverage and gaps
 
 The available materials do not yet identify one production fitted N/F/M-at-age surface for the complete 4VWX management unit. The 2022 framework is an ensemble of alternative operating models for only SWNS/BoF, while other components are represented by separate indicators. Treating one reconstructed operating model as a stock-wide official assessment would change the assessment scope and select one scenario from the reference set without an official basis.
 
-A component-specific approximation requires the actual production input update and official reference OM outputs, with ensemble and population definitions resolved. No fitting, source-based starting values, or dashboard has been attempted. Source tests verify the reported values, units, component separation and that the acoustic indicator does not become a fitted SSB comparison.
+The actual production input update and official reference OM outputs remain unavailable, and the ensemble and population definitions require resolution. Source tests verify the reported values, units, component separation and the distinction between an acoustic indicator and population SSB.
 
 The source PDFs and pinned code/data archive are cached under `source_cache/ck_dfo_mar_harengus_4vwx/`; checksums and URLs are recorded in `accessible_sources_manifest.csv`. The cache remains local and gitignored.
 

@@ -96,7 +96,7 @@ The data file sets Lbin_method=1 (population-length bins), while the observation
 
 Every positive index observation uses month 7. Length and age composition records use months 1 or 7. Survey timing must therefore be derived from the observation month, not the fleet-definition default. Fishery composition timing and continuous catch timing remain distinct.
 
-The composition schema validator checks finite numeric dimensions, non-negative integer age-error/partition codes, positive supplied sample sizes, observation IDs and ordered conditioning labels. The canonical Pacific cod composition rows retain the native conditioning labels, sample sizes and age-error codes; source and database validation pass. The uses a pooled age-length key and does not preserve the source conditional-composition likelihood.
+The composition schema validator checks finite numeric dimensions, non-negative integer age-error/partition codes, positive supplied sample sizes, observation IDs and ordered conditioning labels. The canonical Pacific cod composition rows retain the native conditioning labels, sample sizes and age-error codes; source and database validation pass.
 
 ## Canonical coverage and validation
 
@@ -129,7 +129,7 @@ Coverage is now 12,689 input cells, 3,437 outputs and 34 assumptions. Source val
 
 ## Active-survey catchability controls
 
-The official native control estimates baseline log q for both active surveys (phase 1). Bottom-trawl q has no environmental term; longline q also estimates the environmental coefficient (phase 5, env-var/link 101). Neither baseline uses annual deviations or time blocks. These parameter controls are now explicit assumptions, verified by scripts/database/023_review_goa_cod_catchability.R. Parameter starting values are not exported as estimates. This source-review script supplements the initial importer; it belongs to curation, not routine database-to-model translation. Structural validation passes. The published baseline q estimates are summarized below; selectivity details remain unresolved.
+The official native control estimates baseline log q for both active surveys (phase 1). Bottom-trawl q has no environmental term; longline q also estimates the environmental coefficient (phase 5, env-var/link 101). Neither baseline uses annual deviations or time blocks. These parameter controls are now explicit assumptions, verified by scripts/database/023_review_goa_cod_catchability.R. Parameter starting values are not exported as estimates. This source-review script supplements the initial importer. Structural validation passes. The published baseline q estimates are summarized below; selectivity details remain unresolved.
 
 ## Published baseline catchability estimates
 
@@ -139,7 +139,7 @@ The current report explicitly states that CFSR was discontinued and no 2025 valu
 
 ## Published growth parameters
 
-Table 2.6 of the January 2026 assessment reports estimates and standard deviations for beginning-year length at ages 1 and 10, the von Bertalanffy growth rate, and length-at-age standard deviation at ages 1 and 10. These five estimates are now recorded in `outputs.csv` with their reported natural-scale standard deviations. The official control specifies one von Bertalanffy growth pattern and length-at-age standard deviation as a function of mean length. These parameters support an explicit translation-time reconstruction of biological surfaces; they are not direct annual weight-at-age or maturity-at-age input tables. The recovered abundance-at-age surface is now recorded, but the overall output inventory, selectivity interpretation and age-specific uncertainty remain incomplete.
+Table 2.6 of the January 2026 assessment reports estimates and standard deviations for beginning-year length at ages 1 and 10, the von Bertalanffy growth rate, and length-at-age standard deviation at ages 1 and 10. These five estimates are now recorded in `outputs.csv` with their reported natural-scale standard deviations. The official control specifies one von Bertalanffy growth pattern and length-at-age standard deviation as a function of mean length. These parameters describe growth; they are not direct annual weight-at-age or maturity-at-age input tables. The recovered abundance-at-age surface is now recorded, but the overall output inventory, selectivity interpretation and age-specific uncertainty remain incomplete.
 
 ## Cached fitted-object check
 
@@ -156,7 +156,7 @@ M blocks, but does not contain age-specific N or F. Those surfaces come from
 the reconstructed full Report.sso described above, not from plots or from this
 mismatched cached fit object.
 
-it is not an independent model validation. N-at-age and F-at-age are now available for age-specific comparison. Any
+This reconstruction is not an independent model validation. N-at-age and F-at-age are now available for age-specific comparison. Any
 aggregate F calculated from those surfaces must be labelled with its age range
 and weighting definition; it is distinct from reported Sum Apical F. The
 assessment stays partial.

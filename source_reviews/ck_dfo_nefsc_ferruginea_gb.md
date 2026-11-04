@@ -48,9 +48,9 @@ The terminal approximate 90% confidence regions are retained for SSB (491–1034
 
 The source model uses a Beverton–Holt recruitment relationship with bottom-water-temperature effects, three surveys (NEFSC spring and fall, DFO spring), and correlated fishery-selectivity dynamics. The report notes missing 2023 NEFSC spring observations and unavailable calibration for the 2022 DFO survey. Exact survey timing, numerical revised maturity, complete annual weights and age-based M, age compositions, likelihood weights and production N/F-at-age remain unrecovered.
 
-## Validation and translation decision
+## Validation and source gaps
 
-All three completeness statuses remain partial. No or comparison dashboard is claimed: aggregate catches do not provide catch-at-age, and the selected production biology cannot be filled from the rejected candidate. Ffull is not relabelled as an arithmetic or population-weighted Fbar; its precise averaging convention remains unresolved. The useful next source is a native age-based-M production input/output archive or matching official numerical tables.
+All three completeness statuses remain partial. Aggregate catches do not supply catch-at-age, and the selected production biology cannot be filled from the rejected candidate. Ffull is not an arithmetic or population-weighted Fbar; its precise averaging convention remains unresolved. The useful next source is a native age-based-M production input/output archive or matching official numerical tables.
 
 The focused source test checks every Table 1 output, terminal intervals, adjusted/native separation, projection years, units, recruitment age, partial statuses and the absence of candidate-run provenance or invented age states. The source cache remains gitignored. `manifest.csv` records current URLs, retrieval times, SHA-256 checksums and the NOAA download restriction with its successful Council-hosted alternative. Earlier cached archives without original retrieval provenance are retained for investigation; their numerical candidates are not canonical sources for this production record.
 
@@ -73,7 +73,7 @@ and confidence limits remain unchanged. The earlier values were added from
 the machine-readable source. Catch before the 1973 model start is historical
 context, not a fitted observation. F is rounded to three decimals to remove
 binary storage noise; uncertainty is not inferred. These aggregate series
-do not supply missing age compositions or change the translation blocker.
+do not supply missing age compositions or resolve those source gaps.
 
 The NOAA [Stock SMART snapshot](https://github.com/NOAA-EDAB/stocksmart/tree/664c4237e26520b260a090e1821a2cee5d1cdf07)
 is cached with its pinned revision and checksum in `stocksmart_manifest.csv`.

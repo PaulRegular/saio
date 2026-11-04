@@ -8,7 +8,7 @@ The report says natural mortality is fixed at 0.15 per year for all ages. Stock 
 
 The MFRI assessment table and ICES Standard Graphs report recruitment at age 3, SSB, and F for ages 5–10 annually with 95% uncertainty intervals. Catch totals are also shown. The latest fitted-year outputs are through 2025; the 2026 row in the ICES assessment graphs is a projection and is not part of the fitted historical series. The public reports and graphs do not provide full fitted N-at-age or F-at-age arrays, nor age-specific output uncertainty.
 
-The 2022 ICES Stock Annex and WKICEMP benchmark report describe the model framework and data review. A search of the MFRI data server found stock-assessment CSV directories only through 2018; no 2026 run-specific numerical input bundle or fitted SAM object was located in the reviewed MFRI or ICES sources. The public record is nevertheless eligible for source curation because the latest production report documents age-disaggregated likelihood inputs and comparable outputs. It is not yet an import or translation-ready numerical package.
+The 2022 ICES Stock Annex and WKICEMP benchmark report describe the model framework and data review. A search of the MFRI data server found stock-assessment CSV directories only through 2018; no 2026 run-specific numerical input bundle or fitted SAM object was located in the reviewed MFRI or ICES sources. The public record is nevertheless eligible for source curation because the latest production report documents age-disaggregated likelihood inputs and comparable outputs. The complete numerical input package has not been recovered.
 
 Sources:
 

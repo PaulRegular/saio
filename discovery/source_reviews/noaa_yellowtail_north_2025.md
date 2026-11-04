@@ -29,7 +29,7 @@ composition bins 1–30.
   percentile of PacFIN age observations.
 - The native input records July for the survey index observations and for
   Triennial/WCGBTS age data; spawning is in January. Preserve individual
-  observation months in any fractional-year translation.
+  observation months when interpreting fractional-year timing.
 - `Report.sso` includes annual numbers-at-age, catch-at-age, biomass-at-age,
   F-at-age, recruitment and spawning output. The report provides uncertainty
   for key population quantities.

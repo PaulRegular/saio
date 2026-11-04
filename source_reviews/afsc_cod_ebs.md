@@ -32,8 +32,7 @@ produce the model's weights: **WTATAGE is fitted output, not an original input**
 The fixed weight–length equation is kg = 5.40706e-6 × cm^3.19601; maturity is
 logistic in length with L50=58 cm and slope 0.132, first mature age 1. Spawning
 is January 1. Steepness is fixed to one, with recruitment log SD 0.6908, an
-early regime block and bias adjustments. F/selectivity and growth have time
-variation that a simple age-structured translation does not reproduce.
+early regime block and bias adjustments. F/selectivity and growth vary over time in the official model.
 
 ## Reference definitions and checks
 
@@ -57,5 +56,4 @@ thousand fish, with worksheet natural-scale SD 27,663.3.
 
 Original maturity-at-age and empirical stock weights were not supplied to SS.
 Do not label a weight-derived maturity proxy as the official maturity curve.
-Canonical completeness remains partial; source preservation and numerical
-model readiness are separate claims.
+Canonical completeness remains partial; the missing original biology remains an explicit source gap.

@@ -122,7 +122,7 @@ missingness, flags, aggregate discrepancies, CV meaning, reference-point
 bounds, every historical summary value and absence of manufactured biology
 or fitted age surfaces. Reference conversion must not treat Ffull as Fbar.
 
-## Remaining requirements for translation
+## Remaining source gaps
 
 1. Complete annual model weights and the exact numeric fixed maturity vector.
    The recommended static maturity form and fixed age-specific M vector are
@@ -136,11 +136,7 @@ or fitted age surfaces. Reference conversion must not treat Ffull as Fbar.
 4. Numerical fitted N/F and available uncertainty for the selected run. The
    2025 summary cannot be combined with the changed 2024 observations/settings.
 
-These are source-data gaps. Independent age-index likelihoods would also
-approximate aggregate/composition likelihoods. A GSI-linked recruitment
-translation needs a documented mapping after its inputs are recovered.
-The partial import is not a completed translation: no fit or dashboard is
-claimed, and preparation remains unavailable without the missing inputs.
+These are source-data gaps. The original aggregate/composition likelihoods and the GSI-linked recruitment input require their own source definitions; they are not independent age-specific index series.
 
 ## Sources
 

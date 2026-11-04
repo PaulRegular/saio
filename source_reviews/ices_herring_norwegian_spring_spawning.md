@@ -42,10 +42,7 @@ source precision information. RFID relative errors are tabulated, but its numeri
 shown in a figure and are not transcribed. The native SAM fit and exact process,
 q-sharing, and uncertainty settings were not recovered.
 
-The published age-12 stock weight and maturity are used as proxies for the
-12+ group because no abundance-by-single-age surface above age 12 supports a
-defensible weighted biological average. Maturity cohorts are mapped to
-calendar year by `cohort = year - age` in the translation.
+Published biology includes age-12 stock weight and maturity. No abundance-by-single-age surface above age 12 was recovered for a population-weighted biological average. Maturity is reported by cohort, related to calendar year by `cohort = year - age`.
 
 ## Source files cached locally
 

@@ -87,8 +87,7 @@ the production configuration.
 
 The final model fixes NEFSC fall selectivity to one for ages 1–3 to achieve
 convergence. The final panel explicitly flags this unusual full selection
-of young fish for future investigation. It is a source-model feature, not
-a reason to assume a monotone survey curve in a future translation.
+of young fish for future investigation. This is an official-model diagnostic concern.
 
 ## Outputs and uncertainty
 
@@ -116,8 +115,6 @@ No total abundance, N-at-age or age-specific F surface is available, and no
 common-definition SSB is derived. Input, assumption and output completeness
 remain partial.
 
-## Translation status
+## Remaining source gaps
 
-A catch total
-and a known M do not replace those observations. No model is fitted and no
-source-based starting values are generated while these gaps persist.
+A catch total and known M do not replace the missing observation arrays.

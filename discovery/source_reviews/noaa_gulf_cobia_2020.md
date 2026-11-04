@@ -82,4 +82,4 @@ The assessment report notes that conditional age-composition fits were poor,
 partly because of small sample sizes and fixed growth parameters. It also
 discusses low confidence in the abundance indices and broader data limitations.
 These are properties of the official assessment, not reasons to alter its
-observations during any later translation.
+observations during source extraction.

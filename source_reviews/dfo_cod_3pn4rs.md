@@ -106,11 +106,10 @@ survey tows must be distinguished before constructing annual indices. The
 published Sentinel mobile series already standardizes tow geometry, so it
 retains its existing label rather than being split artificially.
 
-## Biological source details and translation decision
+## Biological source details
 
 The source report describes the weight and maturity models but does not publish
-their numeric age-year matrices as tables. The plotted curves make a limited
-translation possible. Figure 70 is the fitted annual maturity ogive, not simply
+their numeric age-year matrices as tables. The biological surfaces are shown as curves. Figure 70 is the fitted annual maturity ogive, not simply
 the proportion mature among sampled fish; the revised maturity model has cohort
 effects in a beta-binomial likelihood.
 The [2025 maturity technical report](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41287332.pdf)
@@ -132,20 +131,10 @@ not complete annual stock-weight or fitted maturity surfaces. Pooling them or
 averaging length-stratified samples without the sampling weights would create
 new biological assumptions, not recover authoritative assessment inputs.
 
-A Sentinel-only simplified fit is prepared for 1995–2024, ages 2–11+, using
-published catch-at-age, the Sentinel mobile index, digitized Figure 90 stock
-weights and Figure 70 maturity, and the documented baseline M means. It excludes
-the other five official survey streams and simplifies their combined observation
-structure, the source's initial-state integration, and the source likelihoods.
-Sentinel timing remains a mid-July approximation. These choices are explicit
-in the translation script; no fitted population values are used as observations
-or biological inputs.
-
 The source record remains partial: numerical inputs for five official surveys,
 exact configured timing, and some likelihood details are unresolved. The plotted
 biological surfaces and framework M means are now stored with provenance and
-digitization notes, allowing the limited Sentinel-only translation to be fit
-and compared without inventing data.
+digitization notes.
 
 ## Source details retained from the modelling review
 

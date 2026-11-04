@@ -28,9 +28,9 @@ The report also states that fishing mortality for ages 4–10+ has been zero sin
 
 Only the age-5+ terminal biomass and the recent aggregate F statement are imported. Outputs remain partial because the full historical trajectories and detailed uncertainty are unavailable in accessible run-matched sources.
 
-## Translation status
+## Remaining source gaps
 
-The official summary confirms suitable types of age-specific inputs, but the numerical series, plus-group definitions, weights, maturity, survey timing and exact likelihood settings remain unavailable. A later translation must wait for recoverable run-matched data or the detailed report PDF. It must preserve age-5+ biomass as a distinct reported metric and must not label it SSB.
+The official summary confirms suitable types of age-specific inputs, but the numerical series, plus-group definitions, weights, maturity, survey timing and exact likelihood settings remain unavailable. Age-5+ biomass is a distinct reported metric, not SSB.
 
 ## Sources
 

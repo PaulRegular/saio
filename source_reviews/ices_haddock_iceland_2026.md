@@ -17,7 +17,7 @@ The assessment continues the 2025 WKICEGAD benchmark SAM framework. The report d
 - **IS-SMB:** March groundfish survey indices-at-age are reported for 1985-2026. The source labels them as numbers but does not specify a physical unit; values are retained on their native scale.
 - **IS-SMH:** October groundfish survey indices-at-age are reported for 1995-2025. The source does not identify a physical unit and some older-age cells are blank; only published values are stored.
 - **Natural mortality:** Fixed at 0.2 per year for ages 1-12.
-- **Timing:** The source identifies the survey months but does not provide exact SAM sampling fractions. settings 0.20 for March and 0.80 for October are month-midpoint approximations.
+- **Timing:** The source identifies the survey months but does not provide exact SAM sampling fractions. Recorded settings 0.20 for March and 0.80 for October are month-midpoint approximations.
 - **SAM details:** The 2026 report describes the 2025 benchmark model as its basis, but the exact process covariance and parameter-sharing settings are not fully specified in the public tables.
 
 ## Recovered outputs and remaining gaps

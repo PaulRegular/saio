@@ -68,8 +68,7 @@ The canonical record contains the 2026 assessment's aggregate catch, landings,
 and discard series; fixed M-at-age inputs for ages 0–5 and the age-6+ value;
 2026 SSB, age-0 recruitment, and Fbar outputs; and a small set of
 model-definition and reference-point assumptions. Inputs, assumptions, and
-outputs remain marked partial. This is a source-curation record, not a
-translation-ready age-structured data set.
+outputs remain marked partial. This is a source-curation record, not a complete age-structured input set.
 
 ## Sources and cached files
 

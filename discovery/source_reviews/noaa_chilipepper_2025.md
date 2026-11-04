@@ -18,6 +18,6 @@ The archive includes Chili_2025.dat, Chili_2025.ctl and Report.sso. Report.sso e
 
 ## Screening decision
 
-NOAA:17357 is eligible for source curation and a translation attempt. Catch-at-age and age-split trawl indices require documented reconstruction from the native catch, length and CAAL observations; weights and maturity at age require documented derivation from official model biology. NOAA:10395 is excluded as a separate current stock entry because the 2025 assessment represents the present coastwide unit; the exact identifier crosswalk remains undocumented.
+NOAA:17357 is eligible for source curation. Catch-at-age and age-split trawl indices require documented reconstruction from the native catch, length and CAAL observations; weights and maturity at age require documented derivation from official model biology. NOAA:10395 is excluded as a separate current stock entry because the 2025 assessment represents the present coastwide unit; the exact identifier crosswalk remains undocumented.
 
 The report, PFMC model archive, and regional assessment listing are cached under source_cache/discovery_noaa_chilipepper_2025/. Their URLs, retrieval date and SHA-256 checksums are in sources.csv. The archive checksum is 2365BFF1D8657734DD9A0AFC70AE9938FED03009D679D8A87AACBF069915AADC.

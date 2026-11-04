@@ -34,7 +34,7 @@ The canonical stock is `dfo_greenland_halibut_2_3klmno`, with two partial events
 
 The current MP input values are stored on the source's mean-weight-per-tow scale. The 2023 SSM report identifies this index family in kg per tow; no additional scaling is applied. Missing survey years are omitted from the annual MP input rows. No uncertainty is created for outputs where the source provides none.
 
-This source record can support translation work with documented approximations, but it is not a direct reproduction of current 2026 advice. Translation would use the 2023 SSM inputs and outputs as a historical age-structured case, and would have to address the missing timing values, maturity/stock weights, and annual N/F/SSB surfaces. The current MP TAC should not be treated as an age-structured fit output.
+The 2023 SSM record is a historical age-structured assessment, distinct from current 2026 management-procedure advice. Timing values, maturity/stock weights and annual N/F/SSB surfaces remain unavailable. The current MP TAC is a management decision, not an age-structured population estimate.
 
 ## Sources
 

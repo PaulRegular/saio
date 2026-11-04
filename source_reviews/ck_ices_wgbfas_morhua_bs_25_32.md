@@ -35,7 +35,7 @@ One F-at-age cell needs source verification: Table 2.1.13 prints age-11 F in
 table, marked as not updated in 2024. The database preserves the printed value
 and flags it; it is not silently changed to `0.04`.
 
-## Input availability and translation readiness
+## Input availability and source gaps
 
 The 2024 report provides some aggregate annual catch quantities, but not the
 full inputs consumed by Stock Synthesis. Table 2.1.11 reports landings in

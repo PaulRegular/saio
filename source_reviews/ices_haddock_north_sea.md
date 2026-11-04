@@ -170,8 +170,6 @@ These inputs establish a beginning-of-year spawning-biomass definition and are d
 
 Both matrices are retained as biological inputs and checked against native cached exports.
 
-The translation therefore preserves the official spawning convention without imposing nonzero mortality fractions before spawning.
-
 ## Catchability power correction
 
 Inspection of the official fitted object and its exact SAM implementation established that the model estimates density-dependent survey catchability powers.
@@ -194,8 +192,6 @@ This finding supersedes the earlier description of catchability without density 
 
 Implementation reference: [SAM predobs.hpp](https://github.com/fishfollower/SAM/blob/1cc464b80f6f/stockassessment/inst/include/SAM/predobs.hpp).
 
-The does not currently include these estimated powers. They remain an important identifiable source of observation-model disagreement.
-
 ## Initial-state semantics resolved
 
 Both native `initN` and `initF` vectors are empty, and `initState = 0`.
@@ -213,27 +209,13 @@ Implementation references:
 - [SAM n.hpp](https://github.com/fishfollower/SAM/blob/1cc464b80f6f/stockassessment/inst/include/SAM/n.hpp)
 - [SAM f.hpp](https://github.com/fishfollower/SAM/blob/1cc464b80f6f/stockassessment/inst/include/SAM/f.hpp)
 
-## Remaining translation limitations
-
-The revised model now approximates the principal N and F process structures of the official assessment more closely.
-
-Remaining differences include the precise initial-state and covariance conventions, simplified catch and survey observation variances, and the omission of three density-dependent survey catchability parameters.
-
 The official survey index observations remain on uncalibrated native scales, with their relative precision factors preserved.
 
 The available uncertainty estimates for N and F are conditional on fitted fixed effects rather than complete marginal intervals.
 
-The simplified model is intended to evaluate how well a compact age-structured state-space model can reproduce official population dynamics. It does not claim likelihood-level or uncertainty equivalence with the official SAM.
-
 ## Record summary
 
 The canonical record represents the official 2026 Northern Shelf haddock SAM assessment, using the verified native model and available source inputs.
-
-The revised fits ages 0–8+ over 1972–2026, with random-walk recruitment, IID cohort-survival deviations and grouped survival-process SDs, correlated F random walks, fixed natural mortality, and both standardized survey indices.
-
-These changes substantially narrow the difference between the two models' core population-process assumptions.
-
-The principal remaining observation-model simplification is the omission of density-dependent catchability powers at the youngest survey ages, alongside differences in the exact variance parameterization.
 
 The official assessment inputs, outputs and canonical source-review findings remain unchanged.
 

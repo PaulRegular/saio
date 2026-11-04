@@ -22,8 +22,7 @@ No independent official assessment was found for the catalogue's `MA` area.
 The 2018 coastwide inputs and outputs are not copied to this row, and the
 2025 summary is not used to fill the age-specific gaps. Keep this catalogue
 entry metadata-only until an authoritative source establishes its boundary
-and a distinct assessment run. No or dashboard is
-appropriate for this entry at present.
+and a distinct assessment run.
 
 ## Sources
 

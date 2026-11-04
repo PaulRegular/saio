@@ -12,8 +12,7 @@ not provide a separate fitted assessment for subdivisions 21–23.
 
 Keep the historical component metadata-only. The combined 21–32 input and
 output series cannot be copied into this row as though they described only
-21–23. Any or comparison belongs to the combined stock
-record.
+21–23. The numerical series belong to the combined stock record.
 
 ## Sources
 

@@ -29,7 +29,7 @@ The imported outputs are point estimates; no output standard errors or intervals
 
 The source model's SSB definition changes at the terminal year: 1961–2022 use N × weight × maturity × 0.5 without survival to spawning, while terminal 2023 applies survival through one third of a year. This behavior is retained and explicitly noted rather than harmonized during import.
 
-The source data support a later, but it will be approximate. Catch-at-age would need to be reconstructed downstream from catch biomass, age proportions and fishery weights for sampled composition years. The aggregate survey index and survey proportions/weights can support a documented age-index reconstruction only for years with the required survey inputs. A translation would omit the length-composition likelihoods, use a simplified observation likelihood, and choose an explicit approximate survey timing because the source timing is unresolved. These choices belong in the translation, not the canonical observations.
+The native sources retain catch biomass, fishery age proportions and weights, plus aggregate survey indices and survey proportions/weights. A derived age series is possible only in years where the required source quantities overlap. Length compositions are separate likelihood inputs; exact survey timing remains unresolved.
 
 ## Sources
 

@@ -14,7 +14,7 @@ The northern base fit includes conditional-age-at-length data from commercial tr
 
 The southern fit has only the WCGBTS conditional-age-at-length series in its age-composition likelihood (2003–2019, 17 years). The data file retains some other negative-fleet age observations, but Stock Synthesis treats those as expected-only records with no likelihood contribution. The STAR panel and assessment report explain that sparse fishery and Triennial ages were excluded after poor/conflicting fits and strong effects on estimated population scale. Because the accepted fit lacks a usable fishery age-composition likelihood to support catch-at-age reconstruction, the southern unit is screened ineligible for this age-disaggregated input set. Its official age-specific outputs remain useful reference information but do not substitute for those inputs.
 
-The reports state that maturity values are fixed from a separate biological analysis, weight-length relationships are fixed from WCGBTS paired observations, and sex-specific M is estimated. this review does not assign a timing value. Report.sso contains the population and mortality surfaces needed for comparison, but this screening step does not import or refit either model.
+The reports state that maturity values are fixed from a separate biological analysis, weight-length relationships are fixed from WCGBTS paired observations, and sex-specific M is estimated. This review does not assign a timing value. Report.sso contains the population and mortality surfaces needed for comparison, but this screening step does not import or refit either model.
 
 ## Cached sources
 

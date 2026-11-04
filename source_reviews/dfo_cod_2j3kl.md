@@ -80,11 +80,7 @@ supplied as an input.
 
 ## Source details retained from the modelling review
 
-The production report supplies biomass (Table 11) and sampled counts (Table 12)
-as separate observations. Seven years have both: 1995 and 1998-2003. These can
-be translated to an index using `N[a] = B * p[a] / sum(p * w)`, with B converted
-to kg, p the sample proportions and w in kg/fish. This is a reconstruction,
-not a published abundance estimate or a replacement for canonical counts.
+The production report supplies biomass (Table 11) and sampled counts (Table 12) as separate observations. Seven years have both: 1995 and 1998–2003. The sample counts are compositions, not published abundance-at-age indices.
 
 The framework research document (2025/034, p. 10, equation 2.14) uses stock
 body mass in the Smith Sound biomass equation. Beginning-of-year stock weights

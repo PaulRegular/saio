@@ -4,7 +4,7 @@
 
 The stock is ICES `sol.27.4`, Solea solea in Subarea 4 (North Sea), matched to the existing Charbonneau–Keith catalogue record `ck_ices_wgnssk_solea_ns_4`. The latest detailed production assessment recovered is WGNSSK 2026. Its Stock Synthesis 3 model uses data through 2025 and reports population estimates through 2025, with 2026 advice-year summary values. The current advice is ICES 2027 advice based on assessment key 23777. The 2024 WKBFLATFISH benchmark introduced the Stock Synthesis 3 reference model.
 
-The previous detailed run is WGNSSK 2025, with data through 2024 and a 2025 forecast. It remains in the database as a historical assessment and as the basis for the existing; its source data are not carried forward into the 2026 record.
+The previous detailed run is WGNSSK 2025, with data through 2024 and a 2025 forecast. It remains in the database as a historical assessment; its source data are not carried forward into the 2026 record.
 
 ## Sources and local cache
 
@@ -45,8 +45,8 @@ The 2025 report provides point estimates of N-at-age (1957–2024, ages 0–10+)
 
 The production model is single-area and single-sex, with separate landings and discards fleets, age-0 recruitment at the beginning of the year, a Beverton–Holt stock-recruitment relationship with fixed steepness 0.6646, time-varying landings selectivity, time-invariant discards and survey selectivity, and selectivity/catchability constraints from age 5 onward. SSB is calculated at the start of the year. The 2016 age-reading-error matrix is retained in the assessment, but its numerical values were not recovered from the cached report tables.
 
-## Completeness and translation limits
+## Completeness and source gaps
 
 Both assessment records remain partial. For 2026, the numerical catch-at-age, weight, fixed biology, aggregate-index and age-specific output tables are present, but native SS3 files, full likelihood details and age-specific uncertainty are unavailable. For 2025, the original source extraction and its limits are retained as historical data. Fixed M is an input, not an estimated M output.
 
-The recovered BTS and COAST observations are aggregate biomass indices; the current supports age-specific index observations or aggregate biomass indices paired with age compositions. No matching 2026 age-composition series was recovered. Assigning these totals to ages or deriving compositions from fitted abundance would invent observations, while fitting catch alone would omit the assessment's survey likelihood.
+The recovered BTS and COAST observations are aggregate biomass indices. No matching 2026 age-composition series was recovered. Age compositions are not inferred from fitted abundance.

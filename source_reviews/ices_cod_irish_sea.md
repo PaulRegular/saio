@@ -3,7 +3,7 @@
 Source review: 2026-10-19.
 Assessment record: `ices_cod_irish_sea_2026`.
 
-The source record is partial and is not fit-ready for a.
+The source record remains partial because run-matched source details are unresolved.
 
 ## Identity and official run
 
@@ -17,7 +17,7 @@ The working-group chapter is divided into separate PDFs on Figshare. The cod cha
 
 The assessment spans 1968–2025, ages 0–6+, with recruitment at age 0 and Fbar over ages 2–4. There is one Irish Sea population and a single commercial fleet; recreational removals are excluded.
 
-Table 6.9 reports total catch numbers-at-age in thousands of fish. It marks 2003–2005 and 2020 as excluded from the assessment because sampling was limited. Those source values remain in `inputs.csv` with the exclusion noted; the translation must omit them from the catch likelihood. Table 6.11 separately reports discards-at-age in thousands. Discards before 2007 are reconstructed in the source, and no 2020 age-discard values are tabulated.
+Table 6.9 reports total catch numbers-at-age in thousands of fish. It marks 2003–2005 and 2020 as excluded from the assessment because sampling was limited. Those source values remain in `inputs.csv` with the exclusion noted; they are not active observations in the official catch likelihood. Table 6.11 separately reports discards-at-age in thousands. Discards before 2007 are reconstructed in the source, and no 2020 age-discard values are tabulated.
 
 Table 6.10 reports mean weights-at-age in landings, used for the whole stock and catch. The age-0 value is missing for 2019. In 2020 the report marks the weights as available only from Q1 sampling and not included; 2023–2025 have low or incomplete age sampling, and the 2025 ages 4+ values use the preceding three-year average. These source limitations are retained rather than filled.
 

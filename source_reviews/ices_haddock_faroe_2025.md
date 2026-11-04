@@ -25,10 +25,6 @@ The database stores SAM N-at-age, F-at-age, recruitment, SSB, total stock biomas
 
 The 2025 terminal SAM estimates are recruitment 75,509.68 thousand fish, SSB 59,250.08 tonnes, and Fbar 0.12964 per year. The Fbar rounds to 0.130 in the 2025 ICES advice. The advice's 2026 projected SSB is not substituted for the fitted 2025 SSB.
 
-## limits
-
-The translated fit retains catch and both survey series, source timing and catch weights, the q-sharing groups, fixed M, and the annual biological surfaces. Those differences are recorded in the translation audit and are not adjusted by changing the source observations.
-
 ## Sources
 
 - [ICES 2025 advice for Faroe haddock (had.27.5b)](https://doi.org/10.17895/ices.advice.30738524)

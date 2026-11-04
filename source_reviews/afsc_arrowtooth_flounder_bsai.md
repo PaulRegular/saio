@@ -82,12 +82,6 @@ them or invent an SE. Final-year 2022 F-at-age remains unavailable without
 not called population-weighted Fbar. SSB is not reconstructed at an assumed
 spawning time.
 
-## Translation blocker
+## Remaining source gaps
 
-The source record is useful, but not model-ready. Generating catch or survey
-observations from the fitted N/F surface would fit the source estimates rather
-than its data. No such reconstruction or default timing is used.
-
-This is one partial curated case, **not a completed runnable translation or
-actual fitting attempt**. No starting-value retry or model rescue was tried. The missing inputs remain an explicit shortfall against the twelve-translation
-target.
+Numerical composition arrays, the original age–length conversion matrix and exact survey timing remain unresolved. Fitted N/F surfaces are assessment outputs, not replacements for missing catch or survey observations.

@@ -100,9 +100,7 @@ Sources and inspection logs are cached under
 search under `source_cache/ck_ices_hawg_dubius_ns/`. Manifests retain URLs,
 retrieval/verification dates, revisions and SHA-256 hashes. The focused source
 test protects units, seasonal hazards, observation roles, mixed state dates,
-reported gaps and uncertainty. The limited annual translation must document
-its age-1 entry, seasonal aggregation, survey timing approximation and changed
-recruitment/effort likelihoods before a fit is interpreted.
+reported gaps and uncertainty.
 
 The published `data.R` supplies `surveySD`, `catchSD` and `estSD`, whereas
 the declared pinned builder accepts `surveyCV`, `catchCV` and `estCV`

@@ -18,7 +18,7 @@ The model timing table lists fishery timing 0.5, early triennial timing 0.6, lat
 
 ## Screening decision
 
-The detailed assessment has survey age-at-length observations and fitted numbers-at-age, but no fishery age compositions or accepted-run quantities that support fishery catch-at-age reconstruction. The official model's age structure and output tables do not cure that input gap. No canonical stock, assessment, input, or output records were added, and no translation was attempted.
+The detailed assessment has survey age-at-length observations and fitted numbers-at-age, but no fishery age compositions or accepted-run quantities that support fishery catch-at-age reconstruction. The official model's age structure and output tables do not cure that input gap. No canonical stock, assessment, input, or output records were added.
 
 ## Sources and local cache
 

@@ -30,7 +30,7 @@ Reported units are thousands of fish for recruitment and numbers-at-age, tonnes 
 
 ## Remaining gaps
 
-The native SAM fit/data objects, exact survey index scale and effort definition, exact survey timing fractions, and numeric gear-change downweights remain unresolved. Those details may affect an eventual translation.
+The native SAM fit/data objects, exact survey index scale and effort definition, exact survey timing fractions, and numeric gear-change downweights remain unresolved.
 
 ## Sources and cached files
 

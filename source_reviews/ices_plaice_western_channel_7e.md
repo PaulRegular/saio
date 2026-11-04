@@ -121,24 +121,17 @@ gitignored `source_cache/ck_ices_wgcse_platessa_is7e/`, with URLs, retrieval
 dates, checksums and repository revision in the manifest. The 2026 chapter
 is retained solely to establish current monitoring/advice status.
 
-## Translation limit
+## Source coverage and gaps
 
 The aggregate biomass index cannot be split into invented age-specific
 number indices. MSE operating models and earlier trial SAM fits are not
 substituted for official annual estimates.
 
-Preparation returns no stock specification, and tests ensure that the native
-indicators do not fill standard SSB/F/N comparison tables. This is a source
-and assessment-structure shortfall rather than numerical non-convergence.
-
 ## Validation
 
 The importer passed a byte-identical second run and preserved every unrelated
 canonical row. Full database validation passed: 118 stocks, 117 assessment
-events, 2,245 assumptions, 364,550 inputs and 195,416 outputs. The source test
-and eight related assessment-analysis checks passed (nine scripts total),
-covering the preceding plaice/redfish imports, reference alignment, plus groups,
-comparison definitions, default-first initialization and unit conversion.
+events, 2,245 assumptions, 364,550 inputs and 195,416 outputs. The source-specific check passed.
 
 The source vocabulary now distinguishes aggregate landings and discard biomass
 under one actual fishery identity. Its validator permits missing component
@@ -148,12 +141,6 @@ with zeros. Permanent checks compare both published summary tables, propagate
 rounding for catch sums and harvest rates, and reject conversion of the native
 indicators into standard N/F/SSB references.
 
-No core model mathematics or package API changed. The full package suite and
-R CMD check were not repeated for this analysis-only milestone; their preceding
-Area 4 reporting results were 2,936 passes and Status: OK, with tests run
-separately. The wider assessment-analysis suite was not rerun, and previously
-recorded unrelated failures are not claimed resolved. User readiness-table
-edits were preserved and shared comparison tables were not regenerated.
 ## Sources
 
 - [Final 2025 advice, version 3](https://doi.org/10.17895/ices.advice.29412776.v3), especially Tables 1, 2 and 9.

@@ -39,8 +39,6 @@ ICES SAG publishes age-1 recruitment, SSB, and Fbar, with a 95% interval. Its so
 
 The archive config sets `fbarRange=3 7`, while SAG metadata defines Fbar as ages 3–6. The pinned local SAM summary also reports Fbar(3–7). The canonical output preserves the published SAG metric and labels its age group 3–6; this difference remains an unresolved source/configuration discrepancy.
 
-The uses the native observations and fixed M, a temporal random walk for N and recruitment, and a correlated random walk for F with an estimated age correlation. It retains survey-specific q groups (ages 1–4 separate; ages 5–6 shared) and one index SD per survey. These approximate SAM's process covariance and parameter sharing; they do not reproduce SAM's exact likelihood or age-6/7 shared F state. Only aggregate SSB and recruitment are directly comparable; Fbar is non-equivalent, and N-at-age, F-at-age and total abundance are unavailable.
-
 ## Validation
 
-The importer and source test check the native year/age surfaces, missing survey cells, units, sample times, archive revision, SAG intervals, and catch-total consistency. The catch-to-SAG check uses catch numbers times catch weights in thousands of fish and kilograms per fish; the resulting annual tonnes agree with SAG within 1%. The source and translation tests pass, as does full database structural validation.
+The importer and source test check the native year/age surfaces, missing survey cells, units, sample times, archive revision, SAG intervals, and catch-total consistency. The catch-to-SAG check uses catch numbers times catch weights in thousands of fish and kilograms per fish; the resulting annual tonnes agree with SAG within 1%. The source tests and full database structural validation pass.

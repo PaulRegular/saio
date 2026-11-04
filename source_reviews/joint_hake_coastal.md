@@ -93,15 +93,4 @@ quantities refer to the 2025 production base, not a FIMS demonstration or the
 
 ## Observation and comparison definitions
 
-The translation uses 1975–2024 and ages 2–15+. Native percentages are
-normalized outside the database, as in the source, and converted using
-original totals and weights before age restriction. All supplied weights
-and fecundity products are identical across ages 15–20+, so the observed
-15+ grouping does not require an invented biological tail. The supplied
-fecundity product divided by population weight gives maturity; first mature
-age 2, female fraction 0.5 and January 1 timing are applied separately.
-
-The local dashboard retains native posterior SSB and explicitly approximate
-common-age sums of marginal medians. F-at-age and Fbar comparisons remain
-unavailable. Available credible intervals are retained only on their native
-quantities; no uncertainty is attached to sums or pooled posterior medians.
+Native percentages are normalized in the source. All supplied weights and fecundity products are identical across ages 15–20+. The supplied fecundity product divided by population weight gives maturity; first mature age 2, female fraction 0.5 and January 1 spawning timing are distinct source settings.

@@ -19,7 +19,7 @@ The database was constructed with substantial agentic-AI assistance. Not all rec
 - source_reviews/: official source interpretation and unresolved gaps; see [review guidance](source_reviews/README.md).
 - tests/: standalone source and reader checks.
 - provenance/: tracked retrieval manifests.
-- source_cache/: ignored local PDFs, native files and fitted objects.
+- source_cache/: ignored local PDFs, native files and official assessment objects.
 
 From the repository root, run:
 
@@ -29,13 +29,13 @@ source("R/read_database.R")
 database <- read_database()
 ```
 
-The validator requires cli. Individual importers document their source-specific dependencies and expected cached files. Canonical validation does not fit an assessment model. Importers with preview controls use `--dry-run`, `SAIO_DATABASE_DRY_RUN` or `SAIO_IMPORT_DRY_RUN`; check the script for its supported control and required value (`true` or `1`). Previews parse and validate sources without updating the database or discovery register.
+The validator requires cli and checks source-table structure and consistency. Individual importers document their source-specific dependencies and expected cached files. Importers with preview controls use `--dry-run`, `SAIO_DATABASE_DRY_RUN` or `SAIO_IMPORT_DRY_RUN`; check the script for its supported control and required value (`true` or `1`). Previews parse and validate sources without updating the database or discovery register.
 
 The inventory test checks the current register and derived summaries without rerunning screening decisions. Stock-specific source tests remain in their own files. After authorized register changes, regenerate `discovery/inventory_progress.csv` and `discovery/inventory_units.csv` with `195_summarize_discovery.R` and `196_summarize_inventory_units.R` before validating the inventory.
 
 ## Versioned source records
 
-Git commits identify source revisions and Git LFS stores the canonical CSV contents. Record the revision used in any secondary analysis. Retrieval URLs, dates, checksums and pinned native revisions belong in source provenance. Cached authoritative files are not rewritten to suit a downstream model.
+Git commits identify source revisions and Git LFS stores the canonical CSV contents. Record the revision used in any secondary analysis. Retrieval URLs, dates, checksums and pinned native revisions belong in source provenance. Cached authoritative files retain their original content and provenance.
 
 ## Attribution and reuse
 

@@ -8,6 +8,8 @@ assessment through 2025, corresponding to Charbonneau–Keith
 The stock-specific statistical catch-at-age model (SCAA) is implemented in TMB;
 it is not a SAM assessment.
 
+The official population model includes ages 2+.
+
 - [JRN-AFWG 2026, chapter 6](https://www.hi.no/hi/nettrapporter/imr-vniro-2026-5): production assessment, original input tables and fitted outputs.
 - [WKREDFISH 2018](https://doi.org/10.17895/ices.pub.19291142.v1): benchmark and working document 4, including the SCAA equations, survey observation models and baseline configuration.
 - [2026 advice for 2027](https://www.hi.no/en/hi/nettrapporter/imr-vniro-en-2026-3): current advice basis.
@@ -62,7 +64,7 @@ Survey timing fractions are winter 0.12, ecosystem 0.75, Russian autumn 0.90
 and deep pelagic 0.67, from framework working document 4. The framework fixes
 ecosystem survey scaling at 1/3500 under its native units. The 2026 tables
 report millions; current production input conversions have not been recovered.
-That coefficient must not be copied into a translation without reconciling units.
+The coefficient and the 2026 tables must not be combined without reconciling units.
 
 Printed dashes remain missing. Six Russian-survey cells contain `+` without
 a numerical definition; they remain missing with a cell-specific note, not
@@ -89,28 +91,15 @@ Table 6.21 labels age-6 recruitment “thousands”, but its values match Table
 whereas the summary gives 592. The raw summary and its reported unit are
 retained as `recruitment_age6_reported`, with the inconsistency flagged. It
 does not populate standard recruitment. The age-2 summary agrees with N in
-millions; an eventual age-6 comparison should use same-year official N6.
+millions; same-year official N6 retains the verified age-6 abundance scale.
 No SEs or intervals have been inferred from these point estimates.
 
-## Remaining source and translation gaps
+## Remaining source gaps
 
-1. Numerical model weights and current maturity at ages 2–5 are unpublished. The framework describes young-age biology but does not supply the complete
-   current numerical vector. The limited fit therefore starts at age 6 and
-   cannot reproduce the full age-2+ population model.
-2. Table 6.19 contains aggregate deep-pelagic survey comparisons and means,
-   **not** a numerical age-composition table. The age curves are Figure 6.14;
-   numerical likelihood compositions and age-block weights remain unavailable.
-3. The total and outside-EEZ pelagic catch tables overlap. Their exact assembly
-   into the two source fleet likelihoods must be recovered for a closer
-   source-faithful translation; the current approximation uses total catch once.
-4. Current production observation selection, variance settings and the full
-   native configuration have not been recovered. Survey coverage and species-identification qualifications
-   in the source still apply.
-5. Aggregated 19+ reporting does not recover the source's explicit older-age
-   state and biological surfaces. Native SSB is retained; no claim is made that
-   it can be reconstructed exactly from the incomplete published biology.
+1. Numerical model weights and current maturity at ages 2–5 are unpublished. The framework describes young-age biology but does not supply the complete current numerical vector.
+2. Table 6.19 contains aggregate deep-pelagic survey comparisons and means, **not** a numerical age-composition table. The age curves are Figure 6.14; numerical likelihood compositions and age-block weights remain unavailable.
+3. The total and outside-EEZ pelagic catch tables overlap. Their exact assembly into the two source fleet likelihoods remains unresolved.
+4. Current production observation selection, variance settings and the full native configuration have not been recovered. Survey coverage and species-identification qualifications in the source still apply.
+5. Aggregated 19+ reporting does not recover the source's explicit older-age state and biological surfaces. Native SSB is retained; it cannot be reconstructed exactly from the incomplete published biology.
 
-The partial import supports a restricted, converged age-6+ approximation and
-dashboard, not a source-faithful age-2+ replication. The source completeness
-statuses remain partial, and the substantial F and SSB scale differences
-should remain visible in any use of this comparison.
+The source completeness statuses remain partial.

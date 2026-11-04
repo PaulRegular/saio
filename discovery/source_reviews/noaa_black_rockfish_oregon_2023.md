@@ -81,5 +81,3 @@ checksums, and the revision/archive identity.
 - [Official Oregon Stock Synthesis model files](https://www.pcouncil.org/documents/black-rockfish-or-2023-model-files-zip-file/)
 - [PFMC groundfish assessment documents](https://www.pcouncil.org/stock-assessments-star-reports-stat-reports-rebuilding-analyses-terms-of-reference/groundfish-stock-assessment-documents/)
 - [Stock Synthesis 3.30 manual](https://nmfs-ost.github.io/ss3-doc/SS330_User_Manual_release.html)
-
-No or model fit was attempted as part of this source import.

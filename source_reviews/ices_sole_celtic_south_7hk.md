@@ -36,7 +36,7 @@ structure and possible connectivity across neighbouring areas. Stock
 boundaries have not been revised on that basis. The record's terminal year
 is the latest year of reported landings, not a model fitting year.
 
-## Earlier age-based assessment and translation
+## Earlier age-based assessment
 
 The 2019 advice used XSA on landings-at-age and a commercial LPUE series
 from 7.j to provide relative trends for 7.h–k. The 2020 WKFlatNSCS benchmark

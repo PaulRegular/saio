@@ -71,7 +71,7 @@ recruitment 708,296 thousand fish, total biomass 111,872 tonnes, SSB 41,978
 tonnes, landings 3,611 tonnes, and Fbar 0.0814 per year. Reported recruitment
 also agrees with age-1 N-at-age to within 0.48 in the printed scale.
 
-## Status and translation limits
+## Status and source gaps
 
 The assessment, inputs, and outputs are marked partial because the recovered
 report leaves some units unresolved, does not provide the native executed run,

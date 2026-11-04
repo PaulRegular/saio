@@ -158,16 +158,6 @@ tables.
 
 ## Validation
 
-The four regional source checks, four translation checks, reference alignment,
-plus-group handling and default-first initialization checks all passed (11
-assessment-analysis scripts). The dashboard tests passed 203 assertions;
-the full package suite passed 2,936 assertions with no failures, warnings or
-skips. A package-only `R CMD check --no-manual --no-tests` returned Status: OK;
-the complete package tests were run separately. The full assessment-analysis
-suite was not repeated for this milestone; its previously documented unrelated
-failures remain outside this source/translation review. The actual Official-only
-Area 4 dashboard rendered successfully.
-
 - [HAWG 2025, version 5](https://doi.org/10.17895/ices.pub.28389008.v5), section 10.5 and Tables 9.1.5–9.1.7, 9.5.1–9.5.12.
 - [Official 2025 advice](https://asd.ices.dk/viewAdvice/3832), [SAG 19335](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=19335) and separate [2026 SAG 21271](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21271).
 - [SAG 21271 machine-readable XML](https://sag.ices.dk/SAG_API/StockXmlDownload/21271), cached with the source page and checksums under `source_cache/ck_ices_hawg_dubius_ns/2026_san.sa.4/`.

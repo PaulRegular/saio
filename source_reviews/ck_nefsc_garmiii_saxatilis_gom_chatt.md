@@ -107,7 +107,7 @@ identified as CVs in notes; they are not inserted into `se`. Confidence bounds
 and age-specific uncertainty are not supplied and remain missing. The source
 tests also verify that fully-recruited F is not converted into an Fbar series.
 
-## Remaining gaps before translation
+## Remaining source gaps
 
 The raw fleet compositions, age-specific/aggregate survey observations,
 annual CV arrays, and complete 2024 year-age weights were not recovered from
@@ -135,9 +135,7 @@ the fitted age-1 recruitment series for 1982–2023, then reads `BAYALKS` and
 selectivities. The appendix names those files but does not include or link the
 workbooks on its download page. the recruitment vector is a fitted state, not an observation.
 
-Translation
-requires those original inputs and resolution of the remaining configuration
-and year-alignment questions; observations will not be inferred from fitted N/F.
+Original observation inputs and the remaining configuration and year-alignment details are unresolved; observations are not inferred from fitted N/F.
 
 ## Separate 2018 historical assessment
 
@@ -159,7 +157,5 @@ composition sample sizes are not available.
 
 The published index tables provide numerical values for 1982–2017. The model
 text also describes Maryland YOY and age-1 indices in 1970–1981, but those
-values are not tabulated in the available numerical appendix. They are not
-invented or used in the translation. Appendix B10 links YOY indices to age 1 and age-1 indices to age 2. Its “VA Age 1” label conflicts with the “NY Age-1” label in Table B5.6 and
-assessment diagnostics. The translation retains the table label, links the
-series to age 2, and records the discrepancy.
+values are not tabulated in the available numerical appendix. Those unreported values are not invented. Appendix B10 links YOY indices to age 1 and age-1 indices to age 2. Its “VA Age 1” label conflicts with the “NY Age-1” label in Table B5.6 and
+assessment diagnostics. The conflicting source labels remain unresolved.

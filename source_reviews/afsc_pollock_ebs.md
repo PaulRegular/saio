@@ -71,17 +71,14 @@ The database now includes the source-specific weight-at-age matrices for BTS (42
 
 The native temperature vector is recorded by BTS year. Its unit is not stated in the model data file, and the control fixes the temperature slope at zero. The single fishery length-composition vector is also recorded after the same normalization used by the model; its fixed likelihood weight is 50. The model code defines its length-bin values as 20–69 in unit increments, but the input does not identify their units.
 
-## Recovered outputs and comparison definitions
+## Recovered outputs and definitions
 
 The official report's historical outputs are retained in their native units:
 N-at-age (ages 1–9 and a reported 10+ group), age-1 recruitment, female SSB,
 and one age-3+ biomass total for each year from 1964–2024. The 10+ report row
 is not age 10. Recruitment is matched at age 1.
 
-SAFE Table 26's age-3+ biomass is stored as biomass_by_age_group, with age
-blank and age_group set to 3+. Female SSB is available for both fits over ages 1–15. The SSB comparison is now marked `matched` in the sense of its biomass
-definition, **not** as a claim of identical fitted SSB estimates or likelihoods. Printed CV fields are not converted to standard errors; uncertainty is
-unavailable for these source outputs.
+SAFE Table 26's age-3+ biomass is stored as biomass_by_age_group, with age blank and age_group set to 3+. The report provides female SSB over ages 1–15. Printed CV fields are not converted to standard errors; uncertainty is unavailable for these source outputs.
 
 Annual official F-at-age was reconstructed from the fitted parameter file
 runs/lastyr/pm_or.parxx, the selectivity-change table runs/data/selvar24.dat,

@@ -95,12 +95,9 @@ including complete catch length-frequency data and their underlying survey
 processing, have not been recovered. The 2025 and 2026 HAWG PDFs, advice PDFs,
 SAG XML and associated pages are cached locally with file hashes and URLs.
 
-## Translation status
+## Source coverage
 
-The survey-index rule does not estimate population N/F/M-at-age, recruitment,
-or an age-structured population model. A comparison that presents those
-quantities as official estimates would be misleading. A
-and comparison dashboard are not supported by this assessment alone.
+The survey-index rule does not estimate population N/F/M-at-age or recruitment. Its reported indices are not age-structured population estimates.
 
 ## Sources
 

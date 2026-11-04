@@ -25,5 +25,5 @@ source data.
 - ICES HAWG 2026, section 3.6: [official assessment report](https://doi.org/10.17895/ices.pub.32625759).
 - ICES Stock Assessment Graphs, assessment key 21294:
   [official source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21294).
-- Current production-run inputs, outputs, and translation limits are recorded
+- Current production-run inputs, outputs, and source gaps are recorded
   in [the existing 20–24 stock review](ices_herring_western_baltic_2026.md).
