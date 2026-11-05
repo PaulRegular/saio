@@ -15,6 +15,10 @@ is_ices <- x$organization == 'ICES'
 region[is_ices] <- x$assessment_area[is_ices]
 is_nafo <- x$organization == 'NAFO'
 region[is_nafo] <- x$assessment_area[is_nafo]
+is_fisheries_nz <- x$organization == 'Fisheries New Zealand'
+region[is_fisheries_nz] <- 'New Zealand'
+other_region <- is.na(region) & !is.na(x$assessment_area) & nzchar(x$assessment_area)
+region[other_region] <- x$assessment_area[other_region]
 region[!is.na(region)] <- trimws(gsub('[[:space:]]+', ' ', region[!is.na(region)]))
 region[is.na(region) | !nzchar(trimws(region))] <- 'Unspecified'
 key <- data.frame(organization = x$organization, source_region = region, stringsAsFactors = FALSE)

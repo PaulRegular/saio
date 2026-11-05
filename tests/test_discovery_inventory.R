@@ -10,7 +10,7 @@ selected <- read_table("discovery/selected_batch_01_2026.csv")
 # Source-list membership is distinct from current stock and import status.
 stopifnot(nrow(register) > 0L, !anyNA(register$candidate_id),
   !anyDuplicated(register$candidate_id), !any(register$candidate_id == "candidate_id"),
-  all(register$organization %in% c("NOAA", "ICES", "DFO", "NAFO")),
+  all(register$organization %in% c("NOAA", "ICES", "DFO", "NAFO", "Fisheries New Zealand")),
   all(register$match_status %in% c("unreviewed", "matched", "new", "ambiguous")),
   all(register$screening_status %in% c("not_started", "in_progress", "screened")),
   all(register$eligibility %in% c("unresolved", "eligible", "ineligible")),
@@ -97,6 +97,18 @@ redfish3ln_unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_
 stopifnot(nrow(redfish3ln_unit) == 1L,
   grepl("DFO", redfish3ln_unit$organizations, fixed = TRUE),
   grepl("NAFO", redfish3ln_unit$organizations, fixed = TRUE))
+hoki <- lookup("MPI:HOK1")
+hoki_selection <- read_table("discovery/selected_batch_02_2026.csv")
+stopifnot(hoki$candidate_unit_id == "nz_hoki_hok1",
+  hoki$official_stock_id == "HOK 1",
+  grepl("not numbers-at-age", hoki$catch_age_evidence, fixed = TRUE),
+  hoki$import_status %in% c("not_started", "partial"),
+  nrow(hoki_selection) == 1L,
+  hoki_selection$candidate_id == "MPI:HOK1",
+  hoki_selection$curation_status %in% c("selected_for_source_curation", "source_curated_partial"))
+cat("New Zealand HOK 1 screening and selection passed.\n")
+
 cat("NAFO inventory coverage, screening decisions and DFO crosswalks passed.\n")
 
 cat("Current discovery identities, source evidence, unit deduplication and summary accounting passed.\n")
+
