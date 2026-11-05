@@ -56,8 +56,25 @@ The NAFO SA1 redfish row is deliberately left ambiguous. The official label comb
 
 Cod 2J3KL appears in NAFO Council proceedings as a Canadian assessment requested for inclusion in an annex. It remains the existing DFO canonical unit dfo_cod_2j3kl, not a separate NAFO stock or assessment.
 
-## Eligibility interpretation and next source-curation work
+## Reconciliation and current curation status
 
-Eligibility here means that a detailed public source supports age-specific assessment inputs, biological quantities and comparable population outputs. It does not mean all arrays are machine-readable, that uncertainty is complete, or that a tinyAM translation is ready. Before curation, cache and checksum the relevant PDFs/native files, pin the assessment run, verify survey dates and units, and inspect the exact accepted model inputs.
+The official 2026 full-assessment page and the 2017-2025 advice matrix were rechecked on 2026-11-05. The 2026 page lists full assessments for cod 3M, American plaice 3LNO and 3M, redfish 3LN, thorny skate 3LNOPs, and witch flounder 3NO. Of these, cod 3M and American plaice 3LNO have age-structured production records in SAIO. American plaice 3M has no updated age-length inputs, and the other listed assessments are index/monitoring approaches without comparable age-based population outputs. The NAFO advice matrix also supports the existing treatment of cod 3NO (latest detailed full production run 2021) and beaked redfish 3M (latest detailed full run 2024).
 
-The four new candidates to prioritize are Cod 3M, Cod 3NO, beaked redfish 3M and American plaice 3LNO. Cod 3M has the most recent and complete age-based assessment, with known catch-age and carried-forward biology gaps. Cod 3NO is older and lacks its terminal catch-age year. The 3M redfish XSA needs confirmation of accessible accepted-run inputs. American plaice 3LNO has extensive age-specific data but its accepted model is explicitly unsuitable for interpreting absolute population estimates. Do not rank their scientific usefulness until source files and model outputs are checked.
+| Age-structured candidate | Canonical representation | Current source completeness | Main unresolved source limitation |
+|---|---|---|---|
+| Cod 3M | `nafo_cod_3m`, assessment `nafo_cod_3m_2026` | Inputs, assumptions, outputs: partial | The 2018 survey age-15 cell is missing within the fitted 8+ group; age-specific posterior uncertainty and production code/object are unavailable. |
+| Cod 3NO | `nafo_cod_3no`, assessment `nafo_cod_3no_2021` | Inputs: complete; assumptions and outputs: partial | The report has no catch-at-age for 2020 and does not tabulate uncertainty for the population outputs. No newer full production assessment was found. |
+| Beaked redfish 3M | `nafo_redfish_3m`, assessment `nafo_redfish_3m_2024` | Inputs, assumptions, outputs: partial | The accessible Council report does not include the detailed XSA input and fitted-state tables; the separately indexed assessment SCR could not be retrieved. |
+| American plaice 3LNO | `nafo_american_plaice_3lno`, detailed assessment `nafo_american_plaice_3lno_2021`; 2026 monitoring is separate | Inputs: complete; assumptions and detailed outputs: partial | The 2021 ADAPT is considered useful for trends but unreliable for absolute population levels; 2026 advice is monitoring, not a new fitted population assessment. |
+| Greenland halibut SA2+3KLMNO | Existing DFO stock `dfo_greenland_halibut_2_3klmno`; 2023 SCAA and SSM records are separate MSE operating-model runs | Inputs, assumptions, outputs: partial | The 2023 age-based runs support MSE, not the 2026 TAC advice. Do not create a duplicate NAFO stock or treat the 2023 runs as the current production advice model. |
+
+This reconciliation identifies four distinct new NAFO age-structured stock units, all already represented by canonical assessment records, plus one Greenland halibut unit shared with DFO. It identifies no additional unrepresented NAFO age-structured production assessment in the current official 2026 listing. Several NAFO units crosswalk to DFO assessment units, and the source review above records why these are not additional stock records. The remaining NAFO cases in the register are ineligible for an age-structured comparison, outside the current finfish scope, or unresolved in identity; these are not counted as missing age-structured imports.
+
+The NAFO wave is therefore reconciled for this inventory. Source gaps in the five represented cases remain follow-up questions, not evidence that a further stock unit should be added. The next discovery wave is New Zealand and Australia, where candidates will be screened against the same source-first requirements before any canonical import.
+
+Primary inventory cross-checks:
+
+- NAFO 2026 Stock Advice: <https://www.nafo.int/Science/Science-Advice/Stock-advice>
+- NAFO Stocks and Advice matrix, 2017-2025: <https://www.nafo.int/Science/Stocks-Advice>
+- NAFO Scientific Council SCR Documents: <https://www.nafo.int/Library/Science-Council/Scientific-Council-SC-SCR/ev/1>
+- NAFO 2026 Scientific Council Report: <https://www.nafo.int/Portals/0/PDFs/sc/2026/scs26-12.pdf>
