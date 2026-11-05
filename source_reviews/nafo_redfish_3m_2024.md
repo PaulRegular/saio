@@ -27,7 +27,7 @@ The 2024 XSA used ages 4–19+, the EU Flemish Cap summer survey, and the docume
 
 ## Outputs and completeness
 
-Table 7.1 in SCS Doc. 24/16 reports beginning-of-year 2024–2027 SSB, yield and TAC under seven scenarios. The canonical outputs table has no scenario field, so the numeric outputs retain the common deterministic 2024 values and the Fstatusquo scenario (F=0.0585) only. The other six scenarios remain in the cited source table; their labels and the selection are recorded in assumptions. The 2025–2027 SSB intervals are central 80% intervals, not 95% intervals.
+Table 7.1 in SCS Doc. 24/16 reports beginning-of-year 2024–2027 SSB, yield and TAC under seven scenarios. The shared 2024 baseline values and 2025 SSB (common to all scenarios) are recorded once. Scenario-specific 2026–2027 SSB, 2025–2026 yield, and 2025–2026 TAC are recorded with their source scenario in the outputs table. The 2025–2027 SSB intervals are central 80% intervals, not 95% intervals.
 
 Historical annual SSB, numbers-at-age, F-at-age, M-at-age, and age-specific XSA diagnostics are shown only in figures or are not available in the accessible material; they are not digitized. No accepted limit reference point exists. F0.1=0.0675 is a candidate reference point, while Fmax is considered too uncertain and is not accepted.
 

@@ -74,9 +74,9 @@ add_assumption("projection", "recruitment", "2024 age-4 recruitment uses the geo
   "NAFO SCS Doc. 24/16, Section V.4.h, p. 163",
   "")
 add_assumption("projection", "fishing_mortality_scenarios", "F=0; F0.1=0.0675; F=M=0.1; Fstatusquo=0.0585; 1.25 TAC; TAC; 0.75 TAC",
-  "NAFO SCS Doc. 24/16, Section V.4.h, Table 7.1, pp. 163–164",
-  "Outputs retain the scenario label in each row's notes because the canonical output table has no scenario column.")
-add_assumption("projection", "scenario_outputs_recorded", "Fstatusquo=0.0585 only", "NAFO SCS Doc. 24/16, Table 7.1, p. 164", "Alternative scenarios remain in the source because the canonical output table has no scenario dimension.")
+  "NAFO SCS Doc. 24/16, Section V.4.h, Table 7.1, pp. 163-164",
+  "Projection output rows carry the source scenario in the scenario field.")
+add_assumption("projection", "scenario_outputs_recorded", "All seven scenarios", "NAFO SCS Doc. 24/16, Table 7.1, p. 164", "The common 2025 SSB is recorded once; scenario-specific SSB for 2026-2027, yield, and TAC are keyed by scenario. SSB intervals are central 80%.")
 add_assumption("reference_points", "F0.1", "0.0675 (candidate; not confirmed)",
   "NAFO SCS Doc. 24/16, Section V.4.g, p. 163",
   "No accepted limit reference point is available; Fmax is considered highly uncertain and was not accepted.")
@@ -91,13 +91,13 @@ projection_scenarios <- list(
   "0.75 TAC" = list(ssb = c(50199, 47251, 44292), lwr = c(44661, 42261, 39825), upr = c(59311, 55078, 51233), yield = c(12503, 11555), tac = c(13127, 12131))
 )
 outputs <- list()
-add_output <- function(type, measure, year, value, unit, se = NA_real_, lwr = NA_real_, upr = NA_real_, notes, source_reference) {
+add_output <- function(type, measure, year, value, unit, se = NA_real_, lwr = NA_real_, upr = NA_real_, notes, source_reference, scenario = "") {
   outputs[[length(outputs) + 1L]] <<- data.frame(
     assessment_id = assessment_id, type = type, measure = measure, fleet = "",
     survey = "", sex = "", region = "NAFO Division 3M", season = "",
     year = as.integer(year), age = NA_real_, age_group = "", value = value,
     se = se, lwr = lwr, upr = upr, unit = unit, source_type = "official_table",
-    source_reference = source_reference, notes = notes, stringsAsFactors = FALSE
+    source_reference = source_reference, notes = notes, scenario = scenario, stringsAsFactors = FALSE
   )
 }
 
@@ -109,26 +109,25 @@ add_output("catch", "yield", 2024, 13195, "tonnes",
 add_output("catch", "catch_advice", 2024, 17503, "tonnes",
   notes = "2024 baseline TAC for all three redfish species combined; this is not beaked-redfish catch.", source_reference = projection_ref)
 add_output("biomass", "SSB", 2025, 50199, "tonnes", lwr = 44661, upr = 59311,
-  notes = "50th percentile common to all seven scenarios; interval is central 80% (10th–90th percentiles).",
+  notes = "50th percentile common to all seven scenarios; interval is central 80% (10th-90th percentiles).",
   source_reference = projection_ref)
-scenario <- "Fstatusquo=0.0585"
-z <- projection_scenarios[[scenario]]
+for (scenario in names(projection_scenarios)) {
   z <- projection_scenarios[[scenario]]
   for (i in 2:3) {
     year <- 2024L + i
     add_output("biomass", "SSB", year, z$ssb[[i]], "tonnes",
       lwr = z$lwr[[i]], upr = z$upr[[i]],
-      notes = paste0("50th percentile under scenario ", scenario, "; interval is central 80% (10th–90th percentiles)."),
-      source_reference = projection_ref)
+      notes = paste0("50th percentile under scenario ", scenario, "; interval is central 80% (10th-90th percentiles)."),
+      source_reference = projection_ref, scenario = scenario)
   }
   for (i in seq_along(2025:2026)) {
     year <- 2024L + i
     add_output("catch", "yield", year, z$yield[[i]], "tonnes",
       notes = paste0("Projected beaked-redfish yield (50th percentile) under scenario ", scenario, "."),
-      source_reference = projection_ref)
+      source_reference = projection_ref, scenario = scenario)
     add_output("catch", "catch_advice", year, z$tac[[i]], "tonnes",
       notes = paste0("TAC for all three redfish species combined under scenario ", scenario, "; not beaked-redfish yield."),
-      source_reference = projection_ref)
+      source_reference = projection_ref, scenario = scenario)
   }
 }
 
@@ -172,10 +171,10 @@ candidate_path <- file.path(root, "discovery", "candidates.csv")
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
 candidates <- read_csv(candidate_path)
-if (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id) stop("Stock or assessment already exists; inspect before importing.", call. = FALSE)
+if (!identical(Sys.getenv("SAIO_NAFO_IMPORT_DRY_RUN"), "1") && (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id)) stop("Stock or assessment already exists; inspect before importing.", call. = FALSE)
 candidate_row <- which(candidates$candidate_id == candidate_id)
 if (length(candidate_row) != 1L || candidates$candidate_unit_id[candidate_row] != stock_id) stop("Expected one candidate matching the NAFO 3M beaked-redfish unit.", call. = FALSE)
-if (nrow(assumptions_new) != 16L || nrow(inputs_new) != 9L || nrow(outputs_new) != 10L) stop("Unexpected redfish extraction row counts.", call. = FALSE)
+if (nrow(assumptions_new) != 16L || nrow(inputs_new) != 9L || nrow(outputs_new) != 46L) stop("Unexpected redfish extraction row counts.", call. = FALSE)
 if (any(!is.finite(inputs_new$value)) || any(!is.finite(outputs_new$value)) || any(outputs_new$lwr > outputs_new$upr, na.rm = TRUE)) stop("Non-finite or invalid redfish values.", call. = FALSE)
 
 if (identical(Sys.getenv("SAIO_NAFO_IMPORT_DRY_RUN"), "1")) {

@@ -12,7 +12,7 @@ stock <- read_small("database/stocks.csv")
 assessments <- read_small("database/assessments.csv")
 assumptions <- read_selected("database/assumptions.csv", c("assessment_id", "component", "setting", "value", "source_reference", "notes"))
 inputs <- read_selected("database/inputs.csv", c("assessment_id", "type", "measure", "basis", "year", "age", "value", "unit", "source_type", "source_reference", "notes"))
-outputs <- read_selected("database/outputs.csv", c("assessment_id", "type", "measure", "year", "value", "lwr", "upr", "unit", "source_type", "source_reference", "notes"))
+outputs <- read_selected("database/outputs.csv", c("assessment_id", "type", "measure", "year", "value", "lwr", "upr", "unit", "source_type", "source_reference", "notes", "scenario"))
 candidates <- read_small("discovery/candidates.csv")
 id <- "nafo_redfish_3m_2024"
 stock_id <- "nafo_redfish_3m"
@@ -36,17 +36,22 @@ stopifnot(nrow(s) == 1L, s$authority == "NAFO", s$authority_stock_id == "redfish
   identical(as.numeric(i$value), c(5.2, 6.2, 6.9, 10.3, 10.2, 8.7, 8.3, 9.4, 9.4)),
   all(i$unit == "1000 tonnes"), all(i$source_type == "official_table"),
   nrow(as) == 16L, any(as$setting == "natural_mortality_history"),
-  any(as$setting == "scenario_outputs_recorded"),
+  any(as$setting == "scenario_outputs_recorded" & as$value == "All seven scenarios"),
   any(as$setting == "species_definition" & grepl("Sebastes fasciatus", as$value, fixed = TRUE)),
-  nrow(o) == 10L, sum(o$type == "biomass" & o$measure == "SSB") == 4L,
-  all(grepl("Fstatusquo", o$notes[o$year %in% c("2026", "2027")], fixed=TRUE)),
-  sum(o$type == "catch" & o$measure == "yield") == 3L,
-  sum(o$type == "catch" & o$measure == "catch_advice") == 3L,
+  nrow(o) == 46L, sum(o$type == "biomass" & o$measure == "SSB") == 16L,
+  sum(o$type == "catch" & o$measure == "yield") == 15L,
+  sum(o$type == "catch" & o$measure == "catch_advice") == 15L,
   all(o$source_type == "official_table"),
+  all(is.na(o$scenario[o$year == "2024"])),
+  all(is.na(o$scenario[o$type == "biomass" & o$measure == "SSB" & o$year == "2025"])),
+  identical(sort(unique(o$scenario[!is.na(o$scenario)])),
+    sort(c("F=0", "F0.1=0.0675", "F=M=0.1", "Fstatusquo=0.0585",
+      "1.25 TAC", "TAC", "0.75 TAC"))),
+  all(table(o$scenario[!is.na(o$scenario)]) == 6L),
   all(o$lwr[o$measure == "SSB" & !is.na(o$lwr)] <= o$upr[o$measure == "SSB" & !is.na(o$upr)]),
-  o$value[o$measure == "SSB" & as.integer(o$year) == 2026L & grepl("Fstatusquo", o$notes, fixed = TRUE)] == 45409,
-  o$lwr[o$measure == "SSB" & as.integer(o$year) == 2026L & grepl("Fstatusquo", o$notes, fixed = TRUE)] == 40641,
-  o$upr[o$measure == "SSB" & as.integer(o$year) == 2026L & grepl("Fstatusquo", o$notes, fixed = TRUE)] == 52891,
+  o$value[o$measure == "SSB" & as.integer(o$year) == 2026L & o$scenario == "Fstatusquo=0.0585"] == 45409,
+  o$lwr[o$measure == "SSB" & as.integer(o$year) == 2026L & o$scenario == "Fstatusquo=0.0585"] == 40641,
+  o$upr[o$measure == "SSB" & as.integer(o$year) == 2026L & o$scenario == "Fstatusquo=0.0585"] == 52891,
   o$value[o$measure == "catch_advice" & as.integer(o$year) == 2024L] == 17503,
   grepl("all three redfish species", o$notes[o$measure == "catch_advice" & as.integer(o$year) == 2024L], fixed = TRUE),
   nrow(c) == 1L, c$matched_stock_id == stock_id, c$match_status == "matched",
