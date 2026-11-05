@@ -71,7 +71,7 @@ unique_id(stocks, "stock_id", "stocks")
 unique_id(assessments, "assessment_id", "assessments")
 ocean_values <- c(
   "Northwest Atlantic", "Northeast Atlantic",
-  "Northeast Pacific", "Northwest Pacific"
+  "Northeast Pacific", "Northwest Pacific", "Southwest Pacific"
 )
 if (anyNA(stocks$ocean) || any(!stocks$ocean %in% ocean_values)) {
   cli::cli_abort("stocks$ocean must use a documented regional basin label.")
@@ -473,3 +473,4 @@ for (id in assessments$assessment_id) {
     sep = ""
   )
 }
+

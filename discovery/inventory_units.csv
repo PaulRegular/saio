@@ -742,6 +742,7 @@
 "stock:ices_whg_27_7b_ce_k","ices_whg_27_7b_ce_k","","new","eligible","screened","partial","ICES","Celtic Seas, Greater North Sea","ICES:whg.27.7b-ce-k",1
 "stock:ices_whiting_north_sea","ices_whiting_north_sea","","matched","eligible","screened","imported","ICES","Greater North Sea","ICES:whg.27.47d",1
 "stock:joint_hake_coastal","joint_hake_coastal","","matched","eligible","screened","imported","DFO | NOAA","NWFSC / SWFSC | Pacific","DFO:Pacific:Pacific Hake - Offshore | NOAA:10523",2
+"stock:mpi_hoki_hok1","mpi_hoki_hok1","","new","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:HOK1",1
 "stock:nefsc_atlantic_mackerel","nefsc_atlantic_mackerel","","matched","eligible","screened","imported","NOAA","NEFSC","NOAA:10164",1
 "stock:nefsc_cod_georges_bank","nefsc_cod_georges_bank","","matched","unresolved","screened","imported","NOAA","NEFSC","NOAA:10509",1
 "stock:nefsc_haddock_georges_bank","nefsc_haddock_georges_bank","","matched","unresolved","screened","imported","NOAA","NEFSC","NOAA:10520",1

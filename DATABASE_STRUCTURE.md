@@ -97,7 +97,7 @@ One row per biological or management stock.
 | `common_name` | Common name |
 | `area` | Assessment or management area |
 | `region` | Broader geographic region |
-| `ocean` | Regional basin: Northwest Atlantic, Northeast Atlantic, Northeast Pacific, or Northwest Pacific |
+| `ocean` | Regional basin: Northwest Atlantic, Northeast Atlantic, Northeast Pacific, Northwest Pacific, or Southwest Pacific |
 | `notes` | Stock-identity, boundary, split/merge, or other notes |
 
 ## Identifier rules
@@ -851,3 +851,4 @@ age selectivity. It is neither F-at-age nor an age-averaged Fbar; do not substit
 it for either comparison. `exploitation_fraction_at_age` retains the source
 removal fraction and its original unit (such as percent), which likewise is
 not an instantaneous F. Record the source definitions and estimate conventions.
+

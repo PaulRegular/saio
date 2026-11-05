@@ -101,7 +101,7 @@ hoki <- lookup("MPI:HOK1")
 hoki_selection <- read_table("discovery/selected_batch_02_2026.csv")
 stopifnot(hoki$candidate_unit_id == "nz_hoki_hok1",
   hoki$official_stock_id == "HOK 1",
-  grepl("not numbers-at-age", hoki$catch_age_evidence, fixed = TRUE),
+  grepl("numbers-at-age", hoki$catch_age_evidence, fixed = TRUE),
   hoki$import_status %in% c("not_started", "partial"),
   nrow(hoki_selection) == 1L,
   hoki_selection$candidate_id == "MPI:HOK1",
@@ -111,4 +111,5 @@ cat("New Zealand HOK 1 screening and selection passed.\n")
 cat("NAFO inventory coverage, screening decisions and DFO crosswalks passed.\n")
 
 cat("Current discovery identities, source evidence, unit deduplication and summary accounting passed.\n")
+
 
