@@ -441,6 +441,12 @@ index, matched to the same survey and year as the observation. Use
 model transforms this SD for its likelihood, document that transformation in
 `notes`; retain the supplied value here.
 
+`numbers_at_age_cv` stores a source-reported coefficient of variation for an
+age-specific catch or survey number-at-age estimate. Use `type = catch` or
+`index`, `basis = relative_scale`, and `unit = ratio`; match its sex, year, age,
+fleet or survey, and `observation_id` to the corresponding `numbers_at_age`
+row. The CV is not an absolute-scale standard error.
+
 Additional measures may be added when necessary, but should remain explicit and biologically interpretable.
 
 `mean_catch_length`, `length_at_first_capture` and `MSY_proxy_length` retain

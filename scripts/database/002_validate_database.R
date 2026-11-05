@@ -202,7 +202,7 @@ allowed_output_types <- c(
 )
 allowed_input_measures <- c(
   "frequency_at_length", "frequency_at_age", "maturity_fecundity_at_age", "maturity_sample_size", "mature_sample_count", "composition_sample_count",
-  "numbers_at_age", "numbers_at_age_group", "numbers_at_age_for_M_reconstruction", "index_by_age_group",
+  "numbers_at_age", "numbers_at_age_cv", "numbers_at_age_group", "numbers_at_age_for_M_reconstruction", "index_by_age_group",
   "index_catch_numbers_at_age", "effort",
   "biomass_at_age", "total_numbers",
   "total_biomass", "landings_biomass", "discard_biomass", "discard_fraction", "discard_fraction_cv", "catch_se", "total_egg_production", "landings_lower_bound", "landings_upper_bound",
@@ -243,6 +243,26 @@ for (name in c("inputs", "outputs")) {
       any(!x$basis %in% allowed_bases)) {
       stop("inputs.csv has an undocumented measure or basis.", call. = FALSE)
     }
+    age_number_cv <- x$measure == "numbers_at_age_cv"
+    if (any(age_number_cv)) {
+      if (any(!x$type[age_number_cv] %in% c("catch", "index") |
+        x$basis[age_number_cv] != "relative_scale" |
+        x$unit[age_number_cv] != "ratio" |
+        is.na(suppressWarnings(as.numeric(x$age[age_number_cv]))) |
+        suppressWarnings(as.numeric(x$value[age_number_cv])) < 0)) {
+        cli::cli_abort("numbers_at_age_cv must be a non-negative, age-specific relative-scale ratio for catch or index numbers-at-age.")
+      }
+      pair_fields <- c("assessment_id", "type", "fleet", "survey", "sex", "region", "season",
+        "year", "year_basis", "age", "observation_id")
+      row_key <- function(z) do.call(paste, c(lapply(z[pair_fields], function(v) {
+        v[is.na(v)] <- ""
+        as.character(v)
+      }), sep = "\r"))
+      age_numbers <- x[x$measure == "numbers_at_age", , drop = FALSE]
+      if (any(!row_key(x[age_number_cv, , drop = FALSE]) %in% row_key(age_numbers))) {
+        cli::cli_abort("Each numbers_at_age_cv row must match a numbers_at_age value with the same source dimensions.")
+      }
+    }
 
     has_year <- !is.na(x$year) & nzchar(as.character(x$year))
     has_year_basis <- !is.na(x$year_basis) & nzchar(as.character(x$year_basis))
@@ -268,7 +288,7 @@ for (name in c("inputs", "outputs")) {
   }
   age_required <- if (name == "inputs") {
     x$measure %in% c(
-      "numbers_at_age", "numbers_at_age_group", "numbers_at_age_for_M_reconstruction", "index_by_age_group",
+      "numbers_at_age", "numbers_at_age_cv", "numbers_at_age_group", "numbers_at_age_for_M_reconstruction", "index_by_age_group",
       "index_catch_numbers_at_age",
       "biomass_at_age", "proportion_at_age", "frequency_at_age", "maturity_fecundity_at_age",
       "conditional_proportion_at_age", "fraction_F_before_spawning",
