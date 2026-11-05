@@ -93,6 +93,7 @@ stopifnot(
   assessment$is_applied,
   assessment$inputs_status == "complete",
   assessment$outputs_status == "partial",
+  candidate$matched_stock_id == stock_id, candidate$match_status == "matched",
   candidate$import_status == "partial",
   nrow(a) == 17L,
   nrow(i) == 3224L,

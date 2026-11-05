@@ -697,54 +697,13 @@ append_csv <- function(x, path) write.table(x, path, sep = ",", quote = TRUE,
   row.names = FALSE, col.names = FALSE, append = TRUE, na = "",
   qmethod = "double")
 
-replace_status_bytes <- function(path, candidate_id, old_status, new_status) {
-  bytes <- readBin(path, what = "raw", n = file.info(path)$size)
-  line_starts <- c(1L, which(bytes == as.raw(10)) + 1L)
-  line_ends <- c(which(bytes == as.raw(10)) - 1L, length(bytes))
-  prefix <- charToRaw(paste0("\"", candidate_id, "\",\""))
-  target <- which(vapply(seq_along(line_starts), function(i) {
-    start <- line_starts[[i]]
-    end <- line_ends[[i]]
-    end - start + 1L >= length(prefix) &&
-      identical(bytes[start:(start + length(prefix) - 1L)], prefix)
-  }, logical(1)))
-  if (length(target) != 1L) stop("Could not uniquely locate candidate row.", call. = FALSE)
-  start <- line_starts[[target]]
-  end <- line_ends[[target]]
-  if (bytes[[end]] == as.raw(13)) end <- end - 1L
-  line <- bytes[start:end]
-  old <- charToRaw(paste0(",\"", old_status, "\",\""))
-  first_byte <- which(line == old[[1L]])
-  matches <- first_byte[vapply(first_byte, function(i) {
-    i + length(old) - 1L <= length(line) &&
-      identical(line[i:(i + length(old) - 1L)], old)
-  }, logical(1))]
-  if (length(matches) != 1L) stop("Could not uniquely locate candidate import status.", call. = FALSE)
-  i <- matches[[1L]]
-  new <- charToRaw(paste0(",\"", new_status, "\",\""))
-  updated_line <- c(line[seq_len(i - 1L)], new,
-    if (i + length(old) <= length(line)) line[(i + length(old)):length(line)] else raw())
-  suffix_start <- if (bytes[[line_ends[[target]]]] == as.raw(13)) {
-    line_ends[[target]]
-  } else {
-    line_ends[[target]] + 1L
-  }
-  updated <- c(bytes[seq_len(start - 1L)], updated_line,
-    bytes[seq.int(suffix_start, length(bytes))])
-  temp <- tempfile(pattern = "saio_candidate_status_")
-  on.exit(unlink(temp), add = TRUE)
-  connection <- file(temp, open = "wb")
-  writeBin(updated, connection)
-  close(connection)
-  if (!file.copy(temp, path, overwrite = TRUE)) stop("Could not update candidate status.", call. = FALSE)
-}
-
 stocks_path <- file.path(root, "database", "stocks.csv")
 assessments_path <- file.path(root, "database", "assessments.csv")
 assumptions_path <- file.path(root, "database", "assumptions.csv")
 inputs_path <- file.path(root, "database", "inputs.csv")
 outputs_path <- file.path(root, "database", "outputs.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
+source(file.path(root, "scripts", "database", "candidate_register_io.R"))
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
 candidates <- read_csv(candidate_path)
@@ -791,7 +750,11 @@ append_csv(assessment_new, assessments_path)
 append_csv(assumptions_new, assumptions_path)
 append_csv(inputs_new, inputs_path)
 append_csv(outputs_new, outputs_path)
-replace_status_bytes(candidate_path, "NAFO:cod.3NO", "not_started", "partial")
+candidates$matched_stock_id[candidate_row] <- stock_id
+candidates$match_status[candidate_row] <- "matched"
+candidates$import_status[candidate_row] <- "partial"
+replace_candidate_register_row(candidate_path, candidate_row,
+  candidates[candidate_row, , drop = FALSE], "NAFO:cod.3NO")
 
 message("Imported ", assessment_id, ": ", nrow(inputs_new), " inputs, ",
   nrow(assumptions_new), " assumptions, and ", nrow(outputs_new), " outputs.")

@@ -88,6 +88,7 @@ stopifnot(
   assessment$is_applied,
   assessment$inputs_status == "partial",
   assessment$outputs_status == "partial",
+  candidate$matched_stock_id == stock_id, candidate$match_status == "matched",
   candidate$import_status == "partial",
   nrow(catch_total) == 38L,
   get_value(catch_total, 1988L) == 28899,
