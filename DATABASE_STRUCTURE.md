@@ -583,6 +583,7 @@ Long-format outputs from the official assessment.
 | `year`             | Year; blank for time-invariant estimates such as reported catchability parameters and reference points |
 | `age`              | Age where applicable            |
 | `age_group`        | Optional age range for grouped measures such as Fbar or Mbar |
+| `scenario`         | Optional source-defined assessment or projection scenario |
 | `value`            | Point estimate                  |
 | `se`               | Standard error if available     |
 | `lwr`              | Lower interval if available     |
@@ -591,6 +592,9 @@ Long-format outputs from the official assessment.
 | `source_type`      | Provenance category             |
 | `source_reference` | Specific file/table/object/page |
 | `notes`            | Additional clarification        |
+
+`scenario` distinguishes source-reported estimates under alternative assessment
+or projection conditions. Leave it blank when the output is not scenario-specific.
 
 ## High-priority output measures
 
@@ -627,7 +631,27 @@ msy
 mean_recruitment
 median_recruitment
 recruitment_ar1_rho
+natural_mortality_average_parameter
+natural_mortality_sex_difference_parameter
+SSB_ratio_to_B0
+SSB_ratio_to_terminal_biomass
+probability_above_40_percent_B0
+probability_below_20_percent_B0
 ```
+
+`natural_mortality_average_parameter` and
+`natural_mortality_sex_difference_parameter` preserve time-invariant estimated
+M parameters when an assessment reports them directly instead of a numerical
+M-at-age surface. Keep the reported parameterization and direction in the
+notes; do not expand these parameters into sex-specific M values unless the
+source defines the transformation.
+The sex-difference parameter is signed and may be negative.
+
+`SSB_ratio_to_B0` and `SSB_ratio_to_terminal_biomass` preserve reported
+spawning-biomass ratios on the scale and with the interval convention used by
+the source. `probability_above_40_percent_B0` and
+`probability_below_20_percent_B0` preserve reported probabilities for those
+reference points; they are not deterministic status classifications.
 
 `mean_recruitment` stores a reported time-invariant mean of recruitment. Leave
 year blank and retain the recruitment age when the source specifies one; it is

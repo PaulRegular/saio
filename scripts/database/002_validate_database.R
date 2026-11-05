@@ -43,7 +43,7 @@ schemas <- list(
   ),
   outputs = c(
     "assessment_id", "type", "measure", "fleet", "survey", "sex", "region",
-    "season", "year", "age", "value", "se", "lwr", "upr", "unit",
+    "season", "year", "age", "age_group", "scenario", "value", "se", "lwr", "upr", "unit",
     "source_type", "source_reference", "notes"
   )
 )
@@ -169,7 +169,7 @@ duplicates <- list(
   ),
   outputs = c(
     "assessment_id", "type", "measure", "fleet", "survey", "sex", "region",
-    "season", "year", "age", "age_group"
+    "season", "year", "age", "age_group", "scenario"
   )
 )
 composition_dimensions <- c(
@@ -258,6 +258,7 @@ for (name in c("inputs", "outputs")) {
     "log_q_power", "growth_length_at_age", "growth_rate", "growth_sd_length_at_age",
     "Fmsy", "Bmsy", "msy", "mean_recruitment", "median_recruitment",
     "recruitment_ar1_rho",
+    "natural_mortality_average_parameter", "natural_mortality_sex_difference_parameter",
     "fleet_selectivity_at_age", "natural_mortality_at_age", "LRP", "USR", "unfished_spawning_biomass",
     "maximum_exploitation_rate", "biomass_reference_point_0.4_BMSY",
     "biomass_reference_point_0.8_BMSY", "Bmsy_to_B0",
@@ -362,7 +363,8 @@ for (name in c("inputs", "outputs")) {
       x$measure %in% c("environmental_covariate", "condition_index_for_mortality") &
       x$basis == "native_covariate"
   } else {
-    x$type == "biology" & x$measure %in% c("mat_beta1", "mat_beta2")
+    (x$type == "biology" & x$measure %in% c("mat_beta1", "mat_beta2")) |
+      (x$type == "mortality" & x$measure == "natural_mortality_sex_difference_parameter")
   }
   missing_observation <- name == "inputs" & (
     (x$type %in% c("catch", "index") & x$measure %in% c(
@@ -375,7 +377,7 @@ for (name in c("inputs", "outputs")) {
   if (any(missing_value & !missing_observation) ||
     any(!is.finite(value[!missing_value])) ||
     any(value < 0 & !signed, na.rm = TRUE)) {
-    stop(name, "$value must contain finite numbers except for documented missing catch or index observations; negative values are allowed only for signed covariates and documented signed biology coefficients.", call. = FALSE)
+    stop(name, "$value must contain finite numbers except for documented missing catch or index observations; negative values are allowed only for signed covariates and documented signed biological or mortality parameters.", call. = FALSE)
   }
   if (name == "inputs") {
     if (any(x$type == "maturity" & (value < 0 | value > 1))) {
