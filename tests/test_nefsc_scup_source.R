@@ -35,7 +35,7 @@ fixed_m <- i15[i15$type == "M" & i15$measure == "natural_mortality_at_age", , dr
 weight <- i15[i15$type == "weight" & i15$measure == "weight_at_age", , drop = FALSE]
 maturity <- i15[i15$type == "maturity" & i15$measure == "maturity_at_age", , drop = FALSE]
 stopifnot(
-  nrow(i15) == 2616L,
+  nrow(i15) == 2616L + 30L * 12L,
   nrow(catch_age) == 4L * 31L * 11L,
   identical(sort(unique(as.integer(catch_age$year))), 1984:2014),
   identical(sort(unique(as.integer(catch_age$age))), 0:10),
@@ -83,6 +83,31 @@ stopifnot(
   identical(sort(as.integer(fixed_m$age)), 0:7),
   all(as.numeric(fixed_m$value) == 0.20),
   all(fixed_m$unit == "yr-1")
+)
+
+ctdeep <- subset(i15, type == "index" & survey == "CTDEEP fall trawl survey")
+ctdeep_age <- subset(ctdeep, measure %in% c("numbers_at_age", "index_by_age_group"))
+ctdeep_total <- subset(ctdeep, measure == "total_numbers")
+ctdeep_sum <- aggregate(value ~ year, ctdeep_age, sum)
+stopifnot(
+  nrow(ctdeep_age) == 30L * 11L, nrow(ctdeep_total) == 30L,
+  identical(sort(unique(as.integer(ctdeep_age$year))), setdiff(1984:2014, 2010L)),
+  identical(sort(unique(as.integer(ctdeep_age$age))), 0:10),
+  !anyDuplicated(ctdeep_age[c("year", "age")]),
+  all(ctdeep_age$measure[ctdeep_age$age < 10L] == "numbers_at_age"),
+  all(ctdeep_age$measure[ctdeep_age$age == 10L] == "index_by_age_group"),
+  all(grepl("10+", ctdeep_age$notes[ctdeep_age$age == 10L], fixed = TRUE)),
+  all(is.na(ctdeep_total$age)),
+  all(ctdeep$unit == "fish per tow"), all(ctdeep$basis == "numbers"),
+  all(ctdeep$season == "fall"), all(ctdeep$region == "Long Island Sound"),
+  all(is.na(ctdeep$sampling_time)), all(ctdeep$source_type == "official_table"),
+  all(round(ctdeep_sum$value, 2L) == ctdeep_total$value[match(ctdeep_sum$year, ctdeep_total$year)]),
+  metric_value(ctdeep_age, "numbers_at_age", 1984, age = 7) == 0,
+  metric_value(ctdeep_age, "numbers_at_age", 2013, age = 0) == 17.74,
+  metric_value(ctdeep_age, "index_by_age_group", 2014, age = 10) == 0.03,
+  metric_value(ctdeep_total, "total_numbers", 2014) == 182.60,
+  sum(assumptions$assessment_id == "nefsc_scup_2015" &
+    assumptions$setting == "CTDEEP_fall_index") == 1L
 )
 
 stopifnot(
