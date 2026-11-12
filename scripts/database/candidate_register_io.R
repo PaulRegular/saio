@@ -60,7 +60,8 @@ csv_record_bounds <- function(bytes) {
   list(start = starts, end = ends)
 }
 
-replace_candidate_register_row <- function(path, row_index, row, candidate_id) {
+replace_candidate_register_row <- function(path, row_index, row, candidate_id,
+                                           key_column = "candidate_id") {
   if (nrow(row) != 1L) stop('Expected one candidate register row.', call. = FALSE)
   if (length(candidate_id) != 1L || is.na(candidate_id))
     stop('Expected one candidate identifier.', call. = FALSE)
@@ -108,8 +109,8 @@ replace_candidate_register_row <- function(path, row_index, row, candidate_id) {
   updated <- tryCatch(read.csv(path, stringsAsFactors = FALSE,
     na.strings = c('', 'NA'), check.names = FALSE), error = function(e) NULL)
   valid <- !is.null(updated) && nrow(updated) == length(bounds$start) - 1L &&
-    sum(updated$candidate_id == candidate_id, na.rm = TRUE) == 1L &&
-    identical(as.character(updated$candidate_id[as.integer(row_index)]), candidate_id)
+    sum(updated[[key_column]] == candidate_id, na.rm = TRUE) == 1L &&
+    identical(as.character(updated[[key_column]][as.integer(row_index)]), candidate_id)
   if (!valid) {
     writeBin(original, path)
     stop('Updated candidate register failed its row-count or identity check.', call. = FALSE)

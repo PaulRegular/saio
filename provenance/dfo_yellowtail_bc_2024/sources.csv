@@ -1,0 +1,11 @@
+file,origin,url,date,revision,md5
+advice_2025_026.pdf,public,https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41294804.pdf,2026-10-17,,3854ff0ba3fcb1dfec3ca26ec075eda2
+native/data.02.01.ss,public,https://raw.githubusercontent.com/pbs-software/pbs-synth/16f1d4368ad7d3e854219ca1c2d9d6353252c861/models/input/2024/YTR/BC/Base/B1.R02v2/02.01/data.02.01.ss,2026-10-17,16f1d4368ad7d3e854219ca1c2d9d6353252c861,d5dfcf6e650394097c4b42d4e77704e9
+native/control.02.01.ss,public,https://raw.githubusercontent.com/pbs-software/pbs-synth/16f1d4368ad7d3e854219ca1c2d9d6353252c861/models/input/2024/YTR/BC/Base/B1.R02v2/02.01/control.02.01.ss,2026-10-17,16f1d4368ad7d3e854219ca1c2d9d6353252c861,e98d7b3e1154c78dd8992c77ffcff963
+native/forecast.ss,public,https://raw.githubusercontent.com/pbs-software/pbs-synth/16f1d4368ad7d3e854219ca1c2d9d6353252c861/models/input/2024/YTR/BC/Base/B1.R02v2/02.01/forecast.ss,2026-10-17,16f1d4368ad7d3e854219ca1c2d9d6353252c861,05d73d86d0437e57a8cfd04c3af9b2cc
+native/starter.ss,public,https://raw.githubusercontent.com/pbs-software/pbs-synth/16f1d4368ad7d3e854219ca1c2d9d6353252c861/models/input/2024/YTR/BC/Base/B1.R02v2/02.01/starter.ss,2026-10-17,16f1d4368ad7d3e854219ca1c2d9d6353252c861,4f051446ae628180f0ed7c9cec5922a2
+posterior/yellowtail-bc-mcmc-2025.rds,public,https://raw.githubusercontent.com/pbs-assess/gftrends/7f1c59b8cc3895a3477204ac16da6cf15e2466c6/data-raw/yellowtail-bc-mcmc-2025.rds,2026-10-17,7f1c59b8cc3895a3477204ac16da6cf15e2466c6,f793c5ddf3c7288aacdaa6776eeeb687
+native_reference/Report.sso,reproduced,https://github.com/nmfs-ost/ss3-source-code/releases/tag/v3.30.22.1,2026-11-12,v3.30.22.1,2b5da9b92dc43ae2cd9341c33e36936a
+native_reference/wtatage.ss_new,reproduced,https://github.com/nmfs-ost/ss3-source-code/releases/tag/v3.30.22.1,2026-11-12,v3.30.22.1,9ae52ca8215c5750a52bc103486b52a7
+native_reference/warning.sso,reproduced,https://github.com/nmfs-ost/ss3-source-code/releases/tag/v3.30.22.1,2026-11-12,v3.30.22.1,1c814d5861aaab671c3165a8981a2705
+native_reference/native-mpd.log,reproduced,https://github.com/nmfs-ost/ss3-source-code/releases/tag/v3.30.22.1,2026-11-12,v3.30.22.1,9b9f505f62dd78f47aff13a935630c71

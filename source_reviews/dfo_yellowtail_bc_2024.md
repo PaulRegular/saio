@@ -1,0 +1,21 @@
+# British Columbia Yellowtail Rockfish, 2024
+
+`dfo_yellowtail_bc_2024` represents the Canadian coastwide stock in 3CD5ABCDE excluding 4B. The advice uses Stock Synthesis 3.30.22.1 base run B1.R02v2, final reweighted input 02.01. The native model has one trawl-dominated catch fleet, two sexes, ages 0–45+ and one area. [DFO Science Advisory Report 2025/026](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41294804.pdf) · [Pinned native inputs](https://github.com/pbs-software/pbs-synth/tree/16f1d4368ad7d3e854219ca1c2d9d6353252c861/models/input/2024/YTR/BC/Base/B1.R02v2/02.01)
+
+## Inputs
+
+The record retains 1935–2024 annual catch biomass and the native log SD. The provisional 2024 catch repeats 2023. The fishery has 38 age-composition years from 1979 through 2018. Six fishery-independent biomass index series contribute 57 observations. Queen Charlotte Sound, west coast Vancouver Island and NMFS Triennial have 11, seven and six paired age-composition years, respectively. The other surveys contribute aggregate biomass. The native age bins are 1–45+, and the female and male proportions jointly sum to one within each sample. The source sample sizes, ageing-error SDs and age-composition reweighting are recorded. Full ageing-error definitions remain available in the pinned files.
+
+Fixed growth, length variation and weight-length parameters differ by sex. The matching executable generates beginning-year stock weights and fleet weights from those inputs. SAIO labels these as reconstructed source inputs. The supplied maturity proportions are retained separately from the generated female reproductive weights, which are zero before age 9. Spawning is at the beginning of the year.
+
+## Historical outputs
+
+The pinned model was rerun on November 12, 2026. It completed with a maximum gradient of 0.000073 and objective 384.672622. The point-estimate series span 1935–2024. The source report gives female spawning biomass (`SpawnBio`), combined age-0 recruitment (`Recruit_0`), sex-specific beginning-year numbers at age and annual instantaneous fishing mortality at age. Total abundance is the sum of numbers over sexes and ages. The advisory report's annual exploitation ratio uses catch divided by vulnerable biomass. The instantaneous rates can be averaged over a declared age range.
+
+Summing age-0 numbers across sexes reproduces `Recruit_0`. Weighting female numbers by generated reproductive weight reproduces `SpawnBio`. The small discrepancies are consistent with the printed precision. The rerun's beginning-2025 SSB was 19,093 t. The advice reports a posterior median of 22,300 t and a 90% interval of 13,163–40,388 t. The public SSB file retains 1,944 complete draws after the exclusion of 56 draws with non-finite MSY quantities. Its annual medians and 90% intervals are stored separately from the point estimates and the official terminal summary. Numerical posterior histories for abundance, recruitment and F remain unresolved. [DFO advice, Table 2](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41294804.pdf) · [Public SSB draws](https://github.com/pbs-assess/gftrends/blob/7f1c59b8cc3895a3477204ac16da6cf15e2466c6/data-raw/yellowtail-bc-mcmc-2025.rds)
+
+## Reproduce the source import
+
+Place the public files at the relative paths in the [source manifest](../provenance/dfo_yellowtail_bc_2024/sources.csv) under `source_cache/dfo_yellowtail_bc_2024/`. In a separate run directory, use the four unmodified native input files with `ss3_3.30.22.1_windows.exe -nohess`. The Windows executable SHA-256 was `5cbfcfe4df4d3e9f7bc4edf4587732a6f2e167a3f155cb416552d5773786eea5`. Copy `Report.sso`, `wtatage.ss_new`, `warning.sso` and the captured console log into `native_reference/`. The run warned about an inactive maturity parameter initialization and the F0.1 search. The console also reports zero-base power messages during output. The logged fit converged, and the historical state and aggregate checks passed. [SS3 3.30.22.1 release](https://github.com/nmfs-ost/ss3-source-code/releases/tag/v3.30.22.1)
+
+From the SAIO root, run `Rscript scripts/database/571_import_dfo_yellowtail_bc_2024.R` to check the source files and assemble the record in memory. Add `--write` to append the source record and update its discovery entries.
