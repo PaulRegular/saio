@@ -742,7 +742,8 @@ For every assessment:
 11. run structural validation;
 12. compare represented fleets and surveys against the official-model inventory;
 13. assign completeness statuses and record missing items;
-14. commit the assessment as one coherent unit when the active task requires stock-by-stock commits.
+14. record the reviewed changes for the next database batch. See
+    [Batch commits and snapshots](#batch-commits-and-snapshots).
 
 Before declaring the assessment curated, report compactly:
 
@@ -831,6 +832,44 @@ over:
 > complete but guessed.
 
 When information is unclear, inspect native files, fitted objects, framework documents, appendices, official repositories, and Charbonneau–Keith source notes before recording `unknown`.
+
+## Batch commits and snapshots
+
+1. Commit reviewed importers, source manifests, reviews and tests in small,
+   logical steps. Build and test candidate table updates in a local working
+   copy. Combine reviewed changes to the five consolidated tables into one
+   data commit per batch. Keep unrelated edits out of that commit. A
+   time-sensitive correction can be its own batch. Git LFS stores a full new
+   copy of each changed table, so a single push containing many table commits
+   still carries their distinct file versions.
+   [GitHub LFS storage](https://docs.github.com/en/billing/concepts/product-billing/git-lfs)
+2. Validate the combined tables from the repository root with
+   `Rscript scripts/database/002_validate_database.R` and run the affected
+   source tests. Record the included assessment IDs and any changes to units,
+   definitions or schema in the batch commit or its accompanying notes.
+3. For a milestone used by an analysis or publication, archive the exact five
+   CSVs at the committed SAIO revision in one compressed file. Record the full
+   SAIO SHA, the analysis code revision, the software versions and the
+   reproduction commands in the consuming project. Include a manifest of
+   table paths, byte sizes and SHA-256 hashes, plus a checksum for the archive.
+   Keep a recoverable copy separate from the working LFS cache and retain the
+   source attribution and reuse terms.
+4. Verify the archive by extracting it into a temporary directory and matching
+   all five table hashes and sizes to the Git LFS pointers at the recorded
+   SAIO SHA. Check that the tables load and that the analysis can rebuild its
+   milestone outputs from the recorded inputs. Keep milestone archives and
+   their manifests immutable. Create a new snapshot for a correction.
+
+After a successful data push, use Git LFS to preview local cache cleanup against
+GitHub. Repeat without `--dry-run` after reviewing the result. The verification
+options retain objects GitHub cannot verify, including objects referenced only
+locally. To recover a pruned milestone from GitHub, run
+`git lfs fetch origin <SAIO SHA>`. [Git LFS prune](https://github.com/git-lfs/git-lfs/blob/v3.5.1/docs/man/git-lfs-prune.adoc)
+
+```sh
+git fetch origin
+git lfs prune --dry-run --verify-remote --verify-unreachable --when-unverified=continue
+```
 
 ------------------------------------------------------------------------
 

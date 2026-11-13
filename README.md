@@ -96,3 +96,5 @@ Use `source_reference`, `source_type`, `transformation` and `notes` to trace a r
 SAIO is a growing collection, not an exhaustive inventory of all assessments. The database was compiled with substantial AI assistance, and not all records have been independently checked by a person. Verify the values and definitions relevant to your work against the authoritative sources before research use. Automated checks and extraction-completeness labels do not establish scientific equivalence among assessments.
 
 Record the database revision used in your analysis and retain a copy of those tables so later updates do not change your results. Cite the original assessment sources as well as SAIO, and retain their attribution and any source-specific reuse terms. No blanket licence is assigned to third-party assessment material. Repository code retains its attribution and GPL (>= 3) licence in [CODE_LICENSE.md](CODE_LICENSE.md).
+
+For curation and archiving, see [Batch commits and snapshots](PROTOCOL.md#batch-commits-and-snapshots).
