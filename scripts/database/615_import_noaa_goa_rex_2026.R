@@ -4,7 +4,7 @@ assessment_id <- paste0(stock_id, "_2026")
 candidate_ids <- c("NOAA:10058", "NOAA:15410", "NOAA:15411")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
-.libPaths(c(file.path(root, "source_cache", "R-library"), .libPaths()))
+.libPaths(c(.libPaths(), file.path(root, "source_cache", "R-library")))
 if (!requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install pdftools to extract the cached NOAA assessment tables.", call. = FALSE)
 }
@@ -19,11 +19,26 @@ manifest_path <- file.path(root, "provenance", "discovery_noaa_goa_rex_2026", "s
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE)
 
+sha256_file <- function(path) {
+  if (.Platform$OS.type == "windows") {
+    result <- system2("certutil.exe", c("-hashfile", shQuote(path), "SHA256"),
+      stdout = TRUE, stderr = FALSE)
+    hash <- toupper(trimws(grep(
+      "^[[:space:]]*[[:xdigit:]]{64}[[:space:]]*$", result, value = TRUE
+    )))
+  } else {
+    result <- system2("sha256sum", shQuote(path), stdout = TRUE, stderr = FALSE)
+    hash <- toupper(strsplit(result, "[[:space:]]+")[[1L]][1L])
+  }
+  if (length(hash) != 1L) stop("Could not hash source file: ", path, call. = FALSE)
+  hash
+}
+
 verify_source <- function(file) {
   path <- file.path(cache, file)
   row <- which(manifest$cached_file == file)
   if (length(row) != 1L || !file.exists(path) ||
-      tolower(unname(tools::sha256sum(path))) != tolower(manifest$sha256[row])) {
+      !identical(sha256_file(path), toupper(manifest$sha256[row]))) {
     stop("Cached NOAA source differs from its provenance record: ", file,
       call. = FALSE)
   }
