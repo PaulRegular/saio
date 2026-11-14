@@ -50,27 +50,31 @@ and regional settings. Natural mortality and other assumptions differ among
 the regional models and sexes.
 
 The official archives provide sex-specific abundance-at-age and
-biomass-at-age. California spawning output is reported in millions of eggs,
+biomass-at-age. California spawning output is reported in billions of eggs,
 not spawning biomass in tonnes. The case is eligible for source curation
-because age-based inputs can be reconstructed from the native data and numeric
-age-specific outputs are available.
+because its native archive contains age-composition inputs and numeric
+age-specific outputs; those compositions are not themselves catch-at-age or
+age-specific abundance indices.
 
 ## Screening decision
 
 Screen three current assessment units as eligible for source curation:
 Washington (NOAA:14409), Oregon (NOAA:14407), and California (NOAA:17194 and
-NOAA:17195, grouped as the single California assessment). Oregon now has a
-partial canonical 2023 source record; see
-`noaa_black_rockfish_oregon_2023.md`. Washington and California remain screened
-but have not been imported. Keep the exact California inventory-to-sub-area
-correspondence unresolved, and do not pool observations or biology across model
-components. Keep NOAA:10402, NOAA:11302, and NOAA:14408 as ambiguous,
-ineligible historical rows. The prior register entry NOAA:166727 was invalid as
-a stock key and has been removed; it was a taxonomic identifier, not a Stock
-SMART stock row. ## Sources
+NOAA:17195, grouped as the single California assessment). Oregon and Washington
+now have partial canonical 2023 source records; see
+`noaa_black_rockfish_oregon_2023.md` and
+`noaa_black_rockfish_washington_2023.md`. California now also has a partial source record.
+The California import preserves its North and Central model components
+separately and records the unresolved crosswalk between Stock SMART labels and
+the Point Arena model boundary. Keep NOAA:10402, NOAA:11302, and NOAA:14408 as
+ambiguous, ineligible historical rows. The prior register entry NOAA:166727 was
+invalid as a stock key and has been removed; it was a taxonomic identifier, not
+a Stock SMART stock row.
+
+## Sources
 
 - [NOAA Stock SMART changelog](https://noaa-edab.github.io/stocksmart/news/index.html)
 - [PFMC groundfish assessment documents and model files](https://www.pcouncil.org/stock-assessments-star-reports-stat-reports-rebuilding-analyses-terms-of-reference/groundfish-stock-assessment-documents/)
 - [2023 Black Rockfish STAR panel report](https://www.pcouncil.org/documents/2023/11/stock-assessment-review-star-panel-report-for-black-rockfish.pdf/)
 - [NOAA peer-review record for the 2023 assessments](https://www.noaa.gov/information-technology/stock-assessment-review-panel-review-of-2023-stock-assessments-for-black-rockfish-off-washington)
-- Washington, Oregon, and California reports and model-file archives are cached locally. URLs, revisions, retrieval dates, byte sizes, and SHA-256 checksums are listed in `source_cache/discovery_noaa_black_rockfish_2023/sources.csv`.
+- Oregon and California reports and model-file archives are cached locally. Their URLs, revisions, retrieval dates, byte sizes, and SHA-256 checksums are listed in `source_cache/discovery_noaa_black_rockfish_2023/sources.csv`. Washington sources are separately cached and recorded in `provenance/noaa_black_rockfish_washington_2023_sources.csv`.

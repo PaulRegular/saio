@@ -34,16 +34,18 @@ candidate_ids <- c(
 
 rows <- register[match(candidate_ids, register$candidate_id), , drop = FALSE]
 stopifnot(nrow(rows) == 62L, !anyNA(rows$candidate_id),
-  all(rows$match_status == 'new'), all(rows$screening_status == 'screened'),
+  all(rows$match_status %in% c('new', 'matched')), all(rows$screening_status == 'screened'),
   all(!is.na(rows$candidate_unit_id) & nzchar(rows$candidate_unit_id)),
   !anyDuplicated(rows$candidate_unit_id),
-  all(grepl('^(noaa_stocksmart_|ices_|dfo_sff_2024_)', rows$candidate_unit_id)))
+  all(grepl('^(noaa_stocksmart_|noaa_|ices_|dfo_sff_2024_)', rows$candidate_unit_id)))
 
-unit_keys <- paste0('candidate:', rows$candidate_unit_id)
+is_matched <- !is.na(rows$matched_stock_id) & nzchar(rows$matched_stock_id)
+unit_keys <- ifelse(is_matched, paste0('stock:', rows$matched_stock_id),
+  paste0('candidate:', rows$candidate_unit_id))
 stopifnot(all(unit_keys %in% units$unit_key),
-  nrow(units) == 736L,
-  sum(units$inventory_entries) == 775L,
-  sum(units$match_status == 'new' & units$eligibility == 'eligible') == 90L)
+  nrow(units) == 799L,
+  sum(units$inventory_entries) == 842L,
+  sum(units$match_status == 'new' & units$eligibility == 'eligible') == 27L)
 
 unit_count_columns <- c('eligible_new_units', 'ineligible_new_units',
   'unresolved_new_units', 'mixed_new_units', 'other_candidate_units')
@@ -58,3 +60,4 @@ stopifnot(nrow(unlinked) == 130L,
   sum(unlinked$match_status == 'unreviewed') == 100L,
   file.exists(file.path(root, 'discovery', 'source_reviews',
     'inventory_new_unit_keys_2026.md')))
+

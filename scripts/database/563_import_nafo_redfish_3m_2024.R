@@ -46,9 +46,15 @@ add_assumption("population", "assessment_ages", "4–19+",
 add_assumption("population", "species_definition", "Combined Sebastes mentella and Sebastes fasciatus",
   "NAFO SCR Doc. 24/024, pp. 1–2; NAFO SCS Doc. 24/16, Section V.4.e, p. 161",
   "Golden redfish (Sebastes norvegicus) is not part of the modeled stock.")
+add_assumption("biology", "age_length_key_2023", "Species-combined age-length key pooled from 2020–2022 EU survey age readings",
+  "NAFO SCR Doc. 24/024, abstract, pp. 1 and 14",
+  "The three-year combined key was selected for the 2024 assessment because 2023 survey age readings were unavailable; the complete numerical key is not published in the report.")
+add_assumption("biology", "maturity_ogive_2023", "Species-combined maturity ogive pooled from 2020–2022 EU survey data",
+  "NAFO SCR Doc. 24/024, abstract, pp. 1 and 14",
+  "The three-year combined ogive was selected for the 2024 assessment because 2023 maturity data were unavailable; the complete numerical age-specific ogive is not published in the report.")
 add_assumption("index", "survey", "EU Flemish Cap summer bottom-trawl survey, Div. 3M, ages 4–19+",
   "NAFO SCR Doc. 24/024; NAFO SCR Doc. 24/005; NAFO SCS Doc. 24/16, Section V.4.e, p. 161",
-  "The precise age-specific index matrix used by XSA was not recoverable from the accessible documents.")
+  "SCR Doc. 24/024 plots standardized survey abundance by age through 2023, but does not tabulate the numerical age-specific index matrix used by XSA.")
 add_assumption("catch", "catch_at_age", "Commercial catch-at-age is used by XSA; numerical age-year matrix not recovered",
   "NAFO SCS Doc. 24/16, Section V.4.e, p. 161; NAFO SCR Doc. 24/024",
   "The report's beaked redfish total catch series is imported separately and is not a substitute for the missing age-specific matrix.")
@@ -154,11 +160,11 @@ assessment_new <- data.frame(
   model_version = "2024 production XSA; software/version not reported in accessible sources",
   is_current = TRUE, is_applied = TRUE, framework_year = NA_integer_,
   assessment_url = "https://www.nafo.int/Portals/0/PDFs/sc/2024/scs24-16rev.pdf",
-  framework_url = "https://www.nafo.int/Portals/0/PDFs/sc/2024/scr24-024.pdf",
+  framework_url = "",
   data_url = "https://www.nafo.int/Portals/0/PDFs/sc/2024/scr24-024.pdf",
   model_url = "", repository_url = "", assumptions_status = "partial",
   inputs_status = "partial", outputs_status = "partial",
-  notes = "The accessible 2024 Council report summarizes the accepted full XSA and projection tables; the separately listed SCR 2024/032 assessment PDF has no download link and its direct PDF URL returns 404. Numerical age-specific catch, survey, biological and fitted-state matrices were not recovered. The imported catch totals and projections do not reproduce the full XSA input or output series.",
+  notes = "The 2024 Council report summarizes the accepted full XSA and projections. Supporting SCR Doc. 24/024 confirms the selected 2020–2022 species-combined age-length key and maturity ogive but does not publish complete numerical matrices. The separately listed XSA report SCR Doc. 24/032 has no catalogue download link and its expected PDF URL returns 404. Numerical age-specific catch, survey, biological and fitted-state matrices were not recovered.",
   stringsAsFactors = FALSE
 )
 
@@ -174,7 +180,7 @@ candidates <- read_csv(candidate_path)
 if (!identical(Sys.getenv("SAIO_NAFO_IMPORT_DRY_RUN"), "1") && (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id)) stop("Stock or assessment already exists; inspect before importing.", call. = FALSE)
 candidate_row <- which(candidates$candidate_id == candidate_id)
 if (length(candidate_row) != 1L || candidates$candidate_unit_id[candidate_row] != stock_id) stop("Expected one candidate matching the NAFO 3M beaked-redfish unit.", call. = FALSE)
-if (nrow(assumptions_new) != 16L || nrow(inputs_new) != 9L || nrow(outputs_new) != 46L) stop("Unexpected redfish extraction row counts.", call. = FALSE)
+if (nrow(assumptions_new) != 18L || nrow(inputs_new) != 9L || nrow(outputs_new) != 46L) stop("Unexpected redfish extraction row counts.", call. = FALSE)
 if (any(!is.finite(inputs_new$value)) || any(!is.finite(outputs_new$value)) || any(outputs_new$lwr > outputs_new$upr, na.rm = TRUE)) stop("Non-finite or invalid redfish values.", call. = FALSE)
 
 if (identical(Sys.getenv("SAIO_NAFO_IMPORT_DRY_RUN"), "1")) {
@@ -197,7 +203,7 @@ candidates$matched_stock_id[candidate_row] <- stock_id
 candidates$match_status[candidate_row] <- "matched"
 candidates$inventory_assessment_year[candidate_row] <- 2024L
 candidates$import_status[candidate_row] <- "partial"
-candidates$notes[candidate_row] <- "The latest accessible full age-based assessment is the 2024 XSA. The 2026 full assessment was deferred and no later production XSA tables were found. The 2024 assessment PDF SCR 24/032 is listed by NAFO but unavailable for download; current records contain only the accessible beaked catch totals, documented assumptions and projection results."
+candidates$notes[candidate_row] <- "The latest accessible full age-based assessment is the 2024 XSA. Supporting SCR 24/024 confirms the selected 2020–2022 species-combined age-length key and maturity ogive. The 2026 full assessment was deferred; SCR 24/032 remains listed without a downloadable PDF, and annual age-specific input and fitted-state matrices remain unavailable."
 replace_candidate_register_row(candidate_path, candidate_row, candidates[candidate_row, , drop = FALSE], candidate_id)
 message("Imported ", assessment_id, ": ", nrow(inputs_new), " inputs; ", nrow(assumptions_new), " assumptions; ", nrow(outputs_new), " outputs.")
 

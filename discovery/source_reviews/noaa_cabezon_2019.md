@@ -1,29 +1,51 @@
-# NOAA Pacific Coast cabezon, 2019
+# Oregon cabezon — 2019 PFMC assessment
 
-## Assessment identity and run
+## Assessment and stock unit
 
-The 2019 PFMC assessment is the latest detailed production assessment located for cabezon. It covers four management substocks: Northern California (NCS), Southern California (SCS), Oregon (ORS), and Washington (WAS). NCS, SCS, and ORS are separate Stock Synthesis 3 age-structured fits with data through 2018. WAS is a separate data-poor Simple Stock Synthesis assessment. The historical NOAA Stock SMART California row 10299 (2009) is superseded by the two 2019 California substock rows, 15050 and 15051; it is a one-to-many historical alias, not another current unit. Oregon row 12193 maps to ORS, Washington row 14803 maps to WAS. No canonical database records have been added.
+The 2019 PFMC assessment is the latest detailed Oregon cabezon assessment located. Its Oregon (ORS) component is a single-area, sex- and age-structured Stock Synthesis model. The native input ends in 2018; the model output includes forecasts after that year. The native report identifies Stock Synthesis 3.30.13.00-safe.
 
-The PFMC 2019 assessment and model files are cached locally under `source_cache/discovery_noaa_cabezon_2019/`. The cache manifest records original URLs, retrieval date, file sizes, and SHA-256 hashes. The three full Stock Synthesis archives include their data, controls, reports, and model-derived population surfaces. The Washington model is Simple Stock Synthesis and does not provide a comparable fitted age-structured output.
+The PFMC's September 2025 action removed the Oregon and California portions of cabezon from the federal Groundfish Fishery Management Plan. The Oregon assessment remains relevant as the March 2026 draft 2027–2028 harvest specifications cite the 2019 Oregon model for its OFL projection. This record represents the latest detailed assessment and documented use of the Oregon unit; it does not imply that Oregon cabezon remains in the federal FMP.
 
-## Age-input screening
+## Recovered inputs
 
-The California fits use catch histories, length compositions, and aggregate CPUE indices. NCS also uses the CCFRP fishery-independent abundance index and research conditional age-at-length data from the Grebel study (1991–2002 samples, representing six years in the NCS area) to estimate growth. The report explicitly says these research ages do not represent fishery catch age composition; age-based catch observations are unavailable. SCS has no conditional age-at-length observations in the fitted likelihood; it uses NCS growth estimates. Reconstructing catch-at-age for either California fit would require applying fitted age–length relationships to observed length compositions, which is not a source-observed catch-at-age series. Both are therefore ineligible for the age-disaggregated input set, despite their age-structured fits and age-specific outputs.
+The canonical database now contains the model's native catch biomass and observation-error fields: 196 annual rows for four fisheries, 1970–2018, in metric tons. The four `year = -999` equilibrium/sentinel records are not calendar-year observations and were not imported.
 
-The ORS model uses fleet catches, length compositions, four aggregate abundance indices, and conditional age-at-length inputs. Recreational ocean-boat age samples cover 2005–2018 (2,328 fish); commercial dead-fishery ages are sparse (364 samples from 2003 and 2007–2018). Marginal age compositions were included as diagnostics, not as separate likelihood components. These observed age samples, fleet catches, and overlapping aggregate recreational indices provide source quantities for a documented, partial age-specific reconstruction.
+The native input contains 68 aggregate CPUE observations and 68 log-scale standard errors:
 
-WAS uses a length-based spawner-potential-ratio analysis within Simple Stock Synthesis. Its limited ages supported growth and mortality calculations rather than a fitted age-structured population model. It is ineligible for this age-structured set.
+| Series | Rows | Years | Scale code |
+|---|---:|---|---|
+| Logbook | 15 | 2004–2018 | Biomass (1) |
+| Onboard | 17 | 2002–2018 | Numbers (0) |
+| ORBS | 18 | 2001–2018 | Numbers (0) |
+| MRFSS | 18 | 1980–2000 | Numbers (0) |
 
-## Biology, timing, and reported outputs
+All CPUE and composition records use month 7. The database preserves the source month and records sampling time as 0.5. The four indices are aggregate lognormal series, not age-specific abundance indices.
 
-The three Stock Synthesis reports include age-specific numbers, fishing mortality, catch, and spawning output. California natural mortality is estimated with priors; the Oregon model also documents its own stock-specific mortality treatment. Weights, growth, maturity, and mortality are a mix of fixed biological inputs and fitted quantities; retain their stock, sex, and model-specific definitions rather than assuming a common surface. The report notes that the California catch and length-composition observations use month 6 in the 2019 models, changed from month 1 in the 2009 assessment. Oregon timing is encoded in its fleet inputs and must be interpreted from the native files before assigning a fractional-year value. No timing fraction is assigned by this screening.
+The input file also contains 129 length-composition records over 4–92 cm bins at 2 cm spacing and 597 age-composition records over ages 0–20 (20 is the plus group). Of the age records, 525 are conditional age-at-length samples and 72 are marginal frequencies marked evaluation-only by negative fleet codes. The import retains the native frequency cells, sample sizes, sex grouping, length bounds, partition, age-error codes, and signed fleet code in each observation identifier. It does not normalize or expand these sample frequencies into catch-at-age observations.
 
-The four substock areas are components of one species-level assessment family; they should not be counted as four additional species cases in a later batch total.
+The fitted model has no observed catch-numbers-at-age input and no age-specific abundance index. Fitted catch-at-age is retained only in the outputs table.
 
-## Sources
+## Biological and mortality assumptions
 
-- [2019 PFMC cabezon assessment and appendices](https://www.pcouncil.org/documents/2019/10/assessing-cabezon-scorpaenichthys-marmoratus-stocks-in-waters-off-of-california-and-oregon-with-catch-limit-estimation-for-washington-state-10-18-2019.pdf)
-- [2019 supplementary tables](https://www.pcouncil.org/documents/2019/10/cabezon-supplementary-tables-october-2019.xlsx)
-- [2019 STAR panel report](https://www.pcouncil.org/documents/2019/10/cabezon-star-panel-report-may-6-10-2019.pdf)
+Sex-specific growth is estimated. Oregon length–weight relationships were estimated outside the assessment from ORBS biological records and PacFIN and then held fixed. The Oregon maturity ogive was estimated externally from biological samples and fixed; it is not supplied as a standalone maturity-at-age input vector. Fecundity is proportional to weight and fixed. The model-derived population weight-at-age surface is retained as an output and is cross-checked against biomass-at-age divided by numbers-at-age.
+
+Natural mortality is fixed by sex: 0.24 year⁻¹ for females and approximately 0.28 year⁻¹ for males. The native `M_at_age` surface reports the male value as 0.279958 year⁻¹. Recruitment follows a Beverton–Holt relationship, with steepness fixed at 0.7 and recruitment CV fixed at 0.5. The full control file remains cached for the remaining selectivity and likelihood details.
+
+## Recovered outputs and uncertainty
+
+The native `Report.sso` provides historical 1970–2018 fitted surfaces for numbers-at-age, biomass-at-age, fleet-specific F-at-age, dead catch-at-age, and natural mortality at ages 0–19. Model-derived population weight-at-age is retained for ages 0–20. Annual spawning biomass/output, total biomass, and age-0 recruitment are also imported for 1970–2018. Total abundance is derived by summing the reported numbers-at-age across ages and sexes; its uncertainty is left blank because the joint covariance is not available.
+
+Table ES7 provides 95% asymptotic confidence intervals for spawning output in 2007–2019. For 2007–2018, these intervals are attached to the corresponding higher-precision `Report.sso` point estimates. The table's 2019 assessment-year forecast is retained separately with scenario `assessment forecast` and the table values 177 metric tons (128–226). The executive-summary narrative rounds the lower limit to 129; the table value is retained and the discrepancy is recorded.
+
+Age-specific standard errors or intervals for abundance, biomass, F, M, catch, or weight are not reported. The 2019 Table ES7 interval is the only annual state uncertainty imported from the reviewed sources.
+
+## Source files and provenance
+
+The assessment report, supplementary tables, STAR Panel report, and 2019 ORS, SCS, and NCS Stock Synthesis archives are cached under the ignored local `source_cache/discovery_noaa_cabezon_2019/` folder. The tracked checksums, URLs, sizes, and retrieval date are in `provenance/noaa_cabezon_oregon_2019_sources.csv`. The ORS archive supplied the inputs and `Report.sso`; the SCS and NCS archives were used to verify the assessment components and screen the separate California units.
+
+- [2019 PFMC assessment and appendices](https://www.pcouncil.org/documents/2019/10/assessing-cabezon-scorpaenichthys-marmoratus-stocks-in-waters-off-of-california-and-oregon-with-catch-limit-estimation-for-washington-state-10-18-2019.pdf/)
+- [2019 supplementary tables](https://www.pcouncil.org/documents/2019/10/cabezon-supplementary-tables-october-2019.xlsx/)
+- [2019 STAR Panel report](https://www.pcouncil.org/documents/2019/10/cabezon-star-panel-report-may-6-10-2019.pdf/)
 - [PFMC groundfish assessment archive](https://www.pcouncil.org/stock-assessments-star-reports-stat-reports-rebuilding-analyses-terms-of-reference/groundfish-stock-assessment-documents/)
-- [NOAA 2026 phase-two stock-definition review](https://www.fisheries.noaa.gov/s3/2026-02/am-37-fpa-analysis-01-2026.pdf)
+- [September 2025 PFMC meeting record](https://www.pcouncil.org/documents/september-2025-meeting-record/)
+- [Draft 2027–2028 harvest specifications](https://www.pcouncil.org/documents/2025/10/f-3-attachment-1-draft-harvest-specifications-sections-of-the-pacific-coast-groundfish-fishery-2027-2028-harvest-specification-and-management-measures.pdf/)

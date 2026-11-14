@@ -1,9 +1,9 @@
-# NOAA Stock SMART 11684: Western and Central Pacific bigeye tuna
+# Western and Central Pacific bigeye tuna
 
-**Reviewed:** 2026-11-02
-**Inventory row:** NOAA:11684
+**Reviewed:** 2026-11-13
+**Discovery cross-reference:** NOAA Stock SMART 11684
 **Assessment unit:** WCPFC Western and Central Pacific bigeye tuna (*Thunnus obesus*)
-**Screen:** Eligible for source curation, with a reconstructed age-input caveat. No canonical database records were added.
+**Curation:** Partial source import for the 2023 assessment; no age-specific catch reconstruction was added.
 
 ## Identity and current assessment
 
@@ -13,16 +13,18 @@ The 2023 WCPFC assessment is the latest assessment accepted for stock-status adv
 
 ## Inputs and outputs located
 
-- **Catch and size:** The native MFCL `bet.frq` input carries the catch and frequency data. The pinned SPC TAF tables expose 96,235 length-composition rows from 1965–2021 and 707,200 weight-composition rows from 1952–2021. They cover 18 fisheries with length data and 24 with weight data. These are length/weight compositions, not catch-at-age observations.
-- **Age data:** The native `bet.age_length` input and TAF `otoliths.csv` expose 1,010 individual conditional age-at-length records. They span 14 sampled years from 1990–2018, four quarters, and eight of nine regions. The model age index has 40 quarterly classes; it must not be read as 40 annual ages. The assessment uses these conditional samples to estimate growth, rather than as marginal catch-at-age observations. Combining age-length keys with the matching size compositions can support an approximate age-composition reconstruction in sampled strata. Extending those keys across unsampled years or areas requires pooling assumptions and must be labelled as reconstruction.
-- **Abundance indices:** Nine standardized longline CPUE index series cover 1952–2021 at quarterly resolution. They are regional aggregate relative-abundance indices, not age-specific indices. Natural mortality follows an internally estimated Lorenzen form. The public fitted biology surface reports age-specific length, weight, maturity and natural mortality; these are model-derived surfaces, not independent observed weight-at-age or maturity-at-age tables. Spawning potential combines maturity, sex ratio and fecundity, so its reported biomass measure should not automatically be relabelled conventional SSB.
-- **Outputs:** The pinned TAF diagnostic output includes numbers-at-age by year, quarter and region (1952–2021; 40 quarterly classes, nine regions), annual fishing mortality-at-age by region, and annual summary quantities including recruitment and biomass. These are outputs from the diagnostic reference fit. The report's official status advice summarizes the 54-model grid; the diagnostic outputs are not a substitute for the grid distribution or its uncertainty.
+- **Catch and effort:** The native MFCL input has 6,335 extraction catch records across 32 fisheries, quarterly from 1952–2021. The assessment report identifies longline catch in fish numbers and other extraction catch in metric tonnes. Non-negative effort values are retained with fleet-specific units; negative `-1` codes are omitted.
+- **Size compositions:** The pinned SPC TAF input has 96,235 length-frequency rows from 1965–2021 and 707,200 weight-frequency rows from 1952–2021, covering 18 and 24 fisheries respectively. Length classes are 95 two-centimetre bins (10–12 through 198–200 cm); weight classes are 200 one-kilogram bins (0–1 through 199–200 kg). Extraction frequencies are weighted by catch and index-fishery frequencies by standardized CPUE. The TAF exports do not provide a separate unweighted sample size, so the native frequency values are preserved without normalization and sample size is left blank.
+- **Age data:** The native `bet.age_length` input and TAF `otoliths.csv` expose 1,010 conditional age-at-length observations. They span 14 sampled years from 1990–2018, four quarters, and eight of nine regions. These samples inform growth; they are not marginal catch-at-age or abundance observations. No catch-at-age reconstruction or pooling across unsampled strata was added.
+- **Abundance indices:** The assessment provides 2,520 quarterly standardized longline CPUE observations (nine regions, 1952–2021). They are aggregate relative-abundance indices, not age-specific indices. TAF stores the index as catch divided by effort and 1e6. The native `cpue_penalty` field is preserved as an unresolved observation weight; it is not labelled a CV or standard error.
+- **Tagging and biology:** TAF exposes 11,210 tag-release length-frequency rows and 2,892 recapture records. The report describes a negative-binomial tagging likelihood. The fitted biology output provides length, weight, maturity and Lorenzen natural mortality at age; these are model-derived surfaces, not independent observed biological inputs. The reported spawning-potential biomass is retained as a distinct metric and not relabelled conventional SSB.
+- **Outputs:** The pinned diagnostic output provides 100,800 numbers-at-age rows, 28,000 annual F-at-age rows, fitted age-specific M and biology, regional spawning-potential biomass, annual recruitment/biomass/catch summaries, predicted extraction catches, and fitted CPUE indices. Point estimates have no standard errors or confidence intervals in the export. The official advice was based on a 54-model grid; these diagnostic outputs are not a substitute for its distribution or uncertainty.
 
 ## Screen decision
 
-**Eligible for source curation.** The accepted assessment provides catches and size compositions plus observed conditional age-at-length data, which support an explicit approximate reconstruction of age-disaggregated catch information where the age samples support it. The reconstruction is not the likelihood used by MFCL; coverage is sparse in time and missing in one region, so age-key pooling must remain visible. The aggregate CPUE indices are usable as aggregate indices, but they do not supply age-specific abundance observations. The assessment also provides age-specific fitted outputs for comparison.
+**Eligible for source curation.** The available assessment sources support import of the native catch, effort, size-frequency, conditional age-at-length, CPUE, tagging, and diagnostic output tables. They do not provide an observed marginal catch-at-age series or age-specific abundance index. Conditional age-at-length samples are retained in their original role and have not been converted into catch-at-age.
 
-This is a source-curation screen only.
+The canonical assessment is marked partial because model-specific likelihood settings and ensemble uncertainty are not fully represented, and the fitted output is from one diagnostic reference fit rather than the advice grid.
 
 ## Sources and cache
 

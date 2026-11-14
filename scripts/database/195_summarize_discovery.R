@@ -15,6 +15,8 @@ is_ices <- x$organization == 'ICES'
 region[is_ices] <- x$assessment_area[is_ices]
 is_nafo <- x$organization == 'NAFO'
 region[is_nafo] <- x$assessment_area[is_nafo]
+is_inidep <- x$organization == 'INIDEP'
+region[is_inidep] <- 'Argentina; targeted assessment-report search, not a comprehensive inventory'
 is_fisheries_nz <- x$organization == 'Fisheries New Zealand'
 region[is_fisheries_nz] <- 'New Zealand'
 other_region <- is.na(region) & !is.na(x$assessment_area) & nzchar(x$assessment_area)

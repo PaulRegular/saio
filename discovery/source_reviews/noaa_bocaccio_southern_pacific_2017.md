@@ -1,27 +1,35 @@
-# NOAA Stock SMART 10413: Southern Pacific Coast bocaccio, 2017 fit / 2025 projection
+# NOAA Stock SMART 10413: Southern Pacific Coast bocaccio, 2017 fitted assessment
 
-Reviewed 2026-10-29. NOAA Stock SMART 10413 is the Southern Pacific Coast bocaccio stock, *Sebastes paucispinis*. the DFO British Columbia bocaccio unit is geographically distinct.
+Reviewed 2026-11-11. NOAA Stock SMART 10413 identifies Southern Pacific Coast bocaccio, *Sebastes paucispinis*. This is geographically distinct from British Columbia bocaccio and northern U.S. Pacific bocaccio units.
 
-## Current unit and latest assessment
+## Assessment selection and stock unit
 
-NOAA currently reports three bocaccio management units: Southern Pacific Coast, a northern Pacific Coast complex, and a Gulf of Alaska complex. The 2017 NOAA/PFMC update assessed the southern unit from south of 43°N to the U.S.–Mexico border, in the Conception, Monterey and Eureka INPFC areas. NOAA's 2025 document is a revised catch-only projection, not a new population-model fit: it updates observed catches for 2017–2024, uses management-team removals for 2025–2026, then projects to 2036 using the 2017 model's relative fishing mortality. NOAA's current stock page still reports the Southern Pacific Coast unit separately. Amendment 37 proposed a coastwide definition in 2026, but it remains under NMFS review; do not treat that proposal as an implemented unit change.
+The 2017 NOAA/PFMC update is the latest detailed fitted assessment located for the current Southern Pacific Coast unit. It covers the Conception, Monterey and Eureka INPFC areas, south of 43 degrees N to the U.S.-Mexico border, and uses data through 2016. The update carries forward the age information from the 2015 assessment. NOAA's 2025 document is a catch-only projection based on that fit, not a new population-model fit. The 2026 coastwide stock-definition proposal was not implemented at this review and does not replace the Southern Pacific Coast unit.
 
-## Age-specific inputs and model assumptions
+## Inputs and assumptions recovered
 
-The 2017 update carries forward the 2015 assessment's age information; no new fish were aged for the 2017 update. The 2015 assessment aged more than 8,000 fish, including nearly 3,000 from the NWFSC bottom-trawl survey. The age data were fitted as conditional age-at-length (CAAL), not as direct marginal catch-at-age counts. The population model has two sexes and ages 0–21, six fishery fleets, and ten abundance indices. Commercial fishery and NWFSC bottom-trawl age-at-length records provide age-specific information. Catch totals and length compositions are also present, so a catch-at-age series may be reconstructed only after the conditional age-at-length and expansion denominators in the native model data are verified.
+The native Stock Synthesis 3.24U archive provides one annual area, two sexes, age bins 0-21, six fishery catch series, and CPUE input covering 1892-2016. The six catch series are annual biomass in metric tons. The input declares catch-error settings of 0.01 by fleet; the file describes these as initialization/F-method settings, so they are recorded as assumptions rather than observation error.
 
-The 2017 update retained fixed length-weight, maturity and fecundity relationships from 2015. Growth was estimated as in 2015. Natural mortality was estimated with a lognormal prior, without age, time or sex variation. The 2025 projection reuses the fitted 2017 population model and does not add age observations or refit biological parameters. The model is annual; observation timing for the individual indices should be read from the native input during source curation.
+The CPUE block contains 232 aggregate observations across 13 used series. Stock Synthesis unit code 0 denotes numbers, 1 biomass and 2 fishing mortality; only codes 0 and 1 occur in these observations. Log-scale errors and the model's within-year fleet timing are retained. No age-specific abundance index is present.
 
-The 2017 assessment reports spawning output, recruitment and exploitation/status trajectories. The 2025 catch-only projection gives spawning output and stock-status estimates for the updated catch/projection path through 2036. Its outputs are projections from the 2017 fit, not new estimated population states. The published reports do not provide numeric annual N-at-age and F-at-age tables; the 2017 model archive includes the native data and control files but no fitted output files.
+The native input contains 882 conditional age-at-length records and 314 length-composition records, with age bins 0-21 and length bins 10-76 cm at 2-cm increments. There are two sexes. Combined-sex records are retained as combined; records coded for both sexes are stored separately by sex. Source sample sizes, partitions, length bounds, age-error definitions, years, fleet codes and timing are preserved. These are composition data, not direct marginal catch-at-age observations. The 2017 update carries forward the 2015 age data; the assessment reports more than 8,000 fish aged, including nearly 3,000 from the NWFSC bottom-trawl survey.
 
-This unit is eligible for source curation because the current official age-structured fit contains observed CAAL data, aggregate abundance indices, biological inputs, mortality assumptions and official population outputs. no catch-age reconstruction has been imported or presumed complete.
+Two age-error definitions are in the native input and are stored by true age. The model carries forward length-weight, maturity and fecundity relationships from 2015 while estimating growth. No standalone observed weight-at-age or maturity-at-age input schedule is supplied. Natural mortality is estimated with a lognormal prior and has no age, year or sex variation.
+
+## Outputs recovered
+
+The report's Table 18 provides annual summary biomass, spawning output, depletion, age-0 recruitment, total catch, SPR and relative exploitation rate. The import retains these values on the report's scales, with the source depletion percentage converted to an SSB-to-unfished-output proportion. Table 5 provides 2.5th and 97.5th percentile limits for spawning output, recruitment and depletion for 2007-2017; the point estimates match Table 18.
+
+Table 18 labels its biomass series "Age 1+ biomass"; Table 5 labels the overlapping 2007-2017 series "Age 0+ biomass." The reported values match, but the captions differ, so the imported summary-biomass records retain the Table 18 label and carry a note about the discrepancy.
+
+The cached model archive contains the data, control, forecast and starter files, but no fitted Report.sso, parameter file or uncertainty report. The assessment report does not provide numerical annual N-at-age or F-at-age tables. These surfaces, associated uncertainty, and independent age-specific biological schedules are not invented. The 2025 catch-only projection remains separate from the 2017 fitted assessment.
 
 ## Sources and cache
 
-- [PFMC 2017 bocaccio assessment update](https://www.pcouncil.org/documents/2017/02/stock-assessment-update-status-of-bocaccio-sebastes-paucispinis-in-the-conception-monterey-and-eureka-inpfc-areas-for-2017.pdf)
-- [PFMC 2017 bocaccio model files](https://www.pcouncil.org/documents/2017-bocaccio-model-files-zip-file-47-kb/)
-- [NOAA 2025 revised catch-only projection](https://www.pcouncil.org/documents/2025/08/g-3-attachment-18-catch-only-projection-for-bocaccio-in-2025.pdf/)
-- [NOAA bocaccio stock information](https://www.fisheries.noaa.gov/species/bocaccio)
+- [PFMC 2017 Bocaccio assessment update](https://www.pcouncil.org/documents/2017/02/stock-assessment-update-status-of-bocaccio-sebastes-paucispinnis-in-the-conception-monterey-and-eureka-inpfc-areas-for-2017.pdf)
+- [PFMC 2017 Bocaccio model files](https://www.pcouncil.org/documents/2017-bocaccio-model-files-zip-file-47-kb/)
+- [NOAA 2025 catch-only projection](https://www.pcouncil.org/documents/2025/08/g-3-attachment-18-catch-only-projection-for-bocaccio-in-2025.pdf/)
+- [NOAA Bocaccio stock information](https://www.fisheries.noaa.gov/species/bocaccio)
 - [NOAA Amendment 37 stock-definition action](https://www.fisheries.noaa.gov/action/amendment-37-pacific-coast-groundfish-fishery-management-plan-stock-definitions)
 
-The 2017 report, 2017 model archive and 2025 projection are cached under the gitignored `source_cache/discovery_noaa_bocaccio_southern_pacific_2017/`; `sources.csv` records their retrieval dates, URLs and SHA-256 checksums. The model archive contains `boc1.ctl`, `boc1.dat`, `forecast.ss`, and `starter.SS`.
+The detailed report, model archive and projection are cached in the local ignored cache at source_cache/discovery_noaa_bocaccio_southern_pacific_2017/. Their URLs, retrieval dates and SHA-256 values are recorded in provenance/discovery_noaa_bocaccio_southern_pacific_2017/sources.csv. The importer is scripts/database/642_import_noaa_bocaccio_southern_pacific_2017.R. Input and output completeness remain partial.

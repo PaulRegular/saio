@@ -18,7 +18,7 @@ The model derives age-specific weights from sex-specific growth and length-weigh
 
 The official report and native `Report.sso` provide spawning biomass/output, recruitment, depletion, and model-derived numbers-at-age, catch-at-age and Z-at-age. With base M fixed at 0.235, F-at-age can be derived as Z minus M. These fitted age surfaces are outputs, not observed catch-at-age inputs.
 
-Screening decision: provisionally new and eligible for source curation with explicit, limited reconstructions. Unlike an assessment with length compositions alone, this run has observed CAAL data that can be combined with matching length and index series. The source does not provide direct catch-at-age or an unconditional age-specific survey index. A survey-derived age-length key does not establish the fishery age distribution without an additional assumption. Fitted age outputs are not observations.
+Screening decision: eligible for source curation with explicit, limited reconstructions. The source import is now complete as a partial import: native catch, index, length-composition and conditional age-at-length inputs and available fitted outputs are recorded. No direct catch-at-age or unconditional age-specific survey index is supplied, and no age-length-key reconstruction was added to the canonical records. Fitted age outputs remain distinct from observations. See `source_reviews/noaa_california_scorpionfish_southern_california_2017.md` for imported coverage and remaining gaps.
 
 ## References
 

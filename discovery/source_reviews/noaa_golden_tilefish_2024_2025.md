@@ -1,13 +1,19 @@
-# NOAA golden tilefish source screen
+# NOAA golden tilefish assessments
 
-**Screened:** 2026-10-30  
-**Scope:** NOAA Stock SMART IDs 10384 (South Atlantic) and 10385 (Mid-Atlantic). This is a discovery screen; it adds no canonical stock, assessment, input, assumption, or output rows.
+**Reviewed:** 2026-11-10
+**Scope:** NOAA Stock SMART IDs 10384 (South Atlantic) and 10385 (Mid-Atlantic). These are distinct management units and remain separate candidate records.
 
 ## South Atlantic (NOAA:10384)
 
-The latest accepted Stock SMART run is assessment 14290, assessed in 2025 with data through 2022. The SEDAR 89 report was revised in September 2025 and describes a BAM catch-age model with fleet removals, commercial handline and longline age compositions, recreational removals, and a MARMAP longline index. Commercial age-composition methods are documented in SEDAR89-WP-06. The model uses ages 1-20+, with age-specific life history in Table 6. Table 7 reports annual N-at-age in thousands of fish, Table 8 reports biomass-at-age, and Table 10 reports SSB, recruitment, and apical F. The base mortality schedule is age-specific and its values are tabulated by age.
+The latest accepted run identified in NOAA Stock SMART is assessment 14290 (SEDAR 89 Rev2), assessed in 2025 with data through 2022. The report describes a Beaufort Assessment Model (BAM) catch-age assessment with commercial handline, commercial longline and recreational removals, commercial age compositions, aggregate commercial and MARMAP indices, and ages 1-20+.
 
-Inputs include report tables and figures. Age-composition arrays need to be extracted from the source paper and composition figures. The MARMAP index is annual, but its exact fractional observation time was not identified. The report states that SSB is evaluated at peak spawning on May 15 (0.37 of the year); this is not assumed to be the MARMAP survey timing. This unit is eligible for source curation, with digitization and index timing recorded as follow-up questions.
+The official report and supporting documents are cached under the ignored `source_cache/noaa_south_atlantic_golden_tilefish_sedar89_2025/` directory; URLs, revisions, retrieval dates, sizes and checksums are recorded in the tracked manifest. The report supplies numeric removals (Table 1), composition sample counts (Tables 3-4), aggregate indices and CVs (Table 5), fixed life-history inputs including maturity, reproductive potential and M-at-age (Table 6), age-specific population and fishing outputs (Tables 7-17), management quantities and uncertainty summaries (Table 18), and projections (Tables 19-21).
+
+Table 1 reports commercial removals in thousand gutted pounds and recreational landings in thousand fish. Table 5 provides a relative commercial-longline biomass index for 1993-2006 and a relative MARMAP longline abundance index for 1996-2016, with paired CVs. The report says the model evaluates both index series at midyear; this is retained as model observation timing, not asserted as the physical survey date. Table 6 reports whole and gutted weights, female proportion, female maturity, egg production per female, and fixed age-specific M. Table 10 defines SSB as egg production by mature females at peak spawning on May 15 (0.37 of the year).
+
+Tables 3-4 provide sample counts, not the numeric observed composition vectors. Composition values are shown in figures and were not digitized. The numerical ageing-error matrix described by the report was not found in the reviewed documents. Tables 7-17 provide annual point estimates of N, biomass, F, fleet selectivity and landings by age or fleet; annual uncertainty for these surfaces is not supplied in the tables. The source import is therefore marked **partial**, while retaining all verified material.
+
+Table 18's reported SSBMSY and MSST values conflict by about a factor of 1,000 with the corresponding Section 4.8 narrative values and the egg scale in Table 10. The import stores the table values as printed and narrative values separately, with the discrepancy clearly marked. It does not silently rescale either source representation.
 
 ## Mid-Atlantic (NOAA:10385)
 
@@ -19,4 +25,4 @@ The model uses catch and age compositions through 2023, ages 1-10+, commercial l
 
 NOAA identifies South Atlantic and Mid-Atlantic golden tilefish as separate management stocks; the South Atlantic assessment uses its own regional BAM and the Mid-Atlantic assessment its own WHAM. Preserve them as separate candidate units despite the shared species name. Do not treat the SEDAR report's broader study area or historical assessments as a reason to merge them.
 
-The source files are cached in the ignored folder `source_cache/noaa_golden_tilefish_2025/`. Its manifest records URLs, revisions, retrieval date, byte size, and SHA-256. The candidate register records the evidence and screening decision. No canonical database rows have been added.
+The Mid-Atlantic unit has not yet been imported. Its detailed input and output series are mostly chart-based in the public SASINF reports, and the assessment report remains publicly marked as a draft despite peer-review acceptance for management. Do not merge South Atlantic and Mid-Atlantic records based on species identity.

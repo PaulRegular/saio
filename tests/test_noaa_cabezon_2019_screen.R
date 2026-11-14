@@ -21,10 +21,6 @@ ncs <- lookup('NOAA:15050')
 scs <- lookup('NOAA:15051')
 units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-progress <- read.csv(file.path(root, 'discovery/inventory_progress.csv'),
-  stringsAsFactors = FALSE, check.names = FALSE)
-noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
-nw <- noaa[noaa$source_region == 'NWFSC / SWFSC', , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,
@@ -33,6 +29,10 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
   na.strings = c('', 'NA'), check.names = FALSE)
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
+ors_stock <- stocks[stocks$stock_id == 'noaa_cabezon_oregon', , drop = FALSE]
+ors_assessment <- assessments[assessments$assessment_id == 'noaa_cabezon_oregon_2019', , drop = FALSE]
+ors_inputs <- inputs[inputs$assessment_id == 'noaa_cabezon_oregon_2019', , drop = FALSE]
+ors_outputs <- outputs[outputs$assessment_id == 'noaa_cabezon_oregon_2019', , drop = FALSE]
 
 stopifnot(
   historical$inventory_assessment_year == 2009,
@@ -43,13 +43,13 @@ stopifnot(
   grepl('one-to-many', historical$decision_reason, fixed = TRUE),
   ors$candidate_unit_id == 'noaa_cabezon_oregon_2019',
   ors$inventory_assessment_year == 2019,
+  ors$matched_stock_id == 'noaa_cabezon_oregon',
   ors$match_status == 'new',
   ors$screening_status == 'screened',
   ors$eligibility == 'eligible',
-  grepl('2,328 fish', ors$catch_age_evidence, fixed = TRUE),
-  grepl('364 fish', ors$catch_age_evidence, fixed = TRUE),
-  grepl('aggregate logbook', ors$survey_age_evidence, fixed = TRUE),
-  grepl('not a complete observed catch-at-age', ors$catch_age_evidence, fixed = TRUE),
+  ors$import_status == 'partial',
+  grepl('no observed catch-numbers-at-age', ors$catch_age_evidence, fixed = TRUE),
+  grepl('not an age-specific abundance index', ors$survey_age_evidence, fixed = TRUE),
   washington$candidate_unit_id == 'noaa_cabezon_washington_2019',
   washington$eligibility == 'ineligible',
   grepl('SSS analysis', washington$decision_reason, fixed = TRUE),
@@ -62,29 +62,32 @@ stopifnot(
   sum(units$candidate_unit_id %in% c(
     'noaa_cabezon_oregon_2019', 'noaa_cabezon_washington_2019',
     'noaa_cabezon_northern_california_2019', 'noaa_cabezon_southern_california_2019')) == 4L,
-  sum(noaa$new) == 388L,
-  sum(noaa$ambiguous) == 14L,
-  sum(noaa$identity_unreviewed) == 2L,
-  sum(noaa$eligible) == 89L,
-  sum(noaa$excluded) == 252L,
-  sum(noaa$eligibility_unresolved) == 91L,
-  sum(noaa$screening_complete) == 432L,
-  sum(noaa$screening_not_started) == 0L,
-  nrow(nw) == 1L,
-  nw$new == 130L,
-  nw$eligible == 37L,
-  nw$excluded == 53L,
-  nw$screening_complete == 138L,
-  !any(stocks$scientific_name == 'Scorpaenichthys marmoratus', na.rm = TRUE),
-  !any(assessments$stock_id %in% c('noaa_cabezon_oregon_2019',
-    'noaa_cabezon_washington_2019', 'noaa_cabezon_northern_california_2019',
+  nrow(ors_stock) == 1L,
+  ors_stock$authority_stock_id == '12193',
+  ors_stock$ocean == 'Northeast Pacific',
+  nrow(ors_assessment) == 1L,
+  ors_assessment$assessment_year == 2019L,
+  ors_assessment$terminal_year == 2018L,
+  ors_assessment$inputs_status == 'partial',
+  nrow(ors_inputs) == 20260L,
+  nrow(ors_outputs) == 24795L,
+  !any(ors_inputs$type == 'catch' & ors_inputs$measure == 'numbers_at_age'),
+  any(ors_inputs$measure == 'conditional_frequency_at_age'),
+  any(ors_outputs$measure == 'catch_numbers_at_age'),
+  all(ors_outputs$source_type %in% c('native_model', 'official_table')),
+  any(ors_outputs$measure == 'SSB' & ors_outputs$year == 2019L &
+    ors_outputs$scenario == 'assessment forecast' & ors_outputs$value == 177 &
+    ors_outputs$lwr == 128 & ors_outputs$upr == 226),
+  file.exists('discovery/source_reviews/noaa_cabezon_2019.md'),
+  !any(assessments$stock_id %in% c('noaa_cabezon_washington_2019',
+    'noaa_cabezon_northern_california_2019',
     'noaa_cabezon_southern_california_2019')),
-  !any(inputs$assessment_id %in% c('noaa_cabezon_oregon_2019',
-    'noaa_cabezon_washington_2019', 'noaa_cabezon_northern_california_2019',
+  !any(inputs$assessment_id %in% c('noaa_cabezon_washington_2019',
+    'noaa_cabezon_northern_california_2019',
     'noaa_cabezon_southern_california_2019')),
-  !any(outputs$assessment_id %in% c('noaa_cabezon_oregon_2019',
-    'noaa_cabezon_washington_2019', 'noaa_cabezon_northern_california_2019',
+  !any(outputs$assessment_id %in% c('noaa_cabezon_washington_2019',
+    'noaa_cabezon_northern_california_2019',
     'noaa_cabezon_southern_california_2019'))
 )
 
-cat('NOAA 2019 cabezon current-unit crosswalk, age-input screen, source provenance, and no-import checks passed.\n')
+cat('NOAA 2019 cabezon current-unit crosswalk, source screen, and imported-data checks passed.\n')

@@ -1,27 +1,34 @@
-# NOAA Atlantic cobia: SEDAR 58 (2020)
+# NOAA Atlantic cobia — SEDAR 58 (2020)
 
-**Candidate:** NOAA:12149, Atlantic cobia (`Rachycentron canadum`), Georgia and north
-**Screened:** 2026-11-02
-**Decision:** Eligible for source curation; not imported yet.
+## Stock unit and assessment
 
-## Identity and current assessment
+NOAA Stock SMART unit 12149 is the Atlantic migratory cobia stock north of the Georgia-Florida border. It is distinct from Gulf of Mexico cobia (NOAA:10390). SEDAR 58 is the latest completed production assessment identified as the basis for current Atlantic cobia status. The September 2020 revised final report incorporates review changes; the CIE review identifies run co23 as the definitive base run. The assessment covers 1986–2017.
 
-The Stock SMART row is an inventory pointer, not the assessment-method source. The detailed SEDAR 58 report identifies the Atlantic stock and its 2020 BAM benchmark assessment. The revised base run, co23, is identified by the review panel as the definitive assessment. SEDAR 107 was still an undelivered benchmark at review time. NOAA:10390 is the distinct Gulf of Mexico cobia unit and remains separate.
-
-## Recoverable age-structured inputs and outputs
-
-The final run spans 1986–2017. It fits annual age compositions from general recreational landings, with age classes 1–12, as well as pooled commercial length compositions and a headboat CPUE index for 1991–2015. Commercial age compositions were not used because the samples were not representative of the commercial fleet. The model input includes age-specific natural mortality, female maturity-at-age, sex ratio, and age-specific weights for ages 1–15. The report documents spawning timing as a fraction of year; an observation-time fraction for the headboat index still needs checking in its supporting index document.
-
-SEDAR 58 reports population, fishing-mortality, biomass, recruitment and reference-point results for the revised base run, with assessment uncertainty and diagnostics. The exact input tables and run outputs should be extracted from the report appendices/native source during curation; this screen does not add canonical database values.
-
-## Screening interpretation
-
-The source provides age-composition observations that are fitted in an age-structured model, total catch, an abundance index, age-specific biological inputs and official model outputs. It qualifies for future source curation. A will need to preserve the distinction between general-recreational age compositions, pooled commercial length compositions and aggregate headboat CPUE; it should not imply that commercial catch-at-age was observed.
+The ongoing SEDAR 107 benchmark is not a completed assessment and does not replace the SEDAR 58 production record. Its workshop material is retained as a status cross-check only.
 
 ## Sources
 
-- [SEDAR 58 Atlantic Cobia Stock Assessment Report, revised September 14, 2020](https://sedarweb.org/documents/sedar-58-stock-assessment-report-atlantic-cobia-revised-september-14-2020/)
-- [SEDAR 58 CIE reviewer report (Casey)](https://sedarweb.org/documents/sedar-58-cie-reviewer-report-casey/)
-- [SEDAR 58 project page](https://sedarweb.org/assessments/sedar-58/)
+The revised SEDAR 58 Stock Assessment Report and the NOAA-hosted CIE review are cached locally in source_cache/discovery_noaa_sedar_current_assessments_2026/. Their URLs, retrieval dates, sizes, and checksums are recorded in the tracked provenance manifest. A local text extraction of the pinned report supports table transcription.
 
-The SEDAR 58 report and reviewer report were downloaded to the gitignored local discovery cache. Their retrieval date, file size, URL and SHA-256 checksum are recorded in `source_cache/discovery_noaa_sedar_current_assessments_2026/sources.csv`.
+## Inputs captured
+
+- Table 1 reports length and whole weight at age, female maturity, proportion female, and fixed age-varying natural mortality. The length CV is identified as estimated by the assessment.
+- Table 2 reports annual commercial removals in 1,000 lb whole weight and general-recreational removals in 1,000 fish. These totals include landings and dead discards.
+- Table 3 reports landings, discard components and their CVs. Commercial handline/gillnet components and general-recreational values are retained separately. The model-scale totals in Table 2 are retained as a distinct reported series; they are not treated as independent of the components in Table 3.
+- Table 4 reports standardized aggregate headboat CPUE and its CV for 1991–2015. The model predicts this index from mid-year abundance; a separate fractional observation time is not stated.
+- Table 5 reports sampled-fish counts for commercial length and general-recreational age compositions. Numerical composition cells are not tabulated in the report and have not been digitized or inferred.
+
+The assessment uses commercial length compositions, general-recreational age compositions, a headboat index, and a Dirichlet-multinomial composition likelihood with estimated variance-inflation factors. Commercial age compositions were not used because the samples were not considered representative. Table 1 provides the numerical age-specific biological schedules. The report describes natural mortality as fixed over time and age-varying using the Charnov et al. (2013) relationship.
+
+## Outputs captured
+
+Tables 6–8 and 10–16 provide total abundance and biomass, abundance and biomass at age, recruitment represented by age-1 abundance, SSB, apical and age-specific fishing mortality, landings, and status/reference-point summaries. SSB is mature female biomass at peak spawning, reported as end of March. Table 16 provides a base-run estimate, an ensemble median, and an ensemble standard deviation for summary metrics; the SD is retained as a separate quantity and is not labeled a standard error.
+
+Tables 6–7 include a 2018 start-of-year population state used to initialize projections. It is labeled as projection initialization; the assessment terminal year remains 2017. Age-specific uncertainty is not tabulated.
+
+## Remaining source gaps
+
+The report text describes model ages 1–12+, while Tables 1 and 6–13 print ages 1–16. The source does not reconcile the age-grid difference; canonical age labels are retained as printed, with the discrepancy recorded in assumptions.
+
+The annual composition sample counts are available, but the numeric age- and length-composition likelihood cells are not published in the reviewed report. Detailed native model data files were not located. No values have been inferred from figures. Time-series uncertainty for age-specific N and F is unavailable; Table 16 is the only reviewed source of numeric ensemble SD summaries.
+

@@ -6,7 +6,7 @@ candidate_unit_id <- 'noaa_gulf_golden_tilefish'
 
 sources <- data.frame(
   file = c(
-    'noaa_golden_tilefish_resources_2026-10-31.html',
+    'noaa_golden_tilefish_resources_2026-11-12.html',
     'sedar22_gulf_tilefish_assessment_2011.pdf',
     'sedar22_gulf_tilefish_ssc_review_2011.pdf',
     'sedar22_dw01_golden_tilefish_age_growth_reproduction_2010.pdf',
@@ -24,7 +24,7 @@ sources <- data.frame(
     'https://sedarweb.org/documents/sefsc01-wp-05-gulf-of-america-tilefish-complex-length-and-age-compositions-for-the-commercial-handline-and-longline-fisheries/',
     'https://sedarweb.org/documents/sefsc01-wp-06-a-review-of-golden-tilefish-lopholatilus-chamaeleonticeps-length-and-age-data-collected-from-the-gulf-of-america-from-1985-to-2024/'),
   revision = c(
-    'NOAA golden tilefish resources page retrieved 2026-10-31; identifies 2011 as latest Gulf stock assessment',
+    'NOAA golden tilefish resources page retrieved 2026-11-12; identifies 2011 as latest Gulf stock assessment',
     'SEDAR 22 final stock assessment report; July 2011; data through 2009',
     'Gulf SSC review of SEDAR 22 Tilefish; May 17-19, 2011',
     'SEDAR 22 DW-01; March 2010; age, growth and reproduction',
@@ -32,9 +32,9 @@ sources <- data.frame(
     'SEFSC01-WP-04; July 2026; preliminary recreational length and age compositions',
     'SEFSC01-WP-05; 2026 data-triage working paper on commercial compositions',
     'SEFSC01-WP-06; 2026 data-triage working paper reviewing age data 1985-2024'),
-  bytes = c(232062, 13676098, 71267, 2200978, 1570784, 1307577, 4286342, 1579606),
+  bytes = c(231097, 13676098, 71267, 2200978, 1570784, 1307577, 4286342, 1579606),
   sha256 = c(
-    'a38bcf83be1bc68eeeffae07876a8ee21ccb3b09a8b2b46174acb8bea2187182',
+    '861e74a78e1f8b6d908673cdd06389b7748412cb5514e6927cff955eefa4237b',
     '08c1929d0cdbb332149d331cfe720285ee8cac1dc6372f8a278b9425a6c99694',
     'dcbb3e370f987b53225705aaefa17bd085040b13c23ce02f2ec9a4784a516b69',
     '767c37223296809383d2dbe8bc050daa846bf5a46c69f4edea0e88cc7b31d9c2',
@@ -43,7 +43,7 @@ sources <- data.frame(
     '4d2b6907ab6b9714af594228636bc0e78b11ac2e45612b35cf0664fae289ab7e',
     '398b2b32462b1754d26718483fdb2c6e511c846aac384b7a6fec108bcecd75fd'),
   stringsAsFactors = FALSE)
-sources$retrieved_on <- '2026-10-31'
+sources$retrieved_on <- c('2026-11-12', rep('2026-10-31', nrow(sources) - 1L))
 sources <- sources[, c('file', 'url', 'revision', 'retrieved_on', 'bytes', 'sha256')]
 manifest_path <- file.path(cache, 'sources.csv')
 if (!dir.exists(cache) || any(!file.exists(file.path(cache, sources$file))))
@@ -107,7 +107,8 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors =
   na.strings = c('', 'NA'), check.names = FALSE)
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
-if (any(stocks$scientific_name == 'Lopholatilus chamaeleonticeps', na.rm = TRUE) ||
+if (any(stocks$authority == 'NOAA Fisheries' &
+        stocks$authority_stock_id == '10383', na.rm = TRUE) ||
     any(assessments$assessment_id == candidate_unit_id, na.rm = TRUE) ||
     any(inputs$assessment_id == candidate_unit_id, na.rm = TRUE) ||
     any(outputs$assessment_id == candidate_unit_id, na.rm = TRUE))

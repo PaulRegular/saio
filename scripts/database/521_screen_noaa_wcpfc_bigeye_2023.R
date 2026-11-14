@@ -1,5 +1,10 @@
 root <- "."
-cache_dir <- file.path(root, 'source_cache', 'discovery_noaa_wcpfc_bigeye_2026')
+cache_name <- 'discovery_noaa_wcpfc_bigeye_2026'
+cache_options <- c(file.path(root, 'source_cache', cache_name),
+  file.path(dirname(dirname(normalizePath(root))), cache_name))
+cache_options <- cache_options[dir.exists(cache_options)]
+if (!length(cache_options)) stop('Pinned WCPO bigeye cache is required.', call. = FALSE)
+cache_dir <- normalizePath(cache_options[[1L]], winslash = '/')
 register_path <- file.path(root, 'discovery', 'candidates.csv')
 manifest <- read.csv(file.path(cache_dir, 'sources.csv'), stringsAsFactors = FALSE)
 

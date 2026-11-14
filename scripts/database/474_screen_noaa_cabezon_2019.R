@@ -27,7 +27,7 @@ if (nrow(manifest) != length(expected_hashes) || anyDuplicated(manifest$file) ||
 for (file in names(expected_hashes)) {
   source_row <- match(file, manifest$file)
   path <- file.path(cache, file)
-  if (!file.exists(path) || manifest$retrieved_on[source_row] != '2026-10-31' ||
+  if (!file.exists(path) || manifest$retrieved_on[source_row] != '2026-11-11' ||
       as.numeric(manifest$bytes[source_row]) != file.info(path)$size ||
       tolower(manifest$sha256[source_row]) != expected_hashes[[file]] ||
       sha256_file(path) != expected_hashes[[file]])
@@ -90,7 +90,7 @@ source_urls <- paste(
   'https://www.pcouncil.org/documents/cabezon-ors-model-files-zip-file/',
   'https://www.pcouncil.org/documents/cabezon-scs-model-files-zip-file/',
   'https://www.pcouncil.org/documents/cabezon-ncs-model-files-zip-file/')
-review_date <- '2026-10-31'
+review_date <- '2026-11-12'
 
 decisions <- list(
   `NOAA:10299` = list(
@@ -107,18 +107,18 @@ decisions <- list(
     decision_reason = 'The 2009 California inventory row is an ambiguous one-to-many historical alias to current NOAA:15050 (NCS) and NOAA:15051 (SCS), not a third current unit. The 2019 current-unit fits are reviewed separately.',
     notes = 'Historical NOAA Stock SMART California row 10299 (assessment year 2009) was superseded by separate 2019 northern and southern California substock assessments. Preserve as an ambiguous alias and do not count as a new current case.'),
   `NOAA:12193` = list(
-    candidate_unit_id = 'noaa_cabezon_oregon_2019', match_status = 'new',
-    screening_status = 'screened', eligibility = 'eligible', import_status = 'not_started',
-    catch_age_evidence = 'The 2019 ORS fit uses fleet catches and conditional age-at-length data from recreational ocean-boat samples in 2005-2018 (2,328 fish) and sparse commercial dead-fishery samples from 2003 and 2007-2018 (364 fish). These source samples can support a documented, partial fleet/year catch-age reconstruction; they are not a complete observed catch-at-age series.',
-    survey_age_evidence = 'The ORS assessment has aggregate logbook, onboard observer, ORBS and MRFSS abundance indices. Age compositions from the recreational ocean-boat fleet overlap the recreational indices and can support a labelled age-specific reconstruction; the assessment does not provide a directly observed age-specific index.',
-    weights_evidence = 'The report describes an Oregon length-weight relationship estimated from ORBS biological records and PacFIN, aggregated across sexes; native model files and Report.sso contain derived age surfaces. Preserve this distinction when curating.',
-    maturity_evidence = 'Maturity and fecundity are represented through Oregon-specific size-based biological inputs and the fitted model; retain original sex and age definitions when extracting.',
-    mortality_evidence = 'The 2019 ORS fit uses stock-specific natural-mortality treatment and priors documented in the report and native control; verify exact values from those files before importing.',
-    timing_evidence = 'Oregon fleet timing is encoded in the native Stock Synthesis data and control files. Convert those settings explicitly before assigning a fractional-year timing.',
-    output_evidence = 'The 2019 ORS Report.sso contains annual numbers-at-age, F-at-age, catch-at-age, and spawning output through 2018.',
+    candidate_unit_id = 'noaa_cabezon_oregon_2019', matched_stock_id = 'noaa_cabezon_oregon',
+    match_status = 'new', screening_status = 'screened', eligibility = 'eligible', import_status = 'partial',
+    catch_age_evidence = 'Imported native catch biomass, length compositions, and fishery age-at-length frequencies; no observed catch-numbers-at-age series is supplied. Fitted catch-at-age is stored only as an output.',
+    survey_age_evidence = 'Four aggregate lognormal CPUE indices are imported; age compositions are not an age-specific abundance index.',
+    weights_evidence = 'The model uses an Oregon length-weight relationship estimated outside the fit; Report.sso weight-at-age is model-derived and stored as output. No empirical weight-at-age input vector is supplied.',
+    maturity_evidence = 'The Oregon maturity ogive is externally estimated and fixed; no standalone maturity-at-age input vector is supplied.',
+    mortality_evidence = 'Natural mortality is fixed by sex at female 0.24 and male 0.279958 year^-1; the time-invariant age surfaces are imported.',
+    timing_evidence = 'CPUE and composition inputs retain native month 7; sampling_time is represented as 0.5.',
+    output_evidence = 'Imported fitted N, biomass, fleet F, M, catch, and weight surfaces for 1970-2018; annual SSB, total biomass, recruitment, derived total abundance, and SSB 95% intervals for 2007-2019. No age-specific uncertainty is published.',
     detailed_source_url = source_urls,
-    decision_reason = 'The current 2019 Oregon substock (ORS) has observed fishery age-at-length samples, fleet catches, overlapping aggregate recreational indices, biological inputs, and official age-specific outputs. Eligible for source curation with partial age reconstruction and explicit coverage limitations.',
-    notes = 'Current Oregon substock component of the 2019 PFMC cabezon assessment family. Do not count regional model components as separate species-level cases.'),
+    decision_reason = 'The latest detailed Oregon model archive and its original inputs/outputs were recovered and imported. The source record is partial because the native observations do not include catch-at-age or an age-specific index, and age-specific uncertainty is unavailable.',
+    notes = 'The Council voted in 2025 to remove Oregon cabezon from the federal Groundfish FMP; the 2019 model remains cited for 2027-2028 Oregon harvest specifications. Do not count regional model components as separate species-level cases.'),
   `NOAA:14803` = list(
     candidate_unit_id = 'noaa_cabezon_washington_2019', match_status = 'new',
     screening_status = 'screened', eligibility = 'ineligible', import_status = 'not_started',
@@ -174,12 +174,21 @@ for (candidate_id in names(decisions)) {
     stop('The 2019 cabezon candidate identity or year changed: ', candidate_id,
       call. = FALSE)
   }
-  if (any(stocks$scientific_name == 'Scorpaenichthys marmoratus', na.rm = TRUE) ||
-      any(assessments$stock_id == decision$candidate_unit_id, na.rm = TRUE) ||
-      any(inputs$assessment_id == decision$candidate_unit_id, na.rm = TRUE) ||
-      any(outputs$assessment_id == decision$candidate_unit_id, na.rm = TRUE))
-    stop('A canonical cabezon record exists; review the crosswalk before screening.',
-      call. = FALSE)
+  if (candidate_id == 'NOAA:12193') {
+    if (any(stocks$scientific_name == 'Scorpaenichthys marmoratus' &
+        stocks$stock_id != 'noaa_cabezon_oregon', na.rm = TRUE) ||
+        sum(stocks$stock_id == 'noaa_cabezon_oregon') > 1L ||
+        any(assessments$stock_id == 'noaa_cabezon_oregon' &
+          assessments$assessment_id != 'noaa_cabezon_oregon_2019'))
+      stop('A conflicting canonical cabezon record exists; review the crosswalk.',
+        call. = FALSE)
+  } else if (!is.na(decision$candidate_unit_id) &&
+      (decision$candidate_unit_id %in% stocks$stock_id ||
+        any(assessments$stock_id == decision$candidate_unit_id, na.rm = TRUE) ||
+        any(inputs$assessment_id == decision$candidate_unit_id, na.rm = TRUE) ||
+        any(outputs$assessment_id == decision$candidate_unit_id, na.rm = TRUE))) {
+    stop('A canonical cabezon record exists for a different assessment component.', call. = FALSE)
+  }
 }
 
 required_status <- c('candidate_unit_id', 'match_status', 'screening_status',
@@ -196,13 +205,10 @@ for (candidate_id in names(decisions)) {
   pristine <- candidates$screening_status[row] == 'not_started' &&
     candidates$match_status[row] == 'unreviewed' &&
     candidates$eligibility[row] == 'unresolved' && candidates$import_status[row] == 'not_started'
-  partial <- all(vapply(required_status, function(column)
+  reviewed_status_matches <- all(vapply(required_status, function(column)
     identical(current[[column]], as.character(expected[[column]])), logical(1L))) &&
-    all(vapply(setdiff(names(expected), required_status), function(column) {
-      value <- current[[column]]
-      is.na(value) || !nzchar(value) || identical(value, as.character(expected[[column]]))
-    }, logical(1L)))
-  if (!pristine && !already_reviewed && !partial)
+    candidates$screening_status[row] == 'screened'
+  if (!pristine && !already_reviewed && !reviewed_status_matches)
     stop('Candidate has a conflicting prior screening: ', candidate_id, call. = FALSE)
 }
 

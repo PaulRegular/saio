@@ -1,71 +1,33 @@
-# Gulf red snapper, SEDAR 98 (2026)
+# Gulf of Mexico red snapper — SEDAR 98 (2026)
 
-## Unit and current assessment
+## Stock unit and assessment status
 
-NOAA Stock SMART inventory row 10230 identifies the Gulf of Mexico red snapper
-unit, but its latest listed assessment is from 2021. The latest detailed run
-located is SEDAR 98, with a terminal data year of 2023. Its final Stock
-Assessment Report was disseminated in October 2026. The report says the Gulf
-Councils' Scientific and Statistical Committee will review it, so this screen
-does not claim Council certification. NOAA:10230 is distinct from NOAA:10231,
-the Southern Atlantic Coast unit.
+NOAA Stock SMART identifier 10230 refers to the Gulf of Mexico red snapper unit. The latest detailed assessment located is SEDAR 98, whose final Stock Assessment Report was released in October 2026 and uses data through 2023. The report states that Gulf Council SSC review was still pending. The database records it as the current detailed run but does not mark it as applied for advice. Stock SMART's assessment-year field remains 2021 and is stale for this run.
 
-SEDAR 98 models the Gulf unit in West, Central, and East areas. These are model
-areas within one management unit, not three separate candidate stocks.
+SEDAR 98 models West, Central and East areas within one Gulf management unit. They are not separate stocks. NOAA:10230 is distinct from NOAA:10231, the South Atlantic Coast unit.
 
-## Inputs and biology
+## Sources reviewed
 
-SEDAR 98 is a three-area Stock Synthesis 3.30.20 age-structured assessment,
-starting in 1950 and ending in 2023. Fishery inputs combine fleet- and
-area-specific catch totals with year-specific conditional age-at-length
-compositions for commercial and recreational fleets. The report gives
-commercial landings in whole-weight pounds, converted to metric tons, and
-recreational landings in thousands of fish. This is not a standalone observed
-catch-numbers-at-age table. The SEDAR 98 commercial and recreational data
-reports document the age samples and composition construction; the age-data
-report summarizes observations collected from 1980 through 2023, with no ages
-processed for 1981–1985. Model compositions use a plus group at age 20.
+The final report and supporting data papers are cached locally in source_cache/discovery_noaa_gom_red_snapper_2026/. The tracked provenance manifest records retrieval dates, source URLs and SHA-256 checksums. The PDFs are authoritative; locally generated text extracts support table transcription.
 
-The assessment uses aggregate annual survey indices together with age
-compositions for SEAMAP trawl, G-FISHER video, and SEFSC bottom-longline
-surveys. Several survey age compositions are derived from length compositions
-through age-length keys; they are not separate age-specific abundance indices.
+Sources reviewed include the final Stock Assessment Report and data papers DW-02, DW-03, DW-05, DW-06, DW-07, DW-09, DW-13, DW-16, DW-17, DW-19, DW-24 and DW-26. DW-13 contains smooth age-length keys and age-sample summaries, but not the numerical final-model composition arrays. No run-matched native Stock Synthesis input/output package was located.
 
-Growth and length-weight relationships are fixed. Spatial growth curves were
-estimated externally in SEDAR 74; length-weight parameters are common among
-areas. Age-specific maturity is a fixed, time-invariant logistic curve by area;
-Central and East share the East-area estimates. Natural mortality is a fixed
-age-specific Lorenzen vector, scaled from 0.104 per year, with age-0 and age-1
-values set to 2.0 and 1.2 per year. The vector is constant over time and space.
-The report uses weight as the proxy for fecundity in SSB.
+## Imported inputs and fitted quantities
 
-## Outputs and screening decision
+The report's Appendix Tables 23–37 provide final-model landings observations, log-scale standard errors, expected landings in numbers and biomass, and mean landings weight. Tables 38–58 provide final-model discard observations and log-scale standard errors, expected total and dead discards in numbers and biomass, and mean discard weight. Values retain the table units: landings biomass in million pounds whole weight, catch numbers in thousand fish, discard biomass in thousand pounds whole weight, and mean weights in pounds per fish. Catch partitions distinguish landings and discards; closed-season discard outputs are identified separately.
 
-The final report provides annual area-specific total biomass, exploitable
-biomass, SSB, age-1+ abundance, age-0 recruitment, and exploitation rates for
-1950–2023. Exploitation rate is not instantaneous F-at-age. Numeric N-at-age
-and F-at-age arrays were not found in the published report. The reported
-population and recruitment series are comparable official outputs for source
-curation, while the absence of age-specific output surfaces remains a
-limitation for detailed model comparison.
+Tables 59–75 provide the final-model standardized indices, their lognormal standard errors, and fitted expected indices. The import contains 315 annual observations across 17 area-by-series combinations. The series are labelled as SEDAR 98 final-model series so they remain distinct from the 332 candidate index observations in Section II Tables 5.8.1–5.8.3. Those Section II indices and CVs remain separately preserved; they are not substituted for the series used in the final model. Index values are normalized to a mean of one. Tables 67 and 68 repeat identical rows in their continued print layout; the import retains each year once.
 
-This unit is eligible for source curation: public sources document an
-age-structured production assessment, fleet catch totals, fishery
-age-at-length compositions, survey indices and compositions, age-based biology,
-and population outputs. The source record should preserve the assessment's
-native totals and conditional compositions; it should not fabricate
-catch-at-age or age-specific fitted outputs. The candidate is not part of
-a selected import batch, and no canonical numerical records were imported.
+Table 99 provides shrimp-trawl bycatch numbers in thousand fish for West, Central and East, 1983–2023. These 123 rows are aggregate catch inputs and are not split by age, landings or discards.
 
-## Sources
+The source-data imports also retain commercial landings and discard estimates, recreational landings and discards, all 546 recreational discard CV rows reported by the source, candidate aggregate survey indices and CVs, and the fixed adjusted M-at-age vector. The Appendix-table update adds 3,909 final-model input rows and 6,295 fitted output rows. Source-native observations remain distinct from final-model-scale table values. In particular, DW-02 reports commercial landings by area and gear group in pounds whole weight from 1964–2023; recreational source tables cover 1981–2023. The final report now supplies model-scale catch values for earlier years in Tables 23–37, but the underlying source-native records for those earlier years were not recovered.
 
-- [SEDAR 98 final Stock Assessment Report](https://sedarweb.org/documents/sedar-98-gulf-red-snapper-final-stock-assessment-report/)
-- [SEDAR 98 commercial length and age compositions, DW-06](https://sedarweb.org/documents/sedar-98-dw-06-gulf-of-mexico-red-snapper-lutjanus-campechanus-commercial-landings-preliminary-length-and-age-compositions/)
-- [SEDAR 98 recreational length and age compositions, DW-07](https://sedarweb.org/documents/sedar-98-dw-07-gulf-of-mexico-red-snapper-lutjanus-campechanus-length-and-age-compositions-from-the-recreational-fishery/)
-- [SEDAR 98 Gulf age-data description, DW-09](https://sedarweb.org/documents/sedar-98-dw-09-description-of-red-snapper-lutjanus-campechanus-age-data-collected-from-the-northern-gulf-of-mexico-from-1980-2023/)
-- [SEDAR 98 assessment page and project status](https://sedarweb.org/assessments/sedar-98-gulf-of-mexico-red-snapper/)
-- [NOAA Stock SMART inventory row 10230](https://apps-st.fisheries.noaa.gov/stocksmart/?stockid=10230&stockname=Red+snapper+-+Gulf+of+Mexico)
+The report's Tables 20–22 provide expected total biomass, exploitable biomass (ages 1+), SSB, age-1+ abundance, age-0 recruitment and SSB ratio for each area in 1950–2023. The database also includes derived 0+ total abundance, calculated as reported age-1+ abundance plus age-0 recruitment for the same area and year. Both components are rounded to the nearest thousand fish, so the derived sum inherits that rounding. Tables 12–19 provide 2,072 annual exploitation-rate outputs: a Gulf-wide rate, commercial and recreational fleet rates by area, and shrimp-trawl bycatch rates by area. These are biomass exploitation ratios, not instantaneous F or F-at-age. All these reported outputs are point estimates; the tables do not provide standard errors or intervals.
 
-The final report and three cited age-data papers are cached in
-`source_cache/discovery_noaa_gom_red_snapper_2026/`. Their URLs, retrieval
-date, SHA-256 checksums, and brief descriptions are recorded in `sources.csv`.
+## Remaining gaps and status
+
+The final report describes weighted catch length compositions, nominal age compositions, conditional age-at-length data, and mean length-at-age observations. The reviewed public tables provide figures, sample counts and summaries, but not the full numerical likelihood arrays used by the final run. DW-13 age-length keys and sample summaries do not recover those arrays. Numeric maturity-at-age, stock weight-at-age, age-specific population outputs and F-at-age therefore remain unavailable. Fixed adjusted M-at-age values for ages 0–20+ are imported; numerical maturity and weight-at-age surfaces are not.
+
+The SSB-ratio denominator remains unresolved: the captions state Gulf SSB0 = 392,218.6 metric tons, but the area ratios do not equal area SSB divided by that value. Do not interpret them as directly comparable area-level SSB/SSB0 without clarification.
+
+One stock and one assessment record represent all three model areas. The assessment remains partial because age compositions, age-specific biological surfaces, age-specific N/F, and uncertainty for reported outputs are unavailable. No missing values or scaling factors have been invented.

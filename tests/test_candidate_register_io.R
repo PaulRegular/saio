@@ -40,6 +40,19 @@ mismatch_error <- tryCatch({
 after_mismatch <- readBin(path, 'raw', n = file.info(path)$size)
 stopifnot(mismatch_error, identical(before_mismatch, after_mismatch))
 
+unquoted_path <- tempfile(fileext = '.csv')
+writeLines(c('candidate_id,notes', 'ICES:ple.27.5a,old', 'NOAA:other,unchanged'),
+  unquoted_path, useBytes = TRUE)
+unquoted <- read.csv(unquoted_path, stringsAsFactors = FALSE, check.names = FALSE)
+unquoted_row <- unquoted[1L, , drop = FALSE]
+unquoted_row$notes <- 'updated'
+replace_candidate_register_row(unquoted_path, 1L, unquoted_row, 'ICES:ple.27.5a')
+unquoted_updated <- read.csv(unquoted_path, stringsAsFactors = FALSE, check.names = FALSE)
+stopifnot(nrow(unquoted_updated) == 2L,
+  identical(unquoted_updated$candidate_id, c('ICES:ple.27.5a', 'NOAA:other')),
+  identical(unquoted_updated$notes, c('updated', 'unchanged')))
+unlink(unquoted_path)
+
 remove_candidate_register_row(path, 2L, 'NOAA:2')
 after_remove <- read.csv(path, stringsAsFactors = FALSE, check.names = FALSE)
 stopifnot(nrow(after_remove) == 2L,

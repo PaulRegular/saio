@@ -8,9 +8,9 @@ The latest detailed assessment located is the [2026 ICES Working Group on North 
 
 The tables report catches by sea age, including 1SW and 2SW, for 1980-2025, and regional returns, spawners, pre-fishery abundance, and related quantities. The model uses 2SW as a proxy for all multi-sea-winter fish. Outputs include medians and 5th/95th percentiles; return/spawner tables extend through 2025, NAC PFA through 2024, and NEAC PFA tables include forecasts beyond the observed period. The NAC biological summary reports sex proportions and eggs per female by 1SW/MSW. WGC fishery tables report sea-age/origin composition and sample weights/fork lengths.
 
-sal.nac.all and sal.neac.all are eligible for source curation based on age/stage-resolved inputs and official population outputs, but share one candidate unit so the joint assessment is counted once. No exact canonical stock match was found. sal.wgc.all is the West Greenland mixed-stock fishery affecting NAC and NEAC populations; it is identity-ambiguous and excluded as an independent stock.
+sal.nac.all and sal.neac.all are distinct official ICES stock keys, represented by the same joint WGNAS 2026 assessment and online report. Both now have partial source imports; see source_reviews/ices_salmo_salar_nac.md and source_reviews/ices_salmo_salar_neac.md. No exact canonical stock match existed before this import. sal.wgc.all is the West Greenland mixed-stock fishery affecting NAC and NEAC populations, not a separate biological stock.
 
-Current sources are cached under the gitignored source_cache/discovery_ices_remaining_units_2026/. sources.csv records URLs, retrieval dates, sizes, DOI where available, and SHA-256. The 2025 WGNAS report and advice are retained as historical material, superseded by 2026.
+Current WGNAS sources are cached under the gitignored source_cache/discovery_ices_wgnas_2026/. sources.csv records URLs, retrieval dates, sizes, DOI where available, and SHA-256. The 2025 WGNAS report and advice are retained as historical material, superseded by 2026.
 
 ## Anglerfish: anf.27.1-2
 

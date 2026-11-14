@@ -10,12 +10,28 @@ selected <- read_table("discovery/selected_batch_01_2026.csv")
 # Source-list membership is distinct from current stock and import status.
 stopifnot(nrow(register) > 0L, !anyNA(register$candidate_id),
   !anyDuplicated(register$candidate_id), !any(register$candidate_id == "candidate_id"),
-  all(register$organization %in% c("NOAA", "ICES", "DFO", "NAFO", "Fisheries New Zealand")),
+  !anyNA(register$organization), all(nzchar(register$organization)),
   all(register$match_status %in% c("unreviewed", "matched", "new", "ambiguous")),
   all(register$screening_status %in% c("not_started", "in_progress", "screened")),
   all(register$eligibility %in% c("unresolved", "eligible", "ineligible")),
   all(register$import_status %in% c("not_started", "in_progress", "partial", "imported", "blocked")),
   all(is.na(register$matched_stock_id) | register$matched_stock_id %in% stocks$stock_id))
+regional_rows <- register[register$organization %in%
+  c("Fisheries New Zealand", "AFMA"), , drop = FALSE]
+nz_rows <- regional_rows[regional_rows$organization == "Fisheries New Zealand", , drop = FALSE]
+afma_rows <- regional_rows[regional_rows$organization == "AFMA", , drop = FALSE]
+afma_unmatched <- afma_rows[afma_rows$match_status == "new", , drop = FALSE]
+stopifnot(nrow(regional_rows) == 29L,
+  nrow(nz_rows) == 21L,
+  all(nz_rows$match_status == "matched"),
+  all(nz_rows$matched_stock_id %in% stocks$stock_id),
+  nrow(afma_rows) == 8L,
+  sum(afma_rows$match_status == "matched") == 7L,
+  nrow(afma_unmatched) == 1L,
+  afma_unmatched$candidate_id == "AFMA:SESSF_Eastern_School_Whiting",
+  afma_unmatched$eligibility == "unresolved",
+  afma_unmatched$import_status == "partial",
+  all(afma_rows$matched_stock_id[afma_rows$match_status == "matched"] %in% stocks$stock_id))
 check_inventory_accounting(register, progress, units)
 incorrect_progress <- progress
 incorrect_progress$new[1L] <- incorrect_progress$new[1L] + 1L
@@ -99,6 +115,7 @@ stopifnot(nrow(redfish3ln_unit) == 1L,
   grepl("NAFO", redfish3ln_unit$organizations, fixed = TRUE))
 hoki <- lookup("MPI:HOK1")
 hoki_selection <- read_table("discovery/selected_batch_02_2026.csv")
+hoki_selection <- hoki_selection[hoki_selection$candidate_id == "MPI:HOK1", , drop = FALSE]
 stopifnot(hoki$candidate_unit_id == "nz_hoki_hok1",
   hoki$official_stock_id == "HOK 1",
   grepl("numbers-at-age", hoki$catch_age_evidence, fixed = TRUE),
@@ -113,3 +130,21 @@ cat("NAFO inventory coverage, screening decisions and DFO crosswalks passed.\n")
 cat("Current discovery identities, source evidence, unit deduplication and summary accounting passed.\n")
 
 
+
+hak7 <- lookup("MPI:HAK7:WCSI")
+hak7_unit <- units[units$candidate_ids == "MPI:HAK7:WCSI", , drop = FALSE]
+nz_progress <- progress[progress$organization == "Fisheries New Zealand", , drop = FALSE]
+nz_rows <- register[register$organization == "Fisheries New Zealand", , drop = FALSE]
+nz_eligible_new_units <- unique(nz_rows$candidate_unit_id[
+  nz_rows$match_status == "new" & nz_rows$eligibility == "eligible"])
+stopifnot(nrow(hak7) == 1L,
+  hak7$matched_stock_id == "mpi_hake_hak7_wcsi",
+  hak7$import_status == "partial",
+  nrow(hak7_unit) == 1L,
+  hak7_unit$unit_key == "stock:mpi_hake_hak7_wcsi",
+  hak7_unit$import_status == "partial",
+  grepl("not part of the fitted run", hak7$notes, fixed = TRUE),
+  nz_progress$inventory_rows == nrow(nz_rows),
+  nz_progress$eligible_new == sum(nz_rows$match_status == "new" &
+    nz_rows$eligibility == "eligible"),
+  nz_progress$eligible_new_units == length(nz_eligible_new_units))

@@ -1,32 +1,74 @@
 # Dusky rockfish in the Gulf of Alaska
 
-## Identity and latest assessment
+## Current unit and assessment
 
-NOAA Stock SMART identifier 10559 is the Gulf of Alaska dusky rockfish (*Sebastes variabilis*) unit. It is geographically and biologically distinct from dusky rockfish outside the Gulf of Alaska.
+NOAA Stock SMART identifier 10559 is the Gulf of Alaska dusky rockfish
+(*Sebastes variabilis*) unit. The latest detailed assessment located is the
+November 2024 SAFE assessment, model m22.5a, with data through 2024. The GOA
+Plan Team agreed with m22.5a, and the Council used that assessment for 2025
+harvest specifications. The 2026 SAFE chapter is a pre-dissemination harvest
+projection from the 2024 assessment; it reports no new model fit. The 2026
+projection is cached for context but its projected years are not mixed into
+the 2024 assessment record.
 
-The latest full assessment located is the November 2024 SAFE assessment, recommended model m22.5a. The September 2026 SAFE chapter is a pre-dissemination peer-review harvest projection; its cover says it has not been formally disseminated by NMFS. It states that no new assessment model was run, uses updated catches to project from the 2024 assessment, and schedules the next assessment for 2027. The 2026 projection is therefore a current advice/output supplement, not a replacement for the 2024 assessment inputs or fitted time series.
+## Inputs and assumptions recovered
 
-The 2024 full SAFE and 2026 projection are cached locally under `source_cache/discovery_noaa_dusky_rockfish_2024/`. Its `sources.csv` records source URLs, retrieval date, byte sizes (available from local files), and SHA-256 checksums.
+The SAFE reports commercial catch biomass in metric tons for 1977–2024. The
+table has no 1987 value, which is retained as missing. It identifies foreign
+observer data, joint-venture data and the NMFS Regional Office Catch
+Accounting System as sources.
 
-## Inputs and assumptions
+Table 12-7 reports fishery age proportions for ages 4–29 and a 30+ group in
+2000–2006, 2008, 2010, 2012, 2014, 2016, 2018, 2020 and 2022. Table 12-10
+reports bottom-trawl survey age proportions for the same age groups in 1990,
+1993, 1996, 1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017,
+2019, 2021 and 2023. Both tables include input sample size (`n_iss`), haul
+count (`n_h`) and effective sample size (`n_ess`). The fishery table's years
+do not match the main-text model data summary exactly. Its reported rows are
+stored as published source data, but the import does not claim that they are
+the exact composition arrays in the final likelihood.
 
-The 2024 model fits total catch biomass in metric tonnes for 1977–2024, with fishery age compositions and fishery length compositions. The data summary lists fishery age-composition years 1998–2002, 2004–2006, 2008–2020 (biennially), and 2022. The narrative says sampled fish aged 4–66 were represented by raw age distributions from 2000–2022. This apparent difference in the age-composition year coverage needs reconciliation during source curation; it should not be silently harmonized.
+Table 12-9 reports NMFS bottom-trawl VAST biomass estimates and natural-scale
+standard errors in metric tons for 1990–2023, with lower and upper confidence
+limits. The table does not state the nominal confidence level. It identifies
+VAST lognormal error as the m22.5a survey likelihood. No fractional survey
+timing is reported.
 
-The model uses bottom-trawl survey biomass from the VAST geostatistical model for 1990–2023 (tonnes, with standard errors and confidence intervals) and survey age compositions for the same years. The survey age proportions are reported for ages 4–29 and a pooled 30+ group, with input and effective sample sizes and haul counts. The model fits these components as a biomass index and composition, not as an observed age-specific biomass index.
+Natural mortality is fixed at 0.07 per year. The report provides a
+weight-at-age equation with parameters `W_inf = 1928 g`, `kappa = 0.190`,
+`t0 = 0.607` and `b = 3.0`; it says the curve was constructed outside the
+model from combined-sex survey age/length data. The numeric weight-at-age
+vector is not tabulated. Female maturity is fitted conditionally with a
+logistic curve and binomial likelihood from observations cited to Lunsford
+(1997, personal communication) and Chilton (2010). The report gives age at
+50% maturity as 10.1, but does not tabulate the underlying observations or
+both fitted coefficients.
 
-Mean weight-at-age is derived outside the assessment model from combined-sex survey size-at-age data. The report supplies the weight-growth equation in grams with parameters W∞ = 1928 g, κ = 0.190, t0 = 0.607, and b = 3.0. The assessment fits female maturity-at-age conditionally with a logistic curve and binomial likelihood, using combined female observations cited to Lunsford (1997, personal communication) and Chilton (2010). The reported age at 50% maturity is 10.3. The SAFE shows the fitted curve in Figure 12-9 but does not tabulate the combined raw observations or the full coefficient pair.
+## Outputs recovered and remaining gaps
 
-Natural mortality is fixed at M = 0.07 per year. The report does not specify a fractional within-year survey timing, so that remains unresolved.
+Tables 12-12 and 12-14 report annual female SSB, total biomass, fully selected
+F and age-4+ recruitment through 2024. Table 12-12 provides maximum-likelihood
+point estimates. Table 12-14 provides MCMC means and 2.5/97.5 percentile bounds
+(described in the report as 95% confidence bounds). Source units are retained:
+the MLE recruitment table uses millions of fish, while the MCMC table uses
+thousands. No 2025–2026 projections are imported. The assessment does not
+provide numeric annual N-at-age or F-at-age tables.
 
-## Outputs and screening decision
-
-The 2024 SAFE provides annual maximum-likelihood estimates for female spawning biomass, total age-4+ biomass, fully selected fishing mortality, and age-4 recruitment, plus MCMC means and 95% credible intervals for those quantities. It does not provide numerical N-at-age or F-at-age output surfaces. The pre-dissemination 2026 projection supplies updated catch and projected total and spawning biomass through 2031, without refitting the assessment.
-
-**Eligible for source curation.** The official full assessment provides catch biomass, fishery and survey age compositions, survey biomass with uncertainty, weight-at-age and maturity-at-age bases, fixed natural mortality, and comparable population outputs. Before importing values, reconcile the reported fishery-age years, retrieve or document a defensible maturity source, and continue searching for the survey timing. No canonical values were added in this discovery screen.
+The source import is therefore partial. It preserves aggregate catch biomass,
+the two published composition tables, the aggregate VAST survey index and its
+reported uncertainty, selected model/biology assumptions, and aggregate MLE
+and MCMC outputs. Exact final fishery composition arrays, raw maturity
+observations, the full maturity coefficients, numeric weight-at-age values,
+survey timing, N-at-age and F-at-age remain unavailable or unresolved.
 
 ## Sources
 
-- [2024 GOA Dusky Rockfish SAFE chapter](https://www.npfmc.org/wp-content/PDFdocuments/SAFE/2024/GOAdusky.pdf), especially the data summary and Tables 12-7–12-14.
-- [2026 GOA Dusky Rockfish harvest projection](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=12.+GOA+Dusky+Rockfish.pdf&p=ed574dbd-35fa-43dc-99f0-a80909caf4d5.pdf).
-- [NOAA 2024 North Pacific Groundfish Stock Assessments](https://www.fisheries.noaa.gov/alaska/population-assessments/2024-north-pacific-groundfish-stock-assessments).
-- [NOAA Stock SMART](https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10559).
+- [2024 GOA Dusky Rockfish SAFE chapter](https://www.npfmc.org/wp-content/PDFdocuments/SAFE/2024/GOAdusky.pdf), Tables 12-2, 12-7, 12-9, 12-10, 12-12 and 12-14.
+- [December 2024 GOA Groundfish Plan Team report](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=C2+GOA+Groundfish+PT+Report.pdf&p=7edd1c8f-f0ce-4936-9fd9-cc1353fe8d0e.pdf), recording agreement with model m22.5a for the 2025 cycle.
+- [2026 GOA Dusky Rockfish projection](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=12.+GOA+Dusky+Rockfish.pdf&p=ed574dbd-35fa-43dc-99f0-a80909caf4d5.pdf), a projection without a new assessment fit.
+- [NOAA Stock SMART record 10559](https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10559).
+
+The 2024 SAFE and 2026 projection are cached under
+`source_cache/discovery_noaa_dusky_rockfish_2024/`. Their URLs, retrieval
+dates, checksums, byte sizes and cache filenames are recorded in
+`provenance/discovery_noaa_dusky_rockfish_2024/sources.csv`.

@@ -1,85 +1,40 @@
-# NOAA Gulf of Mexico cobia, 2020 assessment update
+# NOAA Gulf of Mexico cobia — SEDAR 28 Update (2020)
 
-## Decision
+## Assessment and stock unit
 
-**New unit; eligible for source curation, with an age-input reconstruction caveat.**
-This screen verifies that the official model used age-at-length data and reports
-population estimates. It does not add a canonical assessment or numerical values.
+The Gulf of Mexico cobia unit (NOAA Stock SMART ID 10390) is separate from the Southern Atlantic cobia unit. The assessment identifies the Florida–Georgia state line as the boundary. The latest detailed Gulf assessment located is the SEDAR 28 Update, completed in June 2020, with input data through 2018. NOAA's 2024 management amendment continued to cite this as the latest assessment. The update uses Stock Synthesis 3.24.
 
-The Gulf unit is distinct from the Southern Atlantic cobia unit. SEDAR defines
-the dividing boundary at the Florida–Georgia state line. The NOAA inventory row
-is Stock SMART ID `10390`; no matching stock or assessment is present in the
-canonical database.
+The model is used for status determinations. The assessment review did not accept its results for quantitative OFL/ABC advice. Its management use is recorded with that limitation.
 
-## Assessment and sources
+## Sources and imported data
 
-The latest detailed Gulf assessment located is the SEDAR 28 update, dated June
-2020 and fitted through 2018. It uses Stock Synthesis 3, version 3.24, with a
-single-area age-structured population model from 1927 through 2018. The assessment
-assumes annual, continuous fishing and spawning with no seasonal structure. NOAA's
-2024 management amendment still cites this update as its most recent stock
-assessment. No later Gulf assessment or native SS3 input/output archive was found
-in the SEDAR project documentation reviewed on 2026-10-31.
+The official assessment and its supporting work papers are cached locally under the ignored source_cache/discovery_noaa_gom_cobia_2020/ directory. The tracked provenance manifest records source URLs, retrieval date, file sizes, and SHA-256 checksums.
 
-The official update and supporting files were cached locally under
-`source_cache/discovery_noaa_gom_cobia_2020/`. The
-ignored `sources.csv` manifest records each URL, retrieval date, byte count and
-SHA-256 checksum.
+- [SEDAR 28 Gulf Cobia Update report](https://sedarweb.org/documents/2019-update-sedar-28-gulf-of-mexico-cobia-final-report/)
+- [Recreational survey data work paper](https://sedarweb.org/documents/2019-s28update-wp-02-recreational-survey-data-for-cobia-in-the-gulf-of-mexico/)
+- [Length-composition work paper](https://sedarweb.org/documents/2019-s28update-wp-04-gulf-of-mexico-cobia-rachycentron-canadum-commercial-and-recreational-length-compositions/)
+- [Headboat index work paper](https://sedarweb.org/documents/2019-s28update-wp-05-standardized-index-of-gulf-of-mexico-cobia-rachycentron-canadum-from-headboat-data/)
+- [Commercial discard work paper](https://sedarweb.org/documents/2019-s28update-wp-06-cpue-expansion-estimation-for-total-commercial-discards-of-gulf-of-mexico-cobia-using-reef-fish-observer-data-and-adjustments-to-discard-logbook-estimates-for-florida-east-coast/)
+- [Shrimp bycatch work paper](https://sedarweb.org/documents/2019-s28update-wp-07-shrimp-fishery-bycatch-estimates-for-gulf-of-mexico-cobia-1972-2017/)
 
-| Source | Use |
-|---|---|
-| [SEDAR 28 Gulf Cobia Update report](https://sedarweb.org/documents/2019-update-sedar-28-gulf-of-mexico-cobia-final-report/) | Assessment inputs, assumptions, fit description and outputs |
-| [2019-S28Update-WP-02](https://sedarweb.org/documents/2019-s28update-wp-02-recreational-survey-data-for-cobia-in-the-gulf-of-mexico/) | Recreational catch and survey data methods |
-| [2019-S28Update-WP-04](https://sedarweb.org/documents/2019-s28update-wp-04-gulf-of-mexico-cobia-rachycentron-canadum-commercial-and-recreational-length-compositions/) | Commercial and recreational length-composition methods and coverage |
-| [2019-S28Update-WP-05](https://sedarweb.org/documents/2019-s28update-wp-05-standardized-index-of-gulf-of-mexico-cobia-rachycentron-canadum-from-headboat-data/) | Headboat abundance-index methods |
-| [2019-S28Update-WP-06](https://sedarweb.org/documents/2019-s28update-wp-06-cpue-expansion-estimation-for-total-commercial-discards-of-gulf-of-mexico-cobia-using-reef-fish-observer-data-and-adjustments-to-discard-logbook-estimates-for-florida-east-coast/) | Commercial discard estimates |
-| [2019-S28Update-WP-07](https://sedarweb.org/documents/2019-s28update-wp-07-shrimp-fishery-bycatch-estimates-for-gulf-of-mexico-cobia-1972-2017/) | Shrimp bycatch inputs |
-| [NOAA 2024 Amendment 32](https://www.noaa.gov/general-counsel/NEPA/final-amendment-32-to-fishery-management-plan-for-coastal-migratory-pelagic-resources-of-gulf-of) | Confirms continued management use of the 2020 assessment |
+The database import preserves the report's numerical values and units:
 
-## Inputs and biological assumptions
+- Table 4 commercial landings by gear, in pounds, and reported annual aggregate landings, in metric tons, 1927–2018.
+- Table 5 recreational landings by Historical, FHWAR, MRIP, SRHS Headboat, TPWD, and Louisiana Creel sources, in fish, 1950–2018. Separate source rows are retained. The model aggregate is reconstructed by summing the reported non-missing components for each year and dividing by 1,000, as specified in the report.
+- Tables 6 and 7 commercial and recreational discard estimates, preserving the reported gear/source breakdowns and fish counts.
+- Table 8 annual shrimp-bycatch source estimates, 1972–2017. The assessment uses a super-period likelihood; these annual estimates are not treated as separate annual model observations.
+- Table 9 annual length- and age-sample counts. Its recreational age counts sum to 1,267 for 1987–2002 and 2004–2018; 2003 has no age samples. The report narrative separately says there were 1,266 length-at-age samples. The one-sample discrepancy is preserved rather than adjusted.
+- Table 10 normalized shrimp-effort index and its constant log-scale SD, 1945–2018. This is an index of shrimp-fleet effort used to inform shrimp fishing mortality, not an abundance index.
+- Table 11 MRIP and SRHS Headboat aggregate relative-abundance indices with their reported log-scale SDs. The numerical table ends in 2018, although the report describes a headboat series through 2019; only tabulated observations are imported.
+- Tables 1–3 fixed sex-combined length–weight coefficients, recommended growth parameters, and the age-specific fixed Lorenzen natural-mortality vector. The M vector is scaled using M = 0.38 per year over ages 3–11. The report specifies age 2 as 50% mature, ages 3+ as fully mature, and a 60% female fraction at all ages.
+- Tables 13–15 annual exploitation-rate proxy, apical fishing mortality by fleet, biomass, spawning biomass, total abundance, age-0 recruitment, and depletion. The output tables provide point estimates only, so output uncertainty is left blank.
 
-- Commercial landings are reported in thousands of pounds and converted to
-  metric tons for the model (1927–2018). Recreational landings are reported in
-  numbers of fish and entered as thousands of fish (1950–2018).
-- The model also uses commercial and recreational discards, shrimp bycatch, and
-  annual length compositions. Recreational age information is entered as
-  conditional age-at-length compositions for 3 cm length bins, ages 0–10, with
-  age 10 as a plus group. The report records 1,266 age-length samples from
-  1987–2002 and 2004–2018; there were no age samples in 2003.
-- The age likelihood is not direct catch-at-age. A documented recreational
-  catch-at-age reconstruction is possible in principle by combining annual
-  recreational length composition, conditional age-at-length composition and
-  recreational catch totals. The conditional age proportions are plotted rather
-  than tabulated, and no native SS3 data files were found in the reviewed public
-  project files. These values must be recovered or transparently digitized and
-  validated before import.
-- The MRIP index covers 1981–2018 and the SRHS headboat index covers 1986–2019.
-  Both are fishery-dependent aggregate abundance indices. Their selectivity is
-  assumed to match the aggregate recreational fleet. The assessment does not
-  include an independent age-specific survey index. Any age-specific index
-  derived from these observations and fishery age compositions would be an
-  approximation, not a native assessment input.
-- The model uses a fixed sex-combined length–weight relationship, sex-specific
-  growth, fixed maturity (age 2: 50%; ages 3+: 100%), and a 60% female sex ratio.
-  Age-specific weights can be derived from the reported growth and length–weight
-  inputs.
-- Natural mortality is a fixed age-specific Lorenzen vector, scaled to a fully
-  selected-age M of 0.38 per year. M is not estimated.
-- There is no within-year timing fraction because the model assumes continuous,
-  homogeneous fishing and spawning throughout the year.
+## Remaining source gaps and interpretation
 
-## Official outputs and cautions
+The assessment fits commercial and recreational length compositions and recreational age-at-length compositions conditional on length. The report gives annual sample counts, but the numeric composition cells are presented in figures rather than tables. The reviewed public project files did not include a native Stock Synthesis data file. Therefore no annual age-composition proportions or direct catch numbers-at-age are imported. This is an age-input reconstruction caveat: the imported removals and sample counts do not reproduce the complete observation data supplied to the official model.
 
-Table 15 reports annual model biomass, spawning biomass, total abundance,
-age-0 recruitment and depletion for 1927–2018. Recruitment uncertainty is also
-shown in a figure. Numbers-at-age appear as a bubble plot; a numeric N-at-age
-table was not located. Fleet fishing mortality and age selectivity are shown in
-figures, but a numeric F-at-age table was not located. The report provides
-aggregate official population outputs for comparison, while age-specific output
-recovery would require further source work.
+Annual numerical N-at-age and age-specific F surfaces were not found. The report provides a numeric total-abundance series and annual apical F by fleet, which are distinct outputs and are retained with those definitions. Table 13 exploitation rate is biomass killed divided by biomass; the report uses it as an F proxy, but it is not instantaneous age-specific F.
 
-The assessment report notes that conditional age-composition fits were poor,
-partly because of small sample sizes and fixed growth parameters. It also
-discusses low confidence in the abundance indices and broader data limitations.
-These are properties of the official assessment, not reasons to alter its
-observations during source extraction.
+The annual model assumes continuous fishing and spawning and does not specify a fractional within-year sampling time. No timing value is added. Fixed maturity and growth inputs can support derived biological quantities, but no direct annual weight-at-age output table or age-specific output uncertainty is reported.
+
+The assessment notes low confidence in its abundance indices and poor fit to age compositions, partly associated with small sample sizes and fixed growth assumptions. Those limitations are preserved as source context; the imported observations have not been altered to improve agreement.

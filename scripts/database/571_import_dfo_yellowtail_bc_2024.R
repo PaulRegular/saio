@@ -289,8 +289,8 @@ if ("--write" %in% commandArgs(trailingOnly = TRUE)) {
   inventory$matched_stock_id[unit_row] <- stock_id
   inventory$eligibility[unit_row] <- "eligible"
   inventory$import_status[unit_row] <- "partial"
-  replace_candidate_register_row(inventory_path, unit_row, inventory[unit_row, , drop = FALSE],
-    unit_key, key_column = "unit_key")
+  replace_csv_register_row(inventory_path, unit_row, inventory[unit_row, , drop = FALSE],
+    "unit_key", unit_key)
 }
 cat("Verified Yellowtail source rows:", nrow(inputs), "inputs,", nrow(outputs),
   "outputs and", nrow(assumptions), "assumptions.\n")

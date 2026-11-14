@@ -77,6 +77,4 @@ Files were retrieved on 2026-10-31 and cached under
 source_cache/discovery_noaa_mutton_snapper_sedar79_2024/. The cache manifest
 records the source URL, byte size, and SHA-256 for each file.
 
-Screening decision: eligible for source curation with an explicit
-figure-digitization limitation. No canonical records have been imported;
-import_status remains not_started.
+Screening decision: eligible for source curation with an explicit figure-digitization limitation. A partial canonical source import was completed on 2026-11-12; see source_reviews/noaa_southeastern_us_mutton_snapper_sedar79_2024.md. The numerical composition arrays and annual age-specific indices remain unavailable.

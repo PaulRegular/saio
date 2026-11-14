@@ -1,4 +1,4 @@
-# NOAA Rougheye/Blackspotted Rockfish Unit Crosswalk — 2026-10-31
+# NOAA Rougheye/Blackspotted Rockfish Unit Crosswalk — 2026-11-12
 
 ## Current assessment units
 
@@ -28,8 +28,10 @@ it reports numbers-at-age, weight-at-age, maturity-at-age, recruitment,
 spawning biomass and uncertainty. The longline survey provides an abundance
 index and length data, but no longline age data. The 2024 SAFE chapter is a
 harvest projection based on the 2023 fit, rather than a new full assessment.
-NOAA's February 2026 schedule lists a GOA full assessment for later 2026
-review; as of this review date, that product was not yet final.
+The December 2025 GOA catch report states that the 2023 run remained the latest
+full assessment and no assessment was conducted in 2025. A 2026 full-assessment
+document was uploaded on November 9 for review at the November 18–20 Plan Team
+meeting; as of November 12 it had not yet been reviewed or accepted.
 
 The 2024 BSAI SAFE describes one regional complex with two model components:
 an age-structured model for Aleutian Islands and a non-age-structured Tier 5

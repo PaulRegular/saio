@@ -1,0 +1,3 @@
+source,url,retrieved_on,bytes,sha256,notes
+cowcod_2019_assessment.pdf,https://www.pcouncil.org/documents/2019/10/status-of-cowcod-sebastes-levis-in-2019-october-24-2019.pdf,2026-11-11,7773965,3c53db2370a5af0cd236869e087dde5cebb8c4693351a6ef393c5cf48a0ad37e,Official 2019 Cowcod assessment for the Southern California Bight; data through 2018 and terminal-year estimate for 2019.
+cowcod_2019_model_files.zip,https://www.pcouncil.org/documents/cowcod-2019-ss-model-files-zip-file/,2026-11-11,772196,887ea0b424470dd44d6cb1f883275d35275e96d3d9d5983feeae2cfc1439f6bc,Official Stock Synthesis 3.30.13.09 data/control files and Report.sso; no fitted parameter/covariance files.

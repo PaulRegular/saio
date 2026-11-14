@@ -6,15 +6,15 @@ The collection currently focuses on finfish and age-disaggregated information: c
 
 ## How the database is organized
 
-The database consists of five linked CSV tables in the [database folder](database/).
+SAIO releases contain five linked CSV tables. The Git repository holds the schema, importers, source reviews and [release manifests](database/releases/).
 
 | Table | What it contains |
 |---|---|
-| [stocks.csv](database/stocks.csv) | Stock names, scientific names, assessment authorities, official stock codes and geographic areas. Start here to find a stock. |
-| [assessments.csv](database/assessments.csv) | The assessment years and model runs available for each stock, links to the source documents and files, and the completeness of each record. |
-| [inputs.csv](database/inputs.csv) | Numerical inputs supplied to the official assessment, such as catch-at-age, survey indices, age or length compositions, weights, maturity and supplied natural mortality. |
-| [assumptions.csv](database/assumptions.csv) | Biological and statistical assumptions, including mortality treatments, recruitment, selectivity, observation errors and parameter sharing. |
-| [outputs.csv](database/outputs.csv) | Official assessment estimates and reported indicators, with available uncertainty. Examples include numbers-at-age, fishing mortality, recruitment and spawning-stock biomass. |
+| `stocks.csv` | Stock names, scientific names, assessment authorities, official stock codes and geographic areas. Start here to find a stock. |
+| `assessments.csv` | The assessment years and model runs available for each stock, links to the source documents and files, and the completeness of each record. |
+| `inputs.csv` | Numerical inputs supplied to the official assessment, such as catch-at-age, survey indices, age or length compositions, weights, maturity and supplied natural mortality. |
+| `assumptions.csv` | Biological and statistical assumptions, including mortality treatments, recruitment, selectivity, observation errors and parameter sharing. |
+| `outputs.csv` | Official assessment estimates and reported indicators, with available uncertainty. Examples include numbers-at-age, fishing mortality, recruitment and spawning-stock biomass. |
 
 Each stock has a `stock_id`. A stock can have several assessments, each with its own `assessment_id`. Use that assessment identifier to select the corresponding inputs, assumptions and outputs. Keep different assessment runs separate, even when they describe the same stock.
 
@@ -37,18 +37,27 @@ Assessment records link to the original reports and, where available, data files
 
 For the Greenland halibut unit in NAFO Subarea 2 and Divisions 3KLMNO, see the [stock source review](source_reviews/dfo_greenland_halibut_2_3klmno.md).
 
+For NOAA Pacific Coast petrale sole, see the [stock source review](source_reviews/noaa_petrale_10011.md).
+
 ## Getting the data
 
-For individual tables, open a CSV from the [database folder](database/) and use GitHub's **Download raw file** control. Save the files you need locally. The smaller stock and assessment tables can be inspected in a spreadsheet; R is more practical for the large input and output tables.
+Download the five `.csv.gz` assets and `manifest.csv` for a named release from
+[GitHub Releases](https://github.com/PaulRegular/saio/releases). Keep the release
+tag with any analysis that uses the data. The manifest records the schema,
+row counts and SHA-256 checksums.
 
-For a complete local copy, use Git with [Git LFS](https://git-lfs.com/) installed. Git LFS retrieves the large CSV files:
+To restore the tables into an SAIO checkout, install the R package
+`openssl`, then run this command from the repository root:
 
 ```sh
-git lfs install
-git clone https://github.com/PaulRegular/saio.git
+Rscript scripts/database/003_restore_release.R path/to/downloaded/assets
 ```
 
-The CSV files remain ordinary text tables on your computer. Downloaded assessment PDFs and other cached source documents are not included; use the source links in the assessment records to obtain the originals.
+The restore script checks the compressed assets and the resulting CSVs before
+installing them under `database/`. An explicit second argument selects a
+different directory. Choose a destination without existing tables.
+Downloaded source reports and native assessment files remain available through
+the citations and source manifests.
 
 ## Accessing a stock in R
 
@@ -95,6 +104,6 @@ Use `source_reference`, `source_type`, `transformation` and `notes` to trace a r
 
 SAIO is a growing collection, not an exhaustive inventory of all assessments. The database was compiled with substantial AI assistance, and not all records have been independently checked by a person. Verify the values and definitions relevant to your work against the authoritative sources before research use. Automated checks and extraction-completeness labels do not establish scientific equivalence among assessments.
 
-Record the database revision used in your analysis and retain a copy of those tables so later updates do not change your results. Cite the original assessment sources as well as SAIO, and retain their attribution and any source-specific reuse terms. No blanket licence is assigned to third-party assessment material. Repository code retains its attribution and GPL (>= 3) licence in [CODE_LICENSE.md](CODE_LICENSE.md).
+Record the release tag used in your analysis and retain its manifest and assets. Cite the original assessment sources as well as SAIO, and retain their attribution and any source-specific reuse terms. No blanket licence is assigned to third-party assessment material. Repository code retains its attribution and GPL (>= 3) licence in [CODE_LICENSE.md](CODE_LICENSE.md).
 
 For curation and archiving, see [Batch commits and snapshots](PROTOCOL.md#batch-commits-and-snapshots).

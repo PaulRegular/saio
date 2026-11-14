@@ -1,7 +1,11 @@
 source_cache/
 results/
+/tmp/
 .Rhistory
 .RData
 .Rproj.user/
 *.rds
 *.html
+
+# Local tables restored from a SAIO data release
+/database/*.csv

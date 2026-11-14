@@ -1,0 +1,54 @@
+root <- "."
+source_dir <- file.path(root, "source_cache")
+files <- c(
+  "mpi_snapper_sna1_2023/FAR-2024-47-SNA1-assessment-2022-2023.pdf",
+  "mpi_snapper_sna1_2023/FAR-2022-24-SNA1-age-composition-2019-20.pdf",
+  "mpi_snapper_sna1_2023/FAR-2021-08-SNA1-trawl-surveys-2019-20.pdf",
+  "mpi_snapper_sna1_2023/FAR-2022-10-SNA1-trawl-surveys-2020-21.pdf",
+  "mpi_snapper_sna1_2023/FAR-2023-41-SNA1-bottom-trawl-CPUE.pdf",
+  "mpi_snapper_sna1_2023/Fisheries-Assessment-Plenary-2025-SNA1.pdf",
+  "mpi_snapper_sna1_2023/FAR-2024-69-SNA1-age-composition-2022-23.pdf"
+)
+urls <- c(
+  "https://fs.fish.govt.nz/Doc/25775/FAR-2024-47-Assessment-of-SNA1-stocks%20in-2022-and-2023.pdf.ashx",
+  "https://fs.fish.govt.nz/Doc/25280/FAR-2022-24-Snapper-Age-Composition-SNA1-SNA2-201920-4267.pdf.ashx",
+  "https://fs.fish.govt.nz/Doc/24856/FAR-2021-08-Hauraki-Gulf-2019-Bay-Of-Plenty-2020-Trawl-Surveys-4125.pdf.ashx",
+  "https://webstatic.niwa.co.nz/library/FAR2022-10.pdf",
+  "https://fs.fish.govt.nz/Doc/25557/FAR-2023-41-Snapper-CPUE-For-Hauraki-Gulf-And-East-Northland-Trawl-Fisheries-To-202021-4414.pdf.ashx",
+  "https://fs.fish.govt.nz/Doc/26109/snapper-sna-1-fisheries-assessment-plenary-may-2025-volume-3.pdf.ashx",
+  "https://fs.fish.govt.nz/Doc/25809/FAR-2024-69-Age-composition-of-commercial-snapper-landings-in-SNA1-and-SNA2.pdf.ashx"
+)
+expected_sha256 <- c(
+  "F63A73EBC4004DD8AEE9E62A59D6192771C023CE45FA1F6C07524AFAF57CAC70",
+  "7113E13688909E9F2BA89B23AA7BA53AB0A726F8FD2F88716A423C6A10DC9DA9",
+  "0C57D83DEF4F3871B7F79FD7B025594CBED5FDD8F806DF6F92E4B2D2F4026869",
+  "8CAEBBE53EFCD8254E83D4268F4043C18DCA0DF1B3820E959E55EEA1781B0B27",
+  "4997F439CA9CF1BA45076B96065B1BCBB5BEE1D1DBC42B5705439E4C7CD9908F",
+  "086248657C913BFD5886B62180409E081873A2320F4DD4316C28A3EBB5E4C143",
+  "75A9100A7E1E2DC6D89568763B4FEEC95EEF5879D5CE50921E3382C9ECAE1AAB"
+)
+paths <- file.path(source_dir, files)
+if (!all(file.exists(paths))) {
+  stop("A reviewed SNA 1 source file is missing from the local cache.", call. = FALSE)
+}
+actual_sha256 <- toupper(unname(tools::sha256sum(paths)))
+if (!identical(actual_sha256, expected_sha256)) {
+  stop("A cached SNA 1 PDF differs from its verified checksum.", call. = FALSE)
+}
+pdf_headers <- vapply(paths, function(path) {
+  rawToChar(readBin(path, "raw", n = 5L))
+}, character(1L))
+if (any(pdf_headers != "%PDF-")) {
+  stop("A cached SNA 1 source is not a PDF.", call. = FALSE)
+}
+manifest <- data.frame(
+  local_file = files,
+  source_url = urls,
+  retrieved_on = rep("2026-11-06", length(files)),
+  sha256 = actual_sha256,
+  stringsAsFactors = FALSE
+)
+write.csv(manifest,
+  file.path(root, "provenance", "mpi_snapper_sna1_2023_sources.csv"),
+  row.names = FALSE, na = "")
+cat("Verified and recorded", nrow(manifest), "SNA 1 source files.")

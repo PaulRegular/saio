@@ -26,12 +26,17 @@ numeric tables, so catch-at-age requires digitizing observed proportions and
 combining them with source catch totals and age-specific weights.
 
 The model fits two aggregate abundance indices: headboat through 2019 and the
-SERFS video index from 2011–2019. The report provides annual values and CVs.
-SEDAR 71 WP04 also reports numeric chevron-trap age counts and proportions for
-1990–2019. Those trap compositions informed the fitted selectivity of the video
-index; the assessment does not fit the trap age compositions as an age-specific
-abundance index. A reconstructed age-specific index should therefore be
-identified as an approximation.
+SERFS video index from 2011–2019. Table 3 provides annual values and CVs.
+SEDAR 71 WP04 reports MARMAP/SERFS chevron-trap age counts and percentages for
+1990–2002 and 2004–2019, along with total fish and deployments. These are survey
+age-composition samples that support the index/selectivity work; they are not a
+direct age-specific abundance index. The source report's Table 4 count values
+and Table 5 percentages disagree in eight shared age-year cells. Both tables
+were imported independently as published, without using one to correct or fill
+the other. The count table reports ages 1–14 and 16; the percentage table
+reports ages 1–10, 12–14 and 16. Age 11 is absent from Table 5 and age 15 is
+absent from both tables. Table 4 leaves age 1 in 2017 and age 3 in 2019 blank;
+those cells remain missing rather than being treated as zero.
 
 The report supplies age-specific whole weight, female maturity and sex ratio,
 and natural mortality. Female maturity is logistic with age at 50% maturity
@@ -40,15 +45,20 @@ declines with age under a Lorenzen curve, and is scaled over fully selected ages
 5+ so survival to age 30 matches a constant M = 0.15. The age-specific mortality
 and biology tables allow the reported assumptions to be represented directly.
 
-Numeric fitted outputs include total abundance-at-age and biomass-at-age,
-total biomass, SSB, and recruitment through 2019. Annual fleet fishing mortality
-is presented in figures, but a complete numeric F-at-age series and full
+Imported numeric outputs include abundance-at-age, biomass-at-age, total
+biomass, SSB, recruitment, status indicators, terminal selectivity, fleet
+fully-selected F, and estimated fleet landings/discards. Tables 6–14 provide
+the reported values through 2019; the 2020 values shown in Tables 6–8 are
+identified as first-year projections. The report does not provide annual
+uncertainty for these outputs. The source tables provide selectivity and
+fully-selected fleet F rather than a full numeric F-at-age time series, and
 run-matched native assessment files were not located.
 
-The stock is eligible for source curation because detailed official inputs,
-age compositions, biological assumptions, and numeric age-specific outputs are
-publicly documented. The source review should preserve the distinction between
-numeric report tables and compositions reconstructed from figures.
+The database record is partial. Verified numerical inputs and outputs from the
+detailed report and working papers are imported, but observed fishery
+age-composition proportions remain available only as figures. Catch-at-age is
+therefore not reconstructed. The reported chevron compositions are retained as
+supporting source data, not converted into an age-specific abundance index.
 
 ## Source files and provenance
 
@@ -66,5 +76,7 @@ are recorded in that directory's manifest.csv.
 - [SEDAR 106 South Atlantic Gag assessment project](https://sedarweb.org/assessments/sedar-106-south-atlantic-gag-grouper/)
 - [NOAA InPort report record](https://www.fisheries.noaa.gov/inport/item/65068)
 
-This review changes only discovery metadata. It does not add canonical stock,
-assessment, input, or output records.
+The canonical database now includes the SEDAR 71 stock and assessment, reported
+assumptions, numeric inputs, and reported outputs. Completeness remains partial
+because the fishery age-composition proportions and annual output uncertainty
+are unavailable as numeric tables.

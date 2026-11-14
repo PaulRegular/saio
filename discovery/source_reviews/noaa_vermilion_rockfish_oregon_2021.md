@@ -60,13 +60,24 @@ inputs and are also available in the model output. Female and male natural
 mortality are estimated separately with lognormal priors; reference estimates
 are 0.080 and 0.073 per year.
 
-## Official outputs and screening decision
+## Source curation
 
-The archived `Report.sso` includes machine-readable numbers-at-age,
-catch-at-age and F-at-age output, alongside fitted biological surfaces. The
-assessment report also tabulates the ORBS index and population reference
-quantities. The current OR/WA stock candidate is **new and eligible for source
-curation**; this screen covers its Oregon component and does not create a
-canonical stock or import numerical values.
+The 2021 Oregon component has been imported as a separate assessment under the
+single current Vermilion rockfish (OR/WA) stock record. Canonical inputs retain
+258 annual catch rows, 20 aggregate ORBS observations with their native
+log-scale standard errors, and the original length and conditional
+age-at-length frequencies. Catch-at-age and an age-specific ORBS index were
+not created from fitted model states or composition samples.
 
-The source has incomplete age-sample coverage and fishery-dependent recreational CPUE. An index split by age would be a reconstruction, not a directly observed age-specific survey series. The archive and report support continued source curation; estimated population states are not observations.
+The archived `Report.sso` contributes fitted N-at-age, biomass-at-age,
+F-at-age, M-at-age, generated biological surfaces, total biomass, recruitment,
+and egg-based spawning output. The source report provides recent aggregate
+uncertainty for recruitment and spawning output; age-specific uncertainty is
+not available. The archived machine-readable annual series ends in 2022, while
+the assessment document describes a longer management forecast.
+
+The source has incomplete age-sample coverage, and ORBS is fishery-dependent
+rather than fishery-independent. ORBS ages were not shown to represent the
+standardized index sample. Its summer timing and native month code are
+preserved, but the source does not establish a fractional-year time. SpawnBio
+is in millions of eggs and is not SSB biomass.

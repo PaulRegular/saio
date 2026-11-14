@@ -1,66 +1,98 @@
-# South Pacific albacore (NOAA:11688), 2024
+# South Pacific albacore (`Thunnus alalunga`), 2024
 
-## Assessment identity and current run
+Review date: 2026-11-09
 
-NOAA Stock SMART lists the South Pacific albacore stock (Thunnus alalunga,
-ID 11688) with a 2024 full assessment through 2022. This is the joint
-South-Pacific-wide assessment led by SPC with IATTC participation, covering
-the WCPFC Convention Area and the eastern Pacific model region. It is distinct
-from the North Pacific albacore unit already in the inventory. No matching
-canonical South Pacific stock record was found.
+## Assessment and run
 
-The 2024 diagnostic model is publicly reproducible. The SPC repository contains
-the MULTIFAN-CL model files, fitted diagnostic outputs, and TAF exports. The
-diagnostic run is the reference case underlying the assessment report; the
-management advice is based on an ensemble of 100 models.
+NOAA Stock SMART ID 11688 is a discovery alias for the joint SPC/IATTC South
+Pacific albacore assessment. The 2024 assessment extends through 2022 and
+covers the WCPFC Convention Area and the eastern Pacific model region. It is
+separate from the North Pacific albacore stock.
 
-## Inputs, assumptions, and outputs
+The pinned SPC repository contains the MULTIFAN-CL input files and TAF exports
+for a single diagnostic reference model. The assessment's management advice
+uses a 100-model ensemble. The canonical record
+`wcpfc_south_pacific_albacore_2024` is partial: the diagnostic inputs and
+point-estimate outputs below are preserved, but ensemble output and some
+likelihood details are unavailable in the export.
 
-The assessment does not use observed catch-at-age as a likelihood input. Its
-public files contain fishery catches and catch-reweighted length compositions,
-plus 654 otolith age-length observations compiled as conditional age-at-length
-data. The model has 17 extraction fisheries and three index fisheries. The
-length compositions span 1965–2022, while the CPUE input contains three
-aggregate fishery-index series. These are not age-specific survey indices.
+## Inputs and assumptions captured
 
-This would be a downstream transformation, not a recovered
-native catch-at-age input or a reproduction of the MULTIFAN-CL likelihood. The age observations span 2006–2013 and ages 1–10; the diagnostic population
-outputs use 12 age classes. Any reconstruction must preserve the native
-fishery/time structure and state clearly how the sampled age-length
-relationship is applied beyond its observed strata. The fitted MFCL
-numbers-at-age must remain an output, never be used as an observation.
+- **Catch and effort:** 3,288 catch records from 17 extraction fisheries,
+  1954–2022. The source fishery flags distinguish catches recorded in fish
+  numbers from catches recorded in metric tonnes; the import preserves those
+  units. The native effort field is present for 2,744 records. The assessment
+  guide describes effort as arbitrary within each fishery and internally
+  rescaled; records with no effort and the missing effort for weight-flagged
+  fleets are not filled in.
+- **Length compositions:** 1,270 fishery/year/season strata with 50 two-centimetre
+  length classes (30–128 cm labels), 1965–2022. TAF frequencies are already
+  reweighted: extraction-fishery values by catch and index-fishery values by
+  relative abundance. The export has no separate raw sample-size field, so
+  `sample_size` is blank.
+- **CPUE indices:** 169 annual aggregate index observations from three index
+  fisheries. These are not age-specific abundance indices. The year- and
+  fishery-specific precision multipliers from `alb.frq` are preserved as
+  relative precision weights, not converted to CVs. The report specifies a
+  generic CV of 0.20 for each series, which is recorded once per series.
+- **Conditional age-at-length:** 33 raw 50-length-by-12-age matrices from
+  2006–2013, containing 654 aged fish at observed ages 1–10. The matrices and
+  sample counts by length interval are preserved without scaling. The source
+  applies an effective sample-size multiplier of 0.75; this is recorded as an
+  assumption, not applied to the canonical counts.
+- **Reproductive potential and growth:** the 50-value vector in `alb.ini` is
+  sex ratio multiplied by maturity-at-length and rescaled to one. It is
+  therefore retained as reproductive potential, not maturity alone. The
+  native length-weight relationship and resulting model-derived biological
+  surfaces are recorded separately.
+- **Other assumptions:** the import records the annual population and seasonal
+  catch structure, recruitment timing, Lorenzen M-at-age specification,
+  average M of 0.36 per year at ages 4–12+, maximum age 15, composition
+  weighting, and CPUE likelihood description.
 
-The assessment uses a quarterly model. The public input files retain seasonal
-CPUE codes, catches, and size compositions. The report describes an updated
-fork-length/weight relationship and age-specific weight surfaces derived from
-estimated growth. For spawning biomass, it specifies reproductive potential
-at length from sex ratio and maturity at length, converted internally to an
-age surface using the growth model. This should not be relabelled as a plain
-mature-proportion ogive without preserving its reproductive-potential meaning.
+The partial import adds 89,720 input rows and 15 assumption rows. It does not
+create catch-at-age records: the native assessment uses catches, length
+compositions, and conditional age-at-length data.
 
-Diagnostic natural mortality follows an age-dependent Lorenzen relationship,
-scaled to average M = 0.36 per year for mature ages 4–12+ under a maximum-age
-assumption of 15. The 100-model ensemble varies average M, so ensemble
-uncertainty is separate from the single diagnostic output.
+## Outputs captured
 
-The public TAF outputs include annual recruitment, biomass and spawning
-biomass, numbers-at-age for ages 1–12 in two areas, and fishing
-mortality-at-age through 2022. These are model outputs and are available for
-comparison. The source report and files provide sufficient original quantities
-for a documented, approximate age-input reconstruction, so the candidate is
-eligible for source curation.
+TAF point estimates cover 1954–2022. The import preserves numbers-at-age for
+ages 1–12 (age 12 is the plus group) in each of the two model regions, and
+annual F-at-age in both regions plus the TAF `all` region series. The output
+does not document the aggregation formula for `all`, so it is labelled “All
+model regions” and retained separately.
 
-No canonical stock, assessment, input, or output rows were added.
+Regional and all-region biomass and spawning biomass, recruitment, catch,
+selectivity, growth, weight-at-age, reproductive potential-at-age, and the
+diagnostic M-at-age surface are also recorded. Total abundance is derived by
+summing the reported N-at-age over the available ages, by region and across
+regions; no uncertainty is assigned to these derived values. The output import
+contains 6,762 rows. The TAF export has no SEs or intervals, and its values
+represent the diagnostic reference model rather than the 100-model management
+ensemble.
+
+## Remaining source gaps
+
+- There is no native observed catch-at-age series or age-specific abundance
+  index in the reviewed model files.
+- Raw sample sizes for the reweighted length-composition frequencies are not
+  provided in the TAF export.
+- The diagnostic output does not include uncertainty, and the 100-model
+  ensemble results are not included in the cached TAF export.
+- The aggregation method behind the `area = all` F-at-age output is not
+  specified in the export.
+
+These gaps are why input, assumption, and output completeness remain marked
+`partial`.
 
 ## Sources and local cache
 
-- [WCPFC 2024 South Pacific albacore assessment (SC20-SA-WP-02 Rev.03)](https://meetings.wcpfc.int/node/23119)
-- [WCPFC background analyses and data inputs (SC20-SA-IP-05)](https://meetings.wcpfc.int/node/23128)
-- [WCPFC longline size-frequency analysis (SC20-SA-IP-03)](https://meetings.wcpfc.int/node/23127)
-- [SPC 2024 diagnostic model repository](https://github.com/PacificCommunity/ofp-sam-alb-2024-diagnostic/tree/e9640087a9831dece824062a338c21bf81414044)
-- [NOAA Stock SMART changelog](https://noaa-edab.github.io/stocksmart/news/index.html)
+- [WCPFC 2024 assessment (SC20-SA-WP-02 Rev.03)](https://meetings.wcpfc.int/node/23119)
+- [WCPFC data-input paper (SC20-SA-IP-05)](https://meetings.wcpfc.int/node/23128)
+- [WCPFC longline size-frequency paper (SC20-SA-IP-03)](https://meetings.wcpfc.int/node/23127)
+- [Pinned SPC diagnostic model repository](https://github.com/PacificCommunity/ofp-sam-alb-2024-diagnostic/tree/e9640087a9831dece824062a338c21bf81414044)
 
-The PDFs, pinned MULTIFAN-CL and TAF input/output files, retrieval dates, source
-URLs, and SHA-256 checksums are cached locally under
-source_cache/discovery_noaa_south_pacific_albacore_2024/. The repository files
-are pinned to commit e9640087a9831dece824062a338c21bf81414044.
+The PDFs and pinned native/TAF files are cached locally under
+`source_cache/discovery_noaa_south_pacific_albacore_2024/`. The tracked
+manifest at `provenance/discovery_noaa_south_pacific_albacore_2024/sources.csv`
+records URLs, retrieval dates, checksums, and represented model files.

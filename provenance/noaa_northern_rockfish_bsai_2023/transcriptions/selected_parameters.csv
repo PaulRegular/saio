@@ -1,0 +1,10 @@
+parameter,estimate,standard_deviation
+sel_aslope_fish,0.7841,0.0632
+sel_a50_fish,9.2416,0.2348
+sel_aslope_srv,0.2802,0.0179
+sel_a50_srv,11.2850,0.5371
+M,0.0523,0.0044
+log_avg_fmort,-4.8491,0.0754
+q_srv,1.0000,0.0010
+mat_beta1,-5.7428,0.6954
+mat_beta2,0.7000,0.0094

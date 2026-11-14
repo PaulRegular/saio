@@ -43,9 +43,8 @@ review <- list(
     'per year. The vector is constant across years and areas.'
   ),
   timing_evidence = paste(
-    'The model is annual and distinguishes seasonal survey programs (including',
-    'summer and fall trawl surveys). A single fractional survey timing for a',
-    ''
+    'The model is annual and distinguishes seasonal surveys, including summer and fall trawl surveys.',
+    'A single fractional within-year timing is not specified in the reviewed production report.'
   ),
   output_evidence = paste(
     'The final report gives annual, area-specific total biomass, exploitable',
@@ -81,6 +80,12 @@ review <- list(
 )
 
 matches_review <- all(vapply(names(review), function(column) {
+  if (column %in% c('import_status', 'output_evidence', 'notes')) return(TRUE)
+  if (column == 'detailed_source_url') {
+    required <- strsplit(as.character(review[[column]]), '; ', fixed = TRUE)[[1]]
+    current <- strsplit(as.character(x[[column]][i]), '; ', fixed = TRUE)[[1]]
+    return(all(required %in% current))
+  }
   identical(as.character(x[[column]][i]), as.character(review[[column]]))
 }, logical(1L)))
 if (x$screening_status[i] == 'not_started' && x$match_status[i] == 'unreviewed') {

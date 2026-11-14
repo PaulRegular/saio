@@ -1,13 +1,24 @@
 "organization","source_region","inventory_rows","matched","new","ambiguous","identity_unreviewed","eligible","excluded","eligible_new","eligibility_unresolved","screening_not_started","screening_in_progress","screening_complete","matched_units","crosswalked_candidate_units","identity_unlinked_rows","eligible_new_units","ineligible_new_units","unresolved_new_units","mixed_new_units","other_candidate_units"
+"AFMA","Commonwealth Trawl Sector, Southern and Eastern Scalefish and Shark Fishery",1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1
+"AFMA","Great Australian Bight Trawl Sector, Southern and Eastern Scalefish and Shark Fishery",1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1
+"AFMA","Great Australian Bight Trawl Sector, Zone 80, Southern and Eastern Scalefish and Shark Fishery",1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1
+"AFMA","Heard Island and McDonald Islands (HIMI), CCAMLR Division 58.5.2",1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1
+"AFMA","Macquarie Island Toothfish Fishery; northern and southern model areas",1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1
+"AFMA","Southern and Eastern Scalefish and Shark Fishery (SESSF), east and west trawl fleets",1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1
+"AFMA","Southern and Eastern Scalefish and Shark Fishery and adjoining state waters, western Victoria to southern Queensland",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
+"AFMA","Southern and Eastern Scalefish and Shark Fishery; three modeled components: Bass Strait, South Australia, and Tasmania",1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1
+"CCSBT","CCSBT-wide circumglobal stock, Southern Hemisphere",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
 "DFO","Arctic",23,0,2,3,18,0,22,0,1,0,0,23,0,2,21,0,2,0,0,0
 "DFO","Gulf",13,6,2,1,4,7,6,1,0,0,0,13,7,4,5,1,1,0,0,2
 "DFO","Maritimes",42,7,9,3,23,2,32,0,8,0,0,42,5,11,25,0,6,2,0,3
 "DFO","National Capital Region",16,1,3,0,12,1,14,0,1,0,0,16,1,4,12,0,2,1,0,1
 "DFO","Newfoundland and Labrador",23,3,10,2,8,3,18,0,2,0,0,23,3,11,10,0,8,2,0,1
-"DFO","Pacific",58,6,31,8,13,8,32,3,18,0,0,58,6,31,21,3,18,10,0,0
+"DFO","Pacific",58,7,30,8,13,8,32,2,18,0,0,58,7,31,21,2,18,10,0,1
 "DFO","Quebec",24,1,2,1,20,1,23,0,0,0,0,24,1,3,20,0,2,0,0,1
-"Fisheries New Zealand","New Zealand",4,0,4,0,0,4,0,4,0,0,0,4,3,3,0,3,0,0,0,0
-"ICES","Arctic Ocean, Azores, Barents Sea, Bay of Biscay and the Iberian Coast, Celtic Seas, Faroes, Greater North Sea, Greenland Sea, Icelandic Waters, Norwegian Sea, Oceanic Northeast Atlantic",1,0,1,0,0,1,0,1,0,0,0,1,0,1,0,1,0,0,0,0
+"Fisheries New Zealand","New Zealand",21,21,0,0,0,16,2,0,3,0,0,21,21,21,0,0,0,0,0,21
+"Fisheries Queensland / NSW DPIRD","Queensland and New South Wales east coast waters",1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1
+"FRA (Japan)","Northern Sea of Japan; Noto Peninsula to the west coast of Sakhalin",1,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,1
+"ICES","Arctic Ocean, Azores, Barents Sea, Bay of Biscay and the Iberian Coast, Celtic Seas, Faroes, Greater North Sea, Greenland Sea, Icelandic Waters, Norwegian Sea, Oceanic Northeast Atlantic",1,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,1
 "ICES","Arctic Ocean, Azores, Barents Sea, Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Norwegian Sea, Oceanic Northeast Atlantic",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
 "ICES","Arctic Ocean, Azores, Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Norwegian Sea, Oceanic Northeast Atlantic",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
 "ICES","Arctic Ocean, Azores, Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Oceanic Northeast Atlantic",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
@@ -34,7 +45,7 @@
 "ICES","Baltic Sea",17,7,10,0,0,6,9,0,2,0,0,17,7,10,0,0,8,2,0,0
 "ICES","Baltic Sea, Greater North Sea",2,2,0,0,0,2,0,0,0,0,0,2,2,0,0,0,0,0,0,0
 "ICES","Barents and White Sea stock (Subarea 1)",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
-"ICES","Bay of Biscay and the Iberian Coast",38,4,34,0,0,2,30,2,6,0,0,38,5,34,0,2,29,3,0,0
+"ICES","Bay of Biscay and the Iberian Coast",37,4,33,0,0,1,30,1,6,0,0,37,5,33,0,1,29,3,0,0
 "ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Faroes, Greater North Sea, Oceanic Northeast Atlantic",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
 "ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea",6,0,6,0,0,0,6,0,0,0,0,6,0,6,0,0,6,0,0,0
 "ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Norwegian Sea, Oceanic Northeast Atlantic",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
@@ -56,16 +67,19 @@
 "ICES","Greenland Sea",3,0,3,0,0,2,1,2,0,0,0,3,2,3,0,2,1,0,0,0
 "ICES","Greenland Sea stock (subareas 1, 2, and 14; Division 5.a)",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
 "ICES","Greenland Sea stock (subareas 2, 5, and 14)",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
-"ICES","Greenland Sea, Icelandic Waters",4,0,4,0,0,1,2,1,1,0,0,4,0,4,0,1,2,1,0,0
-"ICES","Greenland Sea, Oceanic Northeast Atlantic",2,0,1,1,0,1,1,1,0,0,0,2,0,1,1,1,0,0,0,0
-"ICES","ICES divisions 7.b-k, 8.a-b, and 8.d (west and southwest of Ireland, Bay of Biscay)",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
-"ICES","Icelandic Waters",7,4,3,0,0,6,0,3,1,0,0,7,5,3,0,3,0,0,0,0
-"ICES","Icelandic Waters, Norwegian Sea",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
+"ICES","Greenland Sea, Icelandic Waters",4,2,2,0,0,1,2,0,1,0,0,4,2,4,0,0,2,0,0,2
+"ICES","Greenland Sea, Oceanic Northeast Atlantic",2,1,0,1,0,1,1,0,0,0,0,2,1,1,1,0,0,0,0,1
 "ICES","Icelandic slope; ICES Subarea 14 and Division 5.a (East of Greenland and Iceland grounds)",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
+"ICES","Icelandic Waters",7,6,1,0,0,6,0,1,1,0,0,7,7,3,0,1,0,0,0,2
+"ICES","Icelandic Waters, Norwegian Sea",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
+"ICES","ICES divisions 7.b-k, 8.a-b, and 8.d (west and southwest of Ireland, Bay of Biscay)",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
+"ICES","ICES Subarea 8 (Bay of Biscay)",1,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,1
 "ICES","Oceanic Northeast Atlantic",3,0,3,0,0,0,3,0,0,0,0,3,0,3,0,0,3,0,0,0
 "ICES","Oceanic Northeast Atlantic and northern Reykjanes Ridge",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
-"ICES","Southern Bay of Biscay and Atlantic Iberian waters East",1,0,1,0,0,1,0,1,0,0,0,1,0,1,0,1,0,0,0,0
+"ICES","Southern Bay of Biscay and Atlantic Iberian waters East",1,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,1
 "ICES","Subarea 6 (West of Scotland)",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+"IFOP","Chile: maritime area from the Coquimbo Region to 41 deg 28.6 min S (Unidad de Pesqueria IV-41 deg 28.6 min S)",1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1
+"INIDEP","Argentina; targeted assessment-report search, not a comprehensive inventory",2,1,1,0,0,2,0,1,0,0,0,2,1,2,0,1,0,0,0,1
 "NAFO","Denmark Strait and East Greenland",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
 "NAFO","Division 3M",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
 "NAFO","Division 3M (Flemish Cap)",3,2,1,0,0,2,1,0,0,0,0,3,2,3,0,0,1,0,0,2
@@ -86,12 +100,17 @@
 "NAFO","Subareas 0 and 1 offshore",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
 "NAFO","Subareas 2 and 3",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
 "NAFO","Subareas 3 and 4",1,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
-"NOAA","AFSC",89,13,72,2,2,18,67,10,4,0,0,89,13,64,3,6,50,4,2,2
-"NOAA","NEFSC",55,15,39,1,0,10,30,4,15,0,0,55,16,33,1,4,20,8,0,1
+"NOAA","AFSC",89,23,62,2,2,18,67,0,4,0,0,89,21,64,3,0,50,4,0,10
+"NOAA","NEFSC",55,18,36,1,0,10,30,1,15,0,0,55,19,33,1,1,20,8,0,4
 "NOAA","NEFSC / SEFSC",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
-"NOAA","NWFSC / AFSC",1,0,1,0,0,1,0,1,0,0,0,1,0,1,0,1,0,0,0,0
-"NOAA","NWFSC / SWFSC",138,1,130,7,0,37,53,36,48,0,0,138,7,126,7,32,46,47,1,0
-"NOAA","PIFSC",45,0,44,1,0,2,43,2,0,0,0,45,0,44,1,2,42,0,0,0
-"NOAA","SEFSC",90,0,87,3,0,18,51,18,21,0,0,90,0,86,1,18,46,21,0,1
-"NOAA","SWFSC",6,0,6,0,0,2,3,2,1,0,0,6,0,6,0,2,3,1,0,0
-"NOAA","SWFSC / PIFSC",7,0,7,0,0,1,5,1,1,0,0,7,0,7,0,1,5,1,0,0
+"NOAA","NWFSC / AFSC",1,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,1
+"NOAA","NWFSC / SWFSC",138,26,105,7,0,37,53,11,48,0,0,138,34,126,7,9,46,47,1,23
+"NOAA","PIFSC",45,2,42,1,0,2,43,0,0,0,0,45,2,44,1,0,42,0,0,2
+"NOAA","SEFSC",90,17,70,3,0,19,51,2,20,0,0,90,19,86,1,2,46,20,0,18
+"NOAA","SWFSC",6,2,4,0,0,2,3,0,1,0,0,6,2,6,0,0,3,1,0,2
+"NOAA","SWFSC / PIFSC",7,1,6,0,0,1,5,0,1,0,0,7,1,7,0,0,5,1,0,1
+"NPFC","Northwest Pacific Ocean; NPFC Convention Area and Member EEZs",1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1
+"PIRSA / SARDI","Southern Australia stock; South Australian Sardine Fishery assessment area",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
+"Queensland DPI","Queensland east coast",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0
+"Queensland DPI","Single east coast stock from Cape York Peninsula to Newcastle, New South Wales",1,1,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,1
+"SIOFA","Walter Shoal Ridge (WSR), SIOFA Statistical Area 2",1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0

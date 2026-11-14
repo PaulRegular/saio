@@ -39,15 +39,23 @@ results. `candidate_unit_id` is an internal cross-inventory key for source rows
 verified to represent the same biological or management unit. It is not an
 official identifier or a canonical `stock_id`; leave it blank until the unit
 crosswalk is supported by source evidence. Use `matched_stock_id` when the unit is
-already represented in the canonical database. Inventory rows alone do not create
-canonical assessment events or values. `charbonneau_id` may be blank when no
+already represented in the canonical database. `match_status` describes the current
+database crosswalk. After a newly curated unit is added, set `matched_stock_id` to
+its canonical `stock_id` and change `match_status` to `matched`. Inventory rows alone
+do not create canonical assessment events or values. `charbonneau_id` may be blank when no
 verified catalogue match exists.
 
 The current controlled basin vocabulary is validated by the database validator.
 When a verified new stock requires another basin, add and document a specific
-label and update validation alongside that import. Preserve the stock's precise
-extent in area and region, including genuinely wide-ranging units; do not force
-Southern Hemisphere stocks into the current Northern Hemisphere labels.
+label and update validation alongside that import. `Southern Indian Ocean` is
+used for the SIOFA orange roughy assessment area. For example, the SESSF
+Commonwealth Trawl Sector blue grenadier unit covers waters labelled as the
+Southern Ocean and Tasman Sea; preserve that extent with the documented label Southwest Pacific and Southern Ocean. The
+Australian Hydrographic Office places the Great Australian Bight within the
+Southern Ocean; use that basin label for GAB assessment units. Preserve the
+stock's precise extent in area and region, including genuinely wide-ranging
+units; do not force Southern Hemisphere stocks into a single basin when the
+assessment unit crosses basins.
 
 ## Core principles
 
@@ -97,8 +105,12 @@ One row per biological or management stock.
 | `common_name` | Common name |
 | `area` | Assessment or management area |
 | `region` | Broader geographic region |
-| `ocean` | Regional basin: Northwest Atlantic, Northeast Atlantic, Northeast Pacific, Northwest Pacific, or Southwest Pacific |
+| `ocean` | Regional basin: Northwest Atlantic, Northeast Atlantic, Southwest Atlantic, Northeast Pacific, Northwest Pacific, Southeast Pacific, Southwest Pacific, South Pacific, Southern Indian Ocean, or a documented multi-basin label when the official stock unit spans basins |
 | `notes` | Stock-identity, boundary, split/merge, or other notes |
+
+Use `Western and Central Pacific` for a stock managed across the WCPFC area;
+retain the precise stock boundary and model-region coverage in `area`, `region`,
+and `notes`.
 
 ## Identifier rules
 
@@ -239,6 +251,7 @@ maturity
 M
 covariate
 biology
+tag
 ```
 
 Add new types only when a real assessment requires them.
@@ -253,14 +266,21 @@ numbers_at_age_group
 numbers_at_age_for_M_reconstruction
 index_by_age_group
 index_catch_numbers_at_age
+catch_numbers
+Aggregate landings_numbers and discard_numbers retain annual fish counts on a numbers scale; they are not age-specific. Use type = catch and basis = numbers, retaining fleet identity and discard-treatment details.
 effort
 biomass_at_age
 total_numbers
+landings_numbers
+discard_numbers
 total_biomass
+catch_biomass
 landings_biomass
 discard_biomass
+catch_cv
 discard_fraction
 discard_fraction_cv
+discard_fraction_se
 catch_se
 total_egg_production
 landings_lower_bound
@@ -269,15 +289,21 @@ catch_lower_bound
 catch_upper_bound
 proportion_at_age
 relative_biomass_index
+spawning_output_index
 relative_abundance_index
+relative_fishing_mortality_index
+recruitment_index
 relative_precision_weight
 relative_standard_error
 log_catch_sd
 abundance_index_cv
 biomass_index_cv
+recruitment_index_cv
 ```
 
 `index_catch_numbers_at_age` preserves the numerator in a source index stored as catch numbers-at-age and effort. Use `type = index`, `basis = numbers`, and document that these numerator rows are not a second observation series. Pair them with `effort` rows (`type = covariate`, `basis = native_covariate`) when needed to reproduce a per-effort index. `effort` has no age dimension; preserve its native units and do not treat it as an independent abundance observation.
+
+`spawning_output_index` preserves an index modeled as proportional to spawning output. Use `type = index` and `basis = index_scale`; retain the native index scale and document its units code rather than treating the value as absolute egg production.
 
 `landings_biomass` and `discard_biomass` distinguish the aggregate components
 of a fishery when both are material inputs. Use the same actual fleet identity,
@@ -287,6 +313,22 @@ not automatically be interpreted as dead removals. Preserve source survival
 assumptions and avoid counting component totals as independent observations.
 Unavailable component observations remain blank, rather than zero; finite
 non-missing observations must remain non-negative.
+
+catch_biomass preserves a source catch or removal history reported as mass
+when the source does not separate the full series into landings and discards.
+Use type = catch and basis = biomass; retain source fleet distinctions and
+document any adjustments.
+
+`catch_cv` preserves a source-reported coefficient of variation for an
+aggregate catch, landings, or discard observation. Use `type = catch`,
+`basis = relative_scale`, `unit = ratio`, and blank `age`. Match the same year,
+fleet, region, season, and `partition` as the corresponding catch observation.
+This is a relative uncertainty measure, not an absolute standard error or a
+likelihood weight.
+
+`catch_numbers` preserves aggregate catch recorded as numbers of fish when the
+source does not identify it specifically as landings or discards. Use
+`type = catch` and `basis = numbers`; preserve fleet and source time dimensions.
 
 An `index_by_age_group` row preserves a native index value that combines
 multiple age classes and cannot be represented as a single-age observation.
@@ -316,13 +358,18 @@ likelihood.
 ### Biology
 
 ``` text
+growth_length_at_age
 weight_at_age
 catch_weight_at_age
 start_weight_at_age
 maturity_at_age
+maturity_at_length
+reproductive_potential_at_length
 mature_weight_at_age
 natural_mortality_at_age
 fecundity_at_age
+batches_per_year_at_age
+reproductive_potential_at_age
 proportion_female_at_age
 fraction_F_before_spawning
 fraction_M_before_spawning
@@ -344,7 +391,9 @@ alongside its combined catch. Landings and discard weights are distinct from
 combined catch weights. `catch_weight_at_age` records a source fishery's catch
 weights when they differ in meaning from stock weights; use `type = catch_weight`
 and retain the source units. These values are not substituted for stock or
-spawning weights. `log_index_sd` stores a supplied
+spawning weights.
+
+Assessment reports may also publish fitted relative indices, catch and discard values, and mean weights. Preserve them with a specific output measure, fleet or survey, area, year, and units. Use a season where it distinguishes reported components. Do not treat predictions as observations or infer uncertainty that the source does not report. `log_index_sd` stores a supplied
 standard deviation of the log survey index as a separate year record, with age
 when the index is age-specific, and
 the same survey identity as the corresponding observation; use `type = index`,
@@ -356,6 +405,7 @@ components are retained, and report rounding is not silently renormalized.
 `log_catch_sd` stores the standard error of log catch when the source model
 specifies that scale. Use `type = catch` and `basis = log_scale`; do not label it
 as a coefficient of variation unless the source defines it that way.
+When separate landings and discard observations have a log-scale error, use the same partition as the corresponding catch input.
 `catch_se` preserves a source model's native catch error field when its scale
 is not documented well enough to call it a log-scale standard error or a CV;
 use `type = catch`, `basis = native_scale`, and a unit that identifies the
@@ -365,18 +415,36 @@ native field. Do not transform it.
 `type = catch` and `basis = proportion_biomass` or `proportion_numbers` to match
 the source fleet's catch basis. `discard_fraction_cv` stores its source CV with
 `basis = relative_scale` and `unit = ratio`. Keep the CV as a separate row and
-document the source likelihood.
+document the source likelihood. When a source table explicitly leaves a CV cell
+blank, preserve a blank value with a note identifying the omission; do not treat
+it as zero or infer a value.
+`discard_fraction_se` preserves an additive standard error for a discard
+fraction reported on the proportion scale. Use `type = catch`,
+`basis = native_scale`, and `unit = proportion`; pair it with the matching
+`discard_fraction` row by year and source dimensions. This is an absolute
+standard error, not a CV, and must be non-negative.
 
 `mean_body_weight` stores a source mean body-weight observation, not a
 stock-weight-at-age surface. Use `type = weight`, `basis = weight_per_fish`,
 and the source unit. `mean_body_weight_cv` stores its source CV separately
 using `basis = relative_scale` and `unit = ratio`.
 
+`age_error_mean_age` stores the source mean observed age for each true age and
+age-error definition. Use `type = biology`, `basis = native_scale`, unit `years`,
+the true age in `age`, and the source definition code in `age_error`. This
+preserves age-reading bias; it is not a transition probability.
+
 `ageing_error_sd` stores a source age-error standard-deviation vector. Use
 `type = biology`, `basis = age_error_sd`, the age-error definition code in
 `age_error`, and the source unit (normally years). Preserve half-year age
 labels when the source defines them as bin midpoints. It does not by itself
 represent the full transition matrix from true age to observed age.
+
+age_error_probability preserves a complete age-error transition matrix as
+probabilities. Use type = biology, basis = proportion, unit = probability,
+age as the true age, and age_error as the observed age. Probabilities for each
+true age must sum to one across observed ages, within a small tolerance for
+rounding in the source matrix. This is distinct from the ageing_error_sd vector.
 Landings fractions should normally lie in `[0, 1]`. If an official model input
 contains values slightly above one, preserve them without clipping and explain
 the source-specific exception in `notes`; the validator accepts only documented
@@ -384,15 +452,21 @@ the source-specific exception in `notes`; the validator accepts only documented
 `[0, 1]`.
 
 `relative_precision_weight` stores a native relative precision weight for an
-age-specific catch or index observation. Use the corresponding input type
-(`catch` or `index`) and basis = `relative_precision`. Record the weight scale
-and any equivalent relative log-SD transformation in the notes.
+age-specific catch or index observation, or for an aggregate index observation.
+Use the corresponding input type (`catch` or `index`) and
+`basis = relative_precision`. For an unaged aggregate index weight, leave age
+blank and match the index by assessment, survey, region, season, and year.
+Record the weight scale and any equivalent relative log-SD transformation in
+the notes.
 
 `observation_likelihood_weight` preserves a source likelihood weight when its
 effect is not documented well enough to interpret as a precision or standard-
 deviation multiplier. Use the corresponding input type, `basis = relative_scale`,
 and retain the supplied value without transforming it. Explain the source
-field and its intended source purpose.
+field and its intended source purpose. For a weight applied to a whole
+composition sample or aggregate index observation, leave age blank and link it
+to the matching observation rows with `observation_id`. An age-specific weight
+should identify its age.
 
 `relative_standard_error` stores the source-reported standard error divided by
 the estimate for an age-specific catch or index observation. Use basis =
@@ -405,18 +479,24 @@ observation by year and its fleet or survey dimensions. Preserve catch
 `partition` when it distinguishes landings and discards. This records one
 aggregate precision value without repeating it over ages.
 
-When the source reports both aggregate number and biomass indices for the
-same survey and year, `abundance_index_cv` and `biomass_index_cv` distinguish
-their CVs without inventing separate surveys. Use `type = index`,
-`basis = relative_scale`, `unit = ratio`, and blank `age`. Each must match its
-corresponding `total_numbers` or `total_biomass` record. The two representations
-are not independent survey observations, and these reported CVs do not by
-themselves establish which index or variance was fitted. Preserve missing
-reported CVs as blank values with their source qualification.
+`abundance_index_cv`, `biomass_index_cv`, and `recruitment_index_cv` preserve
+aggregate index CVs without inventing separate surveys. Use `type = index`,
+`basis = relative_scale`, `unit = ratio`, and blank `age`. An abundance CV may
+match `total_numbers` or `relative_abundance_index`; a biomass CV may match
+`total_biomass` or `relative_biomass_index`; a recruitment CV must match a
+`recruitment_index`. These precision rows do not create independent survey
+observations and do not by themselves establish which index variance was
+fitted. Preserve missing reported CVs as blank values with their source
+qualification.
 
 `relative_biomass_index` stores an aggregate relative index, such as standardized
 CPUE tuned to exploitable biomass. It is not an absolute biomass observation;
 use `basis = index_scale` and document the scale and model interpretation.
+
+`recruitment_index` stores an aggregate index intended to track incoming
+recruitment. Use `type = index`, `basis = index_scale`, preserve the source
+units and timing, and distinguish this observation index from model-estimated
+recruitment outputs.
 
 `relative_abundance_index` stores an aggregate relative abundance index that
 does not have a physical count or biomass scale. Use `basis = index_scale`,
@@ -425,15 +505,27 @@ multiplier. Record any age range represented by the aggregate index in notes;
 leave `age` blank when the source reports one value for the age group as a
 whole.
 
+`relative_fishing_mortality_index` stores an aggregate index whose native
+Stock Synthesis unit code identifies fishing mortality. Use `type = index`
+and `basis = index_scale`, preserve the source unit code in `unit`, and do
+not relabel it as an abundance or biomass index.
+
+`maturity_at_length` preserves a supplied proportion-mature curve by length.
+`reproductive_potential_at_length` preserves a source curve that combines
+sex ratio and maturity, or another explicitly defined reproductive weighting;
+do not relabel it as maturity alone. Both use `type = maturity` or `biology`,
+`basis = proportion`, and native length-bin labels in `length_bin`.
+
 `landings_lower_bound` and `landings_upper_bound` preserve source bounds for a
 censored total-landings likelihood. Store each bound separately using the same
 year, fleet, unit and basis as its landings observation.
 
 `larval_abundance_index` represents an index tied to a spawning component. Use
-`type = index`, `basis = numbers`, blank fish age, and record the spawning
-component in `region` and survey time window in `season`. Native units and
-configured model timing should be documented separately; time-window column
-numbers are not fish ages.
+`type = index`, `basis = numbers` when the source reports an abundance
+scale, or `basis = native_scale` when it supplies only a special model unit
+code. Leave fish age blank and record the spawning component in `region` and
+survey time window in `season`. Native units and configured model timing
+should be documented separately; time-window column numbers are not fish ages.
 
 `index_sd` stores a supplied standard deviation on the native scale of a survey
 index, matched to the same survey and year as the observation. Use
@@ -446,6 +538,8 @@ age-specific catch or survey number-at-age estimate. Use `type = catch` or
 `index`, `basis = relative_scale`, and `unit = ratio`; match its sex, year, age,
 fleet or survey, and `observation_id` to the corresponding `numbers_at_age`
 row. The CV is not an absolute-scale standard error.
+
+`regional_scaling_value` preserves source covariates used in a model regional-scaling penalty. Use `type = covariate` and `basis = native_covariate`; retain source year, area/region, season, unit, and observation ID. Preserve the supplied value as-is. It is not a direct abundance index, and no physical unit should be inferred without source documentation.
 
 Additional measures may be added when necessary, but should remain explicit and biologically interpretable.
 
@@ -463,6 +557,16 @@ count index; it is not a biomass index or age-specific fish-abundance index.
 `fecundity_at_age` and `proportion_female_at_age` retain the biological inputs
 used to calculate egg production. Use type `biology` for these biological
 surfaces when no existing type represents their meaning.
+
+`batches_per_year_at_age` preserves an age-specific annual batch count used
+with batch fecundity. Use `type = biology`, `basis = native_scale`, and the
+source unit (for example, `batches per year`). Keep it separate from
+`fecundity_at_age`, which records eggs per batch.
+
+`reproductive_potential_at_age` preserves age-specific spawning output that
+already combines maturity and fecundity, such as egg production per mature
+female fish. Keep its source unit (for example, million eggs per fish) and do
+not treat it as a maturity proportion or conventional biomass.
 
 `fixed_mortality_medium`, `fixed_mortality_low` and `fixed_mortality_high`
 retain the reported scalar M settings for the three BC petrale ensemble
@@ -516,6 +620,11 @@ type = index
 measure = proportion_at_age
 basis = proportion_biomass
 ```
+
+For `proportion_at_age` and age-specific catch components such as
+`discard_numbers_at_age`, preserve blank source cells as missing values rather
+than replacing them with zeros. Add a note identifying the source omission
+when a reported table has blank cells.
 
 ## `source_type`
 
@@ -579,14 +688,14 @@ Long-format outputs from the official assessment.
 | Column             | Description                     |
 |--------------------|---------------------------------|
 | `assessment_id`    | Foreign key                     |
-| `type`             | Broad family: population, mortality, biomass, recruitment, catch, index, catchability, or biology |
+| `type`             | Broad family: population, mortality, biomass, recruitment, catch, index, catchability, biology, probability, management, parameter, or diagnostic |
 | `measure`          | Exact output represented        |
 | `fleet`            | Fleet where applicable          |
 | `survey`           | Survey where applicable         |
 | `sex`              | Sex where applicable            |
 | `region`           | Region where applicable         |
 | `season`           | Season where applicable         |
-| `year`             | Year; blank for time-invariant estimates such as reported catchability parameters and reference points |
+| `year`             | Year; blank for time-invariant estimates, period summaries, or source-defined scenarios without a calendar year |
 | `age`              | Age where applicable            |
 | `age_group`        | Optional age range for grouped measures such as Fbar or Mbar |
 | `scenario`         | Optional source-defined assessment or projection scenario |
@@ -599,8 +708,28 @@ Long-format outputs from the official assessment.
 | `source_reference` | Specific file/table/object/page |
 | `notes`            | Additional clarification        |
 
+Use `type = management` for official management quantities such as OFL, ABC, ACL, and their buffer rules; preserve the exact quantity in `measure` and its definition in `notes`.
+
+A blank output value may be retained when the source includes a reported row but leaves the estimate missing. Do not replace it with zero or a derived value; document the source omission in the assessment notes and source review.
+
+Use `type = parameter` for a fitted model parameter reported on its native
+scale. Put the source's exact parameter name in `measure`, leave `year` blank
+unless it is explicitly year-specific, and document the parameter meaning,
+units and any transformation in `notes`. Preserve signed parameter estimates
+as reported; do not back-transform them unless the source specifies the
+transformation.
+
+Use `type = diagnostic` for source-reported model-fit diagnostics such as a
+negative log-likelihood. Keep the total and its components distinct using
+`scenario`, retain the reported scale, and note rounding or other limitations.
+
 `scenario` distinguishes source-reported estimates under alternative assessment
 or projection conditions. Leave it blank when the output is not scenario-specific.
+For values summarizing a named multi-year advice period, leave `year` blank and
+identify the period or horizon in `scenario` or `notes`. A source-defined
+reference state with no calendar year (for example, a reported virgin state)
+may also have a blank `year`; identify it in `scenario`. Record annual
+components with their individual years.
 
 ## High-priority output measures
 
@@ -614,20 +743,64 @@ recruitment
 
 Use `natural_mortality_at_age` when M is estimated.
 
+Life-cycle and run-reconstruction assessments may report stage-specific `returns`, `spawners`, and `pre_fishery_abundance`. Store these with `type = population`, preserve the source stage or sea-age label in `age_group`, and retain the source region. These measures are not conventional numbers-at-age, SSB, recruitment, or F-at-age. Preserve reported medians and interval quantiles on their native scale, and identify the interval level in `notes`.
+
 ## Secondary output measures
 
 ``` text
 total_biomass
+SSB_standard_deviation
+biomass_standard_deviation
+recruitment_standard_deviation
+unfished_biomass
+sum_expected_cohort_density
 mature_biomass_at_age
 biomass_by_age_group
 total_mortality_at_age
+total_removals_at_age
 predicted_catch
+predicted_landings_numbers
+predicted_landings_weight
+expected_relative_abundance_index
+expected_landings_biomass
+expected_landings_numbers
+expected_discard_numbers
+expected_dead_discard_numbers
+expected_discard_biomass
+expected_dead_discard_biomass
+mean_landings_weight
+mean_discard_weight
 catch_advice
 predicted_index
 Fbar
 Mbar
 fishing_mortality_summary
+fishing_intensity_Fxx_percent
+fishing_intensity_1_minus_spr
+spawning_output_ratio_to_unfished
+spawning_potential_biomass
+unfished_spawning_potential_biomass
+recruitment_deviation
 apical_F
+F_ratio_to_Fmsy
+total_numbers
+total_biomass_from_age_surface
+total_biomass_ratio_to_unfished
+SSB_ratio_to_SSBMSY
+SSB_ratio_to_MSST
+F75_percent_Fmsy
+F85_percent_Fmsy
+F65_percent_Fmsy
+F20_percent
+F30_percent
+F40_percent
+SSBMSY
+MSST
+RMSY
+landings_at_85_percent_Fmsy
+landings_at_75_percent_Fmsy
+landings_at_65_percent_Fmsy
+mean_fishing_mortality
 q
 LRP
 USR
@@ -638,12 +811,48 @@ mean_recruitment
 median_recruitment
 recruitment_ar1_rho
 natural_mortality_average_parameter
+natural_mortality_parameter_sd
+relative_1_minus_SPR_to_target
 natural_mortality_sex_difference_parameter
+maximum_sustainable_yield_rate
+effort_saturation_parameter
+pup_production_depletion
+negative_log_likelihood
 SSB_ratio_to_B0
 SSB_ratio_to_terminal_biomass
+unfished_spawning_biomass
+spawning_biomass_at_40_percent_SB0
+SSB_ratio_to_SB40
+F_reference_at_SB40
+F_ratio_to_FSB40
+exploitation_rate
+exploitation_rate_reference_at_SB40
+exploitation_rate_ratio_to_SB40_reference
 probability_above_40_percent_B0
 probability_below_20_percent_B0
+probability_above_20_percent_B0
+probability_above_10_percent_B0
+probability_below_FSB40
+yield_at_FSB40
+yield_at_85_percent_Fmsy
+yield_at_75_percent_Fmsy
+yield_at_65_percent_Fmsy
 ```
+
+For assessments that report spawning-potential and historical-percentile
+reference points, use `current_spawning_potential_ratio` for the reported
+current SPR percentage; `F0.1_ratio_to_Fcurrent` and
+`F30SPR_ratio_to_Fcurrent` through `F70SPR_ratio_to_Fcurrent` for F reference
+ratios; and `SSB_reference_point_25th_percentile` through
+`SSB_reference_point_70th_percentile` for historical SSB percentile values.
+Use `SSB_ratio_to_25th_percentile_reference` through
+`SSB_ratio_to_70th_percentile_reference` for year-specific status ratios and
+`SSB_25th_percentile_reference_to_unfished_SSB` through
+`SSB_70th_percentile_reference_to_unfished_SSB` for reference-point ratios to
+unfished SSB. Preserve the source's period or biological parameter set in
+`scenario`; these reference-point outputs may have a blank `year`.
+
+`sum_expected_cohort_density` preserves a reported sum of expected densities across age cohorts when it differs from a separately reported overall expected density. Keep both source values distinct, preserve their units, and document the discrepancy.
 
 `natural_mortality_average_parameter` and
 `natural_mortality_sex_difference_parameter` preserve time-invariant estimated
@@ -652,12 +861,77 @@ M-at-age surface. Keep the reported parameterization and direction in the
 notes; do not expand these parameters into sex-specific M values unless the
 source defines the transformation.
 The sex-difference parameter is signed and may be negative.
+`natural_mortality_parameter_sd` preserves an uncertainty value explicitly
+labelled as a parameter standard deviation by the source. Store the SD as the
+output value and leave the output `se` field blank unless the source itself
+reports an SE. `relative_1_minus_SPR_to_target` preserves a source-reported
+ratio such as `(1-SPR)/(1-SPR50)`; it is a diagnostic, not an estimate of
+instantaneous fishing mortality or F-at-age.
+
+`unfished_biomass` preserves a source-defined B0 or other unfished biomass
+quantity. Keep its source scale and units; do not treat it as unfished SSB
+unless the assessment defines it that way. If the source does not state its
+unit or biological basis, record that limitation rather than inferring one.
+
+`maximum_sustainable_yield_rate` preserves a reported rate such as MSYR; record
+the exact numerator and denominator in `notes`. `effort_saturation_parameter`
+preserves a fitted effort-saturation parameter and its native scale. Its units
+may depend on the effort definition used by the assessment.
+
+`pup_production_depletion` preserves pup production relative to unfished pup
+production. It is not an SSB estimate, even when the source uses pup
+production as a proxy for spawning biomass. Retain the source's reported scale
+(for example, percent or ratio).
+
+`negative_log_likelihood` is a model-fit diagnostic, not a population
+estimate. When the source reports a total and components, retain each value
+separately and note that rounded components may not sum to the rounded total.
+`change_in_negative_log_likelihood` records the signed difference from a named
+reference fit; negative values indicate a lower objective than that reference.
 
 `SSB_ratio_to_B0` and `SSB_ratio_to_terminal_biomass` preserve reported
 spawning-biomass ratios on the scale and with the interval convention used by
 the source. `probability_above_40_percent_B0` and
 `probability_below_20_percent_B0` preserve reported probabilities for those
 reference points; they are not deterministic status classifications.
+
+Other source-reported probability measures should name their reference point
+explicitly, such as `probability_above_20_percent_B0`,
+`probability_above_10_percent_B0`, or `probability_below_FSB40`.
+
+Use exact threshold names when an assessment reports other reference points, including probability_above_50_percent_B0, probability_above_30_percent_B0, and probability_below_10_percent_B0. These measures preserve the reported probability; they are not deterministic status classifications.
+
+`spawning_biomass_at_40_percent_SB0` and `F_reference_at_SB40` are
+time-invariant reference values and may have a blank year. `SSB_ratio_to_SB40`
+and `F_ratio_to_FSB40` retain reported ratios to those references for the
+specified year. Record the source's exact reference definitions and interval
+conventions in the notes.
+
+`exploitation_rate` preserves an annual source-defined removal rate, with its
+numerator and denominator described in `notes`; it is not instantaneous fishing
+mortality. `exploitation_rate_reference_at_SB40` stores a reported annual
+proportional-removal reference associated with 40% of unfished spawning biomass
+and may have a blank year. `exploitation_rate_ratio_to_SB40_reference` stores
+the reported annual rate relative to that reference. Keep these distinct from
+`F_reference_at_SB40` and `F_ratio_to_FSB40`.
+
+`yield_at_FSB40` stores a source-reported yield associated with the FSB40
+reference. It is a reference yield, not an observed catch series.
+`yield_at_85_percent_Fmsy`, `yield_at_75_percent_Fmsy`, and
+`yield_at_65_percent_Fmsy` store reference yields associated with those FMSY
+fractions. They may have blank years and are not observed catch series; retain
+the source definition of yield, including whether it includes discards.
+
+`SSB_standard_deviation` preserves a source-reported standard deviation of
+spawning biomass as a separate annual biomass output. Keep it on the source
+scale and use the same year and dimensions as its SSB estimate. This is not an
+SE or a confidence interval, so leave the `se`, `lwr`, and `upr` fields blank.
+
+
+`recruitment_standard_deviation` preserves a source-reported standard deviation
+of recruitment as a separate annual recruitment output. Retain its age when
+specified and preserve the source scale and units. It is not an SE or a
+confidence interval, so leave the `se`, `lwr`, and `upr` fields blank.
 
 `mean_recruitment` stores a reported time-invariant mean of recruitment. Leave
 year blank and retain the recruitment age when the source specifies one; it is
@@ -685,6 +959,30 @@ age-averaged Fbar.
 source does not state enough detail to classify it as F-at-age, apical F, or
 Fbar for a known age range. Record the source's definition and any unresolved
 age range in `notes` rather than inferring one.
+
+`fishing_intensity_Fxx_percent` preserves an assessment's annual SPR-based
+fishing-intensity value reported as Fxx%. Retain the source percentage and its
+uncertainty interval. It is not instantaneous F or F-at-age; for the IPHC
+definition, smaller percentages indicate greater fishing intensity.
+
+`fishing_intensity_1_minus_spr` preserves annual fishing intensity defined as
+1 minus the spawning potential ratio. It is a proportion, not instantaneous F
+or F-at-age. Keep it distinct from Fxx% metrics and document the source's SPR
+definition.
+
+`spawning_output_ratio_to_unfished` preserves spawning output relative to its
+unfished level. It may be measured in eggs or another source-defined quantity;
+it is not automatically an SSB ratio. Preserve the source scale and definition.
+
+`spawning_potential_biomass` and `unfished_spawning_potential_biomass` retain a
+source biomass surface that is weighted by reproductive potential such as
+fecundity or sex ratio. Preserve the source's own label and units in `notes`;
+do not assume it is interchangeable with conventional SSB.
+
+`recruitment_deviation` preserves an annual source-reported recruitment
+deviation. Use `type = parameter`; keep its reported scale and uncertainty
+interval, and do not back-transform a log-scale deviation unless the source
+specifies that transformation.
 
 Use measures defined by the official assessment. `derived_source_output` may
 also record an explicitly requested summary calculated from that assessment's
@@ -717,6 +1015,8 @@ indicators with their source definitions. They are not SSB or instantaneous
 fishing mortality; describe the biomass construction and the numerator and
 denominator of the rate in the source notes.
 
+`harvest_rate` preserves a source-defined annual fraction of exploitable biomass removed by fishing. Record the source numerator, denominator, and period. It is not instantaneous F. For a multi-year summary, leave `year` blank and name the period in `scenario` or `notes.
+
 When total abundance is derived from official numbers-at-age, sum all reported
 age groups and any separately reported sexes, preserve other population
 dimensions, and state the derivation in `notes`. Leave its standard error and
@@ -725,6 +1025,8 @@ interval blank unless the required joint uncertainty is available.
 biomass_by_age_group stores a reported aggregate biomass for a named age group, such as 3+. Put the group label in age_group and leave age blank; it is not an age-specific biomass surface.
 
 Retain uncertainty where readily available. Parameter estimates reported by the official assessment may be stored as `type = biology`, with `measure` naming the exact parameter and `age` or `year` set only when that dimension applies.
+
+When a summary reports growth quantities without identifying the formal model parameterization, use mean_length_parameter, length_at_age_1_parameter, or growth_rate_parameter as appropriate. Preserve reported sex and units, and quote the source definition in notes; do not infer that a mean length is asymptotic length or that a growth-rate label identifies a particular parameter.
 
 `fleet_selectivity_at_age` retains a reported normalized fleet selectivity
 proportion (`type = biology`, `unit = proportion`, with age and fleet). Leave
@@ -803,7 +1105,20 @@ are outputs, not a supplied maturity-at-age input vector.
 frequency` preserves supplied length-frequency vectors when the native files
 mix counts and proportions. Preserve the row totals and record the source's
 normalization rule; these are composition samples, not removal or abundance
-counts. `maturity_sample_size` and `mature_sample_count` retain female biological
+counts.
+
+`frequency_at_weight` preserves native weight-frequency vectors when the source
+model uses weight-bin frequencies. Use `basis = native_frequency`, preserve the
+source bin code in `weight_bin`, and document its physical interval and units.
+These values are not catch biomass or weight-at-age observations. Leave
+`sample_size` blank when the source does not provide a separate unweighted
+sample count, and explain that in `notes`.
+
+Add `frequency_at_weight`, `tag_release_frequency_at_length`, and
+`tag_recapture_count` to the controlled measure vocabulary when these source
+fields are represented.
+
+`maturity_sample_size` and `mature_sample_count` retain female biological
 sampling counts used by an estimated maturity likelihood (`type = biology`,
 `basis = numbers`, `unit = fish`), with `observation_id` identifying the dataset.
 `composition_sample_count` likewise preserves the raw number of sampled fish
@@ -812,17 +1127,39 @@ likelihood. Keep the actual supplied likelihood count in `sample_size` on the
 composition cells and describe its transformation; neither quantity is the
 model's estimated effective sample size.
 
-`proportion_at_length` and `conditional_proportion_at_age` retain the composition
-representation consumed by an assessment. Use `basis = proportion_numbers` and
-`unit = proportion`. Do not replace these with an unconditional age distribution.
+`conditional_frequency_at_age` preserves the native age-by-length frequency
+matrix used for conditional age-at-length data. Use `type = biology`,
+`basis = native_frequency`, and `unit = fish`; store age in `age`, the
+conditioning length interval in `length_bin_lower` and `length_bin_upper`,
+and identify each fishery/year/month stratum with `observation_id`. These raw
+cell counts are not age compositions for the whole population. Record the
+source's effective-sample-size rule separately; do not replace counts with
+proportions or multiply them by that rule in the canonical database.
+
+`tag_release_frequency_at_length` and `tag_recapture_count` preserve native
+tagging observations. Use `type = tag`; store the release group, program, and
+release cohort in `observation_id`. Release-length frequencies use
+`basis = native_frequency` and `length_bin`; recaptures use `basis = numbers`,
+the recapture year/season, and the recapture fleet. Keep any source-specific
+release scale and release-length meaning explicit in `notes`.
+
+`proportion_at_length`, `proportion_at_weight`, and
+`conditional_proportion_at_age` retain the composition representation consumed
+by an assessment. Use `basis = proportion_numbers` and `unit = proportion` for
+number compositions. Do not replace these with an unconditional age
+distribution. For `proportion_at_weight`, use `type = catch_weight` and store
+the native weight-bin label in `weight_bin`; describe its unit and whether it
+represents individual fish weight, a mean packed weight, or another source
+quantity in `notes`.
 
 Optional input columns preserve their dimensions:
 
 - `observation_id`: stable source record identifier, shared by its composition cells.
 - `length_bin`: native length-bin label for a length composition, in cm.
+- `weight_bin`: native weight-composition bin label; state its unit in `notes`.
 - `length_bin_lower`, `length_bin_upper`: native conditioning-bin codes/bounds for
   conditional age composition; specify the coding method and units in notes.
-- `sample_size`: supplied input sample size, distinct from an estimated effective size.
+- `sample_size`: supplied input sample size, distinct from an estimated effective size. Leave it blank when the source does not supply a value and document that omission in `notes`; do not infer a default.
 - `age_error`: native ageing-error definition code; interpretation belongs in assumptions.
 - `partition`: native retained/discard/combined observation code, documented in notes.
 
@@ -881,4 +1218,3 @@ age selectivity. It is neither F-at-age nor an age-averaged Fbar; do not substit
 it for either comparison. `exploitation_fraction_at_age` retains the source
 removal fraction and its original unit (such as percent), which likewise is
 not an instantaneous F. Record the source definitions and estimate conventions.
-

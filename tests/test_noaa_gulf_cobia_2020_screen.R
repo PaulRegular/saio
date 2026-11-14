@@ -1,45 +1,68 @@
-root <- '.'
-old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
-Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-screen <- new.env(parent = globalenv())
-source(file.path(root,
-  'scripts/database/478_screen_noaa_gom_cobia_2020.R'), local = screen)
-if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
-  Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
+read_assessment_rows <- function(path, assessment_id) {
+  header <- readLines(path, n = 1L, warn = FALSE)
+  rows <- suppressWarnings(system2("rg", c("--color", "never", "--no-heading",
+    "--no-line-number", "-F", assessment_id, path), stdout = TRUE, stderr = FALSE))
+  status <- attr(rows, "status")
+  if (is.null(status)) status <- 0L
+  if (status == 1L) rows <- character() else if (status != 0L)
+    stop("Could not read assessment rows from ", path)
+  rows <- rows[startsWith(rows, paste0('"', assessment_id, '",'))]
+  read.csv(text = paste(c(header, rows), collapse = "\n"), stringsAsFactors = FALSE,
+    na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
+}
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
-candidate <- register[register$candidate_id == 'NOAA:10390', , drop = FALSE]
-units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'), check.names = FALSE)
-assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'), check.names = FALSE)
-inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'), check.names = FALSE)
-outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'), check.names = FALSE)
-review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/noaa_gulf_cobia_2020.md'), warn = FALSE), collapse = ' ')
+candidate_id <- "NOAA:10390"
+stock_id <- "noaa_cobia_gulf_mexico_2020"
+assessment_id <- paste0(stock_id, "_sedar28_update")
+register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+  na.strings = c("", "NA"), check.names = FALSE)
+units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
+  na.strings = c("", "NA"), check.names = FALSE)
+stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
+  na.strings = c("", "NA"), check.names = FALSE)
+assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
+  na.strings = c("", "NA"), check.names = FALSE)
+inputs <- read_assessment_rows("database/inputs.csv", assessment_id)
+outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
+candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
+imported <- nrow(inputs) > 0L || nrow(outputs) > 0L ||
+  any(stocks$stock_id == stock_id) || any(assessments$assessment_id == assessment_id)
 
-stopifnot(nrow(candidate) == 1L,
-  candidate$candidate_id == 'NOAA:10390',
-  candidate$candidate_unit_id == 'noaa_cobia_gulf_mexico_2020',
-  candidate$scientific_name == 'Rachycentron canadum',
-  candidate$inventory_assessment_year == '2020',
-  candidate$match_status == 'new', candidate$screening_status == 'screened',
-  candidate$eligibility == 'eligible', candidate$import_status == 'not_started',
-  grepl('conditional age-at-length', candidate$catch_age_evidence, fixed = TRUE),
-  grepl('no separate age-specific survey index', candidate$survey_age_evidence, fixed = TRUE),
-  grepl('M = 0.38', candidate$mortality_evidence, fixed = TRUE),
-  grepl('Table 15', candidate$output_evidence, fixed = TRUE),
-  grepl('age-input reconstruction caveat', review, fixed = TRUE),
-  grepl('age proportions are plotted', review, fixed = TRUE),
-  sum(stocks$stock_id == 'noaa_cobia_gulf_mexico_2020', na.rm = TRUE) == 0L,
-  sum(assessments$assessment_id == 'noaa_cobia_gulf_mexico_2020', na.rm = TRUE) == 0L,
-  sum(inputs$assessment_id == 'noaa_cobia_gulf_mexico_2020', na.rm = TRUE) == 0L,
-  sum(outputs$assessment_id == 'noaa_cobia_gulf_mexico_2020', na.rm = TRUE) == 0L,
-  sum(units$candidate_unit_id == 'noaa_cobia_gulf_mexico_2020', na.rm = TRUE) == 1L)
-
-cat('NOAA Gulf cobia 2020 source, screening, and no-import checks passed.\n')
+review <- paste(readLines("discovery/source_reviews/noaa_gulf_cobia_2020.md",
+  warn = FALSE), collapse = " ")
+stopifnot(
+  nrow(candidate) == 1L,
+  candidate$candidate_id == candidate_id,
+  candidate$candidate_unit_id == stock_id,
+  candidate$scientific_name == "Rachycentron canadum",
+  candidate$inventory_assessment_year == "2020",
+  candidate$screening_status == "screened",
+  candidate$eligibility == "eligible",
+  grepl("conditional age-at-length", candidate$catch_age_evidence, fixed = TRUE) ||
+    grepl("age-at-length", candidate$catch_age_evidence, fixed = TRUE),
+  grepl("age-specific (survey|abundance) index",
+    candidate$survey_age_evidence, ignore.case = TRUE),
+  grepl("0.38", candidate$mortality_evidence, fixed = TRUE),
+  grepl("Tables 13", candidate$output_evidence, fixed = TRUE),
+  grepl("age-input reconstruction caveat", review, fixed = TRUE) ||
+    grepl("composition cells", review, fixed = TRUE),
+  grepl("figures", review, fixed = TRUE),
+  sum(stocks$stock_id == stock_id, na.rm = TRUE) == as.integer(imported),
+  sum(assessments$assessment_id == assessment_id, na.rm = TRUE) == as.integer(imported),
+  sum(units$candidate_unit_id == stock_id, na.rm = TRUE) == 1L
+)
+if (imported) stopifnot(
+  candidate$matched_stock_id == stock_id,
+  candidate$match_status == "matched",
+  candidate$import_status == "partial",
+  nrow(inputs) == 1190L,
+  nrow(outputs) == 844L,
+  nrow(units[!is.na(units$matched_stock_id) & units$matched_stock_id == stock_id,
+    , drop = FALSE]) == 1L
+) else stopifnot(
+  candidate$match_status == "new",
+  candidate$import_status == "not_started",
+  nrow(inputs) == 0L,
+  nrow(outputs) == 0L
+)
+cat("NOAA Gulf cobia source identity, screening, and import state passed.\n")

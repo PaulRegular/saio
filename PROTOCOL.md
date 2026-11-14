@@ -835,44 +835,26 @@ When information is unclear, inspect native files, fitted objects, framework doc
 
 ## Batch commits and snapshots
 
-1. Commit reviewed importers, source manifests, correction notes and tests in
-   small, logical steps. Stage those files explicitly. Keep intermediate stock
-   imports, table edits and exploratory runs in the working copy.
-2. Commit the five consolidated tables under `database/` only at a major data
-   milestone, such as a completed assessment batch, a named analysis release,
-   or a time-sensitive correction that needs its own release. Make one data
-   commit for the validated milestone. Before committing, review the staged
-   paths and confirm the database tables are staged only for that milestone.
-   Avoid blanket staging while a milestone is in progress. Git LFS saves a
-   full copy of each changed table at each data commit.
-   [GitHub LFS storage](https://docs.github.com/en/billing/concepts/product-billing/git-lfs)
-3. Validate the combined tables from the repository root with
+1. Review assessment changes in a local working copy. Preserve provenance,
+   units and correction notes with the importers and source tests.
+2. For a major data milestone, validate the combined tables with
    `Rscript scripts/database/002_validate_database.R` and run the affected
-   source tests. Record the included assessment IDs and any changes to units,
-   definitions or schema in the milestone commit or its accompanying notes.
-4. For a milestone used by an analysis or publication, archive the exact five
-   CSVs at the committed SAIO revision in one compressed file. Record the full
-   SAIO SHA, the analysis code revision, the software versions and the
-   reproduction commands in the consuming project. Include a manifest of
-   table paths, byte sizes and SHA-256 hashes, plus a checksum for the archive.
-   Keep a recoverable copy separate from the working LFS cache and retain the
-   source attribution and reuse terms.
-5. Verify the archive by extracting it into a temporary directory and matching
-   all five table hashes and sizes to the Git LFS pointers at the recorded
-   SAIO SHA. Check that the tables load and that the analysis can rebuild its
-   milestone outputs from the recorded inputs. Keep milestone archives and
-   their manifests immutable. Create a new snapshot for a correction.
-
-After a successful data push, use Git LFS to preview local cache cleanup against
-GitHub. Repeat without `--dry-run` after reviewing the result. The verification
-options retain objects GitHub cannot verify, including objects referenced only
-locally. To recover a pruned milestone from GitHub, run
-`git lfs fetch origin <SAIO SHA>`. [Git LFS prune](https://github.com/git-lfs/git-lfs/blob/v3.5.1/docs/man/git-lfs-prune.adoc)
-
-```sh
-git fetch origin
-git lfs prune --dry-run --verify-remote --verify-unreachable --when-unverified=continue
-```
+   source tests. Record the added or revised assessment IDs and any changes to
+   the schema or interpretation.
+3. Package the five canonical CSVs as individually compressed release assets.
+   Record the release tag, schema version, row counts, byte sizes and SHA-256
+   checksums of both the CSVs and the compressed files in
+   `database/releases/<tag>.csv`. Include the same manifest and a checksum
+   file with the assets. Keep one compressed file per complete table.
+   Choose a data repository that can accommodate the full release.
+4. Restore the release into a clean directory with
+   `Rscript scripts/database/003_restore_release.R <assets-dir> <database-dir>`.
+   Verify all five files and check that an analysis can select the intended
+   release before publication.
+5. Commit the release manifest and reviewed changes together on the main
+   release line. Keep generated tables, compressed downloads and scratch copies
+   outside Git. Tag the validated commit and attach its assets to the release.
+   Preserve published data versions. Publish corrections as a new release.
 
 ------------------------------------------------------------------------
 

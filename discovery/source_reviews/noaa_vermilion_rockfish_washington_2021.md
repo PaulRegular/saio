@@ -51,24 +51,31 @@ and the data were not sufficiently robust. The Oregon component does use an
 aggregate recreational CPUE index; its age-specific reconstruction is
 approximate and the documented timing does not resolve a fractional-year value.
 
-## Outputs and screening decision
+## Source curation
 
-The accepted Washington `Report.sso` includes annual numbers-at-age,
-catch-at-age, fishing mortality-at-age, and biomass-at-age, as well as spawning
-output, recruitment, and exploitation summaries. These are fitted population
-outputs, not observed abundance inputs. The Oregon report and model archive
-provide separate component inputs and outputs; the two fits must not be
-described as one pooled assessment.
+The 2021 Washington component has been imported as a separate assessment under
+the single current Vermilion rockfish (OR/WA) stock record. Canonical inputs
+retain 72 annual catches and the original length and conditional
+age-at-length frequencies. Catch-at-age was not created from fitted states or
+composition samples. The accepted Washington model uses no abundance index;
+the report explains that the nearshore survey was not used because its methods
+were unreviewed and its data were not sufficiently robust.
 
-The current OR/WA stock is **eligible for source curation** because both 2021
-component archives preserve catch and age/length information from which
-age-specific catch can be reconstructed for supported sample years, and the
-official outputs are available. The main limitations are incomplete age
-coverage, the absence of an abundance index in Washington, the approximate
-age-specific form of the Oregon recreational CPUE series, and separate
-component models. Eligibility does not imply direct catch-at-age likelihood
-inputs, a pooled OR/WA model, or a ready. No canonical
-records have been added.
+The archived `Report.sso` contributes fitted N-at-age, biomass-at-age,
+F-at-age, M-at-age, generated biological surfaces, total biomass, recruitment,
+and egg-based spawning output. Recent report tables provide aggregate
+uncertainty for recruitment and spawning output. The reported spawning-output
+lower limits are `<0.01`; the database leaves those lower bounds unavailable as
+numeric values. Age-specific uncertainty is not available. The archived
+machine-readable annual series ends in 2022, while the assessment report
+describes a longer management forecast.
+
+The native age and length observations are sample compositions, not annual
+age-specific abundance indices. Catch-at-age could only be reconstructed with
+additional assumptions for selected years and is not a direct annual input.
+SpawnBio is in millions of eggs and is not SSB biomass. The Oregon component
+uses a distinct aggregate ORBS series; its observations and outputs remain
+separate from Washington.
 
 ## Sources and local cache
 

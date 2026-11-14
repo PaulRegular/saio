@@ -2,82 +2,43 @@
 
 ## Stock and assessment
 
-NOAA Stock SMART 10339 identifies the South Atlantic Snowy Grouper unit,
-currently listed under the scientific name *Epinephelus niveatus*. The SEDAR
-report also uses the synonym *Hyporthodus niveatus*. Neither name is present in
-the canonical stock table, and this unit is distinct from other snowy grouper
-records.
+NOAA Stock SMART unit 10339 is the South Atlantic Snowy Grouper assessment unit. Its current scientific name is *Epinephelus niveatus*; the SEDAR report also uses *Hyporthodus niveatus*. This is distinct from snowy grouper units outside the South Atlantic.
 
-The latest completed assessment located is the SEDAR 36 Update, published in
-November 2020 and revised in January 2021. It is a Beaufort Assessment Model
-(BAM) statistical catch-age assessment with data through 2018. The draft SAFMC
-2027 statement of work still lists this update and terminal year 2018 as the
-prior assessment. No later completed assessment was located in the sources
-reviewed.
+The latest completed detailed assessment located for this unit is the SEDAR 36 Update report, revised in January 2021, with assessment data through 2018. It uses the Beaufort Assessment Model (BAM), an annual statistical catch-age model. Population tables include 2019 as the first projection year. The earlier SEDAR 36 WP15 model files are for the superseded 2013 benchmark and are not used as inputs for this update.
 
-The earlier SEDAR 36 WP15 lists ADMB code and input data for the 2013 benchmark,
-not the 2020 update. It is not used as a substitute for update-specific inputs.
-The 2020 update document list contains two working papers, but no run-matched
-model input or fitted-object file was identified in those materials.
+## Inputs recovered
 
-## Inputs and outputs located
+- **Removals:** Table 2 reports annual landings and dead discards combined for 1974–2018. Commercial handline and longline are in 1,000 lb whole weight; general recreational removals are in 1,000 fish. Early longline cells shown as missing remain absent.
+- **Abundance indices:** Table 3 reports aggregate MARMAP chevron-trap, MARMAP vertical-longline and headboat indices with annual CVs. Chevron-trap and vertical-longline values begin in 1996; headboat values run from 1978 through 2010. The index multiplier is not stated, so values and CVs retain the reported scales.
+- **Composition sample sizes:** Tables 4 and 5 report fish and trip counts for length and age compositions by fleet and survey. These are sample counts, not age-composition observations.
+- **Biology and mortality:** Table 1 reports mid-year length and whole weight, female maturity, proportion female, and fixed age-specific natural mortality for ages 1–25+. Length CV was estimated by the assessment; the other listed quantities were treated as inputs. The assessment treats males as mature and describes the M pattern as an age-based Charnov curve scaled to M = 0.08 at age 56.
+- **Composition gap:** The report shows observed composition inputs in figures but does not provide the annual numerical composition matrices in its tables. No values were digitized or reconstructed for this import. Therefore the age-composition likelihood inputs and any catch-at-age reconstruction from those compositions remain unavailable.
 
-The assessment period is 1974–2018 and uses three modeled removal fleets:
-commercial handline, commercial longline, and combined recreational. Annual
-removals include landings and dead discards. Commercial input removals are in
-whole weight; recreational removals are in numbers. Commercial discards were
-converted from numbers to weight using mean weight at age 2.5 and assumed to
-have 100% mortality. Headboat and general recreational removals were combined
-because the composition sample was not sufficient to estimate separate
-selectivities.
+## Outputs recovered
 
-The report provides annual fleet removals, aggregate headboat and fishery
-independent abundance indices, annual composition sample sizes, and observed
-and fitted age-composition figures. The chevron-trap and vertical-longline
-indices cover 1996–2018; the headboat index begins in 1978. Age compositions
-are used for commercial handline, commercial longline, recreational, chevron
-trap, and vertical longline. Age compositions use age 14 as the plus group; selectivity is held equal across ages 15–25+. The report
-does not provide the age-composition input matrices as numerical tables, so
-reconstructing catch-at-age requires digitizing the observed compositions and
-combining them with the report's removal totals. This is source-based but
-approximate.
+Tables 6–16 were imported where the report provides numeric values:
 
-The report gives age-specific whole weight, female maturity and proportion
-female for ages 1–25+, with age 25+ as the plus group. Female maturity is zero at
-ages 1–2 and logistic thereafter, with 50% maturity at 5.6 years. All males are
-treated as mature; proportion male increases from age 5 onward. Spawning
-biomass is mature biomass at mid-year peak spawning. Base-run natural mortality
-is fixed and age-dependent, using a Charnov curve scaled to M = 0.08 at maximum
-age 56. The report also describes MCB uncertainty trials that draw the scalar
-M from 0.05–0.12.
+- Tables 6 and 7: start-of-year abundance-at-age and biomass-at-age, totals included, for 1974–2019. The 2019 rows are labelled as assessment projections; age 25 is the 25+ group. Recruitment is retained as the reported age-1 abundance.
+- Table 8: annual apical F, F/FMSY, total biomass, biomass/unfished biomass, SSB, SSB/SSBMSY, SSB/MSST, and the estimated proportion of mature fish that are female. The 2019 row reports biomass and the female proportion but not F or SSB.
+- Table 9: terminal-year selectivity-at-age by fleet and survey, plus the reported fleet-average selectivity.
+- Tables 10 and 11: fully selected fleet F and total fishing mortality-at-age through 2018.
+- Tables 12–15: estimated removals-at-age and annual removals by fleet through 2018, in numbers and whole weight.
+- Table 16: base-run benchmark estimates and the reported Monte Carlo/Bootstrap medians and SEs for reference points and summary ratios. Those SEs are kept with the corresponding benchmark medians; they are not annual time-series uncertainty.
 
-Numeric fitted outputs include abundance-at-age (Table 6), biomass-at-age
-(Table 7), annual stock status and SSB (Table 8), total F-at-age (Table 11),
-and estimated removals-at-age (Tables 12–15). Recruitment is the age-1
-abundance series in Table 6. The tables provide base-run point estimates;
-age-specific confidence intervals were not located. Aggregate uncertainty is
-summarized through the MCB ensemble.
+The annual population and mortality tables provide point estimates without annual confidence intervals. No uncertainty values were inferred.
 
-The unit is eligible for source curation because the report supports
-reconstruction of age-disaggregated removals and provides age-specific biology
-and fitted population/mortality outputs. A later import should preserve the
-reported inputs and clearly identify figure-digitized compositions as
-reconstructed values.
+## Completeness
+
+The assessment is recorded as **partial** for inputs, assumptions and outputs. Inputs are partial because numerical composition matrices and update-specific native input files were not recovered. Outputs preserve the available annual point estimates and Table 16 benchmark summaries, but annual uncertainty is not reported.
+
+The record retains source units and fleet/survey identities. No commercial whole-weight observations were converted, no missing composition values were filled, and no survey timing fraction was assigned. SSB is the total mature biomass of males and females at peak spawning in mid-year; the report does not specify an exact within-year timing fraction for the annual indices.
 
 ## Source files and provenance
 
-The revised assessment report and two update working papers are cached in the
-ignored local directory
-source_cache/noaa_snowy_grouper_sedar36u_2021/.
-Their URLs, cited revisions, retrieval time, byte sizes and SHA-256 checksums
-are recorded in manifest.csv.
+The revised report and two SEDAR 36 Update working papers are cached locally in the ignored directory source_cache/noaa_snowy_grouper_sedar36u_2021/. Their source URLs, revisions, retrieval timestamps, byte sizes and SHA-256 checksums are recorded in provenance/noaa_snowy_grouper_sedar36u_2021/manifest.csv.
 
 - [SEDAR 36 Update assessment page](https://sedarweb.org/assessments/sedar-36-update-south-atlantic-snowy-grouper/)
 - [Revised SEDAR 36 Update assessment report (January 2021)](https://sedarweb.org/documents/2020-update-sedar-36-update-assessment-report-south-atlantic-snowy-grouper-revised-january-2021-2/)
 - [SEDAR 36 Update WP01: recreational survey data](https://sedarweb.org/documents/2020-sedar36u-wp01-general-recreational-data_satl_snowy_grouper_22apr20/)
 - [SEDAR 36 Update WP02: management history](https://sedarweb.org/documents/2020-sedar-36u-wp02-snowy-grouper-management-history-2-18-2020/)
-- [Original SEDAR 36 assessment page, including superseded 2013 WP15](https://sedarweb.org/assessments/sedar-36/)
-- [Draft SAFMC 2027 statement of work](https://safmc.net/documents/sedar_a2_draft_sow-for-2027-pdf/)
-
-This review changes discovery metadata only. It does not create a canonical
-stock, assessment, input, or output record.
+- [Original SEDAR 36 assessment page](https://sedarweb.org/assessments/sedar-36/)

@@ -14,24 +14,33 @@ bins 1–60.
 
 ## Evidence and limits
 
-- The model uses total removals in metric tonnes for 1916–2024. Fishery
-  age-composition observations include commercial ages from 2007–2024. These compositions are not direct catch-at-age observations. The
-  native data records July survey observations. The model derives weight-at-age from growth and its length-weight
-  relationship; `Report.sso` includes biomass-at-age output. Maturity uses a
-  length-based logistic relationship. Natural mortality is fixed at 0.068
-  per year in the base model; the report identifies M and steepness as fixed
-  at prior values and explores M in its uncertainty analysis.
+- The native data file contains total removals in metric tonnes for 1916-2024 and
+  conditional age-at-length composition rows. Of 253 such rows, 128 positive-year
+  rows from 2010-2024 are active; 125 negative-year rows are excluded from the
+  likelihood. The reported age samples span 2007-2024, so the active rows and
+  retained inactive rows remain distinct. These compositions are not direct
+  catch-at-age observations. The model derives weight-at-age from its growth and
+  length-weight relationship; `Report.sso` includes fitted biomass-at-age.
+  Maturity is length-based and natural mortality is fixed at 0.068 per year.
 - Survey index observations are recorded in July; spawning is in January. Preserve survey timing when converting observations to fractional-year
   values.
 - `Report.sso` includes annual numbers-at-age, catch-at-age, biomass-at-age,
   and F-at-age. The report gives spawning output and recruitment estimates
   with uncertainty.
 
-This is eligible for source curation because the official model files
-provide age-composition inputs, biological data, and fitted age-specific
-outputs. A would approximate the source likelihood;
-catch-at-age and age-specific indices would be reconstructed rather than
-directly observed.
+This unit is eligible for source curation because its official model archive
+contains removals, index observations, compositions, and fitted age-specific
+outputs. The report identifies biological and mortality assumptions. Catch-at-age
+and age-specific survey indices are not direct observations and would require
+additional documented inputs for reconstruction.
+
+## Cross-check of the native archive
+
+The archive's `natage.csv` matches the beginning-of-year population numbers-at-age in `Report.sso`; it is a fitted output, not a length-at-age growth input.
+Of the 253 conditional age-composition rows in `2025_ca_quillback.dat`, 128 have positive year codes and 125 have negative year codes. The manual says negative-year rows are excluded from the likelihood. The positive rows support the report's description of conditional age-at-length data in the base fit; the inactive rows remain clearly identified.
+
+
+- [Stock Synthesis 3.30 User Manual, composition-data rules](https://nmfs-ost.github.io/ss3-doc/SS330_User_Manual_release.html)
 
 ## Sources and local cache
 

@@ -1,6 +1,6 @@
 # NAFO stock inventory and screening
 
-Inventory reviewed: 2026-11-04. This is a source-discovery review, not a canonical data import. It records current NAFO management/advice units found in the official stock lists, links exact overlaps to existing SAIO/DFO units, and screens their latest detailed assessment for public age-disaggregated inputs and comparable outputs.
+Inventory first reviewed 2026-11-04; current advice rechecked 2026-11-06. This is a source-discovery review, not a canonical data import. It records current NAFO management/advice units found in the official stock lists, links exact overlaps to existing SAIO/DFO units, and screens their latest detailed assessment for public age-disaggregated inputs and comparable outputs.
 
 ## Inventory scope and sources
 
@@ -23,13 +23,13 @@ The 27 register rows comprise 22 finfish management/advice units and five non-fi
 |---|---|---|---|
 | Cod 3M | 2026 Bayesian SCAA; data through 2025 | Eligible | New source-curation candidate. Catch-at-age is missing in 2002-2005; age-length key and maturity ogive from 2020-2022 are carried forward for 2023-2025. Annual summer survey timing would require a documented within-year approximation. |
 | Cod 3NO | 2021 ADAPT/VPA; population inputs through 2019 | Eligible | New candidate. No catch-at-age was estimated for 2020, and the assessment identifies commercial sampling as a continuing weakness. No newer full age-based run was found in the current NAFO advice inventory. |
-| Beaked redfish 3M | 2023 XSA (accepted advice); 2024 source-data report | Eligible | New candidate. The accepted assessment combines S. mentella and S. fasciatus. Golden redfish is not a separate fitted model; its advice is based on its recent catch share. Verify the run-specific data cut and native files before import. |
+| Beaked redfish 3M | 2023 XSA (accepted advice); 2024 source-data report | Eligible | The 2024 source-data report confirms a pooled 2020–2022 species-combined age-length key and maturity ogive. The detailed XSA report remains unavailable; numerical annual age-specific inputs and fitted states are still missing from the partial record. |
 | American plaice 3LNO | 2021 ADAPT/VPA; interim monitoring in 2026 | Eligible, with a major output caveat | New candidate. The assessment authors accepted the model for trends, not absolute population estimates, because of residual patterns, retrospective behavior, poor fit and instability. Keep this caveat attached to any later comparison. |
 | American plaice 3M | 2026 update | Ineligible | No recent age-length keys; age-dependent data and analyses were not updated. The older assessment is not substituted for the current data cut. |
 | Redfish 3LN | 2026 assessment | Ineligible | Index-based assessment with no analytical age-structured population model. Exact match to DFO candidate nafo_redfish_3ln. |
 | Redfish 3O | 2025 assessment | Ineligible | Survey-index assessment without age-specific population outputs. Exact match to DFO candidate nafo_redfish_3o. |
 | Yellowtail flounder 3LNO | 2025 assessment | Ineligible | Bayesian Schaefer biomass model; no current age-specific population inputs or outputs. Exact match to DFO candidate dfo_yellowtail_flounder_3lno. |
-| Witch flounder 3NO | 2024 assessment | Ineligible | Bayesian Schaefer biomass model, not an age-structured population assessment. Exact match to DFO candidate dfo_witch_flounder_3no. |
+| Witch flounder 3NO | 2024 detailed assessment; 2026 advice update | Ineligible | The 2024 report provides detailed inputs for the Bayesian Schaefer model; 2026 advice updates status and projections and says the next full assessment is planned for 2028. No age-structured population assessment. Exact match to DFO candidate dfo_witch_flounder_3no. |
 | Capelin 3NO | Current monitoring | Ineligible | No current age-structured population model. The historic acoustic series ended in 1994; current bottom-trawl indices do not cover this pelagic stock fully. |
 | Thorny skate 3LNO+3Ps | 2024 detailed report; 2026 advice cycle | Ineligible | Survey/index and length information only; no age-based population model. Exact match to DFO candidate nafo_thorny_skate_3lnops. |
 | White hake 3NO+3Ps | 2023 detailed report; 2026 advice cycle | Ineligible | No current age-structured population model or age-specific output. Exact match to DFO candidate nafo_white_hake_3nops. |
@@ -58,13 +58,13 @@ Cod 2J3KL appears in NAFO Council proceedings as a Canadian assessment requested
 
 ## Reconciliation and current curation status
 
-The official 2026 full-assessment page and the 2017-2025 advice matrix were rechecked on 2026-11-05. The 2026 page lists full assessments for cod 3M, American plaice 3LNO and 3M, redfish 3LN, thorny skate 3LNOPs, and witch flounder 3NO. Of these, cod 3M and American plaice 3LNO have age-structured production records in SAIO. American plaice 3M has no updated age-length inputs, and the other listed assessments are index/monitoring approaches without comparable age-based population outputs. The NAFO advice matrix also supports the existing treatment of cod 3NO (latest detailed full production run 2021) and beaked redfish 3M (latest detailed full run 2024).
+The NAFO 2026 advice portal and the 2017-2025 advice matrix were rechecked on 2026-11-06. The portal hosts reports for cod 3M, American plaice 3LNO and 3M, redfish 3LN, thorny skate 3LNO+3Ps, and witch flounder 3NO, but each report's assessment description determines whether a new population assessment was run. The 3LNO plaice report explicitly says no full assessment was conducted; 3M plaice reports no analytical assessment; 3LN redfish is index-based; and witch flounder 3NO describes an aggregate Schaefer update and says its next full assessment is planned for 2028. Cod 3M is the only one of these 2026 reports with a current age-structured production assessment; it is already represented in SAIO. The existing 3LNO plaice record keeps its 2021 full age-based assessment separate from current 2026 monitoring. The advice matrix also supports the existing treatment of cod 3NO (latest detailed full production run 2021) and beaked redfish 3M (latest detailed full run 2024).
 
 | Age-structured candidate | Canonical representation | Current source completeness | Main unresolved source limitation |
 |---|---|---|---|
 | Cod 3M | `nafo_cod_3m`, assessment `nafo_cod_3m_2026` | Inputs, assumptions, outputs: partial | The 2018 survey age-15 cell is missing within the fitted 8+ group; age-specific posterior uncertainty and production code/object are unavailable. |
 | Cod 3NO | `nafo_cod_3no`, assessment `nafo_cod_3no_2021` | Inputs: complete; assumptions and outputs: partial | The report has no catch-at-age for 2020 and does not tabulate uncertainty for the population outputs. No newer full production assessment was found. |
-| Beaked redfish 3M | `nafo_redfish_3m`, assessment `nafo_redfish_3m_2024` | Inputs, assumptions, outputs: partial | The accessible Council report does not include the detailed XSA input and fitted-state tables; the separately indexed assessment SCR could not be retrieved. |
+| Beaked redfish 3M | `nafo_redfish_3m`, assessment `nafo_redfish_3m_2024` | Inputs, assumptions, outputs: partial | SCR 24/024 confirms the 2020–2022 species-combined age-length key and maturity ogive, but the separately indexed XSA report SCR 24/032 has no catalogue download link and its expected PDF URL returns 404; numerical age-specific matrices remain unavailable. |
 | American plaice 3LNO | `nafo_american_plaice_3lno`, detailed assessment `nafo_american_plaice_3lno_2021`; 2026 monitoring is separate | Inputs: complete; assumptions and detailed outputs: partial | The 2021 ADAPT is considered useful for trends but unreliable for absolute population levels; 2026 advice is monitoring, not a new fitted population assessment. |
 | Greenland halibut SA2+3KLMNO | Existing DFO stock `dfo_greenland_halibut_2_3klmno`; 2023 SCAA and SSM records are separate MSE operating-model runs | Inputs, assumptions, outputs: partial | The 2023 age-based runs support MSE, not the 2026 TAC advice. Do not create a duplicate NAFO stock or treat the 2023 runs as the current production advice model. |
 
@@ -76,5 +76,6 @@ Primary inventory cross-checks:
 
 - NAFO 2026 Stock Advice: <https://www.nafo.int/Science/Science-Advice/Stock-advice>
 - NAFO Stocks and Advice matrix, 2017-2025: <https://www.nafo.int/Science/Stocks-Advice>
+- NAFO 2026 advice reports: <https://www.nafo.int/Portals/0/PDFs/Advice/2026/cod3m.pdf>; <https://www.nafo.int/Portals/0/PDFs/Advice/2026/plaice3lno.pdf>; <https://www.nafo.int/Portals/0/PDFs/Advice/2026/plaice3m.pdf>; <https://www.nafo.int/Portals/0/PDFs/Advice/2026/red3ln.pdf>; <https://www.nafo.int/Portals/0/PDFs/Advice/2026/skate3lno3ps.pdf>; <https://www.nafo.int/Portals/0/PDFs/Advice/2026/wf3no.pdf>
 - NAFO Scientific Council SCR Documents: <https://www.nafo.int/Library/Science-Council/Scientific-Council-SC-SCR/ev/1>
 - NAFO 2026 Scientific Council Report: <https://www.nafo.int/Portals/0/PDFs/sc/2026/scs26-12.pdf>

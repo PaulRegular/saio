@@ -1,0 +1,47 @@
+# Fisheries New Zealand tarakihi assessments for 2026
+
+## Stock identity and assessment run
+
+Fisheries New Zealand published separate 2026 assessments for eastern and western tarakihi. The reports identify two biological stocks and define their areas separately; the east and west models are not extra assessment variants of one unit. The eastern unit covers TAR 3, TAR 2, and eastern portions of TAR 1 and TAR 7. The western unit covers TAR 8 and western portions of TAR 1 and TAR 7. The eastern model uses three spatial regions to represent the main areas and includes movement; the western model represents one region.
+
+Both reports use Stock Synthesis 3.30.23.1, model years from 1932 through 2025 (2024–25 fishing year), two sexes, and 40 model ages with age 40+ as the plus group. The base models fix natural mortality at 0.10 per year, steepness at 0.8, and recruitment standard deviation at 0.6. The annual cycle is October–September with two periods, October–March and April–September; spawning is at the start of the second period. The 2026 management review and resulting decisions refer to the eastern and western stock assessments.
+
+## Inputs available in the reports
+
+The western report provides catch biomass in tonnes for four fisheries and model years 1932–2025 (Table A16), 1,980 age-composition cells across 33 observations (Tables A17–A22), WCSI survey biomass and TBGB age-1 indices for 17 years each, seven WCNI survey-biomass observations, and 32 WCNI CPUE observations. The 2023 TBGB age-1 index is zero and its CV is shown as “-”; the value is retained and the CV is left unavailable. The selected base-case indices are WCSI and WCNI survey biomass, TBGB age-1 abundance, and WCNI CPUE. The report excludes WCSI CPUE because the WCSI survey is considered more reliable; the TAR 8 CPUE series is also excluded from the base case after conflicting with other abundance information.
+
+In the western model the population has 40 ages with age 40+ as its plus group, while the report's composition tables use ages 1–29 and 30+. The tables report female and male age cells; these are not catch numbers-at-age. The sex-specific cell totals are not each normalized to one, and some combined table totals are below one. The report does not explain the unrepresented share, so the source values are retained without normalization and the gap remains unresolved. Catch biomass and composition observations are separate likelihood inputs.
+
+Biological information includes sex-specific growth, length–weight parameters, a female maturity schedule, and fixed M. The western report does not provide a direct annual weight-at-age surface; weight-at-age is generated from model biological parameters. Survey timing is described by season and model period, but the report does not establish a single fractional-year sampling time for each index. No numeric timing fraction will be inferred. The western model also documents age-selectivity assumptions, including separate treatment of the 2019–2020 TAR 8 survey-like age samples, an estimated catchability for the TBGB age-1 index, and the likelihood families used for index and composition observations.
+
+## Eastern tarakihi inputs
+
+FAR 2026/44 Appendix 7 Table A30 reports catch biomass in tonnes for eight commercial and recreational fisheries for every model year from 1932 through 2025 (752 fishery-year values). It states that the commercial catch series include allowances for unreported catches. The report does not provide catch numbers-at-age; catch biomass and age compositions remain separate source quantities.
+
+Tables A31–A37 report 1,410 age-composition cells for 47 observations in ages 1–29 and 30+. The observations cover six commercial fisheries and the ECSI winter survey. The tables combine sexes and Table 15 gives effective sample sizes of 15 (ENLD), 20 (BPLE), 30 (TAR 2), 5 (Cook), 10 (Kaikoura set net), 30 (ECSI commercial), and 20 (ECSI winter survey). Values are stored as printed and are not normalized; the published vectors sum from approximately 0.9634 to 1.9999. The report does not explain why some vectors depart materially from one.
+
+Table 8 reports 15 ECSI winter and five ECSI summer biomass indices in tonnes with CVs. Table 9 reports ten age-2 abundance indices and CVs, but does not specify their numerical scale multiplier. Their reported values are retained in index units with that scale left unresolved. Table 14 identifies five CPUE series used in the base assessment: ENLD and BPLE through 2025, TAR 2 and Cook event-based series from 2008, and Kaikoura set net through 2025. Tables A5, A10, A15, A20, and A24 provide 136 combined-index estimates with 95% limits. These estimates and limits are retained as reported, while the model CV ranges are recorded separately from Table 14; the report's annual interval widths do not reproduce those model CVs and are not converted to per-year CVs. The daily TAR 2 and Cook series for 1990–2007 are listed as model inputs but their annual values are not tabulated in FAR 2026/44. They are not reconstructed from plots or substituted from an earlier assessment. Table A29's ECSI CPUE is explicitly excluded from the base model. Table 10's inshore survey series is also not included in the base model.
+
+The eastern report gives male and female Schnute growth parameters, a length–weight relationship, age-based maturity (ages 1–3: 0; age 4: 0.25; age 5: 0.5; ages 6+: 1), and fixed natural mortality of 0.10 per year for both sexes. It does not provide direct annual weight-at-age values. Maturity is recorded at the source's age groups, with age 6 representing 6+. Model age 40+ is distinct from the composition-table 30+ group.
+
+The eastern assessment uses three spatial regions, two sexes, 40 ages with age 40+ as a plus group, and age-dependent movement. Recruitment deviations are estimated independently for 1980–2023 without an averaging constraint. The model year is October–September, split into October–March and April–September; spawning is assumed at the start of period 2. Survey-specific fractional-year sampling times are not reported. Tables 17–19 provide 22 base-case and projection summaries, including unfished and terminal spawning biomass, biomass ratios and probabilities, F at the SB40 reference, current F ratio, reference yield, and 2030 projection summaries. These MCMC medians and available 95% intervals do not provide annual numerical N-at-age, F-at-age, M-at-age, or recruitment arrays.
+
+## Outputs and limitations
+
+Tables 17–19 of the eastern report and Tables 15–16 of the western report provide terminal spawning biomass, unfished/reference biomass, biomass ratios, fishing-mortality reference values and ratios, and projection summaries. MCMC medians and intervals are reported for key quantities. Annual numerical N-at-age, F-at-age, M-at-age and recruitment arrays are not tabulated in the reports, so those outputs remain a source gap unless a public native assessment output is found.
+
+The eastern assessment is spatially structured, with estimated movement among three regions. The western assessment is one region but retains four fishery areas in its inputs. The western report identifies the TAR 8 CPUE trend as inconsistent with other abundance information; that series is not used in the base case.
+
+The official document-library entries list the FAR 2026/44 and FAR 2026/23 assessment reports. A targeted search of the official eastern report entry and relevant repository results did not locate public Stock Synthesis input/output files or a run repository for either production assessment. The reports are therefore the detailed sources for the imported values; native model files remain an unresolved source gap as of 5 November 2026.
+
+## Sources and local copies
+
+- Fisheries New Zealand FAR 2026/44, *Stock assessment of eastern tarakihi for 2026*, published 4 November 2026: [report page](https://fs.fish.govt.nz/Page.aspx?dk=26277&pk=113) · [PDF](https://fs.fish.govt.nz/Doc/26277/FAR-2026-44-Stock-assessment-of-eastern-tarakihi-for-2026.pdf.ashx).
+- Fisheries New Zealand FAR 2026/23, *Stock assessment of western tarakihi for 2026*, published 21 July 2026: [report page](https://fs.fish.govt.nz/Page.aspx?dk=26247&pk=113) · [PDF](https://fs.fish.govt.nz/Doc/26247/FAR-2026-23-Stock-assessment-of-western-tarakihi-for-2026.pdf.ashx).
+- Fisheries New Zealand, [October 2026 tarakihi management review](https://www.mpi.govt.nz/consultations/review-of-fishery-sustainability-measures-october-2026-round), followed by the [22 September 2026 ministerial decision](https://www.beehive.govt.nz/release/tarakihi-catch-limits-cut-support-sustainability).
+
+The two PDFs are cached under `source_cache/mpi_tarakihi_eastern_2026/` and `source_cache/mpi_tarakihi_western_2026/`. Retrieval URLs, dates, and SHA-256 checksums are recorded in `provenance/mpi_tarakihi_eastern_2026_sources.csv` and `provenance/mpi_tarakihi_western_2026_sources.csv`.
+
+## Curation decision
+
+Both biological stocks qualify for source-data curation. Their detailed reports contain catch biomass, age compositions, selected abundance indices, biological assumptions, and comparable stock-status outputs. Database records preserve reported biomass and compositions separately, retain native age bins and source sex/region detail, and do not fabricate catch numbers-at-age, direct weight-at-age, survey timing fractions, unreported historical daily CPUE values, or annual fitted-state arrays. Completeness remains partial where the reports do not provide numerical data.

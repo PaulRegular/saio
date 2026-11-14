@@ -1,35 +1,39 @@
-# Western and Central Pacific yellowfin tuna (NOAA:11694)
+# Western and Central Pacific yellowfin tuna
 
-**Reviewed:** 2026-11-02
-**Inventory row:** NOAA:11694
-**Assessment unit:** WCPFC Western and Central Pacific yellowfin tuna (*Thunnus albacares*)
-**Screen:** Eligible for source curation, with an approximate age-reconstruction caveat. No canonical database records were added.
+**Reviewed:** 2026-11-13
+**Candidate:** NOAA Stock SMART 11694
+**Stock unit:** WCPFC Western and Central Pacific yellowfin tuna (*Thunnus albacares*)
+**Assessment record:** wcpfc_wcpo_yellowfin_2026
+**Import status:** Partial; the latest detailed run is diagnostic and is not the current advice basis.
 
-## Identity and assessment status
+## Stock and assessment status
 
-NOAA Stock SMART ID 11694 identifies the Western and Central Pacific yellowfin unit. Its latest Stock SMART row is assessment 13365 (2023, data through 2021; PIFSC), marked Full acceptance. It is distinct from yellowfin units in the Eastern Pacific and Indian Ocean. No matching canonical stock is present; this inventory row is linked as `wcpfc_wcpo_yellowfin`.
+Stock SMART identifies the WCPFC Western and Central Pacific unit, separate from Eastern Pacific and Indian Ocean yellowfin. Its latest listed assessment is the 2023 PIFSC assessment, data through 2021, marked Full acceptance. The latest detailed model files located are for the 2026 WCPFC assessment, with data through 2024. The report says this run was not reviewed at SC22 for management advice and its review was deferred to SC23. The database therefore records the 2026 detailed run as current for source coverage but not applied as an advice result; the 2023 assessment remains the latest assessment identified as accepted for advice.
 
-The latest detailed production run located is the 2026 WCPFC assessment, with data through 2024. Its revised report says it was **not reviewed at SC22 for management advice** and review was deferred to SC23. WCPFC's SC22 outcome notice confirms the deferral. The 2023 Stock SMART assessment therefore remains the latest accepted advice basis; this review uses the 2026 files to identify the most recent detailed inputs and outputs, while preserving that status distinction.
+The 2026 model has quarterly time steps, five model areas and 40 quarterly age classes. Class 40 is a plus group; these are not 40 annual ages.
 
-The assessment uses quarterly time steps, five model areas, and 40 quarterly age classes (the final age class is a plus group). The age index must not be interpreted as 40 annual ages.
+## Inputs preserved
 
-## Inputs and outputs located
+- The native MFCL fishery file has 8,225 fishery-time records. Catch flags distinguish longline catch in fish numbers from other extraction catches in tonnes. The database preserves fleet, area and quarter. Non-negative effort values are retained in their source units; the source uses different units among gears.
+- The TAF table has 297,920 preprocessed length-frequency values for 1956–2024, across 36 fisheries, 95 two-centimetre bins and four quarters. These frequencies are preserved as supplied, including fractional values. The export does not supply the unweighted sample size after preprocessing.
+- The otolith export contains 1,873 individual fish with conditional age-at-length information from 2006–2024, across five areas and four quarters. These aggregate to 1,631 age-by-length cells in 1,229 year-quarter-area-length samples. They inform growth; they are not marginal catch-at-age or age-specific abundance observations. The reported ess field is retained separately as 1,229 source likelihood-weight rows.
+- Five quarterly longline CPUE series cover 1952–2024 (1,452 observations). The values match native fishery catch divided by effort and 1,000,000. The TAF export does not include the CPUE CV time series, so no CV values were added.
+- The regional-scaling table contains 1,420 year-area-quarter values from 1954–2024. They are preserved on their native scale as model covariates used in the regional-scaling penalty, not as abundance indices. Their physical units are not established by the export.
+- Tag files contribute 13,585 release-frequency rows and 6,331 recapture-count rows. The source does not establish that release frequencies are raw tag counts, so their scale is left as supplied.
 
-- **Catch and size data:** The pinned MFCL and TAF source package contains catch and length-composition inputs. The TAF length-composition table has 297,920 rows spanning 1956–2024, 36 fisheries and four quarters. These are length compositions, not catch-at-age observations.
-- **Age data:** The TAF otolith table contains 1,873 individual conditional age-at-length records, sampled in 17 years from 2006–2024 across five areas, four quarters, ages 1–40, and lengths 14–174 cm. These data inform growth; they are not marginal age compositions. Pairing sampled age-length keys with length compositions can support approximate age-composition reconstruction in overlapping strata. Extending keys to unsampled years, fleets or areas requires explicit pooling and must be labelled as reconstruction.
-- **Abundance indices:** Five regional longline CPUE series cover 1952–2024 at quarterly resolution. They are aggregate relative-abundance indices, not age-specific indices.
-- **Biology and mortality:** The fitted TAF biology output contains length, weight, maturity and natural mortality for ages 1–40. These are model-derived surfaces, not independent observed annual weight-at-age or maturity-at-age series. The report describes an internally estimated age-dependent natural-mortality form.
-- **Outputs:** Pinned TAF results provide numbers-at-age by year, quarter and area (1952–2024), annual fishing mortality-at-age, biology at age, and annual summaries including recruitment, biomass and F. The shortcut TAF output script copies archived full-model outputs; these are diagnostic fit outputs, not uncertainty-grid summaries.
+## Outputs preserved
 
-## Screen decision
+The pinned TAF exports contain 58,400 numbers-at-age rows, 17,520 annual fishing-mortality-at-age rows, 58,400 mature-biomass-at-age rows, 1,460 regional/quarterly biomass rows, 1,460 predicted-index rows and 9,052 fishery-level predicted-catch rows. Eight area-5 predicted CPUE values for 1952–1953 are blank in the source and remain missing. Annual summary exports add recruitment, total biomass, spawning-potential biomass, unfished spawning potential, ratios, mean F and 73 annual aggregate-catch predictions. The biology export supplies model-derived length, weight, maturity and natural mortality for 40 quarterly age classes.
 
-**Eligible for source curation.** The detailed run provides the age-length observations, length compositions, aggregate CPUE, biological surfaces and age-specific fitted outputs needed to assess a documented approximation. Catch-at-age is not a direct likelihood input: any age-composition reconstruction must retain the sampled-strata limits and visible pooling assumptions. The assessment's 2026 advice review is pending at SC23, so the outputs must not be presented as already adopted management advice.
+These are point estimates from MFCL Model 16, Diagnostic2026. The pinned outputs do not contain standard errors or confidence limits. The report describes a 48-model uncertainty ensemble, which is not represented by these single-run exports. Input and output completeness therefore remain partial.
 
-This is a discovery screen only.
+## Remaining source gaps
 
-## Sources and cache
+The detailed source package does not provide catch-at-age or an age-specific abundance index. Age-at-length samples are conditional growth data and do not become marginal age-composition observations without additional reconstruction choices. The export also omits the CPUE CV time series and final effective sample sizes for the reweighted length compositions. Independent observed weight-at-age and maturity-at-age inputs were not recovered; the imported surfaces are fitted model outputs. No uncertainty estimates were found for the imported Diagnostic2026 outputs.
 
-The gitignored local cache is `source_cache/discovery_noaa_wcpo_yellowfin_2026/`. Its `sources.csv` records retrieval dates, URLs, byte counts, SHA-256 hashes and the pinned SPC repository revision `b00a02f3537ef54520b219488f899188ea6eff3f`.
+## Provenance
+
+The local, gitignored cache is source_cache/discovery_noaa_wcpo_yellowfin_2026/. Its tracked manifest records URLs, retrieval dates, sizes, checksums and the pinned SPC repository revision b00a02f3537ef54520b219488f899188ea6eff3f.
 
 - [2026 WCPFC assessment report, WCPFC-SC22-2026-SA-WP05 Rev. 01](https://meetings.wcpfc.int/node/32678)
 - [2026 assessment input paper, WCPFC-SC22-2026-SA-IP03 Rev. 01](https://meetings.wcpfc.int/file/21826/download)

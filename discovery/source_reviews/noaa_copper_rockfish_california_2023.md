@@ -1,78 +1,79 @@
 # NOAA California copper rockfish, 2023
 
-## Assessment unit and run
+## Assessment unit and source set
 
-Stock SMART IDs 15332 and 15333 describe the north and south sub-area models
-used in the 2023 California copper rockfish assessment. The candidate register
-links these model areas to one California assessment family so they are not
-counted as two new stocks. Their observations and fitted outputs remain
-area-specific. The official documents describe the California population as
-reassessed with north and south models; Washington (ID 15330) and Oregon (ID
-15331) are separate assessment areas last assessed in 2021 and are outside this
-screen.
+Stock SMART IDs 15332 and 15333 identify the north and south California model
+areas used in one 2023 assessment family. The candidate register therefore
+counts this as one stock, while the source records retain separate model areas.
+The assessment uses Stock Synthesis 3.30.21 and data through 2022; the report
+also gives 2023 spawning-output estimates. Washington (ID 15330) and Oregon
+(ID 15331) are separate assessment areas and are not included here.
 
-The 2023 models use data through 2022, cover model years 1916–2022 and ages
-0–50, and represent females and males separately. The Pacific Fishery
-Management Council's STAR review describes two California sub-area models and
-identifies the fitted data as catch, indices, length compositions, and age
-compositions. The model archive contains native Stock Synthesis inputs, control
-files, starters and fitted reports for both areas. The 2023 production source
-files and checksums are recorded in the ignored local cache at
-`source_cache/discovery_noaa_copper_california_2023/sources.csv`.
+The source set includes both area reports, both native model archives, the
+STAR review, and the pre-assessment workshop report. URLs, retrieval dates,
+archive revisions, sizes, and SHA-256 checksums are recorded in
+provenance/discovery_noaa_copper_california_2023/sources.csv. Downloaded
+files and extracted model directories are in the ignored local source cache.
 
-## Inputs and outputs
+## Inputs retained
 
-The north model has four fishery catch fleets and five survey or biological
-fleets; the south model has four fishery catch fleets and six survey or
-biological fleets. Catch is entered as biomass. The active native age-composition
-blocks contain 489 rows for the north model (450 conditional age-at-length rows
-and 39 marginal-age rows) and 771 rows for the south model (747 conditional
-age-at-length rows and 24 marginal-age rows). Conditional observations span
-2001–2022 in the north model and
-2004–2022 in the south model. Marginal-age observations span 1978–2022 in the
-north model and 1975–2022 in the south model. These are observed composition
-records in the fitted data, not annual catch numbers-at-age.
+The north model contains 327 annual fishery catch-biomass rows and the south
+model 326. The reports describe catches in metric tons. Each area has four
+fishery fleets. The source catch-error setting (0.01) is recorded as a model
+setting, not as an observation standard error.
 
-The assessments also use aggregate indices and length compositions. They do not
-provide direct annual survey abundance-at-age input series. the transformation must retain the composition's source and
-sampling basis. Do not label reconstructed quantities as directly observed
-age-specific indices or catch.
+The north and south models contain 76 and 77 aggregate biomass-index
+observations, respectively. The source identifies these as biomass indices
+with lognormal error type 0. Original values and log-scale standard errors are
+retained. Index months are preserved; the stored within-year timing is
+(month - 1) / 12.
 
-The Stock Synthesis control and report files specify fixed natural mortality of
-0.108 per year for both model sexes. The models use sex-specific growth and
-length-weight relationships and a length-logistic maturity relationship, from
-which age-specific biological surfaces are derived. They have one 12-month
-season and January spawning. Survey timing is coded by month in the native
-fleet table: month 7 in the north model and months 7 and 9 in the south model.
-The timing codes should not be converted to a fractional-year value without a
-documented convention.
+The source has 219 north and 185 south length-composition rows, plus 489 north
+and 771 south age-composition rows. The age rows include 450 north and 747 south
+conditional age-at-length records; the remainder are marginal age
+compositions. Frequencies are kept on their original scales with sample sizes,
+sex codes, age-error codes, partitions, and source observation identity.
+Frequencies are not converted to catch-at-age or age-specific abundance.
+Lbin_method=3 means the conditional length bounds are in centimetres. Source
+age labels cover 0–50, with age 50 serving as the accumulator group.
 
-Both fitted reports include age-specific catch, numbers, fishing mortality and
-biomass outputs through 2022, as well as aggregate spawning output and
-recruitment. The north and south model surfaces must remain separate in later
-source extraction and comparisons. No canonical database stock, assessment,
-input or output rows were added in this screening step.
+Natural mortality is fixed at 0.108 per year for both sexes. The models use
+sex-specific growth and length-weight relationships and length-logistic
+maturity. The reports and native files do not provide standalone observed
+weight-at-age or maturity-at-age matrices; age-specific biology is
+model-derived. Recruitment follows Beverton-Holt with steepness fixed at 0.72;
+the recruitment-deviation start year is 1970 in the north model and 1965 in the
+south model.
 
-## Screening decision
+## Outputs retained
 
-Screen this as one new eligible California assessment family for source
-curation. Their reconstruction is
-supportable from native model inputs but must be documented and kept distinct
-from observed quantities. This is stronger age evidence than the single
-survey-year age-length key available for Pacific Coast spiny dogfish, but it
-still requires more care than a model with direct annual catch-at-age and
-age-specific indices.
+Native fitted outputs include beginning-of-year N-at-age and biomass-at-age,
+fishing mortality by fishery fleet and sex, and fitted dead catch-at-age for
+ages 0–50 through 2022. Fitted catch-at-age is a model output, not an observed
+catch-at-age input. Total abundance is derived by summing N-at-age over ages
+and sexes; recruitment and spawning output are retained from model time series.
+The official reports express spawning output in billions of eggs and provide
+95% intervals for 2013–2023. Age-specific N, biomass, F, catch, and derived
+total abundance have no reported uncertainty.
 
-The source check in
-`scripts/database/476_screen_noaa_copper_california_2023.R` verifies the source
-manifest, model periods, age bins, age-composition row structure and coverage,
-fixed mortality settings and reported population-at-age surfaces.
+The north and south outputs remain separate. There is no single combined
+California N-at-age or F-at-age surface in the source model.
+
+## Completeness and gaps
+
+Inputs and outputs are marked partial. The assessment has aggregate catch and
+survey inputs and rich composition samples, but not observed annual
+catch-at-age numbers or a direct age-specific survey abundance series.
+Empirical age-specific weight and maturity matrices are not supplied, and
+uncertainty is unavailable for age-specific population and mortality outputs.
+The archived control files retain likelihood and age-error settings not
+expanded into separate canonical records.
 
 ## Sources
 
 - [2023 North California assessment](https://www.pcouncil.org/documents/2024/03/status-of-copper-rockfish-along-the-u-s-california-coast-north-of-point-conception-in-2023.pdf/)
-- [2023 North California Stock Synthesis files](https://www.pcouncil.org/documents/ca-copper-rockfish-north-2023-model-files-zip-file/)
+- [2023 North California Stock Synthesis archive](https://www.pcouncil.org/documents/ca-copper-rockfish-north-2023-model-files-zip-file/)
 - [2023 South California assessment](https://www.pcouncil.org/documents/2024/02/status-of-copper-rockfish-sebastes-caurinus-along-the-u-s-california-coast-south-of-point-conception-in-2023-november-2023.pdf/)
-- [2023 South California Stock Synthesis files](https://www.pcouncil.org/documents/ca-copper-rockfish-south-2023-model-files-zip-file/)
+- [2023 South California Stock Synthesis archive](https://www.pcouncil.org/documents/ca-copper-rockfish-south-2023-model-files-2023-zip-file/)
 - [2023 Copper/Rex Sole/Shortspine STAR panel report](https://www.pcouncil.org/documents/2023/06/star-panel-1-report-for-copper-rockfish-in-ca-rex-sole-and-shortspine-thornyhead.pdf/)
-- [2023 copper rockfish preassessment workshop report](https://www.pcouncil.org/documents/report-of-the-pre-assessment-workshop-for-2023-groundfish-stock-assessments-of-copper-rockfish-canary-rockfish-and-black-rockfish/)
+- [2023 pre-assessment workshop report](https://www.pcouncil.org/documents/report-of-the-pre-assessment-workshop-for-2023-groundfish-stock-assessments-of-copper-rockfish-canary-rockfish-and-black-rockfish/)

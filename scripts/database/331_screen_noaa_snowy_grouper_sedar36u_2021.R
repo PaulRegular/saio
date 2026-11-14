@@ -1,10 +1,10 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'noaa_snowy_grouper_sedar36u_2021')
 candidate_path <- file.path(root, 'discovery', 'candidates.csv')
-manifest_path <- file.path(cache, 'manifest.csv')
+manifest_path <- file.path(root, 'provenance', 'noaa_snowy_grouper_sedar36u_2021', 'manifest.csv')
 
 files <- c(
-  'sedar36u_snowy_grouper_report_revised_2021.pdf',
+  'sedar36u_report_revised_2021.pdf',
   'sedar36u_wp01_recreational_data_2020.pdf',
   'sedar36u_wp02_management_history_2020.pdf'
 )
@@ -150,7 +150,7 @@ review <- data.frame(
     'https://sedarweb.org/assessments/sedar-36/',
     'https://safmc.net/documents/sedar_a2_draft_sow-for-2027-pdf/'),
     collapse = '; '),
-  review_date = '2026-10-30',
+  review_date = as.character(Sys.Date()),
   decision_reason = paste(
     'Eligible for source curation. SEDAR 36 Update is the latest completed',
     'assessment located for the current South Atlantic unit, published in 2021',

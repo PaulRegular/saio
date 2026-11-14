@@ -36,11 +36,29 @@ are available for area 14. The 2022 benchmark describes the earlier SAM
 configuration and its age-specific inputs, but those numeric matrices must not
 be reused as if they were the 2026 production run. The 2023 stock-annex API
 record reports no attached file, and no current native input object was
-recovered. This is therefore not yet source-ready as a complete 5.a+14
-assessment. If current run-matched files become available, reassess the full
+recovered. This is therefore not source-ready as a complete 5.a+14
+age-input set. If current run-matched files become available, reassess the full
 unit; do not silently narrow it to 5.a or extrapolate Icelandic inputs to 14.
 
-No canonical stock, assessment, input, or output records were added.
+## Imported partial current-unit record
+
+The 2026 ICES Standard Graphs source table is now represented in the canonical
+database as an output-only partial assessment record. It contributes 191
+aggregate output rows: 1979–2025 total biomass, SSB, age-1 recruitment, and
+Fbar for ages 7–10 (188 rows), plus 2026 forecast values and lower/upper bounds
+for total biomass, SSB, and recruitment (3 rows). The 2026 forecast is kept
+separate from the fitted historical series. Lower and upper values are stored
+as the source bounds in `lwr` and `upr`; the reviewed report and Standard Graphs
+page do not identify their interval coverage level, so no confidence level or
+standard error is inferred.
+
+No numeric model-input rows were imported. The assessment record therefore
+has `inputs_status = not_started`, `outputs_status = partial`, and the
+candidate remains **eligibility unresolved** for age-disaggregated curation of
+the combined 5.a+14 unit. This output import does not establish translation
+eligibility. The committed provenance manifest is
+`provenance/ices_tusk_5a14_2026/sources.csv`; the source files remain in the
+gitignored local cache.
 
 ## Sources
 

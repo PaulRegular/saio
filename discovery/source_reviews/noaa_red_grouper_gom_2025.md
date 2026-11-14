@@ -53,6 +53,15 @@ surfaces appear only in figures, and annual uncertainty for the population
 time series was not found in the reviewed tables. No SEDAR-linked Stock
 Synthesis input/control/output bundle or fitted model object was located.
 
+## Curation decision
+
+This current unit is eligible for partial source curation. The corrected report
+contains run-specific catch, weighted fishery age-composition, aggregate index,
+age-specific natural-mortality and population-output information. The age
+composition matrices are figure-only, survey indices are not age-specific, and
+some biological and timing details remain unavailable. These limits are retained
+as source gaps; eligibility does not mean that all model inputs are recoverable.
+
 The age-composition and aggregate-index inputs are valuable
 for source curation, but the assessment does not fit age-specific survey indices,
 and the pooled indices lack a single documented fractional sampling time. Its
@@ -61,6 +70,14 @@ figure-based age inputs also limit direct comparison. Preserve the corrected
 production report and supporting working papers in the ignored local cache at
 `source_cache/discovery_noaa_red_grouper_gom_2025/`; `sources.csv` records each
 URL, retrieval date, revision, size and SHA-256.
+
+The partial import records 1,083 source input rows, 12 assessment assumptions,
+and 444 output rows from Tables 4-10 and 13-15 of the corrected report. It
+includes reported commercial and recreational catches, aggregate CPUE indices,
+female natural mortality at ages 0-29, exploitation rates, and annual population
+summaries. Figure-only age compositions, age-specific survey indices, numerical
+N-at-age and F-at-age, and output uncertainty remain unavailable and were not
+transcribed or inferred.
 
 Sources:
 

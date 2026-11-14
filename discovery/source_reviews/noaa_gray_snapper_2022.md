@@ -1,27 +1,31 @@
-# NOAA Gulf of Mexico Gray Snapper source screen
+# NOAA Gulf of Mexico gray snapper: SEDAR 75 source review
 
-**Screened:** 2026-10-30  
-**Candidate:** NOAA Stock SMART 10221, Gulf of Mexico Gray Snapper (*Lutjanus griseus*)  
-**Scope:** Discovery screen only; no canonical stock, assessment, input, assumption, or output rows are added.
+**Reviewed:** 2026-11-10
+**Stock:** NOAA Stock SMART 10221, Gulf of Mexico gray snapper (*Lutjanus griseus*)
+**Assessment:** SEDAR 75 operational Stock Synthesis assessment, data through 2020; completed in 2022 and accepted by the Gulf SSC for advice in January 2023.
 
-## Current assessment and source run
+## Stock unit and source files
 
-Stock SMART identifies assessment 12831 as the 2022 Gulf of Mexico Gray Snapper operational assessment, using data through 2020 and receiving full acceptance. SEDAR 75 was conducted as an operational Stock Synthesis assessment. The Gulf Council's SSC accepted the assessment as consistent with the best scientific information available in January 2023.
+The assessment unit extends from the Texas/Mexico border east to the Atlantic side of Monroe County, including Florida Bay and adjacent fishing areas. It is distinct from the South Atlantic gray snapper unit. SEDAR 75 is the latest completed detailed operational assessment located for this Gulf unit; the next external update was scheduled for 2027, not completed at this review.
 
-The assessed unit is Gulf of Mexico Gray Snapper from the Texas/Mexico border eastward to the Atlantic side of Monroe County, including the documented Florida Bay and adjacent fishing areas. No canonical database stock or candidate unit with this species and Gulf boundary was found. Keep this Gulf unit separate from the Southern Atlantic unit.
+The final assessment report and its supporting landings, life-history, and abundance-index papers are cached locally under `source_cache/discovery_noaa_gray_snapper_2022/`. Their URLs, retrieval details, and SHA-256 hashes are recorded in `provenance/discovery_noaa_gray_snapper_2022/sources.csv`.
 
-## Recoverable inputs and outputs
+## Inputs recovered
 
-SEDAR 75 models population ages 0-28 and uses composition bins through 21+. It includes commercial vertical-line and longline age compositions and recreational private and charter/headboat age compositions. The report says recreational shore age compositions were available but removed during model development; they should not be treated as an input to the accepted model. Annual fleet landings and age-composition information are published in the assessment report and its data papers. The published compositions and catch totals can support a documented catch-at-age reconstruction, but their native likelihood weighting and fleet-specific definitions must be retained during source curation.
+- **Age-composition inputs:** The accepted model covers ages 0-28, with composition bins through 21+. It uses commercial vertical-line and longline, recreational private, and recreational charter/headboat compositions. Recreational shore compositions were removed during model development. The report presents the accepted compositions as figures rather than numeric age-frequency vectors, so no composition values or sample sizes have been transcribed as model inputs.
+- **Fleet landings:** SEDAR 75 Tables 14-19 provide annual model input values and log-scale errors for three commercial fleets and three recreational fleets over 1945-2020. Commercial values are million pounds whole weight; recreational values are thousand fish. These are aggregate fleet totals, not catch-at-age observations.
+- **Discard observations:** Tables 6-7 provide annual discard counts and row-specific log-scale errors for commercial vertical line/longline and recreational fleets over the reported years. The values and units are transcribed as printed (`fish`); the report also says the Stock Synthesis inputs were in thousands of fish. The table values are retained without an inferred rescaling, and this unit discrepancy remains unresolved.
+- **Abundance indices:** Tables 8-9 provide seven standardized annual relative-abundance series and their log-scale standard errors. The age-0 FWRI FIM index covers 1998-2020, and the age-1 FWRI FIM index covers 1996-2020; the other five series are retained at their reported ages and years. Source scales are preserved. Survey months are described in supporting papers but are not converted into an annual sampling-time value here.
+- **Natural mortality:** Table 3 provides the fixed base-case M vector for ages 0-28, reported as the same for males and females. The printed base values are retained; the upper and lower sensitivity values are not treated as uncertainty intervals.
 
-The model uses two age-specific FWRI Fishery-Independent Monitoring abundance indices. The age-0 index covers 1998-2020 and is based on 21.3-m seines sampled during July-December; the age-1 index covers 1996-2020 and is based on 183-m shoreline seines sampled throughout January-December. Both are reported as fish per set, with annual uncertainty and scaled means. Additional indices include fishery-dependent CPUE and fishery-independent trawl and video indices. Survey timing for each non-FWRI series still needs to be checked against its source documentation; the assessment assumes continuous, year-round fishing and no seasonal fishing component.
+The imported observation-error values follow the detailed source tables. There are two unresolved report discrepancies: Tables 14-16 show commercial landings log-SE 0.05 and Tables 17-19 show recreational log-SE 0.1, while captions for Tables 4-5 describe different values; Tables 6-7 print varying discard log-SEs while the narrative says a fixed value of 0.3. Imported rows preserve the detailed table entries and identify these conflicts rather than choosing an undocumented replacement.
 
-The age-specific natural-mortality vector is printed in the assessment report and was carried forward from SEDAR 51. Maturity is described by an updated functional-maturity model, and the report and life-history paper document growth and length-weight information for deriving the required age-specific weights. The exact model-ready weight and maturity matrices should be checked against the assessment report tables before import.
+## Outputs recovered
 
-The assessment report provides numeric annual biomass, spawning biomass, exploited abundance, age-0 recruitment, and stock-status series through 2020. Numeric fitted N-at-age and F-at-age tables were not located in the screened sources; those age-specific outputs should not be assumed available for direct comparison.
+Table 13 provides annual estimates for 1945-2020 of total biomass, age-2+ biomass, SSB, age-2+ abundance, age-0 recruitment, and SSB relative to unfished SSB. Table 35 provides the age-2+ biomass harvest rate for the same years. Values are rounded as published. The report does not provide uncertainty intervals for these annual output series, so no output SEs or intervals are recorded. The Table 35 harvest rate is not instantaneous F.
 
-## Identity and screening decision
+## Remaining source gaps
 
-This is a **new, provisionally distinct Gulf of Mexico unit** with no matching canonical stock. It is **eligible for source curation**: the accepted operational assessment has fleet catch totals and age compositions, age-specific abundance indices, documented age-specific M and biological inputs, and comparable aggregate population outputs. The direct source inputs are spread across reports and working papers and will require transcription or documented reconstruction. Retain the FWRI index units, survey windows, fleet-specific age-composition treatment, M vector, and all missing or removed compositions. Do not substitute fitted outputs for observed inputs.
+Numeric fitted N-at-age and instantaneous F-at-age arrays were not located. The report and supporting life-history paper describe growth, weight-length, and functional-maturity methods, but the complete model-ready annual/age-specific weight and maturity surfaces were not recoverable from the reviewed sources. These gaps are why the canonical input, assumption, and output completeness statuses remain **partial**.
 
-The SEDAR 75 report, age-composition and life-history papers, abundance-index papers, SSC review, and executive summary are cached in the gitignored `source_cache/discovery_noaa_gray_snapper_2022/` directory. Its `sources.csv` records URLs, document revisions, retrieval date, file sizes, and SHA-256 hashes. The discovery register is updated; the canonical database remains unchanged.
+The imported values are the assessment's published input and output tables. No fitted values have been substituted for missing observations or biological inputs.

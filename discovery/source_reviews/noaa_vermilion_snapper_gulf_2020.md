@@ -31,25 +31,32 @@ model's aggregate population outputs.
   one season and assumes fishing and spawning occur continuously through the year.
   Fishing and fishery recruitment begin at age 1; age-0 fish are represented in
   population dynamics but are not directly fished or observed in the fishery data.
-- Commercial east and west handline catch is in metric tons. Recreational catch is
-  in thousands of fish. Catch-at-age is recoverable by combining fleet catches
-  with the accepted age compositions in the final SS3 data file.
-- Commercial handline age compositions are separate for east and west Gulf areas;
-  they are sparse before 2000. Recreational samples from modes and regions are
-  pooled into one Gulf-wide composition and begin in 1994. Composition samples
-  are reweighted using length-frequency data; these are age compositions, not
-  observed catch numbers at age.
-- The assessment fits aggregate indices, including recreational headboat CPUE,
-  SEAMAP larval abundance, combined video, and SEAMAP summer groundfish. The video
-  and groundfish surveys use length compositions; the reviewed run does not provide
-  age-specific survey abundance indices.
-- Growth, length-weight relationships, and maturity are fixed biological inputs
-  carried forward from SEDAR 45. Age-specific weights can be derived from the
-  model's growth and length-weight inputs. Spawning output is egg production based
-  on female proportion, maturity, fecundity, and spawning frequency; it is not
-  biomass SSB.
+- Commercial east and west handline catches are in metric tons; recreational
+  catches are in thousands of fish. The bycatch fleet's 0.001 catch entries are
+  Stock Synthesis placeholders, not measured removals. The accepted DAT file
+  contains catch totals and fishery age compositions, not a catch-at-age matrix.
+- The DAT file contains 64 age-composition samples across the three fishery
+  fleets, with 14 observed bins (ages 1-14, with age 14 the plus group), source
+  sample sizes, and age-error code 1. These are composition samples, not
+  age-specific abundance indices. The model also has 24 length-composition
+  samples across its fleets; source length-bin units are not stated in the
+  printed DAT file.
+- The accepted model includes aggregate index observations for all nine SS3
+  fleets: commercial east and west, recreational, bycatch, east and west
+  headboat, larval, video, and SEAMAP groundfish. The unit codes distinguish
+  biomass, numbers, fishing mortality, and a special larval index. These are
+  aggregate series, not age-specific survey abundance. The five survey fleets
+  use timing code 1 in the DAT file, but its conversion to a proportion of year
+  is unresolved.
+- Growth, weight-length, maturity, and egg-production parameters are fixed in
+  the printed CTL file. Their native parameter values are recorded as
+  assumptions; no age-specific weight or maturity surface is derived. Spawning
+  output is egg production based on female proportion, maturity, fecundity, and
+  spawning frequency; it is not biomass SSB.
 - Natural mortality is a fixed age-specific Lorenzen vector scaled to an average
-  of 0.25. Age-0 mortality is adjusted for the assumed midyear birth date.
+  of 0.25. Table 3 reports values for ages 0-15; age-0 mortality is adjusted for
+  the assumed midyear birth date. The source table's age 15 value is retained
+  without remapping to the model's age-14 plus group.
 - The 2023 G-FISHER index update is a separate interim analysis and must not be
   merged into the SEDAR 67 likelihood or output series.
 
@@ -62,7 +69,26 @@ numeric F-at-age. The report plots N-at-age but does not provide a numeric N-at-
 table or downloadable fitted population arrays. The aggregate population table
 does not include annual uncertainty estimates.
 
-The source record is eligible for detailed curation because the official report prints the accepted run's final inputs and comparable aggregate outputs. Catch totals and composition samples are distinct source observations. Age-specific weights require calculation from fixed biology; spawning output is egg-based, and exact survey timing remains unresolved. No canonical database values have been imported.
+The source record is eligible for detailed curation because the official report prints the accepted run's final inputs and comparable aggregate outputs. Catch totals and composition samples are distinct source observations. Age-specific weights require calculation from fixed biology; spawning output is egg-based, and exact survey timing remains unresolved.
+
+## Data imported to the database
+
+SEDAR 67 Table 18 has been transcribed for 1950-2017: total biomass, egg-based spawning output, total abundance, age-0 recruitment, and depletion (spawning output divided by unfished spawning output). These are rounded point estimates; the table provides no annual uncertainty, numeric N-at-age, or numeric F-at-age series. Spawning output remains in eggs and is not converted to biomass SSB.
+
+The final report's Appendix A prints the run-matched Stock Synthesis data and
+control files. The database now contains 2,494 input rows: 272 annual catch
+records and their native catch_se fields; 243 aggregate index observations and
+their log SDs; 132 discard observations and their native Std_in fields; 64 age
+compositions across 14 age bins; 24 length compositions across 12 source bins;
+and the 16 fixed Table 3 M-at-age values. Fixed growth, weight-length, maturity,
+fecundity, timing, and source-code settings are recorded as assumptions.
+
+The data remain partial for translation: catch totals and age compositions are
+not combined into catch numbers at age; there is no age-specific abundance
+index or age-specific survey composition; source length-bin units and survey
+timing conversion are unresolved; and age-specific weight/maturity surfaces
+are not derived. The source rows preserve the model's separate likelihood
+inputs and native codes.
 
 ## Sources
 
@@ -81,5 +107,5 @@ The source record is eligible for detailed curation because the official report 
 - NOAA [Stock SMART](https://apps-st.fisheries.noaa.gov/stocksmart/?stockid=10256)
   metadata snapshot cached with the discovery inventory.
 
-Reviewed 2026-10-30. The source files and checksums are recorded in the ignored
+Reviewed 2026-11-10. The source files and checksums are recorded in the ignored
 local cache at `source_cache/discovery_noaa_vermilion_snapper_gom_2020/sources.csv`.

@@ -27,7 +27,7 @@ if (nrow(manifest) != length(expected_hashes) || anyDuplicated(manifest$file) ||
 for (file in names(expected_hashes)) {
   source_row <- match(file, manifest$file)
   path <- file.path(cache, file)
-  if (!file.exists(path) || manifest$retrieved_on[source_row] != '2026-10-31' ||
+  if (!file.exists(path) || manifest$retrieved_on[source_row] != '2026-11-11' ||
       as.numeric(manifest$bytes[source_row]) != file.info(path)$size ||
       tolower(manifest$sha256[source_row]) != expected_hashes[[file]] ||
       sha256_file(path) != expected_hashes[[file]])
@@ -145,42 +145,21 @@ if (anyNA(candidate_rows) || anyDuplicated(candidate_ids) ||
     !identical(candidates$stock_name[candidate_rows], c(
       'Copper rockfish - Northern California', 'Copper rockfish - Southern California')))
   stop('The NOAA California copper inventory identities changed.', call. = FALSE)
-if (any(stocks$stock_id == candidate_unit_id, na.rm = TRUE) ||
-    any(assessments$assessment_id == candidate_unit_id, na.rm = TRUE) ||
-    any(inputs$assessment_id == candidate_unit_id, na.rm = TRUE) ||
-    any(outputs$assessment_id == candidate_unit_id, na.rm = TRUE))
-  stop('A canonical California copper record now exists; recheck the stock crosswalk.', call. = FALSE)
+stock_id <- 'noaa_copper_rockfish_california'
+if (sum(stocks$stock_id == stock_id, na.rm = TRUE) != 1L ||
+    sum(assessments$assessment_id == candidate_unit_id, na.rm = TRUE) != 1L ||
+    !all(assessments$stock_id[assessments$assessment_id == candidate_unit_id] == stock_id) ||
+    !any(inputs$assessment_id == candidate_unit_id) ||
+    !any(outputs$assessment_id == candidate_unit_id))
+  stop('The verified California copper source import is missing or duplicated.', call. = FALSE)
 
-shared_inputs <- paste0(
-  'The 2023 California Stock Synthesis data file has four fishery catch fleets ',
-  'with annual catch in biomass units, length compositions, and fitted age ',
-  'composition records. These are not observed annual catch numbers-at-age. ',
-  '',
-  'from model catches, length compositions, and age-at-length information.')
-shared_surveys <- paste0(
-  'The assessment uses aggregate survey indices and length data. The native ',
-  'model also fits age-composition records, including conditional age-at-length ',
-  'observations; the data do not contain a direct annual abundance-at-age index. ',
-  '',
-  'from the matching aggregate index, length composition, and age information.')
-shared_weights <- paste0(
-  'The model uses sex-specific growth and length-weight relationships; the ',
-  'control files do not read an empirical weight-at-age file. Weight-at-age ',
-  'surfaces are model-derived from the fitted biological relationships.')
-shared_maturity <- paste0(
-  'Maturity is represented by a length-logistic relationship in the fitted ',
-  'Stock Synthesis models; maturity-at-age is derived from that relationship ',
-  'and modeled growth rather than supplied as an observed annual age matrix.')
-shared_mortality <- 'Natural mortality is fixed at 0.108 per year for female and male model groups; it is not an estimated M surface.'
-shared_timing <- paste0(
-  'The models have one 12-month season and January spawning. Survey timing is ',
-  'specified in the native fleet configuration (month 7 in the northern model; ',
-  'months 7 and 9 in the southern model). Do not convert these codes to a ',
-  'fractional year without documenting the within-season convention.')
-shared_outputs <- paste0(
-  'The official model reports age-specific catch, numbers, fishing mortality, ',
-  'and biomass surfaces for ages 0-50 through 2022, in addition to aggregate ',
-  'spawning output and recruitment. North and south model outputs remain separate.')
+shared_inputs <- 'Imported native catch biomass and age-composition samples; these are not observed annual catch-at-age numbers.'
+shared_surveys <- 'Imported aggregate biomass indices and age-composition samples; no direct age-specific survey abundance series is supplied.'
+shared_weights <- 'The fitted model has derived biomass-at-age; a standalone empirical weight-at-age matrix is not supplied.'
+shared_maturity <- 'The control files specify length-logistic maturity; a standalone empirical maturity-at-age matrix is not supplied.'
+shared_mortality <- 'Natural mortality is fixed at 0.108 per year for both sexes.'
+shared_timing <- 'Native survey/composition months are retained; sampling_time=(month-1)/12 is a documented timing representation.'
+shared_outputs <- 'Native fitted N/B/F/C-at-age surfaces are available through 2022; official spawning output is available through 2023 with intervals for 2013-2023.'
 source_urls <- paste(
   'https://www.pcouncil.org/documents/2024/03/status-of-copper-rockfish-along-the-u-s-california-coast-north-of-point-conception-in-2023.pdf/;',
   'https://www.pcouncil.org/documents/ca-copper-rockfish-north-2023-model-files-zip-file/;',
@@ -192,7 +171,7 @@ source_urls <- paste(
 review <- list(
   candidate_unit_id = candidate_unit_id,
   match_status = 'new', screening_status = 'screened', eligibility = 'eligible',
-  import_status = 'not_started',
+  import_status = 'partial',
   catch_age_evidence = shared_inputs,
   survey_age_evidence = shared_surveys,
   weights_evidence = shared_weights,
@@ -201,21 +180,9 @@ review <- list(
   timing_evidence = shared_timing,
   output_evidence = shared_outputs,
   detailed_source_url = source_urls,
-  review_date = '2026-10-31',
-  decision_reason = paste0(
-    'Eligible for source curation as one California assessment family with two ',
-    'sub-area models. The 2023 production archives directly include fitted age ',
-    'compositions (conditional age-at-length and marginal-age records) and ',
-    'age-specific official outputs. Catch-at-age and annual survey abundance-at-age ',
-    'are not direct input series.',
-    'documented reconstruction from the native catch/index totals, length ',
-    'compositions, and age data. The source provides ages 0-50, fixed M, and ',
-    'model-derived biological age surfaces.'),
-  notes = paste0(
-    'NOAA Stock SMART IDs 15332 and 15333 are linked to one California ',
-    'assessment family; the north/south model areas remain distinct in source ',
-    'data and outputs. Washington (15330) and Oregon (15331) are separate ',
-    'assessment areas and are not included in this California family screen.'))
+  review_date = '2026-11-11',
+  decision_reason = 'Imported one 2023 California copper rockfish assessment family with separate north and south subarea model records.',
+  notes = 'Partial source import; fitted catch-at-age is not observed catch-at-age, and age compositions are not abundance indices.')
 
 expected_by_id <- setNames(list(review, review), candidate_ids)
 pristine <- vapply(candidate_rows, function(row)

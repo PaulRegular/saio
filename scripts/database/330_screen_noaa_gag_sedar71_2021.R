@@ -83,7 +83,9 @@ if (is.na(i) || sum(candidates$candidate_id == id) != 1L ||
     candidates$inventory_assessment_year[i] != 2021L) {
   stop('Expected the NOAA Stock SMART South Atlantic Gag Grouper row.', call. = FALSE)
 }
-if (any(stocks$scientific_name == 'Mycteroperca microlepis', na.rm = TRUE) ||
+if (any(stocks$stock_id == unit_id, na.rm = TRUE) ||
+    any(stocks$authority == 'NOAA Fisheries' & stocks$authority_stock_id == '10349',
+      na.rm = TRUE) ||
     any(candidates$candidate_unit_id[-i] == unit_id, na.rm = TRUE)) {
   stop('South Atlantic Gag Grouper conflicts with an existing canonical or candidate unit.',
     call. = FALSE)

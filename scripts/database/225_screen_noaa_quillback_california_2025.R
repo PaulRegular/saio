@@ -15,23 +15,22 @@ x$screening_status[i] <- 'screened'
 x$eligibility[i] <- 'eligible'
 x$import_status[i] <- 'not_started'
 x$catch_age_evidence[i] <- paste(
-  'The 2025 single-area, single-sex model uses total removals in metric',
-  'tonnes for 1916-2024 and fishery age-composition observations, including',
-  'commercial ages from 2007-2024. Catch-at-age is not a direct annual input',
-  'and would need to be reconstructed from catch totals and sampled age',
-  'compositions.'
+  'The native file contains total removals in metric tonnes and 253 conditional',
+  'age-composition rows, not direct catch-at-age. Of these, 128 positive-year',
+  'rows from 2010-2024 are active; 125 negative-year rows are excluded from',
+  'the likelihood. This preserves the report-described age data while',
+  'identifying the inactive records.'
 )
 x$survey_age_evidence[i] <- paste(
-  'The assessment uses California recreational, CCFRP, and ROV relative',
-  'abundance series with age and length information from fishery-independent',
-  'sampling. Survey index observations are recorded in July in the native',
-  'data. The model does not directly fit age-specific abundance indices;',
-  ''
+  'The model uses California recreational, CCFRP, and ROV abundance series;',
+  'native index observations are recorded in July. It does not provide a',
+  'direct age-specific abundance index. The conditional age-at-length data',
+  'contain 128 active positive-year rows and 125 inactive negative-year rows.'
 )
 x$weights_evidence[i] <- paste(
-  'The native natage.csv provides year-specific length-at-age growth input,',
-  'and the assessment derives weight-at-age from growth and its length-weight',
-  'relationship. Report.sso includes biomass-at-age output.'
+  'The native natage.csv contains fitted population numbers-at-age, not',
+  'length-at-age. Weight-at-age is derived from modeled growth and the fixed',
+  'length-weight relationship; Report.sso includes biomass-at-age output.'
 )
 x$maturity_evidence[i] <- paste(
   'The native model uses a length-based logistic maturity relationship; the',
@@ -54,7 +53,7 @@ x$output_evidence[i] <- paste(
   'output and recruitment estimates with uncertainty.'
 )
 x$detailed_source_url[i] <- 'https://www.pcouncil.org/documents/2026/01/status-of-quillback-rockfish-in-u-s-waters-off-california-in-2025.pdf/'
-x$review_date[i] <- '2026-10-29'
+x$review_date[i] <- '2026-11-10'
 x$decision_reason[i] <- paste(
   'NOAA Stock SMART ID 15342 is the California Quillback Rockfish assessment',
   'unit; it is geographically separate from Canadian Quillback. No matching',
@@ -68,10 +67,11 @@ x$decision_reason[i] <- paste(
 x$notes[i] <- paste(
   'The official California management unit is distinct from Canadian',
   'Quillback. The model uses data through 2024, one area, one sex, and 80',
-  'population age classes; composition bins span ages 1-60. The report and',
-  'native output identify Stock Synthesis 3.30.23.1. Report, model archive,',
-  'retrieval details, and checksums are in',
-  'source_cache/discovery_noaa_quillback_ca_2025/sources.csv.'
+  'population age classes; composition bins span ages 1-60. Report.sso',
+  'identifies Stock Synthesis 3.30.23.1. natage.csv matches fitted',
+  'beginning-year N-at-age, not length-at-age. Of 253 agecomp rows, 128 are',
+  'active and 125 have negative-year exclusion flags. Source files and',
+  'checksums are in source_cache/discovery_noaa_quillback_ca_2025/sources.csv.'
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

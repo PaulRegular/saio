@@ -29,13 +29,16 @@ stopifnot(nrow(s) == 1L, s$authority == "NAFO", s$authority_stock_id == "redfish
   s$ocean == "Northwest Atlantic", nrow(a) == 1L,
   a$assessment_year == 2024L, a$terminal_year == 2023L,
   a$estimate_terminal_year == 2027L, a$model_family == "XSA",
+  is.na(a$framework_url),
   a$is_current, a$is_applied, a$inputs_status == "partial",
   a$assumptions_status == "partial", a$outputs_status == "partial",
   nrow(i) == 9L, all(i$type == "catch" & i$measure == "total_biomass"),
   identical(as.integer(i$year), 2015:2023),
   identical(as.numeric(i$value), c(5.2, 6.2, 6.9, 10.3, 10.2, 8.7, 8.3, 9.4, 9.4)),
   all(i$unit == "1000 tonnes"), all(i$source_type == "official_table"),
-  nrow(as) == 16L, any(as$setting == "natural_mortality_history"),
+  nrow(as) == 18L, any(as$setting == "natural_mortality_history"),
+  any(as$setting == "age_length_key_2023" & grepl("2020–2022", as$value, fixed = TRUE)),
+  any(as$setting == "maturity_ogive_2023" & grepl("2020–2022", as$value, fixed = TRUE)),
   any(as$setting == "scenario_outputs_recorded" & as$value == "All seven scenarios"),
   any(as$setting == "species_definition" & grepl("Sebastes fasciatus", as$value, fixed = TRUE)),
   nrow(o) == 46L, sum(o$type == "biomass" & o$measure == "SSB") == 16L,
@@ -56,6 +59,7 @@ stopifnot(nrow(s) == 1L, s$authority == "NAFO", s$authority_stock_id == "redfish
   grepl("all three redfish species", o$notes[o$measure == "catch_advice" & as.integer(o$year) == 2024L], fixed = TRUE),
   nrow(c) == 1L, c$matched_stock_id == stock_id, c$match_status == "matched",
   c$import_status == "partial", c$inventory_assessment_year == 2024L)
+stopifnot(grepl("SCR 24/024 confirms the selected 2020–2022", c$notes, fixed = TRUE))
 
 manifest <- read_small("provenance/nafo_redfish_3m_2024/manifest.csv")
 review <- paste(readLines("source_reviews/nafo_redfish_3m_2024.md"), collapse = "\n")
@@ -63,6 +67,7 @@ stopifnot(nrow(manifest) == 9L, all(nchar(manifest$sha256) == 64L),
   any(manifest$cached_file == "nafo_scr26_010_blim_reference_point.pdf"),
   any(manifest$source_url == "https://www.nafo.int/Portals/0/PDFs/sc/2026/scr26-010.pdf"),
   any(grepl("scr24-032.pdf", review, fixed = TRUE)),
+  grepl("selected a species-combined age-length key and maturity ogive pooled from 2020–2022", review, fixed = TRUE),
   grepl("26/027", review, fixed = TRUE), grepl("returned 404", review, fixed = TRUE),
   grepl("1988–2017", review, fixed = TRUE), grepl("1990–2007 and 2009–2018", review, fixed = TRUE),
   grepl("not a new production XSA", review, fixed = TRUE))

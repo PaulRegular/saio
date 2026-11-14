@@ -21,6 +21,8 @@ selected <- subset(utils::read.csv(file.path(root, "discovery",
   candidate_unit_id == "dfo_sff_2024_gulf_yellowtail_flounder_nafo_4t")
 review <- paste(readLines(file.path(root, "discovery", "source_reviews",
   "dfo_gulf_yellowtail_flounder_2025.md")), collapse = "\n")
+source_review <- paste(readLines(file.path(root, "source_reviews",
+  "dfo_yellowtail_flounder_4t_2025.md")), collapse = " ")
 
 stopifnot(
   nrow(stock) == 1L,
@@ -45,6 +47,9 @@ stopifnot(
   candidate$matched_stock_id == "dfo_yellowtail_flounder_4t",
   nrow(selected) == 1L,
   selected$curation_status == "partial_source_import",
+  grepl("stock_id = dfo_yellowtail_flounder_4t", source_review, fixed = TRUE),
+  grepl("no numerical input rows", source_review, fixed = TRUE),
+  grepl("redirected to a Government Publications archive notice", source_review, fixed = TRUE),
   grepl("not spawning-stock biomass", review, fixed = TRUE),
   grepl("currently redirects", review, fixed = TRUE)
 )

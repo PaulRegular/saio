@@ -68,9 +68,33 @@ comparable annual population and mortality outputs. Source curation should
 preserve the native catch totals and compositions, keep the aggregate survey
 indices distinct from age compositions, and retain the egg-based spawning
 output definition. It should not label reconstructed values as direct observed
-catch-at-age or convert spawning output to biomass without source support. The
-candidate remains unimported and has in this discovery
-screen.
+catch-at-age or convert spawning output to biomass without source support. The 2024 update outputs and carried-forward age-specific life-history inputs have been imported; run-specific observation arrays remain unavailable.
+
+## Imported records
+
+The canonical 2024 assessment record contains 4,810 point-estimate rows from the official update: annual N-at-age (ages 1–20, with age 20 as 20+), total numbers, age-1 recruitment, biomass-at-age, instantaneous F-at-age, apical F, total biomass, and the source-defined egg-based SSB for 1950–2023. Source units, timing, age grouping, and metric definitions are preserved. The output tables do not provide age-specific uncertainty.
+
+These are estimated outputs, not observations. A separate 140-row input import records the SEDAR 73 Table 2 age-specific length, weight, female proportion, female maturity, batch fecundity, annual batches, and fixed M for ages 1–20+, which the 2024 update carries forward as life-history inputs. The 2024 report does not publish its run-matched numerical catch, aggregate index, or age-composition vectors; those remain unavailable and have not been copied from the 2021 assessment. The assumptions rows preserve run identity, model family, age structure, egg-based spawning definition, fixed M structure, and all four discard-mortality blocks with Table 1 uncertainty ranges. Current inputs, assumptions, and outputs are partial.
+
+Tables 11-14 and 16-18 are also imported as model-estimated outputs: annual fleet landings and discard mortalities, and age-specific landings and discards. They are not observed inputs. Cells printed as periods in Tables 13-14 are omitted rather than converted to zero. Table 15 is retained as the reported `total_removals_at_age` series, but its annual age sums match Table 11 landings rather than landings plus the positive Table 13 discard mortalities. The source table is preserved as printed and flagged; no discard series is added to it.
+
+## Separate 2021 SEDAR 73 assessment event
+
+The earlier SEDAR 73 operational assessment is recorded as its own 2021
+assessment event, fitted through 2019. Its inputs include the reported annual
+fleet removals from Table 3 and the five aggregate abundance-index series and
+paired CVs from Table 4. These are source totals and aggregate indices, not
+catch-at-age or age-specific abundance observations. The report's age
+compositions are not available as numeric vectors in the recovered tables, so
+they were not reconstructed from figures or estimated model states.
+
+The historical event also records point-estimate outputs from Tables 9, 11, 12
+and 18: abundance-at-age, biomass-at-age, annual status indicators, and
+instantaneous fishing mortality-at-age. The reported spawning output remains
+in eggs, and no uncertainty was added where the report tables provide none.
+The 2021 observations and outputs are not assigned to, or used to fill the
+missing input data for, the separate 2024 update. Both events therefore retain
+their own run identity and completeness status.
 
 ## Sources
 

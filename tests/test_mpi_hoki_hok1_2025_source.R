@@ -73,19 +73,44 @@ stopifnot(setequal(index_key(index), index_key(index_cv)),
 
 assumption_keys <- c("assessment_id", "component", "fleet", "survey", "sex", "region", "season", "setting")
 assumption_key <- do.call(paste, c(lapply(assumptions[assumption_keys], function(x) ifelse(is.na(x), "", x)), sep = "\r"))
-stopifnot(nrow(assumptions) == 252L, !anyDuplicated(assumption_key),
+stopifnot(nrow(assumptions) == 340L, !anyDuplicated(assumption_key),
   any(assumptions$setting == "ChathamRiseSummerBiomass:likelihood"))
 
 b0 <- outputs[outputs$measure == "unfished_spawning_biomass", ]
 ssb <- outputs[outputs$measure == "SSB", ]
 fixed_m <- assumptions[assumptions$setting == "fixed_instantaneous_M_by_category", ]
+category_order <- assumptions[assumptions$setting == "base_model_category_order", ]
+category_map <- assumptions[assumptions$setting == "category_age_length_mapping", ]
+assumption_value <- function(setting, region, sex) {
+  same_value <- function(x, value) {
+    if (identical(value, "")) is.na(x) | x == "" else !is.na(x) & x == value
+  }
+  rows <- assumptions[!is.na(assumptions$setting) & assumptions$setting == setting &
+    same_value(assumptions$region, region) & same_value(assumptions$sex, sex), , drop = FALSE]
+  stopifnot(nrow(rows) == 1L)
+  rows$value
+}
 stopifnot(nrow(outputs) == 6L, nrow(b0) == 3L, nrow(ssb) == 3L,
   b0$value[b0$region == "East"] == 727, b0$lwr[b0$region == "East"] == 676,
   ssb$value[ssb$region == "Total"] == 855, ssb$year[ssb$region == "Total"] == 2025,
   ssb$season[ssb$region == "Total"] == "mid-season",
   all(is.na(outputs$se)), nrow(fixed_m) == 1L,
+  nrow(category_order) == 1L, nrow(category_map) == 1L,
   length(strsplit(fixed_m$value, "\\s+")[[1L]]) == 16L,
-  !any(inputs$type == "catch" & inputs$measure == "numbers_at_age"))
+  length(strsplit(category_order$value, "\\s+")[[1L]]) == 16L,
+  length(strsplit(category_map$value, "; ")[[1L]]) == 16L,
+  assumption_value("AgeLengthEastM:k", "East", "M") == "0.232",
+  assumption_value("AgeLengthEastF:Linf", "East", "F") == "101.8",
+  assumption_value("AgeLengthWestM:k", "West", "M") == "0.261",
+  assumption_value("AgeLengthWestF:Linf", "West", "F") == "104.0",
+  assumption_value("LengthWeightEastM:a", "East", "M") == "4.79e-09",
+  assumption_value("LengthWeightWestF:b", "West", "F") == "2.89",
+  assumption_value("SelectivityEastMaturationM:a50", "East", "M") == "2.0",
+  assumption_value("SelectivityWestMaturationF:ato95", "West", "F") == "3.0",
+  assumption_value("EastMaturation:from", "East", "") == "East.ChathamRise.Immature.M East.ChathamRise.Immature.F",
+  any(assumptions$setting == "WestMaturation:type" & assumptions$value == "transition_category"),
+  !any(inputs$type == "catch" & inputs$measure == "numbers_at_age"),
+  !any(inputs$measure %in% c("weight_at_age", "maturity_at_age")))
 
 cat("HOK 1 2025 source inputs, assumptions, outputs, units, and partial status passed.\n")
 

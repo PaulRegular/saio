@@ -1,34 +1,27 @@
 root <- "."
-cache <- file.path(root, 'source_cache',
-  'discovery_ices_bay_biscay_anchovy_2025')
+cache <- file.path(root, 'source_cache', 'ices_ane_27_8')
 register_path <- file.path(root, 'discovery', 'candidates.csv')
 candidate_id <- 'ICES:ane.27.8'
 unit_id <- 'ices_bay_biscay_anchovy_8'
 
 files <- c(
-  'WGHANSA_2025_Report.pdf',
-  'ICES_stock_annex_ane_27_8_2026.pdf',
-  'WKBANSP_2024_v2.pdf',
-  'WGACEGG_2025_Report.pdf',
-  'ICES_stock_graphs_2025_key_21265.html',
-  'ICES_source_data_2025_key_21265.html',
-  'ICES_advice_2026_record_4005.html')
+  'ices_wghansa_2025_report.pdf',
+  'stock_annex.pdf',
+  'ices_wgacegg_2025_survey_report.pdf',
+  'ices_2025_advice_ane_27_8.pdf',
+  'ices_standardgraphs_source_data.html')
 urls <- c(
   'https://ndownloader.figshare.com/files/62700859',
   'https://ndownloader.figshare.com/files/55501253',
-  'https://ndownloader.figshare.com/files/52237436',
   'https://ndownloader.figshare.com/files/62338852',
-  'https://standardgraphs.ices.dk/ViewCharts.aspx?key=21265',
-  'https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21265',
-  'https://asd.ices.dk/viewAdvice/4005')
+  'https://ndownloader.figshare.com/files/60316331',
+  'https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21265')
 hashes <- c(
   '91a780f00878529c9cee208137a9f9ede22f49ad1a83c5840d1d72395103c6d9',
   '68a47d82ec4b83af0f85d84fcf57d83bc087910f84f2069c363405f93e9a307c',
-  '9fc9471287b38cdf6aa74fff872ee06ef55668c32f877061a918506e28e9c95c',
   'b5ed2946e7a28b8f7ce3fd789bd8b77447e42688be8ccae7cf2b08015902a7a3',
-  'c962b984d89033ca58d158309250d9375c75b2e7eab6a516233e9e39703e3beb',
-  'c618a785eeafba87552f702911c20946a898cc696660bf1a1f4affd22b6c1163',
-  'dcc056fc780c06fea66bbab78ac6eb013b18f2bf341a133d0667f72c0cf8fa78')
+  '461bb0e6eb7d8c2e97b853f5585aab920102943e26bb9f7ebc9e2f63b762197f',
+  '994a20018912b26b2faa1ad2fb9072c741c47e961b2f5e9c0154dacfdb7ce4c3')
 
 sha256_file <- function(path) {
   path <- normalizePath(path, winslash = '\\', mustWork = TRUE)
@@ -39,23 +32,23 @@ sha256_file <- function(path) {
   hashes
 }
 
-manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
-manifest_rows <- match(files, manifest$file)
+manifest <- read.csv(file.path(root, 'provenance', 'ices_ane_27_8_sources.csv'),
+  stringsAsFactors = FALSE)
+manifest_paths <- file.path('source_cache', 'ices_ane_27_8', files)
+manifest_rows <- match(manifest_paths, manifest$local_file)
 paths <- file.path(cache, files)
-if (nrow(manifest) != length(files) || anyNA(manifest_rows) || anyDuplicated(manifest$file) ||
-    !identical(as.character(manifest$url[manifest_rows]), urls) || any(!file.exists(paths)) ||
-    any(manifest$retrieved_on[manifest_rows] != '2026-10-30') ||
-    !identical(as.character(manifest$sha256[manifest_rows]), hashes) ||
+if (nrow(manifest) != length(files) || anyNA(manifest_rows) || anyDuplicated(manifest$local_file) ||
+    !identical(as.character(manifest$source_url[manifest_rows]), urls) || any(!file.exists(paths)) ||
+    any(manifest$retrieved_on[manifest_rows] != '2026-11-08') ||
+    !identical(tolower(as.character(manifest$sha256[manifest_rows])), hashes) ||
     !identical(as.numeric(manifest$bytes[manifest_rows]), as.numeric(file.info(paths)$size)) ||
     !identical(unname(vapply(paths, sha256_file, character(1L))), hashes))
   stop('The cached ICES sources do not match their manifest.', call. = FALSE)
 
-graphs <- paste(readLines(paths[5], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')
-source_data <- paste(readLines(paths[6], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')
-advice <- paste(readLines(paths[7], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')
-if (!grepl('ane.27.8', graphs, fixed = TRUE) || !grepl('21265', graphs, fixed = TRUE) ||
-    !grepl('2025', graphs, fixed = TRUE) || !grepl('SSB', source_data, ignore.case = TRUE) ||
-    !grepl('ane.27.8', advice, fixed = TRUE))
+source_data <- paste(readLines(paths[5], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')
+if (!grepl('ane.27.8', source_data, fixed = TRUE) ||
+    !grepl('21265', source_data, fixed = TRUE) ||
+    !grepl('SSB', source_data, ignore.case = TRUE))
   stop('Cached ICES sources do not verify the current Bay of Biscay anchovy assessment.',
     call. = FALSE)
 
@@ -65,20 +58,16 @@ stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors =
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
-inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
-outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
 row <- match(candidate_id, register$candidate_id)
 if (is.na(row) || register$official_stock_id[row] != 'ane.27.8' ||
     register$scientific_name[row] != 'Engraulis encrasicolus' ||
     register$inventory_assessment_year[row] != 2025 ||
-    register$assessment_area[row] != 'Bay of Biscay and the Iberian Coast')
+    register$assessment_area[row] != 'ICES Subarea 8 (Bay of Biscay)')
   stop('The ICES anchovy inventory identity changed.', call. = FALSE)
 if (any(tolower(stocks$authority_stock_id) == 'ane.27.8', na.rm = TRUE) ||
     any(register$candidate_id[-row] == candidate_id) ||
-    any(unit_id %in% c(register$candidate_unit_id[-row], assessments$assessment_id,
-      inputs$assessment_id, outputs$assessment_id), na.rm = TRUE))
+    any(unit_id %in% c(register$candidate_unit_id[-row], stocks$stock_id,
+      assessments$assessment_id), na.rm = TRUE))
   stop('The ICES anchovy unit identifier conflicts with a canonical or candidate record.',
     call. = FALSE)
 
@@ -98,25 +87,30 @@ register$screening_status[row] <- 'screened'
 register$eligibility[row] <- 'eligible'
 register$import_status[row] <- 'not_started'
 register$catch_age_evidence[row] <- paste0(
-  'The 2025 Stock Synthesis assessment uses total catch biomass in tonnes and catch-at-age in thousands of fish by semester for 1987-2025. Catch-at-age covers ages 1, 2, and 3+; age 0 catch is excluded from the model, and age composition is unavailable for the second semester of the assessment year. The 2025 fishery observations are provisional, with documented assumptions for incomplete catches.')
+  'WGHANSA 2025 Table 2.5.2.1 describes the fitted catch input as biomass and catch-at-age for ages 1, 2, and 3+ by semester, 1987-2025, in tonnes and thousands of fish. Table 2.2.3.2 reports historical catches-at-age by semester through 2024 with finer ages 0-5. The 2025 catch is provisional and the assessment-year second-semester age composition is unavailable.')
 register$survey_age_evidence[row] <- paste0(
-  'The 2025 assessment uses PELGAS spring acoustic numbers-at-age 1, 2, and 3+ (2000-2025; missing 2020), BIOMAN spring DEPM numbers-at-age 1, 2, and 3+ (1987-2025; missing 1993, 1996, 1999, 2000), and JUVENA autumn acoustic abundance at age 0 (2003-2025). The spring surveys also provide aggregate SSB indices. Age-specific data and survey descriptions are published in the official report and annex.')
+  'WGHANSA 2025 Table 2.5.1.1 directly supplies BIOMAN and PELGAS total SSB/CV and JUVENA age-0 N0/CV. Table 2.5.2.1 lists BIOMAN and PELGAS numbers-at-age for ages 1, 2, and 3+; historical values are mainly graphical. WGHANSA Table 2.3.1.4 and WGACEGG 2026 Table 4.5 tabulate BIOMAN 2025 age numbers as 4,951, 3,430, and 266 million, summing to the reported 8,647 million population. The assessment configuration specifies thousands, so reconstructing the BIOMAN model input requires a documented x1,000 unit conversion. The JUVENA age-0 numbers are directly available in Table 2.5.1.1; its separate biomass table is not needed to reconstruct them.')
 register$weights_evidence[row] <- paste0(
-  'The report provides commercial mean weight-at-age in grams by semester (ages 0-5, 1987-2024, with missing values) and stock weight-at-age at spawning from BIOMAN in kilograms, with linear interpolation for missing years. Keep catch and stock weights distinct.')
+  'WGHANSA 2025 Table 2.2.4.1 reports mean catch weight-at-age by semester through 2024 in grams. Stock weight-at-age at spawning comes from BIOMAN, with linear interpolation for missing years; keep these series distinct.')
 register$maturity_evidence[row] <- paste0(
-  'The official maturity schedule is 0 at age 0 and 1 at ages 1, 2, and 3+.')
+  'WGHANSA 2025 section 2.4.1: maturity is 0 at age 0 and 1 at ages 1, 2, and 3+.')
 register$mortality_evidence[row] <- paste0(
-  'Natural mortality is fixed at M0=2.17, M1=0.80, M2=1.20, and M3+=2.26 per year, constant between seasons. Ages 1-2 use published estimates, age 0 is derived using the Gislason relationship, and age 3+ was estimated at the 2024 benchmark and retained.')
+  'WGHANSA 2025 section 2.4.2: M0=2.17, M1=0.80, M2=1.20, and M3+=2.26 per year. M0 is back-calculated with the Gislason model; M3+ was estimated at the 2024 benchmark and retained in the 2025 assessment.')
 register$timing_evidence[row] <- paste0(
-  'The model has two seasons (January-June and July-December), spawning on 15 May, and age-0 recruitment settlement on 1 July. BIOMAN and PELGAS are spring surveys represented at spawning time; JUVENA is an autumn survey conducted in September-October.')
+  'The model has two seasons (January-June and July-December), spawning on 15 May, and recruitment settlement on 1 July. BIOMAN and PELGAS are spring surveys; JUVENA is an autumn survey. Confirm the exact model sampling fractions from the stock annex before translating.')
 register$output_evidence[row] <- paste0(
-  'The 2025 report provides annual SSB, recruitment, and apical F with 95% confidence intervals through 2025 (2025 catch is assumed); beginning-of-year N-at-age for ages 0, 1, 2, 3+ through 2024 (thousands of fish); and F-at-age by semester through 2024. Fixed M-at-age is an input, not an estimated output. The official ICES Standard Graphs and source-data pages provide additional aggregate comparison series.')
-register$detailed_source_url[row] <- paste(urls, collapse = '; ')
-register$review_date[row] <- '2026-10-30'
+  'WGHANSA 2025 Table 2.5.3.2 reports annual SSB, recruitment, and apical F with 95% intervals through 2025; Tables 2.5.3.3 and 2.5.3.4 report F-at-age by semester and beginning-of-year N-at-age through 2024, without intervals. Catch for 2025 is an assumption; M-at-age is fixed input, not an estimated output.')
+register$detailed_source_url[row] <- paste(c(
+  'https://doi.org/10.17895/ices.pub.29335520.v3',
+  'https://doi.org/10.17895/ices.pub.28053440.v2',
+  'https://doi.org/10.17895/ices.pub.31353469.v3',
+  'https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21265',
+  'https://asd.ices.dk/viewAdvice/4005'), collapse = '; ')
+register$review_date[row] <- '2026-11-08'
 register$decision_reason[row] <- paste0(
-  'Eligible for source curation in the age-disaggregated assessment set. The latest detailed production assessment located is the 2025 Stock Synthesis run used for 2026 ICES advice. Its report and stock annex verify commercial catch-at-age, three age-specific survey series, catch and stock weights-at-age, maturity and natural-mortality assumptions, timing, and official N-at-age, F-at-age, SSB, recruitment, and apical-F outputs. The assessment-year catch is provisional and age-specific survey/catch series require careful transcription from the official tables and figures; these are documented extraction tasks, not reasons to treat the data as absent.')
+  'The 2025 production run is the active ICES assessment used for 2026 advice. The official report identifies catch-at-age, age-specific BIOMAN and PELGAS series, JUVENA age-0 information, biological inputs, and age-specific outputs. Historical survey series are partly graphical and require value-level source recovery before completeness can be judged; select for source curation without treating graphical descriptions as already imported numerical observations.')
 register$notes[row] <- paste0(
-  'The ICES code ane.27.8 is the Bay of Biscay anchovy unit, distinct from other Engraulis encrasicolus assessment areas. WGHANSA 2025 documents the assessment-year 2025 Stock Synthesis 3.30.22.beta run used for 2026 advice; the 2025 stock annex and 2024 benchmark describe input methods and model configuration. Source URLs, retrieval dates, revisions, byte counts, and SHA-256 checksums are recorded in source_cache/discovery_ices_bay_biscay_anchovy_2025/sources.csv. No canonical stock, assessment, input, or output records were added.')
+  'Run identity: WGHANSA 2025, Stock Synthesis 3.30.22.beta, assessment key 21265, used for 2026 advice. The 2025 report reports BIOMAN 2025 SSB as 145,608 t in its narrative but 157,247 t in Tables 2.3.1.3, 2.3.1.4, and 2.5.1.1; preserve this discrepancy and use the model input table for the fitted series. Source PDFs and Standard Graphs data are cached in source_cache/ices_ane_27_8; checksums and retrieval metadata are in provenance/ices_ane_27_8_sources.csv. No canonical assessment or numerical records are added by this selection checkpoint.')
 
 source(file.path(root, 'scripts', 'database', 'candidate_register_io.R'))
 if (!identical(Sys.getenv('TAM_SOURCE_DRY_RUN'), '1'))

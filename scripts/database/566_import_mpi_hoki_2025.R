@@ -4,7 +4,8 @@ stock_id <- "mpi_hoki_hok1"
 candidate_id <- "MPI:HOK1"
 args <- commandArgs(trailingOnly = TRUE)
 write_assumptions_only <- "--write-assumptions" %in% args
-dry_run <- !("--write" %in% args || write_assumptions_only)
+write_biological_assumptions_only <- "--write-biological-assumptions" %in% args
+dry_run <- !("--write" %in% args || write_assumptions_only || write_biological_assumptions_only)
 .libPaths(c(file.path(root, "source_cache", "R-library"), .libPaths()))
 
 assessment_pdf <- file.path(root, "source_cache", "mpi_hoki_hok1_2025", "FAR-2026-04-Assessment-of-hoki-in-2025.pdf")
@@ -47,7 +48,8 @@ section_lines <- function(page_ids) {
 fish_page <- last_page(assessment_pages, "B.1.4")
 survey_page <- last_page(assessment_pages, "B.1.5")
 population_page <- last_page(assessment_pages, "B.1.6")
-end_page <- last_page(assessment_pages, "B.2")
+end_page <- grep("B\\.2\\s+Single stock model", assessment_pages)
+if (length(end_page) != 1L) stop("Could not identify the end of the base two-stock model appendix.", call. = FALSE)
 fishery_lines <- section_lines(seq.int(fish_page + 1L, survey_page - 1L))
 survey_lines <- section_lines(seq.int(survey_page + 1L, population_page - 1L))
 population_lines <- section_lines(seq.int(population_page + 1L, end_page - 1L))
@@ -105,6 +107,18 @@ observation_blocks <- function(lines) {
   names(blocks) <- names
   blocks
 }
+model_blocks <- function(lines, directive) {
+  starts <- grep(paste0("^@", directive, "(?:\\s+.*)?$"), lines, perl = TRUE)
+  names <- sub(paste0("^@", directive, "\\s*"), "", lines[starts])
+  boundaries <- grep("^@", lines)
+  blocks <- lapply(seq_along(starts), function(i) {
+    next_boundary <- boundaries[boundaries > starts[i]][1L]
+    last <- if (is.na(next_boundary)) length(lines) else next_boundary - 1L
+    lines[seq.int(starts[i], last)]
+  })
+  names(blocks) <- names
+  blocks
+}
 fish_blocks <- observation_blocks(fishery_lines)
 survey_blocks <- observation_blocks(survey_lines)
 blocks <- c(fish_blocks, survey_blocks)
@@ -136,6 +150,7 @@ make_rows <- function(fields, values, n = 1L) {
 }
 input_rows <- list()
 assumption_rows <- list()
+model_assumption_rows <- list()
 output_rows <- list()
 add_input <- function(type, measure, basis, value, unit, year = NA_real_, age = NA_real_,
   fleet = "", survey = "", sex = "", region = "HOK 1", season = "",
@@ -157,6 +172,16 @@ add_assumption <- function(component, setting, value, source_reference,
     survey = survey, sex = sex, region = region, season = season,
     setting = setting, value = value, source_reference = source_reference, notes = notes
   ))
+}
+add_model_assumption <- function(component, setting, value, source_reference,
+  notes = "", region = "", sex = "", season = "") {
+  row <- make_rows(assumption_fields, list(
+    assessment_id = assessment_id, component = component, region = region,
+    sex = sex, season = season, setting = setting, value = value,
+    source_reference = source_reference, notes = notes
+  ))
+  assumption_rows[[length(assumption_rows) + 1L]] <<- row
+  model_assumption_rows[[length(model_assumption_rows) + 1L]] <<- row
 }
 add_output <- function(measure, value, year = NA_real_, region = "HOK 1",
   season = "", lwr = NA_real_, upr = NA_real_, notes = "") {
@@ -275,7 +300,7 @@ mortality_lines <- population_lines[seq.int(mortality_start, mortality_end - 1L)
 fixed_m <- field_value(mortality_lines, "m")
 add_assumption("mortality", "fixed_instantaneous_M_by_category", fixed_m,
   "Fisheries New Zealand FAR 2026/04, Appendix B.1.6, base model mortality process",
-  notes = "Native fixed M vector retained in Casal2 category order. It is not an age-specific M-at-age surface; values must not be expanded across ages without the model category mapping.")
+  notes = "Native fixed M vector retained in Casal2 category order. The category order is recorded separately; this is not an age-specific M-at-age surface.")
 add_assumption("mortality", "relative_M_by_age", field_value(mortality_lines, "relative_m_by_age"),
   "Fisheries New Zealand FAR 2026/04, Appendix B.1.6, base model mortality process",
   notes = "Native age-selectivity references for fixed natural mortality.")
@@ -286,6 +311,85 @@ add_assumption("population", "time_step_proportions", paste(step_lengths, collap
   "Fisheries New Zealand FAR 2026/04, Appendix B.1.6, base model mortality process",
   notes = "Native proportions for the four intervals; EndJun is an instantaneous state between intervals.")
 
+category_block <- model_blocks(population_lines, "categories")[[1L]]
+category_names <- strsplit(field_value(category_block, "names"), "\\s+")[[1L]]
+category_age_lengths <- strsplit(field_value(category_block, "age_lengths"), "\\s+")[[1L]]
+if (length(category_names) != 16L || length(category_age_lengths) != length(category_names) ||
+  length(strsplit(fixed_m, "\\s+")[[1L]]) != length(category_names)) {
+  stop("The base-model category, age-length mapping, or M-vector dimensions changed.", call. = FALSE)
+}
+category_map <- paste(sprintf("%02d:%s=%s", seq_along(category_names), category_names,
+  category_age_lengths), collapse = "; ")
+add_model_assumption("population", "base_model_category_order", paste(category_names, collapse = " "),
+  "Fisheries New Zealand FAR 2026/04, Appendix B.1.6, base model categories",
+  notes = "Native category order used by the fixed natural-mortality vector.")
+add_model_assumption("population", "category_age_length_mapping", category_map,
+  "Fisheries New Zealand FAR 2026/04, Appendix B.1.6, base model categories",
+  notes = "Ordered category-to-age-length object mapping from the model input.")
+
+for (name in c("EastMaturation", "WestMaturation")) {
+  block <- model_blocks(population_lines, "process")[[name]]
+  if (is.null(block)) stop("Missing base-model maturation process: ", name, call. = FALSE)
+  region <- sub("Maturation$", "", name)
+  for (setting in c("type", "from", "to", "selectivities", "proportions")) {
+    value <- field_value(block, setting)
+    if (is.na(value)) stop("Missing ", setting, " in ", name, ".", call. = FALSE)
+    add_model_assumption("maturity", paste(name, setting, sep = ":"), value,
+      paste0("Fisheries New Zealand FAR 2026/04, Appendix B.1.6, base model process ", name),
+      notes = "Native Casal2 transition-category process; it describes seasonal maturation transitions, not a static maturity-at-age vector.",
+      region = region, season = "AprJun")
+  }
+}
+
+for (name in names(model_blocks(population_lines, "selectivity"))) {
+  if (!grepl("^Selectivity(East|West)Maturation(M|F)$", name)) next
+  block <- model_blocks(population_lines, "selectivity")[[name]]
+  region <- sub("Maturation[MF]$", "", sub("^Selectivity", "", name))
+  sex <- sub("^Selectivity(East|West)Maturation", "", name)
+  for (setting in c("type", "a50", "ato95", "alpha")) {
+    value <- field_value(block, setting)
+    if (is.na(value)) stop("Missing ", setting, " in maturation selectivity ", name, ".", call. = FALSE)
+    add_model_assumption("maturity", paste(name, setting, sep = ":"), value,
+      paste0("Fisheries New Zealand FAR 2026/04, Appendix B.1.6, base model selectivity ", name),
+      notes = "Native Casal2 age-based selectivity controlling the seasonal category transition; not an exported maturity-at-age surface.",
+      region = region, sex = sex, season = "AprJun")
+  }
+}
+
+for (name in names(model_blocks(population_lines, "age_length"))) {
+  block <- model_blocks(population_lines, "age_length")[[name]]
+  region <- sub("M$|F$", "", sub("^AgeLength", "", name))
+  sex <- sub("^AgeLength(East|West)", "", name)
+  for (setting in c("type", "length_weight", "k", "t0", "Linf", "cv_first", "cv_last",
+    "time_step_proportions", "by_length", "distribution", "compatibility_option")) {
+    value <- field_value(block, setting)
+    if (is.na(value)) next
+    add_model_assumption("growth", paste(name, setting, sep = ":"), value,
+      paste0("Fisheries New Zealand FAR 2026/04, Appendix B.1.6, base model age-length object ", name),
+      notes = "Native Casal2 age-length function parameter; length is in centimetres and the object is sex- and stock-specific.",
+      region = region, sex = sex)
+  }
+}
+
+for (name in names(model_blocks(population_lines, "length_weight"))) {
+  block <- model_blocks(population_lines, "length_weight")[[name]]
+  region <- sub("[MF]$", "", sub("^LengthWeight", "", name))
+  sex <- sub("^LengthWeight(East|West)", "", name)
+  for (setting in c("type", "units", "a", "b")) {
+    value <- field_value(block, setting)
+    if (is.na(value)) next
+    add_model_assumption("growth", paste(name, setting, sep = ":"), value,
+      paste0("Fisheries New Zealand FAR 2026/04, Appendix B.1.6, base model length-weight object ", name),
+      notes = "Native length-weight function parameter; no direct weight-at-age vector is inferred.",
+      region = region, sex = sex)
+  }
+}
+
+if (length(model_assumption_rows) != 88L) {
+  stop("Expected 88 base-model biological and category assumptions, found ",
+    length(model_assumption_rows), ".", call. = FALSE)
+}
+
 add_output("unfished_spawning_biomass", c(727, 1176, 1903), region = c("East", "West", "Total"),
   lwr = c(676, 1131, 1807), upr = c(785, 1223, 2008),
   notes = "Median of marginal posterior; 95% interval. Table reports B0 in thousand tonnes for the base two-stock model.")
@@ -294,9 +398,11 @@ add_output("SSB", c(396, 456, 855), year = 2025, region = c("East", "West", "Tot
   notes = "Median of marginal posterior; 95% interval. Table reports mid-season 2025 spawning biomass in thousand tonnes for the base two-stock model.")
 inputs <- do.call(rbind, input_rows)
 assumptions <- do.call(rbind, assumption_rows)
+model_assumptions <- do.call(rbind, model_assumption_rows)
 outputs <- do.call(rbind, output_rows)
 expected_composition_observations <- sum(vapply(blocks[grepl("Age$", names(blocks))], function(block) length(table_rows(block, "obs")), integer(1)))
-if (nrow(inputs) != 10348L || nrow(outputs) != 6L || length(unique(inputs$observation_id[nzchar(inputs$observation_id)])) != expected_composition_observations) {
+if (nrow(inputs) != 10348L || nrow(outputs) != 6L || length(unique(inputs$observation_id[nzchar(inputs$observation_id)])) != expected_composition_observations ||
+  nrow(model_assumptions) != 88L) {
   stop("Unexpected Hoki import row counts: ", nrow(inputs), " inputs, ", expected_composition_observations, " composition observations, ", length(unique(inputs$observation_id[nzchar(inputs$observation_id)])), " IDs, and ", nrow(outputs), " outputs.", call. = FALSE)
 }
 
@@ -323,7 +429,46 @@ stream_has_id <- function(path, id) {
     if (any(startsWith(chunk, prefix))) return(TRUE)
   }
 }
-if (write_assumptions_only) {
+if (write_biological_assumptions_only) {
+  path <- file.path(root, "database", "assumptions.csv")
+  existing <- read.csv(path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
+  key_fields <- c("assessment_id", "component", "region", "sex", "season", "setting")
+  make_key <- function(x) do.call(paste, c(lapply(x[key_fields], function(value) {
+    value <- as.character(value)
+    value[is.na(value)] <- ""
+    value
+  }), sep = "\r"))
+  if (any(make_key(model_assumptions) %in% make_key(existing))) {
+    stop("One or more Hoki biological/category assumptions already exist; refusing to duplicate them.", call. = FALSE)
+  }
+  write.table(model_assumptions, path, sep = ",", quote = TRUE, row.names = FALSE,
+    col.names = FALSE, append = TRUE, na = "", qmethod = "double")
+  candidate_path <- file.path(root, "discovery", "candidates.csv")
+  candidate_lines <- readLines(candidate_path, warn = FALSE)
+  candidates <- read.csv(candidate_path,
+    stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
+  selected <- which(candidates$candidate_id == candidate_id)
+  if (length(selected) != 1L) stop("Expected exactly one Hoki discovery candidate.", call. = FALSE)
+  candidates$weights_evidence[selected] <- "The 2025 base model's sex- and stock-specific von Bertalanffy age-length functions and shared length-weight function have been imported as assumptions from Appendix B.1.6. No direct weight-at-age surface is published or derived."
+  candidates$maturity_evidence[selected] <- "The 2025 base model's seasonal immature-to-mature category transitions and their stock- and sex-specific logistic age selectivities have been imported as assumptions from Appendix B.1.6. These settings are not a static maturity-at-age surface."
+  candidate_row <- candidates[selected, , drop = FALSE]
+  candidate_row[] <- lapply(candidate_row, function(value) {
+    value <- as.character(value)
+    value[is.na(value)] <- ""
+    value
+  })
+  row_path <- tempfile()
+  write.table(candidate_row, row_path, sep = ",", quote = TRUE, row.names = FALSE,
+    col.names = FALSE, qmethod = "double", na = "")
+  replacement <- readLines(row_path, warn = FALSE)
+  unlink(row_path)
+  row_line <- which(startsWith(candidate_lines, paste0('"', candidate_id, '",')))
+  if (length(replacement) != 1L || length(row_line) != 1L) {
+    stop("Could not safely update the Hoki discovery candidate row.", call. = FALSE)
+  }
+  candidate_lines[row_line] <- replacement
+  writeLines(candidate_lines, candidate_path, useBytes = TRUE)
+} else if (write_assumptions_only) {
   path <- file.path(root, "database", "assumptions.csv")
   if (stream_has_id(path, assessment_id)) stop("Hoki assumptions already exist; refusing to duplicate them.", call. = FALSE)
   write.table(assumptions, path, sep = ",", quote = TRUE, row.names = FALSE,
@@ -362,9 +507,9 @@ if (write_assumptions_only) {
   source(file.path(root, "scripts", "database", "195_summarize_discovery.R"), local = TRUE)
   source(file.path(root, "scripts", "database", "196_summarize_inventory_units.R"), local = TRUE)
 }
-cat("Hoki source import ", if (write_assumptions_only) "assumptions written" else if (dry_run) "validated (dry run)" else "written", ": ",
+cat("Hoki source import ", if (write_biological_assumptions_only) "biological assumptions written" else if (write_assumptions_only) "assumptions written" else if (dry_run) "validated (dry run)" else "written", ": ",
   nrow(inputs), " input rows, ", nrow(assumptions), " assumption rows, ",
-  nrow(outputs), " output rows; 540 fishery catch rows, 9,618 sex-age composition rows, and 95 biomass indices with CVs.\n", sep = "")
+  nrow(outputs), " output rows; ", nrow(model_assumptions), " additional model-category, growth, length-weight, and maturation assumptions.\n", sep = "")
 
 
 

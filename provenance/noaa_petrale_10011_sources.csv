@@ -1,0 +1,8 @@
+"local_file","source_url","retrieved_on","sha256","bytes"
+"discovery_noaa_petrale_10011/petrale_2023_report.pdf","https://www.pcouncil.org/documents/status-of-petrale-sole-eopsetta-jordanialong-the-u-s-west-coast-in-2023/","2026-10-28","59A35C029CEF587F3145B576DE0AC484A3B317D0D878120B1D82D813F13AE133",60883482
+"discovery_noaa_petrale_10011/petrale_2023_models.zip","https://www.pcouncil.org/documents/petrale-sole-2023-model-files-zip-file/","2026-10-28","A6AC8C4056530C1C1EB57C66491BB1553A825E5EFA0F0AE722B2E8DD3A164B19",25007027
+"discovery_noaa_petrale_10011/petrale_2025_projection.pdf","https://www.pcouncil.org/documents/2025/09/g-8-supplemental-attachment-3-catch-only-projection-for-petrale-sole.pdf/","2026-10-28","63CE5CE9CAF3160BFAE160E14AEE7480E22F5EBE297757DA85C23E3306DBED36",349383
+"discovery_noaa_petrale_10011/inputs/petrale_data.ss","https://www.pcouncil.org/documents/petrale-sole-2023-model-files-zip-file/","2026-10-28","713316BCCDC4B59A58B1967B3ABE97D74538FFCF4293D28D9F2C4F7F06D83ECC",300275
+"discovery_noaa_petrale_10011/inputs/petrale_control.ss","https://www.pcouncil.org/documents/petrale-sole-2023-model-files-zip-file/","2026-10-28","80AED7017B021CE309C3742BE63850F71AB8633C195FE13830938A48E957D47F",16202
+"discovery_noaa_petrale_10011/outputs/Report.sso","https://www.pcouncil.org/documents/petrale-sole-2023-model-files-zip-file/","2026-10-28","1A2849ADB91A8CD6BD3E4B36E9701BA8540B62958E5A78A96B45C82139FB2336",6034079
+"discovery_noaa_petrale_10011/outputs/ss_summary.sso","https://www.pcouncil.org/documents/petrale-sole-2023-model-files-zip-file/","2026-10-28","1F5404A9B659F07C2E8A6EC1DA76015E0BBD928D57BE63872A93C2F328A01AA2",54849

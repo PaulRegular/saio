@@ -1,4 +1,8 @@
 "unit_key","matched_stock_id","candidate_unit_id","match_status","eligibility","screening_status","import_status","organizations","source_regions","candidate_ids","inventory_entries"
+"candidate:afma_sessf_eastern_school_whiting","","afma_sessf_eastern_school_whiting","new","unresolved","screened","partial","AFMA","Southern and Eastern Scalefish and Shark Fishery and adjoining state waters, western Victoria to southern Queensland","AFMA:SESSF_Eastern_School_Whiting",1
+"candidate:argentina_merluccius_hubbsi_south_41s","","argentina_merluccius_hubbsi_south_41s","new","eligible","screened","partial","INIDEP","South Atlantic south of 41°S; most abundant from 42°S to 48°S","INIDEP:MERLUCCIUS_HUBBSI_SUR41",1
+"candidate:australia_qld_east_coast_saddletail_snapper","","australia_qld_east_coast_saddletail_snapper","new","unresolved","screened","partial","Queensland DPI","Queensland east coast","QDAF:QLD_EC_SADDLETAIL_2026",1
+"candidate:ccsbt_sbt","","ccsbt_sbt","new","unresolved","screened","partial","CCSBT","CCSBT-wide circumglobal stock, Southern Hemisphere","CCSBT:SBT",1
 "candidate:dfo_american_eel_maritimes","","dfo_american_eel_maritimes","new","ineligible","screened","not_started","DFO","Maritimes","DFO:Maritimes:Eel (Large) | DFO:Maritimes:Elvers",2
 "candidate:dfo_atlantic_halibut_3nops4vwx5zc","","dfo_atlantic_halibut_3nops4vwx5zc","new","ineligible","screened","not_started","DFO","Maritimes","DFO:Maritimes:Atlantic Halibut - NAFO 3NOPs4VWX5Z",1
 "candidate:dfo_atlantic_halibut_4rst","","dfo_atlantic_halibut_4rst","new","ineligible","screened","not_started","DFO","Quebec","DFO:Quebec:Atlantic Halibut - NAFO 4RST",1
@@ -32,7 +36,6 @@
 "candidate:dfo_sff_2024_pacific_pacific_herring_prince_rupert_district","","dfo_sff_2024_pacific_pacific_herring_prince_rupert_district","new","ineligible","screened","not_started","DFO","Pacific","DFO:Pacific:Pacific Herring - Prince Rupert District",1
 "candidate:dfo_sff_2024_pacific_pacific_herring_west_coast_of_vancouver_island","","dfo_sff_2024_pacific_pacific_herring_west_coast_of_vancouver_island","new","ineligible","screened","not_started","DFO","Pacific","DFO:Pacific:Pacific Herring - West Coast of Vancouver Island",1
 "candidate:dfo_sff_2024_pacific_sablefish","","dfo_sff_2024_pacific_sablefish","new","unresolved","screened","not_started","DFO","Pacific","DFO:Pacific:Sablefish",1
-"candidate:dfo_sff_2024_pacific_yellowtail_rockfish_british_columbia_coastwide","dfo_yellowtail_bc","dfo_sff_2024_pacific_yellowtail_rockfish_british_columbia_coastwide","new","eligible","screened","partial","DFO","Pacific","DFO:Pacific:Yellowtail Rockfish - British Columbia coastwide",1
 "candidate:dfo_silver_hake_4vwx","","dfo_silver_hake_4vwx","new","ineligible","screened","not_started","DFO","Maritimes","DFO:Maritimes:Silver Hake - NAFO 4VWX",1
 "candidate:dfo_skeena_sockeye_smu","","dfo_skeena_sockeye_smu","new","ineligible","screened","not_started","DFO","Pacific","DFO:Pacific:Sockeye Salmon - Skeena",1
 "candidate:dfo_stikine_sockeye_smu","","dfo_stikine_sockeye_smu","new","ineligible","screened","not_started","DFO","Pacific","DFO:Pacific:Sockeye Salmon - Stikine",1
@@ -65,7 +68,6 @@
 "candidate:ices_angel_shark_nea","","ices_angel_shark_nea","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea","ICES:agn.27.nea",1
 "candidate:ices_aru_27_6b7_1012","","ices_aru_27_6b7_1012","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Oceanic Northeast Atlantic","ICES:aru.27.6b7-1012",1
 "candidate:ices_baltic_flounder_2729_32","","ices_baltic_flounder_2729_32","new","ineligible","screened","not_started","ICES","Baltic Sea","ICES:bwp.27.2729-32",1
-"candidate:ices_bay_biscay_anchovy_8","","ices_bay_biscay_anchovy_8","new","eligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:ane.27.8",1
 "candidate:ices_beaked_redfish_icelandic_slope","","ices_beaked_redfish_icelandic_slope","new","unresolved","screened","not_started","ICES","Icelandic slope; ICES Subarea 14 and Division 5.a (East of Greenland and Iceland grounds)","ICES:reb.27.5a14",1
 "candidate:ices_black_bellied_anglerfish_78abd","","ices_black_bellied_anglerfish_78abd","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Oceanic Northeast Atlantic","ICES:ank.27.78abd",1
 "candidate:ices_black_bellied_anglerfish_8c9a","","ices_black_bellied_anglerfish_8c9a","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:ank.27.8c9a",1
@@ -96,11 +98,9 @@
 "candidate:ices_flounder_baltic_21_23","","ices_flounder_baltic_21_23","new","ineligible","screened","not_started","ICES","Baltic Sea","ICES:fle.27.21-23",1
 "candidate:ices_flounder_baltic_2425","","ices_flounder_baltic_2425","new","ineligible","screened","not_started","ICES","Baltic Sea","ICES:bzq.27.2425",1
 "candidate:ices_flounder_baltic_2628","","ices_flounder_baltic_2628","new","ineligible","screened","not_started","ICES","Baltic Sea","ICES:bzq.27.2628",1
-"candidate:ices_four_spot_megrim_8c9a","","ices_four_spot_megrim_8c9a","new","eligible","screened","not_started","ICES","Southern Bay of Biscay and Atlantic Iberian waters East","ICES:ldb.27.8c9a",1
 "candidate:ices_gag_27_nea","","ices_gag_27_nea","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Oceanic Northeast Atlantic","ICES:gag.27.nea",1
 "candidate:ices_gfb_27_nea","","ices_gfb_27_nea","new","ineligible","screened","not_started","ICES","Arctic Ocean, Azores, Barents Sea, Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Norwegian Sea, Oceanic Northeast Atlantic","ICES:gfb.27.nea",1
 "candidate:ices_greater_silver_smelt_123a4","","ices_greater_silver_smelt_123a4","new","ineligible","screened","not_started","ICES","Arctic Ocean, Barents Sea, Greater North Sea, Norwegian Sea","ICES:aru.27.123a4",1
-"candidate:ices_greater_silver_smelt_5a14","","ices_greater_silver_smelt_5a14","new","eligible","screened","not_started","ICES","Greenland Sea, Icelandic Waters","ICES:aru.27.5a14",1
 "candidate:ices_greenland_halibut_1_2","","ices_greenland_halibut_1_2","new","unresolved","screened","not_started","ICES","Arctic Ocean, Barents Sea, Norwegian Sea","ICES:ghl.27.1-2",1
 "candidate:ices_greenland_halibut_561214","","ices_greenland_halibut_561214","new","unresolved","screened","not_started","ICES","Celtic Seas, Faroes, Greenland Sea, Icelandic Waters","ICES:ghl.27.561214",1
 "candidate:ices_grey_gurnard_3a47d","","ices_grey_gurnard_3a47d","new","ineligible","screened","not_started","ICES","Greater North Sea","ICES:gug.27.3a47d",1
@@ -118,7 +118,6 @@
 "candidate:ices_lesser_spotted_dogfish_67a_ce_j","","ices_lesser_spotted_dogfish_67a_ce_j","new","ineligible","screened","not_started","ICES","Celtic Seas, Greater North Sea","ICES:syc.27.67a-ce-j",1
 "candidate:ices_lesser_spotted_dogfish_8c9a","","ices_lesser_spotted_dogfish_8c9a","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:syc.27.8c9a",1
 "candidate:ices_lin_27_346_91214","","ices_lin_27_346_91214","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Oceanic Northeast Atlantic","ICES:lin.27.346-91214",1
-"candidate:ices_ling_5a","","ices_ling_5a","new","eligible","screened","not_started","ICES","Icelandic Waters","ICES:lin.27.5a",1
 "candidate:ices_ling_ne_arctic_1_2","","ices_ling_ne_arctic_1_2","new","ineligible","screened","not_started","ICES","Arctic Ocean, Barents Sea, Norwegian Sea","ICES:lin.27.1-2",1
 "candidate:ices_mac_27_nea","","ices_mac_27_nea","new","unresolved","screened","not_started","ICES","Arctic Ocean, Bay of Biscay and the Iberian Coast, Celtic Seas, Faroes, Greater North Sea, Icelandic Waters, Norwegian Sea, Oceanic Northeast Atlantic","ICES:mac.27.nea",1
 "candidate:ices_meg_27_8c9a","","ices_meg_27_8c9a","new","unresolved","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:meg.27.8c9a",1
@@ -143,12 +142,12 @@
 "candidate:ices_nep_fu_25","","ices_nep_fu_25","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:nep.fu.25",1
 "candidate:ices_nep_fu_2627","","ices_nep_fu_2627","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:nep.fu.2627",1
 "candidate:ices_nep_fu_2829","","ices_nep_fu_2829","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:nep.fu.2829",1
+"candidate:ices_nep_fu_3_4","","ices_nep_fu_3_4","new","ineligible","screened","not_started","ICES","Greater North Sea","ICES:nep.fu.3-4",1
 "candidate:ices_nep_fu_30","","ices_nep_fu_30","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:nep.fu.30",1
 "candidate:ices_nep_fu_31","","ices_nep_fu_31","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:nep.fu.31",1
 "candidate:ices_nep_fu_32","","ices_nep_fu_32","new","ineligible","screened","not_started","ICES","Greater North Sea","ICES:nep.fu.32",1
 "candidate:ices_nep_fu_33","","ices_nep_fu_33","new","ineligible","screened","not_started","ICES","Greater North Sea","ICES:nep.fu.33",1
 "candidate:ices_nep_fu_34","","ices_nep_fu_34","new","ineligible","screened","not_started","ICES","Greater North Sea","ICES:nep.fu.34",1
-"candidate:ices_nep_fu_3_4","","ices_nep_fu_3_4","new","ineligible","screened","not_started","ICES","Greater North Sea","ICES:nep.fu.3-4",1
 "candidate:ices_nep_fu_5","","ices_nep_fu_5","new","ineligible","screened","not_started","ICES","Greater North Sea","ICES:nep.fu.5",1
 "candidate:ices_nep_fu_6","","ices_nep_fu_6","new","ineligible","screened","not_started","ICES","Greater North Sea","ICES:nep.fu.6",1
 "candidate:ices_nep_fu_7","","ices_nep_fu_7","new","ineligible","screened","not_started","ICES","Greater North Sea","ICES:nep.fu.7",1
@@ -160,10 +159,9 @@
 "candidate:ices_ory_27_nea","","ices_ory_27_nea","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Oceanic Northeast Atlantic","ICES:ory.27.nea",1
 "candidate:ices_pil_27_7","","ices_pil_27_7","new","ineligible","screened","not_started","ICES","Celtic Seas, Greater North Sea","ICES:pil.27.7",1
 "candidate:ices_plaice_89a","","ices_plaice_89a","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:ple.27.89a",1
-"candidate:ices_plaice_iceland_5a","","ices_plaice_iceland_5a","new","eligible","screened","not_started","ICES","Icelandic Waters","ICES:ple.27.5a",1
 "candidate:ices_ple_27_7bc","","ices_ple_27_7bc","new","ineligible","screened","not_started","ICES","Celtic Seas","ICES:ple.27.7bc",1
 "candidate:ices_ple_27_7h_k","","ices_ple_27_7h_k","new","ineligible","screened","not_started","ICES","Celtic Seas","ICES:ple.27.7h-k",1
-"candidate:ices_pol_27_67","","ices_pol_27_67","new","eligible","screened","not_started","ICES","Celtic Seas, Greater North Sea","ICES:pol.27.67",1
+"candidate:ices_pol_27_67","","ices_pol_27_67","new","eligible","screened","partial","ICES","Celtic Seas, Greater North Sea","ICES:pol.27.67",1
 "candidate:ices_pollack_3a4","","ices_pollack_3a4","new","ineligible","screened","not_started","ICES","Greater North Sea","ICES:pol.27.3a4",1
 "candidate:ices_pollack_89a","","ices_pollack_89a","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:pol.27.89a",1
 "candidate:ices_porbeagle_nea","","ices_porbeagle_nea","new","ineligible","screened","not_started","ICES","Azores, Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Norwegian Sea, Oceanic Northeast Atlantic","ICES:por.27.nea",1
@@ -241,17 +239,15 @@
 "candidate:ices_tsu_27_nea","","ices_tsu_27_nea","new","ineligible","screened","not_started","ICES","Arctic Ocean, Barents Sea, Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Oceanic Northeast Atlantic","ICES:tsu.27.nea",1
 "candidate:ices_turbot_3a","","ices_turbot_3a","new","ineligible","screened","not_started","ICES","Greater North Sea","ICES:tur.27.3a",1
 "candidate:ices_turbot_baltic_22_32","","ices_turbot_baltic_22_32","new","ineligible","screened","not_started","ICES","Baltic Sea","ICES:tur.27.22-32",1
-"candidate:ices_tusk_5a14","","ices_tusk_5a14","new","unresolved","screened","not_started","ICES","Greenland Sea, Icelandic Waters","ICES:usk.27.5a14",1
 "candidate:ices_undulate_ray_7de","","ices_undulate_ray_7de","new","ineligible","screened","not_started","ICES","Celtic Seas, Greater North Sea","ICES:rju.27.7de",1
 "candidate:ices_undulate_ray_8ab","","ices_undulate_ray_8ab","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:rju.27.8ab",1
 "candidate:ices_undulate_ray_8c","","ices_undulate_ray_8c","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:rju.27.8c",1
 "candidate:ices_undulate_ray_9a","","ices_undulate_ray_9a","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:rju.27.9a",1
-"candidate:ices_usk_27_12ac","","ices_usk_27_12ac","new","ineligible","screened","not_started","ICES","Oceanic Northeast Atlantic","ICES:usk.27.12ac",1
 "candidate:ices_usk_27_1_2","","ices_usk_27_1_2","new","ineligible","screened","not_started","ICES","Arctic Ocean, Barents Sea, Norwegian Sea","ICES:usk.27.1-2",1
+"candidate:ices_usk_27_12ac","","ices_usk_27_12ac","new","ineligible","screened","not_started","ICES","Oceanic Northeast Atlantic","ICES:usk.27.12ac",1
 "candidate:ices_usk_27_3a45b6a7_912b","","ices_usk_27_3a45b6a7_912b","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Faroes, Greater North Sea, Oceanic Northeast Atlantic","ICES:usk.27.3a45b6a7-912b",1
 "candidate:ices_usk_27_6b","","ices_usk_27_6b","new","ineligible","screened","not_started","ICES","Celtic Seas, Oceanic Northeast Atlantic","ICES:usk.27.6b",1
 "candidate:ices_western_horse_mackerel_ne_atlantic","","ices_western_horse_mackerel_ne_atlantic","new","unresolved","screened","not_started","ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Norwegian Sea, Oceanic Northeast Atlantic","ICES:hom.27.2a3a4a5b6a7a-ce-k8",1
-"candidate:ices_wgnas_north_atlantic_salmo_salar","","ices_wgnas_north_atlantic_salmo_salar","new","eligible","screened","not_started","ICES","Arctic Ocean, Azores, Barents Sea, Bay of Biscay and the Iberian Coast, Celtic Seas, Faroes, Greater North Sea, Greenland Sea, Icelandic Waters, Norwegian Sea, Oceanic Northeast Atlantic | Greenland Sea, Oceanic Northeast Atlantic","ICES:sal.nac.all | ICES:sal.neac.all",2
 "candidate:ices_white_anglerfish_78abd","","ices_white_anglerfish_78abd","new","ineligible","screened","not_started","ICES","Celtic Seas, Greater North Sea, Oceanic Northeast Atlantic","ICES:mon.27.78abd",1
 "candidate:ices_white_anglerfish_8c9a","","ices_white_anglerfish_8c9a","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:mon.27.8c9a",1
 "candidate:ices_white_skate_nea","","ices_white_skate_nea","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea","ICES:rja.27.nea",1
@@ -259,15 +255,11 @@
 "candidate:ices_whiting_89a","","ices_whiting_89a","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:whg.27.89a",1
 "candidate:ices_whiting_rockall_6b","","ices_whiting_rockall_6b","new","ineligible","screened","not_started","ICES","Celtic Seas, Oceanic Northeast Atlantic","ICES:whg.27.6b",1
 "candidate:ices_wit_27_3a47d","","ices_wit_27_3a47d","new","unresolved","screened","not_started","ICES","Greater North Sea","ICES:wit.27.3a47d",1
-"candidate:iphc_pacific_halibut","","iphc_pacific_halibut","new","eligible","screened","not_started","DFO | NOAA","NWFSC / AFSC | Pacific","DFO:Pacific:Pacific Halibut | NOAA:11082",2
 "candidate:isc_pacific_blue_marlin","","isc_pacific_blue_marlin","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:11706",1
 "candidate:isc_wcnpo_striped_marlin","","isc_wcnpo_striped_marlin","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:11692",1
 "candidate:jrn_afwg_barents_capelin","","jrn_afwg_barents_capelin","new","unresolved","screened","not_started","ICES","Arctic Ocean, Barents Sea","ICES:cap.27.1-2",1
-"candidate:nafo_american_plaice_3lno","","nafo_american_plaice_3lno","new","eligible","screened","not_started","NAFO","Divisions 3LNO","NAFO:american_plaice.3LNO",1
 "candidate:nafo_american_plaice_3m","","nafo_american_plaice_3m","new","ineligible","screened","not_started","NAFO","Division 3M (Flemish Cap)","NAFO:american_plaice.3M",1
 "candidate:nafo_capelin_3no","","nafo_capelin_3no","new","ineligible","screened","not_started","NAFO","Divisions 3NO","NAFO:capelin.3NO",1
-"candidate:nafo_cod_3m","","nafo_cod_3m","new","eligible","screened","not_started","NAFO","Division 3M (Flemish Cap)","NAFO:cod.3M",1
-"candidate:nafo_cod_3no","","nafo_cod_3no","new","eligible","screened","not_started","NAFO","Divisions 3NO","NAFO:cod.3NO",1
 "candidate:nafo_greenland_halibut_1a_disko","","nafo_greenland_halibut_1a_disko","new","ineligible","screened","not_started","NAFO","Subarea 1A inshore - Disko Bay","NAFO:greenland_halibut.1A-Disko",1
 "candidate:nafo_greenland_halibut_1a_upernavik","","nafo_greenland_halibut_1a_upernavik","new","ineligible","screened","not_started","NAFO","Subarea 1A inshore - Upernavik","NAFO:greenland_halibut.1A-Upernavik",1
 "candidate:nafo_greenland_halibut_1a_uummannaq","","nafo_greenland_halibut_1a_uummannaq","new","ineligible","screened","not_started","NAFO","Subarea 1A inshore - Uummannaq","NAFO:greenland_halibut.1A-Uummannaq",1
@@ -276,7 +268,6 @@
 "candidate:nafo_northern_shrimp_denmark_strait","","nafo_northern_shrimp_denmark_strait","new","ineligible","screened","not_started","NAFO","Denmark Strait and East Greenland","NAFO:northern_shrimp.denmark_strait",1
 "candidate:nafo_northern_shrimp_sa0_1","","nafo_northern_shrimp_sa0_1","new","ineligible","screened","not_started","NAFO","Subareas 0 and 1","NAFO:northern_shrimp.SA0-1",1
 "candidate:nafo_redfish_3ln","","nafo_redfish_3ln","new","ineligible","screened","not_started","DFO | NAFO","Divisions 3LN | Newfoundland and Labrador","DFO:Newfoundland and Labrador:Redfish - NAFO 3LN | NAFO:redfish.3LN",2
-"candidate:nafo_redfish_3m","","nafo_redfish_3m","new","eligible","screened","not_started","NAFO","Division 3M (Flemish Cap)","NAFO:redfish.3M",1
 "candidate:nafo_redfish_3o","","nafo_redfish_3o","new","ineligible","screened","not_started","DFO | NAFO","Division 3O | Newfoundland and Labrador","DFO:Newfoundland and Labrador:Redfish - NAFO 3O | NAFO:redfish.3O",2
 "candidate:nafo_redfish_sa1","","nafo_redfish_sa1","ambiguous","ineligible","screened","not_started","NAFO","Subarea 1","NAFO:redfish.SA1",1
 "candidate:nafo_roughhead_grenadier_sa2_3","","nafo_roughhead_grenadier_sa2_3","new","ineligible","screened","not_started","NAFO","Subareas 2 and 3","NAFO:roughhead_grenadier.SA2-3",1
@@ -285,7 +276,6 @@
 "candidate:nafo_thorny_skate_3lnops","","nafo_thorny_skate_3lnops","new","ineligible","screened","not_started","DFO | NAFO","Divisions 3LNO and Subdivision 3Ps | Newfoundland and Labrador","DFO:Newfoundland and Labrador:Thorny Skate - NAFO 3LNO | NAFO:thorny_skate.3LNOPs",2
 "candidate:nafo_white_hake_3nops","","nafo_white_hake_3nops","new","ineligible","screened","not_started","DFO | NAFO","Divisions 3NO and Subdivision 3Ps | Newfoundland and Labrador","DFO:Newfoundland and Labrador:White Hake - NAFO 3NOPs | NAFO:white_hake.3NO3Ps",2
 "candidate:nafo_wolffish_sa1","","nafo_wolffish_sa1","new","ineligible","screened","not_started","NAFO","Subarea 1","NAFO:wolffish.SA1",1
-"candidate:noaa_alaska_sablefish","","noaa_alaska_sablefish","new","eligible","screened","not_started","NOAA","AFSC","NOAA:10956",1
 "candidate:noaa_alaska_sculpin_complex","","noaa_alaska_sculpin_complex","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:11405 | NOAA:11448",2
 "candidate:noaa_american_samoa_apru","","noaa_american_samoa_apru","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:11998",1
 "candidate:noaa_american_samoa_apvi","","noaa_american_samoa_apvi","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:11999",1
@@ -308,21 +298,15 @@
 "candidate:noaa_auke_creek_coho_southeast_alaska","","noaa_auke_creek_coho_southeast_alaska","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10580",1
 "candidate:noaa_bank_rockfish_california","","noaa_bank_rockfish_california","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10448",1
 "candidate:noaa_black_grouper_south_atlantic_gulf","","noaa_black_grouper_south_atlantic_gulf","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:14148",1
-"candidate:noaa_black_rockfish_california_2023","","noaa_black_rockfish_california_2023","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:17194 | NOAA:17195",2
-"candidate:noaa_black_rockfish_washington_2023","","noaa_black_rockfish_washington_2023","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:14409",1
 "candidate:noaa_blacknose_shark_atlantic","","noaa_blacknose_shark_atlantic","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:12130",1
 "candidate:noaa_blacknose_shark_gulf","","noaa_blacknose_shark_gulf","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:12131",1
-"candidate:noaa_blue_deacon_california","","noaa_blue_deacon_california","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:14821",1
-"candidate:noaa_blue_deacon_oregon","","noaa_blue_deacon_oregon","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:14822",1
 "candidate:noaa_blue_king_crab_pribilof","","noaa_blue_king_crab_pribilof","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10813",1
 "candidate:noaa_blue_king_crab_st_matthew","","noaa_blue_king_crab_st_matthew","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10814",1
 "candidate:noaa_blue_rockfish_southern_california","","noaa_blue_rockfish_southern_california","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15351",1
 "candidate:noaa_blue_shark_north_atlantic","","noaa_blue_shark_north_atlantic","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10689",1
 "candidate:noaa_blue_shark_north_pacific","","noaa_blue_shark_north_pacific","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:11686",1
-"candidate:noaa_bluefish_atlantic_coast","","noaa_bluefish_atlantic_coast","new","eligible","screened","not_started","NOAA","NEFSC","NOAA:10388",1
 "candidate:noaa_blueline_tilefish_mid_atlantic","","noaa_blueline_tilefish_mid_atlantic","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:14922",1
 "candidate:noaa_blueline_tilefish_south_atlantic","","noaa_blueline_tilefish_south_atlantic","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10381",1
-"candidate:noaa_bocaccio_southern_pacific_coast","","noaa_bocaccio_southern_pacific_coast","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10413",1
 "candidate:noaa_bonnethead_atlantic_gulf_combined","","noaa_bonnethead_atlantic_gulf_combined","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10692",1
 "candidate:noaa_brown_rock_shrimp_south_atlantic","","noaa_brown_rock_shrimp_south_atlantic","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10803",1
 "candidate:noaa_brown_shrimp_gulf","","noaa_brown_shrimp_gulf","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10079",1
@@ -331,13 +315,11 @@
 "candidate:noaa_bsai_other_flatfish_complex","","noaa_bsai_other_flatfish_complex","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10973",1
 "candidate:noaa_bsai_other_rockfish_complex","","noaa_bsai_other_rockfish_complex","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10974",1
 "candidate:noaa_bsai_other_skates","","noaa_bsai_other_skates","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:11444",1
-"candidate:noaa_bsai_rougheye_blackspotted","","noaa_bsai_rougheye_blackspotted","new","mixed","screened","not_started","NOAA","AFSC","NOAA:11382 | NOAA:15394 | NOAA:15395",3
+"candidate:noaa_bsai_rougheye_blackspotted","","noaa_bsai_rougheye_blackspotted","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:15394 | NOAA:15395",2
 "candidate:noaa_bsai_shark_complex","","noaa_bsai_shark_complex","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:11403",1
 "candidate:noaa_bsai_shortraker","","noaa_bsai_shortraker","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10553",1
 "candidate:noaa_bsai_skates_legacy_aggregate","","noaa_bsai_skates_legacy_aggregate","ambiguous","ineligible","screened","not_started","NOAA","AFSC","NOAA:11402",1
-"candidate:noaa_butterfish_gom_cape_hatteras","","noaa_butterfish_gom_cape_hatteras","new","eligible","screened","not_started","NOAA","NEFSC","NOAA:10187",1
 "candidate:noaa_cabezon_northern_california_2019","","noaa_cabezon_northern_california_2019","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15050",1
-"candidate:noaa_cabezon_oregon_2019","","noaa_cabezon_oregon_2019","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:12193",1
 "candidate:noaa_cabezon_southern_california_2019","","noaa_cabezon_southern_california_2019","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15051",1
 "candidate:noaa_cabezon_washington_2019","","noaa_cabezon_washington_2019","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:14803",1
 "candidate:noaa_caribbean_parrotfishes_complex","","noaa_caribbean_parrotfishes_complex","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10989",1
@@ -348,9 +330,6 @@
 "candidate:noaa_caribbean_spiny_lobster_south_atlantic_gulf","","noaa_caribbean_spiny_lobster_south_atlantic_gulf","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:11031",1
 "candidate:noaa_caribbean_spiny_lobster_st_croix","","noaa_caribbean_spiny_lobster_st_croix","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:12534",1
 "candidate:noaa_caribbean_spiny_lobster_st_thomas","","noaa_caribbean_spiny_lobster_st_thomas","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:12533",1
-"candidate:noaa_china_rockfish_central_pacific_coast","","noaa_china_rockfish_central_pacific_coast","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:14430",1
-"candidate:noaa_china_rockfish_northern_pacific_coast","","noaa_china_rockfish_northern_pacific_coast","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:14410",1
-"candidate:noaa_china_rockfish_southern_pacific_coast","","noaa_china_rockfish_southern_pacific_coast","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:14429",1
 "candidate:noaa_chinook_10483","","noaa_chinook_10483","new","unresolved","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10483",1
 "candidate:noaa_chinook_10484","","noaa_chinook_10484","new","unresolved","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10484",1
 "candidate:noaa_chinook_10485","","noaa_chinook_10485","new","unresolved","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10485",1
@@ -395,8 +374,6 @@
 "candidate:noaa_chinook_11870","","noaa_chinook_11870","new","unresolved","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:11870",1
 "candidate:noaa_chinook_11872","","noaa_chinook_11872","new","unresolved","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:11872",1
 "candidate:noaa_cnmi_bottomfish_complex","","noaa_cnmi_bottomfish_complex","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:11731",1
-"candidate:noaa_cobia_atlantic_2020","","noaa_cobia_atlantic_2020","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:12149",1
-"candidate:noaa_cobia_gulf_mexico_2020","","noaa_cobia_gulf_mexico_2020","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10390",1
 "candidate:noaa_coho_10581","","noaa_coho_10581","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10581",1
 "candidate:noaa_coho_10582","","noaa_coho_10582","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10582",1
 "candidate:noaa_coho_10583","","noaa_coho_10583","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10583",1
@@ -422,27 +399,21 @@
 "candidate:noaa_coho_ford_arm_lake_discontinued","","noaa_coho_ford_arm_lake_discontinued","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10960",1
 "candidate:noaa_coho_hugh_smith_lake","","noaa_coho_hugh_smith_lake","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10961",1
 "candidate:noaa_common_thresher_pacific_coast","","noaa_common_thresher_pacific_coast","new","unresolved","screened","not_started","NOAA","SWFSC / PIFSC","NOAA:11714",1
-"candidate:noaa_copper_rockfish_california_2023","","noaa_copper_rockfish_california_2023","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15332 | NOAA:15333",2
 "candidate:noaa_copper_rockfish_oregon_2021","","noaa_copper_rockfish_oregon_2021","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15331",1
 "candidate:noaa_copper_rockfish_washington_2021","","noaa_copper_rockfish_washington_2021","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15330",1
-"candidate:noaa_cowcod_southern_california","","noaa_cowcod_southern_california","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10443",1
 "candidate:noaa_dusky_shark_atlantic_gulf","","noaa_dusky_shark_atlantic_gulf","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10674",1
 "candidate:noaa_eastern_pacific_swordfish","","noaa_eastern_pacific_swordfish","new","ineligible","screened","not_started","NOAA","SWFSC / PIFSC","NOAA:11643",1
 "candidate:noaa_finetooth_shark_atlantic_gulf","","noaa_finetooth_shark_atlantic_gulf","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10687",1
-"candidate:noaa_gag_gulf","","noaa_gag_gulf","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10348",1
-"candidate:noaa_gag_south_atlantic","","noaa_gag_south_atlantic","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10349",1
 "candidate:noaa_giant_octopus_bering","","noaa_giant_octopus_bering","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10087",1
 "candidate:noaa_giant_octopus_gulf_alaska","","noaa_giant_octopus_gulf_alaska","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10088",1
 "candidate:noaa_goa_atka_mackerel","","noaa_goa_atka_mackerel","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10465",1
 "candidate:noaa_goa_big_skate","","noaa_goa_big_skate","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10727",1
-"candidate:noaa_goa_dusky","","noaa_goa_dusky","new","eligible","screened","not_started","NOAA","AFSC","NOAA:10559",1
 "candidate:noaa_goa_longnose_skate","","noaa_goa_longnose_skate","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10730",1
 "candidate:noaa_goa_northern_rock_sole","","noaa_goa_northern_rock_sole","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10836 | NOAA:15412 | NOAA:15413",3
 "candidate:noaa_goa_other_rockfish_complex","","noaa_goa_other_rockfish_complex","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:11804",1
 "candidate:noaa_goa_other_shallow_water_flatfish_complex","","noaa_goa_other_shallow_water_flatfish_complex","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:11803",1
 "candidate:noaa_goa_other_skates","","noaa_goa_other_skates","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:11005",1
-"candidate:noaa_goa_rex_sole","","noaa_goa_rex_sole","new","eligible","screened","not_started","NOAA","AFSC","NOAA:10058 | NOAA:15410 | NOAA:15411",3
-"candidate:noaa_goa_rougheye_blackspotted","","noaa_goa_rougheye_blackspotted","new","mixed","screened","not_started","NOAA","AFSC","NOAA:10538 | NOAA:11443",2
+"candidate:noaa_goa_rougheye_blackspotted","","noaa_goa_rougheye_blackspotted","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10538",1
 "candidate:noaa_goa_shark_complex","","noaa_goa_shark_complex","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:11450",1
 "candidate:noaa_goa_sharpchin_goa","","noaa_goa_sharpchin_goa","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10434",1
 "candidate:noaa_goa_shortraker","","noaa_goa_shortraker","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10554",1
@@ -452,12 +423,7 @@
 "candidate:noaa_golden_king_crab_eastern_aleutian","","noaa_golden_king_crab_eastern_aleutian","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:14842",1
 "candidate:noaa_golden_king_crab_pribilof","","noaa_golden_king_crab_pribilof","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10817",1
 "candidate:noaa_golden_king_crab_western_aleutian","","noaa_golden_king_crab_western_aleutian","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:14841",1
-"candidate:noaa_golden_tilefish_mid_atlantic","","noaa_golden_tilefish_mid_atlantic","new","eligible","screened","not_started","NOAA","NEFSC","NOAA:10385",1
-"candidate:noaa_golden_tilefish_south_atlantic","","noaa_golden_tilefish_south_atlantic","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10384",1
 "candidate:noaa_goliath_grouper_southeastern_us_2016","","noaa_goliath_grouper_southeastern_us_2016","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10315 | NOAA:11042",2
-"candidate:noaa_gopher_black_yellow_northern_california","","noaa_gopher_black_yellow_northern_california","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15052",1
-"candidate:noaa_gray_snapper_gulf_mexico","","noaa_gray_snapper_gulf_mexico","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10221",1
-"candidate:noaa_greater_amberjack_south_atlantic","","noaa_greater_amberjack_south_atlantic","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10208",1
 "candidate:noaa_guam_bottomfish_complex","","noaa_guam_bottomfish_complex","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:11696",1
 "candidate:noaa_guam_reef_15110","","noaa_guam_reef_15110","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:15110",1
 "candidate:noaa_guam_reef_15113","","noaa_guam_reef_15113","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:15113",1
@@ -472,12 +438,9 @@
 "candidate:noaa_guam_reef_15137","","noaa_guam_reef_15137","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:15137",1
 "candidate:noaa_guam_reef_15138","","noaa_guam_reef_15138","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:15138",1
 "candidate:noaa_gulf_blacktip_shark","","noaa_gulf_blacktip_shark","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:11027",1
-"candidate:noaa_gulf_golden_tilefish","","noaa_gulf_golden_tilefish","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10383",1
-"candidate:noaa_gulf_gray_triggerfish","","noaa_gulf_gray_triggerfish","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10062",1
 "candidate:noaa_gulf_greater_amberjack","","noaa_gulf_greater_amberjack","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:10207",1
 "candidate:noaa_gulf_king_mackerel","","noaa_gulf_king_mackerel","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:10171",1
 "candidate:noaa_gulf_lane_snapper","","noaa_gulf_lane_snapper","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10239",1
-"candidate:noaa_gulf_red_snapper","","noaa_gulf_red_snapper","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10230",1
 "candidate:noaa_gulf_smoothhound_complex","","noaa_gulf_smoothhound_complex","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:14230",1
 "candidate:noaa_gulf_spanish_mackerel","","noaa_gulf_spanish_mackerel","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:10173",1
 "candidate:noaa_hogfish_georgia_north_carolina","","noaa_hogfish_georgia_north_carolina","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:12810",1
@@ -485,7 +448,6 @@
 "candidate:noaa_hogfish_west_florida","","noaa_hogfish_west_florida","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:12808",1
 "candidate:noaa_isc_pacific_bluefin","","noaa_isc_pacific_bluefin","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:11687",1
 "candidate:noaa_klamath_spring_chinook","","noaa_klamath_spring_chinook","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10610",1
-"candidate:noaa_lingcod_north_pacific_coast_2021","","noaa_lingcod_north_pacific_coast_2021","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:12194",1
 "candidate:noaa_lingcod_south_pacific_coast_2021","","noaa_lingcod_south_pacific_coast_2021","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:12195",1
 "candidate:noaa_longfin_squid_georges_bank","","noaa_longfin_squid_georges_bank","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:10792",1
 "candidate:noaa_mhi_bullethead_parrotfish","","noaa_mhi_bullethead_parrotfish","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:14620",1
@@ -504,7 +466,6 @@
 "candidate:noaa_north_atlantic_shortfin_mako","","noaa_north_atlantic_shortfin_mako","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:10657",1
 "candidate:noaa_north_pacific_shortfin_mako","","noaa_north_pacific_shortfin_mako","new","ineligible","screened","not_started","NOAA","SWFSC / PIFSC","NOAA:11715",1
 "candidate:noaa_northeast_skate_complex","","noaa_northeast_skate_complex","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:11036 | NOAA:11047 | NOAA:11063 | NOAA:11071 | NOAA:11076 | NOAA:11080 | NOAA:11269",7
-"candidate:noaa_northern_anchovy_central_subpopulation","","noaa_northern_anchovy_central_subpopulation","new","eligible","screened","not_started","NOAA","SWFSC","NOAA:10574",1
 "candidate:noaa_northwest_atlantic_porbeagle","","noaa_northwest_atlantic_porbeagle","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10654",1
 "candidate:noaa_ocean_pout_10525","","noaa_ocean_pout_10525","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:10525",1
 "candidate:noaa_ocean_quahog_atlantic","","noaa_ocean_quahog_atlantic","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:10788",1
@@ -514,13 +475,10 @@
 "candidate:noaa_pacific_aurora_rockfish","","noaa_pacific_aurora_rockfish","new","unresolved","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10547",1
 "candidate:noaa_pacific_bigeye_thresher","","noaa_pacific_bigeye_thresher","new","ineligible","screened","not_started","NOAA","SWFSC / PIFSC","NOAA:11712",1
 "candidate:noaa_pacific_brown_rockfish","","noaa_pacific_brown_rockfish","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10546",1
-"candidate:noaa_pacific_coast_longnose_skate","","noaa_pacific_coast_longnose_skate","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10731",1
 "candidate:noaa_pacific_coast_pacific_grenadier","","noaa_pacific_coast_pacific_grenadier","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10526",1
 "candidate:noaa_pacific_coast_pop_uswc","","noaa_pacific_coast_pop_uswc","new","unresolved","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10545",1
 "candidate:noaa_pacific_greenspotted_rockfish","","noaa_pacific_greenspotted_rockfish","new","unresolved","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10437",1
 "candidate:noaa_pacific_greenstriped_rockfish_coastwide","","noaa_pacific_greenstriped_rockfish_coastwide","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10566",1
-"candidate:noaa_pacific_mackerel_pacific_coast","","noaa_pacific_mackerel_pacific_coast","new","eligible","screened","not_started","NOAA","SWFSC","NOAA:10163",1
-"candidate:noaa_pacific_rex_sole","","noaa_pacific_rex_sole","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10059",1
 "candidate:noaa_pacific_sanddab_us","","noaa_pacific_sanddab_us","new","unresolved","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10190",1
 "candidate:noaa_pacific_sharpchin_rockfish","","noaa_pacific_sharpchin_rockfish","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10435",1
 "candidate:noaa_pacific_sleeper_shark_bsai","","noaa_pacific_sleeper_shark_bsai","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10696",1
@@ -538,8 +496,6 @@
 "candidate:noaa_quillback_rockfish_oregon","","noaa_quillback_rockfish_oregon","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15340",1
 "candidate:noaa_quillback_rockfish_washington","","noaa_quillback_rockfish_washington","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15341",1
 "candidate:noaa_red_deepsea_crab_nw_atlantic","","noaa_red_deepsea_crab_nw_atlantic","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:10958",1
-"candidate:noaa_red_grouper_gom","","noaa_red_grouper_gom","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:10331",1
-"candidate:noaa_red_grouper_south_atlantic","","noaa_red_grouper_south_atlantic","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10332",1
 "candidate:noaa_red_hake_10516","","noaa_red_hake_10516","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:10516",1
 "candidate:noaa_red_hake_10517","","noaa_red_hake_10517","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:10517",1
 "candidate:noaa_red_king_crab_bristol_bay","","noaa_red_king_crab_bristol_bay","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10809",1
@@ -558,27 +514,19 @@
 "candidate:noaa_silver_hake_northern","","noaa_silver_hake_northern","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:10521",1
 "candidate:noaa_silver_hake_southern","","noaa_silver_hake_southern","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:10522",1
 "candidate:noaa_snow_crab_bering","","noaa_snow_crab_bering","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10820",1
-"candidate:noaa_snowy_grouper_south_atlantic","","noaa_snowy_grouper_south_atlantic","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10339",1
 "candidate:noaa_south_atlantic_black_sea_bass","","noaa_south_atlantic_black_sea_bass","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:10310",1
 "candidate:noaa_south_atlantic_gray_triggerfish","","noaa_south_atlantic_gray_triggerfish","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:10063",1
 "candidate:noaa_south_atlantic_king_mackerel","","noaa_south_atlantic_king_mackerel","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:10172",1
-"candidate:noaa_south_atlantic_red_porgy","","noaa_south_atlantic_red_porgy","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10100",1
-"candidate:noaa_south_atlantic_red_snapper","","noaa_south_atlantic_red_snapper","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10231",1
-"candidate:noaa_south_atlantic_spanish_mackerel","","noaa_south_atlantic_spanish_mackerel","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10174",1
 "candidate:noaa_south_atlantic_wreckfish","","noaa_south_atlantic_wreckfish","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:10369",1
-"candidate:noaa_southeastern_us_mutton_snapper","","noaa_southeastern_us_mutton_snapper","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:11342",1
 "candidate:noaa_southern_tanner_crab_bering","","noaa_southern_tanner_crab_bering","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10821",1
 "candidate:noaa_spanner_crab_hawaii","","noaa_spanner_crab_hawaii","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:11843",1
 "candidate:noaa_spiny_dogfish_goa","","noaa_spiny_dogfish_goa","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10700",1
-"candidate:noaa_spiny_dogfish_pacific_coast_2021","","noaa_spiny_dogfish_pacific_coast_2021","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10702",1
 "candidate:noaa_squarespot_rockfish_california","","noaa_squarespot_rockfish_california","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10442",1
 "candidate:noaa_st_croix_grouper_unit_4","","noaa_st_croix_grouper_unit_4","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:15512",1
 "candidate:noaa_st_thomas_st_john_grouper_unit_3","","noaa_st_thomas_st_john_grouper_unit_3","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:15439",1
 "candidate:noaa_stocksmart_10002","","noaa_stocksmart_10002","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10002",1
 "candidate:noaa_stocksmart_10004","","noaa_stocksmart_10004","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10004",1
 "candidate:noaa_stocksmart_10005","","noaa_stocksmart_10005","new","unresolved","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10005",1
-"candidate:noaa_stocksmart_10011","","noaa_stocksmart_10011","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10011",1
-"candidate:noaa_stocksmart_10015","","noaa_stocksmart_10015","new","eligible","screened","not_started","NOAA","AFSC","NOAA:10015",1
 "candidate:noaa_stocksmart_10016","","noaa_stocksmart_10016","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10016",1
 "candidate:noaa_stocksmart_10021","","noaa_stocksmart_10021","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10021",1
 "candidate:noaa_stocksmart_10028","","noaa_stocksmart_10028","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:10028",1
@@ -586,33 +534,20 @@
 "candidate:noaa_stocksmart_10035","","noaa_stocksmart_10035","new","unresolved","screened","not_started","NOAA","NEFSC","NOAA:10035",1
 "candidate:noaa_stocksmart_10046","","noaa_stocksmart_10046","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10046",1
 "candidate:noaa_stocksmart_10054","","noaa_stocksmart_10054","new","unresolved","screened","not_started","NOAA","AFSC","NOAA:10054",1
-"candidate:noaa_stocksmart_10393","","noaa_stocksmart_10393","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10393",1
-"candidate:noaa_stocksmart_10416","","noaa_stocksmart_10416","new","eligible","screened","not_started","NOAA","AFSC","NOAA:10416",1
-"candidate:noaa_stocksmart_10417","","noaa_stocksmart_10417","new","eligible","screened","not_started","NOAA","AFSC","NOAA:10417",1
 "candidate:noaa_stocksmart_10457","","noaa_stocksmart_10457","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:10457",1
 "candidate:noaa_stocksmart_10458","","noaa_stocksmart_10458","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10458",1
 "candidate:noaa_stocksmart_10460","","noaa_stocksmart_10460","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10460",1
-"candidate:noaa_stocksmart_10461","","noaa_stocksmart_10461","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10461",1
-"candidate:noaa_stocksmart_10462","","noaa_stocksmart_10462","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10462",1
-"candidate:noaa_stocksmart_10562","","noaa_stocksmart_10562","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10562",1
 "candidate:noaa_stocksmart_14804","","noaa_stocksmart_14804","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:14804",1
 "candidate:noaa_stocksmart_14805","","noaa_stocksmart_14805","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:14805",1
-"candidate:noaa_stocksmart_15342","","noaa_stocksmart_15342","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15342",1
 "candidate:noaa_stocksmart_17280","","noaa_stocksmart_17280","new","unresolved","screened","not_started","NOAA","NEFSC","NOAA:17280",1
 "candidate:noaa_stocksmart_17281","","noaa_stocksmart_17281","new","unresolved","screened","not_started","NOAA","NEFSC","NOAA:17281",1
 "candidate:noaa_stocksmart_17282","","noaa_stocksmart_17282","new","unresolved","screened","not_started","NOAA","NEFSC","NOAA:17282",1
-"candidate:noaa_stocksmart_17357","","noaa_stocksmart_17357","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:17357",1
 "candidate:noaa_uci_salmon_17337","","noaa_uci_salmon_17337","new","unresolved","screened","not_started","NOAA","AFSC","NOAA:17337",1
 "candidate:noaa_uci_salmon_17338","","noaa_uci_salmon_17338","new","unresolved","screened","not_started","NOAA","AFSC","NOAA:17338",1
 "candidate:noaa_uci_salmon_17339","","noaa_uci_salmon_17339","new","unresolved","screened","not_started","NOAA","AFSC","NOAA:17339",1
 "candidate:noaa_uci_salmon_17340","","noaa_uci_salmon_17340","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:17340",1
 "candidate:noaa_uci_salmon_17341","","noaa_uci_salmon_17341","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:17341",1
-"candidate:noaa_uswc_rougheye_blackspotted","","noaa_uswc_rougheye_blackspotted","new","mixed","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10539 | NOAA:14516",2
-"candidate:noaa_vermilion_rockfish_or_wa","","noaa_vermilion_rockfish_or_wa","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15338 | NOAA:15339",2
-"candidate:noaa_vermilion_snapper_gulf_mexico","","noaa_vermilion_snapper_gulf_mexico","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10256",1
-"candidate:noaa_vermilion_snapper_south_atlantic","","noaa_vermilion_snapper_south_atlantic","new","eligible","screened","not_started","NOAA","SEFSC","NOAA:10257",1
-"candidate:noaa_vermilion_sunset_northern_california","","noaa_vermilion_sunset_northern_california","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15335",1
-"candidate:noaa_vermilion_sunset_southern_california","","noaa_vermilion_sunset_southern_california","new","eligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:15310",1
+"candidate:noaa_uswc_rougheye_blackspotted","","noaa_uswc_rougheye_blackspotted","new","ineligible","screened","not_started","NOAA","NWFSC / SWFSC","NOAA:10539",1
 "candidate:noaa_wcnpo_swordfish","","noaa_wcnpo_swordfish","new","ineligible","screened","not_started","NOAA","SWFSC / PIFSC","NOAA:11642",1
 "candidate:noaa_weathervane_scallop_alaska","","noaa_weathervane_scallop_alaska","new","ineligible","screened","not_started","NOAA","AFSC","NOAA:11201",1
 "candidate:noaa_white_shrimp_gulf","","noaa_white_shrimp_gulf","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10083",1
@@ -621,15 +556,21 @@
 "candidate:noaa_windowpane_south_sne_ma","","noaa_windowpane_south_sne_ma","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:10193",1
 "candidate:noaa_yellowedge_gulf","","noaa_yellowedge_gulf","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:10323",1
 "candidate:noaa_yellowtail_snapper_11081","","noaa_yellowtail_snapper_11081","new","unresolved","screened","not_started","NOAA","SEFSC","NOAA:11081",1
-"candidate:north_pacific_albacore","","north_pacific_albacore","new","ineligible","screened","not_started","DFO | NOAA","PIFSC | Pacific","DFO:Pacific:Albacore Tuna - North Pacific | NOAA:11682",2
+"candidate:north_pacific_albacore","","north_pacific_albacore","new","ineligible","screened","not_started","DFO | NOAA","Pacific | PIFSC","DFO:Pacific:Albacore Tuna - North Pacific | NOAA:11682",2
 "candidate:pacific_sardine_northern_subpopulation","","pacific_sardine_northern_subpopulation","new","unresolved","screened","not_started","DFO | NOAA","Pacific | SWFSC","DFO:Pacific:Sardine <U+2013> Pacific | NOAA:10573",2
+"candidate:pirsa_southern_australia_sardine","","pirsa_southern_australia_sardine","new","unresolved","screened","not_started","PIRSA / SARDI","Southern Australia stock; South Australian Sardine Fishery assessment area","PIRSA:SA_SARDINE_2025",1
+"candidate:siofa_orange_roughy_wsr","","siofa_orange_roughy_wsr","new","unresolved","screened","partial","SIOFA","Walter Shoal Ridge (WSR), SIOFA Statistical Area 2","SIOFA:ORY-2024-01:WSR",1
 "candidate:spiny_dogfish_northwest_atlantic","","spiny_dogfish_northwest_atlantic","mixed","ineligible","screened","not_started","DFO | NOAA","Maritimes | NEFSC","DFO:Maritimes:Atlantic Canada Spiny Dogfish - NAFO 4VWX5 | NOAA:10701",2
-"candidate:wcpfc_south_pacific_albacore","","wcpfc_south_pacific_albacore","new","eligible","screened","not_started","NOAA","PIFSC","NOAA:11688",1
-"candidate:wcpfc_wcpo_bigeye","","wcpfc_wcpo_bigeye","new","eligible","screened","not_started","NOAA","SWFSC / PIFSC","NOAA:11684",1
 "candidate:wcpfc_wcpo_silky_shark","","wcpfc_wcpo_silky_shark","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:11728",1
 "candidate:wcpfc_wcpo_skipjack","","wcpfc_wcpo_skipjack","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:11691",1
-"candidate:wcpfc_wcpo_yellowfin","","wcpfc_wcpo_yellowfin","new","eligible","screened","not_started","NOAA","PIFSC","NOAA:11694",1
 "candidate:western_atlantic_bluefin_tuna","","western_atlantic_bluefin_tuna","new","unresolved","screened","not_started","DFO | NOAA","National Capital Region | SEFSC","DFO:National Capital Region:Bluefin Tuna - Western Atlantic | NOAA:10165",2
+"stock:afma_blue_grenadier_cts","afma_blue_grenadier_cts","","matched","unresolved","screened","partial","AFMA","Commonwealth Trawl Sector, Southern and Eastern Scalefish and Shark Fishery","AFMA:SESSF_CTS_Blue_Grenadier",1
+"stock:afma_gab_bight_redfish","afma_gab_bight_redfish","","matched","unresolved","screened","partial","AFMA","Great Australian Bight Trawl Sector, Zone 80, Southern and Eastern Scalefish and Shark Fishery","AFMA:SESSF_GABTF_Bight_Redfish",1
+"stock:afma_gab_deepwater_flathead","afma_gab_deepwater_flathead","","matched","unresolved","screened","partial","AFMA","Great Australian Bight Trawl Sector, Southern and Eastern Scalefish and Shark Fishery","AFMA:SESSF_GABTF_Deepwater_Flathead",1
+"stock:afma_gummy_shark_sessf","afma_gummy_shark_sessf","","matched","unresolved","screened","partial","AFMA","Southern and Eastern Scalefish and Shark Fishery; three modeled components: Bass Strait, South Australia, and Tasmania","AFMA:SESSF_GUMMY_SHARK_2023",1
+"stock:afma_himi_mackerel_icefish","afma_himi_mackerel_icefish","","matched","unresolved","screened","partial","AFMA","Heard Island and McDonald Islands (HIMI), CCAMLR Division 58.5.2","AFMA:HIMI_ICEFISH",1
+"stock:afma_patagonian_toothfish_macquarie","afma_patagonian_toothfish_macquarie","","matched","unresolved","screened","partial","AFMA","Macquarie Island Toothfish Fishery; northern and southern model areas","AFMA:MITF",1
+"stock:afma_sessf_silver_warehou","afma_sessf_silver_warehou","","matched","unresolved","screened","partial","AFMA","Southern and Eastern Scalefish and Shark Fishery (SESSF), east and west trawl fleets","AFMA:SESSF_SILVER_WAREHOU",1
 "stock:afsc_alaska_plaice_bsai","afsc_alaska_plaice_bsai","","matched","ineligible","screened","imported","NOAA","AFSC","NOAA:10026",1
 "stock:afsc_arrowtooth_flounder_bsai","afsc_arrowtooth_flounder_bsai","","matched","ineligible","screened","imported","NOAA","AFSC","NOAA:10003",1
 "stock:afsc_atka_mackerel_bsai","afsc_atka_mackerel_bsai","","matched","eligible","screened","imported","NOAA","AFSC","NOAA:11662",1
@@ -643,6 +584,9 @@
 "stock:afsc_pollock_goa","afsc_pollock_goa","","matched","eligible","screened","imported","NOAA","AFSC","NOAA:10513",1
 "stock:afsc_pop_bsai","afsc_pop_bsai","","matched","eligible","screened","imported","NOAA","AFSC","NOAA:11055",1
 "stock:afsc_yellowfin_sole_ebs","afsc_yellowfin_sole_ebs","","matched","eligible","screened","imported","NOAA","AFSC","NOAA:10031",1
+"stock:argentina_merluccius_hubbsi_north_41s","argentina_merluccius_hubbsi_north_41s","","matched","eligible","screened","partial","INIDEP","North of 41°S; ZCPAU and adjacent Argentine waters","INIDEP:MERLUCCIUS_HUBBSI_NORTH41",1
+"stock:australia_east_coast_sea_mullet","australia_east_coast_sea_mullet","","matched","unresolved","screened","partial","Fisheries Queensland / NSW DPIRD","Queensland and New South Wales east coast waters","QDAF:EAST_COAST_SEA_MULLET_2026",1
+"stock:australia_qld_spanish_mackerel_east_coast","australia_qld_spanish_mackerel_east_coast","","matched","unresolved","screened","partial","Queensland DPI","Single east coast stock from Cape York Peninsula to Newcastle, New South Wales","QLD:EAST_COAST_SPANISH_MACKEREL",1
 "stock:ck_dfo_aeglefinus_4x5y","ck_dfo_aeglefinus_4x5y","","matched","eligible","screened","imported","DFO","Maritimes","DFO:Maritimes:Haddock - NAFO 4X5Y",1
 "stock:ck_dfo_gsl_harengus_4t_fall","ck_dfo_gsl_harengus_4t_fall","","matched","eligible","screened","imported","DFO","Gulf","DFO:Gulf:Atlantic Herring - NAFO 4T (Fall Spawner)",1
 "stock:ck_dfo_mar_harengus_4vwx","ck_dfo_mar_harengus_4vwx","","matched","unresolved","screened","imported","DFO","Maritimes","DFO:Maritimes:Atlantic Herring - Coastal Nova Scotia | DFO:Maritimes:Atlantic Herring - Offshore Scotian Shelf | DFO:Maritimes:Atlantic Herring - Southwest Nova Scotia / Bay of Fundy",3
@@ -655,8 +599,8 @@
 "stock:ck_ices_afwg_mentella_deep_1_2","ck_ices_afwg_mentella_deep_1_2","","matched","unresolved","screened","imported","ICES","Arctic Ocean, Barents Sea, Norwegian Sea","ICES:reb.27.1-2",1
 "stock:ck_ices_afwg_norvegicus_deep1_2","ck_ices_afwg_norvegicus_deep1_2","","matched","ineligible","screened","imported","ICES","Arctic Ocean, Barents Sea, Norwegian Sea","ICES:reg.27.1-2",1
 "stock:ck_ices_afwg_virens_nea_1_2","ck_ices_afwg_virens_nea_1_2","","matched","eligible","screened","imported","ICES","Arctic Ocean, Barents Sea, Norwegian Sea","ICES:pok.27.1-2",1
-"stock:ck_ices_hawg_harengus_cs6_a_s_7b_c","ck_ices_hawg_harengus_cs6_a_s_7b_c","","matched","ineligible","screened","imported","ICES","Celtic Seas","ICES:her.27.6aS7bc",1
 "stock:ck_ices_hawg_harengus_cs_6a_n","ck_ices_hawg_harengus_cs_6a_n","","matched","ineligible","screened","imported","ICES","Celtic Seas","ICES:her.27.6aN",1
+"stock:ck_ices_hawg_harengus_cs6_a_s_7b_c","ck_ices_hawg_harengus_cs6_a_s_7b_c","","matched","ineligible","screened","imported","ICES","Celtic Seas","ICES:her.27.6aS7bc",1
 "stock:ck_ices_nwwg_aeglefinus_fa5b","ck_ices_nwwg_aeglefinus_fa5b","","matched","eligible","screened","imported","ICES","Faroes","ICES:had.27.5b",1
 "stock:ck_ices_nwwg_harengus_ice_summer","ck_ices_nwwg_harengus_ice_summer","","matched","unresolved","screened","imported","ICES","Icelandic Waters","ICES:her.27.5a",1
 "stock:ck_ices_nwwg_morhua_fapl5b1","ck_ices_nwwg_morhua_fapl5b1","","matched","eligible","screened","imported","ICES","Faroes","ICES:cod.27.5b1",1
@@ -706,10 +650,13 @@
 "stock:dfo_western_component_pollock_4xopqrs5","dfo_western_component_pollock_4xopqrs5","","matched","eligible","screened","partial","DFO","Maritimes","DFO:Maritimes:Pollock - NAFO 4X5 (Western Component)",1
 "stock:dfo_white_hake_4t","dfo_white_hake_4t","","matched","eligible","screened","partial","DFO","Gulf","DFO:Gulf:White Hake - NAFO 4T",1
 "stock:dfo_yellowmouth_bc","dfo_yellowmouth_bc","","new","eligible","screened","partial","DFO","Pacific","DFO:Pacific:Yellowmouth Rockfish",1
+"stock:dfo_yellowtail_bc","dfo_yellowtail_bc","","new","eligible","screened","partial","DFO","Pacific","DFO:Pacific:Yellowtail Rockfish - British Columbia coastwide",1
 "stock:dfo_yellowtail_flounder_4t","dfo_yellowtail_flounder_4t","","matched","eligible","screened","partial","DFO","Gulf","DFO:Gulf:Yellowtail Flounder - NAFO 4T",1
+"stock:fra_wpollock_northern_sea_japan","fra_wpollock_northern_sea_japan","","matched","eligible","screened","imported","FRA (Japan)","Northern Sea of Japan; Noto Peninsula to the west coast of Sakhalin","FRA:FRA-SA2026-SC01-01",1
 "stock:ices_anchovy_gulf_cadiz","ices_anchovy_gulf_cadiz","","matched","unresolved","screened","imported","ICES","Bay of Biscay and the Iberian Coast","ICES:ane.27.9aS",1
 "stock:ices_anchovy_west_iberia","ices_anchovy_west_iberia","","matched","ineligible","screened","imported","ICES","Bay of Biscay and the Iberian Coast","ICES:ane.27.9aW",1
 "stock:ices_atlantic_wolffish_iceland_5a","ices_atlantic_wolffish_iceland_5a","","new","eligible","screened","partial","ICES","Icelandic Waters","ICES:caa.27.5a",1
+"stock:ices_bay_biscay_anchovy_8","ices_bay_biscay_anchovy_8","","matched","eligible","screened","partial","ICES","ICES Subarea 8 (Bay of Biscay)","ICES:ane.27.8",1
 "stock:ices_bluewhiting_northeast_atlantic","ices_bluewhiting_northeast_atlantic","","matched","eligible","screened","imported","ICES","Arctic Ocean, Bay of Biscay and the Iberian Coast, Celtic Seas, Faroes, Greater North Sea, Icelandic Waters, Norwegian Sea, Oceanic Northeast Atlantic","ICES:whb.27.1-91214",1
 "stock:ices_cod_north_sea","ices_cod_north_sea","","matched","unresolved","screened","not_started","ICES","Celtic Seas, Greater North Sea","ICES:cod.27.46a7d20",1
 "stock:ices_cod_northeast_arctic","ices_cod_northeast_arctic","","matched","eligible","screened","imported","ICES","Arctic Ocean, Barents Sea, Norwegian Sea","ICES:cod.27.1-2",1
@@ -717,7 +664,9 @@
 "stock:ices_cod_southern_coastal","ices_cod_southern_coastal","","matched","ineligible","screened","imported","ICES","Arctic Ocean, Norwegian Sea","ICES:cod.27.2.coastS",1
 "stock:ices_cod_west_greenland_inshore","ices_cod_west_greenland_inshore","","new","eligible","screened","partial","ICES","Greenland Sea","ICES:cod.21.1.isc",1
 "stock:ices_cod_west_greenland_offshore","ices_cod_west_greenland_offshore","","new","eligible","screened","partial","ICES","Greenland Sea","ICES:cod.21.1.osc",1
+"stock:ices_four_spot_megrim_8c9a","ices_four_spot_megrim_8c9a","","matched","eligible","screened","partial","ICES","Southern Bay of Biscay and Atlantic Iberian waters East","ICES:ldb.27.8c9a",1
 "stock:ices_golden_redfish_561214","ices_golden_redfish_561214","","matched","eligible","screened","partial","ICES","Arctic Ocean, Greenland Sea, Icelandic Waters","ICES:reg.27.561214",1
+"stock:ices_greater_silver_smelt_5a14","ices_greater_silver_smelt_5a14","","matched","eligible","screened","partial","ICES","Greenland Sea, Icelandic Waters","ICES:aru.27.5a14",1
 "stock:ices_greater_silver_smelt_5b6a","ices_greater_silver_smelt_5b6a","","matched","eligible","screened","partial","ICES","Divisions 5.b and 6.a (Faroes grounds and west of Scotland)","ICES:aru.27.5b6a",1
 "stock:ices_haddock_iceland","ices_haddock_iceland","","matched","eligible","screened","imported","ICES","Icelandic Waters","ICES:had.27.5a",1
 "stock:ices_haddock_north_sea","ices_haddock_north_sea","","matched","eligible","screened","imported","ICES","Celtic Seas, Greater North Sea","ICES:had.27.46a20",1
@@ -727,11 +676,15 @@
 "stock:ices_herring_north_sea","ices_herring_north_sea","","matched","eligible","screened","imported","ICES","Greater North Sea","ICES:her.27.3a47d",1
 "stock:ices_herring_norwegian_spring_spawning","ices_herring_norwegian_spring_spawning","","matched","eligible","screened","imported","ICES","Faroes, Greater North Sea, Icelandic Waters, Norwegian Sea","ICES:her.27.1-24a514a",1
 "stock:ices_herring_western_baltic","ices_herring_western_baltic","","matched","eligible","screened","imported","ICES","Baltic Sea, Greater North Sea","ICES:her.27.20-24",1
+"stock:ices_ling_5a","ices_ling_5a","","matched","eligible","screened","partial","ICES","Icelandic Waters","ICES:lin.27.5a",1
 "stock:ices_ling_faroe_5b","ices_ling_faroe_5b","","new","eligible","screened","partial","ICES","Faroes","ICES:lin.27.5b",1
 "stock:ices_norway_pout_north_sea","ices_norway_pout_north_sea","","matched","eligible","screened","imported","ICES","Greater North Sea","ICES:nop.27.3a4",1
 "stock:ices_plaice_baltic_21_32","ices_plaice_baltic_21_32","","matched","eligible","screened","imported","ICES","Baltic Sea","ICES:ple.27.21-32",1
+"stock:ices_plaice_iceland_5a","ices_plaice_iceland_5a","","matched","eligible","screened","partial","ICES","Icelandic Waters","ICES:ple.27.5a",1
 "stock:ices_plaice_north_sea","ices_plaice_north_sea","","matched","eligible","screened","imported","ICES","Greater North Sea","ICES:ple.27.420",1
 "stock:ices_saithe_north_sea","ices_saithe_north_sea","","matched","eligible","screened","imported","ICES","Celtic Seas, Greater North Sea","ICES:pok.27.3a46",1
+"stock:ices_salmo_salar_nac","ices_salmo_salar_nac","","matched","eligible","screened","partial","ICES","Greenland Sea, Oceanic Northeast Atlantic","ICES:sal.nac.all",1
+"stock:ices_salmo_salar_neac","ices_salmo_salar_neac","","matched","eligible","screened","partial","ICES","Arctic Ocean, Azores, Barents Sea, Bay of Biscay and the Iberian Coast, Celtic Seas, Faroes, Greater North Sea, Greenland Sea, Icelandic Waters, Norwegian Sea, Oceanic Northeast Atlantic","ICES:sal.neac.all",1
 "stock:ices_sandeel_area_1r","ices_sandeel_area_1r","","matched","eligible","screened","imported","ICES","Greater North Sea","ICES:san.sa.1r",1
 "stock:ices_sandeel_area_2r","ices_sandeel_area_2r","","matched","eligible","screened","imported","ICES","Greater North Sea","ICES:san.sa.2r",1
 "stock:ices_sandeel_area_3r","ices_sandeel_area_3r","","matched","eligible","screened","imported","ICES","Greater North Sea","ICES:san.sa.3r",1
@@ -739,19 +692,109 @@
 "stock:ices_seabass_8ab","ices_seabass_8ab","","new","eligible","screened","partial","ICES","Bay of Biscay and the Iberian Coast","ICES:bss.27.8ab",1
 "stock:ices_sole_celtic_south_7hk","ices_sole_celtic_south_7hk","","matched","ineligible","screened","not_started","ICES","Celtic Seas","ICES:sol.27.7h-k",1
 "stock:ices_sprat_baltic","ices_sprat_baltic","","matched","eligible","screened","imported","ICES","Baltic Sea","ICES:spr.27.22-32",1
+"stock:ices_tusk_5a14","ices_tusk_5a14","","matched","unresolved","screened","partial","ICES","Greenland Sea, Icelandic Waters","ICES:usk.27.5a14",1
 "stock:ices_whg_27_7b_ce_k","ices_whg_27_7b_ce_k","","new","eligible","screened","partial","ICES","Celtic Seas, Greater North Sea","ICES:whg.27.7b-ce-k",1
 "stock:ices_whiting_north_sea","ices_whiting_north_sea","","matched","eligible","screened","imported","ICES","Greater North Sea","ICES:whg.27.47d",1
+"stock:ifop_merluza_comun_up","ifop_merluza_comun_up","","matched","unresolved","screened","partial","IFOP","Chile: maritime area from the Coquimbo Region to 41 deg 28.6 min S (Unidad de Pesqueria IV-41 deg 28.6 min S)","IFOP:merluza_comun_UP",1
+"stock:iphc_pacific_halibut","iphc_pacific_halibut","","matched","eligible","screened","partial","DFO | NOAA","NWFSC / AFSC | Pacific","DFO:Pacific:Pacific Halibut | NOAA:11082",2
 "stock:joint_hake_coastal","joint_hake_coastal","","matched","eligible","screened","imported","DFO | NOAA","NWFSC / SWFSC | Pacific","DFO:Pacific:Pacific Hake - Offshore | NOAA:10523",2
-"stock:mpi_hoki_hok1","mpi_hoki_hok1","","new","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:HOK1",1
+"stock:mpi_blue_cod_bco5","mpi_blue_cod_bco5","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:BCO5",1
+"stock:mpi_bluenose_nz","mpi_bluenose_nz","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:BNS_NZ",1
+"stock:mpi_gemfish_northern_ski1_ski2","mpi_gemfish_northern_ski1_ski2","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:SKI1+SKI2",1
+"stock:mpi_gemfish_southern_ski3_ski7","mpi_gemfish_southern_ski3_ski7","","matched","unresolved","screened","partial","Fisheries New Zealand","New Zealand","MPI:SKI3+SKI7",1
+"stock:mpi_hake_hak1_subantarctic","mpi_hake_hak1_subantarctic","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:HAK1:SubAntarctic",1
+"stock:mpi_hake_hak7_wcsi","mpi_hake_hak7_wcsi","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:HAK7:WCSI",1
+"stock:mpi_hoki_hok1","mpi_hoki_hok1","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:HOK1",1
+"stock:mpi_kahawai_kah1","mpi_kahawai_kah1","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:KAH1",1
+"stock:mpi_ling_lin56_lin6b","mpi_ling_lin56_lin6b","","matched","unresolved","screened","partial","Fisheries New Zealand","New Zealand","MPI:LIN56+LIN6B",1
+"stock:mpi_ling_lin7wc","mpi_ling_lin7wc","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:LIN7WC",1
+"stock:mpi_orh3b_chatham_rise","mpi_orh3b_chatham_rise","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:ORH3B",1
+"stock:mpi_orh7a_challenger","mpi_orh7a_challenger","","matched","ineligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:ORH7A",1
+"stock:mpi_red_gurnard_gur3","mpi_red_gurnard_gur3","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:GUR3",1
+"stock:mpi_red_gurnard_gur7","mpi_red_gurnard_gur7","","matched","ineligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:GUR7",1
+"stock:mpi_sbw_sbw6i","mpi_sbw_sbw6i","","matched","unresolved","screened","partial","Fisheries New Zealand","New Zealand","MPI:SBW6I",1
+"stock:mpi_snapper_sna1","mpi_snapper_sna1","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:SNA1",1
+"stock:mpi_snapper_sna7","mpi_snapper_sna7","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:SNA7",1
+"stock:mpi_snapper_sna8","mpi_snapper_sna8","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:SNA8",1
+"stock:mpi_tarakihi_eastern","mpi_tarakihi_eastern","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:TAR:EASTERN",1
+"stock:mpi_tarakihi_western","mpi_tarakihi_western","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:TAR:WESTERN",1
+"stock:mpi_trevally_tre7","mpi_trevally_tre7","","matched","eligible","screened","partial","Fisheries New Zealand","New Zealand","MPI:TRE7",1
+"stock:nafo_american_plaice_3lno","nafo_american_plaice_3lno","","matched","eligible","screened","partial","NAFO","Divisions 3LNO","NAFO:american_plaice.3LNO",1
+"stock:nafo_cod_3m","nafo_cod_3m","","matched","eligible","screened","partial","NAFO","Division 3M (Flemish Cap)","NAFO:cod.3M",1
+"stock:nafo_cod_3no","nafo_cod_3no","","matched","eligible","screened","partial","NAFO","Divisions 3NO","NAFO:cod.3NO",1
+"stock:nafo_redfish_3m","nafo_redfish_3m","","matched","eligible","screened","partial","NAFO","Division 3M (Flemish Cap)","NAFO:redfish.3M",1
 "stock:nefsc_atlantic_mackerel","nefsc_atlantic_mackerel","","matched","eligible","screened","imported","NOAA","NEFSC","NOAA:10164",1
 "stock:nefsc_cod_georges_bank","nefsc_cod_georges_bank","","matched","unresolved","screened","imported","NOAA","NEFSC","NOAA:10509",1
 "stock:nefsc_haddock_georges_bank","nefsc_haddock_georges_bank","","matched","unresolved","screened","imported","NOAA","NEFSC","NOAA:10520",1
 "stock:nefsc_summer_flounder","nefsc_summer_flounder","","matched","eligible","screened","imported","NOAA","NEFSC","NOAA:10191",1
 "stock:nefsc_witch_flounder_unit","nefsc_witch_flounder_unit","","matched","ineligible","screened","imported","NOAA","NEFSC","NOAA:10014",1
 "stock:noaa_acadian_redfish_gom_gb","noaa_acadian_redfish_gom_gb","","new","eligible","screened","partial","NOAA","NEFSC","NOAA:10455",1
+"stock:noaa_alaska_sablefish","noaa_alaska_sablefish","","matched","eligible","screened","imported","NOAA","AFSC","NOAA:10956",1
+"stock:noaa_atlantic_cobia","noaa_atlantic_cobia","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:12149",1
+"stock:noaa_black_rockfish_california","noaa_black_rockfish_california","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:17194 | NOAA:17195",2
 "stock:noaa_black_rockfish_oregon","noaa_black_rockfish_oregon","","new","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:14407",1
+"stock:noaa_black_rockfish_washington","noaa_black_rockfish_washington","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:14409",1
+"stock:noaa_blue_deacon_california","noaa_blue_deacon_california","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:14821",1
+"stock:noaa_blue_deacon_oregon","noaa_blue_deacon_oregon","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:14822",1
+"stock:noaa_bluefish_atlantic_coast","noaa_bluefish_atlantic_coast","","matched","eligible","screened","partial","NOAA","NEFSC","NOAA:10388",1
+"stock:noaa_bocaccio_southern_pacific_coast","noaa_bocaccio_southern_pacific_coast","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10413",1
+"stock:noaa_bsai_rougheye_blackspotted","noaa_bsai_rougheye_blackspotted","","matched","eligible","screened","partial","NOAA","AFSC","NOAA:11382",1
+"stock:noaa_butterfish_gom_cape_hatteras","noaa_butterfish_gom_cape_hatteras","","matched","eligible","screened","partial","NOAA","NEFSC","NOAA:10187",1
+"stock:noaa_cabezon_oregon","noaa_cabezon_oregon","","new","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:12193",1
+"stock:noaa_california_scorpionfish_southern_california","noaa_california_scorpionfish_southern_california","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10461",1
 "stock:noaa_canary_rockfish_pacific_coast","noaa_canary_rockfish_pacific_coast","","new","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10415",1
+"stock:noaa_chilipepper_pacific_coast","noaa_chilipepper_pacific_coast","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:17357",1
+"stock:noaa_china_rockfish_central_pacific_coast","noaa_china_rockfish_central_pacific_coast","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:14430",1
+"stock:noaa_china_rockfish_northern_pacific_coast","noaa_china_rockfish_northern_pacific_coast","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:14410",1
+"stock:noaa_china_rockfish_southern_pacific_coast","noaa_china_rockfish_southern_pacific_coast","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:14429",1
+"stock:noaa_cobia_gulf_mexico_2020","noaa_cobia_gulf_mexico_2020","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10390",1
+"stock:noaa_copper_rockfish_california","noaa_copper_rockfish_california","","new","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:15332 | NOAA:15333",2
+"stock:noaa_cowcod_southern_california","noaa_cowcod_southern_california","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10443",1
+"stock:noaa_darkblotched_rockfish_pacific","noaa_darkblotched_rockfish_pacific","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10562",1
+"stock:noaa_flathead_sole_bsai","noaa_flathead_sole_bsai","","matched","eligible","screened","partial","NOAA","AFSC","NOAA:10015",1
+"stock:noaa_gag_gulf","noaa_gag_gulf","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10348",1
+"stock:noaa_gag_south_atlantic","noaa_gag_south_atlantic","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10349",1
+"stock:noaa_goa_dusky_rockfish","noaa_goa_dusky_rockfish","","matched","eligible","screened","partial","NOAA","AFSC","NOAA:10559",1
+"stock:noaa_goa_rex_sole","noaa_goa_rex_sole","","matched","eligible","screened","partial","NOAA","AFSC","NOAA:10058 | NOAA:15410 | NOAA:15411",3
+"stock:noaa_goa_rougheye_blackspotted","noaa_goa_rougheye_blackspotted","","matched","eligible","screened","partial","NOAA","AFSC","NOAA:11443",1
+"stock:noaa_golden_tilefish_mid_atlantic","noaa_golden_tilefish_mid_atlantic","","matched","eligible","screened","partial","NOAA","NEFSC","NOAA:10385",1
+"stock:noaa_golden_tilefish_south_atlantic","noaa_golden_tilefish_south_atlantic","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10384",1
+"stock:noaa_gopher_black_yellow_s_of_4010n","noaa_gopher_black_yellow_s_of_4010n","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:15052",1
+"stock:noaa_gray_snapper_gulf","noaa_gray_snapper_gulf","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10221",1
+"stock:noaa_greater_amberjack_south_atlantic","noaa_greater_amberjack_south_atlantic","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10208",1
+"stock:noaa_gulf_golden_tilefish","noaa_gulf_golden_tilefish","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10383",1
+"stock:noaa_gulf_gray_triggerfish","noaa_gulf_gray_triggerfish","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10062",1
+"stock:noaa_gulf_red_snapper","noaa_gulf_red_snapper","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10230",1
+"stock:noaa_kelp_greenling_oregon","noaa_kelp_greenling_oregon","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10462",1
+"stock:noaa_lingcod_northern_pacific_coast","noaa_lingcod_northern_pacific_coast","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:12194",1
+"stock:noaa_northern_anchovy_central_subpopulation","noaa_northern_anchovy_central_subpopulation","","matched","eligible","screened","partial","NOAA","SWFSC","NOAA:10574",1
+"stock:noaa_northern_rockfish_bsai","noaa_northern_rockfish_bsai","","matched","eligible","screened","partial","NOAA","AFSC","NOAA:10416",1
+"stock:noaa_northern_rockfish_goa","noaa_northern_rockfish_goa","","matched","eligible","screened","partial","NOAA","AFSC","NOAA:10417",1
 "stock:noaa_pacific_coast_dover_sole","noaa_pacific_coast_dover_sole","","new","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10022",1
+"stock:noaa_pacific_coast_longnose_skate","noaa_pacific_coast_longnose_skate","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10731",1
+"stock:noaa_pacific_coast_rex_sole","noaa_pacific_coast_rex_sole","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10059",1
+"stock:noaa_pacific_mackerel_pacific_coast","noaa_pacific_mackerel_pacific_coast","","matched","eligible","screened","partial","NOAA","SWFSC","NOAA:10163",1
+"stock:noaa_petrale_sole_pacific_coast","noaa_petrale_sole_pacific_coast","","new","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10011",1
+"stock:noaa_quillback_rockfish_california","noaa_quillback_rockfish_california","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:15342",1
+"stock:noaa_red_grouper_gom","noaa_red_grouper_gom","","new","eligible","screened","partial","NOAA","SEFSC","NOAA:10331",1
+"stock:noaa_red_grouper_south_atlantic","noaa_red_grouper_south_atlantic","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10332",1
 "stock:noaa_sablefish_pacific_coast","noaa_sablefish_pacific_coast","","new","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10466",1
+"stock:noaa_snowy_grouper_south_atlantic","noaa_snowy_grouper_south_atlantic","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10339",1
+"stock:noaa_south_atlantic_red_porgy","noaa_south_atlantic_red_porgy","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10100",1
+"stock:noaa_south_atlantic_red_snapper","noaa_south_atlantic_red_snapper","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10231",1
+"stock:noaa_south_atlantic_spanish_mackerel","noaa_south_atlantic_spanish_mackerel","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10174",1
+"stock:noaa_southeastern_us_mutton_snapper","noaa_southeastern_us_mutton_snapper","","new","eligible","screened","partial","NOAA","SEFSC","NOAA:11342",1
+"stock:noaa_spiny_dogfish_pacific_coast","noaa_spiny_dogfish_pacific_coast","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10702",1
+"stock:noaa_uswc_rougheye_blackspotted","noaa_uswc_rougheye_blackspotted","","new","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:14516",1
+"stock:noaa_vermilion_rockfish_or_wa","noaa_vermilion_rockfish_or_wa","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:15338 | NOAA:15339",2
+"stock:noaa_vermilion_snapper_gulf","noaa_vermilion_snapper_gulf","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10256",1
+"stock:noaa_vermilion_snapper_south_atlantic","noaa_vermilion_snapper_south_atlantic","","matched","eligible","screened","partial","NOAA","SEFSC","NOAA:10257",1
+"stock:noaa_vermilion_sunset_northern_california","noaa_vermilion_sunset_northern_california","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:15335",1
+"stock:noaa_vermilion_sunset_southern_california","noaa_vermilion_sunset_southern_california","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:15310",1
 "stock:noaa_west_coast_widow","noaa_west_coast_widow","","new","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10568",1
 "stock:noaa_west_coast_yelloweye","noaa_west_coast_yelloweye","","new","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10426",1
+"stock:noaa_yellowtail_rockfish_north","noaa_yellowtail_rockfish_north","","matched","eligible","screened","partial","NOAA","NWFSC / SWFSC","NOAA:10393",1
+"stock:npfc_chub_mackerel_nw_pacific","npfc_chub_mackerel_nw_pacific","","matched","unresolved","screened","partial","NPFC","Northwest Pacific Ocean; NPFC Convention Area and Member EEZs","NPFC:CM_NWPO",1
+"stock:wcpfc_south_pacific_albacore","wcpfc_south_pacific_albacore","","matched","eligible","screened","partial","NOAA","PIFSC","NOAA:11688",1
+"stock:wcpfc_wcpo_bigeye","wcpfc_wcpo_bigeye","","matched","eligible","screened","partial","NOAA","SWFSC / PIFSC","NOAA:11684",1
+"stock:wcpfc_wcpo_yellowfin","wcpfc_wcpo_yellowfin","","matched","eligible","screened","partial","NOAA","PIFSC","NOAA:11694",1
