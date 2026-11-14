@@ -216,7 +216,7 @@
 "candidate:ices_small_eyed_ray_7de","","ices_small_eyed_ray_7de","new","ineligible","screened","not_started","ICES","Celtic Seas, Greater North Sea","ICES:rje.27.7de",1
 "candidate:ices_small_eyed_ray_7fg","","ices_small_eyed_ray_7fg","new","ineligible","screened","not_started","ICES","Celtic Seas","ICES:rje.27.7fg",1
 "candidate:ices_smooth_hounds_nea","","ices_smooth_hounds_nea","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast, Celtic Seas, Greater North Sea, Oceanic Northeast Atlantic","ICES:sdv.27.nea",1
-"candidate:ices_sol_27_7a","","ices_sol_27_7a","new","unresolved","screened","not_started","ICES","Celtic Seas","ICES:sol.27.7a",1
+"candidate:ices_sol_27_7a","ices_sol_27_7a","ices_sol_27_7a","matched","unresolved","screened","partial","ICES","Celtic Seas","ICES:sol.27.7a",1
 "candidate:ices_sol_27_7bc","","ices_sol_27_7bc","new","ineligible","screened","not_started","ICES","Celtic Seas","ICES:sol.27.7bc",1
 "candidate:ices_sol_27_8ab","","ices_sol_27_8ab","new","unresolved","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:sol.27.8ab",1
 "candidate:ices_sol_27_8c9a","","ices_sol_27_8c9a","new","ineligible","screened","not_started","ICES","Bay of Biscay and the Iberian Coast","ICES:sol.27.8c9a",1
@@ -287,7 +287,7 @@
 "candidate:noaa_american_samoa_przo","","noaa_american_samoa_przo","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:12005",1
 "candidate:noaa_american_samoa_valo","","noaa_american_samoa_valo","new","ineligible","screened","not_started","NOAA","PIFSC","NOAA:12011",1
 "candidate:noaa_atlantic_blacktip_shark","","noaa_atlantic_blacktip_shark","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:11026",1
-"candidate:noaa_atlantic_herring_gom_georges_bank","","noaa_atlantic_herring_gom_georges_bank","new","unresolved","screened","not_started","NOAA","NEFSC","NOAA:10572",1
+"candidate:noaa_atlantic_herring_gom_georges_bank","noaa_atlantic_herring_gom_georges_bank","noaa_atlantic_herring_gom_georges_bank","matched","unresolved","screened","partial","NOAA","NEFSC","NOAA:10572",1
 "candidate:noaa_atlantic_large_coastal_shark_complex","","noaa_atlantic_large_coastal_shark_complex","new","ineligible","screened","not_started","NOAA","SEFSC","NOAA:10967",1
 "candidate:noaa_atlantic_menhaden","","noaa_atlantic_menhaden","new","unresolved","screened","not_started","NOAA","NEFSC / SEFSC","NOAA:11089",1
 "candidate:noaa_atlantic_salmon_gom","","noaa_atlantic_salmon_gom","new","ineligible","screened","not_started","NOAA","NEFSC","NOAA:10498",1
