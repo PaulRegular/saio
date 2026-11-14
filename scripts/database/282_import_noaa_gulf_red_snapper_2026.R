@@ -554,8 +554,8 @@ if (!write_mode) {
     "N-at-age or instantaneous F surfaces or output uncertainty are published in these tables."
   )
   candidates$survey_age_evidence[candidate_row] <- paste(
-    "Aggregate mean-one-scaled abundance indices and paired source CVs from SEDAR 98 Tables 5.8.1-5.8.3 are imported.",
-    "The report separately describes survey age compositions, which may be derived from age-length keys, but numerical likelihood arrays were unavailable and remain unimported."
+    "The 332 candidate aggregate indices and source CVs from SEDAR 98 Tables 5.8.1-5.8.3 are imported separately from the 315 final-model index observations in Tables 59-75.",
+    "The report separately describes survey age compositions, which may be derived from age-length keys, but the final-run numerical likelihood arrays were unavailable and remain unimported."
   )
   candidates$notes[candidate_row] <- paste(
     "The official final report and supporting data papers are cached under",

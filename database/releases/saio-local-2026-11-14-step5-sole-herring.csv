@@ -1,6 +1,6 @@
 "release","schema_version","table","asset","rows","csv_bytes","csv_sha256","asset_bytes","asset_sha256"
 "saio-local-2026-11-14-step5-sole-herring","1","stocks","stocks.csv.gz","267","121174","a100b883d93a8404db2f941ab2df0b36ee3f58a54b9d7d0a2e5d8d90ae5a2210","26916","3e0ec39485bb03089df12c181539a34786cefd142a415ecd6e1dc990b3ac318c"
-"saio-local-2026-11-14-step5-sole-herring","1","assessments","assessments.csv.gz","297","245506","fe03c29b8aab702447bb309d0c8ec844c4dd13f2db2b5ab3cdebd7940b86315b","58434","697f44eaaec89d28bb62f6440065e627d05a7ad576f290c009669f341fcd54ee"
+"saio-local-2026-11-14-step5-sole-herring","1","assessments","assessments.csv.gz","297","245417","81b84d76df607308a5c223879b08cb6d2b1524c2645a4dc75dd423600fd8aa85","58427","848ac7a3f65305dcf8e6c850540fbbbca71c1fed2a9899384538c3fc7904a53d"
 "saio-local-2026-11-14-step5-sole-herring","1","assumptions","assumptions.csv.gz","5787","1781660","c8f294d5103a368a18f184f5d58967ab4edfceec62934e13216f02ba71755d3d","305059","80f03ed19f0605e6e0cfce505986bb30b4a72dbadec0bcafcff5f4d417b8f34b"
 "saio-local-2026-11-14-step5-sole-herring","1","inputs","inputs.csv.gz","4724756","2893515629","91eca77799998c13040c9284d34139787b9be4e0494d856c8409eac173708fa8","46055657","4901771640fb0e7988dafe70c76046059faf3fc7761a4c44f60aac6e303cafe6"
 "saio-local-2026-11-14-step5-sole-herring","1","outputs","outputs.csv.gz","5761547","1960469155","2754e6a0f22b26dbbe59f5c9b0d5b78b15d6c1f5d20a6d04ba6ad9c489c91b8a","45564641","c1adaac902d4fc803fa5afdcc1e66cc5f446cffa2439656822cfcbfa45ec6b9b"

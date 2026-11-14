@@ -99,8 +99,15 @@ stopifnot(
   nrow(manifest) == 13L,
   !anyDuplicated(manifest$file),
   all(grepl("^[[:xdigit:]]{64}$", manifest$sha256)),
-  all(manifest$retrieved_on[manifest$file != "SEDAR98_DW13.pdf"] == "2026-11-09"),
-  manifest$retrieved_on[manifest$file == "SEDAR98_DW13.pdf"] == "2026-11-11",
+  all(manifest$retrieved_on[manifest$file %in% c(
+    "SEDAR98_DW02.pdf", "SEDAR98_DW03.pdf", "SEDAR98_DW05.pdf",
+    "SEDAR98_DW13.pdf", "SEDAR98_DW16.pdf", "SEDAR98_DW17.pdf",
+    "SEDAR98_DW19.pdf", "SEDAR98_DW24.pdf", "SEDAR98_DW26.pdf"
+  )] == "2026-11-14"),
+  all(manifest$retrieved_on[manifest$file %in% c(
+    "SEDAR98_SAR.pdf", "SEDAR98_DW06.pdf", "SEDAR98_DW07.pdf",
+    "SEDAR98_DW09.pdf"
+  )] == "2026-11-09"),
   nrow(inputs) == 7757L,
   sum(inputs$measure == "relative_abundance_index") == 647L,
   sum(inputs$measure == "abundance_index_cv") == 332L,
@@ -363,11 +370,12 @@ gulf_candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
 gulf_candidate <- gulf_candidate[gulf_candidate$candidate_id == "NOAA:10230", , drop = FALSE]
 survey_evidence <- gulf_candidate$survey_age_evidence
 stopifnot(nrow(gulf_candidate) == 1L,
-  grepl("remain separate from 315 final-model indices", survey_evidence, fixed = TRUE),
+  grepl("332 candidate aggregate indices", survey_evidence, fixed = TRUE),
+  grepl("315 final-model index observations", survey_evidence, fixed = TRUE),
   grepl("Tables 23-58", gulf_candidate$catch_age_evidence, fixed = TRUE),
   grepl("Tables 59-75", survey_evidence, fixed = TRUE),
+  grepl("Table 99", gulf_candidate$catch_age_evidence, fixed = TRUE),
   grepl("Tables 12-19", gulf_candidate$output_evidence, fixed = TRUE),
-  grepl("Tables 20-22", gulf_candidate$output_evidence, fixed = TRUE),
-  grepl("Table 99", gulf_candidate$output_evidence, fixed = TRUE))
+  grepl("Tables 20-22", gulf_candidate$output_evidence, fixed = TRUE))
 
 cat("NOAA Gulf red snapper 2026 source inputs, outputs, status, units, derivation and provenance passed.\n")

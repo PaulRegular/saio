@@ -622,12 +622,14 @@ update_database_metadata <- function() {
     "Commercial vertical-line and bottom-longline discard estimates for 1996-2023, with source SEs,",
     "are imported from DW-03 Tables 11 and 17. Recreational landings and discards by mode, area and",
     "federal open/closed status for 1981-2023 are imported from DW-05 Tables 2.1-2.3.",
-    "These are aggregate removals; numerical catch-at-age likelihood arrays are not available."
+    "Final-model landings and discard observations, log-scale standard errors, expected removals,",
+    "and mean weights from SAR Tables 23-58 are also imported, separately from the source-native data.",
+    "Aggregate shrimp-trawl bycatch numbers by area from SAR Table 99 are imported for 1983-2023.",
+    "These remain aggregate removals; numerical catch-at-age likelihood arrays are not available."
   )
   candidates$survey_age_evidence[candidate_row] <- paste(
-    "Aggregate mean-one-scaled abundance indices and source CVs from SEDAR 98 Tables 5.8.1-5.8.3 are imported.",
-    "Age compositions for some survey fleets are described separately and may be derived from age-length keys;",
-    "their numerical likelihood arrays were not available in the reviewed sources."
+    "The 332 candidate aggregate indices and source CVs from SEDAR 98 Tables 5.8.1-5.8.3 are imported separately from the 315 final-model index observations in Tables 59-75.",
+    "The report separately describes survey age compositions, which may be derived from age-length keys, but the final-run numerical likelihood arrays were unavailable and remain unimported."
   )
   candidates$weights_evidence[candidate_row] <- paste(
     "Stock weights at age are generated from estimated area-specific growth and fixed length-weight relationships.",
