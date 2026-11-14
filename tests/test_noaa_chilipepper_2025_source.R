@@ -33,7 +33,13 @@ manifest <- read.csv("provenance/discovery_noaa_chilipepper_2025/sources.csv",
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == "NOAA:17357", , drop = FALSE]
-unit <- inventory[inventory$candidate_unit_id == "noaa_stocksmart_17357", , drop = FALSE]
+inventory_candidate_ids <- strsplit(ifelse(is.na(inventory$candidate_ids), "",
+  inventory$candidate_ids), "|", fixed = TRUE)
+inventory_matches <- vapply(inventory_candidate_ids,
+  function(ids) "NOAA:17357" %in% trimws(ids), logical(1L))
+inventory_matches <- inventory_matches | (!is.na(inventory$matched_stock_id) &
+  inventory$matched_stock_id == stock_id)
+unit <- inventory[inventory_matches, , drop = FALSE]
 selection <- batch[batch$candidate_id == "NOAA:17357", , drop = FALSE]
 index_obs <- inputs[inputs$type == "index" & startsWith(inputs$observation_id, "CPUE:"), , drop = FALSE]
 catch <- inputs[inputs$type == "catch" & inputs$measure == "catch_biomass", , drop = FALSE]

@@ -1,5 +1,5 @@
 root <- "."
-source_dir <- file.path(root, "../../discovery_noaa_chilipepper_2025")
+source_dir <- file.path(root, "source_cache", "discovery_noaa_chilipepper_2025")
 model_dir <- file.path(source_dir, "model_input", "PFMC Shared")
 assessment_id <- "noaa_chilipepper_2025"
 stock_id <- "noaa_chilipepper_pacific_coast"
@@ -10,13 +10,26 @@ model_url <- "https://www.pcouncil.org/documents/chilipepper-rockfish-2025-model
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
-.libPaths(c(file.path(root, "source_cache/r-lib"), .libPaths()))
+.libPaths(c(.libPaths(), file.path(root, "source_cache", "R-library")))
 source(file.path(root, "scripts/database/pacific_tables.R"))
 source(file.path(root, "scripts/database/candidate_register_io.R"))
 
 manifest <- read.csv(file.path(root, "provenance/discovery_noaa_chilipepper_2025/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
-sha256_file <- function(path) toupper(unname(tools::sha256sum(path)))
+sha256_file <- function(path) {
+  if (.Platform$OS.type == "windows") {
+    result <- system2("certutil.exe", c("-hashfile", shQuote(path), "SHA256"),
+      stdout = TRUE, stderr = FALSE)
+    hash <- toupper(trimws(grep(
+      "^[[:space:]]*[[:xdigit:]]{64}[[:space:]]*$", result, value = TRUE
+    )))
+  } else {
+    result <- system2("sha256sum", shQuote(path), stdout = TRUE, stderr = FALSE)
+    hash <- toupper(strsplit(result, "[[:space:]]+")[[1L]][1L])
+  }
+  if (length(hash) != 1L) stop("Could not hash source file: ", path, call. = FALSE)
+  hash
+}
 verify_source <- function(file) {
   row <- manifest[manifest$file == file, , drop = FALSE]
   path <- file.path(source_dir, file)
@@ -418,7 +431,13 @@ if (write_mode) {
 
   inventory_path <- file.path(root, "discovery/inventory_units.csv")
   inventory <- read.csv(inventory_path, stringsAsFactors = FALSE, colClasses = "character", check.names = FALSE)
-  inventory_row <- which(inventory$candidate_unit_id == candidate_unit_id)
+  inventory_candidate_ids <- strsplit(ifelse(is.na(inventory$candidate_ids), "",
+    inventory$candidate_ids), "|", fixed = TRUE)
+  inventory_matches <- vapply(inventory_candidate_ids,
+    function(ids) candidate_id %in% trimws(ids), logical(1L))
+  inventory_matches <- inventory_matches | (!is.na(inventory$candidate_unit_id) &
+    inventory$candidate_unit_id == candidate_unit_id)
+  inventory_row <- which(inventory_matches)
   if (length(inventory_row) != 1L || !inventory$import_status[inventory_row] %in% c("not_started", "partial")) {
     stop("Expected one unimported inventory unit for NOAA:17357.", call. = FALSE)
   }

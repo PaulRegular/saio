@@ -4,7 +4,7 @@ assessment_id <- paste0(stock_id, "_2025")
 candidate_ids <- c("NOAA:11082", "DFO:Pacific:Pacific Halibut")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
-.libPaths(c(file.path(root, "source_cache", "R-library"), .libPaths()))
+.libPaths(c(.libPaths(), file.path(root, "source_cache", "R-library")))
 if (!requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install pdftools to read the cached IPHC assessment table.", call. = FALSE)
 }
@@ -19,11 +19,26 @@ if (is.na(cache)) stop("The gitignored IPHC source cache is missing.", call. = F
 manifest_path <- file.path(root, "provenance", "discovery_iphc_pacific_halibut", "sources.csv")
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE)
+sha256_file <- function(path) {
+  if (.Platform$OS.type == "windows") {
+    result <- system2("certutil.exe", c("-hashfile", shQuote(path), "SHA256"),
+      stdout = TRUE, stderr = FALSE)
+    hash <- toupper(trimws(grep(
+      "^[[:space:]]*[[:xdigit:]]{64}[[:space:]]*$", result, value = TRUE
+    )))
+  } else {
+    result <- system2("sha256sum", shQuote(path), stdout = TRUE, stderr = FALSE)
+    hash <- toupper(strsplit(result, "[[:space:]]+")[[1L]][1L])
+  }
+  if (length(hash) != 1L) stop("Could not hash source file: ", path, call. = FALSE)
+  hash
+}
+
 verify_source <- function(file) {
   path <- file.path(cache, file)
   row <- which(manifest$file == file)
   if (length(row) != 1L || !file.exists(path) ||
-      tolower(unname(tools::sha256sum(path))) != tolower(manifest$sha256[row])) {
+      !identical(sha256_file(path), toupper(manifest$sha256[row]))) {
     stop("Cached IPHC source differs from its provenance record: ", file,
       call. = FALSE)
   }
