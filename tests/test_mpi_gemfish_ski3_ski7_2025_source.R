@@ -66,7 +66,7 @@ stopifnot(
   candidate$import_status == "partial",
   nrow(manifest) == 4L,
   setequal(basename(manifest$local_file), c(
-    "FAR-2026-39-southern-gemfish-SKI3-SKI7.pdf",
+    "FAR-2026-39-gemfish-SKI3-SKI7-2025-assessment.pdf",
     "FAR-2023-22-southern-gemfish-catch-at-age-2020-21.pdf",
     "FAR-2024-01-southern-gemfish-catch-at-age-2021-22.pdf",
     "FAR-2025-05-southern-gemfish-catch-at-age-2022-23.pdf"

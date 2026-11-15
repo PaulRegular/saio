@@ -31,7 +31,7 @@ stopifnot(
   setequal(basename(manifest$local_file), c(
     "FAR-2026-44-eastern-tarakihi-2026.pdf",
     "FAR-2026-23-western-tarakihi-2026.pdf",
-    "FAR-2026-39-southern-gemfish-SKI3-SKI7.pdf"
+    "FAR-2026-39-gemfish-SKI3-SKI7-2025-assessment.pdf"
   ))
 )
 

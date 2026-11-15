@@ -4,7 +4,7 @@ candidate_path <- file.path(root, 'discovery', 'candidates.csv')
 manifest_path <- file.path(root, 'provenance', 'noaa_snowy_grouper_sedar36u_2021', 'manifest.csv')
 
 files <- c(
-  'sedar36u_report_revised_2021.pdf',
+  'sedar36u_snowy_grouper_report_revised_2021.pdf',
   'sedar36u_wp01_recreational_data_2020.pdf',
   'sedar36u_wp02_management_history_2020.pdf'
 )
@@ -41,7 +41,7 @@ sha256_file <- function(path) {
   tolower(hashes)
 }
 manifest <- data.frame(
-  file = paths, url = urls, revision = revisions,
+  file = sub("^\\./", "", paths), url = urls, revision = revisions,
   retrieved_utc = rep(format(Sys.time(), tz = 'UTC', format = '%Y-%m-%dT%H:%M:%SZ'),
     length(paths)),
   bytes = file.info(paths)$size,

@@ -35,7 +35,7 @@ verify_source <- function(name) {
   path
 }
 
-sar <- verify_source("sedar36u_report_revised_2021.pdf")
+sar <- verify_source("sedar36u_snowy_grouper_report_revised_2021.pdf")
 invisible(verify_source("sedar36u_wp01_recreational_data_2020.pdf"))
 invisible(verify_source("sedar36u_wp02_management_history_2020.pdf"))
 sar_pages <- pdftools::pdf_text(sar)

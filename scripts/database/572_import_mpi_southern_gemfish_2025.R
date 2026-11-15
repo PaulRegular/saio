@@ -8,7 +8,7 @@ assessment_id <- "mpi_gemfish_ski3_ski7_2025"
 candidate_id <- "MPI:SKI3+SKI7"
 
 source_files <- c(
-  "source_cache/rexea_solandri/mpi_gemfish_ski3_ski7_2025/FAR-2026-39-southern-gemfish-SKI3-SKI7.pdf",
+  "source_cache/rexea_solandri/mpi_gemfish_ski3_ski7_2025/FAR-2026-39-gemfish-SKI3-SKI7-2025-assessment.pdf",
   "source_cache/rexea_solandri/mpi_gemfish_ski3_ski7_2025/FAR-2023-22-southern-gemfish-catch-at-age-2020-21.pdf",
   "source_cache/rexea_solandri/mpi_gemfish_ski3_ski7_2025/FAR-2024-01-southern-gemfish-catch-at-age-2021-22.pdf",
   "source_cache/rexea_solandri/mpi_gemfish_ski3_ski7_2025/FAR-2025-05-southern-gemfish-catch-at-age-2022-23.pdf"
