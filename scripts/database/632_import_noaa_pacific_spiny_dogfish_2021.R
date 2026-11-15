@@ -477,18 +477,7 @@ candidates$notes[ci] <- paste(
   "Official 2021 U.S. Pacific Coast production assessment imported from the pinned report and native Stock Synthesis archive.",
   "Inputs retain aggregate catch, relative indices, length compositions and the single 2010 conditional age-at-length sample; there are no direct catch-at-age or age-specific index observations.",
   "Outputs retain N/F/M and biological surfaces; spawning output and recruitment use pup-count units. Published 2021 age-1+ biomass conflicts with archived forecast and both are retained. See source review.")
-inventory_unit_path <- file.path(root, "discovery", "inventory_units.csv")
-unit_lines <- readLines(inventory_unit_path, warn = FALSE, encoding = "UTF-8")
-unit_hit <- grep(paste0('"candidate:', candidate_unit_id, '"'), unit_lines, fixed = TRUE)
-if (length(unit_hit) != 1L) stop("Expected one dogfish inventory unit row.", call. = FALSE)
-unit_row <- read.csv(text = c(unit_lines[1L], unit_lines[unit_hit]), stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-unit_row$matched_stock_id <- stock_id
-unit_row$match_status <- "matched"
-unit_row$import_status <- "partial"
 tmp_unit <- tempfile(fileext = ".csv")
-write.csv(unit_row, tmp_unit, row.names = FALSE, na = "", fileEncoding = "UTF-8")
-unit_lines[unit_hit] <- readLines(tmp_unit, warn = FALSE, encoding = "UTF-8")[-1L]
 unlink(tmp_unit)
 existing_rows <- function(path) {
   rg <- Sys.which("rg")
@@ -547,7 +536,6 @@ write.csv(candidates[ci, , drop = FALSE], tmp_candidate, row.names = FALSE, na =
 candidate_lines[ci + 1L] <- readLines(tmp_candidate, warn = FALSE, encoding = "UTF-8")[-1L]
 unlink(tmp_candidate)
 writeLines(candidate_lines, candidate_path, useBytes = TRUE)
-writeLines(unit_lines, inventory_unit_path, useBytes = TRUE)
 source(file.path(root, "scripts", "database", "002_validate_database.R"), local = TRUE)
 cat("Dogfish source import written and database validation passed.\n")
 

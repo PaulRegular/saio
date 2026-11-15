@@ -3,8 +3,6 @@ database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "noaa_black_rockfish_california_2023")
 model_root <- file.path(cache, "model_files")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_36_2026.csv")
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 
 candidate_ids <- c("NOAA:17194", "NOAA:17195")
@@ -595,14 +593,8 @@ assessments_path <- file.path(database, "assessments.csv")
 stock_existing <- read_table(stocks_path)
 assessment_existing <- read_table(assessments_path)
 candidate <- read_table(candidate_path)
-inventory <- read_table(inventory_path)
-selected <- read_table(selected_path)
 candidate_rows <- match(candidate_ids, candidate$candidate_id)
-inventory_row <- which(inventory$unit_key ==
-  paste0("candidate:", candidate_unit_id))
-selected_row <- which(selected$candidate_unit_id == candidate_unit_id)
 if (anyNA(candidate_rows) || anyDuplicated(candidate_rows) ||
-    length(inventory_row) != 1L || length(selected_row) != 1L ||
     any(candidate$eligibility[candidate_rows] != "eligible") ||
     any(!candidate$import_status[candidate_rows] %in% c("not_started", "partial"))) {
   stop("California black rockfish candidate rows are missing, duplicated, or not ready.",
@@ -721,11 +713,6 @@ for (i in seq_len(nrow(candidate_updates))) {
     "Native observations and outputs remain separated as North and Central components."
   )
 }
-inventory_update <- inventory[inventory_row, , drop = FALSE]
-inventory_update$matched_stock_id <- stock_id
-inventory_update$import_status <- "partial"
-selected_update <- selected[selected_row, , drop = FALSE]
-selected_update$curation_status <- "partial_source_import"
 
 if (dry_run) {
   cat("Dry run parsed ", nrow(inputs), " inputs, ", nrow(assumptions),
@@ -737,10 +724,6 @@ if (dry_run) {
     replace_candidate_register_row(candidate_path, candidate_rows[i],
       candidate_updates[i, , drop = FALSE], candidate_ids[i])
   }
-  replace_csv_register_row(inventory_path, inventory_row, inventory_update,
-    "unit_key", paste0("candidate:", candidate_unit_id))
-  selected[selected_row, ] <- selected_update
-  utils::write.csv(selected, selected_path, row.names = FALSE, na = "")
   cat("Imported ", nrow(inputs), " inputs, ", nrow(assumptions),
     " assumptions, and ", nrow(outputs),
     " outputs for the California Black Rockfish 2023 assessment.\n", sep = "")

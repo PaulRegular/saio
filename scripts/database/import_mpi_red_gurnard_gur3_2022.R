@@ -501,10 +501,6 @@ if (is.na(candidate_row) ||
     candidate_register$eligibility[candidate_row] != "eligible") {
   stop("The GUR 3 candidate is missing, ineligible, or already imported.", call. = FALSE)
 }
-selected <- read.csv("discovery/selections/selected_batch_17_2026.csv", stringsAsFactors = FALSE,
-  colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
-selected_row <- match(candidate_id, selected$candidate_id)
-if (is.na(selected_row)) stop("GUR 3 is missing from its selected batch.", call. = FALSE)
 
 cat("Prepared ", nrow(inputs), " input rows (", nrow(catch_inputs), " catch biomass; ",
   nrow(biomass_inputs), " survey biomass/CV; ", nrow(age_inputs), " age composition; ",
@@ -527,10 +523,5 @@ if (write_mode) {
     "discovery/candidates.csv", candidate_row,
     candidate_register[candidate_row, , drop = FALSE], candidate_id
   )
-  selected$curation_status[selected_row] <- "partial_source_import"
-  write.csv(selected, "discovery/selections/selected_batch_17_2026.csv",
-    row.names = FALSE, na = "")
-  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
-  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("Imported partial GUR 3 source records and refreshed the discovery summaries.\n")
 }

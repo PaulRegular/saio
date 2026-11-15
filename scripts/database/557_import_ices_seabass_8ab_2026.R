@@ -2,7 +2,6 @@ root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "dicentrarchus_labrax/ices_seabass_8ab_2026")
 register_path <- file.path(root, "discovery", "candidates.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 stock_id <- "ices_seabass_8ab"
@@ -340,14 +339,6 @@ register$notes[candidate_row] <- paste(
   "The source provides 90% intervals for population outputs. Run-matched age-specific catch/index inputs and exact survey timing remain unavailable; see the stock source review."
 )
 
-selected <- read.csv(selected_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-selected_row <- which(selected$candidate_id == candidate_id)
-if (length(selected_row) != 1L) stop("Selected-batch entry is missing or duplicated.", call. = FALSE)
-selected$curation_status[selected_row] <- "partial_source_import"
-selected$selection_basis[selected_row] <- paste(
-  "Imported the latest 2026 ICES aggregate catch series, fixed M-at-age assumptions, and annual SSB, age-0 recruitment and Fbar outputs with source intervals.",
-  "Run-matched age-specific catch/index inputs and exact survey timing remain unavailable."
-)
 
 if (dry_run) {
   cat("Validated ICES seabass source import:", nrow(catch_inputs), "aggregate catch rows,",
@@ -360,6 +351,5 @@ if (dry_run) {
   append_rows("inputs.csv", inputs)
   append_rows("outputs.csv", outputs)
   replace_csv_row(register_path, register[candidate_row, , drop = FALSE], "candidate_id", candidate_id)
-  replace_csv_row(selected_path, selected[selected_row, , drop = FALSE], "candidate_id", candidate_id)
   cat("Imported partial ICES 2026 Bay of Biscay seabass data.\n")
 }

@@ -580,21 +580,7 @@ candidate$notes <- paste(
   "The native composition data use the combined-sex code; the fitted SS3 output contains one model sex, ages 0-8+, one fishery and one Acoustic-Trawl survey.")
 candidate$review_date <- format(Sys.Date(), "%Y-%m-%d")
 
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-inventory <- read_csv(inventory_path)
-inventory_i <- candidate_inventory_row(inventory, candidate_id, stock_id)
-inventory$matched_stock_id[inventory_i] <- stock_id
-inventory$match_status[inventory_i] <- "matched"
-inventory$import_status[inventory_i] <- "partial"
 
-selected_path <- file.path(root, "discovery/selections", "selected_batch_23_2026.csv")
-selected <- read_csv(selected_path)
-selected_i <- which(selected$candidate_id == candidate_id)
-if (length(selected_i) != 1L ||
-    !selected$curation_status[selected_i] %in% c("not_started", "imported"))
-  stop("Selected batch register no longer matches this source import.",
-    call. = FALSE)
-selected$curation_status[selected_i] <- "imported"
 
 extracted_files <- list.files(model_files, recursive = TRUE, full.names = TRUE)
 extracted_files <- extracted_files[!dir.exists(extracted_files)]
@@ -672,14 +658,10 @@ if (!dry_run) {
   append_csv_rows(file.path(database, "outputs.csv"), output_data)
   replace_candidate_register_row(candidates_path, candidate_i, candidate,
     candidate_id)
-  replace_register_record(inventory_path, inventory_i, inventory[inventory_i,
-    , drop = FALSE], candidate_id)
-  replace_register_record(selected_path, selected_i, selected[selected_i,
-    , drop = FALSE], candidate_id)
   write.csv(extracted_manifest, file.path(root, "provenance",
     "noaa_pacific_mackerel_2023_model_files.csv"), row.names = FALSE,
     na = "", fileEncoding = "UTF-8")
-  cat("Database and discovery registers updated.\n")
+  cat("Database and candidate register updated.\n")
 } else {
   cat("Dry run: no canonical database or discovery files were changed.\n")
 }

@@ -460,15 +460,10 @@ assessment <- blank_row(names(assessments_table), list(
   notes = "Official 2025 assessment with data through 2024. Native files provide catch, aggregate indices, age/length compositions, and fitted N/B/C/F/M surfaces. No observed catch-at-age, age-specific index, empirical age-specific weight/maturity matrices, or age-specific uncertainty is supplied. Reported spawning output is measured in trillions of eggs, not SSB biomass. Table ii interval unit labels conflict with its figure; see source review."))
 
 candidate_path <- file.path(root, "discovery/candidates.csv")
-inventory_path <- file.path(root, "discovery/inventory_units.csv")
-unworked_path <- file.path(root, "discovery/selections/selected_unworked_2026.csv")
 candidates <- read.csv(candidate_path, colClasses = "character", check.names = FALSE)
-inventory <- read.csv(inventory_path, colClasses = "character", check.names = FALSE)
 ci <- which(candidates$candidate_id == candidate_id)
-ii <- which(inventory$candidate_unit_id == candidate_unit_id)
-if (length(ci) != 1L || length(ii) != 1L || candidates$eligibility[ci] != "eligible" ||
+if (length(ci) != 1L || candidates$eligibility[ci] != "eligible" ||
     (!candidates$import_status[ci] %in% c("not_started", "partial")) ||
-    (!inventory$import_status[ii] %in% c("not_started", "partial")) ||
     (assessment_exists && candidates$matched_stock_id[ci] != stock_id)) {
   stop("The NOAA:14516 candidate register no longer matches the screened assessment.", call. = FALSE)
 }
@@ -487,20 +482,7 @@ candidate_update$detailed_source_url <- paste(report_url, model_url, sep = "; ")
 candidate_update$review_date <- "2026-11-11"
 candidate_update$decision_reason <- "The adopted 2025 assessment has a matching native Stock Synthesis bundle with run-specific inputs and fitted outputs."
 candidate_update$notes <- "Partial source import. Spawning output is in eggs, not SSB; Table ii labels its interval units inconsistently. Catch-at-age is fitted output, not observed input; age-specific biology and uncertainty are not available as source matrices."
-inventory_update <- inventory[ii, , drop = FALSE]
-inventory_update$matched_stock_id <- stock_id
-inventory_update$match_status <- "new"
-inventory_update$import_status <- "partial"
 unworked_updates <- NULL
-if (file.exists(unworked_path)) {
-  unworked <- read.csv(unworked_path, colClasses = "character", check.names = FALSE)
-  ui <- which(unworked$candidate_id == candidate_id)
-  if (length(ui) == 1L) {
-    unworked_updates <- unworked[ui, , drop = FALSE]
-    if ("curation_status" %in% names(unworked_updates)) unworked_updates$curation_status <- "source_curated_partial"
-    if ("import_status" %in% names(unworked_updates)) unworked_updates$import_status <- "partial"
-  }
-}
 
 cat("Prepared ", nrow(input_data), " inputs, ", nrow(assumption_data),
   " assumptions, and ", nrow(output_data), " outputs for NOAA Stock SMART 14516.\n", sep = "")
@@ -508,9 +490,6 @@ cat("Native composition frequencies are unnormalized; fitted catch-at-age is sto
 if (write_mode) {
   append_pacific_case(stock, assessment, assumption_data, input_data, output_data)
   replace_candidate_register_row(candidate_path, ci, candidate_update, candidate_id)
-  replace_csv_register_row(inventory_path, ii, inventory_update, "unit_key", inventory$unit_key[ii])
-  if (!is.null(unworked_updates)) replace_csv_register_row(unworked_path, ui, unworked_updates,
-    "candidate_id", candidate_id)
   source(file.path(root, "scripts/database/002_validate_database.R"), local = new.env(parent = globalenv()))
   cat("Rougheye source records appended and full database validation passed.\n")
 }

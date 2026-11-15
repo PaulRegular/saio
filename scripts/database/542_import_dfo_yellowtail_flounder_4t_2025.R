@@ -132,15 +132,6 @@ candidate_text <- prepare_record_update(candidate_path, "candidate_id", candidat
     notes = "Current DFO 4T unit; imported the official 2025 age-5+ biomass estimate and recent F=0 statement only. Detailed numerical inputs and historical outputs remain blocked by unavailable Research Document 2026/054 PDF. See source_reviews/screening/dfo_gulf_yellowtail_flounder_2025.md."
   ))
 
-selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
-selected <- utils::read.csv(selected_path, stringsAsFactors = FALSE,
-  check.names = FALSE, na.strings = c("", "NA"))
-selected_row <- match(candidate_id, selected$candidate_id)
-if (is.na(selected_row)) stop("Selected-batch candidate row is missing.", call. = FALSE)
-selected$curation_status[selected_row] <- "partial_source_import"
-selected_tmp <- tempfile(tmpdir = dirname(selected_path), fileext = ".csv")
-utils::write.csv(selected, selected_tmp, row.names = FALSE, na = "",
-  fileEncoding = "UTF-8")
 
 db <- file.path(root, "database")
 existing_assessments <- utils::read.csv(file.path(db, "assessments.csv"),
@@ -152,16 +143,14 @@ if (!dry_run && (assessment_id %in% existing_assessments || stock_id %in% existi
 }
 
 if (dry_run) {
-  unlink(selected_tmp)
   cat("Dry run validated one stock, one assessment, 10 assumptions, no numeric input rows, and 4 official summary outputs.\n")
 } else {
   candidate_tmp <- tempfile(tmpdir = dirname(candidate_path), fileext = ".csv")
   writeBin(charToRaw(candidate_text), candidate_tmp)
   append_pacific_case(stock, assessment, assumptions, inputs, outputs)
-  if (!file.copy(candidate_tmp, candidate_path, overwrite = TRUE) ||
-      !file.copy(selected_tmp, selected_path, overwrite = TRUE)) {
-    stop("Could not update the candidate and selected-batch registers.", call. = FALSE)
+  if (!file.copy(candidate_tmp, candidate_path, overwrite = TRUE)) {
+    stop("Could not update the candidate register.", call. = FALSE)
   }
-  unlink(c(candidate_tmp, selected_tmp))
+  unlink(candidate_tmp)
   cat("Imported the partial 2025 NAFO 4T yellowtail flounder source record.\n")
 }

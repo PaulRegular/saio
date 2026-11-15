@@ -538,15 +538,10 @@ import_noaa_blue_deacon_california_2017 <- function(root = ".", write = FALSE) {
   assessments_db <- read.csv(file.path(root, "database/assessments.csv"), colClasses = "character",
     stringsAsFactors = FALSE, check.names = FALSE)
   candidate_path <- file.path(root, "discovery/candidates.csv")
-  inventory_path <- file.path(root, "discovery/inventory_units.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"),
     check.names = FALSE)
-  inventory <- read.csv(inventory_path, stringsAsFactors = FALSE, na.strings = c("", "NA"),
-    check.names = FALSE)
   candidate_row <- which(candidates$candidate_id == candidate_id)
-  split_ids <- strsplit(as.character(inventory$candidate_ids), " | ", fixed = TRUE)
-  inventory_row <- which(vapply(split_ids, function(x) candidate_id %in% x, logical(1L)))
-  if (length(candidate_row) != 1L || length(inventory_row) != 1L ||
+  if (length(candidate_row) != 1L ||
       candidates$eligibility[candidate_row] != "eligible" ||
       !candidates$import_status[candidate_row] %in% c("not_started", "partial") ||
       any(stocks_db$stock_id == stock_id) ||
@@ -622,13 +617,7 @@ import_noaa_blue_deacon_california_2017 <- function(root = ".", write = FALSE) {
     candidate$review_date <- "2026-11-13"
     candidate$decision_reason <- "Latest detailed production fit is the 2017 California base assessment; the latest reported update is the 2019 catch update. Both are imported as separate events; source completeness remains partial."
     candidate$notes <- "California and Oregon are separate assessment units. The 2019 catch update uses the 2017 base model and has no updated native run archive. NOAA still lists the California unit in 2026 status tables; PFMC 2026 materials note a 2025 management boundary change."
-    unit <- inventory[inventory_row, , drop = FALSE]
-    unit$matched_stock_id <- stock_id
-    unit$candidate_unit_id <- stock_id
-    unit$match_status <- "matched"
-    unit$import_status <- "partial"
     replace_candidate_register_row(candidate_path, candidate_row, candidate, candidate_id)
-    replace_csv_register_row(inventory_path, inventory_row, unit, "unit_key", inventory$unit_key[inventory_row])
     old <- getwd()
     on.exit(setwd(old), add = TRUE)
     setwd(root)

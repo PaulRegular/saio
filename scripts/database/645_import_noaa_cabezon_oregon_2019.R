@@ -503,15 +503,10 @@ assessment <- blank_row(names(assessments_table), list(
   notes = "Latest detailed Oregon cabezon assessment located, with observed data through 2018. Native inputs provide catches, aggregate indices, and length/age compositions; fitted surfaces provide age-specific N, biomass, F, M, catch, and weight. Observed catch-at-age, age-specific abundance indices, empirical weight/maturity-at-age vectors, and age-specific uncertainty are not supplied. The assessment-year 2019 SSB point and interval are separately marked as a forecast."))
 
 candidate_path <- file.path(root, "discovery/candidates.csv")
-inventory_path <- file.path(root, "discovery/inventory_units.csv")
-unworked_path <- file.path(root, "discovery/selections/selected_unworked_2026.csv")
 candidates <- read.csv(candidate_path, colClasses = "character", check.names = FALSE)
-inventory <- read.csv(inventory_path, colClasses = "character", check.names = FALSE)
 ci <- which(candidates$candidate_id == candidate_id)
-ii <- which(inventory$candidate_unit_id == candidate_unit_id)
-if (length(ci) != 1L || length(ii) != 1L || candidates$eligibility[ci] != "eligible" ||
+if (length(ci) != 1L || candidates$eligibility[ci] != "eligible" ||
     !candidates$import_status[ci] %in% c("not_started", "partial") ||
-    !inventory$import_status[ii] %in% c("not_started", "partial") ||
     (nzchar(candidates$matched_stock_id[ci]) && candidates$matched_stock_id[ci] != stock_id)) {
   stop("The NOAA:12193 candidate registers no longer match the screened Oregon assessment.",
     call. = FALSE)
@@ -536,22 +531,7 @@ candidate_update$detailed_source_url <- paste(report_url, supplement_url, star_u
 candidate_update$review_date <- "2026-11-12"
 candidate_update$decision_reason <- "The latest detailed Oregon model archive and its original inputs/outputs were recovered and imported. The source record is partial because the native observations do not include catch-at-age or an age-specific index, and age-specific uncertainty is unavailable."
 candidate_update$notes <- "The Council voted in 2025 to remove Oregon cabezon from the federal Groundfish FMP; the 2019 model remains cited for 2027-2028 Oregon harvest specifications. The source record preserves the model run and current management context without treating the Oregon assessment component as a separate species."
-inventory_update <- inventory[ii, , drop = FALSE]
-inventory_update$matched_stock_id <- stock_id
-inventory_update$match_status <- "new"
-inventory_update$import_status <- "partial"
 unworked_updates <- NULL
-if (file.exists(unworked_path)) {
-  unworked <- read.csv(unworked_path, colClasses = "character", check.names = FALSE)
-  ui <- which(unworked$candidate_id == candidate_id)
-  if (length(ui) == 1L) {
-    unworked_updates <- unworked[ui, , drop = FALSE]
-    if ("curation_status" %in% names(unworked_updates))
-      unworked_updates$curation_status <- "source_curated_partial"
-    if ("import_status" %in% names(unworked_updates))
-      unworked_updates$import_status <- "partial"
-  }
-}
 
 cat("Prepared ", nrow(inputs_new), " inputs, ", nrow(assumptions_new),
   " assumptions, and ", nrow(outputs_new), " outputs for Oregon cabezon.\n", sep = "")
@@ -559,9 +539,6 @@ cat("Observed catch-at-age and age-specific survey indices are not added; fitted
 if (write_mode) {
   append_pacific_case(stock, assessment, assumptions_new, inputs_new, outputs_new)
   replace_candidate_register_row(candidate_path, ci, candidate_update, candidate_id)
-  replace_csv_register_row(inventory_path, ii, inventory_update, "unit_key", inventory$unit_key[ii])
-  if (!is.null(unworked_updates)) replace_csv_register_row(unworked_path, ui,
-    unworked_updates, "candidate_id", candidate_id)
   source(file.path(root, "scripts/database/002_validate_database.R"),
     local = new.env(parent = globalenv()))
   cat("Oregon cabezon records appended and full database validation passed.\n")

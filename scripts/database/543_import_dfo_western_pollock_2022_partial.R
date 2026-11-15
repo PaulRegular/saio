@@ -162,15 +162,6 @@ candidate_text <- prepare_record_update(candidate_path, "candidate_id", candidat
     notes = "Current DFO science unit 4Xopqrs plus Canadian 5Yb and 5Zc, distinct from 4Xmn management geography and NOAA 5YZ. See source_reviews/dfo_western_component_pollock_2022.md."
   ))
 
-selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
-selected <- utils::read.csv(selected_path, stringsAsFactors = FALSE,
-  check.names = FALSE, na.strings = c("", "NA"))
-selected_row <- match("dfo_western_component_pollock_4xopqrs5", selected$candidate_unit_id)
-if (is.na(selected_row)) stop("Selected-batch Pollock row is missing.", call. = FALSE)
-selected$curation_status[selected_row] <- "partial_source_import"
-selected$inventory_assessment_year[selected_row] <- 2025L
-selected_tmp <- tempfile(tmpdir = dirname(selected_path), fileext = ".csv")
-utils::write.csv(selected, selected_tmp, row.names = FALSE, na = "", fileEncoding = "UTF-8")
 
 db <- file.path(root, "database")
 existing_assessments <- utils::read.csv(file.path(db, "assessments.csv"),
@@ -182,16 +173,14 @@ if (!dry_run && (any(c(model_id, hcr_id) %in% existing_assessments) || stock_id 
 }
 
 if (dry_run) {
-  unlink(selected_tmp)
   cat("Dry run validated one stock, two assessment records, 15 assumptions, no numeric input rows, and 6 official summary outputs.\n")
 } else {
   candidate_tmp <- tempfile(tmpdir = dirname(candidate_path), fileext = ".csv")
   writeBin(charToRaw(candidate_text), candidate_tmp)
   append_pacific_case(stock, rbind(model_assessment, hcr_assessment), assumptions, inputs, outputs)
-  if (!file.copy(candidate_tmp, candidate_path, overwrite = TRUE) ||
-      !file.copy(selected_tmp, selected_path, overwrite = TRUE)) {
-    stop("Could not update the candidate and selected-batch registers.", call. = FALSE)
+  if (!file.copy(candidate_tmp, candidate_path, overwrite = TRUE)) {
+    stop("Could not update the candidate register.", call. = FALSE)
   }
-  unlink(c(candidate_tmp, selected_tmp))
+  unlink(candidate_tmp)
   cat("Imported partial DFO Western Component Pollock model and HCR source records.\n")
 }

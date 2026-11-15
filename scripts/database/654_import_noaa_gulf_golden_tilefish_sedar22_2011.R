@@ -570,14 +570,7 @@ import_noaa_gulf_golden_tilefish <- function(root = ".", write = FALSE) {
       !identical(candidates$match_status[candidate_row], "matched"))
     stop("The candidate register has an unexpected match status.", call. = FALSE)
 
-  selected_path <- file.path(root, "discovery/selections/selected_batch_38_2026.csv")
-  selected <- read.csv(selected_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), check.names = FALSE)
-  selected_row <- match(candidate_id, selected$candidate_id)
-  if (is.na(selected_row)) stop("The tilefish candidate is absent from selected_batch_38_2026.csv.", call. = FALSE)
   selected_status <- "partial_source_import"
-  if (!selected$curation_status[selected_row] %in% c("selected_for_source_curation", selected_status))
-    stop("The tilefish selected-batch curation status changed unexpectedly.", call. = FALSE)
 
   if (write && !already_imported) {
     if (nrow(stock_exists)) stop("The Gulf tilefish stock row already exists.", call. = FALSE)
@@ -596,9 +589,6 @@ import_noaa_gulf_golden_tilefish <- function(root = ".", write = FALSE) {
     for (name in names(candidate_updates)) candidates[[name]][candidate_row] <- candidate_updates[[name]]
     replace_candidate_register_row(candidates_path, candidate_row,
       candidates[candidate_row, , drop = FALSE], candidate_id)
-    selected$curation_status[selected_row] <- selected_status
-    replace_candidate_register_row(selected_path, selected_row,
-      selected[selected_row, , drop = FALSE], candidate_id)
   }
   list(stock = stock, assessment = assessment, assumptions = assumptions,
     inputs = inputs, outputs = outputs, already_imported = already_imported,

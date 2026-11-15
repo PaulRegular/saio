@@ -462,9 +462,6 @@ if (write_mode || inputs_only) {
       output_evidence = if (i == 1L) "Imported base-case MCMC medians and 95% credible intervals for B0, B2025, B2025/B0 and catchability for both survey series." else
         "Imported base-case MCMC medians and 95% credible intervals for B0, B2024, B2024/B0 and Tangaroa survey catchability. Annual N-at-age, F-at-age and recruitment values are shown as figures, not numerical tables."
     ))
-      replace_register_row(file.path(root, "discovery/selections", "selected_batch_03_2026.csv"), "candidate_id", candidate_id,
-        list(inventory_assessment_year = if (i == 1L) 2025L else 2024L,
-          curation_status = "partial_source_import"))
     }
   }
 }

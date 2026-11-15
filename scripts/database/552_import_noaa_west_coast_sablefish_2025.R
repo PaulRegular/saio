@@ -3,8 +3,6 @@ dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "anoplopoma_fimbria/noaa_sablefish_pacific_coast_2025")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 
 candidate_id <- "NOAA:10466"
 candidate_unit_id <- "noaa_stocksmart_10466"
@@ -501,15 +499,11 @@ assumptions <- rows_from(assumption_fields, assumption_rows$get())
 
 candidate <- read_table(candidate_path)
 candidate_row <- which(candidate$candidate_id == candidate_id)
-inventory <- read_table(inventory_path)
-inventory_row <- which(inventory$unit_key == paste0("candidate:", candidate_unit_id))
-selected <- read_table(selected_path)
-selected_row <- which(selected$candidate_unit_id == candidate_unit_id)
 stocks <- read_table(file.path(database, "stocks.csv"))
 assessments <- read_table(file.path(database, "assessments.csv"))
 inputs_existing <- read_table(file.path(database, "inputs.csv"))
 outputs_existing <- read_table(file.path(database, "outputs.csv"))
-if (length(candidate_row) != 1L || length(inventory_row) != 1L || length(selected_row) != 1L ||
+if (length(candidate_row) != 1L ||
     candidate$eligibility[candidate_row] != "eligible" ||
     !candidate$import_status[candidate_row] %in% c("not_started", "partial")) {
   stop("NOAA Stock SMART 10466 is missing, duplicated, or not ready for import.", call. = FALSE)
@@ -629,14 +623,7 @@ if (!dry_run) {
   replace_candidate_register_row(candidate_path, candidate_row,
     candidate[candidate_row, , drop = FALSE], candidate_id)
 
-  inventory$matched_stock_id[inventory_row] <- stock_id
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_row(inventory_path, "unit_key", paste0("candidate:", candidate_unit_id),
-    inventory_row, inventory[inventory_row, , drop = FALSE])
 
-  selected$curation_status[selected_row] <- "partial_source_import"
-  replace_csv_row(selected_path, "candidate_unit_id", candidate_unit_id,
-    selected_row, selected[selected_row, , drop = FALSE])
 }
 
 cat(if (dry_run) "Dry run parsed " else "Imported ",

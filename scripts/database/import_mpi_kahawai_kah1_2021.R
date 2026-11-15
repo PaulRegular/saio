@@ -449,16 +449,6 @@ if (write_mode) {
     candidates[candidate_row, , drop = FALSE], candidate_id
   )
 
-  selected <- read.csv("discovery/selections/selected_batch_04_2026.csv",
-    stringsAsFactors = FALSE, colClasses = "character",
-    na.strings = c("", "NA"), check.names = FALSE)
-  selected_row <- match(candidate_id, selected$candidate_id)
-  if (is.na(selected_row)) stop("KAH 1 is missing from the selected batch.")
-  selected$curation_status[selected_row] <- "partial"
-  write.csv(selected, "discovery/selections/selected_batch_04_2026.csv",
-    row.names = FALSE, na = "")
 
-  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
-  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("KAH 1 records and discovery summaries were written.\n")
 }

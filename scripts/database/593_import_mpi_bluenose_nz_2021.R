@@ -803,10 +803,6 @@ if (!write_mode) {
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
   candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
-  selected <- read.csv("discovery/selections/selected_batch_09_2026.csv", stringsAsFactors = FALSE,
-    colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
-  units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-    colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
   if (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id ||
     rows_exist("database/inputs.csv", assessment_id) ||
     rows_exist("database/outputs.csv", assessment_id) ||
@@ -814,11 +810,8 @@ if (!write_mode) {
     stop("Bluenose is already present in the canonical database.", call. = FALSE)
   }
   candidate_index <- which(candidates$candidate_id == candidate_id)
-  selected_index <- which(selected$candidate_id == candidate_id)
-  unit_index <- which(units$candidate_unit_id == stock_id)
-  if (length(candidate_index) != 1L || length(selected_index) != 1L || length(unit_index) != 1L ||
-    candidates$import_status[candidate_index] != "not_started" ||
-    selected$curation_status[selected_index] != "selected_for_source_curation") {
+  if (length(candidate_index) != 1L ||
+    candidates$import_status[candidate_index] != "not_started") {
     stop("Bluenose discovery records are not in the expected pre-import state.", call. = FALSE)
   }
 
@@ -860,15 +853,6 @@ if (!write_mode) {
     "Source review records the rounded derived SSB and remaining numerical output gaps."
   )
   replace_csv_row("discovery/candidates.csv", candidate_id, candidates[candidate_index, ])
-  selected$curation_status[selected_index] <- "source_curated_partial"
-  selected$selection_basis[selected_index] <- paste(
-    "The May 2026 Plenary identifies the 2021 official Casal2 assessment as the latest run.",
-    "FAR 2021/82 contains detailed model inputs and base-run summary outputs."
-  )
-  replace_csv_row("discovery/selections/selected_batch_09_2026.csv",
-    selected$priority[selected_index], selected[selected_index, ])
-  units$import_status[unit_index] <- "partial"
-  replace_csv_row("discovery/inventory_units.csv", paste0("candidate:", stock_id), units[unit_index, ])
   cat("Imported New Zealand bluenose 2021 source data:", nrow(input_rows), "inputs,",
     nrow(assumption_rows), "assumptions, and", nrow(output_rows), "outputs.\n")
 }

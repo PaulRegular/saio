@@ -574,24 +574,12 @@ if (!write_mode) {
   source("scripts/discovery/candidate_register_io.R")
   replace_candidate_register_row(candidate_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  selected_path <- file.path(root, "discovery/selections/selected_batch_24_2026.csv")
-  selected <- read.csv(selected_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), check.names = FALSE)
-  selected_row <- which(selected$candidate_id == candidate_id)
-  if (length(selected_row) != 1L) stop("Selected candidate is not unique.", call. = FALSE)
-  selected$curation_status[selected_row] <- "partial_source_import"
   new_urls <- c(
     "https://sedarweb.org/documents/sedar-98-dw-05-general-recreational-survey-data-for-red-snapper-in-the-gulf-of-mexico/",
     "https://sedarweb.org/documents/sedar-98-dw-19-red-snapper-lutjanus-campechanus-larval-indices-of-relative-abundance-from-seamap-fall-plankton-surveys-1986-to-2022/",
     "https://sedarweb.org/documents/sedar-98-dw-24-post-ifq-commercial-vertical-line-abundance-index-for-eastern-gulf-red-snapper-using-reef-fish-observer-data/",
     "https://sedarweb.org/documents/sedar-98-dw-26-red-snapper-abundance-indices-from-seamap-groundfish-surveys-in-the-northern-gulf-of-mexico/"
   )
-  existing_urls <- strsplit(as.character(selected$detailed_source_url[selected_row]),
-    "; ", fixed = TRUE)[[1L]]
-  selected$detailed_source_url[selected_row] <- paste(
-    unique(c(existing_urls, new_urls)), collapse = "; "
-  )
-  write.csv(selected, selected_path, row.names = FALSE, na = "")
   cat("Imported", assessment_id, ":", nrow(inputs), "index input rows;",
     nrow(outputs), "reported/derived outputs.\n")
 }

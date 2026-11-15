@@ -477,7 +477,5 @@ if (write_mode) {
     "discovery/candidates.csv", candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id
   )
-  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
-  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("ORH 3B source records and discovery summaries were written.\n")
 }

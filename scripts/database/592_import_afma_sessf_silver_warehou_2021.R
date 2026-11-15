@@ -1,7 +1,6 @@
 assessment_id <- "afma_sessf_silver_warehou_2021"
 stock_id <- "afma_sessf_silver_warehou"
 candidate_id <- "AFMA:SESSF_SILVER_WAREHOU"
-selected_path <- "discovery/selections/selected_batch_08_2026.csv"
 manifest_path <- "provenance/afma_sessf_silver_warehou_2021_sources.csv"
 report_url <- "https://www.afma.gov.au/sites/default/files/2023-02/Stock%20Assessments%20for%20SESSF%202020%E2%80%9321%20-%20Part%201.pdf"
 summary_url <- "https://www.afma.gov.au/sites/default/files/2026-01/SESSF-Species-Summaries-2026.pdf"
@@ -65,18 +64,14 @@ rows_exist <- function(path, id) {
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
 candidates <- read_table("discovery/candidates.csv")
-selected <- read_table(selected_path)
 manifest <- read_table(manifest_path)
 candidate_index <- which(candidates$candidate_id == candidate_id)
-selected_index <- which(selected$candidate_id == candidate_id)
 source_paths <- file.path("source_cache", manifest$local_file)
 
 stopifnot(
   length(candidate_index) == 1L,
-  length(selected_index) == 1L,
   candidates$import_status[candidate_index] == "not_started",
   candidates$eligibility[candidate_index] == "unresolved",
-  selected$curation_status[selected_index] == "selected_for_partial_source_curation",
   !stock_id %in% stocks$stock_id,
   !assessment_id %in% assessments$assessment_id,
   !rows_exist("database/assumptions.csv", assessment_id),
@@ -434,8 +429,6 @@ candidate$notes <- paste(
   "The 2024 Tier 1 assessment was not accepted. See source_reviews/afma_sessf_silver_warehou.md."
 )
 
-selected_row <- selected[selected_index, , drop = FALSE]
-selected_row$curation_status <- "source_curated_partial"
 
 cat("AFMA SESSF silver warehou:", nrow(inputs), "inputs,", nrow(assumptions),
   "assumptions,", nrow(outputs), "outputs.\n")
@@ -450,8 +443,5 @@ if (!write_mode) {
   append_csv("database/inputs.csv", inputs)
   append_csv("database/outputs.csv", outputs)
   replace_csv_row("discovery/candidates.csv", candidate_id, candidate)
-  replace_csv_row(selected_path, candidate_id, selected_row)
-  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
-  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("Imported the partial AFMA SESSF silver warehou source record.\n")
 }

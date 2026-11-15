@@ -473,13 +473,9 @@ if (write_mode && stock_exists) {
 candidate_register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
 candidate_row <- match(candidate_id, candidate_register$candidate_id)
-selected <- read.csv("discovery/selections/selected_batch_18_2026.csv", stringsAsFactors = FALSE,
-  colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
-selected_row <- match(candidate_id, selected$candidate_id)
-if (is.na(candidate_row) || is.na(selected_row) ||
+if (is.na(candidate_row) ||
     candidate_register$import_status[candidate_row] != "not_started" ||
-    candidate_register$screening_status[candidate_row] != "screened" ||
-    selected$curation_status[selected_row] != "selected_for_partial_source_import") {
+    candidate_register$screening_status[candidate_row] != "screened") {
   stop("GUR 7 is missing from the selected partial-source batch or was already imported.", call. = FALSE)
 }
 
@@ -504,10 +500,5 @@ if (write_mode) {
     "discovery/candidates.csv", candidate_row,
     candidate_register[candidate_row, , drop = FALSE], candidate_id
   )
-  selected$curation_status[selected_row] <- "partial_source_import"
-  write.csv(selected, "discovery/selections/selected_batch_18_2026.csv",
-    row.names = FALSE, na = "")
-  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
-  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("Imported partial GUR 7 source records and refreshed the discovery summaries.\n")
 }

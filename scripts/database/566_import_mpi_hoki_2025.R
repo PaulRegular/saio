@@ -500,12 +500,6 @@ if (write_biological_assumptions_only) {
   candidates$maturity_evidence[selected] <- "The base model uses stock and sex-specific maturity settings. The source parameters are retained as model assumptions rather than converted to a maturity-at-age surface."
   candidates$mortality_evidence[selected] <- "Natural mortality is fixed in the model as a category-level instantaneous-M vector with relative age selectivity; it is not a time-varying M-at-age series."
   write.csv(candidates, candidate_path, row.names = FALSE, na = "")
-  selection_path <- file.path(root, "discovery/selections", "selected_batch_02_2026.csv")
-  selection <- read.csv(selection_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-  selection$curation_status[selection$candidate_id == candidate_id] <- "source_curated_partial"
-  write.csv(selection, selection_path, row.names = FALSE, na = "")
-  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"), local = TRUE)
-  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"), local = TRUE)
 }
 cat("Hoki source import ", if (write_biological_assumptions_only) "biological assumptions written" else if (write_assumptions_only) "assumptions written" else if (dry_run) "validated (dry run)" else "written", ": ",
   nrow(inputs), " input rows, ", nrow(assumptions), " assumption rows, ",

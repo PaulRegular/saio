@@ -180,10 +180,6 @@ candidate_path <- file.path("discovery", "candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
 candidate_row <- which(candidates$candidate_id == candidate_id)
-inventory_path <- file.path("discovery", "inventory_units.csv")
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-inventory_row <- candidate_inventory_row(inventory, candidate_id, "noaa_gag_gulf")
 
 existing_inputs <- suppressWarnings(system2("rg", c("--color", "never", "--no-heading", "-F",
   assessment_id, file.path("database", "inputs.csv")), stdout = TRUE, stderr = FALSE))
@@ -211,9 +207,6 @@ if (write_mode) {
   candidates$review_date[candidate_row] <- as.character(Sys.Date())
   replace_candidate_register_row(candidate_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
 } else {
   message("Dry run: ", nrow(inputs), " Gulf gag recreational catch and log-scale error rows from SEDAR 72 Tables 1-4. Use --write to import.")
 }

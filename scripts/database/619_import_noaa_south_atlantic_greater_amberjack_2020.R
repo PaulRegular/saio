@@ -367,10 +367,6 @@ if (length(candidate_row) != 1L || candidates$candidate_unit_id[candidate_row] !
     any(existing_assessments$assessment_id == assessment_id)) {
   stop("The candidate identity conflicts with the register or canonical database.", call. = FALSE)
 }
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
 
 if (nrow(stock) != 1L || nrow(assessment) != 1L || nrow(inputs) != 714L ||
     nrow(outputs) != 1545L || nrow(assumptions) != 14L ||
@@ -405,11 +401,6 @@ if (write_mode) {
   )
   replace_candidate_register_row(candidates_path, candidate_row, candidates[candidate_row, , drop = FALSE], candidate_id)
 
-  inventory$matched_stock_id[inventory_row] <- stock_id
-  inventory$match_status[inventory_row] <- "matched"
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
 } else {
   message("Dry run: ", nrow(stock), " stock, ", nrow(assessment), " assessment, ",
     nrow(assumptions), " assumptions, ", nrow(inputs), " inputs, and ",

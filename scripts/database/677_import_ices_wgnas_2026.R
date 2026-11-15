@@ -583,10 +583,6 @@ import_ices_wgnas_2026 <- function(root = ".", write = FALSE) {
   )
   writeLines(review_lines, discovery_review, useBytes = TRUE)
 
-  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
-    local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
-    local = new.env(parent = globalenv()))
   source(file.path(root, "scripts", "database", "002_validate_database.R"),
     local = new.env(parent = globalenv()))
   cat("WGNAS source import written; database validation passed.

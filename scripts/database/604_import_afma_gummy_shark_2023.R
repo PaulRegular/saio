@@ -131,21 +131,17 @@ assumptions_path <- file.path(root, "database/assumptions.csv")
 inputs_path <- file.path(root, "database/inputs.csv")
 outputs_path <- file.path(root, "database/outputs.csv")
 candidates_path <- file.path(root, "discovery/candidates.csv")
-selected_path <- file.path(root, "discovery/selections/selected_batch_14_2026.csv")
 
 stocks_existing <- read_csv(stocks_path)
 assessments_existing <- read_csv(assessments_path)
 candidates <- read_character_csv(candidates_path)
-selected <- read_character_csv(selected_path)
 candidate_row <- which(candidates$candidate_id == candidate_id)
-selected_row <- which(selected$candidate_id == candidate_id)
 stock_exists <- any(stocks_existing$stock_id == stock_id)
 assessment_exists <- any(assessments_existing$assessment_id == assessment_id)
-if (length(candidate_row) != 1L || length(selected_row) != 1L ||
+if (length(candidate_row) != 1L ||
     candidates$candidate_unit_id[candidate_row] != stock_id ||
     candidates$eligibility[candidate_row] != "unresolved" ||
     !candidates$import_status[candidate_row] %in% c("not_started", "partial") ||
-    !selected$curation_status[selected_row] %in% c("selected_for_source_curation", "partial_source_import") ||
     stock_exists != assessment_exists) {
   stop("The candidate or canonical database differs from the reviewed source screen.", call. = FALSE)
 }
@@ -363,12 +359,5 @@ if (write_mode) {
   replace_row_text(candidates_path, paste0("\"", candidate_id, "\","),
     "excluded from the accepted Bridge 17 base case.",
     "excluded from the official Bridge 17 base case.")
-  replace_row_text(selected_path, c(paste0("1,\"", candidate_id, "\","),
-      paste0("\"1\",\"", candidate_id, "\",")),
-    "\"selected_for_source_curation\"", "\"partial_source_import\"")
-  source(file.path(root, "scripts/discovery/195_summarize_discovery.R"),
-    local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts/discovery/196_summarize_inventory_units.R"),
-    local = new.env(parent = globalenv()))
   cat("Imported the verified source tables and marked the assessment partial.\n")
 }

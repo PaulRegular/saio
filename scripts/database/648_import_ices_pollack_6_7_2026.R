@@ -2,8 +2,6 @@ root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "ices_pollack_67_2026")
 register_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_32_2026.csv")
 manifest_path <- file.path(root, "provenance", "ices_pollack_67_2026", "sources.csv")
 
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
@@ -395,25 +393,7 @@ register$notes[candidate_row] <- paste(
 )
 
 source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-if ((!dry_run && inventory$import_status[inventory_row] != "not_started") ||
-    (dry_run && !inventory$import_status[inventory_row] %in% c("not_started", "partial")))
-  stop("The Pollack inventory unit has already been imported.", call. = FALSE)
-inventory$import_status[inventory_row] <- "partial"
 
-selected <- read.csv(selected_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-selected_row <- which(selected$candidate_id == candidate_id)
-if (length(selected_row) != 1L ||
-    (!dry_run && selected$curation_status[selected_row] != "selected_for_source_curation") ||
-    (dry_run && !selected$curation_status[selected_row] %in%
-      c("selected_for_source_curation", "partial_source_import")))
-  stop("The Pollack selected-batch row is missing, duplicated, or already processed.", call. = FALSE)
-selected$curation_status[selected_row] <- "partial_source_import"
-selected$selection_basis[selected_row] <- paste(
-  "Imported verified official aggregate outputs, landings and reported benchmark biology.",
-  "The current run's numerical catch ages, survey index and native SS3 files remain unavailable; see the source review."
-)
 
 append_rows <- function(file, data) {
   path <- file.path(database, file)
@@ -442,10 +422,5 @@ if (dry_run) {
   append_rows("outputs.csv", outputs)
   replace_candidate_register_row(register_path, candidate_row,
     register[candidate_row, , drop = FALSE], candidate_id)
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key",
-    inventory$unit_key[inventory_row])
-  replace_csv_register_row(selected_path, selected_row,
-    selected[selected_row, , drop = FALSE], "priority", selected$priority[selected_row])
   cat("Imported partial ICES 2026 Pollack source data.\n")
 }

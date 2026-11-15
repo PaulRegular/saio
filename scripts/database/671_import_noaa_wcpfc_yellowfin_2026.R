@@ -230,7 +230,6 @@ fishery_dim <- function(fishery, dimension) {
 }
 
 candidate_path <- file.path(root, "discovery/candidates.csv")
-inventory_path <- file.path(root, "discovery/inventory_units.csv")
 stocks_path <- file.path(root, "database/stocks.csv")
 assessments_path <- file.path(root, "database/assessments.csv")
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
@@ -238,17 +237,12 @@ read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
 stocks <- read_table(stocks_path)
 assessments <- read_table(assessments_path)
 candidates <- read_table(candidate_path)
-inventory <- read_table(inventory_path)
 candidate_row <- which(candidates$candidate_id == candidate_id)
 if (length(candidate_row) != 1L || stock_id %in% stocks$stock_id ||
     assessment_id %in% assessments$assessment_id ||
     candidates$eligibility[candidate_row] != "eligible" ||
     candidates$import_status[candidate_row] != "not_started") {
   stop("Expected one eligible, unimported WCPO yellowfin candidate.", call. = FALSE)
-}
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-if (inventory$import_status[inventory_row] != "not_started") {
-  stop("The WCPO yellowfin inventory unit has already been imported.", call. = FALSE)
 }
 
 input_columns <- names(read.csv(file.path(root, "database/inputs.csv"), nrows = 0L,
@@ -785,10 +779,5 @@ candidates$notes[candidate_row] <- paste(
 replace_candidate_register_row(candidate_path, candidate_row,
   candidates[candidate_row, , drop = FALSE], candidate_id)
 
-inventory$matched_stock_id[inventory_row] <- stock_id
-inventory$match_status[inventory_row] <- "matched"
-inventory$import_status[inventory_row] <- "partial"
-replace_csv_register_row(inventory_path, inventory_row,
-  inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
 
 cat("Imported partial WCPO yellowfin source data.\n")

@@ -597,8 +597,6 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
   notes = "Latest accepted NOAA Stock SMART assessment reviewed for unit 10384; data through 2022. Numerical composition arrays and the age-error matrix remain unrecovered. Table 18 SSB benchmark scale conflicts with Section 4.8 and Table 10; both source representations are retained without conversion.")
 
 candidate_path <- file.path("discovery", "candidates.csv")
-inventory_path <- file.path("discovery", "inventory_units.csv")
-selection_path <- file.path("discovery/selections", "selected_batch_25_2026.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv(file.path("database", "stocks.csv"), stringsAsFactors = FALSE,
@@ -615,13 +613,6 @@ if (length(candidate_row) != 1L ||
     any(assessments_existing$assessment_id == assessment_id)) {
   stop("NOAA South Atlantic golden tilefish candidate or database identity has changed.", call. = FALSE)
 }
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-selection <- read.csv(selection_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-selection_row <- which(selection$candidate_id == candidate_id)
-if (length(selection_row) != 1L) stop("Expected one selected-batch row for NOAA:10384.", call. = FALSE)
 
 if (write_mode) {
   append_pacific_case(stock, assessment, assumptions, inputs, outputs)
@@ -646,13 +637,6 @@ if (write_mode) {
     "Partial source import completed; numerical composition arrays and ageing-error matrix remain unresolved.")
   replace_candidate_register_row(candidate_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  inventory$matched_stock_id[inventory_row] <- stock_id
-  inventory$match_status[inventory_row] <- "matched"
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
-  selection$curation_status[selection_row] <- "partial_source_import"
-  write.csv(selection, selection_path, row.names = FALSE, na = "")
   message("Imported NOAA South Atlantic Golden Tilefish SEDAR 89: ",
     nrow(stock), " stock, ", nrow(assessment), " assessment, ",
     nrow(assumptions), " assumptions, ", nrow(inputs), " inputs and ",

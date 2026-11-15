@@ -602,8 +602,6 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
 
 assumptions <- do.call(rbind, assumption_rows)
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selection_path <- file.path(root, "discovery/selections", "selected_batch_26_2026.csv")
 candidates <- read_csv(candidate_path)
 candidate_row <- which(candidates$candidate_id == candidate_id)
 stocks_existing <- read_csv(file.path(root, "database", "stocks.csv"))
@@ -618,11 +616,6 @@ if (length(candidate_row) != 1L ||
   stop("NOAA:10574 candidate or canonical identity changed; review before writing.",
     call. = FALSE)
 }
-inventory <- read_csv(inventory_path, colClasses = "character")
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-selection <- read_csv(selection_path)
-selection_row <- which(selection$candidate_id == candidate_id)
-if (length(selection_row) != 1L) stop("Expected one Batch 26 selection row.", call. = FALSE)
 if (!write_mode) {
   message("Dry run: NOAA:10574; 1 stock, 1 assessment, ",
     nrow(assumptions), " assumptions, ", nrow(inputs), " inputs and ",
@@ -641,14 +634,6 @@ if (!write_mode) {
     "Partial source import completed; direct catch-at-age, numeric age-specific survey indices, exact within-year survey timing, and numeric F-at-age remain unavailable.")
   replace_candidate_register_row(candidate_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  inventory$matched_stock_id[inventory_row] <- stock_id
-  inventory$match_status[inventory_row] <- "matched"
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key",
-    inventory$unit_key[inventory_row])
-  selection$curation_status[selection_row] <- "partial_source_import"
-  utils::write.csv(selection, selection_path, row.names = FALSE, na = "")
   message("Imported NOAA Northern anchovy central subpopulation 2021: ",
     nrow(assumptions), " assumptions, ", nrow(inputs), " inputs and ",
     nrow(outputs), " outputs; status remains partial.")

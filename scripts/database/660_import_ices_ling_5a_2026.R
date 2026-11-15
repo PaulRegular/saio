@@ -321,18 +321,6 @@ candidate_updated$notes <- paste(
   "Source cache and SHA-256 manifest are recorded in source_cache/molva_molva/ices_ling_5a_2026/sources.csv."
 )
 
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-inventory <- utils::read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE
-)
-inventory_row <- which(inventory$unit_key == paste0("candidate:", unit_id))
-if (length(inventory_row) != 1L ||
-    inventory$candidate_ids[inventory_row] != candidate_id ||
-    !inventory$import_status[inventory_row] %in% c("not_started", "partial")) {
-  stop("Icelandic ling inventory row is missing or has an unexpected status.", call. = FALSE)
-}
-inventory_updated <- inventory[inventory_row, , drop = FALSE]
-inventory_updated$import_status <- "partial"
 
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 stocks_existing <- utils::read.csv(file.path(database, "stocks.csv"),
@@ -355,10 +343,6 @@ if (!has_stock && !dry_run) {
 if (!dry_run) {
   replace_candidate_register_row(
     candidate_path, candidate_row, candidate_updated, candidate_id
-  )
-  replace_csv_register_row(
-    inventory_path, inventory_row, inventory_updated,
-    "unit_key", paste0("candidate:", unit_id)
   )
 }
 cat("Icelandic ling 2026 source rows: ", nrow(inputs), " inputs, ",

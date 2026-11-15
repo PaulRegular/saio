@@ -429,39 +429,8 @@ if (write_mode) {
   candidate$notes <- "Partial source import: native catch biomass and log SDs, aggregate indices and log SDs, conditional age-at-length and length frequencies, three age-error mean/SD definitions, assumptions, and Report.sso population/mortality/catch surfaces plus annual outputs. No direct observed catch-at-age or survey index-at-age was added; age-specific uncertainty, composition predictions and standalone age-scale weight/maturity inputs remain unavailable."
   replace_candidate_register_row(candidate_path, candidate_row, candidate, candidate_id)
 
-  inventory_path <- file.path(root, "discovery/inventory_units.csv")
-  inventory <- read.csv(inventory_path, stringsAsFactors = FALSE, colClasses = "character", check.names = FALSE)
-  inventory_candidate_ids <- strsplit(ifelse(is.na(inventory$candidate_ids), "",
-    inventory$candidate_ids), "|", fixed = TRUE)
-  inventory_matches <- vapply(inventory_candidate_ids,
-    function(ids) candidate_id %in% trimws(ids), logical(1L))
-  inventory_matches <- inventory_matches | (!is.na(inventory$candidate_unit_id) &
-    inventory$candidate_unit_id == candidate_unit_id)
-  inventory_row <- which(inventory_matches)
-  if (length(inventory_row) != 1L || !inventory$import_status[inventory_row] %in% c("not_started", "partial")) {
-    stop("Expected one unimported inventory unit for NOAA:17357.", call. = FALSE)
-  }
-  inventory$matched_stock_id[inventory_row] <- stock_id
-  inventory$match_status[inventory_row] <- "matched"
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_register_row(inventory_path, inventory_row, inventory[inventory_row, , drop = FALSE],
-    "unit_key", inventory$unit_key[inventory_row])
 
-  batch_path <- file.path(root, "discovery/selections/selected_batch_29_2026.csv")
-  batch <- read.csv(batch_path, stringsAsFactors = FALSE, colClasses = "character", check.names = FALSE)
-  batch_row <- which(batch$candidate_id == candidate_id)
-  if (length(batch_row) != 1L) stop("Expected one selected-batch row for NOAA:17357.", call. = FALSE)
-  batch$candidate_unit_id[batch_row] <- candidate_unit_id
-  batch$curation_status[batch_row] <- "partial_source_import"
-  write.csv(batch, batch_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
 
-  unworked_path <- file.path(root, "discovery/selections/selected_unworked_2026.csv")
-  unworked <- read.csv(unworked_path, stringsAsFactors = FALSE, colClasses = "character", check.names = FALSE)
-  unworked_row <- which(unworked$candidate_id == candidate_id)
-  if (length(unworked_row) == 1L) {
-    unworked$curation_status[unworked_row] <- "source_curated_partial"
-    write.csv(unworked, unworked_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
-  }
   cat("Imported ", nrow(inputs), " inputs, ", nrow(assumptions), " assumptions, and ",
     nrow(outputs), " outputs for ", assessment_id, ".\n", sep = "")
 } else {

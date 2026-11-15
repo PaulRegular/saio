@@ -668,14 +668,5 @@ if (!write_mode) {
   source(file.path("scripts", "discovery", "candidate_register_io.R"))
   replace_candidate_register_row(register_path, candidate_row, register[candidate_row, , drop = FALSE], candidate_id)
 
-  selected_path <- file.path("discovery/selections", "selected_batch_19_2026.csv")
-  selected <- read.csv(selected_path, stringsAsFactors = FALSE, check.names = FALSE)
-  selected_row <- which(selected$candidate_id == candidate_id)
-  if (length(selected_row) == 1L) {
-    selected$curation_status[selected_row] <- "partial_source_import"
-    utils::write.csv(selected, selected_path, row.names = FALSE, na = "")
-  }
-  source(file.path("scripts", "discovery", "195_summarize_discovery.R"), local = new.env(parent = globalenv()))
-  source(file.path("scripts", "discovery", "196_summarize_inventory_units.R"), local = new.env(parent = globalenv()))
   cat("Appended the partial canonical source record and updated the discovery register.\n")
 }

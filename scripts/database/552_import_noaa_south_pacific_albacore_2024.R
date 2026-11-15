@@ -473,13 +473,7 @@ if (length(candidate_row) != 1L || stock_id %in% stocks$stock_id ||
     candidates$import_status[candidate_row] != "not_started") {
   stop("Expected one eligible, unimported candidate and no canonical albacore records.", call. = FALSE)
 }
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-inventory <- read_table("discovery/inventory_units.csv")
 source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-if (inventory$import_status[inventory_row] != "not_started") {
-  stop("The albacore inventory unit has already been imported.", call. = FALSE)
-}
 
 stock <- data.frame(
   stock_id = stock_id, charbonneau_id = NA_character_,
@@ -626,11 +620,6 @@ candidates$notes[candidate_row] <- paste(
 replace_candidate_register_row(file.path(root, "discovery", "candidates.csv"),
   candidate_row, candidates[candidate_row, , drop = FALSE], candidate_id)
 
-inventory$matched_stock_id[inventory_row] <- stock_id
-inventory$match_status[inventory_row] <- "matched"
-inventory$import_status[inventory_row] <- "partial"
-replace_discovery_row(inventory_path, inventory_row,
-  inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
 
 cat("Imported partial South Pacific albacore 2024 source records.\n")
 

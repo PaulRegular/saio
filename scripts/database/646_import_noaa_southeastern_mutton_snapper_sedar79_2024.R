@@ -251,13 +251,9 @@ assessment <- blank_row(names(read.csv(file.path(root,"database/assessments.csv"
   notes="SEDAR 79 final base model with observations through 2023. Recovered annual catches/releases, aggregate indices, model biology surfaces, apical F and population outputs. Numeric fleet-year length and conditional age-at-length arrays and age-specific abundance indices were not recovered; no catch-at-age observations are represented."
 ))
 candidate_path <- file.path(root,"discovery/candidates.csv")
-inventory_path <- file.path(root,"discovery/inventory_units.csv")
 candidates <- read.csv(candidate_path,stringsAsFactors=FALSE,na.strings=c("","NA"),
   colClasses="character",check.names=FALSE)
-inventory <- read.csv(inventory_path,stringsAsFactors=FALSE,na.strings=c("","NA"),
-  colClasses="character",check.names=FALSE)
 ci <- which(candidates$candidate_id==candidate_id)
-ii <- candidate_inventory_row(inventory,candidate_id,stock_id)
 matched_stock <- candidates$matched_stock_id[ci]
 matched_conflict <- length(matched_stock)==1L && !is.na(matched_stock) &&
   nzchar(matched_stock) && matched_stock!=stock_id
@@ -468,10 +464,7 @@ if(write_mode) {
   update$review_date<-"2026-11-12"
   update$decision_reason<-"Partial source import completed from the latest detailed SEDAR production report. Numeric age-at-length/length-composition matrices remain unavailable."
   update$notes<-"Canonical records preserve reported units and distinguish official tables from derived weight-at-age. No catch-at-age, age-specific index or digitized figure values were invented."
-  inv_update<-inventory[ii,,drop=FALSE]
-  inv_update$matched_stock_id<-stock_id; inv_update$match_status<-"new"; inv_update$import_status<-"partial"
-  replace_candidate_register_row(candidate_path,ci,update,candidate_id)
-  replace_csv_register_row(inventory_path,ii,inv_update,"unit_key",inventory$unit_key[ii])
+    replace_candidate_register_row(candidate_path,ci,update,candidate_id)
   source(file.path(root,"scripts/database/002_validate_database.R"),
     local=new.env(parent=globalenv()))
   cat("Mutton Snapper records appended and full database validation passed.\n")

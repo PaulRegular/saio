@@ -245,8 +245,6 @@ append_rows("database/assumptions.csv", assumptions)
 append_rows("database/outputs.csv", outputs)
 append_rows("discovery/candidates.csv", candidate)
 
-source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
-source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
 
 cat("Imported CCSBT 2026 SBT source review and partial stock-status outputs.\n")
 cat("No numerical input arrays or annual age-specific output surfaces were available for import.\n")

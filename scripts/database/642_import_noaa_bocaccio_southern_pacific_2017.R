@@ -376,18 +376,11 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
   notes = paste("Latest detailed fitted assessment for the current NOAA Southern Pacific Coast unit. The 2017 update uses data through 2016 and carries forward age information from 2015. Native catch, aggregate indices, length frequencies, conditional age-at-length frequencies, age-error definitions and assumptions are imported. The report supplies aggregate trajectories and recent intervals, but the archive has no fitted Report.sso or parameter file and published numerical N-at-age and F-at-age were not found. The 2025 catch-only projection is kept separate.", projection_url))
 
 candidate_path <- file.path(root, "discovery/candidates.csv")
-inventory_path <- file.path(root, "discovery/inventory_units.csv")
-batch_path <- file.path(root, "discovery/selections/selected_batch_30_2026.csv")
-unworked_path <- file.path(root, "discovery/selections/selected_unworked_2026.csv")
 candidates <- read.csv(candidate_path, colClasses = "character", check.names = FALSE)
-inventory <- read.csv(inventory_path, colClasses = "character", check.names = FALSE)
-batch <- read.csv(batch_path, colClasses = "character", check.names = FALSE)
 ci <- which(candidates$candidate_id == candidate_id)
-ii <- which(inventory$candidate_unit_id == candidate_unit_id)
-bi <- which(batch$candidate_id == candidate_id)
-if (length(ci) != 1L || length(ii) != 1L || length(bi) != 1L ||
-    candidates$import_status[ci] != "not_started" || inventory$import_status[ii] != "not_started" ||
-    batch$curation_status[bi] != "selected_for_source_curation") stop("Bocaccio register status changed.", call. = FALSE)
+if (length(ci) != 1L ||
+    !candidates$candidate_unit_id[ci] %in% candidate_unit_id ||
+    candidates$import_status[ci] != "not_started") stop("Bocaccio register status changed.", call. = FALSE)
 stocks <- read.csv(file.path(root, "database/stocks.csv"), colClasses = "character", check.names = FALSE)
 assessments <- read.csv(file.path(root, "database/assessments.csv"), colClasses = "character", check.names = FALSE)
 if (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id ||
@@ -398,7 +391,7 @@ cat("Inputs:", nrow(inputs), "; assumptions:", nrow(assumptions), "; outputs:", 
 cat("Inputs include native catches, aggregate indices and SDs, conditional age-at-length, length frequencies, and age-error definitions.\n")
 cat("Outputs are aggregate Tables 18/5 trajectories and limits; no N-at-age or F-at-age is fabricated.\n")
 if (!write_mode) {
-  cat("Dry run only. Add --write to append the reviewed records and update the candidate registers.\n")
+  cat("Dry run only. Add --write to append the reviewed records and update the candidate register.\n")
 } else {
   append_pacific_case(stock, assessment, assumptions, inputs, outputs)
   candidate <- candidates[ci, , drop = FALSE]
@@ -419,22 +412,6 @@ if (!write_mode) {
   candidate$decision_reason <- "The 2017 update is the latest detailed fit for the current Southern Pacific Coast unit; the 2025 document is a catch-only projection, not a refit."
   candidate$notes <- "Partial source import. Native catches, aggregate indices, CAAL and length frequencies, age-error definitions, assumptions and published aggregate outputs are imported. Direct catch-at-age, age-specific indices, standalone age-scale biology, fitted N/F surfaces and age-specific uncertainty remain unavailable."
   replace_candidate_register_row(candidate_path, ci, candidate, candidate_id)
-  inv <- inventory[ii, , drop = FALSE]
-  inv$matched_stock_id <- stock_id
-  inv$match_status <- "matched"
-  inv$import_status <- "partial"
-  replace_csv_register_row(inventory_path, ii, inv, "unit_key", inventory$unit_key[ii])
-  batch$curation_status[bi] <- "partial_source_import"
-  write.csv(batch, batch_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
-  unworked_path <- file.path(root, "discovery/selections/selected_unworked_2026.csv")
-  if (file.exists(unworked_path)) {
-    unworked <- read.csv(unworked_path, colClasses = "character", check.names = FALSE)
-    ui <- which(unworked$candidate_id == candidate_id)
-    if (length(ui) == 1L) {
-      unworked$curation_status[ui] <- "source_curated_partial"
-      write.csv(unworked, unworked_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
-    }
-  }
   source(file.path(root, "scripts/database/002_validate_database.R"),
     local = new.env(parent = globalenv()))
   cat("Bocaccio rows appended and database validation passed.\n")

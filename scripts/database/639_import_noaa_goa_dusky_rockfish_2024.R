@@ -339,12 +339,6 @@ if (write_mode) {
   candidate$output_evidence <- "Tables 12-12 and 12-14 report annual female SSB, total biomass, fully selected F and age-4+ recruitment through 2024. Table 12-14 gives MCMC means and 2.5/97.5 percentiles. Numerical N-at-age and F-at-age surfaces are not provided."
   candidate$notes <- "Partial source import committed for the latest full 2024 m22.5a assessment of the current GOA unit. Catch biomass, both published age-composition tables, VAST index and uncertainty, eight model/biology assumptions, and MLE/MCMC aggregate outputs are recorded. Maturity raw observations, the exact final fishery composition likelihood arrays, survey timing, weight-at-age values, N-at-age and F-at-age remain unavailable or unresolved."
   replace_candidate_register_row(candidates_path, candidate_row, candidate, candidate_id)
-  batch_path <- file.path(root, "discovery/selections/selected_batch_27_2026.csv")
-  batch <- read.csv(batch_path, stringsAsFactors = FALSE, check.names = FALSE)
-  batch_row <- which(batch$candidate_id == candidate_id)
-  if (length(batch_row) != 1L) stop("Expected one selected-batch row for NOAA:10559.", call. = FALSE)
-  batch$curation_status[batch_row] <- "imported_partial"
-  write.csv(batch, batch_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
   cat("Imported ", nrow(new_inputs), " inputs, ", nrow(new_assumptions),
     " assumptions, and ", nrow(new_outputs), " outputs for ", assessment_id, ".\n", sep = "")
 } else {

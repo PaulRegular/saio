@@ -150,9 +150,7 @@ areas <- c("Northern", "Central", "Southern")
 assessment_ids <- paste0(stock_ids, "_2015")
 table_numbers <- 43:45
 candidates_path <- file.path(root, "discovery/candidates.csv")
-inventory_path <- file.path(root, "discovery/inventory_units.csv")
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 stocks_existing <- read.csv(file.path(root, "database/stocks.csv"), stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 assessments_existing <- read.csv(file.path(root, "database/assessments.csv"), stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 has_stock <- stock_ids %in% stocks_existing$stock_id
@@ -164,13 +162,9 @@ if (any(has_stock) && !dry_run) {
   stop("China rockfish records already exist; inspect before re-importing.", call. = FALSE)
 }
 ci <- match(candidate_ids, candidates$candidate_id)
-ii <- match(paste0("candidate:", stock_ids), inventory$unit_key)
-unmatched_inventory <- is.na(ii)
-ii[unmatched_inventory] <- match(paste0("stock:", stock_ids[unmatched_inventory]), inventory$unit_key)
-if (anyNA(ci) || anyNA(ii) || anyDuplicated(ci) || anyDuplicated(ii) ||
+if (anyNA(ci) || anyDuplicated(ci) ||
     any(candidates$eligibility[ci] != "eligible") ||
-    any(!candidates$import_status[ci] %in% if (dry_run) c("not_started", "partial") else "not_started") ||
-    any(!inventory$import_status[ii] %in% if (dry_run) c("not_started", "partial") else "not_started")) {
+    any(!candidates$import_status[ci] %in% if (dry_run) c("not_started", "partial") else "not_started")) {
   stop("China rockfish candidate status differs from the reviewed unimported batch.", call. = FALSE)
 }
 
@@ -298,7 +292,6 @@ if (nrow(stocks) != 3L || nrow(assessments) != 3L || nrow(assumptions) != 24L ||
 }
 
 candidate_updates <- candidates[ci, , drop = FALSE]
-inventory_updates <- inventory[ii, , drop = FALSE]
 for (i in seq_along(areas)) {
   candidate_updates$matched_stock_id[i] <- stock_ids[i]
   candidate_updates$match_status[i] <- "matched"
@@ -313,16 +306,11 @@ for (i in seq_along(areas)) {
   candidate_updates$review_date[i] <- as.character(Sys.Date())
   candidate_updates$decision_reason[i] <- "Partial source import from the latest detailed 2015 full assessment; the 2025 SAFE still identifies this as the latest full model for this area."
   candidate_updates$notes[i] <- "Partial source import: native catch biomass by fleet, fixed-M and model-structure assumptions, and area-specific annual population tables. Observed catch-at-age, complete index/composition inputs, standalone age-specific biology and age-specific model outputs remain unavailable from the imported report tables."
-  inventory_updates$matched_stock_id[i] <- stock_ids[i]
-  inventory_updates$match_status[i] <- "matched"
-  inventory_updates$import_status[i] <- "partial"
 }
 if (write_mode && !dry_run) {
   append_pacific_case(stocks, assessments, assumptions, inputs, outputs)
   for (i in seq_along(areas)) {
     replace_candidate_register_row(candidates_path, ci[i], candidate_updates[i, , drop = FALSE], candidate_ids[i])
-    replace_csv_register_row(inventory_path, ii[i], inventory_updates[i, , drop = FALSE],
-      "unit_key", inventory$unit_key[ii[i]])
   }
   source(file.path(root, "scripts/database/002_validate_database.R"), local = new.env(parent = globalenv()))
 }

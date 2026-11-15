@@ -313,8 +313,6 @@ candidate_lines[candidate_line_index] <- readLines(candidate_tmp, warn = FALSE)
 unlink(candidate_tmp)
 writeLines(candidate_lines, candidate_path, useBytes = TRUE)
 
-source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
-source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
 
 cat("Imported partial AFMA MITF 2025 catch inputs, assumptions, and stock-status outputs.\n")
 cat("Age-composition, length-frequency, and tag arrays remain unavailable in public sources.\n")

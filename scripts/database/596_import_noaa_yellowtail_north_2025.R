@@ -427,17 +427,12 @@ a_key<-do.call(paste,c(lapply(assumption_data[c("assessment_id","component","fle
 if(anyDuplicated(a_key))stop("Duplicate assumptions generated.",call.=FALSE)
 
 candidate_path<-file.path(root,"discovery","candidates.csv")
-inventory_path<-file.path(root,"discovery","inventory_units.csv")
-selected_path<-file.path(root,"discovery/selections","selected_batch_10_2026.csv")
 stocks_path<-file.path(database,"stocks.csv");assessments_path<-file.path(database,"assessments.csv")
 stocks<-read_csv(stocks_path);assessments<-read_csv(assessments_path)
-candidate<-read_csv(candidate_path);inventory<-read_csv(inventory_path);selected<-read_csv(selected_path)
+candidate<-read_csv(candidate_path);
 ci<-which(candidate$candidate_id==candidate_id)
-ii<-which(inventory$unit_key==paste0("candidate:",candidate_unit_id))
-si<-which(selected$candidate_unit_id==candidate_unit_id)
-if(length(ci)!=1L||length(ii)!=1L||length(si)!=1L||
+if(length(ci)!=1L||
  candidate$eligibility[ci]!="eligible"||(!dry_run&&candidate$import_status[ci]!="not_started")||
- (!dry_run&&!inventory$import_status[ii]%in%c("not_started",""))||
  any(stocks$stock_id==stock_id)||any(assessments$assessment_id==assessment_id))
  stop("Candidate or canonical record state is unexpected.",call.=FALSE)
 first_column<-function(path){f<-read_fields(path);utils::read.csv(path,stringsAsFactors=FALSE,
@@ -473,8 +468,8 @@ cr$output_evidence<-"Report.sso provides annual N, biomass, catch-at-age, F-at-a
 cr$review_date<-"2026-11-07"
 cr$decision_reason<-"Partial source import of the current U.S. northern unit 2025 benchmark; source likelihood inputs and fitted outputs remain distinct."
 cr$notes<-"See source_reviews/noaa_yellowtail_rockfish_north_2025.md. Model-generated biology and mortality surfaces are outputs, not observed input series."
-ir<-inventory[ii,,drop=FALSE];ir$matched_stock_id<-stock_id;ir$import_status<-"partial"
-sr<-selected[si,,drop=FALSE];sr$curation_status<-"partial_source_import"
+
+
 files<-c(report_file,archive_file,"native/5.09_no_extra_SE/YTRK.North.data.ss",
  "native/5.09_no_extra_SE/YTRK.North.control.ss","native/5.09_no_extra_SE/Report.sso",
  "native/5.09_no_extra_SE/CompReport.sso","native/5.09_no_extra_SE/forecast.ss",
@@ -514,8 +509,6 @@ if(!dry_run) {
  append_rows(file.path(database,"outputs.csv"),output_data)
  append_rows(file.path(database,"assumptions.csv"),assumption_data)
  replace_candidate_register_row(candidate_path,ci,cr,candidate_id)
- replace_csv_row(inventory_path,"unit_key",paste0("candidate:",candidate_unit_id),ii,ir)
- replace_csv_row(selected_path,"candidate_unit_id",candidate_unit_id,si,sr)
  utils::write.csv(cache_manifest,file.path(root,"provenance",
   "noaa_yellowtail_rockfish_north_2025_sources.csv"),row.names=FALSE,na="",fileEncoding="UTF-8")
 }

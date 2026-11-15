@@ -557,22 +557,14 @@ if (!write_mode) {
     stop("IPHC Pacific halibut rows already exist in the canonical database.", call. = FALSE)
   }
   candidates <- read_csv("discovery/candidates.csv")
-  selected <- read_csv("discovery/selections/selected_unworked_2026.csv")
-  inventory <- read_csv("discovery/inventory_units.csv")
   candidate_rows <- match(candidate_ids, candidates$candidate_id)
-  selected_row <- which(selected$candidate_id == "NOAA:11082")
-  inventory_row <- which(inventory$candidate_unit_id == stock_id)
-  if (anyNA(candidate_rows) || length(selected_row) != 1L || length(inventory_row) != 1L) {
+  registered_ids <- candidates$candidate_id[candidates$candidate_unit_id %in% stock_id]
+  if (anyNA(candidate_rows) || anyDuplicated(registered_ids) ||
+      !setequal(registered_ids, candidate_ids)) {
     stop("IPHC discovery records are not in the expected pre-import state; reconcile before writing.",
       call. = FALSE)
   }
-  registered_candidate_ids <- strsplit(inventory$candidate_ids[inventory_row],
-    " | ", fixed = TRUE)[[1L]]
-  if (!setequal(registered_candidate_ids, sort(candidate_ids)) ||
-      any(candidates$import_status[candidate_rows] != "not_started") ||
-      selected$curation_status[selected_row] != "selected_for_source_curation" ||
-      inventory$import_status[inventory_row] != "not_started" ||
-      inventory$match_status[inventory_row] != "new" ||
+  if (any(candidates$import_status[candidate_rows] != "not_started") ||
       (stock_id %in% existing_stocks$stock_id)) {
     stop("IPHC discovery records are not in the expected pre-import state; reconcile before writing.",
       call. = FALSE)
@@ -630,21 +622,6 @@ if (!write_mode) {
     register_env$replace_candidate_register_row("discovery/candidates.csv",
       candidate_row, candidate, candidate$candidate_id)
   }
-  replace_register_row("discovery/selections/selected_unworked_2026.csv", "candidate_id", "NOAA:11082",
-    list(curation_status = "source_curated_partial",
-      selection_basis = paste("The 2025 IPHC production assessment, with a 31 October",
-        "2025 data cutoff, remains the latest completed run. Imported public",
-        "catch/mortality, FISS NPUE, commercial WPUE,",
-        "model-specific SSB, ensemble SSB, fishing-intensity, recruitment and age-8+",
-        "biomass tables. Exact model input files, catch/age likelihood vectors, full",
-        "age-specific biology and numerical N/F/M-at-age outputs remain unavailable.")))
-  replace_register_row("discovery/inventory_units.csv", "candidate_unit_id", stock_id,
-    list(unit_key = paste0("stock:", stock_id), matched_stock_id = stock_id,
-      match_status = "matched", import_status = "partial"))
 
-  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
-    local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
-    local = new.env(parent = globalenv()))
   cat("Imported partial IPHC Pacific halibut 2025 source data.\n")
 }

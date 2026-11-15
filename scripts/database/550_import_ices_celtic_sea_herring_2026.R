@@ -472,23 +472,7 @@ if (!dry_run) {
   replace_candidate_register_row(candidates_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)
 
-  inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-  inventory <- utils::read.csv(inventory_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), check.names = FALSE)
-  inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-  inventory$import_status[inventory_row] <- "partial"
-  replace_discovery_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
 
-  selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
-  selected <- utils::read.csv(selected_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), check.names = FALSE)
-  selected_row <- which(selected$candidate_id == candidate_id)
-  if (length(selected_row) != 1L) stop("Expected one selected Celtic Sea herring row.", call. = FALSE)
-  selected$review_date[selected_row] <- "2026-11-03"
-  selected$curation_status[selected_row] <- "partial_source_import"
-  replace_discovery_row(selected_path, selected_row,
-    selected[selected_row, , drop = FALSE], "candidate_id", candidate_id)
 }
 
 cat(if (dry_run) "Dry run parsed Celtic Sea herring source records:" else "Imported partial Celtic Sea herring source records:", nrow(input_data), "inputs,",

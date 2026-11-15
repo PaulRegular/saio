@@ -3,8 +3,6 @@ database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "ices_four_spot_megrim_8c9a_2026")
 manifest_path <- file.path(root, "provenance", "ices_four_spot_megrim_8c9a_2026", "sources.csv")
 register_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_33_2026.csv")
 
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 stock_id <- "ices_four_spot_megrim_8c9a"
@@ -509,28 +507,7 @@ register$notes[candidate_row] <- paste(
 )
 
 source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-if (!inventory$import_status[inventory_row] %in% c("not_started", "partial"))
-  stop("The four-spot megrim inventory unit has an unexpected import status.", call. = FALSE)
-inventory$import_status[inventory_row] <- "partial"
 
-selected <- read.csv(selected_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-selected_row <- which(selected$candidate_id == candidate_id)
-if (length(selected_row) != 1L ||
-    !selected$curation_status[selected_row] %in% c("selected_for_source_curation", "partial_source_import") ||
-    !selected$candidate_unit_id[selected_row] %in% c(stock_id, "ices_ldb_27_8c9a"))
-  stop("The four-spot megrim selected-batch row is missing or conflicts with the candidate register.", call. = FALSE)
-selected$candidate_unit_id[selected_row] <- stock_id
-selected$detailed_source_url[selected_row] <- paste(
-  report_url, annex_url, "https://asd.ices.dk/viewAdvice/7266", sag_page_url, sag_xml_url,
-  sep = "; "
-)
-selected$selection_basis[selected_row] <- paste(
-  "Partial source import completed from verified current-run sources. The report table supplies Spanish discard numbers-at-age and aggregate catches; SAG provides aggregate outputs with 90% intervals.",
-  "Full catch-at-age and survey age-index matrices remain unavailable."
-)
-selected$curation_status[selected_row] <- "partial_source_import"
 
 append_rows <- function(file, data) {
   path <- file.path(database, file)
@@ -558,14 +535,6 @@ if (dry_run) {
   append_rows("outputs.csv", outputs)
   replace_candidate_register_row(
     register_path, candidate_row, register[candidate_row, , drop = FALSE], candidate_id
-  )
-  replace_csv_register_row(
-    inventory_path, inventory_row, inventory[inventory_row, , drop = FALSE],
-    "unit_key", inventory$unit_key[inventory_row]
-  )
-  replace_csv_register_row(
-    selected_path, selected_row, selected[selected_row, , drop = FALSE],
-    "candidate_id", candidate_id
   )
   cat("Imported partial ICES four-spot megrim ldb.27.8c9a source data.\n")
 }

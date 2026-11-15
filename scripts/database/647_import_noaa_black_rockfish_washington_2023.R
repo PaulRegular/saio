@@ -3,8 +3,6 @@ database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "noaa_black_rockfish_washington_2023")
 model_dir <- file.path(cache, "model_files", "Reference model")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_31_2026.csv")
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 
 candidate_id <- "NOAA:14409"
@@ -608,12 +606,8 @@ assessments_path <- file.path(database, "assessments.csv")
 stock_existing <- read_table(stocks_path)
 assessment_existing <- read_table(assessments_path)
 candidate <- read_table(candidate_path)
-inventory <- read_table(inventory_path)
-selected <- read_table(selected_path)
 candidate_row <- which(candidate$candidate_id == candidate_id)
-inventory_row <- which(inventory$unit_key == paste0("candidate:", candidate_unit_id))
-selected_row <- which(selected$candidate_unit_id == candidate_unit_id)
-if (length(candidate_row) != 1L || length(inventory_row) != 1L || length(selected_row) != 1L ||
+if (length(candidate_row) != 1L ||
     candidate$eligibility[candidate_row] != "eligible" ||
     !candidate$import_status[candidate_row] %in% c("not_started", "partial")) {
   stop("NOAA Stock SMART 14409 is missing, duplicated, or not ready for import.", call. = FALSE)
@@ -716,11 +710,6 @@ candidate$review_date <- "2026-11-12"
 candidate$decision_reason <- "Eligible and selected as the Washington current stock unit. The 2023 official production assessment has detailed report and model files; Washington is kept separate from Oregon and California."
 candidate$notes <- "Partial native source import completed. The source model is annual, two-sex, ages 0-40 (40+ accumulator), one area; native catches and compositions are preserved, and catch-at-age and age-specific abundance indices were not fabricated. M is fixed by sex."
 
-inventory <- inventory[inventory_row, , drop = FALSE]
-inventory$matched_stock_id <- stock_id
-inventory$import_status <- "partial"
-selected <- selected[selected_row, , drop = FALSE]
-selected$curation_status <- "partial_source_import"
 
 if (!dry_run) {
   append_rows(stocks_path, stock)
@@ -729,8 +718,6 @@ if (!dry_run) {
   append_rows(file.path(database, "outputs.csv"), output_data)
   append_rows(file.path(database, "assumptions.csv"), assumptions)
   replace_csv_row(candidate_path, "candidate_id", candidate_id, candidate_row, candidate)
-  replace_csv_row(inventory_path, "unit_key", paste0("candidate:", candidate_unit_id), inventory_row, inventory)
-  replace_csv_row(selected_path, "candidate_unit_id", candidate_unit_id, selected_row, selected)
 }
 
 cat(if (dry_run) "Dry run parsed " else "Imported ",

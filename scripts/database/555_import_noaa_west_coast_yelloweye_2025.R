@@ -467,15 +467,10 @@ if (anyDuplicated(key)) stop("Duplicate assumption keys are present.", call. = F
 stocks_path <- file.path(database, "stocks.csv")
 assessments_path <- file.path(database, "assessments.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 stocks <- read_csv(stocks_path); assessments <- read_csv(assessments_path)
-candidate <- read_csv(candidate_path); inventory <- read_csv(inventory_path)
-selected <- read_csv(selected_path)
+candidate <- read_csv(candidate_path)
 ci <- which(candidate$candidate_id == candidate_id)
-ii <- which(inventory$unit_key == paste0("candidate:", candidate_unit_id))
-si <- which(selected$candidate_unit_id == candidate_unit_id)
-if (length(ci) != 1L || length(ii) != 1L || length(si) != 1L ||
+if (length(ci) != 1L ||
     candidate$eligibility[ci] != "eligible" ||
     !candidate$import_status[ci] %in% c("not_started", "partial"))
   stop("Candidate is missing, duplicated, or not eligible.", call. = FALSE)
@@ -559,19 +554,12 @@ candidate_row$output_evidence <- "Pinned output includes area-specific N/B/M, fl
 candidate_row$review_date <- "2026-11-03"
 candidate_row$decision_reason <- "Imported the current U.S. West Coast Yelloweye unit from the adopted 2025 production update and its pinned native Stock Synthesis output bundle."
 candidate_row$notes <- "Partial source import completed. No observed annual catch-at-age, age-specific index, standalone weight-at-age, or maturity-at-age vector was fabricated."
-inventory_row <- inventory[ii, , drop = FALSE]
-inventory_row$matched_stock_id <- stock_id
-inventory_row$import_status <- "partial"
-selected_row <- selected[si, , drop = FALSE]
-selected_row$curation_status <- "partial_source_import"
 if (!dry_run) {
   append_rows(stocks_path, stock); append_rows(assessments_path, assessment)
   append_rows(file.path(database, "inputs.csv"), input_data)
   append_rows(file.path(database, "outputs.csv"), output_data)
   append_rows(file.path(database, "assumptions.csv"), assumption_data)
   replace_candidate_register_row(candidate_path, ci, candidate_row, candidate_id)
-  replace_csv_row(inventory_path, "unit_key", paste0("candidate:", candidate_unit_id), ii, inventory_row)
-  replace_csv_row(selected_path, "candidate_unit_id", candidate_unit_id, si, selected_row)
 }
 cat(if (dry_run) "Dry run parsed " else "Imported ", nrow(input_data),
   " inputs, ", nrow(assumption_data), " assumptions, and ", nrow(output_data),

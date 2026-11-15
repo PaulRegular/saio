@@ -580,8 +580,6 @@ if (write_mode) {
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)
 
-  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
-    local = new.env(parent = globalenv()))
   source(file.path(root, "scripts", "database", "002_validate_database.R"),
     local = new.env(parent = globalenv()))
   cat("GOA northern-rockfish rows imported and database validation passed.\n")

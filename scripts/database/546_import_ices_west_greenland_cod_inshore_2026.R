@@ -410,32 +410,7 @@ candidates$notes[candidate_row] <- paste(
 )
 replace_candidate_register_row(candidate_path, candidate_row, candidates[candidate_row, , drop = FALSE], candidate_id)
 
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-inventory <- utils::read.csv(
-  inventory_path, stringsAsFactors = FALSE, na.strings = c("", "NA"),
-  check.names = FALSE
-)
-inventory_row <- which(inventory$unit_key == paste0("candidate:", candidate_unit_id))
-if (length(inventory_row) != 1L) stop("Expected one inshore cod inventory row.", call. = FALSE)
-inventory$import_status[inventory_row] <- "partial"
-replace_discovery_row(
-  inventory_path, inventory_row, inventory[inventory_row, , drop = FALSE],
-  "unit_key", paste0("candidate:", candidate_unit_id)
-)
 
-selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
-selected <- utils::read.csv(
-  selected_path, stringsAsFactors = FALSE, na.strings = c("", "NA"),
-  check.names = FALSE
-)
-selected_row <- which(selected$candidate_id == candidate_id)
-if (length(selected_row) != 1L) stop("Expected one selected inshore cod row.", call. = FALSE)
-selected$review_date[selected_row] <- "2026-11-03"
-selected$curation_status[selected_row] <- "partial_source_import"
-replace_discovery_row(
-  selected_path, selected_row, selected[selected_row, , drop = FALSE],
-  "candidate_id", candidate_id
-)
 
 cat(
   "Imported partial West Greenland inshore cod source records:",

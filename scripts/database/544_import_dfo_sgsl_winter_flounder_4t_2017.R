@@ -322,12 +322,6 @@ candidates$notes[i] <- paste(
 source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 replace_candidate_register_row(candidate_path, i, candidates[i, , drop = FALSE], candidate_id)
 
-unit_path <- file.path(root, "discovery", "inventory_units.csv")
-units <- utils::read.csv(unit_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-u <- match("candidate:dfo_sgsl_winter_flounder_4t", units$unit_key)
-if (is.na(u)) cli::cli_abort("The DFO winter flounder inventory unit is missing.")
-units$import_status[u] <- "partial"
 replace_inventory_unit_row <- function(path, row_index, row, unit_key) {
   bytes <- readBin(path, "raw", n = file.info(path)$size)
   bounds <- csv_record_bounds(bytes)
@@ -380,7 +374,5 @@ replace_inventory_unit_row <- function(path, row_index, row, unit_key) {
     cli::cli_abort("Updated winter flounder inventory unit failed validation.")
   }
 }
-replace_inventory_unit_row(unit_path, u, units[u, , drop = FALSE],
-  "candidate:dfo_sgsl_winter_flounder_4t")
 
 cat("Imported partial DFO NAFO 4T winter flounder source records.\n")

@@ -410,17 +410,12 @@ assessment <- blank_row(names(assessment_table), list(
   notes = "Official 2023 California assessment; separate north and south models use data through 2022. Native catch biomass, aggregate indices and age/length samples, plus fitted N/B/F/C-at-age surfaces, are retained by subarea. Catch-at-age is an output, not an observed input; standalone empirical weight-at-age and maturity-at-age matrices are unavailable. Spawning-output intervals are reported for 2013-2023; age-specific uncertainties are not."))
 
 candidate_path <- file.path(root, "discovery/candidates.csv")
-inventory_path <- file.path(root, "discovery/inventory_units.csv")
 candidates <- read.csv(candidate_path, na.strings = c("", "NA"),
   stringsAsFactors = FALSE, check.names = FALSE)
-inventory <- read.csv(inventory_path, na.strings = c("", "NA"),
-  stringsAsFactors = FALSE, check.names = FALSE)
 candidate_rows <- match(candidate_ids, candidates$candidate_id)
-inventory_rows <- which(inventory$candidate_unit_id == candidate_unit_id)
-if (anyNA(candidate_rows) || length(inventory_rows) != 1L ||
+if (anyNA(candidate_rows) ||
     any(candidates$candidate_unit_id[candidate_rows] != candidate_unit_id) ||
-    any(candidates$eligibility[candidate_rows] != "eligible") ||
-    inventory$import_status[inventory_rows] != "not_started")
+    any(candidates$eligibility[candidate_rows] != "eligible"))
   stop("The California copper candidate register no longer matches the screened assessment.", call. = FALSE)
 candidate_updates <- candidates[candidate_rows, , drop = FALSE]
 candidate_updates$matched_stock_id <- stock_id
@@ -436,16 +431,11 @@ candidate_updates$output_evidence <- "Native fitted N/B/F/C-at-age surfaces are 
 candidate_updates$review_date <- "2026-11-11"
 candidate_updates$decision_reason <- "Imported one 2023 California copper rockfish assessment family with separate north and south subarea model records."
 candidate_updates$notes <- "Partial source import; fitted catch-at-age is not observed catch-at-age, and age compositions are not abundance indices."
-inventory_update <- inventory[inventory_rows, , drop = FALSE]
-inventory_update$matched_stock_id <- stock_id
-inventory_update$import_status <- "partial"
 if (write_mode) {
   append_pacific_case(stock, assessment, assumption_data, input_data, output_data)
   for (i in seq_along(candidate_rows))
     replace_candidate_register_row(candidate_path, candidate_rows[i],
       candidate_updates[i, , drop = FALSE], candidate_ids[i])
-  replace_csv_register_row(inventory_path, inventory_rows, inventory_update,
-    "unit_key", inventory_update$unit_key)
 }
 cat(if (write_mode) "Imported " else "Prepared ",
   nrow(input_data), " inputs, ", nrow(assumption_data), " assumptions, and ",

@@ -698,20 +698,13 @@ if (anyDuplicated(assumption_key) || any(!nzchar(input_data$source_reference)) |
 stocks_path <- file.path(database, "stocks.csv")
 assessments_path <- file.path(database, "assessments.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_05_2026.csv")
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
 candidate <- read_csv(candidate_path)
-inventory <- read_csv(inventory_path)
-selected <- read_csv(selected_path)
 ci <- which(candidate$candidate_id == candidate_id)
-ii <- which(inventory$unit_key == paste0("candidate:", candidate_unit_id))
-si <- which(selected$candidate_unit_id == candidate_unit_id)
-if (length(ci) != 1L || length(ii) != 1L || length(si) != 1L ||
+if (length(ci) != 1L ||
     candidate$eligibility[ci] != "eligible" ||
-    (!dry_run && candidate$import_status[ci] != "not_started") ||
-    (!dry_run && !inventory$import_status[ii] %in% c("not_started", "")))
+    (!dry_run && candidate$import_status[ci] != "not_started"))
   stop("Selected Petrale Sole candidate is missing, duplicated, or not eligible.",
     call. = FALSE)
 if (!dry_run && (any(stocks$stock_id == stock_id) ||
@@ -777,11 +770,6 @@ candidate_row$output_evidence <- "Imported annual N/F/M/catch-at-age and biology
 candidate_row$review_date <- format(Sys.Date(), "%Y-%m-%d")
 candidate_row$decision_reason <- "Partial source import of the latest current-unit assessment detail (2025 applied catch-only projection) and its 2023 full-benchmark base; data and outputs remain separated by assessment event."
 candidate_row$notes <- "See source_reviews/noaa_petrale_10011.md. The source model uses catches and length/age compositions rather than direct catch-at-age or age-specific abundance-index likelihoods; modeled biology outputs are not inputs."
-inventory_row <- inventory[ii, , drop = FALSE]
-inventory_row$matched_stock_id <- stock_id
-inventory_row$import_status <- "partial"
-selected_row <- selected[si, , drop = FALSE]
-selected_row$curation_status <- "partial_source_import"
 
 replace_csv_row <- function(path, key_column, key_value, row_index, row) {
   bytes <- readBin(path, "raw", n = file.info(path)$size)
@@ -848,8 +836,6 @@ if (!dry_run) {
   append_rows(file.path(database, "outputs.csv"), output_data)
   append_rows(file.path(database, "assumptions.csv"), assumption_data)
   replace_candidate_register_row(candidate_path, ci, candidate_row, candidate_id)
-  replace_csv_row(inventory_path, "unit_key", paste0("candidate:", candidate_unit_id), ii, inventory_row)
-  replace_csv_row(selected_path, "candidate_unit_id", candidate_unit_id, si, selected_row)
   manifest_dir <- file.path(root, "provenance/noaa_petrale_sole_pacific_coast")
   dir.create(manifest_dir, recursive = TRUE, showWarnings = FALSE)
   cache_manifest$notes <- ""

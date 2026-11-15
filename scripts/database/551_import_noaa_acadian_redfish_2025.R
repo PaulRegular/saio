@@ -3,8 +3,6 @@ dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "sebastes_fasciatus/noaa_acadian_redfish_gom_gb_2025")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 
 candidate_id <- "NOAA:10455"
 stock_id <- "noaa_acadian_redfish_gom_gb"
@@ -566,13 +564,6 @@ if (!dry_run && (candidate_data$eligibility[candidate_row] != "eligible" ||
     candidate_data$import_status[candidate_row] != "not_started")) {
   stop("The selected NOAA candidate is not ready for this first source import.", call. = FALSE)
 }
-inventory <- read_table(inventory_path)
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-selected <- read_table(selected_path)
-selected_row <- which(selected$candidate_unit_id == stock_id)
-if (length(inventory_row) != 1L || length(selected_row) != 1L) {
-  stop("The selected candidate is missing from the inventory or batch register.", call. = FALSE)
-}
 
 replace_csv_row <- function(path, key_column, key_value, row_index, row) {
   bytes <- readBin(path, what = "raw", n = file.info(path)$size)
@@ -669,13 +660,7 @@ if (!dry_run) {
   replace_candidate_register_row(candidate_path, candidate_row,
     candidate_data[candidate_row, , drop = FALSE], candidate_id)
 
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_row(inventory_path, "unit_key", inventory$unit_key[inventory_row],
-    inventory_row, inventory[inventory_row, , drop = FALSE])
 
-  selected$curation_status[selected_row] <- "partial_source_import"
-  replace_csv_row(selected_path, "candidate_unit_id", stock_id, selected_row,
-    selected[selected_row, , drop = FALSE])
 }
 
 cat(if (dry_run) "Dry run parsed " else "Imported ",

@@ -425,21 +425,14 @@ build_records <- function() {
 
 source_records <- build_records()
 candidate_path <- file.path(root, "discovery/candidates.csv")
-inventory_path <- file.path(root, "discovery/inventory_units.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
 candidate_row <- which(candidates$candidate_id == candidate_id)
-inventory_ids <- strsplit(as.character(inventory$candidate_ids), " | ", fixed = TRUE)
-inventory_row <- which(vapply(inventory_ids, function(x) candidate_id %in% x, logical(1L)))
 assessment_exists <- any(read.csv("database/assessments.csv", stringsAsFactors = FALSE)$assessment_id == assessment_id)
-if (length(candidate_row) != 1L || length(inventory_row) != 1L ||
+if (length(candidate_row) != 1L ||
     candidates$eligibility[candidate_row] != "eligible" ||
     !candidates$import_status[candidate_row] %in% c("not_started", "partial") ||
-    !inventory$import_status[inventory_row] %in% c("not_started", "partial") ||
     (!is.na(candidates$matched_stock_id[candidate_row]) && nzchar(candidates$matched_stock_id[candidate_row]) && candidates$matched_stock_id[candidate_row] != stock_id) ||
-    (!is.na(inventory$matched_stock_id[inventory_row]) && nzchar(inventory$matched_stock_id[inventory_row]) && inventory$matched_stock_id[inventory_row] != stock_id) ||
     (write_mode && assessment_exists)) {
   stop("The candidate registers or canonical assessment table no longer match this import.", call. = FALSE)
 }
@@ -461,11 +454,6 @@ candidate_update$detailed_source_url <- paste(report_url, model_url, star_url, s
 candidate_update$review_date <- "2026-11-13"
 candidate_update$decision_reason <- "The 2021 Southern California benchmark is the latest detailed production run identified for the unit; native post-STAR inputs and fitted outputs are publicly available. Import remains partial because direct catch-at-age and age-specific indices are not supplied, and the full source output archive is not exhaustively transcribed."
 candidate_update$notes <- "Partial canonical source import completed from the input data/control files named by starter.ss_new. The generated data.ss_new file is retained for reference but is not substituted for the original .dat input. The assessment's SpawnBio is millions of eggs and is not SSB. Source PDFs and the model archive are locally cached with checksums in provenance/noaa_vermilion_sunset_south_2021_sources.csv."
-inventory_update <- inventory[inventory_row, , drop = FALSE]
-inventory_update$matched_stock_id <- stock_id
-inventory_update$candidate_unit_id <- stock_id
-inventory_update$match_status <- "matched"
-inventory_update$import_status <- "partial"
 
 cat("Prepared", nrow(source_records$inputs), "inputs,", nrow(source_records$assumptions),
   "assumptions, and", nrow(source_records$outputs), "outputs for", assessment_id, "\n")
@@ -474,8 +462,6 @@ if (write_mode) {
   append_pacific_case(source_records$stock, source_records$assessment,
     source_records$assumptions, source_records$inputs, source_records$outputs)
   replace_candidate_register_row(candidate_path, candidate_row, candidate_update, candidate_id)
-  replace_csv_register_row(inventory_path, inventory_row, inventory_update,
-    "unit_key", inventory$unit_key[inventory_row])
   source(file.path(root, "scripts/database/002_validate_database.R"),
     local = new.env(parent = globalenv()))
   cat("The Southern California Vermilion/Sunset source rows were appended and database validation passed.\n")

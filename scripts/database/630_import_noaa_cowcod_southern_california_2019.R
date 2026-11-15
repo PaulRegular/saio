@@ -469,6 +469,5 @@ write.csv(candidate[ci, , drop = FALSE], tmp_candidate, row.names = FALSE, na = 
 candidate_lines[ci + 1L] <- readLines(tmp_candidate, warn = FALSE, encoding = "UTF-8")[-1L]
 unlink(tmp_candidate)
 writeLines(candidate_lines, candidate_path, useBytes = TRUE)
-source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"), local = TRUE)
 source(file.path(root, "scripts", "database", "002_validate_database.R"), local = TRUE)
 cat("Import written and database validation passed.\n")

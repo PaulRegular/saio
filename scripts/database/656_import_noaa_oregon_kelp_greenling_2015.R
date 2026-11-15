@@ -216,15 +216,7 @@ import_noaa_oregon_kelp_greenling_2015 <- function(root = ".", write = FALSE) {
   cand<-read.csv(cp,colClasses="character",check.names=FALSE)
   cr<-match(candidate_id,cand$candidate_id)
   if(is.na(cr)||cand$eligibility[cr]!="eligible"||cand$import_status[cr]!="not_started")stop("Candidate status changed.")
-  ip<-file.path(root,"discovery/inventory_units.csv")
-  inv<-read.csv(ip,colClasses="character",check.names=FALSE)
-  ir<-which(vapply(strsplit(inv$candidate_ids," | ",fixed=TRUE),function(x)candidate_id%in%x,logical(1)))
-  if(length(ir)!=1L||nzchar(inv$matched_stock_id[ir]))stop("Inventory match changed.")
   source(file.path(root,"scripts/discovery/candidate_register_io.R"))
-  bp<-file.path(root,"discovery/selections/selected_batch_40_2026.csv")
-  batch<-read.csv(bp,colClasses="character",check.names=FALSE)
-  br<-match(candidate_id,batch$candidate_id)
-  if(is.na(br))stop("Kelp Greenling is not in selected batch.")
   cand$candidate_unit_id[cr]<-stock_id; cand$matched_stock_id[cr]<-stock_id
   cand$match_status[cr]<-"matched"; cand$import_status[cr]<-"partial"
   cand$catch_age_evidence[cr]<-"Imported native annual catch and length/age compositions; standard negative-fleet age compositions are diagnostic, and no catch-at-age was fabricated."
@@ -235,17 +227,11 @@ import_noaa_oregon_kelp_greenling_2015 <- function(root = ".", write = FALSE) {
   cand$timing_evidence[cr]<-"Annual model; all fleets and indices timed at 0.5."
   cand$output_evidence[cr]<-"Table 15 aggregate outputs and recent Table E2/E3 intervals imported; fitted age surfaces unavailable."
   cand$review_date[cr]<-as.character(Sys.Date()); cand$import_status[cr]<-"partial"; cand$decision_reason[cr]<-"Partial source import from the latest detailed Oregon assessment; native catches, CPUE, compositions, fixed biology and aggregate outputs recovered. Fitted age surfaces remain unavailable."; cand$notes[cr]<-"NOAA Stock SMART 10462; 2015 Oregon benchmark remains latest full fit cited by current management documents. See source_reviews/screening/noaa_oregon_kelp_greenling_2015.md."
-  inv$unit_key[ir]<-paste0("candidate:",stock_id); inv$candidate_unit_id[ir]<-stock_id
-  inv$matched_stock_id[ir]<-stock_id; inv$match_status[ir]<-"matched"; inv$import_status[ir]<-"partial"
-  batch$curation_status[br]<-"partial_source_import"
-  candidate_inventory_row(inv,candidate_id,stock_id)
-  if(write) {
+      if(write) {
     for(nm in c("stocks","assessments","assumptions","inputs","outputs"))
       write.table(get(switch(nm,stocks="stock",assessments="ar",assumptions="assumptions",inputs="inputs",outputs="outputs")),
         file.path(db,paste0(nm,".csv")),sep=",",row.names=FALSE,col.names=FALSE,append=TRUE,na="",qmethod="double",eol="\n")
     replace_candidate_register_row(cp,cr,cand[cr,,drop=FALSE],candidate_id)
-    replace_csv_register_row(ip,ir,inv[ir,,drop=FALSE],"candidate_ids",inv$candidate_ids[ir])
-    replace_candidate_register_row(bp,br,batch[br,,drop=FALSE],candidate_id)
   }
   list(stock=stock,assessment=ar,assumptions=assumptions,inputs=inputs,outputs=outputs)
 }

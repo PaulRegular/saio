@@ -507,7 +507,6 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
   notes = "Latest completed detailed assessment located for NOAA unit 10339; data through 2018 with 2019 projection estimates. Numeric composition matrices are not reported in the assessment tables; annual output uncertainty is not available, although Table 16 reports benchmark Monte Carlo/Bootstrap summaries.")
 
 candidate_path <- file.path("discovery", "candidates.csv")
-inventory_path <- file.path("discovery", "inventory_units.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv(file.path("database", "stocks.csv"), stringsAsFactors = FALSE,
@@ -525,9 +524,6 @@ if (length(candidate_row) != 1L ||
   stop("NOAA South Atlantic Snowy Grouper candidate or database identity has changed.",
     call. = FALSE)
 }
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
 
 row_key <- function(x, columns) {
   do.call(paste, c(lapply(x[columns], function(value) {
@@ -560,11 +556,6 @@ if (write_mode) {
     "Input and output records are partial: age-composition matrices are figure-only and annual population uncertainty is not reported.")
   replace_candidate_register_row(candidate_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  inventory$matched_stock_id[inventory_row] <- stock_id
-  inventory$match_status[inventory_row] <- "matched"
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
 } else {
   message("Dry run: ", nrow(stock), " stock, ", nrow(assessment), " assessment, ",
     nrow(assumptions), " assumptions, ", nrow(inputs), " inputs, and ",

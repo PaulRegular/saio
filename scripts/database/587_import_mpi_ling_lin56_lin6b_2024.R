@@ -447,13 +447,8 @@ register_path <- file.path(root, "discovery", "candidates.csv")
 register <- read.csv(register_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate_row <- which(register$candidate_id == candidate_id)
-selection_path <- file.path(root, "discovery/selections", "selected_batch_06_2026.csv")
-selection <- read.csv(selection_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-selection_row <- which(selection$candidate_id == candidate_id)
-if (length(candidate_row) != 1L || length(selection_row) != 1L ||
-    register$import_status[candidate_row] != "not_started" ||
-    selection$curation_status[selection_row] != "selected") {
+if (length(candidate_row) != 1L ||
+    register$import_status[candidate_row] != "not_started") {
   stop("Expected one selected, not-started Sub-Antarctic ling candidate.", call. = FALSE)
 }
 records <- list(stocks = stock, assessments = assessment,
@@ -499,11 +494,5 @@ if (!write_data) {
   replace_candidate_register_row(register_path, candidate_row,
     register[candidate_row, , drop = FALSE], candidate_id)
 
-  selection$curation_status[selection_row] <- "source_curated_partial"
-  write.csv(selection, selection_path, row.names = FALSE, na = "")
-  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
-    local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
-    local = new.env(parent = globalenv()))
   cat("Imported partial Sub-Antarctic ling source records and updated the candidate summaries.\n")
 }

@@ -68,23 +68,14 @@ assumptions_path <- file.path(root, "database/assumptions.csv")
 inputs_path <- file.path(root, "database/inputs.csv")
 outputs_path <- file.path(root, "database/outputs.csv")
 candidates_path <- file.path(root, "discovery/candidates.csv")
-selected_path <- file.path(root, "discovery/selections/selected_batch_12_2026.csv")
-units_path <- file.path(root, "discovery/inventory_units.csv")
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
 candidates <- read_character_csv(candidates_path)
-selected <- read_character_csv(selected_path)
-units <- read_character_csv(units_path)
 candidate_row <- which(candidates$candidate_id == candidate_id)
-selected_row <- which(selected$candidate_id == candidate_id)
-unit_row <- which(units$candidate_unit_id == candidate_unit_id)
-if (length(candidate_row) != 1L || length(selected_row) != 1L ||
-    length(unit_row) != 1L ||
+if (length(candidate_row) != 1L ||
     candidates$candidate_unit_id[candidate_row] != candidate_unit_id ||
     candidates$eligibility[candidate_row] != "eligible" ||
     candidates$import_status[candidate_row] != "not_started" ||
-    selected$curation_status[selected_row] != "selected_for_source_curation" ||
-    units$import_status[unit_row] != "not_started" ||
     any(stocks$stock_id == stock_id) || any(assessments$assessment_id == assessment_id)) {
   stop("The candidate or canonical database state differs from the reviewed selection.",
     call. = FALSE)
@@ -493,9 +484,5 @@ if (write_mode) {
 
   replace_csv_cell(candidates_path, paste0("\"", candidate_id, "\","),
     15L, "not_started", "partial")
-  replace_csv_cell(selected_path, paste0("\"1\",\"", candidate_id, "\","),
-    13L, "selected_for_source_curation", "partial_source_import")
-  replace_csv_cell(units_path, paste0("\"candidate:", candidate_unit_id, "\","),
-    7L, "not_started", "partial")
   cat("Imported the source tables and marked the assessment partial.\n")
 }

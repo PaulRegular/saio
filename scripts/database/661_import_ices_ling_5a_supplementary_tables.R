@@ -285,17 +285,6 @@ candidate_updated$notes <- paste(
   "Supplementary age tables are cached and checksummed in provenance/discovery_ices_ling_5a_2026/supplementary_sources.csv."
 )
 
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-inventory <- utils::read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-inventory_row <- which(inventory$unit_key == paste0("candidate:", unit_id))
-if (length(inventory_row) != 1L || inventory$candidate_ids[inventory_row] != candidate_id) {
-  stop("Icelandic ling inventory row is missing or does not match the candidate.", call. = FALSE)
-}
-inventory_updated <- inventory[inventory_row, , drop = FALSE]
-inventory_updated$matched_stock_id <- unit_id
-inventory_updated$match_status <- "matched"
-inventory_updated$import_status <- "partial"
 
 assessment_path <- file.path(database, "assessments.csv")
 assessments <- utils::read.csv(assessment_path, stringsAsFactors = FALSE,
@@ -334,9 +323,6 @@ if (!dry_run) {
     assessment_path, assessment_row, assessment_updated, "assessment_id", assessment_id
   )
   replace_candidate_register_row(candidate_path, candidate_row, candidate_updated, candidate_id)
-  replace_csv_register_row(
-    inventory_path, inventory_row, inventory_updated, "unit_key", paste0("candidate:", unit_id)
-  )
 }
 cat("Icelandic ling supplementary tables: ", nrow(inputs), " inputs and ", nrow(outputs),
   " outputs prepared; ", nrow(input_to_add), " inputs and ", nrow(output_to_add),

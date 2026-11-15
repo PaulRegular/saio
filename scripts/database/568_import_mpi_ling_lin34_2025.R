@@ -541,8 +541,6 @@ if (write_mode) {
     timing_evidence = "Calendar-year model; Tangaroa summer survey sampling time is 0.2. The commercial age-composition time_step differs between the embedded input blocks and Table 1; no fraction was inferred.",
     output_evidence = "Imported posterior B0 and B2025 with 95% credible intervals, B2025/B0, Table 8 M parameter estimates, and Table 10 B2030 projection summaries. Annual numerical N-at-age and F-at-age arrays are not tabulated."
   ))
-  replace_register_row(file.path(root, "discovery/selections", "selected_batch_02_2026.csv"), "candidate_id", candidate_id,
-    list(curation_status = "partial_source_import"))
 }
 
 cat("LIN 3&4 source import ", if (write_mode) "written" else "validated (dry run)", ": ",

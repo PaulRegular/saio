@@ -408,12 +408,6 @@ if (write_mode) {
   candidate$import_status <- "partial"
   candidate$notes <- "Partial SEDAR 100 source records imported: landings, commercial discards, selected aggregate indices, Review Panel revised-base annual aggregate outputs, and documented M assumptions. Native catch-at-age, annual N/F-at-age, weight-at-age and maturity-at-age remain unavailable."
   replace_candidate_register_row(candidates_path, candidate_row, candidate, candidate_id)
-  batch_path <- file.path(root, "discovery/selections/selected_batch_23_2026.csv")
-  batch <- read.csv(batch_path, stringsAsFactors = FALSE, check.names = FALSE)
-  batch_row <- which(batch$candidate_id == candidate_id)
-  if (length(batch_row) != 1L) stop("Expected one selected-batch row for NOAA:10062.", call. = FALSE)
-  batch$curation_status[batch_row] <- "imported_partial"
-  write.csv(batch, batch_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
   cat("Imported ", nrow(new_inputs), " input rows, ", nrow(new_assumptions),
     " assumptions, and ", nrow(new_outputs), " output rows for ", assessment_id, ".\n", sep = "")
 } else {

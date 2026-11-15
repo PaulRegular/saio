@@ -288,18 +288,6 @@ if (write_mode) {
   candidates$notes[ci] <- paste(candidates$notes[ci], "Partial source data imported as noaa_atlantic_herring_gom_georges_bank_2026; the 2025 Research Track is not substituted for missing 2026 inputs.")
   replace_candidate_register_row(candidates_path, ci, candidates[ci, , drop = FALSE], candidate_id)
 
-  inventory_path <- file.path(root, "discovery/inventory_units.csv")
-  inventory <- read.csv(inventory_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-  ui <- candidate_inventory_row(inventory, candidate_id, stock_id)
-  inventory$matched_stock_id[ui] <- stock_id
-  inventory$match_status[ui] <- "matched"
-  inventory$eligibility[ui] <- "unresolved"
-  inventory$import_status[ui] <- "partial"
-  replace_csv_register_row(inventory_path, ui, inventory[ui, , drop = FALSE], "unit_key", paste0("candidate:", stock_id))
-  batch_path <- file.path(root, "discovery/selections/selected_batch_42_2026.csv")
-  batch <- read.csv(batch_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-  batch$curation_status[batch$candidate_id == candidate_id] <- "partial_source_import"
-  write.csv(batch, batch_path, row.names = FALSE, na = "")
 }
 
 cat("Verified NOAA Atlantic herring 2026 source import.\n")

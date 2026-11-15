@@ -767,30 +767,7 @@ import_noaa_longnose_skate_pacific_2019 <- function(root = ".", write = FALSE) {
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)
 
-  inventory_path <- file.path(root, "discovery/inventory_units.csv")
-  inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), check.names = FALSE)
-  ir <- which(vapply(strsplit(inventory$candidate_ids, " | ", fixed = TRUE),
-    function(x) candidate_id %in% x, logical(1L)))
-  if (length(ir) != 1L) stop("Expected one Longnose Skate inventory unit.",
-    call. = FALSE)
-  inventory$unit_key[ir] <- paste0("stock:", stock_id)
-  inventory$candidate_unit_id[ir] <- stock_id
-  inventory$matched_stock_id[ir] <- stock_id
-  inventory$match_status[ir] <- "matched"
-  inventory$import_status[ir] <- "partial"
-  replace_csv_register_row(inventory_path, ir,
-    inventory[ir, , drop = FALSE], "candidate_ids", inventory$candidate_ids[ir])
 
-  batch_path <- file.path(root, "discovery/selections/selected_batch_40_2026.csv")
-  batch <- read.csv(batch_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), check.names = FALSE)
-  bi <- which(batch$candidate_id == candidate_id)
-  if (length(bi) != 1L) stop("Longnose Skate is not in the selected batch.",
-    call. = FALSE)
-  batch$curation_status[bi] <- "partial_source_import"
-  replace_candidate_register_row(batch_path, bi,
-    batch[bi, , drop = FALSE], candidate_id)
 
   provenance_dir <- file.path(root,
     "provenance/discovery_noaa_longnose_skate_2019")

@@ -349,8 +349,6 @@ if (!any(assumptions$assessment_id == assessment_id & assumptions$setting == "su
 
 source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_34_2026.csv")
 register <- read.csv(candidate_path, stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE, na.strings = c("", "NA"))
 candidate_row <- which(register$candidate_id == candidate_id)
@@ -380,18 +378,6 @@ register$notes[candidate_row] <- paste(
   "Inputs remain partial because 1979 catch-at-age is not tabulated, the spawning-stock weight table is empty, and the survey index multiplier is unstated.",
   "See source_reviews/screening/ices_plaice_iceland_2026.md.")
 
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  colClasses = "character", check.names = FALSE, na.strings = c("", "NA"))
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-inventory$import_status[inventory_row] <- "partial"
-selected <- read.csv(selected_path, stringsAsFactors = FALSE,
-  colClasses = "character", check.names = FALSE, na.strings = c("", "NA"))
-selected_row <- which(selected$candidate_id == candidate_id)
-if (length(selected_row) != 1L) stop("The Icelandic plaice selected-batch row is missing.", call. = FALSE)
-selected$curation_status[selected_row] <- "partial_source_import"
-selected$selection_basis[selected_row] <- paste(
-  "Imported the official MFRI supplementary age tables and ICES SAG outputs.",
-  "Inputs remain partial due to missing 1979 catch-at-age, an empty SSB-weight table, and an unstated survey index multiplier.")
 
 append_rows <- function(path, rows) {
   if (!nrow(rows)) return(invisible(NULL))
@@ -416,9 +402,5 @@ if (dry_run) {
   write_csv(assumptions, file.path(database, "assumptions.csv"))
   replace_candidate_register_row(candidate_path, candidate_row,
     register[candidate_row, , drop = FALSE], candidate_id)
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
-  replace_csv_register_row(selected_path, selected_row,
-    selected[selected_row, , drop = FALSE], "candidate_id", candidate_id)
   cat("Imported MFRI Icelandic plaice age tables and updated the 2026 source record.\n")
 }

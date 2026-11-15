@@ -55,22 +55,14 @@ assumptions_path <- file.path(root, "database/assumptions.csv")
 inputs_path <- file.path(root, "database/inputs.csv")
 outputs_path <- file.path(root, "database/outputs.csv")
 candidates_path <- file.path(root, "discovery/candidates.csv")
-selected_path <- file.path(root, "discovery/selections/selected_batch_13_2026.csv")
-units_path <- file.path(root, "discovery/inventory_units.csv")
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
 candidates <- read_character_csv(candidates_path)
-selected <- read_character_csv(selected_path)
-units <- read_character_csv(units_path)
 candidate_row <- which(!is.na(candidates$candidate_id) & candidates$candidate_id == candidate_id)
-selected_row <- which(!is.na(selected$candidate_id) & selected$candidate_id == candidate_id)
-unit_row <- which(!is.na(units$candidate_unit_id) & units$candidate_unit_id == stock_id)
-if (length(candidate_row) != 1L || length(selected_row) != 1L || length(unit_row) != 1L ||
+if (length(candidate_row) != 1L ||
     candidates$candidate_unit_id[candidate_row] != stock_id ||
     candidates$eligibility[candidate_row] != "eligible" ||
     candidates$import_status[candidate_row] != "not_started" ||
-    selected$curation_status[selected_row] != "selected_for_source_curation" ||
-    units$import_status[unit_row] != "not_started" ||
     any(stocks$stock_id == stock_id) || any(assessments$assessment_id == assessment_id)) {
   stop("The candidate selection or canonical database state differs from the reviewed source screen.", call. = FALSE)
 }
@@ -629,14 +621,5 @@ if (write_mode) {
   replace_row_text(candidates_path, paste0("\"", candidate_id, "\","),
     paste0("\"2026-11-07\",\"\",\"new\",\"screened\",\"eligible\",\"not_started\","),
     paste0("\"2026-11-07\",\"", stock_id, "\",\"matched\",\"screened\",\"eligible\",\"partial\","))
-  replace_row_text(selected_path, paste0("\"1\",\"", candidate_id, "\","),
-    "\"selected_for_source_curation\"", "\"partial_source_import\"")
-  replace_row_text(units_path, paste0("\"candidate:", stock_id, "\","),
-    paste0("\"candidate:", stock_id, "\",\"\",\"", stock_id,
-      "\",\"new\",\"eligible\",\"screened\",\"not_started\",\"INIDEP\""),
-    paste0("\"candidate:", stock_id, "\",\"", stock_id, "\",\"", stock_id,
-      "\",\"matched\",\"eligible\",\"screened\",\"partial\",\"INIDEP\""))
-  source(file.path(root, "scripts/discovery/195_summarize_discovery.R"),
-    local = new.env(parent = globalenv()))
   cat("Imported the reviewed source tables and marked the record partial.\n")
 }

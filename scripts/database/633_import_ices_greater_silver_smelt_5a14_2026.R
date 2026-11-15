@@ -446,15 +446,6 @@ if (write_mode) {
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)
 
-  inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-  inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), check.names = FALSE)
-  ui <- candidate_inventory_row(inventory, candidate_id, stock_id)
-  inventory$matched_stock_id[ui] <- stock_id
-  inventory$match_status[ui] <- "matched"
-  inventory$import_status[ui] <- "partial"
-  replace_csv_register_row(inventory_path, ui, inventory[ui, , drop = FALSE],
-    "unit_key", paste0("candidate:", stock_id))
 
   source(file.path(root, "scripts", "database", "002_validate_database.R"),
     local = TRUE)

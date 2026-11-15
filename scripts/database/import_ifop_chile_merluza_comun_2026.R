@@ -360,16 +360,6 @@ if (!grepl(
     "without a direct reconciliation."
   )
 }
-selected_path <- file.path("discovery/selections", "selected_batch_20_2026.csv")
-selected <- read.csv(
-  selected_path, stringsAsFactors = FALSE, check.names = FALSE,
-  na.strings = c("", "NA")
-)
-selected_index <- which(selected$candidate_id == candidate_id)
-if (length(selected_index) != 1L) {
-  stop("Expected exactly one selected Chilean common hake row.")
-}
-selected$curation_status[selected_index] <- "partial_source_import"
 
 database_path <- function(name) file.path("database", name)
 csv_has_record <- function(path, id) {
@@ -441,9 +431,6 @@ if ("--apply" %in% commandArgs(trailingOnly = TRUE)) {
   update_csv_record(
     file.path("discovery", "candidates.csv"), candidate_id,
     candidate_register[candidate_index, , drop = FALSE], "candidate_id"
-  )
-  update_csv_record(selected_path, candidate_id,
-    selected[selected_index, , drop = FALSE], "candidate_id"
   )
   write.csv(manifest, manifest_path, row.names = FALSE, na = "")
   writeLines(source_review, source_review_path, useBytes = TRUE)

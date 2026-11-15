@@ -226,10 +226,6 @@ if (length(candidate_row) != 1L || candidates$candidate_unit_id[candidate_row] !
   stop("Gulf gag identity conflicts with the eligible candidate or canonical database.", call. = FALSE)
 }
 
-inventory_path <- file.path(root, "discovery/inventory_units.csv")
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
 inputs <- pacific_database_row("inputs", n = 0L)
 
 if (nrow(outputs) != 1197L || any(!is.finite(outputs$value)) ||
@@ -251,11 +247,6 @@ if (write_mode) {
     "Tables 6-9 from the 2022 SRFS amendment are now imported: annual exploitation rates, biomass, SSB, exploitable abundance, age-0 recruitment, SSB/SSB0, and sex-specific SSB, biomass and abundance. No N-at-age/F-at-age arrays or output intervals are available.")
   replace_candidate_register_row(candidates_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  inventory$matched_stock_id[inventory_row] <- stock_id
-  inventory$match_status[inventory_row] <- "matched"
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
 } else {
   message("Dry run: ", nrow(stock), " stock, ", nrow(assessment), " assessment, ",
     nrow(assumptions), " assumptions, ", nrow(outputs),

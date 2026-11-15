@@ -3,8 +3,6 @@ database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "ices_four_spot_megrim_8c9a_2026")
 manifest_path <- file.path(root, "provenance", "ices_four_spot_megrim_8c9a_2026", "sources.csv")
 register_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_33_2026.csv")
 stock_id <- "ices_four_spot_megrim_8c9a"
 assessment_id <- paste0(stock_id, "_2026")
 candidate_id <- "ICES:ldb.27.8c9a"
@@ -224,26 +222,7 @@ register$notes[candidate_row] <- paste(
   "The report's discard table age labels 0-7 differ from the Annex's 0-6+ model bins; see source_reviews/ices_four_spot_megrim_8c9a.md."
 )
 
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-if (!inventory$matched_stock_id[inventory_row] %in% c(NA, "", stock_id) ||
-    !inventory$match_status[inventory_row] %in% c("new", "matched"))
-  stop("The four-spot megrim inventory crosswalk conflicts with the stock record.", call. = FALSE)
-inventory$matched_stock_id[inventory_row] <- stock_id
-inventory$match_status[inventory_row] <- "matched"
-inventory$import_status[inventory_row] <- "partial"
 
-selected <- read.csv(selected_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-selected_row <- which(selected$candidate_id == candidate_id)
-if (length(selected_row) != 1L || selected$candidate_unit_id[selected_row] != stock_id)
-  stop("The four-spot megrim selected-batch record is missing or inconsistent.", call. = FALSE)
-selected$selection_basis[selected_row] <- paste(
-  "Partial import includes Spanish discard-to-total-catch ratios by weight and number, age-specific discard numbers, aggregate catches, fixed biology, and official aggregate outputs with 90% intervals.",
-  "Full fleet catch-at-age and survey age-index matrices remain unavailable."
-)
-selected$curation_status[selected_row] <- "partial_source_import"
 
 append_rows <- function(path, data) {
   if (!nrow(data)) return(invisible(NULL))
@@ -263,16 +242,12 @@ append_rows <- function(path, data) {
 
 if (dry_run) {
   cat("Validated WGBIE Table 6.4.2a: ", nrow(inputs), " source rows; ",
-    nrow(missing_inputs), " rows to append; candidate and inventory crosswalks reconciled.\n",
+    nrow(missing_inputs), " rows to append; candidate register verified.\n",
     sep = "")
 } else {
   append_rows(file.path(database, "inputs.csv"), missing_inputs)
   replace_candidate_register_row(register_path, candidate_row,
     register[candidate_row, , drop = FALSE], candidate_id)
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
-  replace_csv_register_row(selected_path, selected_row,
-    selected[selected_row, , drop = FALSE], "candidate_id", candidate_id)
   cat("Imported ", nrow(missing_inputs),
     " WGBIE Table 6.4.2a rows and reconciled the four-spot megrim candidate crosswalk.\n",
     sep = "")

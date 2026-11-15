@@ -2,7 +2,6 @@ root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "merlangius_merlangus/ices_whg_27_7b_ce_k_2026")
 register_path <- file.path(root, "discovery", "candidates.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 
 stock_id <- "ices_whg_27_7b_ce_k"
@@ -422,16 +421,6 @@ register$notes[candidate_row] <- paste(
   "Inputs, assumptions, and outputs remain partial because the run-matched configuration, landings-fraction series, exact survey fraction, and age-specific uncertainty were not recovered. See source_reviews/ices_whiting_7b_ce_k_2026.md."
 )
 
-selected <- read.csv(selected_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-selected_row <- which(selected$candidate_id == candidate_id)
-if (length(selected_row) != 1L || (!dry_run && selected$curation_status[selected_row] != "selected_pending_source_validation") ||
-    (dry_run && !selected$curation_status[selected_row] %in% c("selected_pending_source_validation", "partial_source_import")))
-  stop("The selected-batch whiting row is missing, duplicated, or already processed.", call. = FALSE)
-selected$curation_status[selected_row] <- "partial_source_import"
-selected$selection_basis[selected_row] <- paste(
-  "Imported the latest 2026 WGCSE age-specific catch, weights, survey and commercial indices, biological vectors, and F/N-at-age outputs; ICES Standard Graphs supplies aggregate output intervals.",
-  "The run-matched landings fraction, exact configuration and timing remain unavailable; see the source review."
-)
 
 append_rows <- function(file, data) {
   path <- file.path(database, file)
@@ -506,6 +495,5 @@ if (dry_run) {
   append_rows("outputs.csv", outputs)
   source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
   replace_candidate_register_row(register_path, candidate_row, register[candidate_row, , drop = FALSE], candidate_id)
-  replace_csv_row(selected_path, selected[selected_row, , drop = FALSE], "candidate_id", candidate_id)
   cat("Imported partial ICES 2026 Celtic Sea whiting source data.\n")
 }

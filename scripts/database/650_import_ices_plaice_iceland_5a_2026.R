@@ -3,8 +3,6 @@ database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "pleuronectes_platessa/ices_plaice_iceland_5a_2026")
 manifest_path <- file.path(root, "provenance", "ices_plaice_iceland_5a_2026", "sources.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_34_2026.csv")
 
 assessment_id <- "ices_plaice_iceland_5a_2026"
 stock_id <- "ices_plaice_iceland_5a"
@@ -402,28 +400,7 @@ register$notes[candidate_row] <- paste(
   "See source_reviews/screening/ices_plaice_iceland_2026.md."
 )
 
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-inventory_original_unit_key <- inventory$unit_key[inventory_row]
-inventory$matched_stock_id[inventory_row] <- stock_id
-inventory$match_status[inventory_row] <- "matched"
-inventory$import_status[inventory_row] <- "partial"
 
-selected <- read.csv(selected_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-selected_row <- which(selected$candidate_id == candidate_id)
-if (length(selected_row) != 1L ||
-    !selected$curation_status[selected_row] %in% c(
-      "selected_for_source_curation", "partial_source_import"
-    )) {
-  stop("The Icelandic plaice selection record is missing or already imported.", call. = FALSE)
-}
-selected$curation_status[selected_row] <- "partial_source_import"
-selected$selection_basis[selected_row] <- paste(
-  "Imported aggregate landings by gear and aggregate outputs from current official sources.",
-  "Age-specific catch, survey indices, weights and maturity remain available only as figures and are not numerically imported."
-)
 
 append_rows <- function(file, rows) {
   path <- file.path(database, file)
@@ -452,9 +429,5 @@ if (dry_run) {
   append_rows("outputs.csv", outputs)
   replace_candidate_register_row(candidate_path, candidate_row,
     register[candidate_row, , drop = FALSE], candidate_id)
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key", inventory_original_unit_key)
-  replace_csv_register_row(selected_path, selected_row,
-    selected[selected_row, , drop = FALSE], "candidate_id", candidate_id)
   cat("Imported partial ICES plaice in Division 5.a (Iceland grounds).\n")
 }

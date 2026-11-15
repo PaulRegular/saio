@@ -253,17 +253,5 @@ if (!write_mode) {
     "Source import preserved only published numeric rows; plotted inputs were not digitized, catch-at-age was not reconstructed, and 2022 inputs were not substituted for the 2025 run.")
   replace_candidate_register_row("discovery/candidates.csv", i,
     candidates[i, , drop = FALSE], candidate_id)
-  inventory <- read_csv("discovery/inventory_units.csv")
-  inventory_index <- candidate_inventory_row(inventory, candidate_id, stock_id)
-  if (inventory$import_status[inventory_index] != "not_started") {
-    stop("NOAA Bluefish inventory status changed before import completion.", call. = FALSE)
-  }
-  inventory$unit_key[inventory_index] <- paste0("stock:", stock_id)
-  inventory$matched_stock_id[inventory_index] <- stock_id
-  inventory$candidate_unit_id[inventory_index] <- ""
-  inventory$match_status[inventory_index] <- "matched"
-  inventory$import_status[inventory_index] <- "partial"
-  inventory <- inventory[order(inventory$unit_key), , drop = FALSE]
-  write.csv(inventory, "discovery/inventory_units.csv", row.names = FALSE, na = "")
   cat("Imported partial NOAA Atlantic bluefish 2025 source data.\n")
 }

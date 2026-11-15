@@ -562,21 +562,6 @@ if (write_mode) {
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)
 
-  inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-  inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), check.names = FALSE)
-  inventory_ids <- strsplit(as.character(inventory$candidate_ids), " | ", fixed = TRUE)
-  ui <- which(vapply(inventory_ids, function(ids) candidate_id %in% ids, logical(1L)))
-  if (length(ui) != 1L || inventory$unit_key[ui] != "candidate:noaa_stocksmart_10416" ||
-      inventory$candidate_unit_id[ui] != "noaa_stocksmart_10416") {
-    stop("Expected one unambiguous NOAA:10416 inventory unit.", call. = FALSE)
-  }
-  old_unit_key <- inventory$unit_key[ui]
-  inventory$matched_stock_id[ui] <- stock_id
-  inventory$match_status[ui] <- "matched"
-  inventory$import_status[ui] <- "partial"
-  replace_csv_register_row(inventory_path, ui, inventory[ui, , drop = FALSE],
-    "unit_key", old_unit_key)
 
   source(file.path(root, "scripts", "database", "002_validate_database.R"),
     local = TRUE)

@@ -449,18 +449,7 @@ candidates$notes[ci] <- paste("Official 2021 northern U.S. Coast lingcod assessm
   "Inputs retain catch, CPUE, length compositions, and conditional age-at-length data on native model scales; age-at-length is not represented as catch-at-age.",
   "Outputs include N/F/M, model-generated biological surfaces, SSB, recruitment, and derived total abundance; age-specific uncertainty and direct catch-at-age/survey-at-age inputs are unavailable.",
   "See source_reviews/noaa_lingcod_northern_pacific_coast_2021.md.")
-inventory_unit_path <- file.path(root, "discovery", "inventory_units.csv")
-unit_lines <- readLines(inventory_unit_path, warn = FALSE, encoding = "UTF-8")
-unit_hit <- grep('"candidate:noaa_lingcod_north_pacific_coast_2021"', unit_lines, fixed = TRUE)
-if (length(unit_hit) != 1L) stop("Expected one northern lingcod inventory unit row.", call. = FALSE)
-unit_row <- read.csv(text = c(unit_lines[1L], unit_lines[unit_hit]), stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-unit_row$matched_stock_id <- stock_id
-unit_row$match_status <- "matched"
-unit_row$import_status <- "partial"
 tmp_unit <- tempfile(fileext = ".csv")
-write.csv(unit_row, tmp_unit, row.names = FALSE, na = "", fileEncoding = "UTF-8")
-unit_lines[unit_hit] <- readLines(tmp_unit, warn = FALSE, encoding = "UTF-8")[-1L]
 unlink(tmp_unit)
 existing_rows <- function(path) {
   rg <- Sys.which("rg")
@@ -515,7 +504,6 @@ write.csv(candidates[ci, , drop = FALSE], tmp_candidate, row.names = FALSE, na =
 candidate_lines[ci + 1L] <- readLines(tmp_candidate, warn = FALSE, encoding = "UTF-8")[-1L]
 unlink(tmp_candidate)
 writeLines(candidate_lines, candidate_path, useBytes = TRUE)
-writeLines(unit_lines, inventory_unit_path, useBytes = TRUE)
 source(file.path(root, "scripts", "database", "002_validate_database.R"), local = TRUE)
 cat("Import written and database validation passed.\n")
 

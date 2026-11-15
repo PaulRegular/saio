@@ -468,28 +468,17 @@ build_records <- function() {
 
 source_records <- build_records()
 candidate_path <- file.path(root, "discovery/candidates.csv")
-inventory_path <- file.path(root, "discovery/inventory_units.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
 candidate_row <- which(candidates$candidate_id == candidate_id)
-inventory_ids <- strsplit(as.character(inventory$candidate_ids), " | ", fixed = TRUE)
-inventory_row <- which(vapply(inventory_ids, function(x) candidate_id %in% x, logical(1L)))
 assessment_exists <- any(read.csv("database/assessments.csv",
   stringsAsFactors = FALSE)$assessment_id == assessment_id)
-if (length(candidate_row) != 1L || length(inventory_row) != 1L ||
+if (length(candidate_row) != 1L ||
     candidates$eligibility[candidate_row] != "eligible" ||
     !candidates$import_status[candidate_row] %in% c("not_started", "partial") ||
-    !inventory$import_status[inventory_row] %in% c("not_started", "partial") ||
     (!is.na(candidates$matched_stock_id[candidate_row]) &&
       nzchar(candidates$matched_stock_id[candidate_row]) &&
       candidates$matched_stock_id[candidate_row] != stock_id) ||
-    (!is.na(inventory$matched_stock_id[inventory_row]) &&
-      nzchar(inventory$matched_stock_id[inventory_row]) &&
-      inventory$matched_stock_id[inventory_row] != stock_id) ||
-    !inventory$candidate_unit_id[inventory_row] %in% c(candidate_unit_id,
-      "noaa_gopher_black_yellow_northern_california") ||
     (write_mode && assessment_exists)) {
   stop("The candidate registers or canonical assessment table no longer match this import.", call. = FALSE)
 }
@@ -512,11 +501,6 @@ candidate_update$detailed_source_url <- paste(report_url, supplement_url,
 candidate_update$review_date <- "2026-11-13"
 candidate_update$decision_reason <- "The current south-of-40°10' N Gopher/Black-and-Yellow unit has a detailed 2019 benchmark assessment and native post-STAR model files; the 2025 Groundfish SAFE lists 2019 as its latest assessment. Imported as partial because catch-at-age and age-specific abundance indices are absent, and spawning-output labels conflict across report tables."
 candidate_update$notes <- "Cached authoritative 2019 assessment, supplementary tables, post-STAR model archive, STAR panel report, 2025 Groundfish SAFE, and 2026 stock-definition analysis under source_cache/discovery_noaa_gopher_black_yellow_2019/ with checksums in provenance. The combined two-species assessment is one stock record."
-inventory_update <- inventory[inventory_row, , drop = FALSE]
-inventory_update$matched_stock_id <- stock_id
-inventory_update$candidate_unit_id <- stock_id
-inventory_update$match_status <- "matched"
-inventory_update$import_status <- "partial"
 
 cat("Prepared", nrow(source_records$inputs), "inputs,",
   nrow(source_records$assumptions), "assumptions, and",
@@ -526,8 +510,6 @@ if (write_mode) {
   append_pacific_case(source_records$stock, source_records$assessment,
     source_records$assumptions, source_records$inputs, source_records$outputs)
   replace_candidate_register_row(candidate_path, candidate_row, candidate_update, candidate_id)
-  replace_csv_register_row(inventory_path, inventory_row, inventory_update,
-    "unit_key", inventory$unit_key[inventory_row])
   source(file.path(root, "scripts/database/002_validate_database.R"),
     local = new.env(parent = globalenv()))
   cat("The Gopher/Black-and-Yellow source records were appended and database validation passed.\n")

@@ -483,13 +483,9 @@ if (write_mode) {
     stop("Expected exactly one stock row and one assessment row.", call. = FALSE)
   }
   candidates_path <- "discovery/candidates.csv"
-  inventory_path <- "discovery/inventory_units.csv"
   candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), colClasses = "character", check.names = FALSE)
-  inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), colClasses = "character", check.names = FALSE)
   ci <- which(candidates$candidate_id == candidate_id)
-  ii <- candidate_inventory_row(inventory, candidate_id, stock_id)
   if (length(ci) != 1L || candidates$eligibility[ci] != "eligible" ||
       candidates$import_status[ci] != "not_started") {
     stop("NOAA:10331 candidate status changed before import.", call. = FALSE)
@@ -513,21 +509,6 @@ if (write_mode) {
     "compositions and unavailable surfaces were not digitized or inferred."
   )
   replace_candidate_register_row(candidates_path, ci, candidate_update, candidate_id)
-  inventory_update <- inventory[ii, , drop = FALSE]
-  inventory_update$matched_stock_id <- stock_id
-  inventory_update$match_status <- "new"
-  inventory_update$import_status <- "partial"
-  replace_csv_register_row(inventory_path, ii, inventory_update, "unit_key",
-    inventory$unit_key[ii])
-  batch_path <- "discovery/selections/selected_batch_41_2026.csv"
-  batch <- read.csv(batch_path, stringsAsFactors = FALSE, check.names = FALSE)
-  batch$curation_status[batch$candidate_id == candidate_id] <- "source_curated_partial"
-  batch$selection_basis[batch$candidate_id == candidate_id] <- paste(
-    "Imported corrected-report Tables 5, 7-10 and 13-15, age-specific M, and source",
-    "assumptions. Numeric age-composition matrices, survey age indices, annual N/F-at-age",
-    "and output uncertainty remain unavailable."
-  )
-  write.csv(batch, batch_path, row.names = FALSE, na = "")
   source("scripts/database/002_validate_database.R", local = new.env(parent = globalenv()))
   cat("Gulf red grouper source records appended and database validation passed.\n")
 }

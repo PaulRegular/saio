@@ -617,9 +617,5 @@ if (!write_mode) {
   append_csv("database/inputs.csv", inputs_to_add)
   append_csv("database/outputs.csv", outputs_to_add)
   replace_candidate_register_row(candidate_path, candidate_index, candidate_update, candidate_id)
-  source(file.path(root, "scripts/discovery/195_summarize_discovery.R"),
-    local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts/discovery/196_summarize_inventory_units.R"),
-    local = new.env(parent = globalenv()))
   cat("Appended the partial source record and updated discovery crosswalk summaries.\n")
 }

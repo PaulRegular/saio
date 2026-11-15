@@ -401,6 +401,4 @@ if (write_mode) {
     stop("Candidate already exists; review identity before importing.", call. = FALSE)
   }
   append_csv(candidate, candidates_path)
-  sys.source("scripts/discovery/195_summarize_discovery.R", envir = new.env(parent = globalenv()))
-  sys.source("scripts/discovery/196_summarize_inventory_units.R", envir = new.env(parent = globalenv()))
 }

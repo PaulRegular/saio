@@ -266,12 +266,8 @@ if ("--write" %in% commandArgs(trailingOnly = TRUE)) {
   candidate_id <- "DFO:Pacific:Yellowtail Rockfish - British Columbia coastwide"
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"))
   row <- which(candidates$candidate_id == candidate_id)
-  inventory_path <- "discovery/inventory_units.csv"
-  inventory <- read.csv(inventory_path, stringsAsFactors = FALSE, na.strings = c("", "NA"))
   unit_key <- paste0("candidate:", candidates$candidate_unit_id[row])
-  unit_row <- which(inventory$unit_key == unit_key)
   stopifnot(length(row) == 1L, candidates$import_status[row] == "not_started")
-  stopifnot(length(unit_row) == 1L, inventory$import_status[unit_row] == "not_started")
   do.call(append_pacific_case, yellowtail_case)
   candidates$matched_stock_id[row] <- stock_id
   candidates$eligibility[row] <- "eligible"
@@ -286,11 +282,6 @@ if ("--write" %in% commandArgs(trailingOnly = TRUE)) {
   candidates$decision_reason[row] <- "Public native base inputs, fixed source biology, posterior SSB and reproduced historical states support a partial source import."
   candidates$review_date[row] <- format(Sys.Date())
   replace_candidate_register_row(candidate_path, row, candidates[row, , drop = FALSE], candidate_id)
-  inventory$matched_stock_id[unit_row] <- stock_id
-  inventory$eligibility[unit_row] <- "eligible"
-  inventory$import_status[unit_row] <- "partial"
-  replace_csv_register_row(inventory_path, unit_row, inventory[unit_row, , drop = FALSE],
-    "unit_key", unit_key)
 }
 cat("Verified Yellowtail source rows:", nrow(inputs), "inputs,", nrow(outputs),
   "outputs and", nrow(assumptions), "assumptions.\n")

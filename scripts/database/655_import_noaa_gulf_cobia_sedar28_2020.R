@@ -463,18 +463,7 @@ import_noaa_gulf_cobia_sedar28 <- function(root = ".", write = FALSE) {
       candidates$eligibility[candidate_row] != "eligible" ||
       !candidates$import_status[candidate_row] %in% c("not_started", "partial"))
     stop("Gulf cobia candidate identity or status changed.")
-  inventory_path <- file.path(root, "discovery/inventory_units.csv")
-  inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
   source(file.path(root, "scripts/discovery/candidate_register_io.R"))
-  inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-  selected_path <- file.path(root, "discovery/selections/selected_batch_39_2026.csv")
-  selected <- read.csv(selected_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-  selected_row <- match(candidate_id, selected$candidate_id)
-  if (is.na(selected_row) ||
-      !selected$curation_status[selected_row] %in% c("selected_for_source_curation", "partial_source_import"))
-    stop("Gulf cobia is absent from the selected source batch.")
 
   updates <- list(
     matched_stock_id = stock_id, match_status = "matched", import_status = "partial",
@@ -496,10 +485,6 @@ import_noaa_gulf_cobia_sedar28 <- function(root = ".", write = FALSE) {
       "NOAA's 2024 amendment continues to cite it; management use is limited to status determinations, not quantitative OFL/ABC advice.")
   )
   for (name in names(updates)) candidates[[name]][candidate_row] <- updates[[name]]
-  inventory$matched_stock_id[inventory_row] <- stock_id
-  inventory$match_status[inventory_row] <- "matched"
-  inventory$import_status[inventory_row] <- "partial"
-  selected$curation_status[selected_row] <- "partial_source_import"
 
   if (write && !already_imported) {
     append_rows <- function(name, rows) {
@@ -514,10 +499,6 @@ import_noaa_gulf_cobia_sedar28 <- function(root = ".", write = FALSE) {
     append_rows("outputs", outputs)
     replace_candidate_register_row(candidates_path, candidate_row,
       candidates[candidate_row, , drop = FALSE], candidate_id)
-    replace_csv_register_row(inventory_path, inventory_row,
-      inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
-    replace_candidate_register_row(selected_path, selected_row,
-      selected[selected_row, , drop = FALSE], candidate_id)
   }
   list(stock = stock, assessment = assessment, assumptions = assumptions,
     inputs = inputs, outputs = outputs, already_imported = already_imported)

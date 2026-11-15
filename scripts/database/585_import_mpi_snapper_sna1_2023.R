@@ -498,19 +498,5 @@ if (!write_data) {
   row_index <- candidate_row
   replace_candidate_register_row(candidate_path, row_index,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  selection_path <- file.path(root, "discovery/selections", "selected_batch_05_2026.csv")
-  selection <- read.csv(selection_path, stringsAsFactors = FALSE,
-    na.strings = c("", "NA"), check.names = FALSE)
-  selection_row <- which(selection$candidate_id == candidate_id)
-  if (length(selection_row) != 1L ||
-      !selection$curation_status[selection_row] %in% c("selected", "source_curated_partial")) {
-    stop("Expected one selected SNA 1 source-curation row.", call. = FALSE)
-  }
-  selection$curation_status[selection_row] <- "source_curated_partial"
-  write.csv(selection, selection_path, row.names = FALSE, na = "")
-  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
-    local = TRUE)
-  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
-    local = TRUE)
   cat("Imported SNA 1 source records and updated the candidate register.\n")
 }

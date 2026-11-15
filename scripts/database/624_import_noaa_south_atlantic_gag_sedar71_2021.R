@@ -516,7 +516,6 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
   notes = "Latest completed detailed assessment located for NOAA unit 10349; data through 2019. Tables 6-8 include selected first-year projection values for 2020. Fishery age-composition proportions and annual population uncertainty remain unavailable as numeric tables. WP04 chevron count and percentage tables disagree in 8 shared age-year cells and are retained separately as published.")
 
 candidate_path <- file.path("discovery", "candidates.csv")
-inventory_path <- file.path("discovery", "inventory_units.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv(file.path("database", "stocks.csv"), stringsAsFactors = FALSE,
@@ -533,9 +532,6 @@ if (length(candidate_row) != 1L ||
     any(assessments_existing$assessment_id == assessment_id)) {
   stop("NOAA South Atlantic Gag candidate or database identity has changed.", call. = FALSE)
 }
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
 
 if (write_mode) {
   dir.create(dirname(manifest_path), recursive = TRUE, showWarnings = FALSE)
@@ -553,11 +549,6 @@ if (write_mode) {
     "Imported SEDAR 71 Tables 6-14, including N-at-age, biomass-at-age, status indicators, selectivity, fleet F and estimated catch outputs; 2020 values are labeled projection where reported.")
   replace_candidate_register_row(candidate_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  inventory$matched_stock_id[inventory_row] <- stock_id
-  inventory$match_status[inventory_row] <- "matched"
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
   message("Imported NOAA South Atlantic Gag Grouper SEDAR 71: ",
     nrow(stock), " stock, ", nrow(assessment), " assessment, ",
     nrow(assumptions), " assumptions, ", nrow(inputs), " inputs and ",

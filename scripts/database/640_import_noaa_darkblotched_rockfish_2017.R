@@ -338,25 +338,7 @@ if (write_mode) {
   candidate$notes <- "Partial source import: three fleets' annual catch biomass and log SDs; four active survey biomass series and log SDs; native age- and length-frequency compositions; two age-error SD definitions; assumptions; and Report.sso outputs. No observed age-specific catch/index, standalone observed age-specific weight/maturity, .par, or age-specific uncertainty was supplied."
   replace_candidate_register_row(candidate_path, candidate_row, candidate, candidate_id)
 
-  inventory_path <- file.path(root, "discovery/inventory_units.csv")
-  inventory <- read.csv(inventory_path, stringsAsFactors = FALSE, colClasses = "character", check.names = FALSE)
-  inventory_row <- which(inventory$candidate_unit_id == candidate_unit_id)
-  if (length(inventory_row) != 1L || inventory$import_status[inventory_row] != "not_started") {
-    stop("Expected one unimported inventory unit for NOAA:10562.", call. = FALSE)
-  }
-  inventory$matched_stock_id[inventory_row] <- stock_id
-  inventory$match_status[inventory_row] <- "matched"
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_register_row(inventory_path, inventory_row, inventory[inventory_row, , drop = FALSE],
-    "unit_key", inventory$unit_key[inventory_row])
 
-  batch_path <- file.path(root, "discovery/selections/selected_batch_28_2026.csv")
-  batch <- read.csv(batch_path, stringsAsFactors = FALSE, colClasses = "character", check.names = FALSE)
-  batch_row <- which(batch$candidate_id == candidate_id)
-  if (length(batch_row) != 1L) stop("Expected one selected-batch row for NOAA:10562.", call. = FALSE)
-  batch$candidate_unit_id[batch_row] <- candidate_unit_id
-  batch$curation_status[batch_row] <- "partial_source_import"
-  write.csv(batch, batch_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
   cat("Imported ", nrow(inputs), " inputs, ", nrow(assumptions), " assumptions, and ",
     nrow(outputs), " outputs for ", assessment_id, ".\n", sep = "")
 } else {

@@ -479,10 +479,6 @@ if (length(candidate_row) != 1L || candidates$candidate_unit_id[candidate_row] !
     any(existing_assessments$assessment_id == assessment_id)) {
   stop("Red porgy identity conflicts with the eligible candidate or canonical database.", call. = FALSE)
 }
-inventory_path <- file.path(root, "discovery/inventory_units.csv")
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
 
 output_key <- paste(outputs$type, outputs$measure, outputs$fleet, outputs$survey, outputs$year,
   outputs$age, outputs$age_group, outputs$scenario, sep = "|")
@@ -504,11 +500,6 @@ if (write_mode) {
     "Imported observed aggregate catches, index values/CVs, fixed age biology and model outputs from SEDAR 60 Tables 10 and 12-29; composition proportions remain figure-only, Table11 ensemble CVs and Tables31-34 projections are not included.")
   replace_candidate_register_row(candidates_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  inventory$matched_stock_id[inventory_row] <- stock_id
-  inventory$match_status[inventory_row] <- "matched"
-  inventory$import_status[inventory_row] <- "partial"
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
 } else {
   message("Dry run: ", nrow(stock), " stock, ", nrow(assessment), " assessment, ",
     nrow(assumptions), " assumptions, ", nrow(inputs), " input rows, and ",

@@ -485,30 +485,6 @@ register$notes[candidate_row] <- paste(
 )
 
 source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-inventory_row <- candidate_inventory_row(inventory, candidate_id, candidate_unit_id)
-if (!inventory$import_status[inventory_row] %in% c("not_started", "partial")) {
-  stop("The Atlantic cobia inventory unit has an unexpected import status.")
-}
-inventory$import_status[inventory_row] <- "partial"
-if ("matched_stock_id" %in% names(inventory)) {
-  inventory$matched_stock_id[inventory_row] <- stock_id
-}
-selected_path <- file.path(root, "discovery/selections", "selected_batch_37_2026.csv")
-selected <- read.csv(selected_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-selected_row <- which(selected$candidate_id == candidate_id)
-if (length(selected_row) != 1L ||
-    selected$curation_status[selected_row] != "selected") {
-  stop("Atlantic cobia must have one selected-batch row before import.")
-}
-selected$curation_status[selected_row] <- "partial_source_import"
-selected$selection_basis[selected_row] <- paste(
-  selected$selection_basis[selected_row],
-  "Source tables have been imported; numerical age-composition cells remain unavailable."
-)
 
 append_rows <- function(file, data) {
   path <- file.path(root, "database", file)
@@ -544,10 +520,5 @@ if (!write_mode) {
   append_rows("outputs.csv", outputs)
   replace_candidate_register_row(register_path, candidate_row,
     register[candidate_row, , drop = FALSE], candidate_id)
-  replace_csv_register_row(inventory_path, inventory_row,
-    inventory[inventory_row, , drop = FALSE], "unit_key",
-    inventory$unit_key[inventory_row])
-  replace_csv_register_row(selected_path, selected_row,
-    selected[selected_row, , drop = FALSE], "candidate_id", candidate_id)
   cat("Imported partial NOAA Atlantic cobia SEDAR 58 source records.\n")
 }

@@ -471,19 +471,14 @@ stocks_existing <- read.csv(file.path(root, "database/stocks.csv"),
 assessments_existing <- read.csv(file.path(root, "database/assessments.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA"))
 candidates_path <- file.path(root, "discovery/candidates.csv")
-selected_path <- file.path(root, "discovery/selections/selected_batch_16_2026.csv")
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"), colClasses = "character")
-selected <- read.csv(selected_path, stringsAsFactors = FALSE,
-  check.names = FALSE, na.strings = c("", "NA"), colClasses = "character")
 candidate_row <- which(candidates$candidate_id == candidate_id)
-selected_row <- which(selected$candidate_id == candidate_id)
-if (length(candidate_row) != 1L || length(selected_row) != 1L ||
+if (length(candidate_row) != 1L ||
     candidates$candidate_unit_id[candidate_row] != candidate_unit_id ||
     candidates$eligibility[candidate_row] != "eligible" ||
     candidates$match_status[candidate_row] != "new" ||
     candidates$import_status[candidate_row] != "not_started" ||
-    selected$curation_status[selected_row] != "selected_for_source_curation" ||
     any(stocks_existing$stock_id == stock_id) ||
     any(assessments_existing$assessment_id == assessment_id)) {
   stop("Candidate, selection, or canonical database differs from reviewed state.")
@@ -513,13 +508,6 @@ if (write_mode) {
   candidate$decision_reason <- paste("Partially imported from the finalized 2024 production update pinned to revision", revision, "with source forms and species distinctions preserved.")
   candidate$notes <- paste("NOAA Stock SMART ID 10015; one BSAI complex. Earlier bafa7658 snapshot is superseded by the final October 2024 Model 18.2c files. See source_reviews/screening/noaa_flathead_bsai.md and provenance/noaa_flatfish_screening_20261029/sources.csv.")
   replace_candidate_register_row(candidates_path, candidate_row, candidate, candidate_id)
-  selected$curation_status[selected_row] <- "partial_source_import"
-  selected$detailed_source_url[selected_row] <- paste(report_url, model_reference, sep = "; ")
-  write.csv(selected, selected_path, row.names = FALSE, na = "")
-  source(file.path(root, "scripts/discovery/195_summarize_discovery.R"),
-    local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts/discovery/196_summarize_inventory_units.R"),
-    local = new.env(parent = globalenv()))
   cat("Imported the verified source record and marked it partial.\n")
 }
 

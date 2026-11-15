@@ -2,8 +2,6 @@ root <- "."
 database <- file.path(root, "database")
 manifest_path <- file.path(root, "provenance", "noaa_vermilion_rockfish_or_wa_2021", "sources.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery/selections", "selected_batch_35_2026.csv")
 stock_id <- "noaa_vermilion_rockfish_or_wa"
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 if (!requireNamespace("r4ss", quietly = TRUE)) stop("Install r4ss to parse the cached official Stock Synthesis files.", call. = FALSE)
@@ -340,13 +338,10 @@ key <- paste(inputs$assessment_id,inputs$type,inputs$measure,inputs$fleet,inputs
 if(anyDuplicated(key)) stop("Proposed inputs contain duplicate source-record keys.",call.=FALSE)
 stocks <- read_table(file.path(database,"stocks.csv"))
 assessments <- read_table(file.path(database,"assessments.csv"))
-candidates <- read_table(candidate_path); inventory <- read_table(inventory_path); selected <- read_table(selected_path)
-candidate_ids <- vapply(specs,function(x)x$candidate_id,character(1L))
+candidates <- read_table(candidate_path); candidate_ids <- vapply(specs,function(x)x$candidate_id,character(1L))
 assessment_ids <- vapply(specs,function(x)x$assessment_id,character(1L))
 cr <- which(candidates$candidate_id%in%candidate_ids)
-ir <- which(inventory$unit_key==paste0("candidate:",stock_id))
-sr <- which(selected$candidate_unit_id==stock_id)
-if(length(cr)!=2L||length(ir)!=1L||length(sr)!=1L||
+if(length(cr)!=2L||
   any(candidates$eligibility[cr]!="eligible")||
   any(!candidates$import_status[cr]%in%c("not_started","partial"))||
   any(candidates$match_status[cr]!="new"))
@@ -416,16 +411,13 @@ for(i in cr) {
   candidates$decision_reason[i]<-"Current OR/WA stock source-curated from separate official 2021 Oregon and Washington assessments and model archives."
   candidates$notes[i]<-"Partial import completed. Keep component assessments separate; raw catch/composition rows are inputs and fitted age-specific values are outputs only."
 }
-inventory$matched_stock_id[ir]<-stock_id; inventory$import_status[ir]<-"partial"
-selected$curation_status[sr]<-"partial_source_import"
 if(!dry_run) {
   append_rows(file.path(database,"stocks.csv"),stock)
   append_rows(file.path(database,"assessments.csv"),assessment_rows)
   append_rows(file.path(database,"inputs.csv"),inputs)
   append_rows(file.path(database,"outputs.csv"),outputs)
   append_rows(file.path(database,"assumptions.csv"),assumptions)
-  write_table(candidate_path,candidates); write_table(inventory_path,inventory); write_table(selected_path,selected)
-}
+  write_table(candidate_path,candidates); }
 cat(if(dry_run)"Dry run: " else "Imported ","one OR/WA stock, two component assessments; ",
   nrow(inputs)," inputs, ",nrow(assumptions)," assumptions, ",nrow(outputs)," outputs.\n",sep="")
 for(m in models) {
