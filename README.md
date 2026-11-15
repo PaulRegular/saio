@@ -6,7 +6,7 @@ The collection currently focuses on finfish and age-disaggregated information: c
 
 ## How the database is organized
 
-SAIO releases contain five linked CSV tables. The Git repository holds the schema, importers, source reviews and [release manifests](database/releases/).
+SAIO releases contain five linked CSV tables. The Git repository holds the schema, [import and validation scripts](scripts/), source reviews and [published release manifests](database/releases/).
 
 | Table | What it contains |
 |---|---|
@@ -99,6 +99,11 @@ The helpers load the full database before selecting an assessment, so allow time
 - **Check output definitions and uncertainty.** Recruitment age, spawning time, sex convention and the age range used for mean F can differ among assessments. `se` is a standard error; its scale is documented in the notes. `lwr` and `upr` retain available interval limits, with their level and construction described where known. Missing uncertainty has not been filled in.
 
 Use `source_reference`, `source_type`, `transformation` and `notes` to trace a record to its source and understand any reconstruction. Detailed column definitions are in [DATABASE_STRUCTURE.md](DATABASE_STRUCTURE.md); source-selection and recovery rules are in [PROTOCOL.md](PROTOCOL.md).
+
+## Where SAIO started
+
+The Charbonneau–Keith Age-structured Marine Fish Database supplied SAIO’s initial list of stocks. The optional `charbonneau_id` column preserves the link to that catalogue. Use `stock_id` to join the SAIO tables. The original catalogue and the Master file used for the import are linked in the catalogue review.
+[Charbonneau–Keith catalogue](https://github.com/JulieCharbonneau/Age-structured-marine-fish-database) · [Pinned Master file and import notes](source_reviews/charbonneau_keith_master_catalogue.md)
 
 ## Scope and verification
 
