@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 assessment_id <- "afma_himi_mackerel_icefish_2026"
 stock_id <- "afma_himi_mackerel_icefish"
 candidate_id <- "AFMA:HIMI_ICEFISH"
@@ -6,7 +8,7 @@ fishery_url <- "https://www.afma.gov.au/fisheries/heard-island-and-mcdonald-isla
 source_file <- "discovery_afma_himi_2026/himi_mackerel_icefish_2026.pdf"
 source_path <- file.path("source_cache", source_file)
 source_hash <- "17FF6A46D444A633C4BEE736694C56E524B59899A32AA7498EBA6414591DE955"
-manifest_path <- "provenance/afma_himi_mackerel_icefish_2026_sources.csv"
+manifest_path <- "provenance/afma_himi_mackerel_icefish_2026/sources.csv"
 
 if (!file.exists("database/stocks.csv")) {
   stop("Run this script from the SAIO repository root.")
@@ -84,7 +86,7 @@ source_manifest <- data.frame(
   sha256 = source_hash,
   stringsAsFactors = FALSE
 )
-write.csv(source_manifest, manifest_path, row.names = FALSE, na = "")
+write_source_manifest(source_manifest, manifest_path, row.names = FALSE, na = "")
 
 stock <- data.frame(
   stock_id = stock_id,

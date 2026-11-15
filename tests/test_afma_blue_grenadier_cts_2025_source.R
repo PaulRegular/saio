@@ -92,7 +92,7 @@ stopifnot(
   grepl("RBC", candidate$output_evidence, fixed = TRUE)
 )
 
-manifest <- read.csv("provenance/afma_blue_grenadier_cts_2025_sources.csv",
+manifest <- read.csv("provenance/afma_blue_grenadier_cts_2025/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 stopifnot(
   nrow(manifest) == 5L,

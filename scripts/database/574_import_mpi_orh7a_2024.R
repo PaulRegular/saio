@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 args <- commandArgs(trailingOnly = TRUE)
 write_mode <- "--write" %in% args
@@ -410,7 +412,7 @@ if (!write_mode) {
   append_rows("database/inputs.csv", new_inputs)
   append_rows("database/outputs.csv", new_outputs)
   append_rows("discovery/candidates.csv", candidate_row)
-  utils::write.csv(manifest, "provenance/mpi_orh7a_2024_sources.csv",
+  write_source_manifest(manifest, "provenance/mpi_orh7a_2024/sources.csv",
     row.names = FALSE, na = "")
   cat("ORH 7A source records and source manifest appended.\n")
 }

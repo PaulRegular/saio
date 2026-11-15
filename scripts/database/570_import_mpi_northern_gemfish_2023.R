@@ -369,7 +369,7 @@ if (write_mode) {
   append_csv(gemfish$inputs, file.path(database_dir, "inputs.csv"))
   append_csv(gemfish$assumptions, file.path(database_dir, "assumptions.csv"))
   append_csv(gemfish$outputs, file.path(database_dir, "outputs.csv"))
-  write.csv(gemfish$manifest, "provenance/mpi_gemfish_ski1_ski2_2023_sources.csv",
+  write.csv(gemfish$manifest, "provenance/mpi_gemfish_ski1_ski2_2023/sources.csv",
     row.names = FALSE, na = "")
 
   candidate <- data.frame(

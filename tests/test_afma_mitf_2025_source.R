@@ -11,7 +11,7 @@ candidate <- candidate_register[
 ]
 progress <- candidate_progress()
 units <- candidate_units()
-manifest <- read.csv("provenance/afma_mitf_2025_sources.csv",
+manifest <- read.csv("provenance/afma_mitf_2025/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
 check_inventory_accounting(candidate_register, progress, units)

@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 candidate_id <- "INIDEP:MERLUCCIUS_HUBBSI_SUR41"
 candidate_unit_id <- "argentina_merluccius_hubbsi_south_41s"
 retrieved_on <- "2026-11-07"
@@ -124,7 +126,7 @@ manifest <- data.frame(
 )
 
 register_path <- "discovery/candidates.csv"
-manifest_path <- "provenance/inidep_merluccius_hubbsi_south_2025_sources.csv"
+manifest_path <- "provenance/inidep_merluccius_hubbsi_south_2025/sources.csv"
 register <- read.csv(register_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
@@ -194,6 +196,6 @@ cat("Cached, checksummed primary sources:", nrow(manifest), "\n")
 if (write_mode) {
   write.table(candidate, register_path, sep = ",", row.names = FALSE,
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double", na = "")
-  write.csv(manifest, manifest_path, row.names = FALSE, na = "")
+  write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")
   cat("Registered the source-led candidate and selected its assessment for curation.\n")
 }

@@ -29,7 +29,7 @@ Table 7 reports the 10th and 90th posterior percentiles, so its intervals are ce
 
 Input, assumption, and output completeness remain marked partial. The input record preserves the four-year catch-at-age gap, the unavailable 2018 grouped survey index, and other missing survey cells. The output record preserves the intervals reported for aggregate quantities without inferring age-specific uncertainty. The production JAGS code and fitted object were not located in the public sources reviewed.
 
-The assessment report, official 2027 advice, prior assessment, benchmark documents, natural-mortality report, and supporting 2025 survey report are cached under `source_cache/gadus_morhua/nafo_cod_3m_2026/`. Retrieval dates, source URLs, filenames, and SHA-256 checksums are listed in `provenance/nafo_cod_3m_2026/manifest.csv`.
+The assessment report, official 2027 advice, prior assessment, benchmark documents, natural-mortality report, and supporting 2025 survey report are cached under `source_cache/gadus_morhua/nafo_cod_3m_2026/`. Retrieval dates, source URLs, filenames, and SHA-256 checksums are listed in `provenance/nafo_cod_3m_2026/sources.csv`.
 
 - [NAFO SCR 26/023: Assessment of the Cod Stock in NAFO Division 3M](https://www.nafo.int/Portals/0/PDFs/sc/2026/scr26-023.pdf), input tables, model methods, outputs, and Annex I.
 - [NAFO SCR 26/003: Results from the 2025 Flemish Cap bottom-trawl survey](https://www.nafo.int/Portals/0/PDFs/sc/2026/scr26-003.pdf), survey coverage and timing.

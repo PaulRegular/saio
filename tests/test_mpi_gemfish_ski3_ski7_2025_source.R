@@ -23,7 +23,7 @@ outputs <- read_id_rows("database/outputs.csv", assessment_id)
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == "MPI:SKI3+SKI7", , drop = FALSE]
-manifest <- read.csv("provenance/mpi_gemfish_ski3_ski7_2025_sources.csv",
+manifest <- read.csv("provenance/mpi_gemfish_ski3_ski7_2025/sources.csv",
   stringsAsFactors = FALSE)
 
 catches <- inputs[inputs$type == "catch" & inputs$measure == "total_biomass", ]

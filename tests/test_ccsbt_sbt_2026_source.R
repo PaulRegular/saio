@@ -9,7 +9,7 @@ outputs <- x$outputs
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == "CCSBT:SBT", , drop = FALSE]
-manifest <- read.csv("provenance/ccsbt_sbt_2026_sources.csv",
+manifest <- read.csv("provenance/ccsbt_sbt_2026/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

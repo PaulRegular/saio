@@ -13,7 +13,7 @@ star_url <- "https://www.pcouncil.org/documents/2019/10/2019-gopher-black-and-ye
 safe_url <- "https://www.pcouncil.org/documents/2024/08/status-of-the-pacific-coast-groundfish-fishery-stock-assessment-and-fishery-evaluation-july-2025.pdf/"
 boundary_url <- "https://www.fisheries.noaa.gov/s3/2026-02/am-37-fpa-analysis-01-2026.pdf"
 cache <- file.path(root, "source_cache/discovery_noaa_gopher_black_yellow_2019")
-manifest_path <- file.path(root, "provenance/noaa_gopher_black_yellow_2019_sources.csv")
+manifest_path <- file.path(root, "provenance/noaa_gopher_black_yellow_2019/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 test_mode <- identical(Sys.getenv("TAM_SOURCE_TEST_MODE"), "1")
 if (test_mode && write_mode) {

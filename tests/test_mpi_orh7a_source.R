@@ -94,7 +94,7 @@ stopifnot(
   grepl("no catch-at-age", candidate$decision_reason, fixed = TRUE)
 )
 
-manifest <- read.csv("provenance/mpi_orh7a_2024_sources.csv", stringsAsFactors = FALSE)
+manifest <- read.csv("provenance/mpi_orh7a_2024/sources.csv", stringsAsFactors = FALSE)
 stopifnot(
   nrow(manifest) == 3L,
   all(grepl("^[A-F0-9]{64}$", manifest$sha256)),

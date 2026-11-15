@@ -178,7 +178,7 @@ stopifnot(!anyDuplicated(assumptions$setting),
   all(outputs$assessment_id == source_id),
   all(file.exists(c(
     "source_cache/siofa_orange_roughy_2025/Report-2-WSR-stock-assessment.pdf",
-    "provenance/siofa_orange_roughy_2025_sources.csv"
+    "provenance/siofa_orange_roughy_2025/sources.csv"
   ))))
 
 if (!stock_exists) {

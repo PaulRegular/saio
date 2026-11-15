@@ -1,8 +1,7 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'noaa_south_atlantic_spanish_mackerel_2022')
 candidate_path <- file.path(root, 'discovery', 'candidates.csv')
-source_manifest_path <- file.path(root, 'provenance',
-  'noaa_south_atlantic_spanish_mackerel_2022_sources.csv')
+source_manifest_path <- file.path(root, 'provenance/noaa_south_atlantic_spanish_mackerel_2022/sources.csv')
 sources <- read.csv(source_manifest_path, stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)
 if (!dir.exists(cache) || any(!file.exists(paths)) || any(file.info(paths)$size <= 0))

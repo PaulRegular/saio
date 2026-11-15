@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 candidate_id <- "INIDEP:MERLUCCIUS_HUBBSI_NORTH41"
 candidate_unit_id <- "argentina_merluccius_hubbsi_north_41s"
@@ -143,8 +145,8 @@ cat("Candidate:", candidate_id, "\n")
 cat("Current run: 2025; terminal year: 2024; source screen: eligible\n")
 if (write_mode) {
   append_rows(candidates_path, candidate)
-  utils::write.csv(manifest, file.path(root,
-    "provenance/inidep_merluccius_hubbsi_north_2025_sources.csv"),
+  write_source_manifest(manifest, file.path(root,
+    "provenance/inidep_merluccius_hubbsi_north_2025/sources.csv"),
     row.names = FALSE, na = "")
   cat("Added the source-led candidate and provenance manifest.\n")
 }

@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 args <- commandArgs(trailingOnly = TRUE)
 write_mode <- "--write" %in% args
@@ -420,7 +422,7 @@ if (write_mode) {
   append_csv(inputs, file.path(database_dir, "inputs.csv"))
   append_csv(outputs, file.path(database_dir, "outputs.csv"))
   write_candidate_row()
-  write.csv(manifest, "provenance/mpi_gemfish_ski3_ski7_2025_sources.csv",
+  write_source_manifest(manifest, "provenance/mpi_gemfish_ski3_ski7_2025/sources.csv",
     row.names = FALSE, na = "")
 }
 

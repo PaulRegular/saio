@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 candidate_id <- "MPI:GUR7"
 candidate_unit_id <- "mpi_red_gurnard_gur7"
 review_date <- "2026-11-08"
@@ -97,7 +99,7 @@ manifest <- data.frame(
 )
 
 register_path <- "discovery/candidates.csv"
-manifest_path <- "provenance/mpi_red_gurnard_gur7_2022_sources.csv"
+manifest_path <- "provenance/mpi_red_gurnard_gur7_2022/sources.csv"
 source_paths <- file.path("source_cache", manifest$local_file)
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
@@ -126,7 +128,7 @@ cat("Cached official sources verified:", nrow(manifest), "\n")
 if (write_mode) {
   write.table(candidate, register_path, sep = ",", row.names = FALSE,
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double", na = "")
-  write.csv(manifest, manifest_path, row.names = FALSE, na = "")
+  write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")
   source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
   source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("Registered the GUR 7 screen and refreshed discovery summaries.\n")

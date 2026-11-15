@@ -137,8 +137,7 @@ stopifnot(
     fixed = TRUE))
 )
 
-extracted <- read.csv(file.path(root, "provenance",
-  "noaa_pacific_mackerel_2023_model_files.csv"),
+extracted <- read.csv(file.path(root, "provenance/noaa_pacific_mackerel_2023_model_files/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 manifest <- read.csv(file.path(root, "provenance",
   "discovery_noaa_pacific_mackerel_2025", "sources.csv"),

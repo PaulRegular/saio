@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 retrieved_on <- "2026-11-05"
 
@@ -116,7 +118,7 @@ manifest <- data.frame(
   sha256 = expected_hash,
   stringsAsFactors = FALSE
 )
-write.csv(manifest, file.path(root, "provenance", "mpi_tarakihi_gemfish_2026_sources.csv"), row.names = FALSE, na = "")
+write_source_manifest(manifest, file.path(root, "provenance/mpi_tarakihi_gemfish_2026/sources.csv"), row.names = FALSE, na = "")
 
 sys.source(file.path(root, "scripts/discovery/195_summarize_discovery.R"), envir = new.env(parent = globalenv()))
 sys.source(file.path(root, "scripts/discovery/196_summarize_inventory_units.R"), envir = new.env(parent = globalenv()))

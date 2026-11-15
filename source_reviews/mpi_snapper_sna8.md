@@ -35,4 +35,4 @@ Five Base_Frec values from Table 10 are imported: current spawning biomass and i
 
 ## Source files
 
-The three cached PDFs and their URLs, retrieval dates, and SHA-256 checksums are listed in provenance/mpi_snapper_sna8_2024_sources.csv. The cache uses the official FAR 2024/49 assessment, FAR 2024/50 age-composition report, and the May 2025 SNA 8 Plenary.
+The three cached PDFs and their URLs, retrieval dates, and SHA-256 checksums are listed in provenance/mpi_snapper_sna8_2024/sources.csv. The cache uses the official FAR 2024/49 assessment, FAR 2024/50 age-composition report, and the May 2025 SNA 8 Plenary.

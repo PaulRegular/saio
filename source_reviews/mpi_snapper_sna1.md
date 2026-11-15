@@ -10,7 +10,7 @@ The detailed assessment is FAR 2024/47, for work completed in 2022 and 2023. The
 
 ## Sources and provenance
 
-The reviewed PDFs are cached under the ignored source_cache/mpi_snapper_sna1_2023/ directory. Their URLs, retrieval date, and SHA-256 checksums are recorded in provenance/mpi_snapper_sna1_2023_sources.csv.
+The reviewed PDFs are cached under the ignored source_cache/mpi_snapper_sna1_2023/ directory. Their URLs, retrieval date, and SHA-256 checksums are recorded in provenance/mpi_snapper_sna1_2023/sources.csv.
 
 - [FAR 2024/47, assessment of SNA 1 in 2022 and 2023](https://fs.fish.govt.nz/Doc/25775/FAR-2024-47-Assessment-of-SNA1-stocks%20in-2022-and-2023.pdf.ashx) documents catch histories, model inputs, assumptions, and outputs.
 - [FAR 2022/24, SNA 1 and SNA 2 age composition in 2019-20](https://fs.fish.govt.nz/Doc/25280/FAR-2022-24-Snapper-Age-Composition-SNA1-SNA2-201920-4267.pdf.ashx) provides age composition, bootstrap CV, sample count, and weight-at-age tables.

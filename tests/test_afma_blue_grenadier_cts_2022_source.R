@@ -70,7 +70,7 @@ stopifnot(
   identical(x2025$outputs$value[match(c(2022, 2023, 2026), x2025$outputs$year)], c(107, 112, 99.5))
 )
 
-manifest <- read.csv("provenance/afma_blue_grenadier_cts_2022/manifest.csv", stringsAsFactors = FALSE)
+manifest <- read.csv("provenance/afma_blue_grenadier_cts_2022/sources.csv", stringsAsFactors = FALSE)
 stopifnot(
   nrow(manifest) == 4L,
   setequal(basename(manifest$local_file), c(

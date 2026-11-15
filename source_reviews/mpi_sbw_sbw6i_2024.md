@@ -28,4 +28,4 @@ The reviewed public documents do not provide numerical commercial proportions-at
 
 ## Source files
 
-The assessment report, the 2023 input-data review, the 2022 acoustic-survey report, the May 2025 Plenary, and the 2024–25 and 2025–26 catch-age data reports are cached locally. URLs, retrieval dates and SHA-256 checksums are listed in `provenance/mpi_sbw_sbw6i_2024_sources.csv`.
+The assessment report, the 2023 input-data review, the 2022 acoustic-survey report, the May 2025 Plenary, and the 2024–25 and 2025–26 catch-age data reports are cached locally. URLs, retrieval dates and SHA-256 checksums are listed in `provenance/mpi_sbw_sbw6i_2024/sources.csv`.

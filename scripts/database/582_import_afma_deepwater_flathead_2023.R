@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 assessment_id <- "afma_deepwater_flathead_gab_2023"
 stock_id <- "afma_gab_deepwater_flathead"
 candidate_id <- "AFMA:SESSF_GABTF_Deepwater_Flathead"
@@ -426,7 +428,7 @@ if (write_mode) {
     sha256 = source_hashes,
     stringsAsFactors = FALSE
   )
-  write.csv(manifest, "provenance/afma_deepwater_flathead_gab_2023/manifest.csv",
+  write_source_manifest(manifest, "provenance/afma_deepwater_flathead_gab_2023/sources.csv",
     row.names = FALSE, na = "")
   cat("Wrote the partial AFMA Deepwater Flathead source record and provenance manifest.\n")
 } else {

@@ -1,5 +1,5 @@
 cache <- file.path("source_cache", "noaa_south_atlantic_golden_tilefish_sedar89_2025")
-manifest_path <- file.path("provenance", "noaa_south_atlantic_golden_tilefish_sedar89_2025", "manifest.csv")
+manifest_path <- file.path("provenance/noaa_south_atlantic_golden_tilefish_sedar89_2025/sources.csv")
 assessment_id <- "noaa_golden_tilefish_south_atlantic_sedar89_2025"
 stock_id <- "noaa_golden_tilefish_south_atlantic"
 candidate_id <- "NOAA:10384"

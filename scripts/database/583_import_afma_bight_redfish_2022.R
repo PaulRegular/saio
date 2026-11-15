@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 assessment_id <- "afma_bight_redfish_gab_2022"
 stock_id <- "afma_gab_bight_redfish"
 candidate_id <- "AFMA:SESSF_GABTF_Bight_Redfish"
@@ -458,7 +460,7 @@ if (!write_mode) {
     sha256 = source_hashes,
     stringsAsFactors = FALSE
   )
-  write.csv(manifest, "provenance/afma_bight_redfish_gab_2022/manifest.csv",
+  write_source_manifest(manifest, "provenance/afma_bight_redfish_gab_2022/sources.csv",
     row.names = FALSE, na = "")
   cat("Wrote the partial AFMA Bight Redfish source record and provenance manifest.\n")
 }

@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 source_dir <- file.path(root, "source_cache")
 files <- c(
@@ -48,7 +50,7 @@ manifest <- data.frame(
   sha256 = actual_sha256,
   stringsAsFactors = FALSE
 )
-write.csv(manifest,
-  file.path(root, "provenance", "mpi_snapper_sna1_2023_sources.csv"),
+write_source_manifest(manifest,
+  file.path(root, "provenance/mpi_snapper_sna1_2023/sources.csv"),
   row.names = FALSE, na = "")
 cat("Verified and recorded", nrow(manifest), "SNA 1 source files.")

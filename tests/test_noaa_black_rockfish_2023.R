@@ -52,8 +52,7 @@ california_outputs <- read_assessment_rows(
 )
 source_review <- paste(readLines(file.path(root, 'source_reviews',
   'noaa_black_rockfish_california_2023.md'), warn = FALSE), collapse = '\n')
-source_manifest <- read.csv(file.path(root, 'provenance',
-  'noaa_black_rockfish_california_2023_sources.csv'),
+source_manifest <- read.csv(file.path(root, 'provenance/noaa_black_rockfish_california_2023/sources.csv'),
   stringsAsFactors = FALSE)
 california_inputs <- inputs[
   inputs$assessment_id == 'noaa_black_rockfish_california_2023', , drop = FALSE

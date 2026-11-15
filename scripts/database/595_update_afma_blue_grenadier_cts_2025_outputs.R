@@ -7,7 +7,7 @@ read_table <- function(path) {
     na.strings = c("", "NA"), check.names = FALSE)
 }
 
-manifest <- read_table("provenance/afma_blue_grenadier_cts_2025_sources.csv")
+manifest <- read_table("provenance/afma_blue_grenadier_cts_2025/sources.csv")
 source_files <- file.path("source_cache", manifest$local_file)
 if (any(!file.exists(source_files))) {
   stop("Cached AFMA source documents are required before updating this record.",

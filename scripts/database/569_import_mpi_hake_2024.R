@@ -441,8 +441,8 @@ if (write_mode || inputs_only) {
   if (write_mode) {
     append_csv(assumptions, file.path(root, "database", "assumptions.csv"))
     append_csv(outputs, file.path(root, "database", "outputs.csv"))
-    write.csv(manifest_rows(1:4), file.path(root, "provenance", "mpi_hake_hak1_2024_sources.csv"), row.names = FALSE, na = "")
-    write.csv(manifest_rows(5:7), file.path(root, "provenance", "mpi_hake_hak7_2024_sources.csv"), row.names = FALSE, na = "")
+    write.csv(manifest_rows(1:4), file.path(root, "provenance/mpi_hake_hak1_2024/sources.csv"), row.names = FALSE, na = "")
+    write.csv(manifest_rows(5:7), file.path(root, "provenance/mpi_hake_hak7_2024/sources.csv"), row.names = FALSE, na = "")
     for (i in seq_along(stock_ids)) {
     candidate_id <- if (i == 1L) "MPI:HAK1:SubAntarctic" else "MPI:HAK7:WCSI"
     replace_register_row(file.path(root, "discovery", "candidates.csv"), "candidate_id", candidate_id, list(

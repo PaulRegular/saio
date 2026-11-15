@@ -61,7 +61,7 @@ stopifnot(nrow(s) == 1L, s$authority == "NAFO", s$authority_stock_id == "redfish
   c$import_status == "partial", c$inventory_assessment_year == 2024L)
 stopifnot(grepl("SCR 24/024 confirms the selected 2020–2022", c$notes, fixed = TRUE))
 
-manifest <- read_small("provenance/nafo_redfish_3m_2024/manifest.csv")
+manifest <- read_small("provenance/nafo_redfish_3m_2024/sources.csv")
 review <- paste(readLines("source_reviews/nafo_redfish_3m_2024.md"), collapse = "\n")
 stopifnot(nrow(manifest) == 9L, all(nchar(manifest$sha256) == 64L),
   any(manifest$cached_file == "nafo_scr26_010_blim_reference_point.pdf"),

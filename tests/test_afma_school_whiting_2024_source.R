@@ -33,7 +33,7 @@ stopifnot(
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "AFMA:SESSF_Eastern_School_Whiting")
-manifest <- read.csv("provenance/afma_school_whiting_2024/manifest.csv",
+manifest <- read.csv("provenance/afma_school_whiting_2024/sources.csv",
   stringsAsFactors = FALSE)
 minutes <- subset(manifest, grepl("serag_meeting_2_2024_minutes.pdf", local_file, fixed = TRUE))
 minutes_path <- file.path("source_cache", minutes$local_file)

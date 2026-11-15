@@ -3,7 +3,7 @@ candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
 ids <- c("MPI:TAR:EASTERN", "MPI:TAR:WESTERN", "MPI:SKI3+SKI7")
 screened <- candidates[match(ids, candidates$candidate_id), , drop = FALSE]
 
-manifest <- read.csv("provenance/mpi_tarakihi_gemfish_2026_sources.csv",
+manifest <- read.csv("provenance/mpi_tarakihi_gemfish_2026/sources.csv",
   stringsAsFactors = FALSE)
 
 stopifnot(

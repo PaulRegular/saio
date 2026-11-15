@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 retrieved_on <- "2026-11-07"
 candidate_id <- "QLD:EAST_COAST_SPANISH_MACKEREL"
@@ -99,8 +101,8 @@ manifest <- data.frame(
   description = "Official 2025 east coast Spanish mackerel assessment report, data through June 2024.",
   stringsAsFactors = FALSE
 )
-utils::write.csv(manifest,
-  file.path(root, "provenance/australia_qld_spanish_mackerel_2025_sources.csv"),
+write_source_manifest(manifest,
+  file.path(root, "provenance/australia_qld_spanish_mackerel_2025/sources.csv"),
   row.names = FALSE, na = "")
 
 

@@ -65,7 +65,7 @@ stopifnot(
   grepl("overlapping area models", candidate$notes, fixed = TRUE)
 )
 
-manifest <- read.csv("provenance/siofa_orange_roughy_2025_sources.csv",
+manifest <- read.csv("provenance/siofa_orange_roughy_2025/sources.csv",
   stringsAsFactors = FALSE)
 stopifnot(
   nrow(manifest) == 6L,

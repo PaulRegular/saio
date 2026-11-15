@@ -5,7 +5,7 @@ cache_candidates <- c(
   file.path(root, "..", "..", cache_name)
 )
 cache_dir <- cache_candidates[dir.exists(cache_candidates)][1L]
-manifest_path <- file.path("provenance", cache_name, "manifest.csv")
+manifest_path <- file.path("provenance", cache_name, "sources.csv")
 assessment_id <- "noaa_gag_gulf_sedar72_srfs_2022"
 candidate_id <- "NOAA:10348"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||

@@ -29,7 +29,7 @@ append_rows <- function(path, rows) {
     append = TRUE, quote = TRUE, qmethod = "double", na = "", eol = "\n")
 }
 
-manifest <- read_table("provenance/ccsbt_sbt_2026_sources.csv")
+manifest <- read_table("provenance/ccsbt_sbt_2026/sources.csv")
 local_files <- file.path("source_cache", manifest$local_file)
 if (any(!file.exists(local_files))) {
   stop("The cached CCSBT source PDFs are required before importing this record.")

@@ -4,7 +4,7 @@ SAIO stock `noaa_california_scorpionfish_southern_california`. Assessment `noaa_
 
 ## Stock and assessment
 
-NOAA Stock SMART ID 10461 is the California scorpionfish (*Scorpaena guttata*) unit south of Point Conception to the U.S.–Mexico border. The 2017 benchmark assessment is the latest full assessment located and uses data through 2016. The July 2025 Pacific Coast Groundfish SAFE continues to report the stock from that assessment. The official report, model archive and SAFE are cached locally; URLs, retrieval date, byte counts and SHA-256 checksums are recorded in `provenance/noaa_california_scorpionfish_southern_california_2017/manifest.csv`.
+NOAA Stock SMART ID 10461 is the California scorpionfish (*Scorpaena guttata*) unit south of Point Conception to the U.S.–Mexico border. The 2017 benchmark assessment is the latest full assessment located and uses data through 2016. The July 2025 Pacific Coast Groundfish SAFE continues to report the stock from that assessment. The official report, model archive and SAFE are cached locally; URLs, retrieval date, byte counts and SHA-256 checksums are recorded in `provenance/noaa_california_scorpionfish_southern_california_2017/sources.csv`.
 
 The model is Stock Synthesis 3.30.05.03, with one area, two sexes, ages 0–21 and modeled years 1916–2016. Age 21 is the terminal age group.
 

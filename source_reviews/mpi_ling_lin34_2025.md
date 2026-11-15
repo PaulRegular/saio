@@ -6,7 +6,7 @@ Fisheries New Zealand's 2025 LIN 3&4 assessment is the latest detailed assessmen
 
 The assessment is a two-sex, single-area Casal2 age-structured model. It uses ages 3–25, with age 25 as a plus group. The model input files are reproduced in Appendix A of FAR 2025/48. Their parameter, observation, and population settings were retained as assumptions; the source's observation tables were imported in their native likelihood forms.
 
-The three reports are cached under the ignored `source_cache/genypterus_blacodes/mpi_ling_lin34_2025/` directory. Retrieval dates, URLs, and SHA-256 checksums are recorded in `provenance/mpi_ling_lin34_2025_sources.csv`.
+The three reports are cached under the ignored `source_cache/genypterus_blacodes/mpi_ling_lin34_2025/` directory. Retrieval dates, URLs, and SHA-256 checksums are recorded in `provenance/mpi_ling_lin34_2025/sources.csv`.
 
 ## Inputs recorded
 

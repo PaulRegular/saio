@@ -96,7 +96,7 @@ stopifnot(
   nrow(inventory)==1L,
   inventory$import_status=="partial"
 )
-manifest <- read.csv("provenance/noaa_yellowtail_rockfish_north_2025_sources.csv",
+manifest <- read.csv("provenance/noaa_yellowtail_rockfish_north_2025/sources.csv",
   stringsAsFactors=FALSE,check.names=FALSE)
 stopifnot(nrow(manifest)==8L,all(nzchar(manifest$source_url)),
   manifest$source_url[1L]=="https://www.pcouncil.org/documents/2026/01/status-of-the-yellowtail-rockfish-stock-off-the-u-s-west-coast-north-of-40-10-in-2025.pdf/",

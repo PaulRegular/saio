@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 register_path <- file.path(root, "discovery", "candidates.csv")
 candidate_id <- "MPI:HOK1"
@@ -85,7 +87,7 @@ manifest <- data.frame(
 if (!all(file.exists(c(assessment_pdf, input_pdf)))) stop("Cached Hoki source files are missing.", call. = FALSE)
 source_hashes <- unname(toupper(tools::sha256sum(c(assessment_pdf, input_pdf))))
 if (!identical(source_hashes, manifest$sha256)) stop("Cached source checksums do not match the source manifest.", call. = FALSE)
-write.csv(manifest, file.path(root, "provenance", "mpi_hoki_hok1_2025_sources.csv"), row.names = FALSE, na = "")
+write_source_manifest(manifest, file.path(root, "provenance/mpi_hoki_hok1_2025/sources.csv"), row.names = FALSE, na = "")
 
 selection <- data.frame(
   priority = 1L,

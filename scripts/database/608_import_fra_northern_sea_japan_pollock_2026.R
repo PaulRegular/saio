@@ -258,7 +258,7 @@ ensure_append <- function(path, proposed, id_field) {
   }
 }
 
-manifest <- read_csv("provenance/fra_northern_sea_japan_pollock_2026/manifest.csv")
+manifest <- read_csv("provenance/fra_northern_sea_japan_pollock_2026/sources.csv")
 if (nrow(manifest) != 1L || manifest$sha256 != report_hash ||
     manifest$source_url != report_url || manifest$retrieved_on != "2026-11-08") {
   stop("Source manifest does not match the reviewed FRA report.", call. = FALSE)
@@ -592,7 +592,7 @@ candidate$decision_reason <- paste(
   "The official meeting page says the detailed report is preliminary pending formatting; verify any finalized replacement before reuse."
 )
 candidate$notes <- paste(
-  "No separate official stock-unit code was identified; FRA-SA2026-SC01-01 is the assessment document number. Source cache and checksum are recorded in provenance/fra_northern_sea_japan_pollock_2026/manifest.csv."
+  "No separate official stock-unit code was identified; FRA-SA2026-SC01-01 is the assessment document number. Source cache and checksum are recorded in provenance/fra_northern_sea_japan_pollock_2026/sources.csv."
 )
 
 assumption_key <- c("assessment_id", "component", "fleet", "survey", "sex",

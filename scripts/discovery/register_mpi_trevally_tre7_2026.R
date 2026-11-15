@@ -1,5 +1,7 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 candidate_path <- "discovery/candidates.csv"
-manifest_path <- "provenance/mpi_trevally_tre7_2026_sources.csv"
+manifest_path <- "provenance/mpi_trevally_tre7_2026/sources.csv"
 
 candidate_id <- "MPI:TRE7"
 candidate_unit_id <- "mpi_trevally_tre7"
@@ -105,4 +107,4 @@ if (any(!file.exists(manifest$local_file))) {
   stop("A TRE 7 source listed in the manifest is missing from the local cache.")
 }
 
-write.csv(manifest, manifest_path, row.names = FALSE, na = "")
+write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")

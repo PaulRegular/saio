@@ -6,7 +6,7 @@ The collection currently focuses on finfish and age-disaggregated information: c
 
 ## How the database is organized
 
-SAIO releases contain five linked CSV tables. The Git repository holds the schema, [import and validation scripts](scripts/), source reviews and [published release manifests](database/releases/).
+SAIO releases contain five linked CSV tables. The Git repository holds the schema, [import and validation scripts](scripts/), [source reviews](source_reviews/), [source manifests](provenance/) and [published release manifests](database/releases/).
 
 | Table | What it contains |
 |---|---|

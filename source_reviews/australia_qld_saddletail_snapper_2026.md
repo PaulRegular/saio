@@ -38,7 +38,7 @@ The report does not provide machine-readable annual N-at-age, F-at-age or M-at-a
 
 ## Source and local cache
 
-The official report and repository record were retrieved on 2026-11-05. The report PDF and the filtered public catch-data extract are cached in the ignored local directory `source_cache/australia_qld_saddletail_snapper_2026/`. Their URLs, retrieval dates, file sizes and SHA-256 checksums are recorded in `provenance/australia_qld_saddletail_snapper_2026/manifest.csv`.
+The official report and repository record were retrieved on 2026-11-05. The report PDF and the filtered public catch-data extract are cached in the ignored local directory `source_cache/australia_qld_saddletail_snapper_2026/`. Their URLs, retrieval dates, file sizes and SHA-256 checksums are recorded in `provenance/australia_qld_saddletail_snapper_2026/sources.csv`.
 
 The cached PDF is 10,039,655 bytes with SHA-256 `11F13A91690742A045B3E0813E09A186BC5B5089FB10EB013F9FC4852BF5BE69`.
 

@@ -1,8 +1,10 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 candidate_id <- "IFOP:merluza_comun_UP"
 candidate_unit_id <- "ifop_merluza_comun_up"
 review_date <- "2026-11-09"
 candidate_path <- "discovery/candidates.csv"
-manifest_path <- "provenance/ifop_merluza_comun_2026_sources.csv"
+manifest_path <- "provenance/ifop_merluza_comun_2026/sources.csv"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 report_url <- "https://institutofomentop-my.sharepoint.com/:b:/g/personal/renzo_tascheri_ifop_cl/IQC_X34AxJbOQIkPB8eik1CnAW7V0EJWugOWbApDQOCjT1A?e=khmkN4"
@@ -158,7 +160,7 @@ candidate <- data.frame(
     "internal stable key. Use the December five-caleta run for revised outputs, not",
     "the superseded November values. Do not treat final post-assessment acoustic",
     "survey values as fitted inputs. CCT advice gives 29,703 t after a 1.01 discard adjustment; the December minute reports 29,767 t. Keep these advice figures on their documented bases.",
-    "provenance/ifop_merluza_comun_2026_sources.csv."
+    "provenance/ifop_merluza_comun_2026/sources.csv."
   ),
   stringsAsFactors = FALSE,
   check.names = FALSE
@@ -194,6 +196,6 @@ if (write_mode) {
   write.table(candidate, candidate_path, sep = ",", row.names = FALSE,
     col.names = FALSE, quote = TRUE, na = "", append = TRUE,
     qmethod = "double", eol = "\n")
-  write.csv(sources, manifest_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
+  write_source_manifest(sources, manifest_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
   cat("Wrote the candidate, selection checkpoint, and source manifest.\n")
 }

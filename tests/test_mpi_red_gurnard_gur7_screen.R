@@ -17,7 +17,7 @@ stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
 stock <- stocks[stocks$stock_id == candidate_unit_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == paste0(candidate_unit_id, "_2022"), , drop = FALSE]
-manifest <- read_table("provenance/mpi_red_gurnard_gur7_2022_sources.csv")
+manifest <- read_table("provenance/mpi_red_gurnard_gur7_2022/sources.csv")
 review <- paste(readLines("source_reviews/mpi_red_gurnard_gur7.md",
   warn = FALSE, encoding = "UTF-8"), collapse = "\n")
 

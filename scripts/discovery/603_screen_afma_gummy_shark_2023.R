@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 retrieved_on <- "2026-11-07"
 candidate_id <- "AFMA:SESSF_GUMMY_SHARK_2023"
@@ -111,8 +113,8 @@ manifest <- data.frame(
   description = "AFMA 2023 Gummy Shark production stock assessment report; Bridge 17 uses data through 2022.",
   stringsAsFactors = FALSE
 )
-utils::write.csv(manifest,
-  file.path(root, "provenance/afma_gummy_shark_2023_sources.csv"),
+write_source_manifest(manifest,
+  file.path(root, "provenance/afma_gummy_shark_2023/sources.csv"),
   row.names = FALSE, na = "")
 
 

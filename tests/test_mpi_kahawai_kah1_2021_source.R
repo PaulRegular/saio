@@ -123,7 +123,7 @@ candidates <- read.csv("discovery/candidates.csv",
   check.names = FALSE
 )
 candidate <- candidates[candidates$candidate_id == "MPI:KAH1", , drop = FALSE]
-manifest <- read.csv("provenance/mpi_kahawai_kah1_2021_sources.csv",
+manifest <- read.csv("provenance/mpi_kahawai_kah1_2021/sources.csv",
   stringsAsFactors = FALSE
 )
 stopifnot(

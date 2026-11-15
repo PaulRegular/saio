@@ -143,7 +143,7 @@ stopifnot(
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE)
 candidate <- subset(candidates, candidate_id == "MPI:ORH3B")
-manifest <- read.csv("provenance/mpi_orh3b_2025_sources.csv", stringsAsFactors = FALSE)
+manifest <- read.csv("provenance/mpi_orh3b_2025/sources.csv", stringsAsFactors = FALSE)
 stopifnot(
   nrow(candidate) == 1L,
   candidate$matched_stock_id == "mpi_orh3b_chatham_rise",

@@ -47,6 +47,6 @@ The NPFC Scientific Committee's 2026 final report states that Japan identified e
 - [FRA 2025 Pacific-stock assessment detailed report](https://abchan.fra.go.jp/wpt/wp-content/uploads/2026/03/details_2025_05.pdf)
 - [NPFC notice about its scientific-data database](https://www.npfc.int/news/new-npfc-database-scientific-data)
 
-Cached documents, URLs, retrieval dates and SHA-256 checksums are listed in provenance/npfc_chub_mackerel_nw_pacific_2025_sources.csv. They are stored in the ignored source_cache/npfc_northwest_pacific_chub_mackerel_2025/ directory; the FRA report is retained in the cited Japanese-assessment cache folder.
+Cached documents, URLs, retrieval dates and SHA-256 checksums are listed in provenance/npfc_chub_mackerel_nw_pacific_2025/sources.csv. They are stored in the ignored source_cache/npfc_northwest_pacific_chub_mackerel_2025/ directory; the FRA report is retained in the cited Japanese-assessment cache folder.
 
 

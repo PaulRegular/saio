@@ -81,7 +81,7 @@ stopifnot(
   grepl("age-at-length", candidate$catch_age_evidence, fixed = TRUE)
 )
 
-manifest <- read.csv("provenance/afma_deepwater_flathead_gab_2023/manifest.csv",
+manifest <- read.csv("provenance/afma_deepwater_flathead_gab_2023/sources.csv",
   stringsAsFactors = FALSE)
 stopifnot(
   nrow(manifest) == 2L,

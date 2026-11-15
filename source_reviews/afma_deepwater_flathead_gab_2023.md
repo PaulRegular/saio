@@ -14,7 +14,7 @@ The assessment is an annual, two-sex, age- and size-structured Stock Synthesis m
 - [AFMA, 2026 SESSF Species Summaries](https://www.afma.gov.au/sites/default/files/2026-01/SESSF-Species-Summaries-2026.pdf)
 - [Australian Hydrographic Office, Limits of oceans and seas around Australia](https://www.hydro.gov.au/factsheets/FS_Hydrographic_Surveying-Limits_of_oceans_and_seas_around_Aus.pdf)
 
-The report and 2026 summary are cached under the ignored source_cache/australia_afma_deepwater_flathead_2023/ directory. Their retrieval dates, URLs, and SHA-256 checksums are in provenance/afma_deepwater_flathead_gab_2023/manifest.csv. The Hydrographic Office source is used only to support the basin label; it does not supply stock-assessment data.
+The report and 2026 summary are cached under the ignored source_cache/australia_afma_deepwater_flathead_2023/ directory. Their retrieval dates, URLs, and SHA-256 checksums are in provenance/afma_deepwater_flathead_gab_2023/sources.csv. The Hydrographic Office source is used only to support the basin label; it does not supply stock-assessment data.
 
 ## Inputs and assumptions
 

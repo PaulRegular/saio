@@ -35,7 +35,7 @@ The 2019 report provides age-frequency compositions and reconstructed catch hist
 
 ## Cached sources
 
-The 2019 assessment report, 2024 survey report, 2024 commercial catch-age report, 2024 assessment report, and May 2026 BCO 5 Plenary chapter are cached in the gitignored `source_cache/mpi_bco5/` directory. Retrieval URLs, retrieval date, file sizes, hashes, and represented run are recorded in `provenance/mpi_blue_cod_bco5_sources.csv`.
+The 2019 assessment report, 2024 survey report, 2024 commercial catch-age report, 2024 assessment report, and May 2026 BCO 5 Plenary chapter are cached in the gitignored `source_cache/mpi_bco5/` directory. Retrieval URLs, retrieval date, file sizes, hashes, and represented run are recorded in `provenance/mpi_blue_cod_bco5/sources.csv`.
 
 - [FAR 2020/14: BCO 5 assessment to 2019](https://www.mpi.govt.nz/dmsdocument/41406-FAR-202014-Stock-assessment-of-blue-cod-Parapercis-colias-in-BCO-5-using-data-to-2019/sitemap)
 - [FAR 2024/03: Foveaux Strait survey](https://www.mpi.govt.nz/dmsdocument/60796-FAR-202403-Relative-abundance-size-and-age-structure-and-stock-status-of-blue-cod-in-Foveaux-Strait-in-2023/sitemap)

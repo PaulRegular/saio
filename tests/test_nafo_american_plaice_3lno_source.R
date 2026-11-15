@@ -78,7 +78,7 @@ stopifnot(nrow(s)==1L, s$authority=="NAFO", s$authority_stock_id=="american_plai
   grepl("No numeric zero-catch output is inferred", a_mon$notes, fixed=TRUE),
   nrow(c)==1L, c$matched_stock_id==stock_id, c$match_status=="matched",
   c$import_status=="partial", c$inventory_assessment_year==2026L)
-manifest <- read_small("provenance/nafo_american_plaice_3lno/manifest.csv")
+manifest <- read_small("provenance/nafo_american_plaice_3lno/sources.csv")
 stopifnot(nrow(manifest)==8L, all(nchar(manifest$sha256)==64L))
 
 

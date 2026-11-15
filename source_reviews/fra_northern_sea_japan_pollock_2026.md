@@ -34,6 +34,6 @@ The source report and its tables support all material catch, index, biology and 
 
 ## Source and validation
 
-The detailed report is hosted on the [FRA FY2026 Hokkaido-block assessment page](https://www.fra.go.jp/shigen/fisheries_resources/meeting/stock_assessment_meeting/2026/sa2026-sc01.html). Its PDF is cached locally under the ignored source cache; the retrieval URL, date and SHA-256 are recorded in provenance/fra_northern_sea_japan_pollock_2026/manifest.csv.
+The detailed report is hosted on the [FRA FY2026 Hokkaido-block assessment page](https://www.fra.go.jp/shigen/fisheries_resources/meeting/stock_assessment_meeting/2026/sa2026-sc01.html). Its PDF is cached locally under the ignored source cache; the retrieval URL, date and SHA-256 are recorded in provenance/fra_northern_sea_japan_pollock_2026/sources.csv.
 
 The importer verifies the cached checksum, table dimensions, year and age coverage, key survey values, and retained missing cells before writing. A source test checks representative values and units, plus-group handling, output completeness, candidate status and provenance.

@@ -6,7 +6,7 @@ NOAA's 2023 production assessment is the current Washington black rockfish
 assessment unit (Stock SMART 14409; `Sebastes melanops`). The assessment report
 and native Stock Synthesis archive are cached locally. Retrieval dates, URLs,
 archive revisions, byte sizes and SHA-256 hashes are recorded in
-`provenance/noaa_black_rockfish_washington_2023_sources.csv`.
+`provenance/noaa_black_rockfish_washington_2023/sources.csv`.
 
 The report identifies the run as the 2023 assessment and its fitted time series
 ends in 2022. The archived reference model uses Stock Synthesis 3.30.21.00. It

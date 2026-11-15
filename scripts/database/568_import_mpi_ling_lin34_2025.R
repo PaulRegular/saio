@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 assessment_id <- "mpi_ling_lin34_2025"
 stock_id <- "mpi_ling_lin34"
@@ -9,7 +11,7 @@ write_mode <- "--write" %in% args
 assessment_pdf <- file.path(root, "source_cache", "genypterus_blacodes/mpi_ling_lin34_2025", "FAR-2025-48-LIN3-4-assessment.pdf")
 support_pdf <- file.path(root, "source_cache", "genypterus_blacodes/mpi_ling_lin34_2025", "FAR-2025-47-LIN3-4-inputs.pdf")
 plenary_pdf <- file.path(root, "source_cache", "genypterus_blacodes/mpi_ling_lin34_2025", "Fisheries-Assessment-Plenary-2025-volume-2-ling.pdf")
-manifest_path <- file.path(root, "provenance", "mpi_ling_lin34_2025_sources.csv")
+manifest_path <- file.path(root, "provenance/mpi_ling_lin34_2025/sources.csv")
 source_files <- c(assessment_pdf, support_pdf, plenary_pdf)
 expected_hash <- c(
   "5C8F67CE8A81FFB6DF5E6192BC71F5034C8302F43B10FD5C9C1BC25CFA2B6790",
@@ -529,7 +531,7 @@ if (write_mode) {
   append_csv(assumptions, file.path(db, "assumptions.csv"))
   append_csv(outputs, file.path(db, "outputs.csv"))
   append_csv(inputs, file.path(db, "inputs.csv"))
-  write.csv(manifest, manifest_path, row.names = FALSE, na = "")
+  write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")
   replace_register_row(file.path(root, "discovery", "candidates.csv"), "candidate_id", candidate_id, list(
     matched_stock_id = stock_id,
     import_status = "partial",

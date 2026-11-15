@@ -103,7 +103,7 @@ stopifnot(
   grepl("Table 11", assumption$value[assumption$setting == "table_11_probability_label"], fixed = TRUE)
 )
 
-manifest <- read.csv("provenance/mpi_ling_lin56_2024_sources.csv",
+manifest <- read.csv("provenance/mpi_ling_lin56_2024/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 plenary_2026 <- subset(manifest,
   local_file == "mpi_ling_lin56_2026/Fisheries-Assessment-Plenary-May-2026-Volume-2.pdf")

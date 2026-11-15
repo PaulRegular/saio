@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 retrieved_on <- "2026-11-09"
 source_dir <- file.path(root, "source_cache", "mpi_bco5")
@@ -179,7 +181,7 @@ if (!write_mode) {
 } else {
   write.table(candidate, candidate_path, sep = ",", quote = TRUE,
     row.names = FALSE, col.names = FALSE, append = TRUE, na = "", qmethod = "double")
-  write.csv(manifest, file.path(root, "provenance", "mpi_blue_cod_bco5_sources.csv"),
+  write_source_manifest(manifest, file.path(root, "provenance/mpi_blue_cod_bco5/sources.csv"),
     row.names = FALSE, na = "")
   cat("Registered BCO 5 as a screened candidate selected for source curation.\n")
 }

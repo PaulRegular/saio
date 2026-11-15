@@ -40,7 +40,7 @@ assessments <- utils::read.csv("database/assessments.csv", stringsAsFactors = FA
 candidates <- utils::read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 manifest <- utils::read.csv(
-  "provenance/fra_northern_sea_japan_pollock_2026/manifest.csv",
+  "provenance/fra_northern_sea_japan_pollock_2026/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
 stock <- subset(stocks, stock_id == "fra_wpollock_northern_sea_japan")

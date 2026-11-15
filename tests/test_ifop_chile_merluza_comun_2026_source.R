@@ -35,7 +35,7 @@ outputs <- read_assessment_rows(file.path(root, "database/outputs.csv"), assessm
 candidate <- read.csv(file.path(root, "discovery/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA"))
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-manifest <- read.csv(file.path(root, "provenance/ifop_merluza_comun_2026_sources.csv"),
+manifest <- read.csv(file.path(root, "provenance/ifop_merluza_comun_2026/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA"))
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

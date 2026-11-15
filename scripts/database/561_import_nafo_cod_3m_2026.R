@@ -8,7 +8,7 @@ if (!requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install pdftools to extract the cached official assessment tables.", call. = FALSE)
 }
 if (!file.exists(report_path)) {
-  stop("Download the assessment PDF listed in provenance/nafo_cod_3m_2026/manifest.csv.", call. = FALSE)
+  stop("Download the assessment PDF listed in provenance/nafo_cod_3m_2026/sources.csv.", call. = FALSE)
 }
 
 pages <- pdftools::pdf_data(report_path)
@@ -487,7 +487,7 @@ assessment_new <- data.frame(
 )
 
 source_reviews <- file.path(root, "source_reviews")
-manifest_path <- file.path(root, "provenance", "nafo_cod_3m_2026", "manifest.csv")
+manifest_path <- file.path(root, "provenance/nafo_cod_3m_2026/sources.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
 source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 

@@ -6,7 +6,7 @@ The 2021 assessment covers lingcod (*Ophiodon elongatus*) north of 40°10′N al
 
 The 2021 report and its model archive are the latest detailed production assessment located for this current unit. NOAA’s stock page identifies the two U.S. Pacific Coast lingcod units, and PFMC’s 2026 assessment planning material identifies 2021 as the last completed assessment, with a new benchmark planned for 2027.
 
-Authoritative PDFs and the native archive are cached under the ignored `source_cache/discovery_noaa_lingcod_northern_2021/` folder. Their URLs, retrieval dates, sizes, and SHA-256 checksums are recorded in `provenance/noaa_lingcod_northern_pacific_coast_2021/manifest.csv`.
+Authoritative PDFs and the native archive are cached under the ignored `source_cache/discovery_noaa_lingcod_northern_2021/` folder. Their URLs, retrieval dates, sizes, and SHA-256 checksums are recorded in `provenance/noaa_lingcod_northern_pacific_coast_2021/sources.csv`.
 
 - [2021 northern lingcod assessment report](https://www.pcouncil.org/documents/2021/12/status-of-lingcod-ophiodon-elongatus-along-the-northern-u-s-west-coast-in-2021-december-2021.pdf/)
 - [2021 Stock Synthesis model files](https://www.pcouncil.org/documents/lingcod-2021-model-files-zip-file/)

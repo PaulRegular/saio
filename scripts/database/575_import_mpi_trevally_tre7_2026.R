@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 args <- commandArgs(trailingOnly = TRUE)
 write_mode <- "--write" %in% args
@@ -569,7 +571,7 @@ if (!write_mode) {
   }
   candidate_lines[candidate_line] <- candidate_row
   writeLines(candidate_lines, candidate_path, useBytes = TRUE)
-  utils::write.csv(manifest, "provenance/mpi_trevally_tre7_2026_sources.csv",
+  write_source_manifest(manifest, "provenance/mpi_trevally_tre7_2026/sources.csv",
     row.names = FALSE, na = "")
   cat("TRE 7 source records and source manifest appended; candidate import status is partial.\n")
 }

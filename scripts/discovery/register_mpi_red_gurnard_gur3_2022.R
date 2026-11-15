@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 candidate_id <- "MPI:GUR3"
 candidate_unit_id <- "mpi_red_gurnard_gur3"
 review_date <- "2026-11-08"
@@ -116,7 +118,7 @@ batch <- data.frame(
 )
 
 register_path <- "discovery/candidates.csv"
-manifest_path <- "provenance/mpi_red_gurnard_gur3_2022_sources.csv"
+manifest_path <- "provenance/mpi_red_gurnard_gur3_2022/sources.csv"
 source_paths <- file.path("source_cache", manifest$local_file)
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
@@ -145,6 +147,6 @@ cat("Cached official sources verified:", nrow(manifest), "\n")
 if (write_mode) {
   write.table(candidate, register_path, sep = ",", row.names = FALSE,
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double", na = "")
-  write.csv(manifest, manifest_path, row.names = FALSE, na = "")
+  write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")
   cat("Registered the GUR 3 source screen and selected partial curation.\n")
 }

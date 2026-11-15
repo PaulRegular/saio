@@ -29,4 +29,4 @@ The current-unit assessment has a **partial source import** under the latest-uni
 - [Fisheries Assessment Plenary, May 2026, Volume 3](https://fs.fish.govt.nz/Doc/26243/Fisheries-Assessment-Plenary-May-2026-Volume-3.pdf.ashx)
 - [Proposed Fisheries Research Services for 2026–27](https://www.mpi.govt.nz/dmsdocument/71944/direct)
 
-The two assessment documents are cached under the ignored source_cache/nz_red_gurnard_gur7_2022/ directory. Their retrieval dates and SHA-256 checksums are recorded in provenance/mpi_red_gurnard_gur7_2022_sources.csv.
+The two assessment documents are cached under the ignored source_cache/nz_red_gurnard_gur7_2022/ directory. Their retrieval dates and SHA-256 checksums are recorded in provenance/mpi_red_gurnard_gur7_2022/sources.csv.

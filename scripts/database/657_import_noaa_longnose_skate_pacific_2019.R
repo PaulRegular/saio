@@ -771,10 +771,9 @@ import_noaa_longnose_skate_pacific_2019 <- function(root = ".", write = FALSE) {
 
   provenance_dir <- file.path(root,
     "provenance/discovery_noaa_longnose_skate_2019")
-  dir.create(provenance_dir, recursive = TRUE, showWarnings = FALSE)
-  if (!file.copy(manifest_path, file.path(provenance_dir, "sources.csv"),
-      overwrite = TRUE)) stop("Could not write tracked source provenance.",
-        call. = FALSE)
+  source(file.path(root, "scripts/database/source_manifest_io.R"), local = TRUE)
+  write_source_manifest(manifest, file.path(provenance_dir, "sources.csv"),
+    row.names = FALSE, na = "")
   cat("Longnose Skate rows appended; candidate status set to partial.\n")
   invisible(list(stock = stock, assessment = assessment,
     assumptions = assumptions, inputs = inputs, outputs = outputs))

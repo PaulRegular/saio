@@ -30,4 +30,4 @@ GUR 3 is selected for **partial source curation** because the report provides ex
 - [Fisheries Assessment Plenary, May 2026, Volume 3](https://fs.fish.govt.nz/Doc/26243/Fisheries-Assessment-Plenary-May-2026-Volume-3.pdf.ashx)
 - [Proposed Fisheries Research Services for 2026–27](https://www.mpi.govt.nz/dmsdocument/71944/direct)
 
-The assessment and research-plan PDFs are cached under the ignored `source_cache/nz_red_gurnard_gur3_2022/` directory. The shared 2026 Plenary PDF is cached under `source_cache/nz_red_gurnard_gur7_2022/`. Retrieval dates and SHA-256 checksums are recorded in `provenance/mpi_red_gurnard_gur3_2022_sources.csv`.
+The assessment and research-plan PDFs are cached under the ignored `source_cache/nz_red_gurnard_gur3_2022/` directory. The shared 2026 Plenary PDF is cached under `source_cache/nz_red_gurnard_gur7_2022/`. Retrieval dates and SHA-256 checksums are recorded in `provenance/mpi_red_gurnard_gur3_2022/sources.csv`.

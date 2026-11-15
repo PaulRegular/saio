@@ -1,5 +1,7 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 candidate_path <- "discovery/candidates.csv"
-manifest_path <- "provenance/mpi_kahawai_kah1_2021_sources.csv"
+manifest_path <- "provenance/mpi_kahawai_kah1_2021/sources.csv"
 source_pdf <- "source_cache/mpi_kahawai_kah1_2021/FAR2022-54.pdf"
 
 candidate <- data.frame(
@@ -114,5 +116,5 @@ manifest <- data.frame(
   sha256 = "D3A6DC8BB710AC13CD520BB7D188A15850302C9EB334DA3AC59C0F575EE02DEA",
   stringsAsFactors = FALSE
 )
-write.csv(manifest, manifest_path, row.names = FALSE, na = "")
+write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")
 cat("Registered Fisheries New Zealand KAH 1 for source curation.\n")

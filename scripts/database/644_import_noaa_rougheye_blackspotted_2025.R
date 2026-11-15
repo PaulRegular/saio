@@ -13,7 +13,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 source(file.path(root, "scripts/database/pacific_tables.R"))
 source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
-manifest_path <- file.path(root, "provenance/noaa_rougheye_blackspotted_2025_sources.csv")
+manifest_path <- file.path(root, "provenance/noaa_rougheye_blackspotted_2025/sources.csv")
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")
 files <- c(

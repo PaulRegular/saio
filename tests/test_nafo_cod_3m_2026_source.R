@@ -149,7 +149,7 @@ stopifnot(
   file.exists(file.path(root, "source_reviews", "nafo_cod_3m_2026.md"))
 )
 
-manifest <- read.csv(file.path(root, "provenance", "nafo_cod_3m_2026", "manifest.csv"),
+manifest <- read.csv(file.path(root, "provenance/nafo_cod_3m_2026/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 survey_report <- manifest[manifest$cached_file == "nafo_scr26_003_flemish_cap_survey_2025.pdf", , drop = FALSE]
 stopifnot(

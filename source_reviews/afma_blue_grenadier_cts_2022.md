@@ -13,7 +13,7 @@ The 2022 technical paper describes an updated preliminary base case built with S
 - [AFMA, 2026 SESSF Species Summaries](https://www.afma.gov.au/sites/default/files/2026-01/SESSF-Species-Summaries-2026.pdf), which distinguishes the last full 2022 assessment from the 2025 update.
 - [Tuck and Bessell-Browne, 2021 Blue Grenadier assessment](https://www.afma.gov.au/sites/default/files/2025-02/stock-assessment-for-blue-grenadier-2021.pdf), reviewed as the predecessor run but not used to fill 2022 inputs.
 
-The 2022 report and meeting minutes are cached under the gitignored `source_cache/australia_afma_blue_grenadier_2025/` directory; the predecessor 2021 report is cached under `source_cache/afma_blue_grenadier_2021/`. Retrieval dates and SHA-256 checksums are recorded in `provenance/afma_blue_grenadier_cts_2022/manifest.csv`.
+The 2022 report and meeting minutes are cached under the gitignored `source_cache/australia_afma_blue_grenadier_2025/` directory; the predecessor 2021 report is cached under `source_cache/afma_blue_grenadier_2021/`. Retrieval dates and SHA-256 checksums are recorded in `provenance/afma_blue_grenadier_cts_2022/sources.csv`.
 
 ## Inputs and assumptions recovered
 

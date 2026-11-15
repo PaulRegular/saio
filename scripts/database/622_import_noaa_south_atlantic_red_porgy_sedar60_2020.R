@@ -1,6 +1,6 @@
 root <- "."
 cache_dir <- file.path("source_cache", "noaa_south_atlantic_red_porgy_sedar60_2020")
-manifest_path <- file.path("provenance", "noaa_south_atlantic_red_porgy_sedar60_2020", "manifest.csv")
+manifest_path <- file.path("provenance/noaa_south_atlantic_red_porgy_sedar60_2020/sources.csv")
 stock_id <- "noaa_south_atlantic_red_porgy"
 assessment_id <- "noaa_south_atlantic_red_porgy_sedar60_2020"
 candidate_id <- "NOAA:10100"

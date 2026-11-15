@@ -735,10 +735,9 @@ import_noaa_bsai_rougheye_blackspotted_2024 <- function(root = ".", write = FALS
 
   provenance_dir <- file.path(root,
     "provenance/discovery_noaa_bsai_rougheye_2024")
-  dir.create(provenance_dir, recursive = TRUE, showWarnings = FALSE)
-  if (!file.copy(manifest_path, file.path(provenance_dir, "sources.csv"),
-      overwrite = TRUE)) stop("Could not write tracked source provenance.",
-        call. = FALSE)
+  source(file.path(root, "scripts/database/source_manifest_io.R"), local = TRUE)
+  write_source_manifest(manifest, file.path(provenance_dir, "sources.csv"),
+    row.names = FALSE, na = "")
   cat("BSAI blackspotted/rougheye records appended; candidate status set to partial.\n")
   invisible(list(stock = stock, assessment = assessment,
     assumptions = assumptions, inputs = inputs, outputs = outputs))

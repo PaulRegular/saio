@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 candidate_id <- "MPI:ORH3B"
 candidate_unit_id <- "mpi_orh3b_chatham_rise"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
@@ -123,7 +125,7 @@ if (write_mode) {
     sha256 = source_hashes,
     stringsAsFactors = FALSE
   )
-  write.csv(manifest, "provenance/mpi_orh3b_2025_sources.csv",
+  write_source_manifest(manifest, "provenance/mpi_orh3b_2025/sources.csv",
     row.names = FALSE, na = "")
   cat("Added ORH 3B to the discovery register and wrote its source manifest.\n")
 }

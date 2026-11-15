@@ -72,7 +72,7 @@ replace_csv_record <- function(path, key_field, key_value, row) {
   close(connection)
 }
 
-manifest <- read_table("provenance/npfc_chub_mackerel_nw_pacific_2025_sources.csv")
+manifest <- read_table("provenance/npfc_chub_mackerel_nw_pacific_2025/sources.csv")
 cached_files <- manifest$local_file
 if (any(!file.exists(cached_files))) {
   stop("Cached NPFC source documents are required before importing this record.",

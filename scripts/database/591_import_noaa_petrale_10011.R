@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "eopsetta_jordani/noaa_petrale_sole_pacific_coast_2023")
@@ -839,7 +841,7 @@ if (!dry_run) {
   manifest_dir <- file.path(root, "provenance/noaa_petrale_sole_pacific_coast")
   dir.create(manifest_dir, recursive = TRUE, showWarnings = FALSE)
   cache_manifest$notes <- ""
-  utils::write.csv(cache_manifest,
+  write_source_manifest(cache_manifest,
     file.path(manifest_dir, "sources.csv"),
     row.names = FALSE, na = "", fileEncoding = "UTF-8")
 }

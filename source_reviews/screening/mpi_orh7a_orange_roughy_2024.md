@@ -35,7 +35,7 @@ The 2024 report does not tabulate annual or age-specific abundance, spawning bio
 
 ## Sources and cached files
 
-The three authoritative PDFs were downloaded on 2026-11-05 and are cached under the gitignored source_cache/mpi_orange_roughy_orh7a_2024/ directory. Their original URLs and SHA-256 checksums are recorded in provenance/mpi_orh7a_2024_sources.csv.
+The three authoritative PDFs were downloaded on 2026-11-05 and are cached under the gitignored source_cache/mpi_orange_roughy_orh7a_2024/ directory. Their original URLs and SHA-256 checksums are recorded in provenance/mpi_orh7a_2024/sources.csv.
 
 - Fisheries New Zealand, [FAR 2024/58: Assessment of the Challenger Plateau orange roughy stock for 2024](https://fs.fish.govt.nz/Page.aspx?dk=25788&pk=113), especially Table 4 (printed p. 11), Tables 5–6 (printed pp. 12–13), and CASAL Appendix A (printed pp. 28–33).
 - Fisheries New Zealand, [FAR 2024/26: Estimation of the abundance of orange roughy on the southwest Challenger Plateau](https://fs.fish.govt.nz/Doc/25743/FAR-2024-26-Estimation-of-the-abundance-of-orange%20roughy-on-the-southwest-Challenger%20Plateau.pdf.ashx), supporting the 2023 acoustic survey context.

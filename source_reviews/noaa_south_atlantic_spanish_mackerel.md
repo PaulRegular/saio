@@ -40,7 +40,7 @@ Assessment inputs, assumptions, and outputs are marked partial because the repor
 
 - [SEDAR 78 assessment page](https://sedarweb.org/assessments/sedar-78/)
 - [SEDAR 78 final assessment report, revised July 2022](https://sedarweb.org/documents/sedar-78-stock-assessment-report-south-atlantic-spanish-mackerel-revised-july-2022/)
-- SEDAR 78-WP01 survey methods; WP02 SEAMAP index; WP03 recreational data; WP04 shrimp bycatch; WP05 composition weighting; WP08 age-data review; WP09 MRIP index; WP11 commercial discards; and WP12 Florida trip-ticket index. Their URLs, retrieval dates, file sizes, and SHA-256 checksums are recorded in `provenance/noaa_south_atlantic_spanish_mackerel_2022_sources.csv`.
+- SEDAR 78-WP01 survey methods; WP02 SEAMAP index; WP03 recreational data; WP04 shrimp bycatch; WP05 composition weighting; WP08 age-data review; WP09 MRIP index; WP11 commercial discards; and WP12 Florida trip-ticket index. Their URLs, retrieval dates, file sizes, and SHA-256 checksums are recorded in `provenance/noaa_south_atlantic_spanish_mackerel_2022/sources.csv`.
 - [South Atlantic SSC July 2023 meeting output](https://sedarweb.org/documents/sedar-78-south-atlantic-spanish-mackerel-july-2023-ssc-meeting/)
 - [SEDAR 110 project page](https://sedarweb.org/assessments/sedar-110-south-atlantic-spanish-mackerel/)
 

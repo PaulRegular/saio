@@ -84,7 +84,7 @@ stopifnot(
   grepl("catch numbers-at-age", candidate$catch_age_evidence, fixed = TRUE)
 )
 
-manifest <- read.csv("provenance/afma_bight_redfish_gab_2022/manifest.csv", stringsAsFactors = FALSE)
+manifest <- read.csv("provenance/afma_bight_redfish_gab_2022/sources.csv", stringsAsFactors = FALSE)
 stopifnot(
   nrow(manifest) == 2L,
   setequal(basename(manifest$local_file), c(

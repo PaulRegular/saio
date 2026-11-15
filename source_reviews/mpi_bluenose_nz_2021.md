@@ -74,6 +74,6 @@ standard errors or confidence limits for the reported MPD quantities.
 
 Both assessment documents are cached under the ignored
 `source_cache/mpi_bluenose_nz_2021/` folder. Retrieval dates and SHA-256
-checksums are recorded in `provenance/mpi_bluenose_nz_2021_sources.csv`. The
+checksums are recorded in `provenance/mpi_bluenose_nz_2021/sources.csv`. The
 model input files are reproduced as text in FAR 2021/82 Appendix D; no separate
 fitted object or numeric annual-output file was located.

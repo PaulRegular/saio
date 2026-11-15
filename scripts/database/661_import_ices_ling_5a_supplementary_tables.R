@@ -27,7 +27,7 @@ sha256_file <- function(path) {
   hashes
 }
 
-manifest_path <- file.path(root, "provenance", "discovery_ices_ling_5a_2026", "supplementary_sources.csv")
+manifest_path <- file.path(root, "provenance/discovery_ices_ling_5a_2026/supplementary/sources.csv")
 manifest <- utils::read.csv(manifest_path, stringsAsFactors = FALSE, check.names = FALSE)
 source_path <- file.path(cache, source_file)
 if (nrow(manifest) != 1L || manifest$file != source_file ||
@@ -282,7 +282,7 @@ candidate_updated$decision_reason <- paste(
 )
 candidate_updated$notes <- paste(
   "Current 2026 production assessment; historical fit ends in 2025 and selected 2026 aggregate and N-at-age outputs are advice projections.",
-  "Supplementary age tables are cached and checksummed in provenance/discovery_ices_ling_5a_2026/supplementary_sources.csv."
+  "Supplementary age tables are cached and checksummed in provenance/discovery_ices_ling_5a_2026/supplementary/sources.csv."
 )
 
 

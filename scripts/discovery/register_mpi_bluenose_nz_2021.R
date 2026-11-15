@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 candidate_id <- "MPI:BNS_NZ"
 candidate_unit_id <- "mpi_bluenose_nz"
 stock_id <- "mpi_bluenose_nz"
@@ -115,7 +117,7 @@ manifest <- data.frame(
 )
 
 register_path <- "discovery/candidates.csv"
-manifest_path <- "provenance/mpi_bluenose_nz_2021_sources.csv"
+manifest_path <- "provenance/mpi_bluenose_nz_2021/sources.csv"
 source_paths <- file.path("source_cache", manifest$local_file)
 
 register <- read_table(register_path)
@@ -142,7 +144,7 @@ cat("Sources cached and checksummed:", nrow(manifest), "\n")
 if (write_mode) {
   write.table(candidate, register_path, sep = ",", row.names = FALSE,
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double", na = "")
-  write.csv(manifest, manifest_path, row.names = FALSE, na = "")
+  write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")
 
   unit <- data.frame(
     unit_key = unit_key,

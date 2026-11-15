@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 assessment_id <- "mpi_ling_lin7wc_2026"
 stock_id <- "mpi_ling_lin7wc"
 candidate_id <- "MPI:LIN7WC"
@@ -676,7 +678,7 @@ if (write_mode) {
     candidates[candidate_index, , drop = FALSE], candidate_id
   )
 
-  manifest_path <- file.path("provenance", "mpi_ling_lin7wc_2026_sources.csv")
-  write.csv(source_files, manifest_path, row.names = FALSE, na = "")
+  manifest_path <- file.path("provenance/mpi_ling_lin7wc_2026/sources.csv")
+  write_source_manifest(source_files, manifest_path, row.names = FALSE, na = "")
   cat("Added LIN 7WC source records and updated the candidate register.\n")
 }

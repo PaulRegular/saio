@@ -22,7 +22,7 @@ assumptions <- assumptions[
   assumptions$assessment_id == "afma_sessf_eastern_school_whiting_2024", , drop = FALSE
 ]
 manifest <- read.csv(
-  "provenance/afma_school_whiting_2024/manifest.csv",
+  "provenance/afma_school_whiting_2024/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE
 )
 

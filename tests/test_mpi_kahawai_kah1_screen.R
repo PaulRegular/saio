@@ -7,7 +7,7 @@ stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   check.names = FALSE)
 units <- candidate_units()
 unit <- units[units$unit_key == "stock:mpi_kahawai_kah1", , drop = FALSE]
-manifest <- read.csv("provenance/mpi_kahawai_kah1_2021_sources.csv",
+manifest <- read.csv("provenance/mpi_kahawai_kah1_2021/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines("source_reviews/mpi_kahawai_kah1.md"),
   collapse = "\n")

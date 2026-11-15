@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "scomber_japonicus/noaa_pacific_mackerel_2025")
@@ -658,8 +660,7 @@ if (!dry_run) {
   append_csv_rows(file.path(database, "outputs.csv"), output_data)
   replace_candidate_register_row(candidates_path, candidate_i, candidate,
     candidate_id)
-  write.csv(extracted_manifest, file.path(root, "provenance",
-    "noaa_pacific_mackerel_2023_model_files.csv"), row.names = FALSE,
+  write_source_manifest(extracted_manifest, file.path(root, "provenance/noaa_pacific_mackerel_2023_model_files/sources.csv"), row.names = FALSE,
     na = "", fileEncoding = "UTF-8")
   cat("Database and candidate register updated.\n")
 } else {

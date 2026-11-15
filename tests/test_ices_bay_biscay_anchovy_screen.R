@@ -1,6 +1,6 @@
 root <- "."
 register <- read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE)
-provenance <- read.csv(file.path(root, "provenance", "ices_ane_27_8_sources.csv"), stringsAsFactors = FALSE)
+provenance <- read.csv(file.path(root, "provenance/ices_ane_27_8/sources.csv"), stringsAsFactors = FALSE)
 
 candidate <- register[register$candidate_id == "ICES:ane.27.8", , drop = FALSE]
 source_review <- paste(readLines(file.path(root, "source_reviews", "ices_bay_biscay_anchovy_8.md")), collapse = "\n")
@@ -21,7 +21,7 @@ stopifnot(
   nrow(provenance) == 5L,
   all(grepl("^[A-F0-9]{64}$", provenance$sha256)),
   grepl("source_cache/ices_ane_27_8", source_review, fixed = TRUE),
-  grepl("provenance/ices_ane_27_8_sources.csv", source_review, fixed = TRUE),
+  grepl("provenance/ices_ane_27_8/sources.csv", source_review, fixed = TRUE),
   grepl("145,608 t", source_review, fixed = TRUE),
   grepl("157,247 t", source_review, fixed = TRUE),
   grepl("Table 2.5.1.1 directly reports", source_review, fixed = TRUE),

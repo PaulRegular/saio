@@ -11,7 +11,7 @@ if (length(missing_packages)) {
   stop("Install required extraction packages: ", paste(missing_packages, collapse = ", "), call. = FALSE)
 }
 if (!file.exists(report_path)) {
-  stop("Download the assessment PDF listed in provenance/nafo_cod_3no_2021/manifest.csv.", call. = FALSE)
+  stop("Download the assessment PDF listed in provenance/nafo_cod_3no_2021/sources.csv.", call. = FALSE)
 }
 
 pdf_pages <- pdftools::pdf_text(report_path)

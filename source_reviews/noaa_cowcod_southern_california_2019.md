@@ -11,7 +11,7 @@ Sources cached locally under the ignored `source_cache/discovery_noaa_cowcod_cal
 - [2019 assessment report](https://www.pcouncil.org/documents/2019/10/status-of-cowcod-sebastes-levis-in-2019-october-24-2019.pdf)
 - [2019 Stock Synthesis model files](https://www.pcouncil.org/documents/cowcod-2019-ss-model-files-zip-file/)
 
-Retrieval dates, file sizes and SHA-256 checksums are recorded in `provenance/noaa_cowcod_southern_california_2019/manifest.csv`.
+Retrieval dates, file sizes and SHA-256 checksums are recorded in `provenance/noaa_cowcod_southern_california_2019/sources.csv`.
 
 ## Inputs recovered
 

@@ -1,7 +1,7 @@
 assessment_id <- "afma_sessf_silver_warehou_2021"
 stock_id <- "afma_sessf_silver_warehou"
 candidate_id <- "AFMA:SESSF_SILVER_WAREHOU"
-manifest_path <- "provenance/afma_sessf_silver_warehou_2021_sources.csv"
+manifest_path <- "provenance/afma_sessf_silver_warehou_2021/sources.csv"
 report_url <- "https://www.afma.gov.au/sites/default/files/2023-02/Stock%20Assessments%20for%20SESSF%202020%E2%80%9321%20-%20Part%201.pdf"
 summary_url <- "https://www.afma.gov.au/sites/default/files/2026-01/SESSF-Species-Summaries-2026.pdf"
 retrieved_on <- "2026-11-06"

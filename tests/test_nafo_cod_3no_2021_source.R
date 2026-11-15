@@ -179,7 +179,7 @@ for (year in 1959:2020) {
   if (abs(sum(mature) - reported_ssb) > 6) stop("SSB component check failed in ", year)
 }
 
-manifest <- read.csv(file.path(root, "provenance", "nafo_cod_3no_2021", "manifest.csv"),
+manifest <- read.csv(file.path(root, "provenance/nafo_cod_3no_2021/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 stopifnot(
   nrow(manifest) == 3L,

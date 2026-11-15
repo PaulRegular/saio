@@ -4,7 +4,7 @@ stock_id <- "mpi_bluenose_nz"
 candidate_id <- "MPI:BNS_NZ"
 report_url <- "https://fs.fish.govt.nz/Doc/25020/FAR-2021-82-New-Zealand-Bluenose-Stock-Assessment-2021.pdf.ashx"
 plenary_url <- "https://fs.fish.govt.nz/Doc/26241/Fisheries-Assessment-Plenary-May-2026-Volume-1.pdf.ashx"
-source_manifest_path <- "provenance/mpi_bluenose_nz_2021_sources.csv"
+source_manifest_path <- "provenance/mpi_bluenose_nz_2021/sources.csv"
 report_path <- "source_cache/mpi_bluenose_nz_2021/FAR-2021-82-bluenose.pdf"
 plenary_path <- "source_cache/mpi_bluenose_nz_2021/Fisheries-Assessment-Plenary-May-2026-Volume-1.pdf"
 args <- commandArgs(trailingOnly = TRUE)

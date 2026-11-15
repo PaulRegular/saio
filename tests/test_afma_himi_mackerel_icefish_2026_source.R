@@ -23,7 +23,7 @@ candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 progress <- candidate_progress()
 units <- candidate_units()
-manifest <- read.csv("provenance/afma_himi_mackerel_icefish_2026_sources.csv",
+manifest <- read.csv("provenance/afma_himi_mackerel_icefish_2026/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == "AFMA:HIMI_ICEFISH", , drop = FALSE]
 

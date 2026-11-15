@@ -20,7 +20,7 @@ The report distinguishes the stock unit from the area covered by each model. The
 
 Tables 7–9 report MCMC medians and 95% intervals for unfished and terminal spawning biomass, target biomass, fishing-mortality reference measures, probabilities, and projections. These outputs are useful for comparison, with the area scope noted above. Annual numerical N-at-age, F-at-age, M-at-age and recruitment arrays are not tabulated; annual SSB and recruitment are shown in figures only. Natural mortality is fixed in the base assessment, not estimated.
 
-The 2026 assessment report and 2025 age-composition report are cached locally. The source hashes and official URLs are recorded in `provenance/mpi_trevally_tre7_2026_sources.csv`. Native Stock Synthesis input/output files were not located in this review. Exact within-year survey timing and the older age-composition likelihood vectors remain to be verified from the cited source reports.
+The 2026 assessment report and 2025 age-composition report are cached locally. The source hashes and official URLs are recorded in `provenance/mpi_trevally_tre7_2026/sources.csv`. Native Stock Synthesis input/output files were not located in this review. Exact within-year survey timing and the older age-composition likelihood vectors remain to be verified from the cited source reports.
 
 
 ## Database import (5 November 2026)
@@ -37,5 +37,5 @@ The catch series is biomass, not catch-at-age. No transformation to age-specific
 
 One source discrepancy is preserved: Table 4 reports a CV of 9.26 for the model-year 2000 one-year-old survey index, while Table 6 summarizes the fitted-series CV range as 0.59-3.49. The imported value remains 9.26, and the inconsistency is recorded rather than adjusted.
 
-The two cached files listed in provenance/mpi_trevally_tre7_2026_sources.csv are the 2026 assessment report and the 2025 age-composition report. Older sampling reports cited by FAR 2026/34 are identified for later recovery, but their vectors were not used in this import.
+The two cached files listed in provenance/mpi_trevally_tre7_2026/sources.csv are the 2026 assessment report and the 2025 age-composition report. Older sampling reports cited by FAR 2026/34 are identified for later recovery, but their vectors were not used in this import.
 

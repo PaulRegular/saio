@@ -13,7 +13,7 @@ The original 2024 technical report is cited in the summaries as a paper presente
 - [CSIRO and NSW DPI, School Whiting stock assessment based on data up to 2019](https://research.csiro.au/efar/wp-content/uploads/sites/284/2022/06/SchoolWhiting2020.pdf), a separate older assessment run.
 - [AFMA, SERAG Meeting 2, November 2024 minutes](https://www.afma.gov.au/sites/default/files/2025-05/SERAG-November-2024-minutes.pdf), agenda item 3, p. 7, reporting the final combined assessment's SSB0 and projected SSB2025.
 
-The available PDFs are cached under the ignored `source_cache/afma_school_whiting/` directory. Retrieval dates and SHA-256 checksums are recorded in `provenance/afma_school_whiting_2024/manifest.csv`. The FRDC report was retrieved on 2026-11-07; its SHA-256 is `39FD3D537ACEB850769F85C7F602CC95C7DE8F7B739B4EF14C7ADFB932CDF25F`.
+The available PDFs are cached under the ignored `source_cache/afma_school_whiting/` directory. Retrieval dates and SHA-256 checksums are recorded in `provenance/afma_school_whiting_2024/sources.csv`. The FRDC report was retrieved on 2026-11-07; its SHA-256 is `39FD3D537ACEB850769F85C7F602CC95C7DE8F7B739B4EF14C7ADFB932CDF25F`.
 
 ## 2024 model and reported results
 

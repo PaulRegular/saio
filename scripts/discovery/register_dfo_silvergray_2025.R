@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 candidate_id <- "DFO:Pacific:Silvergray Rockfish - Coastwide"
 candidate_unit_id <- "dfo_silvergray_rockfish_coastwide"
 review_date <- "2026-11-14"
@@ -112,7 +114,7 @@ if ("--write" %in% commandArgs(trailingOnly = TRUE)) {
   dir.create(dirname(manifest_path), recursive = TRUE, showWarnings = FALSE)
   write.table(candidate, "discovery/candidates.csv", sep = ",", row.names = FALSE,
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double", na = "")
-  write.csv(manifest, manifest_path,
+  write_source_manifest(manifest, manifest_path,
     row.names = FALSE, na = "")
   source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
   source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)

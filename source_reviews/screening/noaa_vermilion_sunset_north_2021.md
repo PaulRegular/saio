@@ -4,7 +4,7 @@
 
 NOAA Stock SMART identifies the Northern California Vermilion/Sunset complex as a distinct assessment unit. The 2021 benchmark covers U.S. waters off California north of Point Conception through the California–Oregon border and combines vermilion rockfish (*Sebastes miniatus*) with sunset rockfish (*S. crocotulus*). It is distinct from the Southern California, Oregon and Washington assessments. The 2021 assessment and model archive are the latest detailed assessment sources located for this unit; the 2025 Pacific Coast Groundfish SAFE and current Stock SMART status material were checked for later assessment activity.
 
-The assessment report, native model archive and STAR panel report are cached under `source_cache/discovery_noaa_vermilion_sunset_north_2021/`. Source URLs, retrieval date, file sizes and SHA-256 checksums are recorded in `provenance/noaa_vermilion_sunset_north_2021_sources.csv`.
+The assessment report, native model archive and STAR panel report are cached under `source_cache/discovery_noaa_vermilion_sunset_north_2021/`. Source URLs, retrieval date, file sizes and SHA-256 checksums are recorded in `provenance/noaa_vermilion_sunset_north_2021/sources.csv`.
 
 ## Inputs and assumptions
 

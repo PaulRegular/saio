@@ -12,7 +12,7 @@ The detailed report is a preliminary base-case development document. AFMA's 2026
 - [AFMA, 2026 SESSF Species Summaries](https://www.afma.gov.au/sites/default/files/2026-01/SESSF-Species-Summaries-2026.pdf)
 - [AFMA Bight Redfish species page](https://www.afma.gov.au/species/bight-redfish)
 
-The two PDFs are cached under the ignored source_cache/australia_afma_bight_redfish_2022/ directory. Retrieval dates, URLs, and SHA-256 checksums are in provenance/afma_bight_redfish_gab_2022/manifest.csv.
+The two PDFs are cached under the ignored source_cache/australia_afma_bight_redfish_2022/ directory. Retrieval dates, URLs, and SHA-256 checksums are in provenance/afma_bight_redfish_gab_2022/sources.csv.
 
 ## Inputs and assumptions
 

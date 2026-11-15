@@ -18,7 +18,7 @@ assumptions <- subset(read_source_table("database/assumptions.csv"),
 candidates <- read_source_table("discovery/candidates.csv")
 candidate <- subset(candidates, candidates$candidate_id == "NPFC:CM_NWPO")
 manifest <- read_source_table(
-  "provenance/npfc_chub_mackerel_nw_pacific_2025_sources.csv")
+  "provenance/npfc_chub_mackerel_nw_pacific_2025/sources.csv")
 review <- paste(readLines(
   "source_reviews/npfc_chub_mackerel_nw_pacific_2025.md", warn = FALSE),
   collapse = "\n")

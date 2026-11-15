@@ -10,7 +10,7 @@ The assessment and comparison sources are:
 - NAFO SCR 2022/039, exploratory state-space assessment: <https://www.nafo.int/Portals/0/PDFs/sc/2022/scr22-039.pdf>
 - NAFO SCS 2025/13, interim monitoring: <https://www.nafo.int/Portals/0/PDFs/sc/2025/scs25-13.pdf>
 
-Cached source URLs, retrieval dates and SHA-256 checksums are in `provenance/nafo_cod_3no_2021/manifest.csv`. The cached PDFs and rendered source pages are local-only under the ignored `source_cache/` directory.
+Cached source URLs, retrieval dates and SHA-256 checksums are in `provenance/nafo_cod_3no_2021/sources.csv`. The cached PDFs and rendered source pages are local-only under the ignored `source_cache/` directory.
 
 ## Inputs and assumptions
 

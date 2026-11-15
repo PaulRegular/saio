@@ -718,7 +718,7 @@ source references together when moving an existing cache.
 
 Record the exact files used for import or verification in `sources.csv` under
 `provenance/<assessment_id>/` or the corresponding candidate or shared
-collection. For new and relocated manifests, use `file`, `url`, `revision`,
+collection. The [source manifest guide](provenance/) describes the standard fields. Begin each manifest with `file`, `url`, `revision`,
 `retrieved_on`, `sha256`, `bytes` and `notes`. Give the file path relative
 to its cache directory and identify that directory in the review or manifest.
 Record consequential failed or restricted downloads with their source URL and

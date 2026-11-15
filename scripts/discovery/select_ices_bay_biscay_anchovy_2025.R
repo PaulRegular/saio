@@ -116,7 +116,7 @@ candidates$notes[candidate_row] <- paste(
   "Tables 2.3.1.3, 2.3.1.4, and 2.5.1.1 report/use 157,247 t; preserve this source",
   "discrepancy and use the model input table for the fitted series. Source PDFs and",
   "Standard Graphs data are cached in source_cache/ices_ane_27_8; checksums and",
-  "retrieval metadata are in provenance/ices_ane_27_8_sources.csv. No canonical",
+  "retrieval metadata are in provenance/ices_ane_27_8/sources.csv. No canonical",
   "assessment or numerical records are added by this selection checkpoint."
 )
 

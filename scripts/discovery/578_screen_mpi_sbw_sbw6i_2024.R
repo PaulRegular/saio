@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 retrieved_on <- "2026-11-06"
 source_dir <- "source_cache/mpi_sbw_sbw6i_2023"
@@ -122,7 +124,7 @@ manifest <- data.frame(
   sha256 = source_hashes,
   stringsAsFactors = FALSE
 )
-write.csv(manifest, file.path(root, "provenance", "mpi_sbw_sbw6i_2024_sources.csv"),
+write_source_manifest(manifest, file.path(root, "provenance/mpi_sbw_sbw6i_2024/sources.csv"),
   row.names = FALSE, na = "")
 
 cat("Registered Campbell Island Rise southern blue whiting as a screened candidate.\n")

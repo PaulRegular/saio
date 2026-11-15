@@ -23,7 +23,7 @@ new_settings <- c(
 )
 new_assumptions <- subset(record$assumptions, setting %in% new_settings)
 
-manifest <- read.csv("provenance/afma_school_whiting_2024/manifest.csv",
+manifest <- read.csv("provenance/afma_school_whiting_2024/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 report <- subset(manifest, grepl("frdc_2019-030_final_report.pdf", local_file, fixed = TRUE))
 report_path <- file.path("source_cache", report$local_file)

@@ -15,7 +15,7 @@ unit <- unit[!is.na(unit$candidate_unit_id) &
 progress <- candidate_progress()
 progress <- progress[progress$organization == "INIDEP", , drop = FALSE]
 manifest <- read_source_table(
-  "provenance/inidep_merluccius_hubbsi_south_2025_sources.csv")
+  "provenance/inidep_merluccius_hubbsi_south_2025/sources.csv")
 review <- paste(readLines(
   "source_reviews/argentina_merluccius_hubbsi_south_2025.md", warn = FALSE),
   collapse = "\n")

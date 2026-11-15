@@ -31,7 +31,7 @@ assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == candidate_id, , drop = FALSE]
-manifest <- read.csv("provenance/noaa_south_atlantic_red_porgy_sedar60_2020/manifest.csv",
+manifest <- read.csv("provenance/noaa_south_atlantic_red_porgy_sedar60_2020/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines("source_reviews/screening/noaa_south_atlantic_red_porgy_2020.md",
   warn = FALSE), collapse = "\n")

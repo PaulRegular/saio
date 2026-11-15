@@ -4,7 +4,7 @@ assessment_id <- "mpi_blue_cod_bco5_2019"
 candidate_id <- "MPI:BCO5"
 report_path <- "source_cache/mpi_bco5/FAR-2020-14.pdf"
 report_url <- "https://www.mpi.govt.nz/dmsdocument/41406-FAR-202014-Stock-assessment-of-blue-cod-Parapercis-colias-in-BCO-5-using-data-to-2019/sitemap"
-manifest_path <- "provenance/mpi_blue_cod_bco5_sources.csv"
+manifest_path <- "provenance/mpi_blue_cod_bco5/sources.csv"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 .libPaths(c(file.path(root, "source_cache", "R-library"), .libPaths()))

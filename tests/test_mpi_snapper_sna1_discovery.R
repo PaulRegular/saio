@@ -9,7 +9,7 @@ stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
 units <- candidate_units()
 unit_row <- units[units$unit_key == "stock:mpi_snapper_sna1", , drop = FALSE]
-manifest <- read_table("provenance/mpi_snapper_sna1_2023_sources.csv")
+manifest <- read_table("provenance/mpi_snapper_sna1_2023/sources.csv")
 review_path <- "source_reviews/mpi_snapper_sna1.md"
 review <- paste(readLines(review_path, warn = FALSE, encoding = "UTF-8"),
   collapse = "\n")

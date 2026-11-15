@@ -8,7 +8,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
 source(file.path(root, "scripts/database/pacific_tables.R"))
 source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
-manifest_path <- file.path(root, "provenance/noaa_gag_sedar72_2022/manifest.csv")
+manifest_path <- file.path(root, "provenance/noaa_gag_sedar72_2022/sources.csv")
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")
 source_row <- manifest[basename(manifest$file) == source_name, , drop = FALSE]

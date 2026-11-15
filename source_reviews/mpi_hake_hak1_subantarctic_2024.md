@@ -13,7 +13,7 @@ state is labelled 2025; model years run September through August.
 The assessment, its descriptive input report, the 2023-24/2024 catch-at-age
 report, and the 2025 Fisheries Assessment Plenary cross-check are cached under
 `source_cache/mpi_hake_hak1_2024/`. Retrieval dates, source URLs and checksums
-are in `provenance/mpi_hake_hak1_2024_sources.csv`.
+are in `provenance/mpi_hake_hak1_2024/sources.csv`.
 
 ## Records captured
 

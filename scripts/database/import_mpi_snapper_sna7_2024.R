@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 .libPaths(c(file.path("source_cache", "r-lib"), .libPaths()))
 
 if (!requireNamespace("pdftools", quietly = TRUE)) {
@@ -650,11 +652,11 @@ if ("--apply" %in% commandArgs(trailingOnly = TRUE)) {
   append_table(input_rows, "inputs.csv")
   append_table(output_rows, "outputs.csv")
   append_table(candidate_rows, file.path("..", "discovery", "candidates.csv"))
-  manifest_path <- file.path("provenance", "mpi_snapper_sna7_2024_sources.csv")
+  manifest_path <- file.path("provenance/mpi_snapper_sna7_2024/sources.csv")
   new_manifest <- do.call(rbind, lapply(manifest_rows, as.data.frame))
   if (file.exists(manifest_path)) {
     old_manifest <- read.csv(manifest_path, stringsAsFactors = FALSE)
     new_manifest <- unique(rbind(old_manifest, new_manifest))
   }
-  write.csv(new_manifest, manifest_path, row.names = FALSE, na = "")
+  write_source_manifest(new_manifest, manifest_path, row.names = FALSE, na = "")
 }

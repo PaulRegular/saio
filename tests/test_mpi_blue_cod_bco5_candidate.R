@@ -1,7 +1,7 @@
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "MPI:BCO5")
-manifest <- read.csv("provenance/mpi_blue_cod_bco5_sources.csv", stringsAsFactors = FALSE,
+manifest <- read.csv("provenance/mpi_blue_cod_bco5/sources.csv", stringsAsFactors = FALSE,
   check.names = FALSE)
 review <- readLines("source_reviews/mpi_blue_cod_bco5.md", warn = FALSE)
 review_text <- paste(review, collapse = " ")

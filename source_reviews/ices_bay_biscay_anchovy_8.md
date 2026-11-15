@@ -42,4 +42,4 @@ The historical batch 19 selection for this unit is recorded at Git revision `b41
 - [ICES 2026 advice record 4005](https://asd.ices.dk/viewAdvice/4005)
 - [ICES Standard Graphs source data, key 21265](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21265)
 
-The reviewed PDFs and source-data page snapshot are cached in the gitignored `source_cache/ices_ane_27_8/` folder. Retrieval dates, pinned report revisions, byte sizes, and SHA-256 checksums are recorded in `provenance/ices_ane_27_8_sources.csv`.
+The reviewed PDFs and source-data page snapshot are cached in the gitignored `source_cache/ices_ane_27_8/` folder. Retrieval dates, pinned report revisions, byte sizes, and SHA-256 checksums are recorded in `provenance/ices_ane_27_8/sources.csv`.

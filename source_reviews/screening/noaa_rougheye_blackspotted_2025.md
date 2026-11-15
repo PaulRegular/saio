@@ -27,7 +27,7 @@ The archive does not include .par or CompReport.sso, and it does not provide age
 
 ## Sources and provenance
 
-The report and native model archive were retrieved 2026-10-29 and are cached locally under the ignored source_cache/discovery_noaa_rougheye_2025/ directory. The versioned manifest provenance/noaa_rougheye_blackspotted_2025_sources.csv records source URLs, retrieval date, byte size and SHA-256 checksums for the report, archive and imported native files.
+The report and native model archive were retrieved 2026-10-29 and are cached locally under the ignored source_cache/discovery_noaa_rougheye_2025/ directory. The versioned manifest provenance/noaa_rougheye_blackspotted_2025/sources.csv records source URLs, retrieval date, byte size and SHA-256 checksums for the report, archive and imported native files.
 
 - [2025 Rougheye and Blackspotted Rockfish assessment report](https://www.pcouncil.org/documents/2026/01/status-of-rougheye-and-blackspotted-rockfishes-stock-off-the-u-s-west-coast-in-2025.pdf/)
 - [2025 native Stock Synthesis model files](https://www.pcouncil.org/documents/rougheye-blackspotted-2025-model-files-zip-file/)

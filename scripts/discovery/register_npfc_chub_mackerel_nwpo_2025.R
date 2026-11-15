@@ -1,10 +1,12 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 candidate_id <- "NPFC:CM_NWPO"
 candidate_unit_id <- "npfc_chub_mackerel_nw_pacific"
 retrieved_on <- "2026-11-06"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 candidate_path <- "discovery/candidates.csv"
-manifest_path <- "provenance/npfc_chub_mackerel_nw_pacific_2025_sources.csv"
+manifest_path <- "provenance/npfc_chub_mackerel_nw_pacific_2025/sources.csv"
 cache_root <- file.path("source_cache", "npfc_northwest_pacific_chub_mackerel_2025")
 
 if (!file.exists(candidate_path)) {
@@ -159,7 +161,7 @@ if (write_mode) {
   write.table(candidate, candidate_path, sep = ",", row.names = FALSE,
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double",
     na = "", eol = "\n")
-  write.csv(manifest, manifest_path, row.names = FALSE, na = "")
+  write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")
   cat("Registered the screened NPFC unit and source provenance.\n")
 }
 

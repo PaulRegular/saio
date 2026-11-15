@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 retrieved_on <- "2026-11-05"
 source_dir <- "source_cache/mpi_snapper_sna8_2024"
@@ -108,7 +110,7 @@ manifest <- data.frame(
   sha256 = expected_hash,
   stringsAsFactors = FALSE
 )
-write.csv(manifest, file.path(root, "provenance", "mpi_snapper_sna8_2024_sources.csv"),
+write_source_manifest(manifest, file.path(root, "provenance/mpi_snapper_sna8_2024/sources.csv"),
   row.names = FALSE, na = "")
 
 cat("Registered SNA 8 snapper as a source-ready candidate.\n")

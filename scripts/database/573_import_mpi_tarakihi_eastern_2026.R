@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 assessment_id <- "mpi_tarakihi_eastern_2026"
 stock_id <- "mpi_tarakihi_eastern"
@@ -427,7 +429,7 @@ if (write_mode) {
   append_csv(inputs, file.path(database_dir, "inputs.csv"))
   append_csv(assumptions, file.path(database_dir, "assumptions.csv"))
   append_csv(outputs, file.path(database_dir, "outputs.csv"))
-  write.csv(manifest, "provenance/mpi_tarakihi_eastern_2026_sources.csv", row.names = FALSE, na = "")
+  write_source_manifest(manifest, "provenance/mpi_tarakihi_eastern_2026/sources.csv", row.names = FALSE, na = "")
 
   source("scripts/discovery/candidate_register_io.R")
   register_path <- file.path(root, "discovery", "candidates.csv")

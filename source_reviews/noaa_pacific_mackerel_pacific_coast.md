@@ -17,7 +17,7 @@ available fitted age surfaces. Its Stock Synthesis 3.30.20 model covers
 `source_cache/scomber_japonicus/noaa_pacific_mackerel_2025/`; source URLs, retrieval
 dates and checksums are in the adjacent provenance manifest. Checksums for the
 extracted native files are recorded in
-`provenance/noaa_pacific_mackerel_2023_model_files.csv`.
+`provenance/noaa_pacific_mackerel_2023_model_files/sources.csv`.
 
 Stock SMART ID 10163 identifies the U.S.-managed Pacific mackerel stock north of Punta Abreojos, Baja California. The assessment includes U.S. and Mexican fisheries. The detailed 2025 report identifies Stock Synthesis 3.30.22.1. The cached Stock SMART metadata gives a 2024 data year, Stock Synthesis 3.30.20 and 2022 biomass of 46,682 tonnes. The Council adoption record and the 2025 report establish the run and the published model-year results. The benchmark report describes a maturity sample of 494 females.
 

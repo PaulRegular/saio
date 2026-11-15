@@ -22,7 +22,7 @@ source(file.path(root, "scripts/database/pacific_tables.R"))
 source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 manifest <- read.csv(file.path(root,
-  "provenance/noaa_cabezon_oregon_2019_sources.csv"),
+  "provenance/noaa_cabezon_oregon_2019/sources.csv"),
   colClasses = "character", check.names = FALSE)
 source_files <- c(
   "discovery_noaa_cabezon_2019/cabezon_2019_assessment.pdf",

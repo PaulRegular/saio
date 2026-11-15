@@ -6,7 +6,7 @@ candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 progress <- candidate_progress()
 units <- candidate_units()
-manifest <- read.csv("provenance/afma_sessf_silver_warehou_2021_sources.csv",
+manifest <- read.csv("provenance/afma_sessf_silver_warehou_2021/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
 candidate <- candidates[candidates$candidate_id == "AFMA:SESSF_SILVER_WAREHOU", , drop = FALSE]

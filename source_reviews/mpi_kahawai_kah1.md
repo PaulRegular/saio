@@ -31,4 +31,4 @@ Table 9 reports MCMC medians and 95% credible intervals for SSB0, 2020 spawning 
 
 The report does not tabulate annual numerical N-at-age, F-at-age, M-at-age, recruitment, or spawning-biomass trajectories; those outputs are figures. M is fixed in each run and is not an estimated output. The model calculates weights from growth and the length-weight relationship rather than supplying a weight-at-age table.
 
-The 2021 assessment PDF and 2026 Plenary Volume 2 are cached in the ignored local source cache. Their URLs, retrieval dates, and SHA-256 checksums are recorded in provenance/mpi_kahawai_kah1_2021_sources.csv. The 2026–27 research plan is retained as an official link because the document endpoint did not provide a usable local PDF during this review.
+The 2021 assessment PDF and 2026 Plenary Volume 2 are cached in the ignored local source cache. Their URLs, retrieval dates, and SHA-256 checksums are recorded in provenance/mpi_kahawai_kah1_2021/sources.csv. The 2026–27 research plan is retained as an official link because the document endpoint did not provide a usable local PDF during this review.

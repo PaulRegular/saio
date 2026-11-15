@@ -89,9 +89,9 @@ stopifnot(
   all(grepl("MCMC median", c(hak1_ssb$notes, hak7_ssb$notes)))
 )
 
-hak1_sources <- read.csv("provenance/mpi_hake_hak1_2024_sources.csv",
+hak1_sources <- read.csv("provenance/mpi_hake_hak1_2024/sources.csv",
   stringsAsFactors = FALSE)
-hak7_sources <- read.csv("provenance/mpi_hake_hak7_2024_sources.csv",
+hak7_sources <- read.csv("provenance/mpi_hake_hak7_2024/sources.csv",
   stringsAsFactors = FALSE)
 stopifnot(
   nrow(hak1_sources) == 4L, nrow(hak7_sources) == 3L,

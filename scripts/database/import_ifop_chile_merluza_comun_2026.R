@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 assessment_id <- "ifop_merluza_comun_2026"
 stock_id <- "ifop_merluza_comun_up"
 candidate_id <- "IFOP:merluza_comun_UP"
@@ -280,12 +282,12 @@ source_review <- paste(
   "- IFOP, 2026 report catalogue: <https://www.ifop.cl/buscador-2026/>",
   "- IFOP, current projects: <https://www.ifop.cl/nuestro-que-hacer/la-investigacion-pesquera/planificacion-estrategica/>",
   "",
-  "Assessment reports, the direct survey report, and the annex archive are cached under source_cache/chile_merluza_comun_2026/ and source_cache/discovery_chile_merluza_comun_2026/. Retrieval dates, URLs, file sizes, and SHA-256 checksums are recorded in provenance/ifop_merluza_comun_2026_sources.csv.",
+  "Assessment reports, the direct survey report, and the annex archive are cached under source_cache/chile_merluza_comun_2026/ and source_cache/discovery_chile_merluza_comun_2026/. Retrieval dates, URLs, file sizes, and SHA-256 checksums are recorded in provenance/ifop_merluza_comun_2026/sources.csv.",
   sep = "\n"
 )
 
 manifest_path <- file.path(
-  "provenance", "ifop_merluza_comun_2026_sources.csv"
+  "provenance/ifop_merluza_comun_2026/sources.csv"
 )
 manifest <- read.csv(
   manifest_path, stringsAsFactors = FALSE, check.names = FALSE,
@@ -432,7 +434,7 @@ if ("--apply" %in% commandArgs(trailingOnly = TRUE)) {
     file.path("discovery", "candidates.csv"), candidate_id,
     candidate_register[candidate_index, , drop = FALSE], "candidate_id"
   )
-  write.csv(manifest, manifest_path, row.names = FALSE, na = "")
+  write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")
   writeLines(source_review, source_review_path, useBytes = TRUE)
 }
 

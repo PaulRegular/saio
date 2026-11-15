@@ -3,7 +3,7 @@ assessment_id <- "noaa_south_atlantic_spanish_mackerel_2022"
 candidate_id <- "NOAA:10174"
 stock_id <- "noaa_south_atlantic_spanish_mackerel"
 report_path <- file.path(root, "source_cache/noaa_south_atlantic_spanish_mackerel_2022/sedar78_assessment_revised_july_2022.pdf")
-manifest_path <- file.path(root, "provenance/noaa_south_atlantic_spanish_mackerel_2022_sources.csv")
+manifest_path <- file.path(root, "provenance/noaa_south_atlantic_spanish_mackerel_2022/sources.csv")
 candidate_path <- file.path(root, "discovery/candidates.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 

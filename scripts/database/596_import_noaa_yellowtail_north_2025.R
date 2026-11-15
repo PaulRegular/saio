@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "discovery_noaa_yellowtail_2025")
@@ -509,8 +511,7 @@ if(!dry_run) {
  append_rows(file.path(database,"outputs.csv"),output_data)
  append_rows(file.path(database,"assumptions.csv"),assumption_data)
  replace_candidate_register_row(candidate_path,ci,cr,candidate_id)
- utils::write.csv(cache_manifest,file.path(root,"provenance",
-  "noaa_yellowtail_rockfish_north_2025_sources.csv"),row.names=FALSE,na="",fileEncoding="UTF-8")
+ write_source_manifest(cache_manifest,file.path(root,"provenance/noaa_yellowtail_rockfish_north_2025/sources.csv"),row.names=FALSE,na="",fileEncoding="UTF-8")
 }
 cat(if(dry_run)"Dry run parsed " else "Imported ",nrow(input_data),
  " native inputs and ",nrow(output_data)," official output rows; status remains partial.\n")

@@ -32,7 +32,7 @@ sha256_file <- function(path) {
   hashes
 }
 
-manifest <- read.csv(file.path(root, 'provenance', 'ices_ane_27_8_sources.csv'),
+manifest <- read.csv(file.path(root, 'provenance/ices_ane_27_8/sources.csv'),
   stringsAsFactors = FALSE)
 manifest_paths <- file.path('source_cache', 'ices_ane_27_8', files)
 manifest_rows <- match(manifest_paths, manifest$local_file)
@@ -110,7 +110,7 @@ register$review_date[row] <- '2026-11-08'
 register$decision_reason[row] <- paste0(
   'The 2025 production run is the active ICES assessment used for 2026 advice. The official report identifies catch-at-age, age-specific BIOMAN and PELGAS series, JUVENA age-0 information, biological inputs, and age-specific outputs. Historical survey series are partly graphical and require value-level source recovery before completeness can be judged; select for source curation without treating graphical descriptions as already imported numerical observations.')
 register$notes[row] <- paste0(
-  'Run identity: WGHANSA 2025, Stock Synthesis 3.30.22.beta, assessment key 21265, used for 2026 advice. The 2025 report reports BIOMAN 2025 SSB as 145,608 t in its narrative but 157,247 t in Tables 2.3.1.3, 2.3.1.4, and 2.5.1.1; preserve this discrepancy and use the model input table for the fitted series. Source PDFs and Standard Graphs data are cached in source_cache/ices_ane_27_8; checksums and retrieval metadata are in provenance/ices_ane_27_8_sources.csv. No canonical assessment or numerical records are added by this selection checkpoint.')
+  'Run identity: WGHANSA 2025, Stock Synthesis 3.30.22.beta, assessment key 21265, used for 2026 advice. The 2025 report reports BIOMAN 2025 SSB as 145,608 t in its narrative but 157,247 t in Tables 2.3.1.3, 2.3.1.4, and 2.5.1.1; preserve this discrepancy and use the model input table for the fitted series. Source PDFs and Standard Graphs data are cached in source_cache/ices_ane_27_8; checksums and retrieval metadata are in provenance/ices_ane_27_8/sources.csv. No canonical assessment or numerical records are added by this selection checkpoint.')
 
 source(file.path(root, 'scripts', 'discovery', 'candidate_register_io.R'))
 if (!identical(Sys.getenv('TAM_SOURCE_DRY_RUN'), '1'))

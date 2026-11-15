@@ -11,7 +11,7 @@ star_url <- "https://www.pcouncil.org/documents/vermilion-and-sunset-rockfishes-
 safe_url <- "https://www.pcouncil.org/documents/2024/08/status-of-the-pacific-coast-groundfish-fishery-stock-assessment-and-fishery-evaluation-july-2025.pdf/"
 status_url <- "https://www.fisheries.noaa.gov/s3/2026-11/final-q3-2026-stock-status-tables-updated-11-02-26.pdf"
 cache <- file.path(root, "source_cache/discovery_noaa_vermilion_sunset_south_2021")
-manifest_path <- file.path(root, "provenance/noaa_vermilion_sunset_south_2021_sources.csv")
+manifest_path <- file.path(root, "provenance/noaa_vermilion_sunset_south_2021/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 test_mode <- identical(Sys.getenv("TAM_SOURCE_TEST_MODE"), "1")
 if (test_mode && write_mode) stop("Source test mode cannot write database records.", call. = FALSE)
@@ -453,7 +453,7 @@ candidate_update$output_evidence <- "Report.sso provides fitted N-, biomass-, F-
 candidate_update$detailed_source_url <- paste(report_url, model_url, star_url, safe_url, status_url, sep = "; ")
 candidate_update$review_date <- "2026-11-13"
 candidate_update$decision_reason <- "The 2021 Southern California benchmark is the latest detailed production run identified for the unit; native post-STAR inputs and fitted outputs are publicly available. Import remains partial because direct catch-at-age and age-specific indices are not supplied, and the full source output archive is not exhaustively transcribed."
-candidate_update$notes <- "Partial canonical source import completed from the input data/control files named by starter.ss_new. The generated data.ss_new file is retained for reference but is not substituted for the original .dat input. The assessment's SpawnBio is millions of eggs and is not SSB. Source PDFs and the model archive are locally cached with checksums in provenance/noaa_vermilion_sunset_south_2021_sources.csv."
+candidate_update$notes <- "Partial canonical source import completed from the input data/control files named by starter.ss_new. The generated data.ss_new file is retained for reference but is not substituted for the original .dat input. The assessment's SpawnBio is millions of eggs and is not SSB. Source PDFs and the model archive are locally cached with checksums in provenance/noaa_vermilion_sunset_south_2021/sources.csv."
 
 cat("Prepared", nrow(source_records$inputs), "inputs,", nrow(source_records$assumptions),
   "assumptions, and", nrow(source_records$outputs), "outputs for", assessment_id, "\n")

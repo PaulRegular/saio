@@ -36,4 +36,4 @@ The canonical record preserves only the source-reported catch subset, stock-stat
 - [Official Queensland Spanish mackerel stock page](https://www.dpi.qld.gov.au/services/fisheries/monitor/stock/species/spanish-mackerel)
 - [2025 assessment PDF](https://era.dpi.qld.gov.au/id/eprint/14912/1/2025%20East%20coast%20Spanish%20mackerel%20stock%20assessment%20report%20Final%208.5.25.pdf)
 
-The assessment PDF is cached in the ignored source cache at `source_cache/australia_qld_spanish_mackerel_2025/east_coast_assessment_2025.pdf`. Its source URL, retrieval date, byte count, and SHA-256 are recorded in `provenance/australia_qld_spanish_mackerel_2025_sources.csv`.
+The assessment PDF is cached in the ignored source cache at `source_cache/australia_qld_spanish_mackerel_2025/east_coast_assessment_2025.pdf`. Its source URL, retrieval date, byte count, and SHA-256 are recorded in `provenance/australia_qld_spanish_mackerel_2025/sources.csv`.

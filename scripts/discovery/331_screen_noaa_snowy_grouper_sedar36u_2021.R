@@ -1,7 +1,9 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 cache <- file.path(root, 'source_cache', 'epinephelus_niveatus/noaa_snowy_grouper_south_atlantic_sedar36u_2021')
 candidate_path <- file.path(root, 'discovery', 'candidates.csv')
-manifest_path <- file.path(root, 'provenance', 'noaa_snowy_grouper_sedar36u_2021', 'manifest.csv')
+manifest_path <- file.path(root, 'provenance/noaa_snowy_grouper_sedar36u_2021/sources.csv')
 
 files <- c(
   'sedar36u_snowy_grouper_report_revised_2021.pdf',
@@ -58,7 +60,7 @@ if (file.exists(manifest_path)) {
       call. = FALSE)
   }
 } else {
-  write.csv(manifest, manifest_path, row.names = FALSE)
+  write_source_manifest(manifest, manifest_path, row.names = FALSE)
 }
 
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,

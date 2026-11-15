@@ -9,7 +9,7 @@ stocks <- read.csv(file.path(root, "database/stocks.csv"), stringsAsFactors = FA
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- read.csv(file.path(root, "database/assessments.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-provenance <- read.csv(file.path(root, "provenance/ices_ane_27_8_sources.csv"),
+provenance <- read.csv(file.path(root, "provenance/ices_ane_27_8/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 
 candidate <- register[register$candidate_id %in% candidate_id, , drop = FALSE]

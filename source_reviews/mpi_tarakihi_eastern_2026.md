@@ -24,7 +24,7 @@ The report does not tabulate annual numerical recruitment or N-at-age, F-at-age,
 
 ## Source and provenance
 
-The assessment report was retrieved on 2026-11-05 and is cached locally under the ignored `source_cache/mpi_tarakihi_eastern_2026/` directory. Its download URL and SHA-256 checksum are recorded in `provenance/mpi_tarakihi_eastern_2026_sources.csv`.
+The assessment report was retrieved on 2026-11-05 and is cached locally under the ignored `source_cache/mpi_tarakihi_eastern_2026/` directory. Its download URL and SHA-256 checksum are recorded in `provenance/mpi_tarakihi_eastern_2026/sources.csv`.
 
 - [FAR 2026/44: Stock assessment of eastern tarakihi for 2026](https://fs.fish.govt.nz/Doc/26277/FAR-2026-44-Stock-assessment-of-eastern-tarakihi-for-2026.pdf.ashx)
 - [Fisheries New Zealand report record](https://fs.fish.govt.nz/Page.aspx?pk=61&tk=209)

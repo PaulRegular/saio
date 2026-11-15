@@ -1,3 +1,5 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 candidate_path <- "discovery/candidates.csv"
 candidate_id <- "SIOFA:ORY-2024-01:WSR"
 
@@ -141,6 +143,6 @@ manifest <- data.frame(
 if (any(!file.exists(manifest$cached_file))) {
   stop("A listed SIOFA source is missing from the local source cache.")
 }
-write.csv(manifest,
-  "provenance/siofa_orange_roughy_2025_sources.csv",
+write_source_manifest(manifest,
+  "provenance/siofa_orange_roughy_2025/sources.csv",
   row.names = FALSE, na = "")

@@ -12,7 +12,7 @@ if (dir.exists(file.path(source_dir, "r_lib"))) {
 }
 assessment_pdf <- file.path(source_dir, "FAR-2024-47-SNA1-assessment-2022-2023.pdf")
 composition_pdf <- file.path(source_dir, "FAR-2022-24-SNA1-age-composition-2019-20.pdf")
-manifest <- read.csv(file.path(root, "provenance", "mpi_snapper_sna1_2023_sources.csv"),
+manifest <- read.csv(file.path(root, "provenance/mpi_snapper_sna1_2023/sources.csv"),
   stringsAsFactors = FALSE)
 verified <- c(
   "FAR-2024-47-SNA1-assessment-2022-2023.pdf" =

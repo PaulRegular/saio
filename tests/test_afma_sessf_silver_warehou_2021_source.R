@@ -31,7 +31,7 @@ outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 candidates <- read_table("discovery/candidates.csv")
 progress <- candidate_progress()
 units <- candidate_units()
-manifest <- read_table("provenance/afma_sessf_silver_warehou_2021_sources.csv")
+manifest <- read_table("provenance/afma_sessf_silver_warehou_2021/sources.csv")
 
 stock <- stocks[stocks$stock_id == "afma_sessf_silver_warehou", , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]

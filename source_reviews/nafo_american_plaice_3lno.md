@@ -6,7 +6,7 @@ The latest advice, published in June 2026 for 2027 and beyond, is based on inter
 
 The 2021 NAFO ADAPT assessment is retained as a separate historical full assessment for the same 3LNO stock unit. No DFO assessment record for this NAFO-managed unit was identified. The 2021 report concluded that the model was useful for tracking stock trends but that its absolute population estimates were unreliable because of poor fit, residual patterns, retrospective behaviour and instability.
 
-Cached sources, retrieval dates and checksums are in `provenance/nafo_american_plaice_3lno/manifest.csv`. Cached PDFs are local-only under ignored `source_cache/`.
+Cached sources, retrieval dates and checksums are in `provenance/nafo_american_plaice_3lno/sources.csv`. Cached PDFs are local-only under ignored `source_cache/`.
 
 ## 2026 interim-monitoring data
 

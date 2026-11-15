@@ -28,6 +28,6 @@ This stock remains **eligible for source curation**. The database row links NOAA
 
 ## Cached sources
 
-The ignored local cache is `source_cache/noaa_south_atlantic_red_porgy_sedar60_2020/`. Its SHA-256, retrieval date, size, URL and pinned report revision are recorded in `provenance/noaa_south_atlantic_red_porgy_sedar60_2020/manifest.csv`.
+The ignored local cache is `source_cache/noaa_south_atlantic_red_porgy_sedar60_2020/`. Its SHA-256, retrieval date, size, URL and pinned report revision are recorded in `provenance/noaa_south_atlantic_red_porgy_sedar60_2020/sources.csv`.
 
 Sources: [SEDAR 60 Stock Assessment Report](https://sedarweb.org/documents/sedar-60-stock-assessment-report-south-atlantic-red-porgy/), [SEDAR 60 project record](https://sedarweb.org/assessments/sedar-60/), [SAFMC 2026 assessment schedule](https://safmc.net/documents/a3_species_for_2026_stock_assessments-pdf/), and [SAFMC 2027–2028 SEDAR statements of work](https://safmc.net/documents/sedar_a3_statements-of-work-for-2027-2028-sedar-stock-assessments-pdf/).

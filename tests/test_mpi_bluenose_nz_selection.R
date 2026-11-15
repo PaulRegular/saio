@@ -7,7 +7,7 @@ read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
 candidate_id <- "MPI:BNS_NZ"
 candidate <- read_table("discovery/candidates.csv")
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-manifest <- read_table("provenance/mpi_bluenose_nz_2021_sources.csv")
+manifest <- read_table("provenance/mpi_bluenose_nz_2021/sources.csv")
 units <- candidate_units()
 progress <- candidate_progress()
 

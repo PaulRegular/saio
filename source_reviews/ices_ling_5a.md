@@ -34,7 +34,7 @@ MFRI supplementary Table 14 reports stock numbers at ages 2–12+ for 1979–202
 
 The 2026 production assessment, aggregate catch series, fixed M, age-specific input series, aggregate outputs and age-specific N/F point surfaces are represented. Input completeness remains partial because survey index multipliers and exact sampling times are unresolved and the source provides no SSB-specific weight table. Reported output point estimates are complete for the extracted series; age-specific uncertainty is unavailable.
 
-Source HTML files are cached locally. The original report and ICES sources are listed in `provenance/discovery_ices_ling_5a_2026/sources.csv`; the newly recovered supplementary table page is listed in `provenance/discovery_ices_ling_5a_2026/supplementary_sources.csv`, with retrieval date, URL, byte size and SHA-256 checksum.
+Source HTML files are cached locally. The original report and ICES sources are listed in `provenance/discovery_ices_ling_5a_2026/sources.csv`; the newly recovered supplementary table page is listed in `provenance/discovery_ices_ling_5a_2026/supplementary/sources.csv`, with retrieval date, URL, byte size and SHA-256 checksum.
 
 ## Sources
 

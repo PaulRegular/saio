@@ -91,4 +91,4 @@ values described above.
 - [Stock Synthesis 3.30 user manual](https://nmfs-ost.github.io/ss3-doc/SS330_User_Manual_release.html)
 
 The retrieved files, revisions, retrieval date, byte sizes, and SHA-256 checksums
-are listed in \`provenance/noaa_black_rockfish_california_2023_sources.csv\`.
+are listed in \`provenance/noaa_black_rockfish_california_2023/sources.csv\`.

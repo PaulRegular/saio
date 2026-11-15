@@ -4,7 +4,7 @@
 
 The 2021 production assessment covers the combined Vermilion and Sunset rockfish complex in U.S. waters south of Point Conception. The post-STAR Stock Synthesis 3.30.17 model has one area, two sexes, one annual season, ages 0–70, data through 2020, and a 2021 forecast. Its starter file identifies Vermilion_SoCA_2021.dat and Vermilion_SoCA_2021.ctl as the run inputs. The 2025 Groundfish SAFE identifies the 2021 run as the latest detailed assessment for this unit. This is the Southern California assessment area; it is not the separate northern California or Oregon/Washington assessment.
 
-The assessment report and native post-STAR model archive are cached locally. Their URLs, retrieval date, byte counts and SHA-256 checksums are listed in provenance/noaa_vermilion_sunset_south_2021_sources.csv.
+The assessment report and native post-STAR model archive are cached locally. Their URLs, retrieval date, byte counts and SHA-256 checksums are listed in provenance/noaa_vermilion_sunset_south_2021/sources.csv.
 
 ## Inputs recovered
 

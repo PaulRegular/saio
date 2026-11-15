@@ -36,7 +36,7 @@ outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
 units <- candidate_units()
-manifest <- read.csv("provenance/australia_east_coast_sea_mullet_2026_sources.csv",
+manifest <- read.csv("provenance/australia_east_coast_sea_mullet_2026/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

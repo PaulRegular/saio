@@ -40,7 +40,7 @@ The official document-library entries list the FAR 2026/44 and FAR 2026/23 asses
 - Fisheries New Zealand FAR 2026/23, *Stock assessment of western tarakihi for 2026*, published 21 July 2026: [report page](https://fs.fish.govt.nz/Page.aspx?dk=26247&pk=113) · [PDF](https://fs.fish.govt.nz/Doc/26247/FAR-2026-23-Stock-assessment-of-western-tarakihi-for-2026.pdf.ashx).
 - Fisheries New Zealand, [October 2026 tarakihi management review](https://www.mpi.govt.nz/consultations/review-of-fishery-sustainability-measures-october-2026-round), followed by the [22 September 2026 ministerial decision](https://www.beehive.govt.nz/release/tarakihi-catch-limits-cut-support-sustainability).
 
-The two PDFs are cached under `source_cache/mpi_tarakihi_eastern_2026/` and `source_cache/mpi_tarakihi_western_2026/`. Retrieval URLs, dates, and SHA-256 checksums are recorded in `provenance/mpi_tarakihi_eastern_2026_sources.csv` and `provenance/mpi_tarakihi_western_2026_sources.csv`.
+The two PDFs are cached under `source_cache/mpi_tarakihi_eastern_2026/` and `source_cache/mpi_tarakihi_western_2026/`. Retrieval URLs, dates, and SHA-256 checksums are recorded in `provenance/mpi_tarakihi_eastern_2026/sources.csv` and `provenance/mpi_tarakihi_western_2026/sources.csv`.
 
 ## Curation decision
 

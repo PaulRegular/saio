@@ -13,7 +13,7 @@ assessments <- read_table("database/assessments.csv")
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidates <- read_table("discovery/candidates.csv")
 candidate <- candidates[candidates$candidate_id == "MPI:GUR7", , drop = FALSE]
-manifest <- read_table("provenance/mpi_red_gurnard_gur7_2022_sources.csv")
+manifest <- read_table("provenance/mpi_red_gurnard_gur7_2022/sources.csv")
 
 catch <- inputs[inputs$type == "catch" & inputs$measure == "catch_biomass", , drop = FALSE]
 biomass <- inputs[inputs$type == "index" & inputs$measure == "total_biomass", , drop = FALSE]

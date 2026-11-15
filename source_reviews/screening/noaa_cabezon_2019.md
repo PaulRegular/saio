@@ -41,7 +41,7 @@ Age-specific standard errors or intervals for abundance, biomass, F, M, catch, o
 
 ## Source files and provenance
 
-The assessment report, supplementary tables, STAR Panel report, and 2019 ORS, SCS, and NCS Stock Synthesis archives are cached under the ignored local `source_cache/discovery_noaa_cabezon_2019/` folder. The tracked checksums, URLs, sizes, and retrieval date are in `provenance/noaa_cabezon_oregon_2019_sources.csv`. The ORS archive supplied the inputs and `Report.sso`; the SCS and NCS archives were used to verify the assessment components and screen the separate California units.
+The assessment report, supplementary tables, STAR Panel report, and 2019 ORS, SCS, and NCS Stock Synthesis archives are cached under the ignored local `source_cache/discovery_noaa_cabezon_2019/` folder. The tracked checksums, URLs, sizes, and retrieval date are in `provenance/noaa_cabezon_oregon_2019/sources.csv`. The ORS archive supplied the inputs and `Report.sso`; the SCS and NCS archives were used to verify the assessment components and screen the separate California units.
 
 - [2019 PFMC assessment and appendices](https://www.pcouncil.org/documents/2019/10/assessing-cabezon-scorpaenichthys-marmoratus-stocks-in-waters-off-of-california-and-oregon-with-catch-limit-estimation-for-washington-state-10-18-2019.pdf/)
 - [2019 supplementary tables](https://www.pcouncil.org/documents/2019/10/cabezon-supplementary-tables-october-2019.xlsx/)

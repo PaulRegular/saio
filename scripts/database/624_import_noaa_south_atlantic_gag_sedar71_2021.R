@@ -1,7 +1,9 @@
+source("scripts/database/source_manifest_io.R", local = TRUE)
+
 root <- "."
 cache <- file.path("source_cache", "mycteroperca_microlepis/noaa_gag_south_atlantic_sedar71_2021")
 manifest_source <- file.path(cache, "manifest.csv")
-manifest_path <- file.path("provenance", "noaa_gag_sedar71_2021", "manifest.csv")
+manifest_path <- file.path("provenance/noaa_gag_sedar71_2021/sources.csv")
 stock_id <- "noaa_gag_south_atlantic"
 assessment_id <- "noaa_gag_south_atlantic_sedar71_2021"
 candidate_id <- "NOAA:10349"
@@ -535,7 +537,7 @@ if (length(candidate_row) != 1L ||
 
 if (write_mode) {
   dir.create(dirname(manifest_path), recursive = TRUE, showWarnings = FALSE)
-  write.csv(manifest, manifest_path, row.names = FALSE, na = "")
+  write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")
   append_pacific_case(stock, assessment, assumptions, inputs, outputs)
   candidates$matched_stock_id[candidate_row] <- stock_id
   candidates$match_status[candidate_row] <- "matched"

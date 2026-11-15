@@ -100,7 +100,7 @@ ensure_append <- function(path, proposed, id_field) {
   }
 }
 
-manifest <- read.csv("provenance/australia_east_coast_sea_mullet_2026_sources.csv",
+manifest <- read.csv("provenance/australia_east_coast_sea_mullet_2026/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 if (nrow(manifest) != 1L || manifest$sha256 != expected_hash ||
     manifest$source_url != report_url || manifest$retrieved_on != "2026-11-08") {
