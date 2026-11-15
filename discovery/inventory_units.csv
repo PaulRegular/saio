@@ -799,3 +799,4 @@
 "stock:wcpfc_south_pacific_albacore","wcpfc_south_pacific_albacore","","matched","eligible","screened","partial","NOAA","PIFSC","NOAA:11688",1
 "stock:wcpfc_wcpo_bigeye","wcpfc_wcpo_bigeye","","matched","eligible","screened","partial","NOAA","SWFSC / PIFSC","NOAA:11684",1
 "stock:wcpfc_wcpo_yellowfin","wcpfc_wcpo_yellowfin","","matched","eligible","screened","partial","NOAA","PIFSC","NOAA:11694",1
+"candidate:nz_hake_chatham_rise","","nz_hake_chatham_rise","new","unresolved","screened","not_started","Fisheries New Zealand","New Zealand","MPI:HAK4:ChathamRise",1

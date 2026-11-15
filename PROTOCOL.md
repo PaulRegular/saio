@@ -104,6 +104,11 @@ alone do not establish eligibility. Do not manufacture observations from fitted
 states or parameters. Preserve native likelihood inputs in the canonical database;
 perform analysis-specific conversions outside the canonical database.
 
+Prefer official English-language documentation when selecting new sources for
+an expansion batch, so reviewers can check the extracted values and assessment
+assumptions against the original documents. Record the source-language limitation
+when it prevents that review.
+
 For an expansion batch, rank verified new stock units by recoverable inputs and
 outputs and access to native or machine-readable sources. Use underrepresented
 regions and species groups to break comparable-readiness ties, followed by stable
