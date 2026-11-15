@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_blackspot_seabream_6_8_2026')
+cache <- file.path(root, 'source_cache/pagellus_bogaraveo/ices_blackspot_seabream_6_8_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:sbr.27.6-8'
 unit_id <- 'ices_blackspot_seabream_6_8'
@@ -96,7 +96,7 @@ review <- list(
   notes = paste('Current unit identity confirmed against the official ICES advice and Standard Graphs.',
     'The 2024 source page was checked as a prior-year cross-check; it does not replace or fill the',
     'current 2026 record. Cached source URLs, assessment keys, revisions, retrieval date, sizes, and',
-    'SHA-256 checksums are recorded under source_cache/discovery_ices_blackspot_seabream_6_8_2026/.',
+    'SHA-256 checksums are recorded under source_cache/pagellus_bogaraveo/ices_blackspot_seabream_6_8_2026/.',
     'No canonical numerical data were added.')
 )
 

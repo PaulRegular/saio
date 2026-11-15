@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_atlantic_wolffish_2022')
+cache <- file.path(root, 'source_cache/anarhichas_lupus/noaa_atlantic_wolffish_2022')
 register_path <- file.path(root, 'database/candidates.csv')
 today <- '2026-11-01'
 candidate_id <- 'NOAA:11562'

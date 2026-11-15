@@ -618,7 +618,7 @@ if (!dry_run) {
     "source record because catch-at-age and standalone maturity proportions are not supplied.")
   candidate$notes[candidate_row] <- paste(
     "Source files and checksums are cached under the gitignored",
-    "discovery_noaa_sablefish_2025 directory. The report says SS3 3.30.24 while",
+    "source_cache/anoplopoma_fimbria/noaa_sablefish_pacific_coast_2025 directory. The report says SS3 3.30.24 while",
     "the bundle identifies 3.30.23.1. ")
   replace_candidate_register_row(candidate_path, candidate_row,
     candidate[candidate_row, , drop = FALSE], candidate_id)

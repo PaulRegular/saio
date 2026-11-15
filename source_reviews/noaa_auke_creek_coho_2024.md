@@ -30,7 +30,7 @@ not mean that independent Auke Creek research has never collected ages.
 
 The detailed 2024 NOAA status report, ADF&G escapement-goal review, and Stock
 SMART dictionary are cached locally in
-`source_cache/noaa_auke_creek_coho_2024/`; checksums and retrieval dates are in
+`source_cache/oncorhynchus_kisutch/noaa_auke_creek_coho_2024/`; checksums and retrieval dates are in
 its `sources.csv`. The NOAA research-station report is publicly readable, but its
 repository download returned HTTP 403 during this review, so it is linked below
 and was not represented as locally cached.

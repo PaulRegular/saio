@@ -27,7 +27,7 @@ unit <- units[!is.na(units$candidate_unit_id) &
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
   unit$screening_status == 'screened', unit$eligibility == 'ineligible')
 
-cache <- file.path(root, 'source_cache', 'noaa_puget_sound_pink_2025')
+cache <- file.path(root, 'source_cache/oncorhynchus_gorbuscha/noaa_puget_sound_pink_2025')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 files <- c('Review_2024_Ocean_Salmon_Fisheries.pdf',

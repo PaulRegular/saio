@@ -6,7 +6,7 @@ candidate_id <- "NOAA:10062"
 assessment_url <- "https://sedarweb.org/assessments/sedar-100-gulf-triggerfish/"
 report_url <- "https://sedarweb.org/documents/sedar-100-gulf-gray-triggerfish-final-stock-assessment-report/"
 cache_dir <- file.path(root, "source_cache/noaa_gray_triggerfish_gulf_sedar100_20261111")
-manifest_path <- file.path(root, "provenance/discovery_noaa_gulf_gray_triggerfish_2026/sources.csv")
+manifest_path <- file.path(root, "provenance/noaa_gulf_gray_triggerfish_sedar100_2026/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 

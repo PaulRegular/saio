@@ -33,7 +33,7 @@ cases <- list(
     notes = paste('WGBIE 2026 section 3.2 uses data through 2025 and identifies',
       'fixed M, maturity, female growth and length-weight assumptions. The detailed',
       'WGBIE report is shared with the black-bellied anglerfish screen and cached',
-      'under discovery_ices_black_bellied_anglerfish_78abd_2026.'),
+      'under source_cache/lophius_budegassa/ices_black_bellied_anglerfish_78abd_2026.'),
     report = 'section 3.2'
   ),
   list(
@@ -70,7 +70,7 @@ cases <- list(
     notes = paste('The WGBIE 2026 report describes an update through 2025. The 2026',
       'Stock Assessment Graphs key is 22608. The detailed WGBIE report is shared',
       'with the black-bellied anglerfish screen and cached under',
-      'discovery_ices_black_bellied_anglerfish_78abd_2026.'),
+      'source_cache/lophius_budegassa/ices_black_bellied_anglerfish_78abd_2026.'),
     report = 'section 4.2'
   )
 )
@@ -89,8 +89,8 @@ stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
 
 for (case in cases) {
   suffix <- if (endsWith(case$id, '78abd')) '78abd' else '8c9a'
-  cache <- file.path(root, 'source_cache',
-    paste0('discovery_ices_white_anglerfish_', suffix, '_2026'))
+  cache <- file.path(root, 'source_cache', 'lophius_piscatorius',
+    paste0('ices_white_anglerfish_', suffix, '_2026'))
   files <- c(paste0('ICES_Advice_', case$advice, '.html'),
     paste0('ICES_StockGraphs_', case$key, '.html'),
     paste0('ICES_SourceData_', case$key, '.html'),

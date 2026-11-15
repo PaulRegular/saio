@@ -1,7 +1,7 @@
 assessment_id <- "ices_plaice_english_channel_7d_2026"
 stock_id <- "ck_ices_wgnssk_platessa_ns_7d"
 root <- "."
-cache <- file.path(root, "source_cache", "ices_plaice_7d_2026")
+cache <- file.path(root, "source_cache/pleuronectes_platessa/ices_plaice_english_channel_7d_2026")
 database <- file.path(root, "database")
 model_base <- "https://stockassessment.org/datadisk/stockassessment/userdirs/user3/ple.27.7d_2026"
 model_ref <- paste0(model_base, "/run/data.RData")

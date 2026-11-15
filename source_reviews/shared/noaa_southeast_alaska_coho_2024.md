@@ -17,7 +17,7 @@ Berners River and Hugh Smith Lake are therefore **ineligible for the age-disaggr
 
 ## Cached sources
 
-The ignored local cache `source_cache/discovery_noaa_seak_coho_2024/` contains the NOAA 2024 status determination report and the ADF&G 2022–2024 operational plan. Its `sources.csv` records source URLs, retrieval date, pinned document descriptions, byte counts, and SHA256 checksums.
+The ignored local cache `source_cache/oncorhynchus_kisutch/noaa_seak_coho_2024/` contains the NOAA 2024 status determination report and the ADF&G 2022–2024 operational plan. Its `sources.csv` records source URLs, retrieval date, pinned document descriptions, byte counts, and SHA256 checksums.
 
 ## Sources
 

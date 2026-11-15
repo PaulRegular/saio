@@ -33,4 +33,4 @@ Three ICES Atlantic salmon units and anglerfish `anf.27.1-2` were not included i
 
 ## Cached material
 
-The ignored local cache `source_cache/discovery_ices_unstarted_age_audit_2026/` contains all 33 linked Standard Graph source-data pages and a `sources.csv` manifest with source URL, retrieval date, assessment key/year, bytes, and SHA-256. The SID snapshot and its original provenance manifest are in `source_cache/shared/ices_sid/`. The relevant public sources are the [ICES Stock Information Database](https://sid.ices.dk/Default.aspx) and [ICES Standard Graphs](https://standardgraphs.ices.dk/).
+The ignored local cache `source_cache/shared/ices_unstarted_age_audit_2026/` contains all 33 linked Standard Graph source-data pages and a `sources.csv` manifest with source URL, retrieval date, assessment key/year, bytes, and SHA-256. The SID snapshot and its original provenance manifest are in `source_cache/shared/ices_sid/`. The relevant public sources are the [ICES Stock Information Database](https://sid.ices.dk/Default.aspx) and [ICES Standard Graphs](https://standardgraphs.ices.dk/).

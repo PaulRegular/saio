@@ -20,7 +20,7 @@ The report publishes annual spawning biomass and recruitment results through 200
 
 This is a **new, screened, ineligible candidate** for the age-disaggregated assessment set. Although the production assessment is an age-structured Stock Synthesis model and provides some age-indexed fitted results, its population likelihood is based on catch, aggregate CPUE and length compositions. The assessment report explicitly says there were no age-at-length data; no catch-at-age, population age composition, age-specific abundance index, or defensible age reconstruction was found. The official report's biomass and recruitment tables do not replace the missing age-specific population inputs.
 
-No canonical numerical records were added was attempted. The IATTC assessment and status report, retrieval date, byte sizes, and SHA-256 checksums are recorded in the ignored local cache at `source_cache/discovery_noaa_iattc_striped_marlin_2010/sources.csv`.
+No canonical numerical records were added was attempted. The IATTC assessment and status report, retrieval date, byte sizes, and SHA-256 checksums are recorded in the ignored local cache at `source_cache/kajikia_audax/noaa_iattc_striped_marlin_2010/sources.csv`.
 
 ## Sources
 

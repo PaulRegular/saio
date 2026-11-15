@@ -4,9 +4,8 @@ assessment_id <- "wcpfc_south_pacific_albacore_2024"
 candidate_id <- "NOAA:11688"
 revision <- "e9640087a9831dece824062a338c21bf81414044"
 
-cache_name <- "discovery_noaa_south_pacific_albacore_2024"
-cache_options <- c(file.path(root, "source_cache", cache_name),
-  file.path(dirname(dirname(normalizePath(root))), cache_name))
+cache_name <- "thunnus_alalunga/wcpfc_south_pacific_albacore_2024"
+cache_options <- c(file.path(root, "source_cache", cache_name))
 cache_options <- cache_options[dir.exists(cache_options)]
 if (!length(cache_options)) stop("Pinned South Pacific albacore cache is required.", call. = FALSE)
 cache <- normalizePath(cache_options[[1L]], winslash = "/")
@@ -19,7 +18,7 @@ required_files <- c(
   "taf_output_f_annual.csv", "taf_output_natage.csv",
   "taf_output_selectivity.csv", "taf_output_summary.csv"
 )
-manifest <- read.csv(file.path("provenance", cache_name, "sources.csv"),
+manifest <- read.csv(file.path("provenance/wcpfc_south_pacific_albacore_2024", "sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 manifest_row <- match(required_files, manifest$file)
 if (anyNA(manifest_row) || any(!file.exists(file.path(cache, required_files))) ||
@@ -533,7 +532,7 @@ append_csv_rows <- function(name, rows) {
     quote = TRUE, na = "", qmethod = "double", eol = eol, append = TRUE)
 }
 
-replace_discovery_row <- function(path, row_index, row, key_column, key) {
+replace_table_row <- function(path, row_index, row, key_column, key) {
   bytes <- readBin(path, "raw", n = file.info(path)$size)
   bounds <- csv_record_bounds(bytes)
   existing <- read.csv(path, stringsAsFactors = FALSE,

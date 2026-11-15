@@ -27,4 +27,4 @@ Screening decision: identity ambiguous and age-data eligibility unresolved. The 
 - [DFO Research Document 2022/020](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41072091.pdf)
 - [DFO Science Advisory Report 2020/047](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40953488.pdf)
 - [DFO regional peer-review proceedings](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41033073.pdf)
-- Retrieved files, URLs and checksums are recorded in the ignored local `source_cache/discovery_dfo_rebs_2020/sources.csv` manifest.
+- Retrieved files, URLs and checksums are recorded in the ignored local `source_cache/dfo_rebs_2020/sources.csv` manifest.

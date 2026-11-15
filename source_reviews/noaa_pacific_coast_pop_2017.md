@@ -46,4 +46,4 @@ were added was attempted.
 - [2017 Pacific ocean perch STAR panel report](https://www.pcouncil.org/documents/2017/06/pacific-ocean-perch-star-panel-report-26-30-june-2017.pdf)
 
 The reviewed files and their retrieval dates, sizes, and SHA-256 checksums are
-listed in `source_cache/discovery_noaa_pacific_coast_pop_2017/sources.csv`.
+listed in `source_cache/sebastes_alutus/noaa_pacific_coast_pop_2017/sources.csv`.

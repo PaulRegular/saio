@@ -50,7 +50,7 @@ stopifnot(nrow(screened) == length(ids),
   !any(unit_ids %in% inputs$assessment_id),
   !any(unit_ids %in% outputs$assessment_id),
   file.exists(source_review),
-  file.exists(file.path(root, 'source_cache/discovery_ices_ray_method_group_2026/sources.csv')),
+  file.exists(file.path(root, 'source_cache/shared/ices_ray_method_group_2026/sources.csv')),
   all(vapply(ids, function(id) grepl(sub('^ICES:', '', id),
     paste(readLines(source_review, warn = FALSE), collapse = ' '), fixed = TRUE),
     logical(1L))))

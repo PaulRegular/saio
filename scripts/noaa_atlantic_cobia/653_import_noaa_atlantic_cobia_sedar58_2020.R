@@ -9,12 +9,12 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 test_mode <- identical(Sys.getenv("TAM_SOURCE_TEST_MODE"), "1")
 if (write_mode && test_mode) stop("Source test mode cannot write.", call. = FALSE)
 
-cache_name <- "discovery_noaa_sedar_current_assessments_2026"
+cache_name <- "rachycentron_canadum/noaa_sedar_current_assessments_2026"
 cache <- file.path(root, "source_cache", cache_name)
 pdf_name <- "sedar58_atlantic_cobia_2020.pdf"
 pdf_path <- file.path(cache, pdf_name)
 text_path <- file.path(cache, "sedar58_atlantic_cobia_2020.pdf.txt")
-manifest <- read.csv(file.path(root, "provenance", cache_name, "sources.csv"),
+manifest <- read.csv(file.path(root, "provenance/noaa_sedar_current_assessments_2026", "sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 expected_sha <- "f9444e4f851d3e38e40249be17a20041ced74e8c2a57a1007aed71a461270069"
 sha256_file <- function(path) {

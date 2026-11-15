@@ -36,7 +36,7 @@ assessment event were added.
 - [SEDAR 39 project page](https://sedarweb.org/assessments/sedar-39/).
 - [SEDAR 39 final stock assessment report, Gulf of Mexico smoothhound sharks](https://sedarweb.org/documents/sedar-39-final-stock-assessment-report-hms-gulf-of-mexico-smoothhound-shark/).
 - The final report PDF is cached in the ignored local source cache at
-  `source_cache/discovery_noaa_smoothhound_2026/`, with retrieval date, URL,
+  `source_cache/shared/noaa_smoothhound_2026/`, with retrieval date, URL,
   pinned assessment identity, byte count and SHA-256 in `sources.csv`.
 - The NOAA Stock SMART snapshot is pinned to revision
   `664c4237e26520b260a090e1821a2cee5d1cdf07`, retrieved 2026-10-28.

@@ -6,7 +6,7 @@ SAIO stock `noaa_quillback_rockfish_california`. Assessment `noaa_quillback_cali
 
 NOAA Stock SMART ID 15342 identifies the California quillback rockfish unit, which is separate from Canadian Quillback. The database record is `noaa_quillback_rockfish_california`.
 
-The 2025 official assessment used data through 2024 and Stock Synthesis 3.30.23.1. The model has one area, one modeled sex, ages 0–80, and an age-80 plus group. Its report gives aggregate estimates for the 2025 one-year forecast. The detailed report and native model bundle were cached with retrieval dates and checksums in `provenance/discovery_noaa_quillback_ca_2025/sources.csv`.
+The 2025 official assessment used data through 2024 and Stock Synthesis 3.30.23.1. The model has one area, one modeled sex, ages 0–80, and an age-80 plus group. Its report gives aggregate estimates for the 2025 one-year forecast. The detailed report and native model bundle were cached with retrieval dates and checksums in `provenance/noaa_quillback_california_2025/sources.csv`.
 
 ## Inputs recovered from the native model
 

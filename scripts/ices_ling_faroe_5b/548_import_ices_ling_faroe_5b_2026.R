@@ -387,7 +387,7 @@ assessment <- pacific_database_row(
   )
 )
 
-replace_discovery_row <- function(path, row_index, row, key_column, key) {
+replace_table_row <- function(path, row_index, row, key_column, key) {
   bytes <- readBin(path, "raw", n = file.info(path)$size)
   bounds <- csv_record_bounds(bytes)
   existing <- utils::read.csv(

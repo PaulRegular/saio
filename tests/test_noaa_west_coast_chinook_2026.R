@@ -35,7 +35,7 @@ stopifnot(
   !any(stocks$scientific_name == 'Oncorhynchus tshawytscha')
 )
 
-cache <- file.path(root, 'source_cache', 'discovery_noaa_puget_sound_chinook_2026')
+cache <- file.path(root, 'source_cache/oncorhynchus_tshawytscha/noaa_puget_sound_chinook_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 cached <- file.path(cache, manifest$file)
 pdf_cached <- cached[grepl('\\.pdf$', manifest$file, ignore.case = TRUE)]

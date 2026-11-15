@@ -144,5 +144,5 @@ if (any(!file.exists(manifest$cached_file))) {
   stop("A listed SIOFA source is missing from the local source cache.")
 }
 write_source_manifest(manifest,
-  "provenance/siofa_orange_roughy_2025/sources.csv",
+  "provenance/siofa_orange_roughy_wsr_2025/sources.csv",
   row.names = FALSE, na = "")

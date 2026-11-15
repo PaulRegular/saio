@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache', 'discovery_noaa_goa_skates_2023_2026')
+cache <- file.path(root, 'source_cache/shared/noaa_goa_skates_2023_2026')
 review_date <- '2026-11-02'
 candidate_id <- 'NOAA:11005'
 unit_id <- 'noaa_goa_other_skates'

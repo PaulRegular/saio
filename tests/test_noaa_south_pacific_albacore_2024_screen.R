@@ -18,7 +18,7 @@ stopifnot(nrow(row) == 1L,
   row$review_date == '2026-11-09')
 
 units <- candidate_units()
-unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id == 'wcpfc_south_pacific_albacore', , drop = FALSE]
+unit <- units[units$unit_key == 'stock:wcpfc_south_pacific_albacore', , drop = FALSE]
 stopifnot(nrow(unit) == 1L,
   unit$match_status == 'matched',
   unit$eligibility == 'eligible',
@@ -27,9 +27,8 @@ stopifnot(nrow(unit) == 1L,
   unit$matched_stock_id == 'wcpfc_south_pacific_albacore',
   unit$candidate_ids == 'NOAA:11688')
 
-cache_name <- 'discovery_noaa_south_pacific_albacore_2024'
-cache_options <- c(file.path(root, 'source_cache', cache_name),
-  file.path(dirname(dirname(normalizePath(root))), cache_name))
+cache_name <- 'thunnus_alalunga/wcpfc_south_pacific_albacore_2024'
+cache_options <- c(file.path(root, 'source_cache', cache_name))
 cache_options <- cache_options[dir.exists(cache_options)]
 stopifnot(length(cache_options) > 0L)
 cache <- cache_options[[1L]]

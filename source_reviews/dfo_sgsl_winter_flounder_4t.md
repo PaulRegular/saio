@@ -31,4 +31,4 @@ The 2025 interim update reports a three-year moving average of 1.38 kg/tow for c
 - [DFO Science Response 2025/010, indicators through 2024](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41282851.pdf)
 - [DFO publication record for Research Document 2019/026](https://csas-scas.dfo-mpo.gc.ca/publications/a05d569d-d016-4b92-98fe-2799ec55c72b)
 
-The two PDFs, source URLs, retrieval dates, file sizes and SHA-256 checksums are recorded in the ignored local cache at `source_cache/discovery_dfo_4t_winter_flounder_2019/sources.csv`.
+The two PDFs, source URLs, retrieval dates, file sizes and SHA-256 checksums are recorded in the ignored local cache at `source_cache/pseudopleuronectes_americanus/dfo_4t_winter_flounder_2019/sources.csv`.

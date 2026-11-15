@@ -3,7 +3,7 @@ stock_id <- "noaa_quillback_rockfish_california"
 assessment_id <- "noaa_quillback_california_2025"
 candidate_id <- "NOAA:15342"
 cache <- file.path(root, "source_cache", "sebastes_maliger/noaa_quillback_california_2025")
-manifest_path <- file.path(root, "provenance", "discovery_noaa_quillback_ca_2025", "sources.csv")
+manifest_path <- file.path(root, "provenance/noaa_quillback_california_2025/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 .libPaths(c(file.path(root, "source_cache", "r-lib"), .libPaths()))
 if (!requireNamespace("r4ss", quietly = TRUE) || !requireNamespace("pdftools", quietly = TRUE)) stop("Install r4ss and pdftools to parse the cached assessment.", call. = FALSE)

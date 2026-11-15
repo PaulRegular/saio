@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_iattc_striped_marlin_2010')
+cache <- file.path(root, 'source_cache/kajikia_audax/noaa_iattc_striped_marlin_2010')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:11073'
 unit_id <- 'iattc_northeast_pacific_striped_marlin'
@@ -138,7 +138,7 @@ review <- list(
     'of 5 degrees S and east of 145 degrees W. The separate NOAA western and central',
     'Pacific striped marlin inventory row is not the same unit. No canonical values',
     'were added was attempted. Reports are cached under',
-    'source_cache/discovery_noaa_iattc_striped_marlin_2010/.'
+    'source_cache/kajikia_audax/noaa_iattc_striped_marlin_2010/.'
   )
 )
 

@@ -24,4 +24,4 @@ Mark NOAA:10404 as identity-ambiguous and eligibility-unresolved. Do not assign 
 - [2026 Amendment 37 stock-definition analysis](https://www.fisheries.noaa.gov/s3/2026-02/am-37-fpa-analysis-01-2026.pdf)
 - [Current Pacific Coast Groundfish FMP](https://www.fisheries.noaa.gov/s3/2026-02/fmp-text-am37-01-2026.pdf)
 
-The four PDFs are cached in source_cache/discovery_noaa_blackgill_rockfish_2017_2026/. The local sources.csv manifest records their URLs, revisions, retrieval date, sizes, and SHA-256 checksums.
+The four PDFs are cached in source_cache/sebastes_melanostomus/noaa_blackgill_rockfish_2017_2026/. The local sources.csv manifest records their URLs, revisions, retrieval date, sizes, and SHA-256 checksums.

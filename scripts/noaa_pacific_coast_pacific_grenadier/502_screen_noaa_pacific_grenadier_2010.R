@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_pacific_grenadier_2010')
+cache <- file.path(root, 'source_cache/coryphaenoides_acrolepis/noaa_pacific_grenadier_2010')
 register_path <- file.path(root, 'database/candidates.csv')
 today <- '2026-11-01'
 candidate_id <- 'NOAA:10526'

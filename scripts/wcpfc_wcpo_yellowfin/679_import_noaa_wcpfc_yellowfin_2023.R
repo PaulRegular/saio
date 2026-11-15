@@ -1,13 +1,13 @@
 root <- "."
 stock_id <- "wcpfc_wcpo_yellowfin"
 assessment_id <- "wcpfc_wcpo_yellowfin_2023"
-cache_name <- "discovery_noaa_wcpo_yellowfin_2023"
+cache_name <- "thunnus_albacares/wcpfc_wcpo_yellowfin_2023"
 diagnostic_revision <- "54274c0edac84e65fdbd8ef5996038e6a8714641"
 grid_revision <- "6b28f0bf4975895beae4df861124b30286ff6fa0"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 cache <- file.path(root, "source_cache", cache_name)
-manifest_path <- file.path(root, "provenance", cache_name, "sources.csv")
+manifest_path <- file.path(root, "provenance/wcpfc_wcpo_yellowfin_2023", "sources.csv")
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")
 sha256_file <- function(path) {

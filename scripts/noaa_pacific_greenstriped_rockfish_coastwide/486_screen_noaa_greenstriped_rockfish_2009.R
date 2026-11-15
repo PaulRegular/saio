@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_greenstriped_rockfish_2009')
+cache <- file.path(root, 'source_cache/sebastes_elongatus/noaa_greenstriped_rockfish_2009')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10566'
 unit_id <- 'noaa_pacific_greenstriped_rockfish_coastwide'
@@ -112,7 +112,7 @@ review <- list(
   notes = paste('The 2009 assessment models one homogeneous coastwide stock; regional fisheries and survey strata do not',
     'create separate stock units. The assessment area excludes Puget Sound. No canonical stock, assessment, input, or output',
     'records were added was attempted. Official PDFs and provenance are cached in',
-    'source_cache/discovery_noaa_greenstriped_rockfish_2009/sources.csv.'))
+    'source_cache/sebastes_elongatus/noaa_greenstriped_rockfish_2009/sources.csv.'))
 
 initial <- register$match_status[row] == 'unreviewed' && register$screening_status[row] == 'not_started' &&
   register$eligibility[row] == 'unresolved' &&

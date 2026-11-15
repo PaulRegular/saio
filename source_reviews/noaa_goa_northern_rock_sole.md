@@ -23,4 +23,4 @@ This is one current GOA northern rock sole unit represented by three source-list
 - NPFMC, December 2025, *GOA Shallow Water Flatfish SAFE chapter*, catch report noting no assessment in 2025: <https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=4.+Shallow-Water+Flatfish.pdf&p=969301d9-957a-48ed-8d78-094a02ffce04.pdf>.
 - NOAA Stock SMART snapshot, pinned and checksummed in the [NOAA Stock SMART source manifest](../provenance/shared/noaa_stocksmart/sources.csv), identifies the legacy and current regional stock IDs and their assessment years.
 
-The three reports are cached under `source_cache/discovery_noaa_goa_rock_sole_2026/`; `sources.csv` records retrieval dates, URLs, SHA-256 checksums, and source roles.
+The three reports are cached under `source_cache/shared/noaa_goa_rock_sole_2026/`; `sources.csv` records retrieval dates, URLs, SHA-256 checksums, and source roles.

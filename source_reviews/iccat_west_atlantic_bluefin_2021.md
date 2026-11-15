@@ -73,5 +73,5 @@ No canonical records or numerical assessment values were added.
 - [DFO Sustainability Survey](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/survey-sondage/index-en.html)
 
 The reviewed PDFs are cached locally in the gitignored
-`source_cache/discovery_iccat_western_bluefin_2021/`; `sources.csv` records
+`source_cache/thunnus_thynnus/iccat_western_bluefin_2021/`; `sources.csv` records
 the source URLs, retrieval date and SHA-256 checksums.

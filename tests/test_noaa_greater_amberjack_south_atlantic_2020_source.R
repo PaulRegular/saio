@@ -33,7 +33,7 @@ candidate <- candidates[candidates$candidate_id == "NOAA:10208", , drop = FALSE]
 inventory <- candidate_units()
 inventory <- inventory[!is.na(inventory$candidate_unit_id) &
   inventory$candidate_unit_id == stock_id, , drop = FALSE]
-manifest <- read.csv("provenance/discovery_noaa_greater_amberjack_south_atlantic_2020/sources.csv",
+manifest <- read.csv("provenance/noaa_greater_amberjack_south_atlantic_sedar59_2020/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
 stock <- stock[stock$stock_id == stock_id, , drop = FALSE]

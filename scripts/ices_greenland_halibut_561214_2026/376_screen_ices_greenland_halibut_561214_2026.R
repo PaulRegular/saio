@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_greenland_halibut_2026')
+cache <- file.path(root, 'source_cache/reinhardtius_hippoglossoides/ices_greenland_halibut_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:ghl.27.561214'
 unit_id <- 'ices_greenland_halibut_561214'
@@ -94,7 +94,7 @@ review <- list(
     'the separate DFO Greenland halibut units; ICES notes unquantified connectivity with',
     'adjacent Northeast Arctic and NAFO stocks. Current MFRI and ICES sources, retrieval',
     'date, revisions, sizes, and SHA-256 checksums are in',
-    'source_cache/discovery_ices_greenland_halibut_2026/sources.csv. No canonical numerical',
+    'source_cache/reinhardtius_hippoglossoides/ices_greenland_halibut_2026/sources.csv. No canonical numerical',
     'records were added.')
 )
 

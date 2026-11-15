@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "wcpfc_wcpo_yellowfin"
 assessment_id <- "wcpfc_wcpo_yellowfin_2026"
 candidate_id <- "NOAA:11694"
-cache_name <- "discovery_noaa_wcpo_yellowfin_2026"
+cache_name <- "thunnus_albacares/wcpfc_wcpo_yellowfin_2026"
 revision <- "b00a02f3537ef54520b219488f899188ea6eff3f"
 dry_run <- identical(Sys.getenv("SAIO_SOURCE_DRY_RUN"), "1")
 
@@ -10,13 +10,12 @@ dry_run <- identical(Sys.getenv("SAIO_SOURCE_DRY_RUN"), "1")
 source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
 cache_options <- c(
-  file.path(root, "source_cache", cache_name),
-  file.path(dirname(dirname(normalizePath(root))), cache_name)
+  file.path(root, "source_cache", cache_name)
 )
 cache_options <- cache_options[dir.exists(cache_options)]
 if (!length(cache_options)) stop("Pinned WCPO yellowfin cache is required.", call. = FALSE)
 cache <- normalizePath(cache_options[[1L]], winslash = "/")
-manifest_path <- file.path(root, "provenance", cache_name, "sources.csv")
+manifest_path <- file.path(root, "provenance/wcpfc_wcpo_yellowfin_2026", "sources.csv")
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")
 

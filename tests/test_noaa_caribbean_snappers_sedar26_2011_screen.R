@@ -14,7 +14,7 @@ register <- read.csv(file.path(root, 'database/candidates.csv'),
 silk <- register[register$candidate_id == 'NOAA:10241', , drop = FALSE]
 queen <- register[register$candidate_id == 'NOAA:10247', , drop = FALSE]
 cache <- file.path(root,
-  'source_cache/discovery_noaa_caribbean_snappers_sedar26_2011')
+  'source_cache/shared/noaa_caribbean_snappers_sedar26_2011')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 units <- candidate_units()
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,

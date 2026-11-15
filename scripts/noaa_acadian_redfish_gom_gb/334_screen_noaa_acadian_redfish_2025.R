@@ -198,7 +198,7 @@ review <- list(
     'scientific name does not make those assessment boundaries identical.',
     'The figure bundle includes projections through 2028; only 1963-2024 are',
     'fitted historical years. Source files and SHA-256 values are cached in the',
-    'gitignored discovery_noaa_acadian_redfish_2025 folder.')
+    'gitignored source_cache/sebastes_fasciatus/noaa_acadian_redfish_gom_gb_2025 folder.')
 )
 
 for (column in names(review)) candidates[[column]][i] <- review[[column]]

@@ -37,7 +37,7 @@ assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
 candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- candidate_units()
-manifest <- read.csv("provenance/noaa_south_atlantic_golden_tilefish_sedar89_2025/sources.csv",
+manifest <- read.csv("provenance/noaa_golden_tilefish_south_atlantic_sedar89_2025/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

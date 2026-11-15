@@ -10,7 +10,7 @@ The ongoing SEDAR 107 benchmark is not a completed assessment and does not repla
 
 ## Sources
 
-The revised SEDAR 58 Stock Assessment Report and the NOAA-hosted CIE review are cached locally in source_cache/discovery_noaa_sedar_current_assessments_2026/. Their URLs, retrieval dates, sizes, and checksums are recorded in the tracked provenance manifest. A local text extraction of the pinned report supports table transcription.
+The revised SEDAR 58 Stock Assessment Report and the NOAA-hosted CIE review are cached locally in source_cache/rachycentron_canadum/noaa_sedar_current_assessments_2026/. Their URLs, retrieval dates, sizes, and checksums are recorded in the tracked provenance manifest. A local text extraction of the pinned report supports table transcription.
 
 ## Inputs captured
 

@@ -24,7 +24,7 @@ stopifnot(
   sum(stocks$stock_id == stock_id) == 1L,
   sum(assessments$stock_id == stock_id) == 1L,
   assessments$assessment_year[assessments$stock_id == stock_id] == 2025L,
-  file.exists("provenance/discovery_iphc_pacific_halibut/sources.csv")
+  file.exists("provenance/iphc_pacific_halibut/sources.csv")
 )
 
 cat("IPHC Pacific halibut source-curation register passed.\n")

@@ -4,7 +4,7 @@
 
 NOAA Stock SMART ID 10562 is the U.S. Pacific Coast unit of *Sebastes crameri*, covering Washington, Oregon and California. It is separate from Canadian waters occupied by the species.
 
-The latest detailed full age-structured assessment located is the 2017 update of the 2015 model, using data through 2016 and Stock Synthesis 3.30.01.12. Later 2019 and 2025 activity is catch-only projection, not a newer fitted age-structured assessment. The accepted 2017 report and run-matched model archive are cached in the ignored source cache; tracked file provenance and checksums are in `provenance/discovery_noaa_darkblotched_2017/sources.csv`.
+The latest detailed full age-structured assessment located is the 2017 update of the 2015 model, using data through 2016 and Stock Synthesis 3.30.01.12. Later 2019 and 2025 activity is catch-only projection, not a newer fitted age-structured assessment. The accepted 2017 report and run-matched model archive are cached in the ignored source cache; tracked file provenance and checksums are in `provenance/noaa_darkblotched_rockfish_2017/sources.csv`.
 
 ## Inputs captured
 

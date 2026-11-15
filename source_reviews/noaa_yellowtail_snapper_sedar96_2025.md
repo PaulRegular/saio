@@ -49,7 +49,7 @@ documenting the underlying data.
 
 The January 2025 SEDAR 96 final report, SEDAR96-WP-07, and the SEDAR 96
 document list are cached locally under the ignored directory
-`source_cache/discovery_noaa_yellowtail_snapper_sedar96_2025/`. Their URLs,
+`source_cache/ocyurus_chrysurus/noaa_yellowtail_snapper_sedar96_2025/`. Their URLs,
 retrieval date, revisions, and SHA-256 checksums are in its `sources.csv`
 manifest. No canonical stock, assessment, input, or output records were added.
 

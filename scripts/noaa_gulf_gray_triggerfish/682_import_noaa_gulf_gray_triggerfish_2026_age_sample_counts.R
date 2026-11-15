@@ -8,7 +8,7 @@ source(file.path(root, "scripts/shared/pacific_tables.R"))
 source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
 manifest <- read.csv(
-  file.path(root, "provenance/discovery_noaa_gulf_gray_triggerfish_2026/sources.csv"),
+  file.path(root, "provenance/noaa_gulf_gray_triggerfish_sedar100_2026/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character"
 )
 

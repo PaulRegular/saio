@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_bay_biscay_elasmobranchs_2026')
+cache <- file.path(root, 'source_cache/shared/ices_bay_biscay_elasmobranchs_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 
 screens <- data.frame(
@@ -158,7 +158,7 @@ review_values <- lapply(seq_len(nrow(screens)), function(i) {
       'This is a limit of the currently available assessment record, not evidence that biological age samples do not exist.'),
     notes = paste0('The official ICES stock code and assessment year were checked against the advice page or 2026 Standard Graphs source data. ',
       'Cached page URLs, retrieval date, source revision, file size, and SHA-256 are recorded in ',
-      'source_cache/discovery_ices_bay_biscay_elasmobranchs_2026/sources.csv. ',
+      'source_cache/shared/ices_bay_biscay_elasmobranchs_2026/sources.csv. ',
       'No canonical stock, assessment, input, or output records were added.')
   )
 })

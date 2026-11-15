@@ -4,7 +4,7 @@
 
 SEDAR 79 is the latest detailed production assessment located for NOAA Stock SMART unit 11342, with observations through 2023. It is one combined Southeastern U.S. assessment unit spanning the Gulf of Mexico and South Atlantic council areas; the Caribbean is a separate population boundary. The joint Gulf and South Atlantic SSC review in March 2025 found the assessment consistent with best scientific information.
 
-The final Stock Synthesis base model uses ages 1–40, combined sexes, one area, and one annual season. The assessment report and supporting documents were retrieved on 2026-10-31. Their URLs, byte counts, and SHA-256 values are retained in `provenance/discovery_noaa_mutton_snapper_sedar79_2024/sources.csv`; local copies remain in the ignored `source_cache/discovery_noaa_mutton_snapper_sedar79_2024/` directory.
+The final Stock Synthesis base model uses ages 1–40, combined sexes, one area, and one annual season. The assessment report and supporting documents were retrieved on 2026-10-31. Their URLs, byte counts, and SHA-256 values are retained in `provenance/noaa_southeastern_us_mutton_snapper_sedar79_2024/sources.csv`; local copies remain in the ignored `source_cache/lutjanus_analis/noaa_southeastern_us_mutton_snapper_sedar79_2024/` directory.
 
 ## Inputs and assumptions recovered
 

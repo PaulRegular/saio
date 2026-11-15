@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_herring_7ef_2026')
+cache <- file.path(root, 'source_cache/clupea_harengus/ices_herring_7ef_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:her.27.7ef'
 unit_id <- 'ices_herring_7ef'

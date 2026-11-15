@@ -12,7 +12,7 @@ unit crosswalk. This screen records the Washington source component and does
 not create a canonical stock.
 
 The assessment reports and native 2021 model archive are cached under
-`source_cache/discovery_noaa_quillback_oregon_washington_2021/`. The ignored
+`source_cache/shared/noaa_quillback_oregon_washington_2021/`. The ignored
 `sources.csv` manifest records the download URLs, retrieval date, sizes and
 SHA-256 checksums.
 

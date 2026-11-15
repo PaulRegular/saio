@@ -4,7 +4,7 @@
 
 NOAA Stock SMART ID 10458 identifies the Pacific Coast shortspine thornyhead stock (*Sebastolobus alascanus*). The 2023 assessment covers the U.S. West Coast coastwide unit. No canonical database stock or cross-organization record for this same U.S. management unit was found; NOAA's Gulf of Alaska thornyhead complex (ID 10457) is a separate management unit and remains separate.
 
-The 2023 assessment is the latest full detailed assessment located. It is a data-moderate, length-based age-structured Stock Synthesis model with data through 2022. The later 2025 update is a catch-only projection: it updates removals for 2023–2024, applies projected removals for 2025–2026, and extends management projections. It uses the 2023 assessment and does not add age-composition observations. The 2023 report, model archive and 2025 projection are cached under `source_cache/discovery_noaa_shortspine_pacific_2023/`; the ignored `sources.csv` manifest records retrieval dates, URLs and checksums.
+The 2023 assessment is the latest full detailed assessment located. It is a data-moderate, length-based age-structured Stock Synthesis model with data through 2022. The later 2025 update is a catch-only projection: it updates removals for 2023–2024, applies projected removals for 2025–2026, and extends management projections. It uses the 2023 assessment and does not add age-composition observations. The 2023 report, model archive and 2025 projection are cached under `source_cache/sebastolobus_alascanus/noaa_shortspine_pacific_2023/`; the ignored `sources.csv` manifest records retrieval dates, URLs and checksums.
 
 ## Inputs, biology and outputs
 

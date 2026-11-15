@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache_dir <- file.path(root, 'source_cache', 'discovery_noaa_south_pacific_albacore_2024')
+cache_dir <- file.path(root, 'source_cache/thunnus_alalunga/wcpfc_south_pacific_albacore_2024')
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),
@@ -112,7 +112,7 @@ review <- list(
     sep = '; '),
   review_date = '2026-11-02',
   decision_reason = paste('Eligible for source curation because the exact public diagnostic-model input files, age-length observations, and age-specific outputs are available. The assessment does not fit catch-at-age directly; eligibility rests on a documented approximate reconstruction from source catches, catch-reweighted length compositions, and conditional age-at-length data.'),
-  notes = paste('NOAA Stock SMART ID 11688 refers to the South Pacific albacore stock assessed jointly across the WCPFC-CA and IATTC EPO by SPC/IATTC; it is distinct from the North Pacific albacore candidate and no matching canonical South Pacific stock row exists. The latest full assessment is the 2024 diagnostic model through 2022. The public SPC model repository is pinned at e9640087a9831dece824062a338c21bf81414044; its inputs and TAF outputs, along with WCPFC assessment and data-input reports, are cached with checksums in source_cache/discovery_noaa_south_pacific_albacore_2024/sources.csv. No canonical database records were added.')
+  notes = paste('NOAA Stock SMART ID 11688 refers to the South Pacific albacore stock assessed jointly across the WCPFC-CA and IATTC EPO by SPC/IATTC; it is distinct from the North Pacific albacore candidate and no matching canonical South Pacific stock row exists. The latest full assessment is the 2024 diagnostic model through 2022. The public SPC model repository is pinned at e9640087a9831dece824062a338c21bf81414044; its inputs and TAF outputs, along with WCPFC assessment and data-input reports, are cached with checksums in source_cache/thunnus_alalunga/wcpfc_south_pacific_albacore_2024/sources.csv. No canonical database records were added.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

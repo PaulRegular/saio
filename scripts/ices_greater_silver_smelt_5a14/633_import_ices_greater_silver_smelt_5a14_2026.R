@@ -1,7 +1,7 @@
 root <- "."
 stock_id <- "ices_greater_silver_smelt_5a14"
 assessment_id <- paste0(stock_id, "_2026")
-cache <- file.path(root, "source_cache", "discovery_ices_gss_2026")
+cache <- file.path(root, "source_cache/argentina_silus/ices_gss_2026")
 manifest_path <- file.path(root, "provenance", assessment_id, "sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 

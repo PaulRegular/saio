@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_ices_greenland_cod_2026")
+cache <- file.path(root, "source_cache/shared/ices_greenland_cod_2026")
 assessment_id <- "ices_cod_west_greenland_offshore_2026"
 stock_id <- "ices_cod_west_greenland_offshore"
 candidate_id <- "ICES:cod.21.1.osc"
@@ -259,7 +259,7 @@ assessment <- pacific_database_row(
   )
 )
 
-replace_discovery_row <- function(path, row_index, row, key_column, key) {
+replace_table_row <- function(path, row_index, row, key_column, key) {
   if (nrow(row) != 1L) stop("Expected one register row.", call. = FALSE)
   bytes <- readBin(path, "raw", n = file.info(path)$size)
   bounds <- csv_record_bounds(bytes)
@@ -330,7 +330,7 @@ if (stock_row_count == 0L && assessment_row_count == 0L) {
     stop("Existing Greenland offshore cod rows do not match the verified import; refusing to append duplicates.", call. = FALSE)
   }
   stock_row <- which(stocks_existing$stock_id == stock_id)
-  replace_discovery_row(file.path(database, "stocks.csv"), stock_row, stock, "stock_id", stock_id)
+  replace_table_row(file.path(database, "stocks.csv"), stock_row, stock, "stock_id", stock_id)
 }
 
 candidate_path <- file.path(root, "database/candidates.csv")

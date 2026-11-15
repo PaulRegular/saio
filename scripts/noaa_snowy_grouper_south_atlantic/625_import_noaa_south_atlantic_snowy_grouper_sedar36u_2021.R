@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path("source_cache", "epinephelus_niveatus/noaa_snowy_grouper_south_atlantic_sedar36u_2021")
-manifest_path <- file.path("provenance/noaa_snowy_grouper_sedar36u_2021/sources.csv")
+manifest_path <- file.path("provenance/noaa_snowy_grouper_south_atlantic_sedar36u_2021/sources.csv")
 stock_id <- "noaa_snowy_grouper_south_atlantic"
 assessment_id <- "noaa_snowy_grouper_south_atlantic_sedar36u_2021"
 candidate_id <- "NOAA:10339"

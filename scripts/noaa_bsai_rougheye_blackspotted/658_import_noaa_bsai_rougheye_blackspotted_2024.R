@@ -2,7 +2,7 @@ import_noaa_bsai_rougheye_blackspotted_2024 <- function(root = ".", write = FALS
   assessment_id <- "noaa_bsai_rougheye_blackspotted_2024"
   stock_id <- "noaa_bsai_rougheye_blackspotted"
   candidate_id <- "NOAA:11382"
-  cache <- file.path(root, "source_cache/discovery_noaa_bsai_rougheye_2024")
+  cache <- file.path(root, "source_cache/noaa_bsai_rougheye_blackspotted_2024")
   manifest_path <- file.path(cache, "sources.csv")
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
     check.names = FALSE)
@@ -734,7 +734,7 @@ import_noaa_bsai_rougheye_blackspotted_2024 <- function(root = ".", write = FALS
 
 
   provenance_dir <- file.path(root,
-    "provenance/discovery_noaa_bsai_rougheye_2024")
+    "provenance/noaa_bsai_rougheye_blackspotted_2024")
   source(file.path(root, "scripts/shared/source_manifest_io.R"), local = TRUE)
   write_source_manifest(manifest, file.path(provenance_dir, "sources.csv"),
     row.names = FALSE, na = "")

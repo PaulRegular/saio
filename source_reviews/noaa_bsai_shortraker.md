@@ -6,7 +6,7 @@ Stock SMART 10553 is the NOAA Bering Sea/Aleutian Islands unit of shortraker roc
 
 The November 2024 report describes an operational update using Model 22_2024, the 2022 REMA model updated with 2024 Aleutian Islands bottom-trawl survey biomass and 2023 eastern Bering Sea slope longline relative population weights. The 2024 BSAI Plan Team recommended the authors’ model. The final 2025 SAFE chapter treated 2025 as a catch-report year; the final 2025 SSC report says the next full assessment was scheduled for 2026. As of this review date, the 2024 update is the latest detailed production model available.
 
-Sources are cached in source_cache/discovery_noaa_shortraker_2023_2025/; sources.csv records their URLs, revisions, retrieval date, sizes, and SHA-256 hashes.
+Sources are cached in source_cache/shared/noaa_shortraker_2023_2025/; sources.csv records their URLs, revisions, retrieval date, sizes, and SHA-256 hashes.
 
 ## Assessment data and outputs
 

@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "ices_haddock_7b_k_2026")
+cache <- file.path(root, "source_cache/melanogrammus_aeglefinus/ices_haddock_celtic_sea_7b_k_2026")
 assessment_id <- "ices_haddock_celtic_sea_7b_k_2026"
 survey <- "FRA_IRL_IBTS"
 years <- 1993:2025

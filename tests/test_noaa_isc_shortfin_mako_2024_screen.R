@@ -12,7 +12,7 @@ progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 swfsc_pifsc <- noaa[noaa$source_region == 'SWFSC / PIFSC', , drop = FALSE]
 
-cache <- file.path(root, 'source_cache', 'discovery_noaa_isc_shortfin_mako_2024')
+cache <- file.path(root, 'source_cache/isurus_oxyrinchus/noaa_isc_shortfin_mako_2024')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 required <- c('ISC24_ANNEX14_shortfin_mako_2024.pdf', 'ISC25_Plenary_Report_FINAL.pdf')
 source_rows <- manifest[match(required, manifest$file), , drop = FALSE]

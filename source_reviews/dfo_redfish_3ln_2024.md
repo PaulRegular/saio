@@ -33,5 +33,5 @@ in any repository. No canonical numerical records were imported.
 - [NAFO 2024 Scientific Council report](https://www.nafo.int/Portals/0/PDFs/sc/2024/scs24-16REV.pdf)
 
 The assessment and MSE documents are cached under
-`source_cache/discovery_dfo_redfish_3ln_2024/`, with retrieval dates and
+`source_cache/dfo_redfish_3ln_2024/`, with retrieval dates and
 SHA-256 checksums in `sources.csv`.

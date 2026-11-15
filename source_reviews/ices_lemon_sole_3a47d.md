@@ -42,7 +42,7 @@ the required age-specific inputs. No canonical assessment, input, or output
 records have been added has been attempted.
 
 The WGNSSK report is cached at
-`source_cache/discovery_ices_witch_northsea_2026/wgnssk_witch.pdf`; source URL,
+`source_cache/shared/ices_witch_northsea_2026/wgnssk_witch.pdf`; source URL,
 retrieval date and checksum are listed in that cache's `sources.csv`.
 
 ## Source

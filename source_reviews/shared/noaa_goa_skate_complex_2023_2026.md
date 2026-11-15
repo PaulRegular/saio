@@ -27,7 +27,7 @@ Classify `NOAA:11005` as the distinct **Other skates** current stock unit and **
 
 ## Cached sources
 
-The PDFs are cached locally under the gitignored `source_cache/discovery_noaa_goa_skates_2023_2026/`; `sources.csv` records the source URL, retrieval date, document revision, byte size, and SHA-256 checksum.
+The PDFs are cached locally under the gitignored `source_cache/shared/noaa_goa_skates_2023_2026/`; `sources.csv` records the source URL, retrieval date, document revision, byte size, and SHA-256 checksum.
 
 - 2023 GOA Skates SAFE, the accepted operational assessment: <https://apps-afsc.fisheries.noaa.gov/Plan_Team/2023/GOAskate.pdf>
 - 2024 GOA SAFE introduction, confirming the most recent full/operational run was conducted in 2023: <https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=C2+GOA+Groundfish+SAFE+Introduction.pdf&p=ab2770e7-ed6f-4a2f-a69d-5cbd0bda1896.pdf>

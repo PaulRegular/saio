@@ -27,4 +27,4 @@ The candidate is screened ineligible for the age-disaggregated production-assess
 - [NOAA Alaska pollock management units](https://www.fisheries.noaa.gov/species/alaska-pollock/management)
 - [NOAA winter acoustic-trawl survey description](https://www.fisheries.noaa.gov/alaska/ecosystems/alaska-fish-research-surveys)
 
-The accepted 2024 chapter, older 2022 chapter and later 2026 draft are cached under the ignored `source_cache/discovery_noaa_pollock_age_units/`. `sources.csv` records source URLs, retrieval dates and SHA-256 checksums.
+The accepted 2024 chapter, older 2022 chapter and later 2026 draft are cached under the ignored `source_cache/gadus_chalcogrammus/noaa_pollock_age_units/`. `sources.csv` records source URLs, retrieval dates and SHA-256 checksums.

@@ -36,7 +36,7 @@ candidates <- read_columns("database/candidates.csv", c("candidate_id", "candida
   "matched_stock_id", "match_status", "eligibility", "import_status", "survey_age_evidence",
   "output_evidence"))
 inventory <- candidate_units()
-manifest <- read.csv("provenance/discovery_noaa_darkblotched_2017/sources.csv",
+manifest <- read.csv("provenance/noaa_darkblotched_rockfish_2017/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_splitnose_rockfish_2009')
+cache <- file.path(root, 'source_cache/sebastes_diploproa/noaa_splitnose_rockfish_2009')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10564'
 unit_id <- 'noaa_pacific_splitnose_rockfish_coastwide'
@@ -116,7 +116,7 @@ review <- list(
     'establish separate biological assessment units. The 2009 report contains many model outputs but no source-supported',
     'accepted-run fishery catch-at-age.',
     'translation was attempted. Official sources and provenance are cached in',
-    'source_cache/discovery_noaa_splitnose_rockfish_2009/sources.csv.'))
+    'source_cache/sebastes_diploproa/noaa_splitnose_rockfish_2009/sources.csv.'))
 
 initial <- register$match_status[row] == 'unreviewed' && register$screening_status[row] == 'not_started' &&
   register$eligibility[row] == 'unresolved' &&

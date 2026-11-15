@@ -35,7 +35,7 @@ The large coastal shark complex assessment is rejected by Stock SMART, and the m
 
 ## Source documentation
 
-The official SEDAR reports were downloaded into the gitignored local cache at `source_cache/discovery_noaa_sedar_sharks_2026/`. `sources.csv` records source URLs, access date, file size and SHA-256 checksums. The Stock SMART inventory data are already cached in `source_cache/shared/noaa_stocksmart/`.
+The official SEDAR reports were downloaded into the gitignored local cache at `source_cache/shared/noaa_sedar_sharks_2026/`. `sources.csv` records source URLs, access date, file size and SHA-256 checksums. The Stock SMART inventory data are already cached in `source_cache/shared/noaa_stocksmart/`.
 
 - [SEDAR 11 assessment page and reports](https://sedarweb.org/assessments/sedar-11/)
 - [SEDAR 13 assessment page and report](https://sedarweb.org/assessments/sedar-13/)

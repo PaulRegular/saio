@@ -3,7 +3,7 @@ stock_id <- "noaa_spiny_dogfish_pacific_coast"
 assessment_id <- "noaa_spiny_dogfish_pacific_coast_2021"
 candidate_id <- "NOAA:10702"
 candidate_unit_id <- "noaa_spiny_dogfish_pacific_coast_2021"
-cache <- file.path(root, "source_cache", "discovery_noaa_spiny_dogfish_pacific_2021")
+cache <- file.path(root, "source_cache/squalus_suckleyi/noaa_spiny_dogfish_pacific_coast_2021")
 manifest_path <- file.path(root, "provenance", assessment_id, "sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 .libPaths(c(file.path(root, "source_cache", "r-lib"), .libPaths()))

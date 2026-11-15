@@ -41,4 +41,4 @@ output records were added was attempted.
 - ICES, [2024 advice for undulate ray in divisions 7.d and 7.e](https://asd.ices.dk/viewAdvice/3798), assessment key 19173.
 - ICES, [2024 Standard Graphs](https://standardgraphs.ices.dk/ViewCharts.aspx?key=19173) and [source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=19173).
 - ICES, [Benchmark Workshop for selected elasmobranch stocks (WKELASMO), 2022](https://ices-library.figshare.com/articles/report/Benchmark_Workshop_for_selected_elasmobranch_stocks_WKELASMO_/21025021), DOI [10.17895/ices.pub.21025021](https://doi.org/10.17895/ices.pub.21025021).
-- The ignored local cache at `source_cache/discovery_ices_undulate_ray_7de_2024/` contains the advice page, Standard Graphs pages, and benchmark PDF. `sources.csv` records the retrieved URLs, assessment revisions, retrieval date, file sizes, and SHA-256 checksums.
+- The ignored local cache at `source_cache/raja_undulata/ices_undulate_ray_7de_2024/` contains the advice page, Standard Graphs pages, and benchmark PDF. `sources.csv` records the retrieved URLs, assessment revisions, retrieval date, file sizes, and SHA-256 checksums.

@@ -43,7 +43,7 @@ stopifnot(
   grepl('No canonical stock, assessment, input or output records were added.', review, fixed = TRUE)
 )
 
-cache <- file.path(root, 'source_cache', 'discovery_dfo_fraser_chum_2026')
+cache <- file.path(root, 'source_cache/oncorhynchus_keta/dfo_fraser_chum_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 files <- file.path(cache, manifest$file)
 notice <- paste(readLines(files[grepl('inseason_notice', files)], warn = FALSE), collapse = ' ')

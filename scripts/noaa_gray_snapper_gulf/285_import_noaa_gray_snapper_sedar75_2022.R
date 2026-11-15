@@ -2,14 +2,14 @@ root <- "."
 stock_id <- "noaa_gray_snapper_gulf"
 assessment_id <- "noaa_gray_snapper_gulf_sedar75_2022"
 candidate_id <- "NOAA:10221"
-cache_name <- "discovery_noaa_gray_snapper_2022"
+cache_name <- "lutjanus_griseus/noaa_gray_snapper_gulf_sedar75_2022"
 report_url <- "https://sedarweb.org/assessments/sedar-75/"
 
 source(file.path(root, "scripts/shared/pacific_tables.R"))
 source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
 cache <- file.path(root, "source_cache", cache_name)
-manifest <- read.csv(file.path(root, "provenance", cache_name, "sources.csv"),
+manifest <- read.csv(file.path(root, "provenance/noaa_gray_snapper_gulf_sedar75_2022", "sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 
 sha256_file <- function(path) {

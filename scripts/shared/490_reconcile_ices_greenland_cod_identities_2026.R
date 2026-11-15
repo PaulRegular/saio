@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_greenland_cod_2026')
+cache <- file.path(root, 'source_cache/shared/ices_greenland_cod_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   check.names = FALSE)
@@ -91,7 +91,7 @@ for (i in seq_len(nrow(reviews))) {
       'Identity review only. The ICES Advice and Scenarios Database lists 2026 ',
       'advice for this separate Greenland spawning component. Do not combine with ',
       'other Greenland cod candidate units; official advice notes their fisheries ',
-      'can be mixed. Cached page: source_cache/discovery_ices_greenland_cod_2026/',
+      'can be mixed. Cached page: source_cache/shared/ices_greenland_cod_2026/',
       reviews$advice_file[i], '. Age-data eligibility remains unresolved.')
   )
   pristine <- candidates$match_status[row] == 'unreviewed' &&

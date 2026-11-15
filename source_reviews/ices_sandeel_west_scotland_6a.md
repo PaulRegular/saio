@@ -38,4 +38,4 @@ output were added.
 - ICES, [2024 advice for sandeel in Division 6.a](https://asd.ices.dk/viewAdvice/3544), assessment key 18508; [advice sheet DOI](https://doi.org/10.17895/ices.advice.25019645).
 - ICES HAWG, [2025 report](https://orbit.dtu.dk/en/publications/herring-assessment-working-group-for-the-area-south-of-62-north-h/), which covers advice for sandeel in January 2025.
 - [ICES HAWG repository](https://github.com/ices-eg/wg_HAWG), checked for unit-specific production files.
-- The gitignored `source_cache/discovery_ices_sandeel_6a_2025/sources.csv` records URLs, report revision, retrieval date, byte counts, and SHA-256 checksums.
+- The gitignored `source_cache/ices_sandeel_6a_2025/sources.csv` records URLs, report revision, retrieval date, byte counts, and SHA-256 checksums.

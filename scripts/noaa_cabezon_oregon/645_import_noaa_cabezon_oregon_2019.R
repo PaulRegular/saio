@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache/discovery_noaa_cabezon_2019")
+cache <- file.path(root, "source_cache/scorpaenichthys_marmoratus/noaa_cabezon_2019")
 assessment_id <- "noaa_cabezon_oregon_2019"
 stock_id <- "noaa_cabezon_oregon"
 candidate_id <- "NOAA:12193"
@@ -25,12 +25,12 @@ manifest <- read.csv(file.path(root,
   "provenance/noaa_cabezon_oregon_2019/sources.csv"),
   colClasses = "character", check.names = FALSE)
 source_files <- c(
-  "discovery_noaa_cabezon_2019/cabezon_2019_assessment.pdf",
-  "discovery_noaa_cabezon_2019/cabezon_2019_supplementary_tables.xlsx",
-  "discovery_noaa_cabezon_2019/cabezon_2019_star_panel.pdf",
-  "discovery_noaa_cabezon_2019/cabezon_2019_ors_model.zip",
-  "discovery_noaa_cabezon_2019/cabezon_2019_scs_model.zip",
-  "discovery_noaa_cabezon_2019/cabezon_2019_ncs_model.zip")
+  "scorpaenichthys_marmoratus/noaa_cabezon_2019/cabezon_2019_assessment.pdf",
+  "scorpaenichthys_marmoratus/noaa_cabezon_2019/cabezon_2019_supplementary_tables.xlsx",
+  "scorpaenichthys_marmoratus/noaa_cabezon_2019/cabezon_2019_star_panel.pdf",
+  "scorpaenichthys_marmoratus/noaa_cabezon_2019/cabezon_2019_ors_model.zip",
+  "scorpaenichthys_marmoratus/noaa_cabezon_2019/cabezon_2019_scs_model.zip",
+  "scorpaenichthys_marmoratus/noaa_cabezon_2019/cabezon_2019_ncs_model.zip")
 if (!all(c("local_file", "source_url", "retrieved_on", "sha256", "bytes") %in% names(manifest)) ||
     !setequal(manifest$local_file, source_files) || anyDuplicated(manifest$local_file)) {
   stop("The cabezon source manifest is incomplete.", call. = FALSE)

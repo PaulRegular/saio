@@ -770,7 +770,7 @@ import_noaa_longnose_skate_pacific_2019 <- function(root = ".", write = FALSE) {
 
 
   provenance_dir <- file.path(root,
-    "provenance/discovery_noaa_longnose_skate_2019")
+    "provenance/noaa_pacific_coast_longnose_skate_2019")
   source(file.path(root, "scripts/shared/source_manifest_io.R"), local = TRUE)
   write_source_manifest(manifest, file.path(provenance_dir, "sources.csv"),
     row.names = FALSE, na = "")

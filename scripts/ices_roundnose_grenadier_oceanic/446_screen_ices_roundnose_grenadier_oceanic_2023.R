@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_roundnose_grenadier_oceanic_2023')
+cache <- file.path(root, 'source_cache/coryphaenoides_rupestris/ices_roundnose_grenadier_oceanic_2023')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:rng.27.5a10b12ac14b'
 unit_id <- 'ices_roundnose_grenadier_oceanic'
@@ -77,7 +77,7 @@ review <- list(
     'https://www.ices.dk/about-ICES/Documents/Cooperation%20agreements/EU/2023_Grant_DGMARE-ICES_web.pdf'),
   review_date = '2026-10-31',
   decision_reason = 'The latest official advice record located is assessment year 2023, active for 2024-2027, and identifies the stock as category 5. ICES defines category 5 as landings-only stocks. The advice says corresponding catches cannot be quantified and provides no population trajectories. This does not meet the age-disaggregated input and output screen.',
-  notes = 'No matching current stock exists in the canonical database. Review is limited to the official advice record and ICES category definition; no separate detailed assessment report or model files were identified. The advice page is cached with provenance under source_cache/discovery_ices_roundnose_grenadier_oceanic_2023. No canonical stock, assessment, input, or output records were added.'
+  notes = 'No matching current stock exists in the canonical database. Review is limited to the official advice record and ICES category definition; no separate detailed assessment report or model files were identified. The advice page is cached with provenance under source_cache/coryphaenoides_rupestris/ices_roundnose_grenadier_oceanic_2023. No canonical stock, assessment, input, or output records were added.'
 )
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&

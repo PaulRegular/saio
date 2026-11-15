@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_dfo_greenland_halibut_2_3klmno_2025")
+cache <- file.path(root, "source_cache/reinhardtius_hippoglossoides/dfo_greenland_halibut_2_3klmno_2025")
 dry_run <- identical(Sys.getenv("SAIO_IMPORT_DRY_RUN"), "1")
 
 manifest <- utils::read.csv(
@@ -568,7 +568,7 @@ candidate_update$decision_reason <- paste(
 candidate_update$notes <- paste(
   "The 2026 NAFO Scientific Council report is the latest official update found and recommends the 2027 TAC using all five survey series; TAC=14,351 t.",
   "The 2023 SSM update is the latest detailed age-structured model source located; it was prepared for MSE and is not the production annual TAC model.",
-  "Source PDFs, URLs, retrieval dates, and checksums are in source_cache/discovery_dfo_greenland_halibut_2_3klmno_2025/. See source_reviews/dfo_greenland_halibut_2_3klmno_2025.md."
+  "Source PDFs, URLs, retrieval dates, and checksums are in source_cache/reinhardtius_hippoglossoides/dfo_greenland_halibut_2_3klmno_2025/. See source_reviews/dfo_greenland_halibut_2_3klmno_2025.md."
 )
 
 if (nrow(inputs) < 1500L || anyDuplicated(paste(inputs$assessment_id, inputs$survey, inputs$year, inputs$age, inputs$measure))) {

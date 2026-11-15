@@ -22,7 +22,7 @@ The canonical database now contains the NOAA stock, the SEDAR 53 assessment, sou
 
 ## Sources and local cache
 
-The detailed report and two supporting age-composition papers are cached under the gitignored source_cache/noaa_red_grouper_sedar53_2017/ directory. Their URLs, retrieval date, file sizes and SHA-256 checksums are recorded in provenance/noaa_red_grouper_sedar53_2017/sources.csv.
+The detailed report and two supporting age-composition papers are cached under the gitignored source_cache/noaa_red_grouper_sedar53_2017/ directory. Their URLs, retrieval date, file sizes and SHA-256 checksums are recorded in provenance/noaa_red_grouper_south_atlantic_sedar53_2017/sources.csv.
 
 - [NOAA Red Grouper status](https://www.fisheries.noaa.gov/species/red-grouper)
 - [SEDAR 53 project page](https://sedarweb.org/assessments/sedar-53/)

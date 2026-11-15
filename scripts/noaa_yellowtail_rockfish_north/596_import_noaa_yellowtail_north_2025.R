@@ -2,7 +2,7 @@ source("scripts/shared/source_manifest_io.R", local = TRUE)
 
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_noaa_yellowtail_2025")
+cache <- file.path(root, "source_cache/sebastes_flavidus/noaa_yellowtail_rockfish_north_2025")
 native <- file.path(cache, "native", "5.09_no_extra_SE")
 assessment_id <- "noaa_yellowtail_rockfish_north_2025"
 stock_id <- "noaa_yellowtail_rockfish_north"
@@ -477,7 +477,7 @@ files<-c(report_file,archive_file,"native/5.09_no_extra_SE/YTRK.North.data.ss",
  "native/5.09_no_extra_SE/CompReport.sso","native/5.09_no_extra_SE/forecast.ss",
  "native/5.09_no_extra_SE/ss3.par")
 paths<-file.path(cache,files)
-cache_manifest<-data.frame(local_file=file.path("discovery_noaa_yellowtail_2025",files),
+cache_manifest<-data.frame(local_file=file.path("sebastes_flavidus/noaa_yellowtail_rockfish_north_2025", files),
  source_url=c(report_url,model_url,rep(model_url,length(files)-2L)),
  retrieved_on=rep("2026-10-29",length(files)),sha256=vapply(paths,sha256_file,character(1)),
  bytes=file.info(paths)$size,stringsAsFactors=FALSE)

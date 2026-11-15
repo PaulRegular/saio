@@ -20,4 +20,4 @@ No canonical database records or numerical series were imported.
 - [2012 framework document](https://waves-vagues.dfo-mpo.gc.ca/Library/350223.pdf)
 - [2012 assessment report](https://waves-vagues.dfo-mpo.gc.ca/Library/348812.pdf)
 
-The 2012 framework and assessment PDFs are cached under the ignored `source_cache/discovery_silver_hake/`; `sources.csv` records retrieval dates and SHA-256 checksums. The 2026/011 direct PDF link returned a Government of Canada archive landing page to local download, so it was reviewed in the official online document view but not cached. No incomplete file was retained.
+The 2012 framework and assessment PDFs are cached under the ignored `source_cache/merluccius_bilinearis/noaa_dfo_silver_hake/`; `sources.csv` records retrieval dates and SHA-256 checksums. The 2026/011 direct PDF link returned a Government of Canada archive landing page to local download, so it was reviewed in the official online document view but not cached. No incomplete file was retained.

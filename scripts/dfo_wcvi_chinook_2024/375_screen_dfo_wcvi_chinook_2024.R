@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache_path <- file.path(root, 'source_cache', 'discovery_dfo_wcvi_chinook_2024')
+cache_path <- file.path(root, 'source_cache/oncorhynchus_tshawytscha/dfo_wcvi_chinook_2024')
 
 register <- read.csv(register_path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate_id <- 'DFO:Pacific:Chinook Salmon - West Coast of Vancouver Island'

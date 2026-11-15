@@ -1,7 +1,6 @@
 root <- "."
-cache_name <- 'discovery_noaa_wcpfc_bigeye_2026'
-cache_options <- c(file.path(root, 'source_cache', cache_name),
-  file.path(dirname(dirname(normalizePath(root))), cache_name))
+cache_name <- 'thunnus_obesus/noaa_wcpfc_bigeye_2026'
+cache_options <- c(file.path(root, 'source_cache', cache_name))
 cache_options <- cache_options[dir.exists(cache_options)]
 if (!length(cache_options)) stop('Pinned WCPO bigeye cache is required.', call. = FALSE)
 cache_dir <- normalizePath(cache_options[[1L]], winslash = '/')
@@ -123,7 +122,7 @@ review <- list(
   detailed_source_url = paste('https://meetings.wcpfc.int/node/19353', 'https://meetings.wcpfc.int/system/files/2024-07/SC19%20Outcomes%20Document%20%2828Nov2923%29-Att%201%2C7%20fixed_0.pdf', 'https://github.com/PacificCommunity/ofp-sam-bet-2023-diagnostic/tree/81fc412ad1f36416f78f84ef6bd2d5dff68d14c8', 'https://meetings.wcpfc.int/node/33590', 'https://meetings.wcpfc.int/taxonomy/term/2845?order=field_doc_symbol&sort=desc', 'https://meetings.wcpfc.int/file/21268/download', 'https://www.wcpfc.int/node/244', sep = '; '),
   review_date = '2026-11-02',
   decision_reason = paste('Eligible for source curation from the latest assessment accepted for WCPFC status advice. The 2023 source files provide catches, size compositions, conditional age-at-length observations, aggregate CPUE and fitted age-specific outputs. An approximate catch-at-age reconstruction is supportable only where the sampled age-length keys can be applied; pooling for unsampled years/areas must be explicit. The newer 2026 assessment report was reviewed at SC22, but WCPFC reported no consensus on its uncertainty grid, so it is not treated as the accepted basis for advice.'),
-  notes = paste('NOAA Stock SMART ID 11684 maps to the WCPO bigeye unit assessed by SPC for WCPFC. It is distinct from NOAA:10169 (Atlantic bigeye) and NOAA:11685 (Eastern Pacific bigeye). No matching canonical Thunnus obesus stock record exists. The 2023 diagnostic repository is pinned to commit 81fc412ad1f36416f78f84ef6bd2d5dff68d14c8; its relevant MFCL inputs and TAF inputs/outputs, official 2023 assessment and SC19 outcomes, and later 2026 assessment sources are cached with SHA-256 values in source_cache/discovery_noaa_wcpfc_bigeye_2026/sources.csv. This is a discovery screen only; no canonical assessment data were added.')
+  notes = paste('NOAA Stock SMART ID 11684 maps to the WCPO bigeye unit assessed by SPC for WCPFC. It is distinct from NOAA:10169 (Atlantic bigeye) and NOAA:11685 (Eastern Pacific bigeye). No matching canonical Thunnus obesus stock record exists. The 2023 diagnostic repository is pinned to commit 81fc412ad1f36416f78f84ef6bd2d5dff68d14c8; its relevant MFCL inputs and TAF inputs/outputs, official 2023 assessment and SC19 outcomes, and later 2026 assessment sources are cached with SHA-256 values in source_cache/thunnus_obesus/noaa_wcpfc_bigeye_2026/sources.csv. This is a discovery screen only; no canonical assessment data were added.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

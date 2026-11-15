@@ -29,7 +29,7 @@ outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 manifest <- read.csv(
-  "provenance/discovery_noaa_south_atlantic_vermilion_snapper_2018/sources.csv",
+  "provenance/noaa_vermilion_snapper_south_atlantic_sedar55_2018/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE
 )
 

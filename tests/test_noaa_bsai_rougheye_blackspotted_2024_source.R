@@ -43,7 +43,7 @@ candidates <- read_columns(file.path(root, "database/candidates.csv"), c(
   "timing_evidence", "output_evidence"))
 inventory <- candidate_units()
 manifest <- read.csv(file.path(root,
-  "provenance/discovery_noaa_bsai_rougheye_2024/sources.csv"),
+  "provenance/noaa_bsai_rougheye_blackspotted_2024/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines(file.path(root,
   "source_reviews/noaa_bsai_rougheye_blackspotted.md"),
@@ -152,7 +152,7 @@ stopifnot(
   nrow(manifest) == 1L,
   manifest$file == "BSAIrougheye_2024.pdf",
   grepl("^[[:xdigit:]]{64}$", manifest$sha256),
-  file.exists(file.path("source_cache/discovery_noaa_bsai_rougheye_2024",
+  file.exists(file.path("source_cache/noaa_bsai_rougheye_blackspotted_2024",
     "BSAIrougheye_2024.pdf")),
   identical(sort(as.integer(get_output("recruitment")$year[is.na(get_output("recruitment")$se)])), c(2001L, 2014L, 2015L)),
   grepl("1977-2018 only", review, fixed = TRUE),

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_swordfish_north_atlantic_2022')
+cache <- file.path(root, 'source_cache/xiphias_gladius/iccat_north_atlantic_swordfish_2022')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_ids <- c('NOAA:10953', 'DFO:Maritimes:Swordfish - North Atlantic')
 unit_id <- 'iccat_north_atlantic_swordfish'
@@ -94,7 +94,7 @@ review <- list(
     'to the same ICCAT North Atlantic stock; the DFO row is not a separate assessment. The 2026 ICCAT',
     'meeting assessed Mediterranean and South Atlantic swordfish and addressed North Atlantic MSE, not',
     'a new North Atlantic stock-status run. Cached URLs, revisions, retrieval date, file sizes, and',
-    'SHA-256 checksums are recorded under source_cache/discovery_swordfish_north_atlantic_2022/.',
+    'SHA-256 checksums are recorded under source_cache/xiphias_gladius/iccat_north_atlantic_swordfish_2022/.',
     'No canonical numerical records were added.')
 )
 

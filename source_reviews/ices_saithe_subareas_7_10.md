@@ -44,7 +44,7 @@ No canonical data were added was attempted.
 
 Source URLs, revisions, retrieval dates, file sizes, and SHA-256 checksums are
 recorded in the gitignored local cache at
-`source_cache/discovery_ices_saithe_subareas_7_10_2025/sources.csv`.
+`source_cache/pollachius_virens/ices_saithe_subareas_7_10_2025/sources.csv`.
 
 ## Sources
 

@@ -13,4 +13,4 @@ Sources:
 - [ICES Standard Graphs source data, key 23769](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=23769).
 - [ICES Standard Graphs assessment XML, key 23769](https://sag.ices.dk/SAG_API/StockXmlDownload/23769).
 
-The advice page, graph page, source-data page, and XML are cached in the ignored `source_cache/discovery_ices_black_bellied_anglerfish_8c9a_2026/`; its manifest records URLs, retrieval date, assessment identifiers, sizes, and SHA-256 checksums. The WGBIE PDF is shared with the 78abd black-bellied screen and referenced in this case manifest.
+The advice page, graph page, source-data page, and XML are cached in the ignored `source_cache/lophius_budegassa/ices_black_bellied_anglerfish_8c9a_2026/`; its manifest records URLs, retrieval date, assessment identifiers, sizes, and SHA-256 checksums. The WGBIE PDF is shared with the 78abd black-bellied screen and referenced in this case manifest.

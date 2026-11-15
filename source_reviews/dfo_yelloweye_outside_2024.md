@@ -22,4 +22,4 @@ Identity is a provisional new current unit, with eligibility unresolved pending 
 - [DFO Research Document 2020/069](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40951704.pdf), detailed age-structured rebuilding analysis using data through 2018.
 - [DFO Science Advisory Report 2020/024](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40902687.pdf), summary advice from the 2019 rebuilding analysis.
 
-Available sources are cached locally in the gitignored `source_cache/discovery_dfo_yelloweye/`; `sources.csv` records retrieval dates, URLs, sizes, and SHA-256 checksums, including the unavailable-PDF response.
+Available sources are cached locally in the gitignored `source_cache/sebastes_ruberrimus/dfo_yelloweye/`; `sources.csv` records retrieval dates, URLs, sizes, and SHA-256 checksums, including the unavailable-PDF response.

@@ -22,4 +22,4 @@ This is a distinct, new DFO inside-water unit, screened ineligible for the age-d
 - [DFO Science Advisory Report 2025/032](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41297726.pdf), confirms that the 2024 review concerns outside waters and identifies the last completed assessment as 2010.
 - [DFO Pacific Spiny Dogfish research page](https://www.dfo-mpo.gc.ca/species-especes/sharks/research/dogfish-eng.html), source listing for Pacific dogfish research products.
 
-The detailed assessment, advice and proceedings PDFs and a searchable text extraction are cached under the gitignored `source_cache/discovery_dfo_dogfish_inside/`. `sources.csv` records URLs, retrieval date, byte size and SHA-256 hashes.
+The detailed assessment, advice and proceedings PDFs and a searchable text extraction are cached under the gitignored `source_cache/squalus_suckleyi/dfo_dogfish_inside/`. `sources.csv` records URLs, retrieval date, byte size and SHA-256 hashes.

@@ -12,7 +12,7 @@ outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 review_path <- file.path(root, 'source_reviews/noaa_atlantic_salmon_gom.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = '\n')
-cache <- file.path(root, 'source_cache', 'discovery_noaa_atlantic_salmon_2025')
+cache <- file.path(root, 'source_cache/salmo_salar/noaa_atlantic_salmon_2025')
 database <- file.path(cache, 'USASAC_database_2026-05.zip')
 database_hash <- if (.Platform$OS.type == 'windows') {
   result <- system2('certutil.exe', c('-hashfile', normalizePath(database), 'SHA256'), stdout = TRUE)

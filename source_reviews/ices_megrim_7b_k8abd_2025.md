@@ -27,4 +27,4 @@ The assessment reports annual age-1 recruitment, SSB, catch and mean F at ages 3
 
 Identity is provisionally new, screening is complete, and source-curation eligibility remains unresolved. The assessment clearly uses age-disaggregated catch and survey data, and its survey age indices and aggregate official outputs are publicly tabulated. However, the numerical run-matched catch-at-age matrix is not available in the report; the catch-age figures do not supply exact values. The corrected run is described in a review document, and exact linkage between its corrections and the advice assessment key should be confirmed against native files. Do not substitute digitized estimates or model-derived age surfaces for missing original inputs. Further work should seek the underlying InterCatch or assessment data files and verify the current annex and biological vectors before any import. No canonical database data were changed.
 
-The source files and retrieval provenance are in the ignored local cache `source_cache/discovery_ices_megrim_7b_k8abd/`.
+The source files and retrieval provenance are in the ignored local cache `source_cache/ices_megrim_7b_k8abd/`.

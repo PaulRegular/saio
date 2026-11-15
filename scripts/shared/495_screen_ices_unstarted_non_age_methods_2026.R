@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_unstarted_age_audit_2026')
+cache <- file.path(root, 'source_cache/shared/ices_unstarted_age_audit_2026')
 sid_path <- file.path(root, 'source_cache', 'shared/ices_sid', 'stock_list_2026.json')
 sid_hash <- '913D6A3EEAB9449AE3CD0DD15661A150D36FF79B6E6A9BA78D86D46BA1035F42'
 register_path <- file.path(root, 'database/candidates.csv')
@@ -151,7 +151,7 @@ for (i in seq_along(candidate_ids)) {
     decision_reason = reason,
     notes = paste0('Distinct ICES SID stock code and assessment area; assigned provisional candidate unit ',
       unit_id, '. The 2026 SID snapshot and linked Standard Graph are cached under ',
-      'source_cache/discovery_ices_unstarted_age_audit_2026/. No canonical stock, ',
+      'source_cache/shared/ices_unstarted_age_audit_2026/. No canonical stock, ',
       'assessment, input, or output data were added.'))
 
   current <- lapply(names(review), function(column) as.character(candidates[[column]][row]))

@@ -1,6 +1,6 @@
 root <- "."
 cache_dir <- file.path("source_cache", "mycteroperca_microlepis/noaa_gag_gulf_sedar72_srfs_2022")
-manifest_path <- file.path("provenance/noaa_gag_sedar72_2022/sources.csv")
+manifest_path <- file.path("provenance/noaa_gag_gulf_sedar72_srfs_2022/sources.csv")
 stock_id <- "noaa_gag_gulf"
 assessment_id <- "noaa_gag_gulf_sedar72_srfs_2022"
 candidate_id <- "NOAA:10348"

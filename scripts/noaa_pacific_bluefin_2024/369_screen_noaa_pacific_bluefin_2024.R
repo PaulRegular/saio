@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache_dir <- file.path(root, 'source_cache', 'discovery_noaa_pacific_bluefin_2024')
+cache_dir <- file.path(root, 'source_cache/thunnus_orientalis/noaa_pacific_bluefin_2024')
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),
@@ -95,7 +95,7 @@ review <- list(
     'https://isc.fra.go.jp/reports/stock_assessments.html', sep = '; '),
   review_date = '2026-10-30',
   decision_reason = paste('NOAA Stock SMART identifies the 2024 fully accepted SS 3.30 run through 2023, which matches the public ISC 2024 PBFWG benchmark. The fit uses catch totals, size compositions, and annual fishery CPUE indices rather than observed catch-at-age or age-specific abundance observations. It is therefore ineligible for the age-disaggregated input set despite its internal age structure and age-derived outputs.'),
-  notes = paste('NOAA Stock SMART PIFSC ID 11687 represents the single Pacific-wide Thunnus orientalis assessment led through ISC/PBFWG; it is a new crosswalk unit and no canonical record was found. The official ISC catalogue states that native stock-assessment data files require an NDA. The report covers fishing years 1983-2022, ending June 2023. Public assessment report, data-preparation annex, and ISC catalogue are cached with provenance and checksums in source_cache/discovery_noaa_pacific_bluefin_2024/sources.csv. No canonical stock or numerical assessment records were added.')
+  notes = paste('NOAA Stock SMART PIFSC ID 11687 represents the single Pacific-wide Thunnus orientalis assessment led through ISC/PBFWG; it is a new crosswalk unit and no canonical record was found. The official ISC catalogue states that native stock-assessment data files require an NDA. The report covers fishing years 1983-2022, ending June 2023. Public assessment report, data-preparation annex, and ISC catalogue are cached with provenance and checksums in source_cache/thunnus_orientalis/noaa_pacific_bluefin_2024/sources.csv. No canonical stock or numerical assessment records were added.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

@@ -3,7 +3,7 @@ source("scripts/shared/candidate_reports.R", local = TRUE)
 root <- '.'
 candidate_id <- 'ICES:rje.27.7fg'
 unit_id <- 'ices_small_eyed_ray_7fg'
-cache <- file.path(root, 'source_cache', 'discovery_ices_small_eyed_ray_7fg_2026')
+cache <- file.path(root, 'source_cache/raja_microocellata/ices_small_eyed_ray_7fg_2026')
 
 register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

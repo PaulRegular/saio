@@ -53,13 +53,11 @@ stopifnot(nrow(units) == 736L, sum(units$inventory_entries) == 775L)
 
 review_path <- file.path(root, 'source_reviews/noaa_hogfish_sedar94_2026.md')
 stopifnot(file.exists(review_path))
-manifest <- read.csv(file.path(root, 'source_cache',
-  'discovery_noaa_hogfish_sedar94_2026', 'sources.csv'),
+manifest <- read.csv(file.path(root, 'source_cache/lachnolaimus_maximus/noaa_hogfish_sedar94_2026', 'sources.csv'),
   stringsAsFactors = FALSE)
 stopifnot(
   nrow(manifest) == 4L,
   all(grepl('https://', manifest$url, fixed = TRUE)),
   all(grepl('^[0-9A-Fa-f]{64}$', manifest$sha256)),
-  all(file.exists(file.path(root, 'source_cache',
-    'discovery_noaa_hogfish_sedar94_2026', manifest$file)))
+  all(file.exists(file.path(root, 'source_cache/lachnolaimus_maximus/noaa_hogfish_sedar94_2026', manifest$file)))
 )

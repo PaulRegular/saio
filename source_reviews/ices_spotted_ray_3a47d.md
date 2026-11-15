@@ -25,7 +25,7 @@ numerical records were added.
 
 ## Sources
 
-- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 15.9.5, printed pages 291–294. The full report PDF is cached under `source_cache/discovery_ices_dogfish_2025/`; its source manifest records retrieval date, revision, size and checksum.
+- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 15.9.5, printed pages 291–294. The full report PDF is cached under `source_cache/ices_dogfish_2025/`; its source manifest records retrieval date, revision, size and checksum.
 
 The review distinguishes the reported relative biomass and fishing-pressure
 indicators from age-specific population quantities and SSB.

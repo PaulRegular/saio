@@ -26,7 +26,7 @@ candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
 candidate <- candidate[candidate$candidate_id == "NOAA:10390", , drop = FALSE]
 units <- candidate_units()
 unit <- units[!is.na(units$matched_stock_id) & units$matched_stock_id == stock_id, , drop = FALSE]
-manifest <- read.csv("provenance/discovery_noaa_gom_cobia_2020/sources.csv",
+manifest <- read.csv("provenance/noaa_cobia_gulf_mexico_2020_sedar28_update/sources.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 review <- paste(readLines("source_reviews/noaa_gulf_cobia_2020.md",
   warn = FALSE), collapse = " ")

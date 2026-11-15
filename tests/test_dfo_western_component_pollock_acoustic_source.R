@@ -27,7 +27,7 @@ assessment <- subset(read_table("assessments"), assessment_id == assessment_key)
 inputs <- read_assessment_inputs(file.path(root, "database", "inputs.csv"), assessment_key)
 age_index <- subset(inputs, type == "index" & measure == "biomass_at_age" & survey == survey_name)
 total_index <- subset(inputs, type == "index" & measure == "total_biomass" & survey == survey_name)
-source_file <- file.path("..", "..", "discovery_dfo_western_pollock_2022",
+source_file <- file.path("source_cache/pollachius_virens/dfo_western_component_pollock_2022_j_m4b",
   "dfo_western_pollock_2026_029_table10_acoustic_biomass_at_age.csv")
 if (!file.exists(source_file)) {
   source_file <- file.path(root, "source_cache", "pollachius_virens/dfo_western_component_pollock_2022_j_m4b",

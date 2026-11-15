@@ -71,7 +71,7 @@ review <- list(
     'as the current production run. Canada is an ISC member and contributes fishery',
     'data to this shared assessment; DFO and NOAA entries are one biological unit,',
     'not two stocks. The official report is cached under',
-    'source_cache/discovery_north_pacific_albacore/ with its retrieval date, pinned',
+    'source_cache/thunnus_alalunga/isc_north_pacific_albacore/ with its retrieval date, pinned',
     'revision and SHA-256. ISC stock-assessment data files require an access request;'
     ,'the public report is the reviewed evidence.'
   )

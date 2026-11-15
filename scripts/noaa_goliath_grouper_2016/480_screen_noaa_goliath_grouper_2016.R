@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_goliath_grouper_2016')
+cache <- file.path(root, 'source_cache/epinephelus_itajara/noaa_goliath_grouper_2016')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_ids <- c('NOAA:10315', 'NOAA:11042')
 candidate_unit_id <- 'noaa_goliath_grouper_southeastern_us_2016'

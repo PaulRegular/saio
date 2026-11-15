@@ -13,7 +13,7 @@ unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_northeast_skate_complex', , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews/noaa_nefsc_skate_complex_2023.md'), warn = FALSE), collapse = ' ')
 
-source_cache <- file.path(root, 'source_cache', 'discovery_noaa_nefsc_skates_2023')
+source_cache <- file.path(root, 'source_cache/shared/noaa_nefsc_skates_2023')
 manifest <- read.csv(file.path(source_cache, 'sources.csv'), stringsAsFactors = FALSE,
   check.names = FALSE)
 sha256_file <- function(path) {

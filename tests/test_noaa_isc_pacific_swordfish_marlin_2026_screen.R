@@ -15,7 +15,7 @@ ids <- c('NOAA:11642', 'NOAA:11643', 'NOAA:11692', 'NOAA:11706')
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
 expected_units <- c('noaa_wcnpo_swordfish', 'noaa_eastern_pacific_swordfish',
   'isc_wcnpo_striped_marlin', 'isc_pacific_blue_marlin')
-cache <- file.path(root, 'source_cache', 'discovery_noaa_pacific_billfish_2026')
+cache <- file.path(root, 'source_cache/shared/noaa_pacific_billfish_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 expected_files <- c('isc14_np_swordfish_2014.pdf',
   'isc23_north_pacific_swordfish_2023.pdf',

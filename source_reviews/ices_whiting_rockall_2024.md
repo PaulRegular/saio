@@ -33,6 +33,6 @@ numerical input/output records were added.
 
 The advice and Standard Graphs pages were retrieved on 2026-10-30 and cached
 with SHA-256 checksums in
-`source_cache/discovery_ices_whiting_rockall_2024/sources.csv`. The WGCSE
+`source_cache/merlangius_merlangus/ices_whiting_rockall_2024/sources.csv`. The WGCSE
 report and checksum are recorded in
 `source_cache/shared/ices_wgbie_2026/sources.csv`.

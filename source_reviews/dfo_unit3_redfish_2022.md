@@ -21,4 +21,4 @@ The 2015 framework proceedings document data review and exploratory modelling, b
 - [DFO 2024 Sustainability Survey](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/survey-sondage/index-en.html)
 - [DFO 2026-2027 work plan](https://www.dfo-mpo.gc.ca/about-notre-sujet/publications/work-plan-travail/2026-2027/wp-pt-eng.html)
 
-The assessment update and framework proceedings are cached with retrieval dates and SHA-256 checksums under source_cache/discovery_dfo_unit3_redfish_2022/.
+The assessment update and framework proceedings are cached with retrieval dates and SHA-256 checksums under source_cache/dfo_unit3_redfish_2022/.

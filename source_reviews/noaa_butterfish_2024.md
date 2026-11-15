@@ -45,4 +45,4 @@ The canonical assessment is therefore partial: recoverable inputs and outputs ar
 - 2026 MAFMC stock-status summary: [Stock-status PDF](https://static1.squarespace.com/static/511cdc7fe4b00307a2628ac6/t/6a22f8f34ed3ff7106e06f41/1780676852144/00_Stock-Status-2026-06.pdf).
 - Butterfish 2021 Research Track Assessment Report, consulted for the assessment's lineage and prior methods: [SASINF PDF](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2022&species_id=16&stock_id=6&review_type_id=5&info_type_id=5&map_type_id=&filename=Butterfish_2021_Assessment_Report.pdf). Older-run numerical values were not used to fill 2024 gaps.
 
-Source-file URLs, retrieval dates, revisions, and SHA-256 checksums are recorded in `provenance/discovery_noaa_butterfish_2024/sources.csv`; the downloaded files are in the ignored local source cache.
+Source-file URLs, retrieval dates, revisions, and SHA-256 checksums are recorded in `provenance/noaa_butterfish_gom_cape_hatteras_2024/sources.csv`; the downloaded files are in the ignored local source cache.

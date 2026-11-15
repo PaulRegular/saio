@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache', 'discovery_noaa_nefsc_fall_2022')
+cache <- file.path(root, 'source_cache/lophius_americanus/noaa_nefsc_fall_2022')
 mirror_file <- 'FallMT2022_text_mirror.html'
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -139,7 +139,7 @@ for (j in seq_along(rows)) {
   register$decision_reason[i] <- paste0(
     'The latest official 2022 operational assessment is an Ismooth management-track update because a reliable aging method was unavailable for an analytical assessment. Its model inputs and outputs are aggregate catch and survey indices with catch advice multipliers, not age-disaggregated population inputs or outputs. Ineligible for the age-disaggregated comparison; this does not claim that biological age samples do not exist.')
   register$notes[i] <- paste0(
-    'NOAA Stock SMART IDs 10500 and 10501 represent distinct Northern and Southern Monkfish management units, reported in Stock SMART as Goosefish. The latest rows are 2022 operational assessments; Stock SMART labels both rows Full acceptance; its model-category and composition scores are inventory metadata and do not establish an age-structured assessment. The report uses the name Lophius americanus. The official PDF remote checksum and the separately checksummed public HTML text mirror are recorded in the ignored shared cache at source_cache/discovery_noaa_nefsc_fall_2022; the PDF download was denied in this session. The 2022 report updates the 2019 Ismooth/Plan B approach. No canonical numerical records were added.')
+    'NOAA Stock SMART IDs 10500 and 10501 represent distinct Northern and Southern Monkfish management units, reported in Stock SMART as Goosefish. The latest rows are 2022 operational assessments; Stock SMART labels both rows Full acceptance; its model-category and composition scores are inventory metadata and do not establish an age-structured assessment. The report uses the name Lophius americanus. The official PDF remote checksum and the separately checksummed public HTML text mirror are recorded in the ignored shared cache at source_cache/lophius_americanus/noaa_nefsc_fall_2022; the PDF download was denied in this session. The 2022 report updates the 2019 Ismooth/Plan B approach. No canonical numerical records were added.')
 }
 
 source(file.path(root, 'scripts/shared/candidate_register_io.R'))

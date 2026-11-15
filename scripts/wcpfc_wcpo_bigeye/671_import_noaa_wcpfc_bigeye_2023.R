@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "wcpfc_wcpo_bigeye"
 assessment_id <- "wcpfc_wcpo_bigeye_2023"
 candidate_id <- "NOAA:11684"
-cache_name <- "discovery_noaa_wcpfc_bigeye_2026"
+cache_name <- "thunnus_obesus/noaa_wcpfc_bigeye_2026"
 revision <- "81fc412ad1f36416f78f84ef6bd2d5dff68d14c8"
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 
@@ -10,13 +10,12 @@ dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
 cache_options <- c(
-  file.path(root, "source_cache", cache_name),
-  file.path(dirname(dirname(normalizePath(root))), cache_name)
+  file.path(root, "source_cache", cache_name)
 )
 cache_options <- cache_options[dir.exists(cache_options)]
 if (!length(cache_options)) stop("Pinned WCPFC bigeye cache is required.", call. = FALSE)
 cache <- normalizePath(cache_options[[1L]], winslash = "/")
-manifest_path <- file.path(root, "provenance", cache_name, "sources.csv")
+manifest_path <- file.path(root, "provenance/noaa_wcpfc_bigeye_2026", "sources.csv")
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")
 

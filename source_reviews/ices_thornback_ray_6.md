@@ -35,5 +35,5 @@ assessment, input, or output records were added.
 | [ICES Standard Graphs XML](https://sg.ices.dk/SAG_API/StockXmlDownload/25842) | Machine-readable age fields and method metadata |
 
 The files were retrieved on 2026-10-31 and cached under
-`source_cache/discovery_ices_thornback_ray_6_2026/`. The local `sources.csv`
+`source_cache/raja_clavata/ices_thornback_ray_6_2026/`. The local `sources.csv`
 manifest records URLs, revisions, byte sizes, and SHA-256 checksums.

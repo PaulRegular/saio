@@ -23,4 +23,4 @@ Accordingly, all three units are **screened with eligibility unresolved**. The e
 - [SASI support portal](https://apps-nefsc.fisheries.noaa.gov/saw/sasi.php)
 - [Final Amendment 25 environmental assessment](https://repository.library.noaa.gov/view/noaa/73154/noaa_73154_DS1.pdf)
 
-The three 2024 support ZIPs, individual reports and final peer-review report are cached under `source_cache/noaa_cod_new_units_2024/`; `sources.csv` records retrieval dates and SHA-256 checksums. The NOAA institutional repository denied direct download of the 247-page Amendment 25 PDF in this session; its source link is retained in the candidate record and this review.
+The three 2024 support ZIPs, individual reports and final peer-review report are cached under `source_cache/gadus_morhua/noaa_cod_new_units_2024/`; `sources.csv` records retrieval dates and SHA-256 checksums. The NOAA institutional repository denied direct download of the 247-page Amendment 25 PDF in this session; its source link is retained in the candidate record and this review.

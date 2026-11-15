@@ -50,5 +50,5 @@ canonical stock, assessment event, or numerical input/output rows were added.
 - NOAA Stock SMART metadata snapshot: assessment 13484, data through 2023, PIFSC, fully accepted.
 
 The three public files are cached in the ignored local directory
-`source_cache/discovery_noaa_pacific_bluefin_2024/`. The manifest records
+`source_cache/thunnus_orientalis/noaa_pacific_bluefin_2024/`. The manifest records
 their source URLs, retrieval date, and SHA-256 checksums.

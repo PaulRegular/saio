@@ -56,6 +56,6 @@ trajectories, reference points and stock-status diagnostics.
 - [NOAA Stock SMART row 10063](https://apps-st.fisheries.noaa.gov/stocksmart/?stockid=10063)
 
 The report and supporting PDFs are cached locally in
-`source_cache/discovery_noaa_south_atlantic_gray_triggerfish_2024/`; the
+`source_cache/balistes_capriscus/noaa_south_atlantic_gray_triggerfish_2024/`; the
 ignored `sources.csv` manifest records URLs, retrieval date, checksums and
 descriptions. No canonical assessment values were imported.

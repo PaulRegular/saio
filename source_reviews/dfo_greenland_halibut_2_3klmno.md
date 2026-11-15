@@ -57,7 +57,7 @@ The SCAA and SSM events are separate fits with distinct input series, assumption
 - [2017 SCAA framework, SCR Doc. 17/002](https://www.nafo.int/Portals/0/PDFs/sc/2017/scr17-002.pdf)
 - [2024 management procedure, CEM Doc. 24-01REV](https://www.nafo.int/Portals/0/PDFs/com/2024/comdoc24-01REV.pdf)
 
-The local, gitignored cache is `source_cache/discovery_dfo_greenland_halibut_2_3klmno_2025/`. Source URLs, retrieval dates and SHA-256 checksums are recorded in `provenance/discovery_dfo_greenland_halibut_2_3klmno_2025/sources.csv`.
+The local, gitignored cache is `source_cache/reinhardtius_hippoglossoides/dfo_greenland_halibut_2_3klmno_2025/`. Source URLs, retrieval dates and SHA-256 checksums are recorded in `provenance/dfo_greenland_halibut_2_3klmno_2025/sources.csv`.
 
 ## Greenland halibut, NAFO Subarea 2 + Divisions 3KLMNO
 
@@ -105,4 +105,4 @@ The 2023 SSM record is a historical age-structured assessment, distinct from cur
 - [2023 updated SSM, NAFO SCR Doc. 23/014](https://www.nafo.int/Portals/0/PDFs/sc/2023/scr23-014.pdf)
 - [2023 updated SCAA base case, NAFO SCR Doc. 23/008REV](https://www.nafo.int/Portals/0/PDFs/sc/2023/scr23-008REV.pdf)
 
-Retrieved PDFs, source URLs, retrieval dates, and SHA-256 checksums are stored in the gitignored local cache `source_cache/discovery_dfo_greenland_halibut_2_3klmno_2025/`.
+Retrieved PDFs, source URLs, retrieval dates, and SHA-256 checksums are stored in the gitignored local cache `source_cache/reinhardtius_hippoglossoides/dfo_greenland_halibut_2_3klmno_2025/`.

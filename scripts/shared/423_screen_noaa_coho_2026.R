@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache', 'discovery_noaa_coho_2026')
+cache <- file.path(root, 'source_cache/oncorhynchus_kisutch/noaa_coho_2026')
 
 stock_ids <- c(10581:10593, 10596:10600)
 expected_models <- c('Cohort Analysis', 'Escapement Index', rep('Cohort Analysis', 3),
@@ -151,7 +151,7 @@ for (j in seq_along(rows)) {
   register$decision_reason[i] <- paste0(
     'Ineligible for the age-disaggregated assessment set. The latest operational record is the 2026 Coho assessment using data through 2025. Some Stock SMART metadata indicate size/age composition data were used, but no multi-age likelihood vectors or population surfaces are published. The FRAM run database and supporting files are password-protected; their absence from public sources is recorded as a source limitation, not proof that underlying biological samples do not exist.')
   register$notes[i] <- paste0(
-    'NOAA Stock SMART stock ID ', stock_id, ' is a distinct U.S. coho management unit (Oncorhynchus kisutch), not a one-to-one match to the DFO Interior Fraser or North Coast coho candidates. Several NOAA forecast components share a broader OPI or regional forecast and remain distinct inventory units. Source PDFs and FRAM documentation are cached under source_cache/discovery_noaa_coho_2026/sources.csv with retrieval dates and SHA-256 checksums. FRAM documentation states only age-3 fish are modeled; annual run database files are hosted in a password-protected NWIFC section. No canonical assessment or numerical records were added.')
+    'NOAA Stock SMART stock ID ', stock_id, ' is a distinct U.S. coho management unit (Oncorhynchus kisutch), not a one-to-one match to the DFO Interior Fraser or North Coast coho candidates. Several NOAA forecast components share a broader OPI or regional forecast and remain distinct inventory units. Source PDFs and FRAM documentation are cached under source_cache/oncorhynchus_kisutch/noaa_coho_2026/sources.csv with retrieval dates and SHA-256 checksums. FRAM documentation states only age-3 fish are modeled; annual run database files are hosted in a password-protected NWIFC section. No canonical assessment or numerical records were added.')
 }
 
 source(file.path(root, 'scripts/shared/candidate_register_io.R'))

@@ -26,8 +26,7 @@ stopifnot(file.exists(review),
   grepl('commercial age compositions were not used',
     paste(readLines(review, warn = FALSE), collapse = ' '), ignore.case = TRUE))
 
-cache <- file.path(root, 'source_cache',
-  'discovery_noaa_sedar_current_assessments_2026')
+cache <- file.path(root, 'source_cache/rachycentron_canadum/noaa_sedar_current_assessments_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 report <- manifest[manifest$file == 'sedar58_atlantic_cobia_2020.pdf', , drop = FALSE]
 stopifnot(nrow(report) == 1L, report$status == 'downloaded',

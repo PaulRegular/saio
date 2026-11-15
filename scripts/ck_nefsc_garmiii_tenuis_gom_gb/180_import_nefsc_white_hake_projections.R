@@ -1,5 +1,5 @@
 base <- "."
-.local_library <- file.path(base, "source_cache", "Rlibrary")
+.local_library <- file.path(base, "source_cache/urophycis_tenuis/Rlibrary")
 if (dir.exists(.local_library)) .libPaths(c(.local_library, .libPaths()))
 database <- file.path(base, "database")
 cache <- file.path(base, "source_cache", "urophycis_tenuis/ck_nefsc_garmiii_tenuis_gom_gb")

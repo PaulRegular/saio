@@ -76,7 +76,7 @@ review <- list(
     '2025/023 updates indicators to 2024. Five 3KLPs complexes are WBNDB, BBTB,',
     'CBSS, SMBPB and FB; spring/fall spawning components occur within complexes.',
     'See source_reviews/dfo_newfoundland_and_labrador_atlantic_herring_nafo_2j3klps.md. Source PDFs and',
-    'checksums are cached locally under discovery_dfo_nl_herring_2025/.'
+    'checksums are cached locally under source_cache/clupea_harengus/dfo_nl_herring_2025/.'
   )
 )
 

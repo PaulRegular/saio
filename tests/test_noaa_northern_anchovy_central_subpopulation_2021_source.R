@@ -37,7 +37,7 @@ assessments <- read_columns("database/assessments.csv", c("assessment_id",
 candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- candidate_units()
-manifest <- read.csv("provenance/discovery_noaa_anchovy_2021/sources.csv",
+manifest <- read.csv("provenance/noaa_anchovy_2021/sources.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

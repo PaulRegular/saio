@@ -16,7 +16,7 @@ The candidate is therefore **screened, with eligibility unresolved**. The age-sp
 
 ## Sources cached locally
 
-The ignored local cache is `source_cache/discovery_ices_barents_capelin_2026/`. Its `sources.csv` records retrieval date, URLs, revision, byte size and SHA-256 checksums for:
+The ignored local cache is `source_cache/mallotus_villosus/ices_barents_capelin_2026/`. Its `sources.csv` records retrieval date, URLs, revision, byte size and SHA-256 checksums for:
 
 - the 2026 JRN-AFWG overview, assessment page and 2027 advice page;
 - the 2023 ICES WKCAPELIN benchmark report;

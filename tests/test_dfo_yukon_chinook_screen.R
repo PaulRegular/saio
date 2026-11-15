@@ -33,7 +33,7 @@ stopifnot(
   grepl('complete, run-matched numeric N/F/M-at-age tables', review, fixed = TRUE)
 )
 
-cache <- 'source_cache/discovery_dfo_yukon_chinook_2024_2026'
+cache <- 'source_cache/oncorhynchus_tshawytscha/dfo_yukon_chinook_2024_2026'
 manifest_path <- file.path(cache, 'sources.csv')
 if (file.exists(manifest_path)) {
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE)

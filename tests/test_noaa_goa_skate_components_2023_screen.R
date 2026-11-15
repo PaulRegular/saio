@@ -11,7 +11,7 @@ units_goa <- units[units$candidate_unit_id %in% c('noaa_goa_other_skates',
 progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 afsc <- noaa[noaa$source_region == 'AFSC', , drop = FALSE]
-cache <- file.path(root, 'source_cache', 'discovery_noaa_goa_skates_2023_2026')
+cache <- file.path(root, 'source_cache/shared/noaa_goa_skates_2023_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 review <- paste(readLines(file.path(root, 'source_reviews/shared/noaa_goa_skate_component_crosswalk_2023.md'), warn = FALSE), collapse = '\n')

@@ -43,4 +43,4 @@ Sources:
 - [NOAA Black Sea Bass resources](https://www.fisheries.noaa.gov/species/black-sea-bass/resources), current public stock-status page.
 
 The SEDAR 76 Update is cached with size and SHA-256 in the ignored local
-`source_cache/discovery_noaa_black_sea_bass_2025/sources.csv`.
+`source_cache/shared/noaa_black_sea_bass_2025/sources.csv`.

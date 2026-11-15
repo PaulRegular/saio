@@ -14,7 +14,7 @@ register <- read_table('database/candidates.csv')
 ids <- c('NOAA:11026', 'NOAA:11027')
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
 expected_units <- c('noaa_atlantic_blacktip_shark', 'noaa_gulf_blacktip_shark')
-cache <- file.path(root, 'source_cache', 'discovery_noaa_blacktip_2026')
+cache <- file.path(root, 'source_cache/carcharhinus_limbatus/noaa_blacktip_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 expected_files <- c('sedar65_atlantic_blacktip_2020.pdf',
   'sedar29_gom_blacktip_2018_update.pdf',

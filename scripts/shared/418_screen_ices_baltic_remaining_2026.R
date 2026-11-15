@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_baltic_current_reports_2026')
+cache <- file.path(root, 'source_cache/shared/ices_baltic_current_reports_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 
 sources <- data.frame(
@@ -127,7 +127,7 @@ review_values <- lapply(seq_len(nrow(screens)), function(i) list(
   timing_evidence = 'No age-specific abundance survey suitable for specifying a within-year observation timing was verified.',
   output_evidence = output_text[i], detailed_source_url = screens$detailed_source_url[i],
   review_date = '2026-10-30', decision_reason = reasons[i],
-  notes = paste0('Identity and current assessment status were checked against the 2026 ICES SID inventory and the relevant latest detailed working-group report. In 2026, WGBAST conducted benchmark work and no new salmon or trout assessment; WGBFAS conducted 2026 updates for dab and brill. Cached reports, URLs, retrieval dates, sizes, and SHA-256 values are recorded in source_cache/discovery_ices_baltic_current_reports_2026/sources.csv. No canonical assessment, input, or output records were added.')
+  notes = paste0('Identity and current assessment status were checked against the 2026 ICES SID inventory and the relevant latest detailed working-group report. In 2026, WGBAST conducted benchmark work and no new salmon or trout assessment; WGBFAS conducted 2026 updates for dab and brill. Cached reports, URLs, retrieval dates, sizes, and SHA-256 values are recorded in source_cache/shared/ices_baltic_current_reports_2026/sources.csv. No canonical assessment, input, or output records were added.')
 ))
 
 is_initial <- register$match_status[rows] == 'unreviewed' &

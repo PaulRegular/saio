@@ -10,7 +10,7 @@ The tables report catches by sea age, including 1SW and 2SW, for 1980-2025, and 
 
 sal.nac.all and sal.neac.all are distinct official ICES stock keys, represented by the same joint WGNAS 2026 assessment and online report. Both now have partial source imports; see source_reviews/ices_salmo_salar_nac.md and source_reviews/ices_salmo_salar_neac.md. No exact canonical stock match existed before this import. sal.wgc.all is the West Greenland mixed-stock fishery affecting NAC and NEAC populations, not a separate biological stock.
 
-Current WGNAS sources are cached under the gitignored source_cache/discovery_ices_wgnas_2026/. sources.csv records URLs, retrieval dates, sizes, DOI where available, and SHA-256. The 2025 WGNAS report and advice are retained as historical material, superseded by 2026.
+Current WGNAS sources are cached under the gitignored source_cache/shared/ices_wgnas_2026/. sources.csv records URLs, retrieval dates, sizes, DOI where available, and SHA-256. The 2025 WGNAS report and advice are retained as historical material, superseded by 2026.
 
 ## Anglerfish: anf.27.1-2
 

@@ -11,7 +11,7 @@ outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors
   na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:pol.27.3a4', , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews/ices_pollack_3a4.md'), warn = FALSE), collapse = ' ')
-cache <- file.path(root, 'source_cache', 'discovery_ices_pollack_3a4_2024')
+cache <- file.path(root, 'source_cache/pollachius_pollachius/ices_pollack_3a4_2024')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 files <- c('ICES_stock_graphs_2024_key_19286.html',
   'ICES_source_data_2024_key_19286.html', 'ICES_advice_2024_record_3768.html')

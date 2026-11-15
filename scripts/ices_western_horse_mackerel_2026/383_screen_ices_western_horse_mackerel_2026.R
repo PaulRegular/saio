@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_western_horse_mackerel_2026')
+cache <- file.path(root, 'source_cache/trachurus_trachurus/ices_western_horse_mackerel_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:hom.27.2a3a4a5b6a7a-ce-k8'
 unit_id <- 'ices_western_horse_mackerel_ne_atlantic'
@@ -97,7 +97,7 @@ review <- list(
     'Division 3.a and superseded the prior code hom.27.2a4a5b6a7a-ce-k8 in 2024. The database records',
     'for southern horse mackerel in 9.a and North Sea horse mackerel in 4.b/4.c/7.d are distinct units.',
     '2025 report, current advice, SAG source table, retrieval dates, sizes, and SHA-256 hashes are cached',
-    'under source_cache/discovery_ices_western_horse_mackerel_2026/. No canonical records or translation',
+    'under source_cache/trachurus_trachurus/ices_western_horse_mackerel_2026/. No canonical records or translation',
     'were added; do not use 2025 run values to fill current 2026 gaps.'))
 
 initial <- register$match_status[row] == 'unreviewed' &&

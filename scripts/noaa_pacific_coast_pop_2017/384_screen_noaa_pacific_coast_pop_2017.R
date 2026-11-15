@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_pacific_coast_pop_2017')
+cache <- file.path(root, 'source_cache/sebastes_alutus/noaa_pacific_coast_pop_2017')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10545'
 unit_id <- 'noaa_pacific_coast_pop_uswc'
@@ -93,7 +93,7 @@ review <- list(
     'Pacific ocean perch. Do not treat projections reported for years after 2017 as later assessments.',
     'The base model fixed steepness at 0.72; the report discusses large sensitivity to this assumption.',
     'No canonical records were added. Cached source files and checksums are listed in',
-    'source_cache/discovery_noaa_pacific_coast_pop_2017/sources.csv.'))
+    'source_cache/sebastes_alutus/noaa_pacific_coast_pop_2017/sources.csv.'))
 
 initial <- register$match_status[row] == 'unreviewed' &&
   register$screening_status[row] == 'not_started' && register$eligibility[row] == 'unresolved' &&

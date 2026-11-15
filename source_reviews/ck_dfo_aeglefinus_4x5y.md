@@ -13,7 +13,7 @@ The most recent detailed production assessment recovered is the 2016 ADAPT VPA, 
 - DFO Research Document 2025/020, framework data-input review: https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41290562.pdf
 - DFO Research Document 2025/064, operating-model specification and MSE: https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41306430.pdf
 
-PDF copies, retrieval date, URLs, and SHA-256 checksums are recorded in the gitignored `source_cache/ck_dfo_aeglefinus_4x5y_2016/sources.csv` and `source_cache/ck_dfo_aeglefinus_4x5y_2024/sources.csv` files. The cached 2016 assessment tables were checked against the framework report where the printed assessment table contained a transcription issue. No applied ADAPT input file or native fitted object was identified in the official material reviewed.
+PDF copies, retrieval date, URLs, and SHA-256 checksums are recorded in the gitignored `source_cache/melanogrammus_aeglefinus/dfo_haddock_4x5y_2016/sources.csv` and `source_cache/melanogrammus_aeglefinus/dfo_haddock_4x5y_2024_summary/sources.csv` files. The cached 2016 assessment tables were checked against the framework report where the printed assessment table contained a transcription issue. No applied ADAPT input file or native fitted object was identified in the official material reviewed.
 
 ## Inputs and model structure
 

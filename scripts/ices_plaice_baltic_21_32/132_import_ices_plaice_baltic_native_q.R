@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "ices_plaice_baltic_21_32_2026")
+cache <- file.path(root, "source_cache/pleuronectes_platessa/ices_plaice_baltic_21_32_2026")
 model_url <- paste0(
   "https://stockassessment.org/datadisk/stockassessment/userdirs/user3/",
   "ple.27.21.32_WGBFAS_2026_SA/run/model.RData"

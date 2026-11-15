@@ -11,12 +11,11 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
 
 source("scripts/shared/candidate_register_io.R")
 manifest <- read.csv(
-  "provenance/discovery_noaa_satl_red_snapper_2024/sources.csv",
+  "provenance/noaa_south_atlantic_red_snapper_2024/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character"
 )
 cache_options <- c(
-  file.path("source_cache", "discovery_noaa_satl_red_snapper_2024"),
-  file.path("..", "..", "discovery_noaa_satl_red_snapper_2024")
+  file.path("source_cache/lutjanus_campechanus/noaa_south_atlantic_red_snapper_2024")
 )
 source_dir <- cache_options[
   vapply(cache_options, function(x) file.exists(file.path(x, "sources.csv")), logical(1))

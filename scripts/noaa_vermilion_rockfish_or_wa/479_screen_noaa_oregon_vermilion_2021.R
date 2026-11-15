@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_oregon_vermilion_2021')
+cache <- file.path(root, 'source_cache/sebastes_miniatus/noaa_oregon_vermilion_2021')
 register_path <- file.path(root, 'database/candidates.csv')
 
 sha256_file <- function(path) {

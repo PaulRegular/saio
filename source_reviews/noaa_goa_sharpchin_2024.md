@@ -16,4 +16,4 @@ No annual catch-at-age, age-specific abundance index, weight-at-age, maturity-at
 - [NPFMC SSC draft report, December 2025](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=Draft+SSC+Report+Dec+2025.pdf&p=74322a78-4de1-451c-a10f-13b11286f8b9.pdf), confirmation that no 2025 assessment update was conducted.
 - NOAA Stock SMART source snapshot: `source_cache/shared/noaa_stocksmart/stock_assessment_summary.rda`, assessment 13120.
 
-The PDFs are cached in the gitignored `source_cache/discovery_noaa_sharpchin_goa_2024/`; retrieval date, file size, revision description and SHA-256 checksum are recorded in its `sources.csv` manifest.
+The PDFs are cached in the gitignored `source_cache/sebastes_zacentrus/noaa_sharpchin_goa_2024/`; retrieval date, file size, revision description and SHA-256 checksum are recorded in its `sources.csv` manifest.

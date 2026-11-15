@@ -34,5 +34,5 @@ Sources:
 
 The peer-review report and draft summary are cached with size and SHA-256 in
 the ignored local
-`source_cache/discovery_noaa_black_sea_bass_2025/sources.csv`. The draft is
+`source_cache/shared/noaa_black_sea_bass_2025/sources.csv`. The draft is
 retained only as a clearly labeled summary, not as the final assessment report.

@@ -10,12 +10,11 @@ if (!requireNamespace("pdftools", quietly = TRUE)) {
 }
 
 cache_candidates <- c(
-  file.path(root, "source_cache", "discovery_noaa_goa_rex_2026"),
-  file.path(root, "..", "..", "discovery_noaa_goa_rex_2026")
+  file.path(root, "source_cache/glyptocephalus_zachirus/noaa_goa_rex_2026")
 )
 cache <- cache_candidates[dir.exists(cache_candidates)][1L]
 if (is.na(cache)) stop("The gitignored GOA rex sole source cache is missing.", call. = FALSE)
-manifest_path <- file.path(root, "provenance", "discovery_noaa_goa_rex_2026", "sources.csv")
+manifest_path <- file.path(root, "provenance/noaa_goa_rex_2026/sources.csv")
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE)
 

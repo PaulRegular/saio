@@ -16,7 +16,7 @@ outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 bsai_review <- paste(readLines(file.path(root, 'source_reviews/noaa_bsai_shortraker.md'), warn = FALSE), collapse = ' ')
 goa_review <- paste(readLines(file.path(root, 'source_reviews/noaa_goa_shortraker.md'), warn = FALSE), collapse = ' ')
-manifest <- read.csv(file.path(root, 'source_cache', 'discovery_noaa_shortraker_2023_2025',
+manifest <- read.csv(file.path(root, 'source_cache/shared/noaa_shortraker_2023_2025',
   'sources.csv'), stringsAsFactors = FALSE)
 
 stopifnot(
@@ -43,7 +43,7 @@ stopifnot(
   grepl('few fishery age samples had not been aged', goa_review, fixed = TRUE),
   grepl('not age-composition likelihood inputs', goa_review, fixed = TRUE),
   nrow(manifest) == 5L,
-  all(file.exists(file.path(root, 'source_cache', 'discovery_noaa_shortraker_2023_2025',
+  all(file.exists(file.path(root, 'source_cache/shared/noaa_shortraker_2023_2025',
     manifest$file))),
   any(grepl('NOAA:10553', units$candidate_ids, fixed = TRUE)),
   any(grepl('NOAA:10554', units$candidate_ids, fixed = TRUE)),

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_greenland_cod_2026')
+cache <- file.path(root, 'source_cache/shared/ices_greenland_cod_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   check.names = FALSE)
@@ -85,7 +85,7 @@ reviews <- list(
       'and reports comparable population and fishing-mortality outputs.'),
     notes = paste0('Current unit cod.21.1.osc is the West Greenland offshore spawning stock. The official ',
       '2026 NWWG report describes a 2000-2025 SAM run and identifies NWWG26_WOSC_v1. The report and ',
-      'stock-specific chapter are cached under source_cache/discovery_ices_greenland_cod_2026/. Exact ',
+      'stock-specific chapter are cached under source_cache/shared/ices_greenland_cod_2026/. Exact ',
       'input matrices, index timing fractions, and fitted age-surface extraction remain unverified; no ',
       'canonical data was added.')),
   'ICES:cod.21.1.isc' = list(
@@ -120,7 +120,7 @@ reviews <- list(
       'its 2026 updated model was not accepted, and its catch-at-age, weights-at-age, and gillnet series ',
       'are not used for advice. N-WISC output reference in the report is NWWG25_N-WISC despite 2026 ',
       'assessment reporting; verify exact run/data revision during curation. Source chapters are cached ',
-      'under source_cache/discovery_ices_greenland_cod_2026/. No canonical data or translation added.')),
+      'under source_cache/shared/ices_greenland_cod_2026/. No canonical data or translation added.')),
   'ICES:cod.21.27.1.14' = list(
     candidate_unit_id = 'ices_cod_east_greenland_iceland_offshore', match_status = 'new',
     matched_stock_id = NA_character_, screening_status = 'screened', eligibility = 'ineligible',
@@ -145,7 +145,7 @@ reviews <- list(
       'still preserve verified current-unit inputs or partial outputs under PROTOCOL.md, but the reported ',
       'assessment does not provide defensible comparable model outputs for the proposed age-based batch. ',
       'NWWG 2026 chapter 16 and the official advice page are cached under ',
-      'source_cache/discovery_ices_greenland_cod_2026/. No canonical data or translation added.'))
+      'source_cache/shared/ices_greenland_cod_2026/. No canonical data or translation added.'))
 )
 
 candidates <- read.csv(register_path, stringsAsFactors = FALSE,

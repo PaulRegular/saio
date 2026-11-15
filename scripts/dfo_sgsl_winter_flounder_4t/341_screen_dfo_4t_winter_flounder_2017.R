@@ -1,6 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache',
-  'discovery_dfo_4t_winter_flounder_2019')
+cache <- file.path(root, 'source_cache/pseudopleuronectes_americanus/dfo_4t_winter_flounder_2019')
 candidate_path <- file.path(root, 'database/candidates.csv')
 
 sources <- data.frame(

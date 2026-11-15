@@ -282,7 +282,7 @@ source_review <- paste(
   "- IFOP, 2026 report catalogue: <https://www.ifop.cl/buscador-2026/>",
   "- IFOP, current projects: <https://www.ifop.cl/nuestro-que-hacer/la-investigacion-pesquera/planificacion-estrategica/>",
   "",
-  "Assessment reports, the direct survey report, and the annex archive are cached under source_cache/chile_merluza_comun_2026/ and source_cache/discovery_chile_merluza_comun_2026/. Retrieval dates, URLs, file sizes, and SHA-256 checksums are recorded in provenance/ifop_merluza_comun_2026/sources.csv.",
+  "Assessment reports, the direct survey report, and the annex archive are cached under source_cache/chile_merluza_comun_2026/ and source_cache/merluccius_gayi/ifop_merluza_comun_2026/. Retrieval dates, URLs, file sizes, and SHA-256 checksums are recorded in provenance/ifop_merluza_comun_2026/sources.csv.",
   sep = "\n"
 )
 

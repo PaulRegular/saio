@@ -12,7 +12,7 @@ source(file.path(root, 'scripts/noaa_gulf_smoothhound_sedar39_2015/533_screen_no
 
 register <- read_table('database/candidates.csv')
 row <- register[register$candidate_id == 'NOAA:14230', , drop = FALSE]
-cache <- file.path(root, 'source_cache', 'discovery_noaa_smoothhound_2026')
+cache <- file.path(root, 'source_cache/shared/noaa_smoothhound_2026')
 file <- 'sedar39_gulf_smoothhound_2015.pdf'
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 source_row <- manifest[manifest$file == file, , drop = FALSE]

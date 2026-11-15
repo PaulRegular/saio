@@ -123,5 +123,5 @@ remain available only as figures and are not inferred from the plots.
 
 The final report and supporting PDFs are cached locally in
 `source_cache/noaa_gray_triggerfish_gulf_sedar100_20261111/`. The tracked
-manifest at `provenance/discovery_noaa_gulf_gray_triggerfish_2026/sources.csv`
+manifest at `provenance/noaa_gulf_gray_triggerfish_sedar100_2026/sources.csv`
 records each source URL, retrieval date, checksum, local cache filename, and byte size.

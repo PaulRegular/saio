@@ -26,4 +26,4 @@ Keep the candidate screened and ineligible for the age-disaggregated assessment 
 - [ICCAT, Report of the 2020 Porbeagle Shark Stock Assessment Meeting, SCRS/2020/008](https://www.iccat.int/Documents/CVSP/CV077_2020/n_6/CV077060001.pdf).
 - [ICCAT, 2024-2025 Porbeagle Executive Summary](https://www.iccat.int/Documents/SCRS/ExecSum/POR_ENG.pdf).
 
-The official PDFs, retrieval dates, revision descriptions, source URLs, and SHA-256 checksums are recorded in the gitignored local cache at `source_cache/noaa_northwest_atlantic_porbeagle_2020/sources.csv`.
+The official PDFs, retrieval dates, revision descriptions, source URLs, and SHA-256 checksums are recorded in the gitignored local cache at `source_cache/lamna_nasus/noaa_northwest_atlantic_porbeagle_2020/sources.csv`.

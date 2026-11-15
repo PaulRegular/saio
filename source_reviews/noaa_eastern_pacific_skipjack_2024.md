@@ -69,6 +69,6 @@ database; import status remains `not_started`.
 - [NOAA Stock SMART](https://apps-st.fisheries.noaa.gov/stocksmart) — inventory ID 10160 and assessment summary.
 
 The IATTC report PDF is stored in the gitignored
-`source_cache/discovery_iattc_eastern_skipjack_2024/`; `sources.csv` records its
+`source_cache/katsuwonus_pelamis/iattc_eastern_skipjack_2024/`; `sources.csv` records its
 retrieval date, URL and SHA-256 checksum. The IATTC-native run files were not
 downloaded or redistributed.

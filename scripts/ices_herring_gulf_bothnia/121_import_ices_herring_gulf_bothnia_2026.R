@@ -1,8 +1,7 @@
 assessment_id <- "ices_herring_gulf_bothnia_2026"
 stock_id <- "ices_herring_gulf_bothnia"
 database_dir <- file.path("database")
-source_dir <- file.path("source_cache",
-  "ices_herring_gulf_bothnia_2026"
+source_dir <- file.path("source_cache/clupea_harengus/ices_herring_gulf_bothnia_2026"
 )
 report_file <- file.path(source_dir, "WGBFAS_2026_report.pdf")
 report_text_file <- file.path(source_dir, "WGBFAS_2026_report.txt")

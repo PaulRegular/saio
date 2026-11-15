@@ -96,7 +96,7 @@ NOAA entries are not added as matches to the broader DFO coho units.
 ## Source cache
 
 Authoritative source files and their SHA-256 checksums are listed in the ignored
-local cache at `source_cache/discovery_noaa_coho_2026/sources.csv` (retrieved
+local cache at `source_cache/oncorhynchus_kisutch/noaa_coho_2026/sources.csv` (retrieved
 2026-10-30). It contains the 2026 PFMC report, 2025 fisheries review, NOAA
 Stock SMART data dictionary, PFMC-hosted FRAM technical documentation and the
 joint FRAM documentation pages. The shared 2026 FRAM database itself was not

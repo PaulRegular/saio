@@ -3,7 +3,7 @@ source("scripts/shared/candidate_reports.R", local = TRUE)
 root <- '.'
 candidate_id <- 'ICES:her.27.7ef'
 unit_id <- 'ices_herring_7ef'
-cache <- file.path(root, 'source_cache', 'discovery_ices_herring_7ef_2026')
+cache <- file.path(root, 'source_cache/clupea_harengus/ices_herring_7ef_2026')
 register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]

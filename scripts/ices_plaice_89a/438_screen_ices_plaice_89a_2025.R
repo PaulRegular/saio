@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_plaice_89a_2025')
+cache <- file.path(root, 'source_cache/pleuronectes_platessa/ices_plaice_89a_2025')
 candidate_path <- file.path(root, 'database/candidates.csv')
 id <- 'ICES:ple.27.89a'
 unit_id <- 'ices_plaice_89a'
@@ -82,7 +82,7 @@ review <- list(
     'https://standardgraphs.ices.dk/ViewSourceData.aspx?key=19633'),
   review_date = '2026-10-30',
   decision_reason = paste('The latest detailed source located is the 2025 WGBIE report, section 13. It identifies this stock as data-limited category 5.2 and explicitly states there is no analytical assessment. Reported data are landings and commercial numbers-at-length, without an abundance index or age-structured population outputs. The unit is ineligible for this age-disaggregated inventory; no canonical numerical records were added.'),
-  notes = paste('The WGBIE section describes a category 5.2 stock with no analytical assessment; biological information and a robust LPUE index are identified as gaps. The official 2025 Advice record 3923 reports 99 t landings advice for 2026-2028, while the WGBIE section states 124 t. Retain both source values as a documented discrepancy; do not import either as a population output. The section 13 PDF, Advice page, and Standard Graphs source page are cached in source_cache/discovery_ices_plaice_89a_2025/ with URLs, retrieval date, revision, size and checksum in sources.csv.'))
+  notes = paste('The WGBIE section describes a category 5.2 stock with no analytical assessment; biological information and a robust LPUE index are identified as gaps. The official 2025 Advice record 3923 reports 99 t landings advice for 2026-2028, while the WGBIE section states 124 t. Retain both source values as a documented discrepancy; do not import either as a population output. The section 13 PDF, Advice page, and Standard Graphs source page are cached in source_cache/pleuronectes_platessa/ices_plaice_89a_2025/ with URLs, retrieval date, revision, size and checksum in sources.csv.'))
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&
   candidates$screening_status[row] == 'not_started' &&

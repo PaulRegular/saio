@@ -74,7 +74,7 @@ review <- list(
     'The latest ICCAT executive summary located says the last assessment was in',
     '2022 and reports 2020 status; later MSE operating-model updates are not a',
     'new assessment fit. Checked source PDFs are cached under',
-    'source_cache/discovery_iccat_western_skipjack_2022/ with checksums.'
+    'source_cache/katsuwonus_pelamis/iccat_western_skipjack_2022/ with checksums.'
   )
 )
 

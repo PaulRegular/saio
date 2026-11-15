@@ -6,7 +6,7 @@ Review date: 2026-11-12. NOAA Stock SMART unit 11382 is the Bering Sea/Aleutian 
 
 ## Source and assessment coverage
 
-The official source is the [2024 BSAI SAFE chapter](https://www.npfmc.org/wp-content/PDFdocuments/SAFE/2024/BSAIrougheye.pdf), cached locally under `source_cache/discovery_noaa_bsai_rougheye_2024/`. The tracked manifest is `provenance/discovery_noaa_bsai_rougheye_2024/sources.csv`; it records the source URL, retrieval date, byte size, and SHA-256 checksum. The report states that the accepted AI model converged with a successful Hessian inversion and maximum gradient component of 9.1e-6. It describes the assessment as the same model structure as the accepted 2022 assessment, updated with new data.
+The official source is the [2024 BSAI SAFE chapter](https://www.npfmc.org/wp-content/PDFdocuments/SAFE/2024/BSAIrougheye.pdf), cached locally under `source_cache/noaa_bsai_rougheye_blackspotted_2024/`. The tracked manifest is `provenance/noaa_bsai_rougheye_blackspotted_2024/sources.csv`; it records the source URL, retrieval date, byte size, and SHA-256 checksum. The report states that the accepted AI model converged with a successful Hessian inversion and maximum gradient component of 9.1e-6. It describes the assessment as the same model structure as the accepted 2022 assessment, updated with new data.
 
 The age-structured AI model covers years 1977-2024, ages 3-44 and an age-45+ accumulator, with recruitment at age 3. Table 14.25 also reports 2025 biomass and SSB forecasts. The model’s total biomass is ages 3+, SSB is mature female biomass ages 3+, and recruitment is age-3 numbers. The published age-specific population series applies only to the AI component; the EBS Tier 5 component has no age-specific population surface in this source.
 

@@ -33,7 +33,7 @@ assessment, input or output rows were added.
 ## Sources and cached files
 
 The 2024 advice record and graph source are cached in the gitignored
-`source_cache/discovery_ices_small_eyed_ray_7de_2024/`
+`source_cache/raja_microocellata/ices_small_eyed_ray_7de_2024/`
 folder. Its `sources.csv` manifest records the URLs, retrieval date, revisions
 and SHA-256 checksums.
 

@@ -37,4 +37,4 @@ input, output were added.
 
 - ICES, [2026 advice for roundnose grenadier in Division 3.a](https://asd.ices.dk/viewAdvice/7200), assessment key 22371; [advice sheet DOI](https://doi.org/10.17895/ices.advice.30932369).
 - ICES, [2026 Stock Assessment Graphs](https://standardgraphs.ices.dk/ViewCharts.aspx?key=22371), [source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22371), and [downloadable XML](https://sag.ices.dk/SAG_API/StockXmlDownload/22371).
-- The gitignored `source_cache/discovery_ices_roundnose_grenadier_3a_2026/sources.csv` records retrieval date, file sizes, and SHA-256 checksums for the cached sources.
+- The gitignored `source_cache/coryphaenoides_rupestris/ices_roundnose_grenadier_3a_2026/sources.csv` records retrieval date, file sizes, and SHA-256 checksums for the cached sources.

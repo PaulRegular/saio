@@ -39,7 +39,7 @@ current age-structured assessment.
 The HAWG report PDF is cached once as a shared source at
 `source_cache/clupea_harengus/ck_ices_hawg_harengus_cs6_a_s_7b_c/HAWG_2026_full_report.pdf`.
 The candidate-specific cache under
-`source_cache/discovery_ices_herring_7ef_2026/` records the source URL,
+`source_cache/clupea_harengus/ices_herring_7ef_2026/` records the source URL,
 retrieval date, report revision, size, and SHA-256, and contains an extracted
 copy of pages 414–419 for quick review. The source itself is the shared ICES
 report, not the extracted text.

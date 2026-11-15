@@ -110,7 +110,7 @@ The import is reproducible through
 sources into `source_cache/eopsetta_jordani/dfo_petrale_bc/`, validates draw coverage and appends
 only this stock. Retrieval is part of curation, not the routine fitting path.
 The wider search inventory is retained under
-`source_cache/dfo_petrale_bc_2024_preflight/`. The validated advisory PDF is the
+`source_cache/eopsetta_jordani/dfo_petrale_bc_2024_preflight/`. The validated advisory PDF is the
 Waves copy; the publications.gc.ca download returned HTML and is excluded.
 Offline tests verify quantile mathematics, complete year/draw coverage,
 duplicate/missing/invalid-draw rejection, units, provenance, component M scalars,

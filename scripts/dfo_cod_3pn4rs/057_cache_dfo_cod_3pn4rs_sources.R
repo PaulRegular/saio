@@ -1,5 +1,4 @@
-root <- file.path("source_cache",
-  "dfo_cod_3pn4rs_2025"
+root <- file.path("source_cache/gadus_morhua/dfo_cod_3pn4rs_2025"
 )
 dir.create(root, recursive = TRUE, showWarnings = FALSE)
 

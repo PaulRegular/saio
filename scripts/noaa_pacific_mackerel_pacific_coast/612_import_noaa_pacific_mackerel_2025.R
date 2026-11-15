@@ -25,8 +25,7 @@ sha256_file <- function(path) {
     call. = FALSE)
   hash
 }
-source_manifest <- read_csv(file.path(root, "provenance",
-  "discovery_noaa_pacific_mackerel_2025", "sources.csv"))
+source_manifest <- read_csv(file.path(root, "provenance/noaa_pacific_mackerel_2025/sources.csv"))
 verify_source <- function(source_id, path) {
   entry <- source_manifest[source_manifest$source_id == source_id, , drop = FALSE]
   if (nrow(entry) != 1L || !file.exists(path) ||
@@ -660,7 +659,7 @@ if (!dry_run) {
   append_csv_rows(file.path(database, "outputs.csv"), output_data)
   replace_candidate_register_row(candidates_path, candidate_i, candidate,
     candidate_id)
-  write_source_manifest(extracted_manifest, file.path(root, "provenance/noaa_pacific_mackerel_2023_model_files/sources.csv"), row.names = FALSE,
+  write_source_manifest(extracted_manifest, file.path(root, "provenance/noaa_pacific_mackerel_2023/sources.csv"), row.names = FALSE,
     na = "", fileEncoding = "UTF-8")
   cat("Database and candidate register updated.\n")
 } else {

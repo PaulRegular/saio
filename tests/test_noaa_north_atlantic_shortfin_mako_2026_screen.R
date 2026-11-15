@@ -26,7 +26,7 @@ unit <- units[!is.na(units$candidate_unit_id) &
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
   unit$screening_status == 'screened', unit$eligibility == 'unresolved')
 
-cache <- file.path(root, 'source_cache', 'noaa_shortfin_mako_north_atlantic_2026')
+cache <- file.path(root, 'source_cache/isurus_oxyrinchus/noaa_shortfin_mako_north_atlantic_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 files <- c('ICCAT_2026_North_Atlantic_shortfin_mako_meeting_report.pdf',

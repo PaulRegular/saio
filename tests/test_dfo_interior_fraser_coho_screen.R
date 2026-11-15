@@ -38,7 +38,7 @@ stopifnot(
   grepl('Age proportions are used in the stock-recruit', review, fixed = TRUE)
 )
 
-cache <- 'source_cache/discovery_dfo_interior_fraser_coho_2022'
+cache <- 'source_cache/oncorhynchus_kisutch/dfo_interior_fraser_coho_2022'
 manifest_path <- file.path(cache, 'sources.csv')
 if (file.exists(manifest_path)) {
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE)

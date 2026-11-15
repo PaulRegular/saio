@@ -102,7 +102,7 @@ manifest <- data.frame(
   stringsAsFactors = FALSE
 )
 write_source_manifest(manifest,
-  file.path(root, "provenance/australia_qld_spanish_mackerel_2025/sources.csv"),
+  file.path(root, "provenance/australia_qld_spanish_mackerel_east_coast_2025/sources.csv"),
   row.names = FALSE, na = "")
 
 

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_guam_reef_fish_2026')
+cache <- file.path(root, 'source_cache/shared/noaa_guam_reef_fish_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 
 expected <- data.frame(

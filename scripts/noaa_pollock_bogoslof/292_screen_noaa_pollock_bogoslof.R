@@ -77,7 +77,7 @@ review <- list(
     '2024 SAFE assessment using the 2024 acoustic survey for 2025-2026',
     'advice. The 2026 SAFE chapter is retained as later draft evidence, not',
     'as formally disseminated agency policy. Source PDFs and SHA-256 hashes',
-    'are in the ignored source_cache/discovery_noaa_pollock_age_units/.'
+    'are in the ignored source_cache/gadus_chalcogrammus/noaa_pollock_age_units/.'
   )
 )
 

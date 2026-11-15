@@ -31,7 +31,7 @@ HAWG documents substantial uncertainty in acoustic scaling: estimated survey cat
 - Outputs include recruitment, total biomass, SSB, landings, total catch and Fbar (ages 2–4).
 - Fitted N-at-age and F-at-age are unavailable. The public sources also do not provide the applied fitted object, exact observation-error weights or precise annual survey timing fractions. These gaps keep the assessment, input and output completeness statuses partial.
 
-The full HAWG report is cached in the shared Celtic Sea herring source folder. The Irish Sea SAG pages and extracted HAWG table text are cached locally under `source_cache/discovery_ices_irish_sea_herring_2026/`. The downloaded sources have retrieval dates and SHA-256 checksums in their cache manifests.
+The full HAWG report is cached in the shared Celtic Sea herring source folder. The Irish Sea SAG pages and extracted HAWG table text are cached locally under `source_cache/clupea_harengus/ices_her_27_nirs_2026/`. The downloaded sources have retrieval dates and SHA-256 checksums in their cache manifests.
 
 ## Sources
 

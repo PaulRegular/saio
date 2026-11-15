@@ -6,7 +6,7 @@ SAIO stock `noaa_alaska_sablefish`. Assessment `noaa_alaska_sablefish_2024`.
 
 Stock SMART 10956 is one federal Alaska sablefish population spanning the eastern Bering Sea, Aleutian Islands and Gulf of Alaska. It is separate from the U.S. Pacific Coast assessment. The latest full production assessment located is the 2024 update, author-recommended Model 23.5. The final 2025 SAFE catch-report chapter says that no assessment was conducted in 2025 and that the 2024 model was rolled forward for specifications.
 
-The final 2024 SAFE report, model input, control and template files, fitted output, and selected report tables are cached locally under `source_cache/anoplopoma_fimbria/noaa_alaska_sablefish_2024/`. The versioned manifest is `provenance/discovery_noaa_alaska_sablefish_2024_2025/sources.csv`; it records source URLs, retrieval dates, pinned GitHub revision where applicable, file sizes, and SHA-256 checksums.
+The final 2024 SAFE report, model input, control and template files, fitted output, and selected report tables are cached locally under `source_cache/anoplopoma_fimbria/noaa_alaska_sablefish_2024/`. The versioned manifest is `provenance/noaa_alaska_sablefish_2024_2025/sources.csv`; it records source URLs, retrieval dates, pinned GitHub revision where applicable, file sizes, and SHA-256 checksums.
 
 ## Inputs captured
 

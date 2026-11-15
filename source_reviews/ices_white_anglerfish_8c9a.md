@@ -39,6 +39,6 @@ summaries. No canonical assessment, input or output rows were added.
 | Detailed production report, section 4.2 | [WGBIE 2026, ICES Scientific Reports 8:46](https://doi.org/10.17895/ices.pub.32790321) |
 
 The advice, graph, source-data and XML files with checksums are in the ignored
-`source_cache/discovery_ices_white_anglerfish_8c9a_2026/`
+`source_cache/lophius_piscatorius/ices_white_anglerfish_8c9a_2026/`
 folder. The WGBIE PDF is shared with the black-bellied anglerfish cache to avoid
 storing duplicate 85 MB copies.

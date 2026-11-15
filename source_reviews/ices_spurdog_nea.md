@@ -69,7 +69,7 @@ the age–length model label alone.
 
 The reviewed official sources and file checksums are
 listed in the gitignored cache manifest at
-`source_cache/discovery_ices_spurdog_nea_2026/sources.csv`. It points to the
+`source_cache/squalus_acanthias/ices_spurdog_nea_2026/sources.csv`. It points to the
 already cached WGEF 2024 and 2025 reports rather than duplicating those large
 files. The 2024 advice text file is a pypdf text extraction of the cached
 official advice PDF; the original PDF is retained beside it.

@@ -48,7 +48,7 @@ stopifnot(
 )
 check_inventory_accounting(register, progress, units)
 
-cache <- file.path(root, 'source_cache', 'discovery_swordfish_north_atlantic_2022')
+cache <- file.path(root, 'source_cache/xiphias_gladius/iccat_north_atlantic_swordfish_2022')
 if (dir.exists(cache)) {
   manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
   stopifnot(all(file.exists(file.path(cache, manifest$file))),

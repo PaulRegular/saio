@@ -18,7 +18,7 @@ The report describes coastwide estimates of total and spawning biomass, depletio
 
 ## Sources and local cache
 
-The report and supporting official documents are cached in the gitignored `source_cache/discovery_noaa_data_moderate_2013_2026/` directory. Its `sources.csv` records URLs, revisions, retrieval date, byte size and SHA-256 checksums.
+The report and supporting official documents are cached in the gitignored `source_cache/shared/noaa_data_moderate_2013_2026/` directory. Its `sources.csv` records URLs, revisions, retrieval date, byte size and SHA-256 checksums.
 
 - NOAA Stock SMART record 10546: <https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10546>
 - Accepted 2013 data-moderate assessment, published January 2015: <https://www.pcouncil.org/documents/2015/01/data-moderate-stock-assessments-for-brown-china-copper-sharpchin-stripetail-and-yellowtail-rockfishes-and-english-and-rex-soles-in-2013-published-january-2015.pdf>

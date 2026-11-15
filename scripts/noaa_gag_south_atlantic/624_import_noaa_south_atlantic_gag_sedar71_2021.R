@@ -3,7 +3,7 @@ source("scripts/shared/source_manifest_io.R", local = TRUE)
 root <- "."
 cache <- file.path("source_cache", "mycteroperca_microlepis/noaa_gag_south_atlantic_sedar71_2021")
 manifest_source <- file.path(cache, "manifest.csv")
-manifest_path <- file.path("provenance/noaa_gag_sedar71_2021/sources.csv")
+manifest_path <- file.path("provenance/noaa_gag_south_atlantic_sedar71_2021/sources.csv")
 stock_id <- "noaa_gag_south_atlantic"
 assessment_id <- "noaa_gag_south_atlantic_sedar71_2021"
 candidate_id <- "NOAA:10349"

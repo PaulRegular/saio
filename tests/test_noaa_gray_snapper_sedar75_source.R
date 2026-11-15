@@ -38,7 +38,7 @@ assumptions <- read_columns("database/assumptions.csv", c("assessment_id",
 candidates <- read_columns("database/candidates.csv", c("candidate_id",
   "matched_stock_id", "match_status", "eligibility", "import_status",
   "catch_age_evidence", "output_evidence", "notes"))
-manifest <- read.csv("provenance/discovery_noaa_gray_snapper_2022/sources.csv",
+manifest <- read.csv("provenance/noaa_gray_snapper_gulf_sedar75_2022/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
 stock <- stock[stock$stock_id == stock_id, , drop = FALSE]

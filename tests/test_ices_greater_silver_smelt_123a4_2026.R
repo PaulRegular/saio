@@ -35,8 +35,7 @@ stopifnot(
   all(!unit_id %in% outputs$assessment_id)
 )
 
-cache <- file.path(root, 'source_cache',
-  'discovery_ices_greater_silver_smelt_123a4_2026')
+cache <- file.path(root, 'source_cache/argentina_silus/ices_greater_silver_smelt_123a4_2026')
 manifest_path <- file.path(cache, 'sources.csv')
 review_path <- file.path(root, 'source_reviews/ices_greater_silver_smelt_123a4.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')

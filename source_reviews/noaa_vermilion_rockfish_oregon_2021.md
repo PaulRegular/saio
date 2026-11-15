@@ -13,7 +13,7 @@ be represented as one pooled model. The council's assessment index reviewed
 on 2026-10-31 lists no later Oregon-specific assessment.
 
 The source report and model archive were cached locally under
-`source_cache/discovery_noaa_oregon_vermilion_2021/`. The ignored
+`source_cache/sebastes_miniatus/noaa_oregon_vermilion_2021/`. The ignored
 `sources.csv` manifest records source URLs, retrieval date, byte counts and
 SHA-256 checksums. The ZIP archive contains the Stock Synthesis data and control
 files, parameter estimates, report outputs and age-specific biology output.

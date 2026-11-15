@@ -25,7 +25,7 @@ Screen `NOAA:10727` and `NOAA:10730` as separate ineligible current stock units.
 
 ## Sources
 
-The source files and provenance are cached under the gitignored `source_cache/discovery_noaa_goa_skates_2023_2026/` directory; its `sources.csv` manifest records retrieval dates, revisions, sizes and SHA-256 checksums.
+The source files and provenance are cached under the gitignored `source_cache/shared/noaa_goa_skates_2023_2026/` directory; its `sources.csv` manifest records retrieval dates, revisions, sizes and SHA-256 checksums.
 
 - [2023 GOA Skates SAFE chapter](https://apps-afsc.fisheries.noaa.gov/Plan_Team/2023/GOAskate.pdf)
 - [2024 GOA SAFE introduction](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=C2+GOA+Groundfish+SAFE+Introduction.pdf&p=ab2770e7-ed6f-4a2f-a69d-5cbd0bda1896.pdf)

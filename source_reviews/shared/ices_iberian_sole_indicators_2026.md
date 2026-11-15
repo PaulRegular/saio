@@ -21,4 +21,4 @@ The species and divisions are distinct units. Neither has a matching canonical s
 - [ICES 2026 Senegalese sole source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22600).
 - [ICES 2026 sand sole source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=23772).
 
-The pages are cached locally under the gitignored `source_cache/discovery_ices_iberian_sole_indicators_2026/`. Its `sources.csv` records URLs, retrieval date, revision, file size, and SHA-256.
+The pages are cached locally under the gitignored `source_cache/shared/ices_iberian_sole_indicators_2026/`. Its `sources.csv` records URLs, retrieval date, revision, file size, and SHA-256.

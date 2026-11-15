@@ -50,7 +50,7 @@ stopifnot(
     c('unresolved', 'unresolved', 'ineligible', 'ineligible', 'ineligible'))
 )
 
-cache <- file.path(root, 'source_cache', 'discovery_ices_baltic_flatfish_2026')
+cache <- file.path(root, 'source_cache/shared/ices_baltic_flatfish_2026')
 manifest_path <- file.path(cache, 'sources.csv')
 review_path <- file.path(root, 'source_reviews/ices_baltic_flatfish_2026.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')

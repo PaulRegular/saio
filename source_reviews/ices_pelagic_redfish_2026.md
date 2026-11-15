@@ -25,7 +25,7 @@ not imply that age samples are unavailable for unrelated monitoring or research.
 The cached 2026 SID snapshot establishes the current codes, assessment year,
 method, category and Standard Graphs keys. The Standard Graphs source pages and
 MFRI's 2024 assessment pages are cached locally under the gitignored
-source_cache/discovery_ices_pelagic_redfish_2026/. The cache manifest records
+source_cache/sebastes_mentella/ices_pelagic_redfish_2026/. The cache manifest records
 URLs, retrieval date, byte counts and SHA-256 checksums.
 
 | Unit | ICES source data | MFRI assessment |

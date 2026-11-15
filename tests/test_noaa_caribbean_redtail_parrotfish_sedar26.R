@@ -45,7 +45,7 @@ stopifnot(
   grepl('SEDAR 103 is', review, fixed = TRUE)
 )
 
-cache <- file.path(root, 'source_cache', 'discovery_noaa_redtail_parrotfish_2012')
+cache <- file.path(root, 'source_cache/sparisoma_chrysopterum/noaa_redtail_parrotfish_2012')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 source_paths <- file.path(cache, manifest$file)
 stopifnot(

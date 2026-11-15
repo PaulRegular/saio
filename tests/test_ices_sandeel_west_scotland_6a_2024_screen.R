@@ -8,7 +8,7 @@ if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv(TAM_S
 register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:san.27.6a', , drop = FALSE]
-manifest <- read.csv(file.path(root, 'source_cache/discovery_ices_sandeel_6a_2025/sources.csv'),
+manifest <- read.csv(file.path(root, 'source_cache/ices_sandeel_6a_2025/sources.csv'),
   stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -31,10 +31,10 @@ stopifnot(
   grepl('category 6', candidate$catch_age_evidence, ignore.case = TRUE),
   grepl('zero-catch', candidate$decision_reason, ignore.case = TRUE),
   nrow(manifest) == 2L,
-  all(file.exists(file.path(root, 'source_cache/discovery_ices_sandeel_6a_2025', manifest$file))),
+  all(file.exists(file.path(root, 'source_cache/ices_sandeel_6a_2025', manifest$file))),
   all(nchar(manifest$sha256) == 64L),
   any(grepl('2024, 2025, and 2026',
-    readLines(file.path(root, 'source_cache/discovery_ices_sandeel_6a_2025/ICES_2024_advice.html'),
+    readLines(file.path(root, 'source_cache/ices_sandeel_6a_2025/ICES_2024_advice.html'),
       warn = FALSE), fixed = TRUE)),
   !any(tolower(stocks$authority_stock_id) == 'san.27.6a', na.rm = TRUE),
   !any(assessments$stock_id == 'ices_sandeel_west_scotland_6a'),

@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_noaa_copper_california_2023")
+cache <- file.path(root, "source_cache/sebastes_caurinus/noaa_copper_rockfish_california_2023")
 assessment_id <- "noaa_copper_rockfish_california_2023"
 stock_id <- "noaa_copper_rockfish_california"
 candidate_unit_id <- assessment_id
@@ -11,7 +11,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 source(file.path(root, "scripts/shared/pacific_tables.R"))
 source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
-manifest <- read.csv(file.path(root, "provenance/discovery_noaa_copper_california_2023/sources.csv"),
+manifest <- read.csv(file.path(root, "provenance/noaa_copper_rockfish_california_2023/sources.csv"),
   colClasses = "character", check.names = FALSE)
 sha256_file <- function(path) {
   output <- system2("certutil.exe",

@@ -26,4 +26,4 @@ This is a **new, screened, ineligible candidate** for the age-disaggregated asse
 - [ICES SAG XML, key 20918](https://sag.ices.dk/SAG_API/StockXmlDownload/20918).
 - [ICES WGDEEP 2025 report, version 3](https://doi.org/10.17895/ices.pub.29086478.v3), retained for local reference.
 
-The source files, revisions, retrieval date, sizes and SHA-256 checksums are in the gitignored local cache at `source_cache/discovery_ices_ling_1_2_2025/sources.csv`.
+The source files, revisions, retrieval date, sizes and SHA-256 checksums are in the gitignored local cache at `source_cache/molva_molva/ices_ling_1_2_2025/sources.csv`.

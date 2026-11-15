@@ -13,7 +13,7 @@ source("scripts/shared/pacific_tables.R")
 source("scripts/shared/candidate_register_io.R")
 
 manifest <- read.csv(
-  "provenance/discovery_noaa_vermilion_snapper_gom_2020/sources.csv",
+  "provenance/noaa_vermilion_snapper_gulf_sedar67_2020/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character"
 )
 

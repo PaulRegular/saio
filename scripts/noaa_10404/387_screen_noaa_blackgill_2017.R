@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_blackgill_rockfish_2017_2026')
+cache <- file.path(root, 'source_cache/sebastes_melanostomus/noaa_blackgill_rockfish_2017_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10404'
 source_files <- c('blackgill_2017_update_assessment.pdf',

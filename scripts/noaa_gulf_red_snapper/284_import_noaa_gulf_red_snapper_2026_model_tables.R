@@ -1,6 +1,6 @@
 assessment_id <- "noaa_gulf_red_snapper_2026"
 source_dir <- "source_cache/lutjanus_campechanus/noaa_gulf_red_snapper_2026"
-manifest <- read.csv("provenance/discovery_noaa_gom_red_snapper_2026/sources.csv",
+manifest <- read.csv("provenance/noaa_gulf_red_snapper_2026/sources.csv",
   stringsAsFactors=FALSE, check.names=FALSE, colClasses="character")
 write_mode <- "--write" %in% commandArgs(trailingOnly=TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")

@@ -69,7 +69,7 @@ Exact fractional-year timing for the GOA and BSAI surveys remains unresolved. El
 
 The locally cached PDFs, retrieval date, source URLs, file sizes and SHA-256
 checksums are in the ignored manifest
-`source_cache/discovery_noaa_rougheye_alaska_20261031/sources.csv`.
+`source_cache/shared/noaa_rougheye_alaska_20261031/sources.csv`.
 
 - [2013 U.S. West Coast rougheye/blackspotted assessment](https://www.pcouncil.org/documents/2014/01/the-status-of-rougheye-rockfish-sebastes-aleutianus-and-blackspotted-rockfish-s-melanostictus-as-a-complex-along-the-u-s-west-coast-in-2013-published-january-6-2014.pdf)
 - [2025 U.S. West Coast assessment and model files](https://www.pcouncil.org/stock-assessments-star-reports-stat-reports-rebuilding-analyses-terms-of-reference/groundfish-stock-assessment-documents/)

@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache', 'discovery_noaa_ocean_pout_2022')
+cache <- file.path(root, 'source_cache/zoarces_americanus/noaa_ocean_pout_2022')
 mirror_file <- 'FallMT2022_text_mirror.html'
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -107,7 +107,7 @@ review <- list(
     'https://science.mq.edu.au/~ross/TaggedPDF/FallMT2022/FallMT2022.html', sep = '; '),
   review_date = '2026-10-30',
   decision_reason = 'Screened ineligible for the age-disaggregated set. The latest public operational assessment is an index-based method using aggregate catch and a spring survey biomass index, and it reports no age-specific population inputs or outputs. This does not claim that biological age samples do not exist.',
-  notes = 'New candidate linked to NOAA Stock SMART ID 10525; no canonical Zoarces americanus record exists. Stock SMART labels the 2022 operational row Full acceptance; the technical memo says it was not peer-reviewed in the Fall 2022 panel and records it as Level 1 direct delivery. Stock SMART snapshot and source provenance are in the ignored discovery_noaa_stocksmart cache. The official NOAA report PDF checksum is recorded in the NOAA repository record; direct downloads were denied in this session, so a checksummed public HTML text mirror was cached for local reference. No numerical database records were added.'
+  notes = 'New candidate linked to NOAA Stock SMART ID 10525; no canonical Zoarces americanus record exists. Stock SMART labels the 2022 operational row Full acceptance; the technical memo says it was not peer-reviewed in the Fall 2022 panel and records it as Level 1 direct delivery. Stock SMART snapshot and source provenance are in the ignored source_cache/shared/noaa_stocksmart cache. The official NOAA report PDF checksum is recorded in the NOAA repository record; direct downloads were denied in this session, so a checksummed public HTML text mirror was cached for local reference. No numerical database records were added.'
 )
 for (field in names(review)) register[[field]][row] <- review[[field]]
 

@@ -66,7 +66,7 @@ results are not treated as current outputs for this screening audit.
 
 The two NOAA assessment reports and the 2023 peer-review panel report are
 cached locally under the ignored directory
-`source_cache/discovery_noaa_red_hake_2023/`. Retrieval URLs, date, revision
+`source_cache/urophycis_chuss/noaa_red_hake_2023/`. Retrieval URLs, date, revision
 notes and SHA-256 checksums are in its `sources.csv` manifest. No assessment
 data have been imported into the canonical database.
 

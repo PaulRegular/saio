@@ -22,4 +22,4 @@ The table's “relative exploitation rate” is retained under its reported labe
 - [2025 Pacific Coast Groundfish SAFE](https://www.pcouncil.org/documents/2024/08/status-of-the-pacific-coast-groundfish-fishery-stock-assessment-and-fishery-evaluation-july-2025.pdf/)
 - [2022 Pacific Coast Groundfish SAFE](https://www.pcouncil.org/documents/2022/09/status-of-the-pacific-coast-groundfish-fishery-stock-assessment-and-fishery-evaluation-july-2022.pdf/), identifying the 2019 action as a catch-only projection based on the 2015 assessment.
 
-The detailed report, 2022 and 2025 SAFE documents, and NOAA metadata snapshot are cached under the gitignored `source_cache/discovery_noaa_china_rockfish_2019/`. Their URLs, retrieval dates, revisions, byte sizes and SHA-256 checksums are recorded in `provenance/discovery_noaa_china_rockfish_2019/sources.csv`.
+The detailed report, 2022 and 2025 SAFE documents, and NOAA metadata snapshot are cached under the gitignored `source_cache/shared/noaa_china_rockfish_2019/`. Their URLs, retrieval dates, revisions, byte sizes and SHA-256 checksums are recorded in `provenance/shared/noaa_china_rockfish_2019/sources.csv`.

@@ -42,7 +42,7 @@ candidates <- read_columns("database/candidates.csv", c("candidate_id",
   "matched_stock_id", "match_status", "eligibility", "import_status",
   "output_evidence", "notes"))
 manifest <- read.csv(
-  "provenance/discovery_noaa_vermilion_snapper_gom_2020/sources.csv",
+  "provenance/noaa_vermilion_snapper_gulf_sedar67_2020/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE
 )
 

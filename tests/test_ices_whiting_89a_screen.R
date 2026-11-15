@@ -15,13 +15,12 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'),
 outputs <- read.csv(file.path(root, 'database/outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:whg.27.89a', , drop = FALSE]
-cache <- file.path(root, 'source_cache/discovery_ices_whiting_89a_2026')
+cache <- file.path(root, 'source_cache/merlangius_merlangus/ices_whiting_89a_2026')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 local_rows <- !startsWith(sources$file, '..')
 report_row <- !local_rows
 paths <- file.path(cache, sources$file[local_rows])
-report <- file.path(root, 'source_cache',
-  'discovery_ices_black_bellied_anglerfish_78abd_2026', 'ICES_WGBIE_2026.pdf')
+report <- file.path(root, 'source_cache/lophius_budegassa/ices_black_bellied_anglerfish_78abd_2026', 'ICES_WGBIE_2026.pdf')
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),
     stdout = TRUE)

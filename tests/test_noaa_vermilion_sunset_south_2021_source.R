@@ -1,4 +1,4 @@
-cache <- "source_cache/discovery_noaa_vermilion_sunset_south_2021"
+cache <- "source_cache/shared/noaa_vermilion_sunset_south_2021"
 if (!file.exists(file.path(cache, "model_files_2021.zip"))) {
   cat("Southern California Vermilion/Sunset 2021 source test skipped; local cache is unavailable.\n")
 } else {

@@ -38,5 +38,5 @@ has no age-specific abundance index.
 - [SPC 2025 ensemble repository](https://github.com/PacificCommunity/ofp-sam-skj-2025-ensemble)
 
 The reports and selected TAF input/output files are cached under
-`source_cache/discovery_noaa_wcpfc_skipjack_2025/`, with retrieval dates,
+`source_cache/katsuwonus_pelamis/noaa_wcpfc_skipjack_2025/`, with retrieval dates,
 source URLs, byte sizes, and SHA-256 hashes in `sources.csv`.

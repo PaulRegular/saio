@@ -55,4 +55,4 @@ No canonical stock, assessment, input, or output records were added.
 - ICES, [2026 advice for blackspot seabream in Subarea 9](https://asd.ices.dk/viewAdvice/7185), assessment key 23734.
 - ICES, [2026 Standard Graphs](https://standardgraphs.ices.dk/ViewCharts.aspx?key=23734), and [source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=23734).
 - ICES, [2025 WKBSS3 benchmark report](https://ices-library.figshare.com/articles/report/Benchmark_workshop_on_application_of_Stock_Synthesis_SS3_on_selected_stocks_WKBSS3_/28443992), version 2, including the stock-specific working document.
-- The gitignored `source_cache/discovery_ices_blackspot_seabream_9_2026/sources.csv` records cached source revisions, URLs, retrieval date, file sizes, and SHA-256 checksums.
+- The gitignored `source_cache/pagellus_bogaraveo/ices_blackspot_seabream_9_2026/sources.csv` records cached source revisions, URLs, retrieval date, file sizes, and SHA-256 checksums.

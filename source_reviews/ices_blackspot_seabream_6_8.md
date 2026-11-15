@@ -45,4 +45,4 @@ No canonical stock, assessment, input, or output records were added.
 - ICES, [2026 advice for blackspot seabream in subareas 6–8](https://asd.ices.dk/viewAdvice/7189), assessment key 22362, published 8 June 2026.
 - ICES, [2026 Standard Graphs source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22362), assessment key 22362.
 - ICES, [2024 Standard Graphs source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=18952), assessment key 18952.
-- The gitignored `source_cache/discovery_ices_blackspot_seabream_6_8_2026/sources.csv` records URLs, assessment revisions, retrieval date, file sizes, and SHA-256 checksums.
+- The gitignored `source_cache/pagellus_bogaraveo/ices_blackspot_seabream_6_8_2026/sources.csv` records URLs, assessment revisions, retrieval date, file sizes, and SHA-256 checksums.

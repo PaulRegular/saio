@@ -22,4 +22,4 @@ Keep this candidate's eligibility unresolved. It is a strong source for a histor
 - [2026 Amendment 37 stock-definition analysis](https://www.fisheries.noaa.gov/s3/2026-02/am-37-fpa-analysis-01-2026.pdf)
 - [Pacific Council groundfish assessment listing](https://www.pcouncil.org/stock-assessments-star-reports-stat-reports-rebuilding-analyses-terms-of-reference/groundfish-stock-assessment-documents/)
 
-The assessment and STAR PDFs are cached in the gitignored `source_cache/discovery_noaa_greenspotted_2011/` directory. Its local `sources.csv` manifest records retrieval date, document revision, URL, size, and SHA-256. The Amendment 37 analysis is cached in the shared NOAA source folder with its own manifest.
+The assessment and STAR PDFs are cached in the gitignored `source_cache/sebastes_chlorostictus/noaa_greenspotted_2011/` directory. Its local `sources.csv` manifest records retrieval date, document revision, URL, size, and SHA-256. The Amendment 37 analysis is cached in the shared NOAA source folder with its own manifest.

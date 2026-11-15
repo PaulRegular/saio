@@ -26,4 +26,4 @@ Treat NOAA Stock SMART 10428 as one new, coastwide U.S. Pacific candidate and ma
 - [February 2026 preliminary recommendations for 2027 assessments](https://www.pcouncil.org/documents/2026/02/d-8-a-nmfs-report-1-preliminary-nmfs-recommendations-for-2027-groundfish-stock-assessments.pdf/)
 - [February 2026 NOAA/PFMC Amendment 37 stock-definition analysis](https://www.fisheries.noaa.gov/s3/2026-02/am-37-fpa-analysis-01-2026.pdf)
 
-The four PDFs are cached in the gitignored folder source_cache/discovery_noaa_data_moderate_2013_2026/; sources.csv records the retrieval date, document revision, URL, file size, and SHA-256 checksum.
+The four PDFs are cached in the gitignored folder source_cache/shared/noaa_data_moderate_2013_2026/; sources.csv records the retrieval date, document revision, URL, file size, and SHA-256 checksum.

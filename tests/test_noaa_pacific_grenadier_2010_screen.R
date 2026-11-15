@@ -7,7 +7,7 @@ register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:10526', , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews/noaa_pacific_coast_pacific_grenadier.md'), warn = FALSE), collapse = ' ')
-cache <- file.path(root, 'source_cache', 'discovery_noaa_pacific_grenadier_2010')
+cache <- file.path(root, 'source_cache/coryphaenoides_acrolepis/noaa_pacific_grenadier_2010')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 units <- candidate_units()

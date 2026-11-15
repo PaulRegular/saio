@@ -23,7 +23,7 @@ mhi <- register[match(ids, register$candidate_id), , drop = FALSE]
 pifsc <- progress[progress$organization == 'NOAA' &
   progress$source_region == 'PIFSC', , drop = FALSE]
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
-sources <- read.csv(file.path(root, 'source_cache/discovery_noaa_mhi_reef_fish_2016/sources.csv'),
+sources <- read.csv(file.path(root, 'source_cache/shared/noaa_mhi_reef_fish_2016/sources.csv'),
   stringsAsFactors = FALSE)
 
 stopifnot(

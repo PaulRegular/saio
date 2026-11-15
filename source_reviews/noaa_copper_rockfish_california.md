@@ -14,7 +14,7 @@ also gives 2023 spawning-output estimates. Washington (ID 15330) and Oregon
 The source set includes both area reports, both native model archives, the
 STAR review, and the pre-assessment workshop report. URLs, retrieval dates,
 archive revisions, sizes, and SHA-256 checksums are recorded in
-provenance/discovery_noaa_copper_california_2023/sources.csv. Downloaded
+provenance/noaa_copper_rockfish_california_2023/sources.csv. Downloaded
 files and extracted model directories are in the ignored local source cache.
 
 ## Inputs retained

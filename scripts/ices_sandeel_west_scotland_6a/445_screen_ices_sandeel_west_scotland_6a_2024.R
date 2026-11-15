@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_sandeel_6a_2025')
+cache <- file.path(root, 'source_cache/ices_sandeel_6a_2025')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:san.27.6a'
 unit_id <- 'ices_sandeel_west_scotland_6a'
@@ -85,7 +85,7 @@ review <- list(
     'https://github.com/ices-eg/wg_HAWG'),
   review_date = '2026-10-31',
   decision_reason = 'The latest official advice located is assessment year 2024, with advice through 2026, and is classified by ICES as category 6. The 2025 HAWG report confirms zero-catch advice under that data-limited method. No current age-disaggregated inputs or fitted population outputs were identified, so this is not eligible for the age-structured source-curation set.',
-  notes = 'The HAWG repository was checked; its published stock folders do not include a Division 6.a sandeel production assessment (the VIa folder is the Malin herring work). A TAF search found only the distinct historical san.sa.6 unit, not san.27.6a. The full 2025 HAWG report and ICES advice page are cached with provenance under source_cache/discovery_ices_sandeel_6a_2025. No canonical stock, assessment, input, or output records were added.'
+  notes = 'The HAWG repository was checked; its published stock folders do not include a Division 6.a sandeel production assessment (the VIa folder is the Malin herring work). A TAF search found only the distinct historical san.sa.6 unit, not san.27.6a. The full 2025 HAWG report and ICES advice page are cached with provenance under source_cache/ices_sandeel_6a_2025. No canonical stock, assessment, input, or output records were added.'
 )
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&

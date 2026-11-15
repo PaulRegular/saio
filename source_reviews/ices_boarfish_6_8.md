@@ -35,5 +35,5 @@ The detailed WKBHMB report (ICES Scientific Reports 6:8,
 [DOI 10.17895/ices.pub.25002482](https://doi.org/10.17895/ices.pub.25002482)),
 the 2025 WGWIDE executive summary (ICES Scientific Reports 7:96), and the
 2026 ICES source-data page for assessment key 25915 are cached locally in
-`source_cache/discovery_ices_boarfish_2026/`. Their source URLs, retrieval date
+`source_cache/capros_aper/ices_boarfish_2026/`. Their source URLs, retrieval date
 (2026-10-30), and SHA-256 hashes are recorded in that directory's `sources.csv`.

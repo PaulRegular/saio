@@ -27,7 +27,7 @@ for (i in seq_len(nrow(cases))) {
   candidate <- register[register$candidate_id == case$candidate_id, , drop = FALSE]
   area <- if (case$candidate_id == 'ICES:san.sa.6') '6' else '7r'
   cache <- file.path('source_cache',
-    paste0('discovery_ices_sandeel_area_', area, '_2023'))
+    paste0('ices_sandeel_area_', area, '_2023'))
   sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
   paths <- file.path(cache, sources$file)
   advice <- paste(readLines(paths[grep('ICES_Advice', sources$file)], warn = FALSE),
@@ -58,8 +58,7 @@ for (i in seq_len(nrow(cases))) {
     !any(inputs$assessment_id == case$candidate_unit_id),
     !any(outputs$assessment_id == case$candidate_unit_id),
     file.exists(file.path('source_reviews',
-      paste0(if (case$candidate_id == 'ICES:san.sa.6') 'ices_sandeel_area_6_2023' else
-        'ices_sandeel_area_7r_2023', '.md')))
+      paste0(case$candidate_unit_id, '.md')))
   )
 }
 

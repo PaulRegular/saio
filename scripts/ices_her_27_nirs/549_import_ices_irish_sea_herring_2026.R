@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_ices_irish_sea_herring_2026")
+cache <- file.path(root, "source_cache/clupea_harengus/ices_her_27_nirs_2026")
 shared_cache <- file.path(root, "source_cache", "clupea_harengus/ices_her_27_irls_2026")
 candidate_id <- "ICES:her.27.nirs"
 candidate_unit_id <- "ices_her_27_nirs"
@@ -457,7 +457,7 @@ if (!stock_id %in% existing_stocks$stock_id && !assessment_id %in% existing_asse
   }
 }
 
-replace_discovery_row <- function(path, row_index, row, key_column, key) {
+replace_table_row <- function(path, row_index, row, key_column, key) {
   bytes <- readBin(path, "raw", n = file.info(path)$size)
   bounds <- csv_record_bounds(bytes)
   existing <- utils::read.csv(path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)

@@ -106,5 +106,5 @@ their own run identity and completeness status.
 - [NOAA Stock SMART, stock 10231](https://apps-st.fisheries.noaa.gov/stocksmart/?stockid=10231)
 
 The 2024 update and the 2021 SEDAR 73 report are cached under
-`source_cache/discovery_noaa_satl_red_snapper_2024/`. Their retrieval dates,
+`source_cache/lutjanus_campechanus/noaa_south_atlantic_red_snapper_2024/`. Their retrieval dates,
 URLs, SHA-256 checksums, and descriptions are in the local `sources.csv`.

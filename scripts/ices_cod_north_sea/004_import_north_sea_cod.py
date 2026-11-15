@@ -159,7 +159,7 @@ write.csv(do.call(rbind, rows), a[2], row.names=FALSE)
 native_script = cache / "export_native_surfaces.R"
 native_script.write_text(r_code, encoding="utf-8")
 subprocess.run([args.rscript, str(native_script),
-                str(root / "source_cache/ices_selectivity_2026/FLStocks.RData"), str(native)], check=True)
+                str(root / "source_cache/gadus_morhua/ices_selectivity_2026/FLStocks.RData"), str(native)], check=True)
 expected = {}
 for table, slot, count in [("4.8", "harvest", 8), ("4.9", "stock.n", 8), ("4.13", "m", 7)]:
     for region, year, values in matrix(table, count, True):

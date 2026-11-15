@@ -74,7 +74,7 @@ added at this screening stage.
 | [Joint SSC review of SEDAR 79](https://sedarweb.org/documents/gulf-and-sa-ssc-review-of-sedar-79-southeastern-u-s-mutton-snapper/) | Confirms the combined stock boundary, 1981–2023 run, and assessment review outcome |
 
 Files were retrieved on 2026-10-31 and cached under
-source_cache/discovery_noaa_mutton_snapper_sedar79_2024/. The cache manifest
+source_cache/lutjanus_analis/noaa_southeastern_us_mutton_snapper_sedar79_2024/. The cache manifest
 records the source URL, byte size, and SHA-256 for each file.
 
 Screening decision: eligible for source curation with an explicit figure-digitization limitation. A partial canonical source import was completed on 2026-11-12; see source_reviews/noaa_southeastern_us_mutton_snapper.md. The numerical composition arrays and annual age-specific indices remain unavailable.

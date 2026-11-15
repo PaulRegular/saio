@@ -1,6 +1,6 @@
 # ICES Atlantic salmon — Northeast Atlantic complex
 
-Review date: 2026-11-13. Official stock key: sal.neac.all. The latest detailed assessment located is the joint 2026 ICES Working Group on North Atlantic Salmon (WGNAS) assessment, covering data through 2025. The report and online tables are cached under the gitignored source_cache/discovery_ices_wgnas_2026/; URLs, retrieval date, file sizes and SHA-256 checksums are recorded in provenance/ices_wgnas_2026/sources.csv.
+Review date: 2026-11-13. Official stock key: sal.neac.all. The latest detailed assessment located is the joint 2026 ICES Working Group on North Atlantic Salmon (WGNAS) assessment, covering data through 2025. The report and online tables are cached under the gitignored source_cache/shared/ices_wgnas_2026/; URLs, retrieval date, file sizes and SHA-256 checksums are recorded in provenance/ices_wgnas_2026/sources.csv.
 
 ## Source and identity
 

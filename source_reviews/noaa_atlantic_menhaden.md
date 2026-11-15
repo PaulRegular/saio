@@ -28,4 +28,4 @@ The inventory row is **screened, with eligibility unresolved**. The current run 
 - [SEDAR 102 final report](https://sedarweb.org/documents/sedar-102-atlantic-menhaden-and-erp-final-stock-assessment-report/), August 2025, Section II summary of the BAM, growth, maturity, fecundity, and M methods.
 - [SEDAR 69 benchmark report reissued as SEDAR 102 RD03](https://sedarweb.org/documents/sedar102-rd-03-sedar-69-benchmark-stock-assessment-report/), especially the single-species methods, biological input tables, and survey length-to-age sensitivity.
 
-The three PDFs are cached with retrieval dates, URLs, file sizes, and checksums in `source_cache/discovery_noaa_atlantic_menhaden_2025/sources.csv`.
+The three PDFs are cached with retrieval dates, URLs, file sizes, and checksums in `source_cache/brevoortia_tyrannus/noaa_atlantic_menhaden_2025/sources.csv`.

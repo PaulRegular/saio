@@ -4,7 +4,7 @@
 
 ICES stock `ghl.27.561214` is the current stock unit covering Iceland and Faroe grounds, West of Scotland, North of Azores, and East of Greenland. It is not a match to the separate DFO Greenland halibut units in the Canadian Arctic or Northwest Atlantic. ICES describes connectivity with the adjacent Northeast Arctic and NAFO stocks as known but unquantified; this does not make those assessment units interchangeable.
 
-The latest advice in the inventory is the 2026 assessment, based on the approved GADGET age–length model benchmarked in 2023. The current MFRI technical report and ICES advice/source-data pages were retrieved on 2026-10-30 and cached in the gitignored `source_cache/discovery_ices_greenland_halibut_2026/` directory. The cache manifest records URLs, source revisions, byte sizes, and SHA-256 checksums.
+The latest advice in the inventory is the 2026 assessment, based on the approved GADGET age–length model benchmarked in 2023. The current MFRI technical report and ICES advice/source-data pages were retrieved on 2026-10-30 and cached in the gitignored `source_cache/reinhardtius_hippoglossoides/ices_greenland_halibut_2026/` directory. The cache manifest records URLs, source revisions, byte sizes, and SHA-256 checksums.
 
 ## Evidence relevant to age-disaggregated curation
 

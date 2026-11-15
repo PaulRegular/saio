@@ -10,7 +10,7 @@ ages <- 2:13
 
 cache_options <- c(
   file.path(root, "source_cache", "pollachius_virens/dfo_western_component_pollock_2022_j_m4b"),
-  file.path("..", "..", "discovery_dfo_western_pollock_2022")
+  file.path("source_cache/pollachius_virens/dfo_western_component_pollock_2022_j_m4b")
 )
 catch_file <- "dfo_western_pollock_2026_029_table1_catch_at_age.csv"
 survey_file <- "dfo_western_pollock_2026_029_table5_rv_abundance_at_age.csv"

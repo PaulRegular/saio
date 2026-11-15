@@ -49,7 +49,7 @@ stopifnot(nrow(screened) == length(ids),
   all(grepl('growth-type-group length-based', screened$decision_reason, fixed = TRUE)),
   all(grepl('N-, F-, or M-at-age', screened$output_evidence, fixed = TRUE)),
   file.exists(source_review),
-  file.exists(file.path(root, 'source_cache/discovery_noaa_guam_reef_fish_2026/sources.csv')),
+  file.exists(file.path(root, 'source_cache/shared/noaa_guam_reef_fish_2026/sources.csv')),
   all(vapply(ids, function(id) grepl(sub('^NOAA:', '', id),
     paste(readLines(source_review, warn = FALSE), collapse = ' '), fixed = TRUE), logical(1L))))
 

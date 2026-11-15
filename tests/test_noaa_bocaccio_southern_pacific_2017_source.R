@@ -81,7 +81,7 @@ stopifnot(
   depletion_2017$lwr == 0.331, depletion_2017$upr == 0.641
 )
 
-manifest <- read.csv("provenance/discovery_noaa_bocaccio_southern_pacific_2017/sources.csv",
+manifest <- read.csv("provenance/noaa_bocaccio_southern_pacific_2017/sources.csv",
   colClasses = "character", check.names = FALSE)
 source_dir <- normalizePath("source_cache/sebastes_paucispinis/noaa_bocaccio_southern_pacific_2017")
 for (i in seq_len(nrow(manifest))) {

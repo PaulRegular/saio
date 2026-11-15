@@ -11,7 +11,7 @@ unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id == unit_
 progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 pifsc <- noaa[noaa$source_region == 'PIFSC', , drop = FALSE]
-cache <- file.path(root, 'source_cache', 'discovery_noaa_wcpfc_silky_shark_2024')
+cache <- file.path(root, 'source_cache/carcharhinus_falciformis/noaa_wcpfc_silky_shark_2024')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 required <- c('WCPFC_SC20-SA-WP-04_2024_Rev2.pdf',
   'WCPFC21-2024-27_Status_of_fisheries_and_stocks_Rev02.pdf',

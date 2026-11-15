@@ -6,7 +6,7 @@ assessment_id <- "ices_ling_5a_2026"
 
 source_manifest <- read.csv(file.path(cache, "sources.csv"), stringsAsFactors = FALSE)
 provenance_manifest <- read.csv(
-  file.path(root, "provenance", "discovery_ices_ling_5a_2026", "sources.csv"),
+  file.path(root, "provenance/ices_ling_5a_2026/sources.csv"),
   stringsAsFactors = FALSE
 )
 importer <- file.path(root, "scripts/ices_ling_5a/660_import_ices_ling_5a_2026.R")

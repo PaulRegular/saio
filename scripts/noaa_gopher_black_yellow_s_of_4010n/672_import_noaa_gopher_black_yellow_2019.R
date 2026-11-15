@@ -12,7 +12,7 @@ model_url <- "https://www.pcouncil.org/documents/gopher-black-and-yellow-post-mo
 star_url <- "https://www.pcouncil.org/documents/2019/10/2019-gopher-black-and-yellow-star-panel-report.pdf"
 safe_url <- "https://www.pcouncil.org/documents/2024/08/status-of-the-pacific-coast-groundfish-fishery-stock-assessment-and-fishery-evaluation-july-2025.pdf/"
 boundary_url <- "https://www.fisheries.noaa.gov/s3/2026-02/am-37-fpa-analysis-01-2026.pdf"
-cache <- file.path(root, "source_cache/discovery_noaa_gopher_black_yellow_2019")
+cache <- file.path(root, "source_cache/shared/noaa_gopher_black_yellow_2019")
 manifest_path <- file.path(root, "provenance/noaa_gopher_black_yellow_2019/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 test_mode <- identical(Sys.getenv("TAM_SOURCE_TEST_MODE"), "1")
@@ -500,7 +500,7 @@ candidate_update$detailed_source_url <- paste(report_url, supplement_url,
   model_url, star_url, safe_url, boundary_url, sep = "; ")
 candidate_update$review_date <- "2026-11-13"
 candidate_update$decision_reason <- "The current south-of-40°10' N Gopher/Black-and-Yellow unit has a detailed 2019 benchmark assessment and native post-STAR model files; the 2025 Groundfish SAFE lists 2019 as its latest assessment. Imported as partial because catch-at-age and age-specific abundance indices are absent, and spawning-output labels conflict across report tables."
-candidate_update$notes <- "Cached authoritative 2019 assessment, supplementary tables, post-STAR model archive, STAR panel report, 2025 Groundfish SAFE, and 2026 stock-definition analysis under source_cache/discovery_noaa_gopher_black_yellow_2019/ with checksums in provenance. The combined two-species assessment is one stock record."
+candidate_update$notes <- "Cached authoritative 2019 assessment, supplementary tables, post-STAR model archive, STAR panel report, 2025 Groundfish SAFE, and 2026 stock-definition analysis under source_cache/shared/noaa_gopher_black_yellow_2019/ with checksums in provenance. The combined two-species assessment is one stock record."
 
 cat("Prepared", nrow(source_records$inputs), "inputs,",
   nrow(source_records$assumptions), "assumptions, and",

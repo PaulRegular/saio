@@ -28,4 +28,4 @@ assessment, input, or output rows were added.
 
 The report PDF, advice HTML, stock-graph HTML and their retrieval metadata and
 checksums are stored under the ignored local cache
-`source_cache/discovery_ices_sandeel_area_5r_2025/`.
+`source_cache/ices_sandeel_area_5r_2025/`.

@@ -25,7 +25,7 @@ This screen covers the seven DFO Pacific salmon inventory rows left unreviewed a
 - [ADF&G Stikine River Chinook and sockeye assessment description](https://newsrelease.adfg.alaska.gov/index.cfm?adfg=commercialbyareasoutheast.salmon_research_stikineriver_stockassess).
 - [Barkley Sockeye assessment in 2024, DFO Science Response 2026/022](https://publications.gc.ca/collections/collection_2026/mpo-dfo/Fs70-7-2026-022-eng.pdf).
 
-DFO Science Response 2025/001 and the three DFO summary pages are cached locally under `source_cache/discovery_dfo_pacific_salmon_2026/`; `sources.csv` records retrieval dates, sizes and SHA-256 hashes. Attempts to retrieve the newer Government of Canada Publications PDFs for the Skeena/Nass reports and Barkley Science Response returned the archive-information HTML page, not the requested documents. The URLs remain recorded above; the reports were reviewed via official full-text search results or publication metadata. Barkley screening is complete, and its evidence and local-download limitation are described in the dedicated review.
+DFO Science Response 2025/001 and the three DFO summary pages are cached locally under `source_cache/shared/dfo_pacific_salmon_2026/`; `sources.csv` records retrieval dates, sizes and SHA-256 hashes. Attempts to retrieve the newer Government of Canada Publications PDFs for the Skeena/Nass reports and Barkley Science Response returned the archive-information HTML page, not the requested documents. The URLs remain recorded above; the reports were reviewed via official full-text search results or publication metadata. Barkley screening is complete, and its evidence and local-download limitation are described in the dedicated review.
 
 ## Register and canonical data
 

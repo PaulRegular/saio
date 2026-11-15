@@ -14,7 +14,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'),
 outputs <- read.csv(file.path(root, 'database/outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:alf.27.nea', , drop = FALSE]
-cache <- file.path(root, 'source_cache/discovery_ices_alfonsinos_nea_2026')
+cache <- file.path(root, 'source_cache/ices_alfonsinos_nea_2026')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)
 sha256_file <- function(path) {

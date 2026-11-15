@@ -78,4 +78,4 @@ screen.
 - [2024 Research Document 2024/004, 2021 assessment for the preceding 4R boundary](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41234790.pdf)
 
 The official PDFs, retrieval URLs, retrieval date and SHA-256 checksums are in
-the gitignored local cache `source_cache/discovery_dfo_herring_4rsw_2024_2026/`.
+the gitignored local cache `source_cache/clupea_harengus/dfo_herring_4rsw_2024_2026/`.

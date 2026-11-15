@@ -49,7 +49,7 @@ bsai_url <- 'https://www.npfmc.org/wp-content/PDFdocuments/SAFE/2024/BSAIroughey
 review_date <- '2026-10-31'
 cache_note <- paste(
   'Official source PDFs and their URLs, retrieval date, sizes, and SHA-256',
-  'checksums are in source_cache/discovery_noaa_rougheye_alaska_20261031/sources.csv.'
+  'checksums are in source_cache/shared/noaa_rougheye_alaska_20261031/sources.csv.'
 )
 
 set_values('NOAA:10538', list(

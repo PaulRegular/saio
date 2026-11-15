@@ -26,7 +26,7 @@ stocks <- read.csv("database/stocks.csv", colClasses = "character", check.names 
 candidates <- read.csv("database/candidates.csv",
   colClasses = "character", check.names = FALSE)
 inventory <- candidate_units()
-manifest <- read.csv("provenance/discovery_noaa_chilipepper_2025/sources.csv",
+manifest <- read.csv("provenance/noaa_chilipepper_2025/sources.csv",
   colClasses = "character", check.names = FALSE)
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

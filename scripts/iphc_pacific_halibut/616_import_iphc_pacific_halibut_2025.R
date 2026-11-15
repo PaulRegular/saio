@@ -11,12 +11,12 @@ if (!requireNamespace("pdftools", quietly = TRUE)) {
 
 cache_candidates <- c(
   file.path(root, "source_cache", "hippoglossus_stenolepis/iphc_pacific_halibut"),
-  file.path(root, "..", "..", "discovery_iphc_pacific_halibut")
+  file.path(root, "source_cache/hippoglossus_stenolepis/iphc_pacific_halibut")
 )
 cache <- cache_candidates[dir.exists(cache_candidates)][1L]
 if (is.na(cache)) stop("The gitignored IPHC source cache is missing.", call. = FALSE)
 
-manifest_path <- file.path(root, "provenance", "discovery_iphc_pacific_halibut", "sources.csv")
+manifest_path <- file.path(root, "provenance/iphc_pacific_halibut/sources.csv")
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE)
 sha256_file <- function(path) {

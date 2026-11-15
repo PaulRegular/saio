@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_dogfish_2025')
+cache <- file.path(root, 'source_cache/ices_dogfish_2025')
 candidate_path <- file.path(root, 'database/candidates.csv')
 id <- 'ICES:rja.27.nea'
 unit_id <- 'ices_white_skate_nea'
@@ -62,7 +62,7 @@ review <- list(
   detailed_source_url = 'https://doi.org/10.17895/ices.pub.30137623',
   review_date = '2026-10-30',
   decision_reason = paste('The 2025 WGEF report, section 23, is the latest detailed source located. It says no exploratory or formal stock assessment has been undertaken; status is inferred by comparing historical and recent trawl-survey catches. Catch records are scarce and unreliable, and existing surveys are not appropriate for monitoring abundance. The unit is ineligible for the age-disaggregated set.'),
-  notes = paste('The inventory records 2023 as the latest advice update. WGEF 2025 confirms that the last advice was in 2023 and reports zero-catch precautionary advice for 2024-2027. No canonical assessment or numerical input/output records were added. The report PDF is shared in source_cache/discovery_ices_dogfish_2025/sources.csv; the manifest revision now covers sections 23, 25.9.3 and 25.9.5.'))
+  notes = paste('The inventory records 2023 as the latest advice update. WGEF 2025 confirms that the last advice was in 2023 and reports zero-catch precautionary advice for 2024-2027. No canonical assessment or numerical input/output records were added. The report PDF is shared in source_cache/ices_dogfish_2025/sources.csv; the manifest revision now covers sections 23, 25.9.3 and 25.9.5.'))
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&
   candidates$screening_status[row] == 'not_started' &&

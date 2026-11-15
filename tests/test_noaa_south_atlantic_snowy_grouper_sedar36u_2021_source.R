@@ -29,7 +29,7 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
 candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- candidate_units()
-manifest <- read.csv("provenance/noaa_snowy_grouper_sedar36u_2021/sources.csv",
+manifest <- read.csv("provenance/noaa_snowy_grouper_south_atlantic_sedar36u_2021/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines("source_reviews/noaa_snowy_grouper_sedar36u_2021.md",
   warn = FALSE), collapse = " ")

@@ -67,7 +67,7 @@ recovered. The assessment remains marked partial to reflect these gaps.
 - [SAFMC SSC October 2023 report](https://safmc.net/documents/fc1_a1e_ssc_oct2023_final_report-pdf/), reviewed to distinguish the interim analysis from a new full assessment.
 
 Source files, retrieval dates, revisions, sizes, and SHA-256 checksums are
-recorded in `provenance/discovery_noaa_south_atlantic_vermilion_snapper_2018/sources.csv`.
+recorded in `provenance/noaa_vermilion_snapper_south_atlantic_sedar55_2018/sources.csv`.
 
 ## South Atlantic vermilion snapper (NOAA:10257)
 
@@ -130,7 +130,7 @@ curation.
 
 No canonical database values were imported was
 attempted. Source files are cached locally in the gitignored directory
-`source_cache/discovery_noaa_south_atlantic_vermilion_2026/`; its `sources.csv`
+`source_cache/rhomboplites_aurorubens/noaa_south_atlantic_vermilion_2026/`; its `sources.csv`
 records source URLs, retrieval dates, revisions, byte sizes, and SHA-256 hashes.
 
 ### Sources

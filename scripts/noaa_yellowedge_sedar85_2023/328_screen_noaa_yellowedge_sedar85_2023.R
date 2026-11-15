@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'noaa_yellowedge_sedar85_2023')
+cache <- file.path(root, 'source_cache/epinephelus_flavolimbatus/noaa_yellowedge_sedar85_2023')
 candidate_path <- file.path(root, 'database/candidates.csv')
 manifest_path <- file.path(cache, 'manifest.csv')
 
@@ -162,7 +162,7 @@ review <- data.frame(
     'the east and west Gulf subregions as model areas within one stock, not separate',
     'candidate stock units. The Stock SMART inventory year 2024 corresponds to the SSC',
     'review of the 2023 operational fit. Source PDFs are cached in the ignored',
-    'source_cache/noaa_yellowedge_sedar85_2023/ directory with URL and checksum provenance.'),
+    'source_cache/epinephelus_flavolimbatus/noaa_yellowedge_sedar85_2023/ directory with URL and checksum provenance.'),
   stringsAsFactors = FALSE
 )
 

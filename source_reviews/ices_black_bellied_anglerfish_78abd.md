@@ -39,7 +39,7 @@ or output rows were added.
 ## Sources and cached files
 
 The following source files and SHA-256 checksums are recorded in the ignored
-`source_cache/discovery_ices_black_bellied_anglerfish_78abd_2026/sources.csv`
+`source_cache/lophius_budegassa/ices_black_bellied_anglerfish_78abd_2026/sources.csv`
 manifest:
 
 | Evidence | Source |

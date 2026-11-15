@@ -1,6 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache',
-  'discovery_ices_southern_hake_8c9a_2026')
+cache <- file.path(root, 'source_cache/merluccius_merluccius/ices_southern_hake_8c9a_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 id <- 'ICES:hke.27.8c9a'
 unit_id <- 'ices_southern_hake_8c9a'
@@ -11,8 +10,7 @@ files <- c(
   'ICES_StockAssessment_23751.xml'
 )
 paths <- file.path(cache, files)
-report_path <- file.path(root, 'source_cache',
-  'discovery_ices_black_bellied_anglerfish_78abd_2026', 'ICES_WGBIE_2026.pdf')
+report_path <- file.path(root, 'source_cache/lophius_budegassa/ices_black_bellied_anglerfish_78abd_2026', 'ICES_WGBIE_2026.pdf')
 urls <- c(
   'https://asd.ices.dk/viewAdvice/5108',
   'https://standardgraphs.ices.dk/ViewCharts.aspx?key=23751',
@@ -45,7 +43,7 @@ sources <- data.frame(
   retrieved_utc = '2026-10-30', stringsAsFactors = FALSE
 )
 report_source <- data.frame(
-  file = '../discovery_ices_black_bellied_anglerfish_78abd_2026/ICES_WGBIE_2026.pdf',
+  file = '../../lophius_budegassa/ices_black_bellied_anglerfish_78abd_2026/ICES_WGBIE_2026.pdf',
   url = 'https://archimer.ifremer.fr/doc/01075/118683/132700.pdf',
   retrieval_date = '2026-10-30',
   revision = 'ICES Scientific Reports 8:46, WGBIE 2026, section 10, DOI 10.17895/ices.pub.32790321.v1',

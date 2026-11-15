@@ -4,7 +4,7 @@ import_noaa_gulf_golden_tilefish <- function(root = ".", write = FALSE) {
   candidate_id <- "NOAA:10383"
   candidate_unit_id <- stock_id
   source_dir <- file.path(root, "source_cache/lopholatilus_chamaeleonticeps/noaa_gulf_golden_tilefish_2011")
-  manifest_path <- file.path(root, "provenance/discovery_noaa_gulf_tilefish_sedar22_2011/sources.csv")
+  manifest_path <- file.path(root, "provenance/noaa_gulf_golden_tilefish_2011/sources.csv")
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE, check.names = FALSE,
     colClasses = "character")
 

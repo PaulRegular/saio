@@ -42,7 +42,7 @@ reports <- list()
 for (i in seq_len(nrow(cases))) {
   case <- cases[i, ]
   area <- if (case$candidate_id == 'ICES:san.sa.6') '6' else '7r'
-  cache <- file.path(root, 'source_cache', paste0('discovery_ices_sandeel_area_', area, '_2023'))
+  cache <- file.path(root, 'source_cache', paste0('ices_sandeel_area_', area, '_2023'))
   advice_file <- paste0('ICES_Advice_', case$advice_key, '.html')
   sag_file <- paste0('SAG_', case$assessment_key, '.html')
   paths <- c(

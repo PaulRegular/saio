@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_iattc_bigeye_2026')
+cache <- file.path(root, 'source_cache/thunnus_obesus/noaa_iattc_bigeye_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:11685'
 unit_id <- 'iattc_eastern_pacific_bigeye'
@@ -137,7 +137,7 @@ review <- list(
     'The 36 reference models are reported as converged with positive-definite',
     'Hessians.',
     'translation was attempted. The public report is cached locally under',
-    'source_cache/discovery_noaa_iattc_bigeye_2026/ with its retrieval date',
+    'source_cache/thunnus_obesus/noaa_iattc_bigeye_2026/ with its retrieval date',
     'and SHA-256 in sources.csv.'
   )
 )

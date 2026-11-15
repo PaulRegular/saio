@@ -1,6 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache',
-  'discovery_ices_greater_silver_smelt_123a4_2026')
+cache <- file.path(root, 'source_cache/argentina_silus/ices_greater_silver_smelt_123a4_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:aru.27.123a4'
 unit_id <- 'ices_greater_silver_smelt_123a4'
@@ -115,7 +114,7 @@ register$review_date[row] <- '2026-10-30'
 register$decision_reason[row] <- paste0(
   'Ineligible for the age-disaggregated comparison set. The latest official assessment located is the 2026 ICES Category 2 SPiCT surplus-production assessment, based on aggregate catch/landings and a biennial acoustic biomass index; its published outputs are aggregate biomass and fishing-pressure indicators. It does not provide the age-specific inputs or population and mortality outputs required for an age-structured comparison. Do not substitute older trend-based advice or use biological samples unrelated to the current assessment to fill this gap.')
 register$notes[row] <- paste0(
-  'The ICES code aru.27.123a4 identifies Greater silver smelt in subareas 1, 2, and 4 and division 3.a; this is distinct from other Argentina silus area units in the inventory. The ICES request documents the SPiCT benchmark and the 2026 official sources identify the current assessment. Retrieved source files, URLs, dates, byte sizes, and SHA-256 checksums are recorded in source_cache/discovery_ices_greater_silver_smelt_123a4_2026/sources.csv. No canonical stock, assessment, input, or output records were added.')
+  'The ICES code aru.27.123a4 identifies Greater silver smelt in subareas 1, 2, and 4 and division 3.a; this is distinct from other Argentina silus area units in the inventory. The ICES request documents the SPiCT benchmark and the 2026 official sources identify the current assessment. Retrieved source files, URLs, dates, byte sizes, and SHA-256 checksums are recorded in source_cache/argentina_silus/ices_greater_silver_smelt_123a4_2026/sources.csv. No canonical stock, assessment, input, or output records were added.')
 
 source(file.path(root, 'scripts/shared/candidate_register_io.R'))
 if (!identical(Sys.getenv('TAM_SOURCE_DRY_RUN'), '1'))

@@ -20,4 +20,4 @@ Sources:
 - [ICES Standard Graphs data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21259), stock assessment key 21259.
 - [TAF assessment repository cited by the Stock Annex](https://github.com/ices-taf/2025_pil.27.8c9a_assessment); public GitHub metadata returned 404 during this review.
 
-The report, Stock Annex, advice PDF, and Standard Graphs source page are cached in the gitignored source_cache/ices_iberian_sardine_2025/; the local manifest records URLs, pinned source revisions, retrieval time, file sizes, and SHA-256 checksums.
+The report, Stock Annex, advice PDF, and Standard Graphs source page are cached in the gitignored source_cache/sardina_pilchardus/ices_iberian_sardine_2025/; the local manifest records URLs, pinned source revisions, retrieval time, file sizes, and SHA-256 checksums.

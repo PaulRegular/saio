@@ -22,7 +22,7 @@ The accepted assessment's Table 13 reports annual total and summary biomass, spa
 
 ## Sources reviewed and locally cached
 
-All five PDFs below are cached under the gitignored `source_cache/discovery_noaa_aurora_2013/` directory. `sources.csv` records retrieval date, source URL, revision, byte size and SHA-256 checksum.
+All five PDFs below are cached under the gitignored `source_cache/sebastes_aurora/noaa_aurora_2013/` directory. `sources.csv` records retrieval date, source URL, revision, byte size and SHA-256 checksum.
 
 - Stock SMART record 10547: <https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10547>
 - Accepted assessment, Hamel, Cope and Matson (2013): <https://www.pcouncil.org/documents/2014/08/stock-assessment-of-aurora-rockfish-in-2013-published-december-27-2013.pdf>

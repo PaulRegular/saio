@@ -28,7 +28,7 @@ stopifnot(
   assessments$inputs_status[assessments$assessment_id == paste0(stock_id, "_2026")] == "partial",
   assessments$outputs_status[assessments$assessment_id == paste0(stock_id, "_2026")] == "partial",
   file.exists("source_reviews/noaa_goa_rex_sole.md"),
-  file.exists("provenance/discovery_noaa_goa_rex_2026/sources.csv")
+  file.exists("provenance/noaa_goa_rex_2026/sources.csv")
 )
 
 cat("NOAA GOA rex sole source-curation status passed.\n")

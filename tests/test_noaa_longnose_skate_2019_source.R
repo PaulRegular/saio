@@ -41,7 +41,7 @@ candidates <- read_columns(file.path(root, "database/candidates.csv"), c(
   "eligibility", "import_status", "output_evidence"))
 inventory <- candidate_units()
 manifest <- read.csv(file.path(root,
-  "provenance/discovery_noaa_longnose_skate_2019/sources.csv"),
+  "provenance/noaa_pacific_coast_longnose_skate_2019/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

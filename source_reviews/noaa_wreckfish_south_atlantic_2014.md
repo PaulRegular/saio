@@ -77,4 +77,4 @@ imported.
 - [2014 SSC review report](https://safmc.net/documents/12d_ssc_apr2014_report_final_rev1-pdf/) — accepted production assessment review.
 - [April 2026 preliminary wreckfish assessment](https://safmc.net/documents/8b_wreckfish-stock-assessment-update-april-2026-pdf/) — landings, LPUE, length compositions, and proposed future age-composition work.
 - [April 2026 SAFMC SSC report](https://safmc.net/documents/ssc_apr2026_report_final/) — confirms the new model is under development and identifies data and identifiability questions.
-- Local file sizes, retrieval dates, URLs, and SHA-256 hashes are recorded in `source_cache/discovery_noaa_wreckfish_2014/sources.csv`.
+- Local file sizes, retrieval dates, URLs, and SHA-256 hashes are recorded in `source_cache/polyprion_americanus/noaa_wreckfish_2014/sources.csv`.

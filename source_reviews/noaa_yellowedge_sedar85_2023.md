@@ -22,4 +22,4 @@ The final assessment reports annual SSB, recruitment and exploitation outputs wi
 - [SEDAR 85 additional projections](https://sedarweb.org/documents/sedar-85-gulf-of-mexico-yellowedge-grouper-operational-assessment-additional-projections/).
 - [NOAA InPort SEDAR 85 project record](https://www.fisheries.noaa.gov/inport/item/67490/full-list).
 
-The seven SEDAR PDFs are cached under the ignored `source_cache/noaa_yellowedge_sedar85_2023/` directory. Its manifest records URLs, document revisions, retrieval time, byte size and SHA-256 checksums. This source screen does not add canonical stocks, assessment events, inputs or outputs.
+The seven SEDAR PDFs are cached under the ignored `source_cache/epinephelus_flavolimbatus/noaa_yellowedge_sedar85_2023/` directory. Its manifest records URLs, document revisions, retrieval time, byte size and SHA-256 checksums. This source screen does not add canonical stocks, assessment events, inputs or outputs.

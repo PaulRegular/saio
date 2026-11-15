@@ -29,7 +29,7 @@ candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
 candidate <- candidates[candidates$candidate_id == "NOAA:10383", , drop = FALSE]
 units <- candidate_units()
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
-manifest <- read.csv("provenance/discovery_noaa_gulf_tilefish_sedar22_2011/sources.csv",
+manifest <- read.csv("provenance/noaa_gulf_golden_tilefish_2011/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines("source_reviews/noaa_golden_tilefish_gulf_sedar22_2011.md",
   warn = FALSE), collapse = " ")

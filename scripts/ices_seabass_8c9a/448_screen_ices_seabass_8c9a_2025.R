@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_seabass_8c9a_2025')
+cache <- file.path(root, 'source_cache/dicentrarchus_labrax/ices_seabass_8c9a_2025')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:bss.27.8c9a'
 unit_id <- 'ices_seabass_8c9a'
@@ -105,7 +105,7 @@ review <- list(
     'https://sag.ices.dk/SAG_API/StockXmlDownload/19602'),
   review_date = '2026-10-31',
   decision_reason = 'The latest ICES advice located is assessment year 2025, Category 5. Official advice limits commercial catches to 306 tonnes in each of 2026-2028; the published source table/XML contains annual landings only and no numeric age-structured population outputs. The latest public source set does not meet the age-disaggregated input and output screen.',
-  notes = 'This is a distinct official ICES unit, bss.27.8c9a (southern Bay of Biscay and Atlantic Iberian waters), separate from the northern/central Bay of Biscay unit bss.27.8ab. The two units share a broad ecoregion but have different official boundaries and advice. ICES category 5 is landings-only. The XML generic metadata labels stock size as SSB but its annual stock-size values are empty; do not infer an SSB series. Advice, charts, source-data HTML and XML are cached with provenance under source_cache/discovery_ices_seabass_8c9a_2025. No canonical stock, assessment, input or output records were added.'
+  notes = 'This is a distinct official ICES unit, bss.27.8c9a (southern Bay of Biscay and Atlantic Iberian waters), separate from the northern/central Bay of Biscay unit bss.27.8ab. The two units share a broad ecoregion but have different official boundaries and advice. ICES category 5 is landings-only. The XML generic metadata labels stock size as SSB but its annual stock-size values are empty; do not infer an SSB series. Advice, charts, source-data HTML and XML are cached with provenance under source_cache/dicentrarchus_labrax/ices_seabass_8c9a_2025. No canonical stock, assessment, input or output records were added.'
 )
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&

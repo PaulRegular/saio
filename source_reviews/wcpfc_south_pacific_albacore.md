@@ -93,6 +93,6 @@ These gaps are why input, assumption, and output completeness remain marked
 - [Pinned SPC diagnostic model repository](https://github.com/PacificCommunity/ofp-sam-alb-2024-diagnostic/tree/e9640087a9831dece824062a338c21bf81414044)
 
 The PDFs and pinned native/TAF files are cached locally under
-`source_cache/discovery_noaa_south_pacific_albacore_2024/`. The tracked
-manifest at `provenance/discovery_noaa_south_pacific_albacore_2024/sources.csv`
+`source_cache/thunnus_alalunga/wcpfc_south_pacific_albacore_2024/`. The tracked
+manifest at `provenance/wcpfc_south_pacific_albacore_2024/sources.csv`
 records URLs, retrieval dates, checksums, and represented model files.

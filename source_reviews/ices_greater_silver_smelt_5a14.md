@@ -10,7 +10,7 @@ The 2025 ICES WKBDEEP benchmark replaced the earlier Gadget method with SAM. It 
 
 ## Source files and provenance
 
-The 2026 MFRI technical report, 2026 advice page, ICES Standard Graphs page and source-data table, and 2025 WKBDEEP report are cached in the ignored `source_cache/discovery_ices_gss_2026/` folder. Retrieval dates, URLs, sizes and SHA-256 checksums are in `provenance/ices_greater_silver_smelt_5a14_2026/sources.csv`.
+The 2026 MFRI technical report, 2026 advice page, ICES Standard Graphs page and source-data table, and 2025 WKBDEEP report are cached in the ignored `source_cache/argentina_silus/ices_gss_2026/` folder. Retrieval dates, URLs, sizes and SHA-256 checksums are in `provenance/ices_greater_silver_smelt_5a14_2026/sources.csv`.
 
 - [MFRI 2026 technical report](https://www.hafogvatn.is/static/extras/images/19_arg_2026_1_techreport_en.html)
 - [MFRI 2026/2027 advice](https://www.hafogvatn.is/static/extras/images/19_arg_2026_1_advice_en.html)

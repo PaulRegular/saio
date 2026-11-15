@@ -12,7 +12,7 @@ register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:reb.27.5a14', , drop = FALSE]
 review <- screen$review
-cache <- file.path(root, 'source_cache/discovery_ices_beaked_redfish_5a14_2026')
+cache <- file.path(root, 'source_cache/sebastes_mentella/ices_beaked_redfish_5a14_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

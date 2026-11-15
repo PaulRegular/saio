@@ -4,8 +4,8 @@ import_noaa_blue_deacon_oregon_2017 <- function(root = ".", write = FALSE) {
   stock_id <- "noaa_blue_deacon_oregon"
   candidate_id <- "NOAA:14822"
   region <- "Oregon"
-  cache <- file.path(root, "source_cache/discovery_noaa_blue_deacon_2017")
-  manifest <- read.csv(file.path(root, "provenance/discovery_noaa_blue_deacon_2017/sources.csv"),
+  cache <- file.path(root, "source_cache/shared/noaa_blue_deacon_2017")
+  manifest <- read.csv(file.path(root, "provenance/shared/noaa_blue_deacon_2017/sources.csv"),
     colClasses = "character", stringsAsFactors = FALSE, check.names = FALSE)
   report_url <- "https://www.pcouncil.org/documents/2018/01/the-combined-status-of-blue-and-deacon-rockfishes-in-u-s-waters-off-california-and-oregon-in-2017.pdf/"
   model_url <- "https://www.pcouncil.org/documents/2017-blue-and-deacon-rockfishes-oregon-model-files-2-zip-file-2-mb/"

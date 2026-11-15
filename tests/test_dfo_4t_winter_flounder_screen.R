@@ -7,7 +7,7 @@ candidate <- candidates[candidates$candidate_id ==
   'DFO:Gulf:Winter Flounder - NAFO 4T', , drop = FALSE]
 units <- candidate_units()
 unit <- units[units$unit_key == 'candidate:dfo_sgsl_winter_flounder_4t', , drop = FALSE]
-cache <- file.path(root, 'source_cache', 'discovery_dfo_4t_winter_flounder_2019')
+cache <- file.path(root, 'source_cache/pseudopleuronectes_americanus/dfo_4t_winter_flounder_2019')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,

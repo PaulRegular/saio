@@ -30,6 +30,7 @@ local({
 })
 
 files <- list.files("provenance", full.names = TRUE, recursive = TRUE, pattern = "\\.csv$")
+stopifnot(!any(grepl("(^|/)discovery_", files)))
 files <- files[!grepl("/transcriptions/", files, fixed = TRUE)]
 stopifnot(
   length(files) > 0L,

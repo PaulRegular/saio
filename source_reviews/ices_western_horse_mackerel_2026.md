@@ -36,4 +36,4 @@ Revisit when the detailed 2026 WGWIDE report or run-matched model inputs become 
 - [ICES Stock Information Database](https://sid.ices.dk/Default.aspx)
 - [ICES WGWIDE working-group repository](https://github.com/ices-eg/wg_WGWIDE)
 
-The 2025 chapter and current 2026 advice and source table are cached locally under `source_cache/discovery_ices_western_horse_mackerel_2026/`. `sources.csv` records retrieval dates, revisions, sizes, and SHA-256 checksums. The 2024 benchmark report is cached under `source_cache/discovery_ices_north_sea_horse_mackerel_2026/` and was inspected for model context.
+The 2025 chapter and current 2026 advice and source table are cached locally under `source_cache/trachurus_trachurus/ices_western_horse_mackerel_2026/`. `sources.csv` records retrieval dates, revisions, sizes, and SHA-256 checksums. The 2024 benchmark report is cached under `source_cache/trachurus_trachurus/ices_north_sea_horse_mackerel_2026/` and was inspected for model context.

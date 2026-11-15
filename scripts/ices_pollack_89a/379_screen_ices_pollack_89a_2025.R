@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_pollack_89a_2025')
+cache <- file.path(root, 'source_cache/pollachius_pollachius/ices_pollack_89a_2025')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:pol.27.89a'
 unit_id <- 'ices_pollack_89a'
@@ -98,7 +98,7 @@ review <- list(
     'cannot be quantified. Standard Graphs labels the stock-size series B_index in kg/hour; generic',
     'SSB table headings are not interpreted as spawning-stock biomass. Cached source URLs, assessment',
     'key, retrieval date, sizes, and SHA-256 checksums are recorded under',
-    'source_cache/discovery_ices_pollack_89a_2025/. No canonical numerical data',
+    'source_cache/pollachius_pollachius/ices_pollack_89a_2025/. No canonical numerical data',
     'were added.')
 )
 

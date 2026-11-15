@@ -11,14 +11,14 @@ source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
 cache_options <- c(
   file.path("source_cache", "seriola_dumerili/noaa_greater_amberjack_south_atlantic_sedar59_2020"),
-  file.path("..", "..", "discovery_noaa_south_atlantic_greater_amberjack_2020")
+  file.path("source_cache/seriola_dumerili/noaa_greater_amberjack_south_atlantic_sedar59_2020")
 )
 source_dir <- cache_options[
   vapply(cache_options, function(path) file.exists(file.path(path, "sources.csv")), logical(1))
 ][1L]
 if (is.na(source_dir)) stop("Could not find the shared SEDAR 59 source cache.", call. = FALSE)
 
-manifest_path <- file.path("provenance", "discovery_noaa_greater_amberjack_south_atlantic_2020", "sources.csv")
+manifest_path <- file.path("provenance/noaa_greater_amberjack_south_atlantic_sedar59_2020/sources.csv")
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE, check.names = FALSE,
   colClasses = "character")
 

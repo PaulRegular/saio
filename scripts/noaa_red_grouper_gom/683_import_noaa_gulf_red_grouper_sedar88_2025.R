@@ -1,7 +1,7 @@
 stock_id <- "noaa_red_grouper_gom"
 assessment_id <- paste0(stock_id, "_sedar88_2025")
 candidate_id <- "NOAA:10331"
-cache_name <- "discovery_noaa_red_grouper_gom_2025"
+cache_name <- "epinephelus_morio/noaa_red_grouper_gom_2025"
 report_file <- "sedar_88_red_grouper_final_updated_2025.pdf"
 report_url <- "https://sedarweb.org/documents/sedar-88-gulf-of-mexico-red-grouper-final-stock-assessment-report-updated-december-2025/"
 project_url <- "https://sedarweb.org/assessments/sedar-88-gulf-of-mexico-red-grouper/"
@@ -15,10 +15,9 @@ if (!requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install pdftools to parse the cached SEDAR 88 report.", call. = FALSE)
 }
 
-manifest <- read.csv(file.path("provenance", cache_name, "sources.csv"),
+manifest <- read.csv(file.path("provenance/noaa_red_grouper_gom_2025", "sources.csv"),
   stringsAsFactors = FALSE, colClasses = "character", check.names = FALSE)
-cache_options <- c(file.path("source_cache", cache_name),
-  file.path("..", "..", cache_name))
+cache_options <- c(file.path("source_cache", cache_name))
 cache <- cache_options[dir.exists(cache_options)][1L]
 report_path <- file.path(cache, report_file)
 manifest_row <- which(manifest$file == report_file)

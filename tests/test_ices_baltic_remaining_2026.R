@@ -40,7 +40,7 @@ stopifnot(
   all(!units_expected %in% outputs$assessment_id)
 )
 
-cache <- file.path(root, 'source_cache', 'discovery_ices_baltic_current_reports_2026')
+cache <- file.path(root, 'source_cache/shared/ices_baltic_current_reports_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 cached <- file.path(cache, manifest$file)
 stopifnot(

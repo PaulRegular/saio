@@ -57,4 +57,4 @@ assessment, input, or output values were imported.
 - [NOAA CIE review report by Kahn](https://www.st.nmfs.noaa.gov/Assets/Quality-Assurance/documents/peer-review-reports/2016/2016_07_05%20Kahn%20SEDAR%2047%20Goliath%20Grouper%20review%20report.pdf).
 - [FWC goliath grouper population assessment page](https://myfwc.com/fishing/saltwater/recreational/goliath/), saved locally on 2026-10-31.
 - NOAA Stock SMART source snapshot: `source_cache/shared/noaa_stocksmart/stock_assessment_summary.rda`, revision `664c4237e26520b260a090e1821a2cee5d1cdf07`.
-- Local source files, retrieval dates, sizes and SHA-256 hashes are recorded in `source_cache/discovery_noaa_goliath_grouper_2016/sources.csv`.
+- Local source files, retrieval dates, sizes and SHA-256 hashes are recorded in `source_cache/epinephelus_itajara/noaa_goliath_grouper_2016/sources.csv`.

@@ -1,7 +1,7 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_dfo_greenland_halibut_2_3klmno_2025")
-manifest_path <- file.path(root, "provenance", "discovery_dfo_greenland_halibut_2_3klmno_2025", "sources.csv")
+cache <- file.path(root, "source_cache/reinhardtius_hippoglossoides/dfo_greenland_halibut_2_3klmno_2025")
+manifest_path <- file.path(root, "provenance/dfo_greenland_halibut_2_3klmno_2025/sources.csv")
 dry_run <- identical(Sys.getenv("SAIO_IMPORT_DRY_RUN"), "1")
 
 manifest <- utils::read.csv(
@@ -446,7 +446,7 @@ candidate_update$decision_reason <- paste(
 )
 candidate_update$notes <- paste(
   "The latest 2026 annual advice applies the management procedure and sets the 2027 TAC; the 2023 SCAA and SSM fits were prepared for the MSE update and are not the annual advice models.",
-  "Source PDFs, URLs, retrieval dates, and checksums are in source_cache/discovery_dfo_greenland_halibut_2_3klmno_2025/. See source_reviews/dfo_greenland_halibut_2_3klmno.md."
+  "Source PDFs, URLs, retrieval dates, and checksums are in source_cache/reinhardtius_hippoglossoides/dfo_greenland_halibut_2_3klmno_2025/. See source_reviews/dfo_greenland_halibut_2_3klmno.md."
 )
 
 if (dry_run) {

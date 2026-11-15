@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_capelin_2a514_2026')
+cache <- file.path(root, 'source_cache/mallotus_villosus/ices_capelin_2a514_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 id <- 'ICES:cap.27.2a514'
 unit_id <- 'ices_capelin_iegjm'

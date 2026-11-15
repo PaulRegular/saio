@@ -1,6 +1,5 @@
 root <- "."
-cache_dir <- file.path(root, 'source_cache',
-  'discovery_noaa_isc_shortfin_mako_2024')
+cache_dir <- file.path(root, 'source_cache/isurus_oxyrinchus/noaa_isc_shortfin_mako_2024')
 register_path <- file.path(root, 'database/candidates.csv')
 manifest <- read.csv(file.path(cache_dir, 'sources.csv'), stringsAsFactors = FALSE)
 
@@ -72,7 +71,7 @@ review <- list(
   detailed_source_url = paste('https://isc.fra.go.jp/pdf/ISC24/ISC24_ANNEX14-North_Pacific_Ocean_Shortfin_Mako_Shark_Stock_Assessment_Through_2022-FINAL.pdf', 'https://isc.fra.go.jp/pdf/ISC25/ISC25_Plenary_Report_FINAL.pdf', 'https://isc.fra.go.jp/reports/stock_assessments.html', 'https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=11715', sep = '; '),
   review_date = '2026-11-02',
   decision_reason = paste('Ineligible for the age-disaggregated comparison set. The latest accepted production assessment is the detailed 2024 ISC shortfin mako assessment through 2022, carried forward by ISC25. Its final model is a Bayesian state-space surplus-production model with aggregate annual catch and CPUE, and the report explicitly identifies the lack of age structure in estimation. The report\'s age-structured simulation is diagnostic and does not provide fitted age-specific population outputs. The earlier 2018 age-based SS3 assessment is superseded and is not substituted for the detailed 2024 run.'),
-  notes = paste('NOAA Stock SMART ID 11715 maps to the North Pacific shortfin mako unit and is distinct from NOAA:10657, the North Atlantic unit. No canonical Isurus oxyrinchus stock row exists. Stock SMART identifies assessment 13565 (2024, data through 2022; SWFSC/PIFSC; BSP) as Full acceptance. The detailed ISC24 report and ISC25 Plenary report are cached with retrieval dates and SHA-256 values in source_cache/discovery_noaa_isc_shortfin_mako_2024/sources.csv. ISC states that access to assessment data files requires an NDA; no native fitted object was found in the public sources reviewed.')
+  notes = paste('NOAA Stock SMART ID 11715 maps to the North Pacific shortfin mako unit and is distinct from NOAA:10657, the North Atlantic unit. No canonical Isurus oxyrinchus stock row exists. Stock SMART identifies assessment 13565 (2024, data through 2022; SWFSC/PIFSC; BSP) as Full acceptance. The detailed ISC24 report and ISC25 Plenary report are cached with retrieval dates and SHA-256 values in source_cache/isurus_oxyrinchus/noaa_isc_shortfin_mako_2024/sources.csv. ISC states that access to assessment data files requires an NDA; no native fitted object was found in the public sources reviewed.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

@@ -9,7 +9,7 @@ stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-manifest <- read.csv("provenance/discovery_noaa_pacific_mackerel_2025/sources.csv",
+manifest <- read.csv("provenance/noaa_pacific_mackerel_2025/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 source_paths <- file.path(cache, manifest$file)
 archive_files <- utils::unzip(file.path(cache, "pacific_mackerel_2023_model_files.zip"),

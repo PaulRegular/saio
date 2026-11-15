@@ -2,7 +2,7 @@
 
 ## Assessment and source set
 
-ICES combined the former Subdivisions 21-23 and 24-32 plaice assessment units after the WKBPLAICE benchmark. WGBFAS 2026 reports the current SAM assessment for ple.27.21-32. The native run is ple.27.21.32_WGBFAS_2026_SA; its model and data objects, input files, and supporting code are cached locally in source_cache/ices_plaice_baltic_21_32_2026/official_SA/. The manifest records the retrieval date, URLs, file sizes, and SHA-256 hashes.
+ICES combined the former Subdivisions 21-23 and 24-32 plaice assessment units after the WKBPLAICE benchmark. WGBFAS 2026 reports the current SAM assessment for ple.27.21-32. The native run is ple.27.21.32_WGBFAS_2026_SA; its model and data objects, input files, and supporting code are cached locally in source_cache/pleuronectes_platessa/ices_plaice_baltic_21_32_2026/official_SA/. The manifest records the retrieval date, URLs, file sizes, and SHA-256 hashes.
 
 - WGBFAS 2026 report: <https://literatur.thuenen.de/digbib_extern/dn071152.pdf>
 - WKBPLAICE benchmark: <https://literatur.thuenen.de/digbib_extern/dn069680.pdf>

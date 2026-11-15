@@ -42,7 +42,7 @@ candidates <- read_columns("database/candidates.csv", c(
   "maturity_evidence", "mortality_evidence", "timing_evidence",
   "output_evidence"))
 inventory <- candidate_units()
-manifest <- read.csv("provenance/discovery_noaa_goa_rougheye_2023/sources.csv",
+manifest <- read.csv("provenance/noaa_goa_rougheye_blackspotted_2023/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines(
   "source_reviews/noaa_goa_rougheye_blackspotted.md",
@@ -178,9 +178,9 @@ stopifnot(
   grepl("most recent full assessment remained 2023", review, fixed = TRUE),
   grepl("2026 full-assessment document", review, fixed = TRUE),
   grepl("roughly 0.5", review, fixed = TRUE),
-  file.exists(file.path("source_cache/discovery_noaa_goa_rougheye_2023",
+  file.exists(file.path("source_cache/noaa_goa_rougheye_blackspotted_2023",
     "goa_rougheye_2023_full.pdf")),
-  file.exists(file.path("source_cache/discovery_noaa_goa_rougheye_2023",
+  file.exists(file.path("source_cache/noaa_goa_rougheye_blackspotted_2023",
     "goa_rougheye_2025_catch_report.pdf"))
 )
 

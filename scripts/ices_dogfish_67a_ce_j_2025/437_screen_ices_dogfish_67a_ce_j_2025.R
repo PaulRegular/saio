@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_dogfish_2025')
+cache <- file.path(root, 'source_cache/ices_dogfish_2025')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:syc.27.67a-ce-j'
 unit_id <- 'ices_lesser_spotted_dogfish_67a_ce_j'
@@ -91,7 +91,7 @@ review <- list(
   decision_reason = paste('The latest assessment located is the 2025 ICES category 3 assessment using the rfb rule.',
     'Its production inputs are landings, catch length-frequency distributions and aggregate survey biomass indices; it reports length-based fishing-pressure metrics and stock-level advice, not age-disaggregated population inputs or outputs. The unit is therefore ineligible for the age-disaggregated set. This does not establish that age samples are absent from biological monitoring.'),
   notes = paste('ICES Standard Graphs assessment key 21039 identifies the stock-size measure as B_index in',
-    'kg/km2 and pressure as Fproxy; the age-specific F field is blank. The 2025 WGEF report gives a 5194 t RFB calculation and 4781 t advice for 2026-2027. This is a distinct new ICES assessment unit with no exact canonical stock match. The report PDF and source-data page are cached under source_cache/discovery_ices_dogfish_2025/ with retrieval dates and checksums in sources.csv. No canonical data were added.')
+    'kg/km2 and pressure as Fproxy; the age-specific F field is blank. The 2025 WGEF report gives a 5194 t RFB calculation and 4781 t advice for 2026-2027. This is a distinct new ICES assessment unit with no exact canonical stock match. The report PDF and source-data page are cached under source_cache/ices_dogfish_2025/ with retrieval dates and checksums in sources.csv. No canonical data were added.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

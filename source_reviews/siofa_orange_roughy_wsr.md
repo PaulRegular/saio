@@ -87,4 +87,4 @@ output series are not available in the public sources reviewed.
 - [SIOFA harvest-strategy review, WS2025-PAM3-03](https://siofa.org/system/files/meeting_documents/third_scientific_committee_workshop_to_progress_the_siofa_precautionary_approach_and_management_projects_ws2025-pam3/WS2025-PAM3-03-Update-PAM-2024-03-progress.pdf)
 
 Local cached copies and checksums are recorded in
-`provenance/siofa_orange_roughy_2025/sources.csv`.
+`provenance/siofa_orange_roughy_wsr_2025/sources.csv`.

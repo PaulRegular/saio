@@ -14,7 +14,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
 source(file.path(root, "scripts/shared/pacific_tables.R"))
 source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
-manifest <- read.csv(file.path(root, "provenance/discovery_noaa_chilipepper_2025/sources.csv"),
+manifest <- read.csv(file.path(root, "provenance/noaa_chilipepper_2025/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 sha256_file <- function(path) {
   if (.Platform$OS.type == "windows") {

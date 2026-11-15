@@ -4,7 +4,7 @@ import_noaa_gulf_cobia_sedar28 <- function(root = ".", write = FALSE) {
   candidate_id <- "NOAA:10390"
   report_file <- "sedar28_gulf_cobia_update_2020.pdf"
   source_dir <- file.path(root, "source_cache/rachycentron_canadum/noaa_cobia_gulf_mexico_2020_sedar28_update")
-  manifest <- read.csv(file.path(root, "provenance/discovery_noaa_gom_cobia_2020/sources.csv"),
+  manifest <- read.csv(file.path(root, "provenance/noaa_cobia_gulf_mexico_2020_sedar28_update/sources.csv"),
     stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 
   sha256_file <- function(path) {

@@ -26,7 +26,7 @@ stopifnot(nrow(rows) == length(ids), !anyNA(rows$candidate_id),
   grepl('status determinations only', rows$output_evidence[rows$candidate_id == 'NOAA:14141'], ignore.case = TRUE),
   file.exists(file.path(root, 'source_reviews/shared/noaa_sedar_shark_inventory_2006_2018.md')))
 
-cache <- file.path(root, 'source_cache', 'discovery_noaa_sedar_sharks_2026')
+cache <- file.path(root, 'source_cache/shared/noaa_sedar_sharks_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 required <- c('sedar11_large_coastal_sharks_2006.pdf',
   'sedar13_small_coastal_sharks_2007.pdf',

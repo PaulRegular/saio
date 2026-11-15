@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_dogfish_2025')
+cache <- file.path(root, 'source_cache/ices_dogfish_2025')
 candidate_path <- file.path(root, 'database/candidates.csv')
 id <- 'ICES:syc.27.3a47d'
 unit_id <- 'ices_lesser_spotted_dogfish_3a47d'
@@ -62,7 +62,7 @@ review <- list(
   detailed_source_url = 'https://doi.org/10.17895/ices.pub.30137623',
   review_date = '2026-10-30',
   decision_reason = 'The latest detailed 2025 WGEF source identifies this as an ICES Category 3 rfb assessment based on aggregate survey biomass and length-based catch indicators. No age-disaggregated assessment inputs or population outputs are reported, so the unit is ineligible for the age-disaggregated set.',
-  notes = 'Section 25.6.1 documents the five-survey biomass index; section 25.9.2 gives the Category 3 rfb rule, annual relative indices and 2026-2027 advice. Life-history parameters are cited from vertebral samples collected in the Irish Sea, but are not a stock-specific age-structured assessment likelihood. No canonical numerical records were added. The WGEF report is cached in source_cache/discovery_ices_dogfish_2025/sources.csv.')
+  notes = 'Section 25.6.1 documents the five-survey biomass index; section 25.9.2 gives the Category 3 rfb rule, annual relative indices and 2026-2027 advice. Life-history parameters are cited from vertebral samples collected in the Irish Sea, but are not a stock-specific age-structured assessment likelihood. No canonical numerical records were added. The WGEF report is cached in source_cache/ices_dogfish_2025/sources.csv.')
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&
   candidates$screening_status[row] == 'not_started' &&

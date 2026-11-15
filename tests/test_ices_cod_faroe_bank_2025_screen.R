@@ -6,7 +6,7 @@ Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:cod.27.5b2', , drop = FALSE]
-cache <- file.path(root, 'source_cache/discovery_ices_cod_faroe_bank_2025')
+cache <- file.path(root, 'source_cache/gadus_morhua/ices_cod_faroe_bank_2025')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)
 source_data <- paste(readLines(paths[2L], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')

@@ -19,7 +19,7 @@ eligible <- eligible[match(names(expected_matches), eligible$candidate_id), ]
 
 witch <- subset(nafo, candidate_id == "NAFO:witch_flounder.3NO")
 source_manifest <- read.csv(
-  "provenance/discovery_dfo_witch_flounder_3no_2026/sources.csv",
+  "provenance/dfo_witch_flounder_3no_2026/sources.csv",
   stringsAsFactors = FALSE
 )
 advice <- subset(source_manifest,
@@ -49,7 +49,7 @@ stopifnot(
   !grepl("tinyAM", review_text, ignore.case = TRUE)
 )
 
-cached_advice <- "source_cache/discovery_dfo_witch_flounder_3no_2026/nafo_wf3no_2026_advice.pdf"
+cached_advice <- "source_cache/glyptocephalus_cynoglossus/dfo_witch_flounder_3no_2026/nafo_wf3no_2026_advice.pdf"
 if (file.exists(cached_advice)) {
   stopifnot(identical(toupper(unname(tools::sha256sum(cached_advice))),
     toupper(advice$sha256)))

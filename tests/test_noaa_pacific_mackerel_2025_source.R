@@ -137,10 +137,9 @@ stopifnot(
     fixed = TRUE))
 )
 
-extracted <- read.csv(file.path(root, "provenance/noaa_pacific_mackerel_2023_model_files/sources.csv"),
+extracted <- read.csv(file.path(root, "provenance/noaa_pacific_mackerel_2023/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
-manifest <- read.csv(file.path(root, "provenance",
-  "discovery_noaa_pacific_mackerel_2025", "sources.csv"),
+manifest <- read.csv(file.path(root, "provenance/noaa_pacific_mackerel_2025/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 archive_sha <- manifest$sha256[manifest$source_id == "pfmc_2023_model_files"]
 stopifnot(

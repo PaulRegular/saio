@@ -43,7 +43,7 @@ stopifnot(nrow(assessments) == 6L,
   all(as.character(assessments$review_result) == 'Full acceptance'),
   all(as.integer(assessments$model_category) == 2L))
 
-cache <- file.path(root, 'source_cache', 'discovery_noaa_alaska_aggregates_2024')
+cache <- file.path(root, 'source_cache/shared/noaa_alaska_aggregates_2024')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 files <- c('BSAI_Other_Flatfish_SAFE_2024.pdf',

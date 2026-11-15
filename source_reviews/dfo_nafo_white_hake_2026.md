@@ -20,4 +20,4 @@ The NAFO 2024 biological-sampling inventory lists Canadian commercial sampling f
 - [NAFO 2024 biological sampling inventory, SCS Doc. 24/24](https://www.nafo.int/Portals/0/PDFs/sc/2024/scs24-24.pdf).
 - [DFO 2025 Groundfish IFMP for NAFO Subdivision 3Ps](https://www.dfo-mpo.gc.ca/fisheries-peches/ifmp-gmp/groundfish-poisson-fond/2025/groundfish-poisson-fond-div3ps-nafo-opano-eng.html), confirming stock and management boundaries.
 
-The NAFO PDFs reviewed above are cached locally under the ignored `source_cache/discovery_dfo_nafo_white_hake_thorny_skate/`; `sources.csv` records retrieval dates, URLs, byte sizes, and SHA-256 checksums.
+The NAFO PDFs reviewed above are cached locally under the ignored `source_cache/shared/dfo_nafo_white_hake_thorny_skate/`; `sources.csv` records retrieval dates, URLs, byte sizes, and SHA-256 checksums.

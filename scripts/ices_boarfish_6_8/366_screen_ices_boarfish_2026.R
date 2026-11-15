@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache_dir <- file.path(root, 'source_cache', 'discovery_ices_boarfish_2026')
+cache_dir <- file.path(root, 'source_cache/capros_aper/ices_boarfish_2026')
 source_manifest <- read.csv(file.path(cache_dir, 'sources.csv'), stringsAsFactors = FALSE)
 expected <- data.frame(
   file = c('wkb_horse_mackerel_boarfish_2024.pdf', 'wgwide_2025_executive_summary.pdf',
@@ -94,7 +94,7 @@ review <- list(
     'https://standardgraphs.ices.dk/ViewSourceData.aspx?key=25915', sep = '; '),
   review_date = '2026-10-30',
   decision_reason = paste('The latest 2026 ICES output follows the 2024 WKBHMB benchmark assessment, which WGWIDE 2025 describes as the current boarfish method. The fitted SS3 observations are total catch, aggregate acoustic and VAST biomass indices, and length compositions. Age-derived recruitment and F outputs do not establish age-disaggregated input data; the case is therefore ineligible for this age-input set.'),
-  notes = paste('Identity is verified against the pinned 2026 ICES SID. The 2024 WKBHMB report describes a length-based SS3 model with a 30-age population structure, not observed catch-at-age or age-specific survey likelihoods. Assessment key 25915 supplies 2026 output series only. Source files and checksums are in the ignored local cache under source_cache/discovery_ices_boarfish_2026/. No canonical assessment or numerical records were added.')
+  notes = paste('Identity is verified against the pinned 2026 ICES SID. The 2024 WKBHMB report describes a length-based SS3 model with a 30-age population structure, not observed catch-at-age or age-specific survey likelihoods. Assessment key 25915 supplies 2026 output series only. Source files and checksums are in the ignored local cache under source_cache/capros_aper/ices_boarfish_2026/. No canonical assessment or numerical records were added.')
 )
 initial <- candidates$match_status[row] == 'unreviewed' &&
   candidates$screening_status[row] == 'not_started' &&

@@ -10,7 +10,7 @@ candidate <- register[register$candidate_id ==
   'DFO:Pacific:Sockeye Salmon - Fraser (Early Stuart)', , drop = FALSE]
 unit_id <- 'dfo_fraser_sockeye_early_stuart'
 review_path <- file.path(root, 'source_reviews/dfo_fraser_sockeye_early_stuart.md')
-cache <- file.path(root, 'source_cache', 'discovery_dfo_fraser_sockeye')
+cache <- file.path(root, 'source_cache/oncorhynchus_nerka/dfo_fraser_sockeye')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 files <- file.path(cache, manifest$file)
 

@@ -75,10 +75,10 @@ inventory <- candidate_units()
 inventory <- inventory[inventory$candidate_ids == candidate_id, , drop = FALSE]
 review <- paste(readLines("source_reviews/noaa_red_grouper_gom.md",
   warn = FALSE), collapse = " ")
-manifest <- read.csv("provenance/discovery_noaa_red_grouper_gom_2025/sources.csv",
+manifest <- read.csv("provenance/noaa_red_grouper_gom_2025/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-cache_options <- c("source_cache/discovery_noaa_red_grouper_gom_2025",
-  file.path("..", "..", "discovery_noaa_red_grouper_gom_2025"))
+cache_options <- c("source_cache/epinephelus_morio/noaa_red_grouper_gom_2025",
+  file.path("source_cache/epinephelus_morio/noaa_red_grouper_gom_2025"))
 cache <- cache_options[dir.exists(cache_options)][1L]
 source_row <- manifest[manifest$file == "sedar_88_red_grouper_final_updated_2025.pdf", , drop = FALSE]
 

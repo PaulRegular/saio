@@ -20,4 +20,4 @@ No annual fitted N-at-age, F-at-age, or M-at-age series was found in the officia
 - [ICES 2026 stock graphs, assessment key 23744](https://standardgraphs.ices.dk/ViewCharts.aspx?key=23744) and [source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=23744).
 - [ICES 2023 stock annex](https://doi.org/10.17895/ices.pub.23600094), cited by MFRI as the assessment-method overview.
 
-The reviewed 2026 report, advice, and ICES graph pages are cached under the ignored folder source_cache/discovery_ices_capelin_2a514_2026/. Its sources.csv records retrieval dates, published revisions, URLs, and SHA-256 checksums.
+The reviewed 2026 report, advice, and ICES graph pages are cached under the ignored folder source_cache/mallotus_villosus/ices_capelin_2a514_2026/. Its sources.csv records retrieval dates, published revisions, URLs, and SHA-256 checksums.

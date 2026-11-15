@@ -6,7 +6,7 @@ NOAA Stock SMART ID 10046 is the U.S. Pacific Coast English sole stock, Parophry
 
 The latest full assessment located is the coastwide data-moderate assessment conducted in 2013 and published in 2015. The 2019 work was a catch-only projection update based on the 2013 assessment, not a new age-structured assessment. Council planning material states that 2013 was still the latest assessment in 2024 and that the stock was being considered for a future benchmark. Stock SMART's assessment year of 2013 agrees with this run identification.
 
-The 2013 assessment report, a 2024 Council assessment-priority document and NOAA's 2025 stock-definition analysis are cached under source_cache/discovery_noaa_english_sole_2013/. The local sources.csv records source URLs, retrieval dates, filenames and SHA-256 checksums.
+The 2013 assessment report, a 2024 Council assessment-priority document and NOAA's 2025 stock-definition analysis are cached under source_cache/parophrys_vetulus/noaa_english_sole_2013/. The local sources.csv records source URLs, retrieval dates, filenames and SHA-256 checksums.
 
 ## Age-input screen
 

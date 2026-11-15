@@ -5,9 +5,9 @@ import_noaa_blue_deacon_california_2017 <- function(root = ".", write = FALSE) {
   stock_id <- "noaa_blue_deacon_california"
   candidate_id <- "NOAA:14821"
   region <- "California"
-  cache <- file.path(root, "source_cache/discovery_noaa_blue_deacon_2017")
+  cache <- file.path(root, "source_cache/shared/noaa_blue_deacon_2017")
   manifest <- read.csv(file.path(root,
-    "provenance/discovery_noaa_blue_deacon_california_2017/sources.csv"),
+    "provenance/shared/noaa_blue_deacon_california_2017/sources.csv"),
     colClasses = "character", stringsAsFactors = FALSE, check.names = FALSE)
   source_files <- c("assessment_2017.pdf", "assessment_2017.txt",
     "model_files_california_2017.zip", "star_panel_2017.pdf",

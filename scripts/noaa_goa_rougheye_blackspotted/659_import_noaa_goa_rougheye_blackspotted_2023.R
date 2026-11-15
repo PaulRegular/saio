@@ -2,7 +2,7 @@ import_noaa_goa_rougheye_blackspotted_2023 <- function(root = ".", write = FALSE
   assessment_id <- "noaa_goa_rougheye_blackspotted_2023"
   stock_id <- "noaa_goa_rougheye_blackspotted"
   candidate_id <- "NOAA:11443"
-  cache <- file.path(root, "source_cache/discovery_noaa_goa_rougheye_2023")
+  cache <- file.path(root, "source_cache/noaa_goa_rougheye_blackspotted_2023")
   manifest_path <- file.path(cache, "sources.csv")
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
     check.names = FALSE)
@@ -637,11 +637,11 @@ import_noaa_goa_rougheye_blackspotted_2023 <- function(root = ".", write = FALSE
     "The 2026 full-assessment document uploaded for the upcoming November Plan Team meeting was not yet reviewed as of 2026-11-12.")
   candidates$notes[ci] <- paste(
     "Partial source import from the 2023 SAFE, Model 23.1b. Rounded proportions are retained without renormalization; source sample sizes and haul counts are recorded.",
-    "See source_reviews/noaa_goa_rougheye_blackspotted.md and provenance/discovery_noaa_goa_rougheye_2023/sources.csv.")
+    "See source_reviews/noaa_goa_rougheye_blackspotted.md and provenance/noaa_goa_rougheye_blackspotted_2023/sources.csv.")
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)
   provenance_dir <- file.path(root,
-    "provenance/discovery_noaa_goa_rougheye_2023")
+    "provenance/noaa_goa_rougheye_blackspotted_2023")
   source(file.path(root, "scripts/shared/source_manifest_io.R"), local = TRUE)
   write_source_manifest(manifest, file.path(provenance_dir, "sources.csv"),
     row.names = FALSE, na = "")

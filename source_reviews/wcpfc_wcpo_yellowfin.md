@@ -33,7 +33,7 @@ The detailed source package does not provide catch-at-age or an age-specific abu
 
 ## Provenance
 
-The local, gitignored cache is source_cache/discovery_noaa_wcpo_yellowfin_2026/. Its tracked manifest records URLs, retrieval dates, sizes, checksums and the pinned SPC repository revision b00a02f3537ef54520b219488f899188ea6eff3f.
+The local, gitignored cache is source_cache/thunnus_albacares/wcpfc_wcpo_yellowfin_2026/. Its tracked manifest records URLs, retrieval dates, sizes, checksums and the pinned SPC repository revision b00a02f3537ef54520b219488f899188ea6eff3f.
 
 - [2026 WCPFC assessment report, WCPFC-SC22-2026-SA-WP05 Rev. 01](https://meetings.wcpfc.int/node/32678)
 - [2026 assessment input paper, WCPFC-SC22-2026-SA-IP03 Rev. 01](https://meetings.wcpfc.int/file/21826/download)

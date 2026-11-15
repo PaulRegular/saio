@@ -11,7 +11,7 @@ unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id == unit_
 progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 sefsc <- noaa[noaa$source_region == 'SEFSC', , drop = FALSE]
-cache <- file.path(root, 'source_cache', 'discovery_noaa_black_grouper_sedar19')
+cache <- file.path(root, 'source_cache/mycteroperca_bonaci/noaa_black_grouper_sedar19')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 required <- c('SEDAR19_Black_Grouper_Final_Assessment_Report.pdf',
   'SAFMC_Black_Grouper_Management_Procedure_Report_2026.pdf',

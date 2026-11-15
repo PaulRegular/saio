@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_iccat_blue_marlin_2024')
+cache <- file.path(root, 'source_cache/makaira_nigricans/noaa_iccat_blue_marlin_2024')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:11254'
 unit_id <- 'iccat_atlantic_blue_marlin'
@@ -149,7 +149,7 @@ review <- list(
     '2022. The reported biological assumptions do not substitute for population age',
     'compositions or age-specific output surfaces. No canonical values were added',
     'and was attempted. Official reports are cached under',
-    'source_cache/discovery_noaa_iccat_blue_marlin_2024/.'
+    'source_cache/makaira_nigricans/noaa_iccat_blue_marlin_2024/.'
   )
 )
 

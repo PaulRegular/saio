@@ -5,8 +5,7 @@ register <- read.csv(file.path(root, "database/candidates.csv"),
 candidate <- register[register$candidate_id == "NOAA:10956", , drop = FALSE]
 review <- paste(readLines(file.path(root, "source_reviews/noaa_alaska_sablefish.md"), warn = FALSE), collapse = " ")
 cache <- file.path(root, "source_cache", "anoplopoma_fimbria/noaa_alaska_sablefish_2024")
-manifest <- read.csv(file.path(root, "provenance", "discovery_noaa_alaska_sablefish_2024_2025",
-  "sources.csv"), stringsAsFactors = FALSE)
+manifest <- read.csv(file.path(root, "provenance/noaa_alaska_sablefish_2024_2025/sources.csv"), stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, "database", "stocks.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 assessments <- read.csv(file.path(root, "database", "assessments.csv"),

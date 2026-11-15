@@ -23,7 +23,7 @@ candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE, check
 candidate <- candidate[candidate$candidate_id == "NOAA:10462", , drop = FALSE]
 inventory <- candidate_units()
 inventory <- inventory[inventory$candidate_ids == "NOAA:10462", , drop = FALSE]
-provenance <- read.csv("provenance/discovery_noaa_oregon_kelp_greenling_2015/sources.csv",
+provenance <- read.csv("provenance/noaa_kelp_greenling_oregon_2015/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines("source_reviews/noaa_kelp_greenling_oregon.md"), collapse = " ")
 

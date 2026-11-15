@@ -20,7 +20,7 @@ The assessment is age-structured: the current 2025 report names ASAP and refers 
 
 ## Cached sources
 
-Source PDFs are cached under `source_cache/discovery_noaa_winter_flounder/`. The ignored `sources.csv` contains retrieval dates, URLs, byte counts, and SHA-256 hashes.
+Source PDFs are cached under `source_cache/pseudopleuronectes_americanus/noaa_winter_flounder/`. The ignored `sources.csv` contains retrieval dates, URLs, byte counts, and SHA-256 hashes.
 
 - [2025 SNE/MA Winter Flounder Management Track report (NOAA SIS)](https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&fileId=10436)
 - [2025 Gulf of Maine Winter Flounder Management Track report](https://asmfc.org/wp-content/uploads/2026/01/GOM_WFlounderMgmtTrackAssmtReport_Sept2025.pdf)

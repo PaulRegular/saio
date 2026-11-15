@@ -608,7 +608,7 @@ replace_candidate_register_row(
   candidate_path, candidate_row, candidates[candidate_row, , drop = FALSE], candidate_id
 )
 
-replace_discovery_row <- function(path, row_index, row, key_column, key) {
+replace_table_row <- function(path, row_index, row, key_column, key) {
   if (nrow(row) != 1L) stop("Expected one discovery row.", call. = FALSE)
   bytes <- readBin(path, "raw", n = file.info(path)$size)
   bounds <- csv_record_bounds(bytes)

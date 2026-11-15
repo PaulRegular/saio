@@ -37,7 +37,7 @@ The public stockassessment.org listing includes the NWWG26_WOSC_v1 run directory
 
 ## Cached sources
 
-The official [ICES 2026 NWWG report](https://doi.org/10.17895/ices.pub.32414577), chapters 13 and 15, is cached under source_cache/discovery_ices_greenland_cod_2026/. The local sources.csv manifest records URLs, retrieval dates, file sizes, and SHA-256 values. The derived west_offshore_summary_2026.csv transcribes only Table 13.3.1, pages 176-177; assessment_summary_2026.csv transcribes only Table 15.3.1, pages 204-205. Both derived tables are recorded in the local manifest.
+The official [ICES 2026 NWWG report](https://doi.org/10.17895/ices.pub.32414577), chapters 13 and 15, is cached under source_cache/shared/ices_greenland_cod_2026/. The local sources.csv manifest records URLs, retrieval dates, file sizes, and SHA-256 values. The derived west_offshore_summary_2026.csv transcribes only Table 13.3.1, pages 176-177; assessment_summary_2026.csv transcribes only Table 15.3.1, pages 204-205. Both derived tables are recorded in the local manifest.
 
 The public [ICES SAG summary for inshore key 20951](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=20951) and [offshore key 19562](https://sg.ices.dk/ViewSourceData.aspx?key=19562) are cited only to distinguish the 2025 assessments from the 2026 report. Neither is the source of the imported 2026 values.
 

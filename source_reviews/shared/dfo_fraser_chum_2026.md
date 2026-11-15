@@ -63,4 +63,4 @@ publication page, but its direct download returned a Government of Canada
 archived-publication landing page instead of a PDF, so that response was not
 stored or labeled as the source document. The locally cached file sizes,
 retrieval date and SHA-256 hashes are recorded in
-`source_cache/discovery_dfo_fraser_chum_2026/sources.csv`.
+`source_cache/oncorhynchus_keta/dfo_fraser_chum_2026/sources.csv`.

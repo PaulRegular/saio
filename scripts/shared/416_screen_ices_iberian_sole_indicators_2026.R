@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_iberian_sole_indicators_2026')
+cache <- file.path(root, 'source_cache/shared/ices_iberian_sole_indicators_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 
 screens <- data.frame(
@@ -104,7 +104,7 @@ review_values <- list(
     output_evidence = 'The 2026 Standard Graphs page provides landings and polyvalent-fleet effort/CPUE, but no stock-size, F-at-age, N-at-age, or M-at-age output.',
     detailed_source_url = screens$source_url[1], review_date = '2026-10-30',
     decision_reason = 'Ineligible for the current age-disaggregated comparison: the 2026 category 5 advice-linked record provides landings and commercial-fleet effort/CPUE but no age-specific inputs or comparable population or mortality outputs. This is a limit of the published assessment record reviewed, not evidence that biological age samples do not exist.',
-    notes = 'Identity and assessment year were checked against the published 2026 ICES Standard Graphs list and stock-specific source data. Cached URLs, retrieval date, revisions, byte sizes, and SHA-256 checksums are recorded in source_cache/discovery_ices_iberian_sole_indicators_2026/sources.csv. No canonical records were added.'),
+    notes = 'Identity and assessment year were checked against the published 2026 ICES Standard Graphs list and stock-specific source data. Cached URLs, retrieval date, revisions, byte sizes, and SHA-256 checksums are recorded in source_cache/shared/ices_iberian_sole_indicators_2026/sources.csv. No canonical records were added.'),
   list(
     candidate_unit_id = screens$unit_id[2], match_status = 'new',
     screening_status = 'screened', eligibility = 'ineligible', import_status = 'not_started',
@@ -117,7 +117,7 @@ review_values <- list(
     output_evidence = 'The 2026 Standard Graphs page provides landings and polyvalent-fleet effort, but no stock-size, F-at-age, N-at-age, or M-at-age output.',
     detailed_source_url = screens$source_url[2], review_date = '2026-10-30',
     decision_reason = 'Ineligible for the current age-disaggregated comparison: the 2026 category 5 advice-linked record provides landings and commercial-fleet effort but no age-specific inputs or comparable population or mortality outputs. This is a limit of the published assessment record reviewed, not evidence that biological age samples do not exist.',
-    notes = 'Identity and assessment year were checked against the published 2026 ICES Standard Graphs list and stock-specific source data. Cached URLs, retrieval date, revisions, byte sizes, and SHA-256 checksums are recorded in source_cache/discovery_ices_iberian_sole_indicators_2026/sources.csv. No canonical records were added.')
+    notes = 'Identity and assessment year were checked against the published 2026 ICES Standard Graphs list and stock-specific source data. Cached URLs, retrieval date, revisions, byte sizes, and SHA-256 checksums are recorded in source_cache/shared/ices_iberian_sole_indicators_2026/sources.csv. No canonical records were added.')
 )
 
 is_initial <- register$match_status[rows] == 'unreviewed' &

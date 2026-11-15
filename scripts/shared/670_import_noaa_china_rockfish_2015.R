@@ -1,6 +1,6 @@
 root <- "."
-source_cache <- file.path(root, "source_cache/discovery_noaa_china_rockfish_2019")
-manifest_path <- file.path(root, "provenance/discovery_noaa_china_rockfish_2019/sources.csv")
+source_cache <- file.path(root, "source_cache/shared/noaa_china_rockfish_2019")
+manifest_path <- file.path(root, "provenance/shared/noaa_china_rockfish_2019/sources.csv")
 report_url <- "https://www.pcouncil.org/documents/2016/04/status-of-china-rockfish-off-the-u-s-pacific-coast-in-2015-april-2016.pdf"
 safe_url <- "https://www.pcouncil.org/documents/2024/08/status-of-the-pacific-coast-groundfish-fishery-stock-assessment-and-fishery-evaluation-july-2025.pdf/"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)

@@ -45,4 +45,4 @@ SEDAR 77 is not the accepted OFL basis.
 - [NOAA assessment status list](https://www.fisheries.noaa.gov/s3/2021-04/Appendix-D.pdf)
 
 The locally cached PDFs and their retrieval dates and SHA-256 checksums are in
-the ignored `source_cache/discovery_noaa_screen_backlog_2026/sources.csv` file.
+the ignored `source_cache/shared/noaa_screen_backlog_2026/sources.csv` file.

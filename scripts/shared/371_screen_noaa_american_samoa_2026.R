@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache_dir <- file.path(root, 'source_cache', 'discovery_noaa_american_samoa_2026')
+cache_dir <- file.path(root, 'source_cache/shared/noaa_american_samoa_2026')
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),

@@ -54,4 +54,4 @@ assessment, input, or output records were added.
 - SEDAR, [SEDAR 46 data-limited assessment](https://sedarweb.org/assessments/sedar-46/) and [final report](https://sedarweb.org/documents/sedar-46-final-stock-assessment-report-caribbean-data-limited-species/).
 - NOAA, [SEDAR 91 review record](https://www.noaa.gov/information-technology/sedar-91-us-caribbean-spiny-lobster), identifying its 2025 products as Caribbean spiny lobster assessments.
 - SEDAR, [SEDAR 103 project page](https://sedarweb.org/assessments/sedar-103-us-caribbean-application-of-alternate-assessment-methods/), describing its alternate-methods development and later application/review schedule.
-- Local source files are cached under `source_cache/discovery_noaa_red_hind_sedar35_2014/`; `sources.csv` records URLs, retrieval date, file sizes, and SHA-256 checksums for the assessment and scope checks.
+- Local source files are cached under `source_cache/epinephelus_guttatus/noaa_red_hind_sedar35_2014/`; `sources.csv` records URLs, retrieval date, file sizes, and SHA-256 checksums for the assessment and scope checks.

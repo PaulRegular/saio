@@ -9,7 +9,7 @@ current <- subset(assessments,assessment_id=="dfo_yellowtail_flounder_4t_2025")
 inputs <- subset(read_table("inputs"),assessment_id==id)
 outputs <- subset(read_table("outputs"),assessment_id==id)
 assumptions <- subset(read_table("assumptions"),assessment_id==id)
-provenance <- read.csv(file.path(root,"provenance","discovery_dfo_gulf_yellowtail_2026","sources.csv"),
+provenance <- read.csv(file.path(root,"provenance/dfo_yellowtail_flounder_4t_2025/sources.csv"),
   stringsAsFactors=FALSE,check.names=FALSE,na.strings=c("","NA"))
 source <- subset(provenance,file=="Status_Yellowtail_4T_to_2020.pdf")
 review <- paste(readLines(file.path(root,"source_reviews/dfo_yellowtail_flounder_4t.md"),

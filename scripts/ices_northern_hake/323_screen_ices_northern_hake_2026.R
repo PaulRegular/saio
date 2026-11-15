@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'ices_northern_hake_2026')
+cache <- file.path(root, 'source_cache/merluccius_merluccius/ices_northern_hake_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 source_review_path <- file.path(root, 'source_reviews/ices_northern_hake.md')
 manifest_path <- file.path(cache, 'manifest.csv')
@@ -118,7 +118,7 @@ review <- list(
     'not publicly accessible during this review.'),
   notes = paste('This current northern hake advice unit has no matching canonical stock record; the',
     'separate ICES southern hake unit and the NOAA-DFO Pacific hake unit are not matches. The 2026',
-    'WGBIE report and advice are cached under source_cache/ices_northern_hake_2026/. The assessment',
+    'WGBIE report and advice are cached under source_cache/merluccius_merluccius/ices_northern_hake_2026/. The assessment',
     'repository cited in report footnote 3 returned no public GitHub repository metadata.')
 )
 for (column in names(review)) candidates[[column]][i] <- review[[column]]
@@ -165,7 +165,7 @@ source_review <- c(
   '- [ICES Standard Graphs source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22627), stock key 22627.',
   '- The report cites [the 2026 TAF assessment repository](https://github.com/ices-taf/2026_hke.27.3a46-8abd_assessment) in footnote 3; public GitHub metadata was unavailable during this review.',
   '',
-  'The assessment section, advice PDF, and Standard Graphs source page are cached in the gitignored `source_cache/ices_northern_hake_2026/`; `manifest.csv` records download URLs, retrieval time, and SHA-256 checksums.'
+  'The assessment section, advice PDF, and Standard Graphs source page are cached in the gitignored `source_cache/merluccius_merluccius/ices_northern_hake_2026/`; `manifest.csv` records download URLs, retrieval time, and SHA-256 checksums.'
 )
 writeLines(source_review, source_review_path, useBytes = TRUE)
 replace_csv_row(candidate_path, i, candidates[i, , drop = FALSE])

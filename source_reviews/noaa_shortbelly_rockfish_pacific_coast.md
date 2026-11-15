@@ -16,4 +16,4 @@ Screen NOAA:10398 as ineligible for the current-assessment inventory. Do not use
 - [Archived 2007 assessment report](https://www.pcouncil.org/documents/2007/04/stock-assessment-model-for-the-shortbelly-rockfish-sebastes-jordani-in-the-california-current.pdf)
 - [Current Pacific Coast Groundfish FMP, amended through 2026](https://www.fisheries.noaa.gov/s3/2026-02/fmp-text-am37-01-2026.pdf)
 
-The two PDFs are cached in source_cache/discovery_noaa_shortbelly_status_2026/. The sources.csv manifest records source URLs, revisions, retrieval date, byte sizes, and SHA-256 hashes.
+The two PDFs are cached in source_cache/sebastes_jordani/noaa_shortbelly_status_2026/. The sources.csv manifest records source URLs, revisions, retrieval date, byte sizes, and SHA-256 hashes.

@@ -44,6 +44,6 @@ rows as three verified new stock units.
 - [Pacific Salmon Outlook 2026](https://publications.gc.ca/collections/collection_2026/mpo-dfo/Fs141-9-2026-eng.pdf)
 
 The PSC detailed CSV, its documentation and the DFO advisory are cached in
-source_cache/discovery_dfo_fraser_sockeye with retrieval dates, file sizes and
+source_cache/oncorhynchus_nerka/dfo_fraser_sockeye with retrieval dates, file sizes and
 checksums. The Pacific Salmon Outlook was reviewed online; the direct local
 download returned an HTML page rather than the PDF and was discarded.

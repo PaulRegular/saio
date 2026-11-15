@@ -34,7 +34,7 @@ are absent from national biological sampling.
 
 ## Sources
 
-- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 25.9.5, tables 25.13–25.16 and figure 25.18. The report PDF is downloaded from the Thünen repository at <https://literatur.thuenen.de/digbib_extern/dn070539.pdf> and cached locally under `source_cache/discovery_ices_dogfish_2025/`.
+- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 25.9.5, tables 25.13–25.16 and figure 25.18. The report PDF is downloaded from the Thünen repository at <https://literatur.thuenen.de/digbib_extern/dn070539.pdf> and cached locally under `source_cache/ices_dogfish_2025/`.
 - [ICES Advice and Scenarios Database, stock advice 3507](https://asd.ices.dk/viewAdvice/3507), the prior 2023 advice entry; ICES states that fishing-opportunity advice was not requested.
 
 The ignored `sources.csv` manifest records the cached report's retrieval date,

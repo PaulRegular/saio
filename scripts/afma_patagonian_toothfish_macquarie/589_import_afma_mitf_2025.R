@@ -29,7 +29,7 @@ append_rows <- function(path, rows) {
     append = TRUE, quote = TRUE, qmethod = "double", na = "", eol = "\n")
 }
 
-manifest <- read_table("provenance/afma_mitf_2025/sources.csv")
+manifest <- read_table("provenance/afma_patagonian_toothfish_macquarie_2025/sources.csv")
 local_files <- file.path("source_cache", manifest$local_file)
 if (any(!file.exists(local_files))) {
   stop("The cached AFMA source PDFs are required before importing this record.")

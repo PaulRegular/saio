@@ -22,7 +22,7 @@ numerical records were added.
 
 ## Sources
 
-- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 22, printed pages 648–669. The full report PDF is cached under `source_cache/discovery_ices_dogfish_2025/`; its source manifest records retrieval date, revision, size and checksum.
+- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 22, printed pages 648–669. The full report PDF is cached under `source_cache/ices_dogfish_2025/`; its source manifest records retrieval date, revision, size and checksum.
 
 The screening distinguishes exploratory local population analysis and
 precautionary conservation advice from a benchmarked age-structured production

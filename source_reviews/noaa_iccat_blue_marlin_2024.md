@@ -19,7 +19,7 @@ The abundance indices are fishery CPUE series rather than a seasonal survey inde
 
 This is a **new, screened, ineligible candidate** for the age-disaggregated assessment set. Although the production assessment includes an age-structured Stock Synthesis platform and uses age-at-size growth data, its population observations are total removals, CPUE, and length compositions. The biological and mortality assumptions are not a substitute for those population observations and outputs.
 
-No canonical numerical records were added was attempted. The two official reports and their retrieval date, revisions, sizes and SHA-256 checksums are recorded in the ignored local cache at `source_cache/discovery_noaa_iccat_blue_marlin_2024/sources.csv`.
+No canonical numerical records were added was attempted. The two official reports and their retrieval date, revisions, sizes and SHA-256 checksums are recorded in the ignored local cache at `source_cache/makaira_nigricans/noaa_iccat_blue_marlin_2024/sources.csv`.
 
 ## Sources
 

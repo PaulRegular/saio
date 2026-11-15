@@ -73,7 +73,7 @@ stopifnot(
   all(!new_units %in% outputs$assessment_id)
 )
 
-cache <- file.path(root, 'source_cache', 'discovery_dfo_pacific_salmon_2026')
+cache <- file.path(root, 'source_cache/shared/dfo_pacific_salmon_2026')
 manifest_path <- file.path(cache, 'sources.csv')
 review_path <- file.path(root, 'source_reviews/shared/dfo_pacific_salmon_remaining_2026.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')

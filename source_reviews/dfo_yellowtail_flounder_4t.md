@@ -95,7 +95,7 @@ The official Government of Canada catalogue lists the 61-page Research
 Document 2026/054 and its PDF. As of 2026-11-09, the direct PDF URL redirected
 to a Government Publications archive notice; a retry returned the notice page,
 not the report. The official 12-page Science Advisory Report is cached at
-`source_cache/discovery_dfo_gulf_yellowtail_2026/Science_Advisory_Report_2026_022.pdf`.
+`source_cache/myzopsetta_ferruginea/dfo_yellowtail_flounder_4t_2025/Science_Advisory_Report_2026_022.pdf`.
 That cache also retains the catalogue page and the archive notice for the
 detailed report. No numerical input arrays were found in the accessible
 summary sources.
@@ -122,7 +122,7 @@ This is the single current DFO biological unit in NAFO Division 4T, southern Gul
 
 The latest assessment is a full state-space, age-structured assessment using data through 2025. DFO's Science Advisory Report 2026/022 was published in May 2026. Its detailed companion, Research Document 2026/054, is listed in the Government of Canada Publications catalogue as a 61-page August 2026 report by Turcotte, McDermid and Sutton. The catalogue's direct PDF link currently redirects to an archived-page notice rather than the report. The notice and catalogue record have been retained in the local source cache. A ResearchGate author-profile entry identifies a full-text copy, but direct unauthenticated retrieval returned 403; it was not used as a source.
 
-The official Science Advisory Report and the earlier 2025/010 interim-indicator response are cached in `source_cache/discovery_dfo_gulf_yellowtail_2026/`. The 2025 interim report is retained as assessment history only and is not used to fill inputs for the 2025 full assessment.
+The official Science Advisory Report and the earlier 2025/010 interim-indicator response are cached in `source_cache/myzopsetta_ferruginea/dfo_yellowtail_flounder_4t_2025/`. The 2025 interim report is retained as assessment history only and is not used to fill inputs for the 2025 full assessment.
 
 ### Inputs verified from the official summary
 

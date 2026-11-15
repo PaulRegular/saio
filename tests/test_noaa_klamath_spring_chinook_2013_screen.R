@@ -30,7 +30,7 @@ unit <- units[!is.na(units$candidate_unit_id) &
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
   unit$screening_status == 'screened', unit$eligibility == 'ineligible')
 
-cache <- file.path(root, 'source_cache', 'noaa_klamath_spring_chinook_2013')
+cache <- file.path(root, 'source_cache/oncorhynchus_tshawytscha/noaa_klamath_spring_chinook_2013')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 files <- c('NOAA_TM_NMFS_SWFSC_502_2013.pdf',

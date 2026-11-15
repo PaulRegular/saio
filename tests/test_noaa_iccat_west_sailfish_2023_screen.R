@@ -15,8 +15,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-manifest <- read.csv(file.path(root, 'source_cache',
-  'discovery_noaa_iccat_west_sailfish_2023', 'sources.csv'),
+manifest <- read.csv(file.path(root, 'source_cache/istiophorus_platypterus/noaa_iccat_west_sailfish_2023', 'sources.csv'),
   stringsAsFactors = FALSE)
 progress <- candidate_progress()
 units <- candidate_units()
@@ -31,8 +30,7 @@ stopifnot(nrow(row) == 1L,
   grepl('eight aggregate abundance indices', row$survey_age_evidence, fixed = TRUE),
   grepl('Istiophorus albicans', row$notes, fixed = TRUE),
   grepl('2023_SAI_ENG.pdf', row$detailed_source_url, fixed = TRUE),
-  all(file.exists(file.path(root, 'source_cache',
-    'discovery_noaa_iccat_west_sailfish_2023', manifest$file))),
+  all(file.exists(file.path(root, 'source_cache/istiophorus_platypterus/noaa_iccat_west_sailfish_2023', manifest$file))),
   !any(stocks$authority_stock_id == '10180', na.rm = TRUE),
   !any(grepl('sailfish', stocks$common_name, ignore.case = TRUE), na.rm = TRUE),
   !any(assessments$assessment_id == 'iccat_west_atlantic_sailfish', na.rm = TRUE),

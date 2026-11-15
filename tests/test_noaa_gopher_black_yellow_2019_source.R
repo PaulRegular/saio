@@ -1,4 +1,4 @@
-cache <- "source_cache/discovery_noaa_gopher_black_yellow_2019"
+cache <- "source_cache/shared/noaa_gopher_black_yellow_2019"
 if (!file.exists(file.path(cache, "post_model_files_2019.zip"))) {
   cat("Gopher/Black-and-Yellow 2019 cached source test skipped; local cache is unavailable.\n")
 } else {

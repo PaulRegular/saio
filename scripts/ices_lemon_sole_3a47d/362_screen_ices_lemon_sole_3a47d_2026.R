@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_witch_northsea_2026')
+cache <- file.path(root, 'source_cache/shared/ices_witch_northsea_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:lem.27.3a47d'
 unit_id <- 'ices_lemon_sole_3a47d'
@@ -92,7 +92,7 @@ review <- list(
     'states that the stock will be benchmarked in 2026-2027, when other methods may be',
     'explored. This review applies to the current 2026 advised method only. The WGNSSK',
     'report and checksum are recorded in',
-    'source_cache/discovery_ices_witch_northsea_2026/sources.csv. No canonical numerical',
+    'source_cache/shared/ices_witch_northsea_2026/sources.csv. No canonical numerical',
     'records were added.')
 )
 

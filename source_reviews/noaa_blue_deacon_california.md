@@ -10,7 +10,7 @@ The native 2017 `B17.dat` has a data terminal year of 2016, whereas the report's
 
 ## Cached sources
 
-The 2017 report, California native Stock Synthesis archive, STAR report, 2019 catch-update report, current NOAA stock-status table, and PFMC 2026 prioritization document are cached under `source_cache/discovery_noaa_blue_deacon_2017/`. The run-specific files, URLs, retrieval dates, sizes, and SHA-256 checksums are listed in `provenance/discovery_noaa_blue_deacon_california_2017/sources.csv`. The text files are local extractions from the cached PDFs used to make the transcriptions reproducible.
+The 2017 report, California native Stock Synthesis archive, STAR report, 2019 catch-update report, current NOAA stock-status table, and PFMC 2026 prioritization document are cached under `source_cache/shared/noaa_blue_deacon_2017/`. The run-specific files, URLs, retrieval dates, sizes, and SHA-256 checksums are listed in `provenance/shared/noaa_blue_deacon_california_2017/sources.csv`. The text files are local extractions from the cached PDFs used to make the transcriptions reproducible.
 
 The public California archive includes `B17.dat`, `B17.ctl`, `starter.ss`, `forecast.ss`, and `ss.exe`, but no `Report.sso`. It therefore supplies model inputs and setup, not a fitted object or full age-specific output surfaces.
 

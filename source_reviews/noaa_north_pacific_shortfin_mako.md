@@ -29,7 +29,7 @@ This is a discovery screen only. No stock, assessment, input or output records w
 
 ## Sources and cache
 
-The gitignored local cache is `source_cache/discovery_noaa_isc_shortfin_mako_2024/`. `sources.csv` records the URLs, retrieval dates, byte counts, SHA-256 hashes and revisions for the cached reports.
+The gitignored local cache is `source_cache/isurus_oxyrinchus/noaa_isc_shortfin_mako_2024/`. `sources.csv` records the URLs, retrieval dates, byte counts, SHA-256 hashes and revisions for the cached reports.
 
 - [ISC24 shortfin mako assessment report, Annex 14](https://isc.fra.go.jp/pdf/ISC24/ISC24_ANNEX14-North_Pacific_Ocean_Shortfin_Mako_Shark_Stock_Assessment_Through_2022-FINAL.pdf)
 - [ISC25 Plenary Report](https://isc.fra.go.jp/pdf/ISC25/ISC25_Plenary_Report_FINAL.pdf)

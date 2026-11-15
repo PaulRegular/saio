@@ -29,4 +29,4 @@ The canonical assessment record is partial: fleet catch biomass, selected model 
 - [AFMA Macquarie Island Toothfish Fishery](https://www.afma.gov.au/fisheries/macquarie-island-toothfish-fishery).
 - [Australian Antarctic Data Centre Fish Database record](https://data.aad.gov.au/metadata/records/AADFishDatabase).
 
-The report and SouthMAC minutes are cached under the ignored source_cache/discovery_afma_mitf_2025/ directory. Their source URLs, retrieval date, and checksums are recorded in provenance/afma_mitf_2025/sources.csv.
+The report and SouthMAC minutes are cached under the ignored source_cache/dissostichus_eleginoides/afma_patagonian_toothfish_macquarie_2025/ directory. Their source URLs, retrieval date, and checksums are recorded in provenance/afma_patagonian_toothfish_macquarie_2025/sources.csv.

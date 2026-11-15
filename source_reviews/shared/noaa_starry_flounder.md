@@ -20,7 +20,7 @@ The current Northern and Southern units are ineligible for the planned age-struc
 
 ## Cached sources
 
-The source PDFs are cached under `source_cache/discovery_noaa_starry_flounder/`. The ignored `sources.csv` records retrieval date, URL, file size, and SHA-256 for each source.
+The source PDFs are cached under `source_cache/platichthys_stellatus/noaa_starry_flounder/`. The ignored `sources.csv` records retrieval date, URL, file size, and SHA-256 for each source.
 
 - [2025 Pacific Coast Groundfish SAFE](https://www.pcouncil.org/documents/2024/08/status-of-the-pacific-coast-groundfish-fishery-stock-assessment-and-fishery-evaluation-july-2025.pdf/)
 - [2017 Starry Flounder DB-SRA](https://www.pcouncil.org/documents/2017/11/agenda-item-f-6-attachment-3.pdf/)

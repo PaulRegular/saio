@@ -23,4 +23,4 @@ This current unit is ineligible for the age-disaggregated assessment set. No can
 - [DFO 2025 Groundfish IFMP for NAFO Subdivision 3Ps](https://www.dfo-mpo.gc.ca/fisheries-peches/ifmp-gmp/groundfish-poisson-fond/2025/groundfish-poisson-fond-div3ps-nafo-opano-eng.html), confirming the biological stock relationship and separate management treatment.
 - [2025 state-space research paper](https://doi.org/10.1016/j.fishres.2025.107396), noted as non-production research rather than the assessment used for advice.
 
-The NAFO PDFs reviewed above are cached locally under the ignored `source_cache/discovery_dfo_nafo_white_hake_thorny_skate/`; `sources.csv` records retrieval dates, URLs, byte sizes, and SHA-256 checksums.
+The NAFO PDFs reviewed above are cached locally under the ignored `source_cache/shared/dfo_nafo_white_hake_thorny_skate/`; `sources.csv` records retrieval dates, URLs, byte sizes, and SHA-256 checksums.

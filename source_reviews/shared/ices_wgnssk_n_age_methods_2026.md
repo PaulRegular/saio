@@ -36,4 +36,4 @@ They are screened ineligible for that set. No canonical numerical
 recordss were added.
 
 The report PDF, source URL, retrieval date, and checksum are cached in
-`source_cache/discovery_ices_witch_northsea_2026/sources.csv`.
+`source_cache/shared/ices_witch_northsea_2026/sources.csv`.

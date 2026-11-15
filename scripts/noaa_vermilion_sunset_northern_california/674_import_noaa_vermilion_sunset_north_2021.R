@@ -10,7 +10,7 @@ model_url <- "https://www.pcouncil.org/documents/vermillion-rockfish-2021-model-
 star_url <- "https://www.pcouncil.org/documents/vermilion-and-sunset-rockfishes-stock-assessment-review-star-panel-report/"
 safe_url <- "https://www.pcouncil.org/documents/2024/08/status-of-the-pacific-coast-groundfish-fishery-stock-assessment-and-fishery-evaluation-july-2025.pdf/"
 status_url <- "https://www.fisheries.noaa.gov/s3/2026-11/final-q3-2026-stock-status-tables-updated-11-02-26.pdf"
-cache <- file.path(root, "source_cache/discovery_noaa_vermilion_sunset_north_2021")
+cache <- file.path(root, "source_cache/shared/noaa_vermilion_sunset_north_2021")
 manifest_path <- file.path(root, "provenance/noaa_vermilion_sunset_north_2021/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 test_mode <- identical(Sys.getenv("TAM_SOURCE_TEST_MODE"), "1")

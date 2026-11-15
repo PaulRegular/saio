@@ -6,7 +6,7 @@ Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:syc.27.8c9a', , drop = FALSE]
-cache <- file.path(root, 'source_cache/discovery_ices_dogfish_2025')
+cache <- file.path(root, 'source_cache/ices_dogfish_2025')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 path <- file.path(cache, 'wgef_2025.pdf')
 pdf_source <- sources[sources$file == basename(path), , drop = FALSE]

@@ -27,4 +27,4 @@ The 2026 assessment remains the primary stock record because run-specific aggreg
 
 ## Database records
 
-The import is in stocks.csv, assessments.csv, inputs.csv, assumptions.csv and outputs.csv under stock ices_pol_27_67 and assessment ices_pol_27_67_2026. Input, assumption and output completeness are marked partial. Source files, revisions, retrieval date, file sizes and SHA-256 checksums are listed in provenance/ices_pollack_67_2026/sources.csv; cached copies are under the ignored source_cache/ices_pollack_67_2026/ directory.
+The import is in stocks.csv, assessments.csv, inputs.csv, assumptions.csv and outputs.csv under stock ices_pol_27_67 and assessment ices_pol_27_67_2026. Input, assumption and output completeness are marked partial. Source files, revisions, retrieval date, file sizes and SHA-256 checksums are listed in provenance/ices_pol_27_67_2026/sources.csv; cached copies are under the ignored source_cache/ices_pollack_67_2026/ directory.

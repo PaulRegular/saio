@@ -2,7 +2,7 @@ import_noaa_oregon_kelp_greenling_2015 <- function(root = ".", write = FALSE) {
   id <- "noaa_kelp_greenling_oregon_2015"
   stock_id <- "noaa_kelp_greenling_oregon"
   candidate_id <- "NOAA:10462"
-  cache <- file.path(root, "source_cache/discovery_noaa_oregon_kelp_greenling_2015")
+  cache <- file.path(root, "source_cache/hexagrammos_decagrammus/noaa_kelp_greenling_oregon_2015")
   manifest <- read.csv(file.path(cache, "sources.csv"), colClasses = "character", check.names = FALSE)
   files <- file.path(cache, manifest$cached_file)
   hash <- function(path) {

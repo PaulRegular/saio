@@ -40,7 +40,7 @@ unit <- units[!is.na(units$candidate_unit_id) &
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
   unit$screening_status == 'screened', unit$eligibility == 'unresolved')
 
-cache <- file.path(root, 'source_cache', 'noaa_north_atlantic_albacore_2023')
+cache <- file.path(root, 'source_cache/thunnus_alalunga/noaa_north_atlantic_albacore_2023')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 files <- c('ICCAT_2023_NAtlantic_Albacore_Data_Preparatory_Meeting.pdf',

@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache', 'discovery_noaa_atlantic_salmon_2025')
+cache <- file.path(root, 'source_cache/salmo_salar/noaa_atlantic_salmon_2025')
 report_sha512 <- 'b8a424127e22f4f61da6e491b7290ac4fba92b14cca1d511b38c489f14cc9df0a2df5ecea581a1d608062cc7ff9e3da4c25a6343e3be60630e672459d69652fa'
 database_sha256 <- 'a372d61fde09ec43c428d31ffcd2fdaca614b66609e4242a9f81dd29b68552be'
 
@@ -103,7 +103,7 @@ register$review_date[row_index] <- '2026-10-30'
 register$decision_reason[row_index] <- paste0(
   'The latest Stock SMART production entry is the 2024 Gulf of Maine Index Method assessment using data through 2023; the latest detailed annual report found is USASAC Report 37 for 2024 activities, published in 2025. It documents river adult returns and age-related survival indicators rather than an age-structured fishery assessment with catch-at-age and population/mortality-at-age outputs. Ineligible for the age-structured comparison. This does not establish that biological age samples are absent.')
 register$notes[row_index] <- paste0(
-  'NOAA Stock SMART 10498 is the Gulf of Maine Atlantic salmon unit (Salmo salar). The broader ICES North American salmon candidate is not a one-to-one identity match and remains separate. NOAA describes the USASAC database, updated 2026-05-29, as adult-return, adult/juvenile stocking, egg-production and aquaculture records. Its cached ZIP is source_cache/discovery_noaa_atlantic_salmon_2025/USASAC_database_2026-05.zip (SHA-256 ', database_sha256, '). The report PDF has official NOAA repository SHA-512 ', report_sha512, '; direct download returned HTTP 403, but the repository record and PDF text are publicly readable. The MDB could not be schema-inspected because an Access reader is unavailable here. No canonical numerical records were added.')
+  'NOAA Stock SMART 10498 is the Gulf of Maine Atlantic salmon unit (Salmo salar). The broader ICES North American salmon candidate is not a one-to-one identity match and remains separate. NOAA describes the USASAC database, updated 2026-05-29, as adult-return, adult/juvenile stocking, egg-production and aquaculture records. Its cached ZIP is source_cache/salmo_salar/noaa_atlantic_salmon_2025/USASAC_database_2026-05.zip (SHA-256 ', database_sha256, '). The report PDF has official NOAA repository SHA-512 ', report_sha512, '; direct download returned HTTP 403, but the repository record and PDF text are publicly readable. The MDB could not be schema-inspected because an Access reader is unavailable here. No canonical numerical records were added.')
 
 source(file.path(root, 'scripts/shared/candidate_register_io.R'))
 if (!identical(Sys.getenv('TAM_SOURCE_DRY_RUN'), '1'))

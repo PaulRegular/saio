@@ -83,4 +83,4 @@ records were imported during this inventory screen.
 - [NOAA Atlantic halibut review](noaa_atlantic_halibut_2024.md)
 
 The official PDFs and their retrieval dates and SHA-256 checksums are stored in
-the ignored local cache `source_cache/discovery_dfo_atlantic_halibut_4rst_2024/`.
+the ignored local cache `source_cache/hippoglossus_hippoglossus/dfo_atlantic_halibut_4rst_2024/`.

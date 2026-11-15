@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_ray_method_group_2026')
+cache <- file.path(root, 'source_cache/shared/ices_ray_method_group_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 sid_path <- file.path(root, 'source_cache', 'shared/ices_sid', 'stock_list_2026.json')
 sid_url <- 'https://sid.ices.dk/services/year/2026'

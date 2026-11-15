@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-source_dir <- file.path(base, "source_cache/dfo_sgsl_herring_spring_2023")
+source_dir <- file.path(base, "source_cache/clupea_harengus/dfo_sgsl_herring_spring_2023")
 assessment_id <- "dfo_herring_4tvn_spring_2026"
 report_url <- paste0(
   "https://publications.gc.ca/collections/collection_2026/mpo-dfo/",

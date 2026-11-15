@@ -6,7 +6,7 @@ SAIO stock `noaa_chilipepper_pacific_coast`. Assessment `noaa_chilipepper_2025`.
 
 The current assessment unit is the U.S. coastwide *Sebastes goodei* population from the U.S.-Mexico border to the U.S.-Canada border, covering California, Oregon and Washington. NOAA Stock SMART identifies this current unit as NOAA:17357. The legacy NOAA:10395 entry describes an earlier southern-area assessment; the 2025 report does not give a formal identifier crosswalk, so the exact relation remains unresolved and NOAA:10395 is not treated as a second current stock.
 
-The 2025 production benchmark is the latest detailed assessment for NOAA:17357. It uses Stock Synthesis 3.30.23.1, one area, two sexes, ages 0-35+ and data through 2024. The report was published after the assessment year. The pinned native archive contains Chili_2025.dat, Chili_2025.ctl and Report.sso; its Report.sso forecast spawning output is 9,924.9 billion eggs for 2025, matching the report's rounded 9,925. The source files, URLs, retrieval date and checksums are recorded in provenance/discovery_noaa_chilipepper_2025/sources.csv. The source cache is local and gitignored.
+The 2025 production benchmark is the latest detailed assessment for NOAA:17357. It uses Stock Synthesis 3.30.23.1, one area, two sexes, ages 0-35+ and data through 2024. The report was published after the assessment year. The pinned native archive contains Chili_2025.dat, Chili_2025.ctl and Report.sso; its Report.sso forecast spawning output is 9,924.9 billion eggs for 2025, matching the report's rounded 9,925. The source files, URLs, retrieval date and checksums are recorded in provenance/noaa_chilipepper_2025/sources.csv. The source cache is local and gitignored.
 
 ## Inputs captured
 

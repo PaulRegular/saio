@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, "source_cache", "engraulis_mordax/noaa_northern_anchovy_central_subpopulation_2021")
-manifest_path <- file.path(root, "provenance", "discovery_noaa_anchovy_2021", "sources.csv")
+manifest_path <- file.path(root, "provenance/noaa_anchovy_2021/sources.csv")
 assessment_id <- "noaa_northern_anchovy_central_subpopulation_2021"
 stock_id <- "noaa_northern_anchovy_central_subpopulation"
 candidate_id <- "NOAA:10574"

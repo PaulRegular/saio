@@ -4,7 +4,7 @@
 
 NOAA Stock SMART ID 10460 is the U.S. Pacific Coast longspine thornyhead stock (*Sebastolobus altivelis*), assessed coastwide off California, Oregon and Washington. No canonical database assessment or same-unit inventory match was found. DFO also has a Pacific longspine thornyhead inventory entry, but it refers to Canadian waters and has no official stock identifier or more precise assessment area in the discovery row; it is not treated as the same U.S. stock unit.
 
-The latest full assessment located is the 2013 length-based Stock Synthesis model. The 2019 Stock SMART year refers to a later catch-only update rather than a new full assessment. That update was circulated as a pre-dissemination draft and was used to inform harvest specifications; the 2025 Groundfish SAFE still identifies 2013 as the most recent full stock assessment. The 2013 assessment, 2019 catch-only update and 2025 SAFE are cached under `source_cache/discovery_noaa_longspine_pacific_2019/`; the ignored `sources.csv` manifest records dates, URLs and checksums.
+The latest full assessment located is the 2013 length-based Stock Synthesis model. The 2019 Stock SMART year refers to a later catch-only update rather than a new full assessment. That update was circulated as a pre-dissemination draft and was used to inform harvest specifications; the 2025 Groundfish SAFE still identifies 2013 as the most recent full stock assessment. The 2013 assessment, 2019 catch-only update and 2025 SAFE are cached under `source_cache/sebastolobus_altivelis/noaa_longspine_pacific_2019/`; the ignored `sources.csv` manifest records dates, URLs and checksums.
 
 ## Inputs, assumptions and outputs
 

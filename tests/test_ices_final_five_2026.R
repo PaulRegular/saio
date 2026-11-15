@@ -34,7 +34,7 @@ stopifnot(nrow(joint) == 1L, joint$inventory_entries == 2L,
   grepl('ICES:sal.neac.all', joint$candidate_ids, fixed = TRUE),
   !('ICES:sal.wgc.all' %in% units$candidate_ids))
 
-cache <- file.path(root, 'source_cache', 'discovery_ices_remaining_units_2026')
+cache <- file.path(root, 'source_cache/shared/ices_remaining_units_2026')
 if (file.exists(file.path(cache, 'sources.csv'))) {
   manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
     check.names = FALSE)

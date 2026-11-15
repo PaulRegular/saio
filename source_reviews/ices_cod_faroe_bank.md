@@ -30,6 +30,6 @@ were added.
 
 The ICES advice PDF and Standard Graphs source page were retrieved on
 2026-10-30 and cached in
-`source_cache/discovery_ices_cod_faroe_bank_2025/`.
+`source_cache/gadus_morhua/ices_cod_faroe_bank_2025/`.
 Their source URLs, revision descriptions, file sizes, and SHA-256 checksums are
 in the ignored `sources.csv` manifest.

@@ -38,7 +38,7 @@ output.
 
 The 2026 SID list snapshot is cached under the gitignored `source_cache/` tree.
 The six linked Standard Graphs source-data pages are cached in
-`source_cache/discovery_ices_elasmobranch_group_2026/`; `sources.csv` records
+`source_cache/shared/ices_elasmobranch_group_2026/`; `sources.csv` records
 the URLs, retrieval date, displayed assessment year, byte counts and SHA-256
 checksums.
 

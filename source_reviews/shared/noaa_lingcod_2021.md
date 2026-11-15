@@ -18,7 +18,7 @@ The reports state that maturity values are fixed from a separate biological anal
 
 ## Cached sources
 
-The source archive, model input/output files, retrieval dates, pinned repository revision and SHA-256 checksums are listed in `source_cache/discovery_noaa_lingcod_2021/sources.csv`. Extracted north and south model files are retained under the ignored `source_cache` folder.
+The source archive, model input/output files, retrieval dates, pinned repository revision and SHA-256 checksums are listed in `source_cache/shared/noaa_lingcod_2021/sources.csv`. Extracted north and south model files are retained under the ignored `source_cache` folder.
 
 - [NOAA Lingcod status](https://www.fisheries.noaa.gov/species/lingcod)
 - [2021 northern assessment](https://www.pcouncil.org/documents/2021/12/status-of-lingcod-ophiodon-elongatus-along-the-northern-u-s-west-coast-in-2021-december-2021.pdf/)

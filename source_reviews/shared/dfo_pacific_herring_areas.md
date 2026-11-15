@@ -59,13 +59,13 @@ so allocating the aggregate spawn index among ages would add an unsupported
 selectivity assumption. No age-indexed survey series is inferred from these sources.
 
 Downloaded reference files and checksums are recorded in the gitignored
-source_cache/discovery_dfo_pacific_herring_2026/sources.csv. The local cache
+source_cache/clupea_pallasii/dfo_pacific_herring_2026/sources.csv. The local cache
 includes the prior 2024-status response, current official area datasets and
 dictionaries, and DFO's assessment and management-plan pages. The latest
 2026/014, 2026/006 and 2024/066 PDF links were reviewed, but the publication
 server redirected direct shell downloads to its archive notice on 2026-10-29;
 the source URLs and this limitation are recorded in
-source_cache/discovery_dfo_pacific_herring_2026/not_cached_sources.csv.
+source_cache/clupea_pallasii/dfo_pacific_herring_2026/not_cached_sources.csv.
 
 No canonical input, assumption, assessment or output rows were added in this
 discovery screen.

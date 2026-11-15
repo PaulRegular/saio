@@ -9,7 +9,7 @@ source_url <- "https://publications.gc.ca/collections/collection_2026/mpo-dfo/fs
 source_file_name <- "dfo_western_pollock_2026_029_table12_mortality_m4b.csv"
 cache_options <- c(
   file.path(root, "source_cache", "pollachius_virens/dfo_western_component_pollock_2022_j_m4b"),
-  file.path("..", "..", "discovery_dfo_western_pollock_2022")
+  file.path("source_cache/pollachius_virens/dfo_western_component_pollock_2022_j_m4b")
 )
 cache_dirs <- cache_options[dir.exists(cache_options)]
 cache_dir <- cache_dirs[vapply(cache_dirs, function(path) {

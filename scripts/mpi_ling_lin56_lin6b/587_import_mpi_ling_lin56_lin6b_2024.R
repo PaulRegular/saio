@@ -6,7 +6,7 @@ write_data <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 ## Read reviewed sources ----
 
-manifest <- read.csv(file.path(root, "provenance/mpi_ling_lin56_2024/sources.csv"),
+manifest <- read.csv(file.path(root, "provenance/mpi_ling_lin56_lin6b_2024/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 verified_sources <- c(
   "mpi_ling_lin56_2024/FAR-2024-82-inputs.pdf" =

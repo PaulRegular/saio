@@ -71,5 +71,5 @@ assessment. No canonical database values were imported.
 
 The downloaded update report and draft terms of reference, with retrieval dates
 and SHA-256 checksums, are listed in the ignored local cache at
-`source_cache/discovery_noaa_south_atlantic_king_mackerel_2020/sources.csv`.
+`source_cache/scomberomorus_cavalla/noaa_south_atlantic_king_mackerel_2020/sources.csv`.
 Reviewed 2026-10-30.

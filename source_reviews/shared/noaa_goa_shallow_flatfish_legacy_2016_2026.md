@@ -30,7 +30,7 @@ Mark `NOAA:11009` as an **ambiguous legacy identity** and **ineligible as a sepa
 
 ## Cached sources
 
-Source files are stored under the gitignored `source_cache/discovery_noaa_goa_shallow_flatfish_2016_2026/`. The local `sources.csv` manifest records the URLs, retrieval date, revision labels, byte sizes, and SHA-256 checksums.
+Source files are stored under the gitignored `source_cache/shared/noaa_goa_shallow_flatfish_2016_2026/`. The local `sources.csv` manifest records the URLs, retrieval date, revision labels, byte sizes, and SHA-256 checksums.
 
 - [NOAA 2016 shallow-water-flatfish archive page](https://www.fisheries.noaa.gov/resource/data/2016-assessment-shallow-water-flatfish-complex-gulf-alaska)
 - [2015 full northern and southern rock sole assessment](https://apps-afsc.fisheries.noaa.gov/REFM/Docs/2015/GOAnsrocksole.pdf)

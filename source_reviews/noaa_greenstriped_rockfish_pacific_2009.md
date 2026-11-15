@@ -30,4 +30,4 @@ The detailed assessment has survey age-at-length observations and fitted numbers
 - [PFMC 2025 Pacific Coast Groundfish SAFE](https://www.pcouncil.org/documents/2024/08/status-of-the-pacific-coast-groundfish-fishery-stock-assessment-and-fishery-evaluation-july-2025.pdf/)
 - [PFMC Amendment 37 stock-definition page](https://www.pcouncil.org/actions/phase-2-identification-of-groundfish-in-need-of-conservation-and-management-and-defining-their-stocks/)
 
-The locally cached official PDFs and their URLs, retrieval dates, file sizes, and SHA-256 checksums are recorded in the gitignored directory `source_cache/discovery_noaa_greenstriped_rockfish_2009/sources.csv`.
+The locally cached official PDFs and their URLs, retrieval dates, file sizes, and SHA-256 checksums are recorded in the gitignored directory `source_cache/sebastes_elongatus/noaa_greenstriped_rockfish_2009/sources.csv`.

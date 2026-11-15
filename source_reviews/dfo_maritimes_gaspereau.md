@@ -62,7 +62,7 @@ Document and assess the Gaspereau River Alewife unit separately.
 
 The accessible schedule, work-plan pages, management plan, framework, Tusket
 assessment, and 2007 advice are cached in the ignored local directory
-`source_cache/discovery_dfo_maritimes_gaspereau_2026/`. `sources.csv` records
+`source_cache/shared/dfo_maritimes_gaspereau_2026/`. `sources.csv` records
 the source URLs, retrieval date, byte sizes, and SHA-256 checksums. The latest
 2025–2026 Research Document itself was not located, so no substitute file was
 created.

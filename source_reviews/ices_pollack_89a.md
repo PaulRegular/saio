@@ -46,4 +46,4 @@ No canonical stock, assessment, input, or output records were added.
 - ICES, [2025 advice for pollack in subarea 8 and division 9.a](https://asd.ices.dk/viewAdvice/3922), assessment key 19891.
 - ICES, [2025 Standard Graphs](https://standardgraphs.ices.dk/ViewCharts.aspx?key=19891), assessment key 19891.
 - ICES, [2025 Standard Graphs source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=19891), assessment key 19891.
-- The gitignored `source_cache/discovery_ices_pollack_89a_2025/sources.csv` records URLs, assessment revisions, retrieval date, file sizes, and SHA-256 checksums.
+- The gitignored `source_cache/pollachius_pollachius/ices_pollack_89a_2025/sources.csv` records URLs, assessment revisions, retrieval date, file sizes, and SHA-256 checksums.

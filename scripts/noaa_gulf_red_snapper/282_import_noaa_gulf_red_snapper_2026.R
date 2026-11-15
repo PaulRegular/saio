@@ -4,7 +4,7 @@ assessment_id <- "noaa_gulf_red_snapper_2026"
 candidate_id <- "NOAA:10230"
 report_url <- "https://sedarweb.org/documents/sedar-98-gulf-red-snapper-final-stock-assessment-report/"
 source_dir <- file.path(root, "source_cache/lutjanus_campechanus/noaa_gulf_red_snapper_2026")
-manifest_path <- file.path(root, "provenance/discovery_noaa_gom_red_snapper_2026/sources.csv")
+manifest_path <- file.path(root, "provenance/noaa_gulf_red_snapper_2026/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 

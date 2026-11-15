@@ -3,7 +3,7 @@ stock_id <- "noaa_pacific_coast_rex_sole"
 assessment_id <- "noaa_pacific_coast_rex_sole_2023"
 candidate_id <- "NOAA:10059"
 candidate_unit_id <- "noaa_pacific_rex_sole"
-cache_name <- "discovery_noaa_pacific_rex_2023"
+cache_name <- "glyptocephalus_zachirus/noaa_pacific_coast_rex_sole_2023"
 report_url <- "https://www.pcouncil.org/documents/2024/02/status-of-rex-sole-glyptocephalus-zachirus-along-the-u-s-west-coast-in-2023.pdf/"
 archive_url <- "https://www.pcouncil.org/documents/2024/02/rex-sole-2023-model-files.zip/"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
@@ -12,8 +12,7 @@ source(file.path(root, "scripts/shared/pacific_tables.R"))
 source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
 cache_options <- c(
-  file.path(root, "source_cache", "glyptocephalus_zachirus/noaa_pacific_coast_rex_sole_2023"),
-  file.path(root, "..", "..", cache_name)
+  file.path(root, "source_cache", "glyptocephalus_zachirus/noaa_pacific_coast_rex_sole_2023")
 )
 cache <- cache_options[dir.exists(cache_options)][1L]
 if (is.na(cache)) stop("The cached Rex Sole sources are unavailable.", call. = FALSE)

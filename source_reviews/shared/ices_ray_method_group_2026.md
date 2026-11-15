@@ -47,7 +47,7 @@ database. Candidate rows remain import_status = not_started.
   records retrieval date, URL, byte size, and checksum.
 - Official ICES Standard Graphs source pages, cached individually with URLs,
   retrieval date, byte size, and SHA-256 in
-  source_cache/discovery_ices_ray_method_group_2026/sources.csv:
+  source_cache/shared/ices_ray_method_group_2026/sources.csv:
   - [Black-mouth dogfish, key 21013](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21013)
   - [Thornback ray, key 21096](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21096)
   - [Blonde ray, key 21097](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21097)

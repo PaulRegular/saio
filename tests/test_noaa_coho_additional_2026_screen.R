@@ -15,9 +15,8 @@ progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 pacific <- noaa[noaa$source_region == 'NWFSC / SWFSC', , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews/shared/noaa_coho_2026.md'), warn = FALSE), collapse = ' ')
-manifest <- read.csv(file.path(root, 'source_cache',
-  'discovery_noaa_coho_2026', 'sources.csv'), stringsAsFactors = FALSE)
-cache <- file.path(root, 'source_cache', 'discovery_noaa_coho_2026')
+manifest <- read.csv(file.path(root, 'source_cache/oncorhynchus_kisutch/noaa_coho_2026', 'sources.csv'), stringsAsFactors = FALSE)
+cache <- file.path(root, 'source_cache/oncorhynchus_kisutch/noaa_coho_2026')
 cached_sources <- file.path(cache, manifest$file)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

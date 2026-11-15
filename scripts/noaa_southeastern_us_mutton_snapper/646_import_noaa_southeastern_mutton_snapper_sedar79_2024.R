@@ -12,9 +12,9 @@ if (write_mode && test_mode) stop("Source test mode cannot write.", call. = FALS
 source(file.path(root, "scripts/shared/pacific_tables.R"))
 source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
-cache_name <- "discovery_noaa_mutton_snapper_sedar79_2024"
+cache_name <- "lutjanus_analis/noaa_southeastern_us_mutton_snapper_sedar79_2024"
 cache <- file.path(root, "source_cache", cache_name)
-manifest <- read.csv(file.path(root, "provenance", cache_name, "sources.csv"),
+manifest <- read.csv(file.path(root, "provenance/noaa_southeastern_us_mutton_snapper_sedar79_2024", "sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 expected <- c(
   SEDAR79_DW03_size_age.pdf = "843b200db484723946866325018e92ccee13ec31c2c06764bba1153d1d4502ec",

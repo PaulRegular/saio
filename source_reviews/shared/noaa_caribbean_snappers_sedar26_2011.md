@@ -51,7 +51,7 @@ are complete.
 The final SEDAR 26 silk and queen snapper reports, SEDAR project page, NOAA
 InPort project record, peer-review report, and SEDAR 103 project and schedule
 are cached with retrieval dates and SHA-256 checksums under the gitignored
-`source_cache/discovery_noaa_caribbean_snappers_sedar26_2011/`.
+`source_cache/shared/noaa_caribbean_snappers_sedar26_2011/`.
 
 - [SEDAR 26 project page](https://sedarweb.org/assessments/sedar-26/)
 - [SEDAR 26 silk snapper final report](https://sedarweb.org/documents/sedar-26-caribbean-silk-snapper-final-stock-assessment-report/)

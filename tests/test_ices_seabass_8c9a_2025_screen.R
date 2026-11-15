@@ -9,7 +9,7 @@ register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactor
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:bss.27.8c9a', , drop = FALSE]
 neighbor <- register[register$candidate_id == 'ICES:bss.27.8ab', , drop = FALSE]
-cache <- file.path(root, 'source_cache/discovery_ices_seabass_8c9a_2025')
+cache <- file.path(root, 'source_cache/dicentrarchus_labrax/ices_seabass_8c9a_2025')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 advice <- paste(readLines(file.path(cache, 'ICES_2025_advice.html'), warn = FALSE), collapse = ' ')
 source_data <- paste(readLines(file.path(cache, 'SAG_2025_source_data.html'), warn = FALSE), collapse = ' ')

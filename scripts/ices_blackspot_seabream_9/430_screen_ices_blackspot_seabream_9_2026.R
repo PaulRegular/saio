@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_blackspot_seabream_9_2026')
+cache <- file.path(root, 'source_cache/pagellus_bogaraveo/ices_blackspot_seabream_9_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:sbr.27.9'
 unit_id <- 'ices_blackspot_seabream_9'
@@ -114,7 +114,7 @@ register$review_date[row] <- '2026-10-30'
 register$decision_reason[row] <- paste0(
   'Ineligible for the age-disaggregated comparison set. The latest official advice is assessment year 2026, category 3, with advice for 2027-2028; the advice-linked source table reports aggregate landings. The detailed 2025 WKBSS3 SS3 benchmark is an earlier run (data through 2023) and explicitly reports that age data are unavailable; it fits length compositions and a CPUE index, with borrowed biological assumptions. This does not assert that unreviewed age samples do not exist elsewhere. No canonical numerical data were added.')
 register$notes[row] <- paste0(
-  'The 2025 WKBSS3 report and its sbr.27.9 working document provide detailed earlier SS3 model documentation and aggregate outputs, but are not treated as the 2026 advice run. The benchmark explicitly states that no age data are available for the Portuguese/northern Spanish assessment area; it uses length compositions and borrowed biology. The 2026 advice-linked Standard Graphs table reports landings only. URLs, revisions, retrieval date, file sizes, and SHA-256 hashes are in source_cache/discovery_ices_blackspot_seabream_9_2026/sources.csv. No canonical stock, assessment, input, or output records were added.')
+  'The 2025 WKBSS3 report and its sbr.27.9 working document provide detailed earlier SS3 model documentation and aggregate outputs, but are not treated as the 2026 advice run. The benchmark explicitly states that no age data are available for the Portuguese/northern Spanish assessment area; it uses length compositions and borrowed biology. The 2026 advice-linked Standard Graphs table reports landings only. URLs, revisions, retrieval date, file sizes, and SHA-256 hashes are in source_cache/pagellus_bogaraveo/ices_blackspot_seabream_9_2026/sources.csv. No canonical stock, assessment, input, or output records were added.')
 
 source(file.path(root, 'scripts/shared/candidate_register_io.R'))
 if (!identical(Sys.getenv('TAM_SOURCE_DRY_RUN'), '1'))

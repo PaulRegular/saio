@@ -15,8 +15,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-manifest <- read.csv(file.path(root, 'source_cache',
-  'discovery_noaa_iccat_blue_marlin_2024', 'sources.csv'),
+manifest <- read.csv(file.path(root, 'source_cache/makaira_nigricans/noaa_iccat_blue_marlin_2024', 'sources.csv'),
   stringsAsFactors = FALSE)
 progress <- candidate_progress()
 units <- candidate_units()
@@ -31,8 +30,7 @@ stopifnot(nrow(row) == 1L,
   grepl('age-composition', row$catch_age_evidence, fixed = TRUE),
   grepl('aggregate fishery CPUE', row$survey_age_evidence, fixed = TRUE),
   grepl('2024_BUM_SA_ENG.pdf', row$detailed_source_url, fixed = TRUE),
-  all(file.exists(file.path(root, 'source_cache',
-    'discovery_noaa_iccat_blue_marlin_2024', manifest$file))),
+  all(file.exists(file.path(root, 'source_cache/makaira_nigricans/noaa_iccat_blue_marlin_2024', manifest$file))),
   !any(stocks$authority_stock_id == '11254', na.rm = TRUE),
   !any(stocks$scientific_name == 'Makaira nigricans', na.rm = TRUE),
   !any(assessments$assessment_id == 'iccat_atlantic_blue_marlin', na.rm = TRUE),

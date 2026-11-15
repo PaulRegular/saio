@@ -92,7 +92,7 @@ complete age-disaggregated source record.
 ## Sources and cache
 
 The 2023 NOAA report and 2026 WPSAR panel report are cached under the ignored
-`source_cache/discovery_noaa_american_samoa_2026/` directory. Their retrieval
+`source_cache/shared/noaa_american_samoa_2026/` directory. Their retrieval
 dates, URLs, and SHA-256 hashes are recorded in `sources.csv`. The latest 2026
 PIFSC Technical Memorandum is publicly available at the NOAA repository URL
 below; its online text and metadata were reviewed, but local download requests

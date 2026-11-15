@@ -8,7 +8,7 @@ rockfish off Washington and copper rockfish off Oregon. Both were assessed in
 because of differences in movement, habitat, and fishery history. They are not
 parts of the 2023 California north/south assessment family. The reports and
 their source checksums are recorded in the ignored local cache at
-`source_cache/discovery_noaa_copper_washington_oregon_2021/sources.csv`.
+`source_cache/shared/noaa_copper_washington_oregon_2021/sources.csv`.
 
 ## Input evidence and eligibility
 

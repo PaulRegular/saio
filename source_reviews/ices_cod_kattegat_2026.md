@@ -32,7 +32,7 @@ The WGBFAS 2026 PDF is reused from
 `source_cache/gadus_morhua/ck_ices_wgbfas_morhua_bs_25_32/assessment_2026/`; its original
 URL and checksum are recorded in that cache's `manifest.csv`. The ICES SAG XML,
 graphs page, source-data page and 2026 advice record are cached in
-`source_cache/discovery_ices_cod_kattegat_2026/` with URLs, revisions, retrieval
+`source_cache/gadus_morhua/ices_cod_kattegat_2026/` with URLs, revisions, retrieval
 date, byte counts and SHA-256 checksums in `sources.csv`.
 
 Sources:

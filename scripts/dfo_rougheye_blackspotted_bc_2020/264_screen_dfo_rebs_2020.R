@@ -78,7 +78,7 @@ review <- list(
     'located; leave candidate_unit_id blank. This Canadian assessment is geographically',
     'distinct from NOAA Stock SMART 14516, the U.S. West Coast complex. The peer-review record',
     'documents corrections to seamount age inclusion and weak south-stock MCMC diagnostics.',
-    'See ignored source_cache/discovery_dfo_rebs_2020/sources.csv.'
+    'See ignored source_cache/dfo_rebs_2020/sources.csv.'
   )
 )
 

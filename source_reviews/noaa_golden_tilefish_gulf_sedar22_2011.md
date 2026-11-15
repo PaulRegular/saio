@@ -87,4 +87,4 @@ rate proxy remain explicit in the imported output notes.
 Authoritative PDFs and the NOAA resources page are cached locally under
 `source_cache/lopholatilus_chamaeleonticeps/noaa_gulf_golden_tilefish_2011/`. Retrieval dates,
 revisions, sizes and SHA-256 checksums are listed in
-`provenance/discovery_noaa_gulf_tilefish_sedar22_2011/sources.csv`.
+`provenance/noaa_gulf_golden_tilefish_2011/sources.csv`.

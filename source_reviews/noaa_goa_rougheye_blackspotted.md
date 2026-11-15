@@ -24,7 +24,7 @@ The detailed report does not provide catch numbers-at-age, a separate fishery we
 
 ## Sources and local cache
 
-The three cached PDFs, retrieval dates, URLs, sizes and SHA-256 checksums are listed in provenance/discovery_noaa_goa_rougheye_2023/sources.csv. The source cache is ignored by Git.
+The three cached PDFs, retrieval dates, URLs, sizes and SHA-256 checksums are listed in provenance/noaa_goa_rougheye_blackspotted_2023/sources.csv. The source cache is ignored by Git.
 
 - [2023 GOA Rougheye and Blackspotted SAFE](https://apps-afsc.fisheries.noaa.gov/Plan_Team/2023/GOArougheye.pdf)
 - [2024 GOA projection update](https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&fileId=10291)

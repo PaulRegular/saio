@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache_dir <- file.path(root, 'source_cache', 'discovery_ices_red_gurnard_2025')
+cache_dir <- file.path(root, 'source_cache/chelidonichthys_cuculus/ices_red_gurnard_2025')
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),
@@ -108,7 +108,7 @@ review <- list(
     'https://doi.org/10.17895/ices.pub.32625759', sep = '; '),
   review_date = '2026-10-30',
   decision_reason = paste('The latest inventory advice cycle is 2025. Its official advice describes a Category 3 survey trends-based assessment, built around aggregate survey biomass indices, and states that reliable catch data are unavailable. The assessment does not provide the age-disaggregated observations and outputs required for the age-structured inventory.'),
-  notes = paste('The 2025 advice is based on an assessment-index series; the linked Standard Graphs source key 18521 is labelled assessment year 2023 and contains aggregate biomass-index bounds and landings, not age-specific population surfaces. This single ICES stock spans subareas 3-8 and is treated as one candidate unit across multiple ecoregions. The official 2025 advice copy, advice record, and Standard Graphs source page are cached with URLs, retrieval dates, and SHA-256 hashes in source_cache/discovery_ices_red_gurnard_2025/sources.csv. No canonical stock or numerical records were added.')
+  notes = paste('The 2025 advice is based on an assessment-index series; the linked Standard Graphs source key 18521 is labelled assessment year 2023 and contains aggregate biomass-index bounds and landings, not age-specific population surfaces. This single ICES stock spans subareas 3-8 and is treated as one candidate unit across multiple ecoregions. The official 2025 advice copy, advice record, and Standard Graphs source page are cached with URLs, retrieval dates, and SHA-256 hashes in source_cache/chelidonichthys_cuculus/ices_red_gurnard_2025/sources.csv. No canonical stock or numerical records were added.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

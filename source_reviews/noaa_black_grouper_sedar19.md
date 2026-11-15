@@ -28,7 +28,7 @@ Keep this stock in the discovery register as a screened, promising source-recove
 
 ## Sources and cache
 
-The local source cache is source_cache/discovery_noaa_black_grouper_sedar19/. Its sources.csv records retrieval dates, source URLs, revisions, file sizes, and SHA-256 checksums.
+The local source cache is source_cache/mycteroperca_bonaci/noaa_black_grouper_sedar19/. Its sources.csv records retrieval dates, source URLs, revisions, file sizes, and SHA-256 checksums.
 
 - [SEDAR 19 final black grouper assessment report](https://sedarweb.org/documents/sedar-19-final-stock-assessment-report-south-atlantic-and-gulf-of-mexico-black-grouper/)
 - [SEDAR 19 Data Workshop paper DW-09 on age, growth, and maturity](https://sedarweb.org/documents/s19dw09-age-growth-and-maturity-of-black-grouper-mycteroperca-bonaci-crabtree-and-bullock-1998-revisited/)

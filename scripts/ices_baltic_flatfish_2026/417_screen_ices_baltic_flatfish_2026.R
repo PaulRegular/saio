@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_baltic_flatfish_2026')
+cache <- file.path(root, 'source_cache/shared/ices_baltic_flatfish_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 
 screens <- data.frame(
@@ -125,7 +125,7 @@ review_values <- lapply(seq_len(nrow(screens)), function(i) list(
   timing_evidence = 'The current page contains no age-specific survey observation for which fractional within-year timing could be specified.',
   output_evidence = output_evidence[i], detailed_source_url = screens$source_url[i],
   review_date = '2026-10-30', decision_reason = decision_reason[i],
-  notes = 'Identity, category, year, and stock key were checked against the 2026 ICES Standard Graphs list and stock-specific source data. Cached URLs, retrieval date, revisions, sizes, and SHA-256 checksums are in source_cache/discovery_ices_baltic_flatfish_2026/sources.csv. No canonical records were added.'
+  notes = 'Identity, category, year, and stock key were checked against the 2026 ICES Standard Graphs list and stock-specific source data. Cached URLs, retrieval date, revisions, sizes, and SHA-256 checksums are in source_cache/shared/ices_baltic_flatfish_2026/sources.csv. No canonical records were added.'
 ))
 
 is_initial <- register$match_status[rows] == 'unreviewed' &

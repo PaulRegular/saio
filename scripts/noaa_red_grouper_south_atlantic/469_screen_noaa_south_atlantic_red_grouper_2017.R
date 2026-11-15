@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_red_grouper_sa_2017')
+cache <- file.path(root, 'source_cache/epinephelus_morio/noaa_red_grouper_sa_2017')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10332'
 unit_id <- 'noaa_red_grouper_south_atlantic'
@@ -112,7 +112,7 @@ review <- list(
   notes = paste('NOAA Stock SMART 10332 is the South Atlantic management unit and is distinct from Gulf of Mexico red grouper (10331).',
     'The latest completed detailed assessment is SEDAR 53 (2017; terminal data year 2015); SEDAR 86 was not completed.',
     'The SEDAR 53 final report and commercial/recreational age-composition papers are cached with provenance and SHA-256 checksums under',
-    'source_cache/discovery_noaa_red_grouper_sa_2017. This is a discovery eligibility screen only: no canonical assessment, input or output data were added.')
+    'source_cache/epinephelus_morio/noaa_red_grouper_sa_2017. This is a discovery eligibility screen only: no canonical assessment, input or output data were added.')
 )
 
 current <- lapply(names(review), function(column) as.character(candidates[[column]][row]))

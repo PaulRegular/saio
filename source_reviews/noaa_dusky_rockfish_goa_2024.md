@@ -69,6 +69,6 @@ survey timing, N-at-age and F-at-age remain unavailable or unresolved.
 - [NOAA Stock SMART record 10559](https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10559).
 
 The 2024 SAFE and 2026 projection are cached under
-`source_cache/discovery_noaa_dusky_rockfish_2024/`. Their URLs, retrieval
+`source_cache/sebastes_variabilis/noaa_goa_dusky_rockfish_2024/`. Their URLs, retrieval
 dates, checksums, byte sizes and cache filenames are recorded in
-`provenance/discovery_noaa_dusky_rockfish_2024/sources.csv`.
+`provenance/noaa_goa_dusky_rockfish_2024/sources.csv`.

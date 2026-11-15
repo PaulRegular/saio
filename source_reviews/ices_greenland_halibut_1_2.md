@@ -33,4 +33,4 @@ No canonical stock, assessment, input, or output records were added. ## Sources
 - Institute of Marine Research, [JRN-AFWG Report 2026](https://www.hi.no/hi/nettrapporter/imr-vniro-2026-5), Greenland halibut chapter.
 - Institute of Marine Research, [Greenland halibut advice for 2027–2028](https://www.hi.no/en/hi/nettrapporter/imr-vniro-en-2026-4).
 - Norwegian Marine Data Centre, [GADGET3 source-code dataset for Greenland halibut in ICES areas 1 and 2 (2024)](https://metadata.nmdc.no/metadata-api/landingpage/789a27f9647f32c0fdeaa792d3ed5d7b).
-- The gitignored `source_cache/discovery_ices_greenland_halibut_1_2_2026/sources.csv` records URLs, revisions, retrieval date, sizes, and SHA-256 checksums.
+- The gitignored `source_cache/reinhardtius_hippoglossoides/ices_greenland_halibut_1_2_2026/sources.csv` records URLs, revisions, retrieval date, sizes, and SHA-256 checksums.

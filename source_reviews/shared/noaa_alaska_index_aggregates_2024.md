@@ -19,4 +19,4 @@ The GOA shallow-water flatfish report separates Tier 3 northern and southern roc
 
 The 2024 BSAI Other Flatfish update is an important distinction: its most recent Stock SMART row is from 2020, but the official 2024 SAFE and SSC report document a newer production update. The register retains the Stock SMART year as inventory metadata and records the newer production assessment in its review notes and evidence.
 
-The official reports and NOAA Stock SMART data dictionary are cached locally in the gitignored `source_cache/discovery_noaa_alaska_aggregates_2024/`, with retrieval dates, URLs, revisions, and SHA-256 hashes in `sources.csv`.
+The official reports and NOAA Stock SMART data dictionary are cached locally in the gitignored `source_cache/shared/noaa_alaska_aggregates_2024/`, with retrieval dates, URLs, revisions, and SHA-256 hashes in `sources.csv`.

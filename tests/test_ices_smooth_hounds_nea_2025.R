@@ -7,7 +7,7 @@ candidate_id <- 'ICES:sdv.27.nea'
 candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- candidates[candidates$candidate_id == candidate_id, , drop = FALSE]
-cache <- file.path(root, 'source_cache/discovery_ices_dogfish_2025')
+cache <- file.path(root, 'source_cache/ices_dogfish_2025')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 source <- sources[sources$file == 'wgef_2025.pdf', , drop = FALSE]
 path <- file.path(cache, 'wgef_2025.pdf')

@@ -2,8 +2,8 @@
 
 root <- "."
 db <- file.path(root, "database")
-cache_2016 <- file.path(root, "source_cache", "ck_dfo_aeglefinus_4x5y_2016")
-cache_2024 <- file.path(root, "source_cache", "ck_dfo_aeglefinus_4x5y_2024")
+cache_2016 <- file.path(root, "source_cache/melanogrammus_aeglefinus/dfo_haddock_4x5y_2016")
+cache_2024 <- file.path(root, "source_cache/melanogrammus_aeglefinus/dfo_haddock_4x5y_2024_summary")
 assessment_id <- "dfo_haddock_4x5y_2016"
 summary_id <- "dfo_haddock_4x5y_2024_summary"
 abort <- function(...) stop(paste0(...), call. = FALSE)

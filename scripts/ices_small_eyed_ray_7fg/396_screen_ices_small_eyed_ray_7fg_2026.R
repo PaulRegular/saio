@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_small_eyed_ray_7fg_2026')
+cache <- file.path(root, 'source_cache/raja_microocellata/ices_small_eyed_ray_7fg_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:rje.27.7fg'
 unit_id <- 'ices_small_eyed_ray_7fg'
@@ -100,7 +100,7 @@ review <- data.frame(
     'The official source data contain no age-specific likelihood inputs or population outputs, so this stock',
     'is ineligible for the age-disaggregated assessment set.'),
   notes = paste('The official 2026 ICES advice and Standard Graphs pages, retrieval date, revisions, file sizes,',
-    'and SHA-256 checksums are recorded under source_cache/discovery_ices_small_eyed_ray_7fg_2026/.',
+    'and SHA-256 checksums are recorded under source_cache/raja_microocellata/ices_small_eyed_ray_7fg_2026/.',
     'This 7.f-7.g stock unit is distinct from the 7.d-7.e assessment. No canonical numerical records or',
     ''),
   stringsAsFactors = FALSE,

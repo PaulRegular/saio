@@ -15,4 +15,4 @@ Sources:
 - [ICES Standard Graphs source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22627), stock key 22627.
 - The report cites [the 2026 TAF assessment repository](https://github.com/ices-taf/2026_hke.27.3a46-8abd_assessment) in footnote 3; public GitHub metadata was unavailable during this review.
 
-The assessment section, advice PDF, and Standard Graphs source page are cached in the gitignored `source_cache/ices_northern_hake_2026/`; `manifest.csv` records download URLs, retrieval time, and SHA-256 checksums.
+The assessment section, advice PDF, and Standard Graphs source page are cached in the gitignored `source_cache/merluccius_merluccius/ices_northern_hake_2026/`; `manifest.csv` records download URLs, retrieval time, and SHA-256 checksums.

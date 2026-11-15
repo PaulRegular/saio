@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_roundnose_grenadier_3a_2026')
+cache <- file.path(root, 'source_cache/coryphaenoides_rupestris/ices_roundnose_grenadier_3a_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:rng.27.3a'
 unit_id <- 'ices_roundnose_grenadier_3a'
@@ -102,7 +102,7 @@ review <- list(
     'https://sag.ices.dk/SAG_API/StockXmlDownload/22371'),
   review_date = '2026-10-31',
   decision_reason = 'The latest official advice located is assessment year 2026, category 3.2, with advice for zero catch in 2027-2028. The current SAG source reports an aggregate B_index and total landings/discards; its age/recruitment and F-age metadata are empty. The published current source set does not meet the age-disaggregated input and output screen.',
-  notes = 'This is a distinct Division 3.a unit, not the Oceanic Northeast Atlantic roundnose grenadier unit rng.27.5a10b12ac14b. The source-graph metadata identifies the stock-size series as B_index; do not interpret its generic Low SSB / SSB / High SSB columns as spawning-stock biomass. Advice, chart, source-data HTML, and XML are cached with provenance under source_cache/discovery_ices_roundnose_grenadier_3a_2026. No canonical stock, assessment, input, or output records were added.'
+  notes = 'This is a distinct Division 3.a unit, not the Oceanic Northeast Atlantic roundnose grenadier unit rng.27.5a10b12ac14b. The source-graph metadata identifies the stock-size series as B_index; do not interpret its generic Low SSB / SSB / High SSB columns as spawning-stock biomass. Advice, chart, source-data HTML, and XML are cached with provenance under source_cache/coryphaenoides_rupestris/ices_roundnose_grenadier_3a_2026. No canonical stock, assessment, input, or output records were added.'
 )
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&

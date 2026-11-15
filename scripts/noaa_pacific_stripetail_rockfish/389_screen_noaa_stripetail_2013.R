@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_data_moderate_2013_2026')
+cache <- file.path(root, 'source_cache/shared/noaa_data_moderate_2013_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10428'
 candidate_unit_id <- 'noaa_pacific_stripetail_rockfish'
@@ -96,7 +96,7 @@ screened <- data.frame(
   detailed_source_url = paste(all_urls, collapse = '; '),
   review_date = '2026-10-30',
   decision_reason = 'NOAA Stock SMART 10428 is one coastwide U.S. Pacific unit with no canonical stock match. The latest detailed assessment is the 2013 data-moderate run (published 2015), still identified as latest in the 2025 SAFE. Although the model has 38 internal ages, the run file explicitly contains zero age-composition observations and zero mean-size-at-age observations; it uses catch totals and aggregate survey indices and was accepted only for status determination. Do not substitute earlier methods or infer age observations from model structure.',
-  notes = 'Screened ineligible for the age-disaggregated set. The 2013 report, 2025 SAFE, 2026 preliminary assessment recommendations, and 2026 Amendment 37 analysis are cached with checksums under source_cache/discovery_noaa_data_moderate_2013_2026/. See source_reviews/noaa_pacific_stripetail_rockfish.md. No canonical records were added.',
+  notes = 'Screened ineligible for the age-disaggregated set. The 2013 report, 2025 SAFE, 2026 preliminary assessment recommendations, and 2026 Amendment 37 analysis are cached with checksums under source_cache/shared/noaa_data_moderate_2013_2026/. See source_reviews/noaa_pacific_stripetail_rockfish.md. No canonical records were added.',
   stringsAsFactors = FALSE, check.names = FALSE)
 
 needs_write <- initial_state || (current_state && !all(vapply(names(screened), function(name)

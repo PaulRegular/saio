@@ -14,7 +14,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 source(file.path(root, "scripts/shared/pacific_tables.R"))
 source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
-manifest <- read.csv(file.path(root, "provenance/discovery_noaa_darkblotched_2017/sources.csv"),
+manifest <- read.csv(file.path(root, "provenance/noaa_darkblotched_rockfish_2017/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 sha256_file <- function(path) toupper(unname(tools::sha256sum(path)))
 verify_source <- function(file) {

@@ -1,5 +1,5 @@
 import_ices_wgnas_2026 <- function(root = ".", write = FALSE) {
-  cache <- file.path(root, "source_cache", "discovery_ices_wgnas_2026")
+  cache <- file.path(root, "source_cache/shared/ices_wgnas_2026")
   manifest_path <- file.path(root, "provenance", "ices_wgnas_2026", "sources.csv")
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE, check.names = FALSE)
 
@@ -565,8 +565,8 @@ import_ices_wgnas_2026 <- function(root = ".", write = FALSE) {
       candidates[row, , drop = FALSE], candidate_id)
   }
 
-  discovery_review <- file.path(root, "source_reviews/shared/ices_final_five_2026.md")
-  review_lines <- readLines(discovery_review, warn = FALSE, encoding = "UTF-8")
+  review_file <- file.path(root, "source_reviews/shared/ices_final_five_2026.md")
+  review_lines <- readLines(review_file, warn = FALSE, encoding = "UTF-8")
   old <- grep("^sal[.]nac[.]all and sal[.]neac[.]all are eligible", review_lines)
   if (length(old) == 1L) {
     review_lines[old] <- paste(
@@ -577,11 +577,11 @@ import_ices_wgnas_2026 <- function(root = ".", write = FALSE) {
     )
   }
   review_lines <- gsub(
-    "Current sources are cached under the gitignored source_cache/discovery_ices_remaining_units_2026/.",
-    "Current WGNAS sources are cached under the gitignored source_cache/discovery_ices_wgnas_2026/.",
+    "Current sources are cached under the gitignored source_cache/shared/ices_remaining_units_2026/.",
+    "Current WGNAS sources are cached under the gitignored source_cache/shared/ices_wgnas_2026/.",
     review_lines, fixed = TRUE
   )
-  writeLines(review_lines, discovery_review, useBytes = TRUE)
+  writeLines(review_lines, review_file, useBytes = TRUE)
 
   source(file.path(root, "scripts/002_validate_database.R"),
     local = new.env(parent = globalenv()))

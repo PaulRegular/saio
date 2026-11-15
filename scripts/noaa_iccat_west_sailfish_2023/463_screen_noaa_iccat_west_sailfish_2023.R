@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_iccat_west_sailfish_2023')
+cache <- file.path(root, 'source_cache/istiophorus_platypterus/noaa_iccat_west_sailfish_2023')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10180'
 unit_id <- 'iccat_west_atlantic_sailfish'
@@ -136,7 +136,7 @@ review <- list(
     'crosswalk is based on the matching common name and western Atlantic area; this',
     'screen does not assert that the names are taxonomic synonyms. No canonical',
     'values were added was attempted. The report is cached',
-    'under source_cache/discovery_noaa_iccat_west_sailfish_2023/.'
+    'under source_cache/istiophorus_platypterus/noaa_iccat_west_sailfish_2023/.'
   )
 )
 

@@ -10,7 +10,7 @@ No later detailed production run was located. NOAA’s current species page says
 
 ## Sources and provenance
 
-The PFMC assessment report, model archive, and NOAA species-page snapshot are cached under the ignored source_cache/engraulis_mordax/noaa_northern_anchovy_central_subpopulation_2021/ folder. The tracked manifest at provenance/discovery_noaa_anchovy_2021/sources.csv gives retrieval dates, URLs, pinned source descriptions, and SHA-256 hashes for the report, archive, web snapshot, and each extracted native model file.
+The PFMC assessment report, model archive, and NOAA species-page snapshot are cached under the ignored source_cache/engraulis_mordax/noaa_northern_anchovy_central_subpopulation_2021/ folder. The tracked manifest at provenance/noaa_anchovy_2021/sources.csv gives retrieval dates, URLs, pinned source descriptions, and SHA-256 hashes for the report, archive, web snapshot, and each extracted native model file.
 
 Sources:
 

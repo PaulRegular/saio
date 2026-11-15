@@ -79,9 +79,9 @@ dab, and brill are ineligible on the evidence reviewed.
 - [Main Basin salmon advice for 2026](https://doi.org/10.17895/ices.advice.27202839) and [Gulf of Finland salmon advice for 2026](https://doi.org/10.17895/ices.advice.27202842). The European Commission's [2027 Baltic fishing-opportunities proposal](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A52026PC0437) states that no new ICES salmon advice was issued in 2026, so the prior advice remained current.
 
 The Standard Graphs pages are cached locally under the gitignored
-`source_cache/discovery_ices_baltic_flatfish_2026/`. The working-group PDFs are
+`source_cache/shared/ices_baltic_flatfish_2026/`. The working-group PDFs are
 cached under the gitignored
-`source_cache/discovery_ices_baltic_current_reports_2026/`. Each cache has a
+`source_cache/shared/ices_baltic_current_reports_2026/`. Each cache has a
 `sources.csv` with source URLs, retrieval date, report/DOI description, file
 size, and SHA-256; its cached reports are `WGBFAS_2026.pdf`,
 `WGBAST_2025.pdf`, and `WGBAST_2026.pdf`.

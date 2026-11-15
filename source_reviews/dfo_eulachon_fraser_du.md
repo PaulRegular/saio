@@ -51,4 +51,4 @@ The local ignored cache contains the 2026 IFMP summary page, the 2025 full
 IFMP, and both RPA PDFs. The 2026 full-plan publication URL is retained above;
 the local direct-download endpoint returned an HTML response rather than a PDF,
 so it is not mislabeled as a cached PDF. Cache file sizes, retrieval dates and
-SHA-256 hashes are recorded in `source_cache/discovery_dfo_eulachon_fraser/sources.csv`.
+SHA-256 hashes are recorded in `source_cache/thaleichthys_pacificus/dfo_eulachon_fraser/sources.csv`.

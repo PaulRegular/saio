@@ -32,7 +32,7 @@ stopifnot(
   grepl('Eligibility therefore remains unresolved', review, fixed = TRUE)
 )
 
-cache <- 'source_cache/discovery_dfo_north_coast_chinook_2026'
+cache <- 'source_cache/oncorhynchus_tshawytscha/dfo_north_coast_chinook_2026'
 manifest_path <- file.path(cache, 'sources.csv')
 if (file.exists(manifest_path)) {
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE)

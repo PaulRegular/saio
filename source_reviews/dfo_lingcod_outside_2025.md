@@ -20,4 +20,4 @@ NOAA Stock SMART separately lists Northern and Southern Pacific Coast Lingcod. N
 
 - DFO. 2025. [Outside Lingcod (Ophiodon elongatus) Stock Assessment for British Columbia in 2025](https://publications.gc.ca/collections/collection_2025/mpo-dfo/fs70-6/Fs70-6-2025-054-eng.pdf). Science Advisory Report 2025/054.
 - DFO. 2026. [Groundfish Integrated Fisheries Management Plan, effective February 21, 2026](https://www.pac.dfo-mpo.gc.ca/fm-gp/mplans/ground-fond-ifmp-pgip-sm-eng.html), confirming use of the outside Lingcod advice in 2025/26.
-- Source PDFs and retrieval metadata are cached locally under the gitignored `source_cache/discovery_dfo_lingcod_outside/`.
+- Source PDFs and retrieval metadata are cached locally under the gitignored `source_cache/ophiodon_elongatus/dfo_lingcod_outside/`.

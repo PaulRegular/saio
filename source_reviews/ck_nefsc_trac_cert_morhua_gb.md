@@ -208,7 +208,7 @@ assessment record is partial; no duplicate stock or assessment is created.
 
 The official DFO management-plan page used to confirm the 5Zjm-to-Eastern
 Georges Bank identity is cached under
-`source_cache/discovery_dfo_cod_5zjm/`; `sources.csv` records its URL, retrieval
+`source_cache/gadus_morhua/dfo_cod_5zjm/`; `sources.csv` records its URL, retrieval
 date, byte size and SHA-256. Detailed assessment sources, their provenance and
 remaining gaps are documented in
 `source_reviews/ck_nefsc_trac_cert_morhua_gb.md` and its cache manifest.
@@ -225,7 +225,7 @@ The NOAA Stock SMART label and the DFO NAFO label refer to the same eastern Geor
 
 The 2023 TRAC report includes age observations and survey-derived mortality indicators but no fitted fishery catch-at-age likelihood, age-specific abundance-index likelihood, or fitted N/F/M-at-age outputs. Its empirical mortality calculations are not a model natural-mortality input. The later DFO EGB source review records the latest detailed model and its remaining numerical input/output gaps; the NOAA inventory row does not add a separate assessment event.
 
-The NOAA report is linked below. Direct local download from the NOAA institutional repository returned HTTP 403 in this session. The current-unit DFO management-plan file is cached under `source_cache/discovery_dfo_cod_5zjm/`. The newer DFO framework record and its remaining gaps are summarized in `dfo_cod_5zjm_identity.md`.
+The NOAA report is linked below. Direct local download from the NOAA institutional repository returned HTTP 403 in this session. The current-unit DFO management-plan file is cached under `source_cache/gadus_morhua/dfo_cod_5zjm/`. The newer DFO framework record and its remaining gaps are summarized in `dfo_cod_5zjm_identity.md`.
 
 ### Sources
 

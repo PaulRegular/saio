@@ -35,7 +35,7 @@ convert this assessment into a canonical age-data record.
 No canonical database records were
 added. The report and model archive provenance, retrieval date, sizes, and
 SHA-256 hashes are in
-`source_cache/discovery_noaa_squarespot_rockfish_pacific_2021/sources.csv`.
+`source_cache/sebastes_hopkinsi/noaa_squarespot_rockfish_pacific_2021/sources.csv`.
 
 ## Sources
 

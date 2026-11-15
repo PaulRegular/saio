@@ -17,7 +17,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database/outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-sources <- read.csv(file.path(root, 'source_cache/discovery_noaa_north_pacific_blue_shark_2022/sources.csv'),
+sources <- read.csv(file.path(root, 'source_cache/prionace_glauca/noaa_north_pacific_blue_shark_2022/sources.csv'),
   stringsAsFactors = FALSE)
 
 bsh <- register[register$candidate_id == 'NOAA:11686', , drop = FALSE]
@@ -61,7 +61,7 @@ stopifnot(
   sum(noaa$screening_not_started) == 0L,
   nrow(sources) == 2L,
   all(nzchar(sources$file)),
-  all(file.exists(file.path(root, 'source_cache/discovery_noaa_north_pacific_blue_shark_2022', sources$file))),
+  all(file.exists(file.path(root, 'source_cache/prionace_glauca/noaa_north_pacific_blue_shark_2022', sources$file))),
   sources$sha256[1] == '7FE2A05C0DC52DA5AE466AE8046BB62AE839206ECBE941AAFFF2DA7431DAD0FA',
   sources$sha256[2] == '767B0605A3D9A518C80EB73673531D8AF58EF9542F18FD5DC5857FCBAF65A47E',
   file.exists(file.path(root, 'source_reviews/noaa_north_pacific_blue_shark_2022.md'))

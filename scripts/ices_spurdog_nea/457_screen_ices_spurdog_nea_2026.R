@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_spurdog_nea_2026')
+cache <- file.path(root, 'source_cache/squalus_acanthias/ices_spurdog_nea_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:dgs.27.nea'
 unit_id <- 'ices_spurdog_nea'
@@ -23,7 +23,7 @@ if (nrow(sources) != 11L || any(!file.exists(source_paths)) ||
 
 read_source <- function(file) gsub('[[:space:]]+', ' ',
   paste(readLines(file.path(cache, file), warn = FALSE), collapse = ' '))
-sid <- read_source('../shared/ices_sid/stock_list_2026.json')
+sid <- read_source('../../shared/ices_sid/stock_list_2026.json')
 advice_2024 <- read_source('ICES_advice_2024_dgs_27_nea.txt')
 advice_2027 <- read_source('ICES_advice_record_7197.html')
 advice_2028 <- read_source('ICES_advice_record_7198.html')

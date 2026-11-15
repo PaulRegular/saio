@@ -1,5 +1,5 @@
 root <- '.'
-cache <- file.path(root, 'source_cache/discovery_ices_witch_northsea_2026')
+cache <- file.path(root, 'source_cache/shared/ices_witch_northsea_2026')
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/ices_lemon_sole_3a47d/362_screen_ices_lemon_sole_3a47d_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')

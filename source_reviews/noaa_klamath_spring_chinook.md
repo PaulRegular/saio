@@ -61,4 +61,4 @@ were added to the canonical database was attempted.
   retrieved from a public mirror.
 
 Cached PDFs and retrieval URLs, dates, revisions, and SHA256 checksums are in
-the gitignored `source_cache/noaa_klamath_spring_chinook_2013/` directory.
+the gitignored `source_cache/oncorhynchus_tshawytscha/noaa_klamath_spring_chinook_2013/` directory.

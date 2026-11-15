@@ -3,7 +3,7 @@
 SAIO stock `mpi_ling_lin56_lin6b`. Assessment `mpi_ling_lin56_lin6b_2024`.
 
 Reviewed 6 November 2026. The source PDFs and checksums are listed in
-`provenance/mpi_ling_lin56_2024/sources.csv` and cached under the ignored
+`provenance/mpi_ling_lin56_lin6b_2024/sources.csv` and cached under the ignored
 `source_cache/mpi_ling_lin56_2024/` directory.
 
 ## Stock unit and latest assessment

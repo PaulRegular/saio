@@ -84,7 +84,7 @@ x$notes[i] <- paste(
   'Keep the 2022 age-structured OM (data through 2021) separate. DFO Open',
   'Data StRS records currently extend later than that run; filter to its',
   'accepted years for any future extraction. Source cache and checksums are',
-  'in source_cache/dfo_bc_sablefish_20261029/sources.csv.'
+  'in source_cache/anoplopoma_fimbria/dfo_bc_sablefish_20261029/sources.csv.'
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

@@ -1,6 +1,6 @@
 root <- "."
 candidate_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache', 'discovery_noaa_red_grouper_gom_2025')
+cache <- file.path(root, 'source_cache/epinephelus_morio/noaa_red_grouper_gom_2025')
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),

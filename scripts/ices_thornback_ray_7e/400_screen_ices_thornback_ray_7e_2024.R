@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_ices_thornback_ray_7e_2024')
+cache <- file.path(root, 'source_cache/raja_clavata/ices_thornback_ray_7e_2024')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:rjc.27.7e'
 unit_id <- 'ices_thornback_ray_7e'
@@ -24,8 +24,8 @@ verify_source <- function(relative_path) {
   invisible(path)
 }
 
-verify_source('source_cache/discovery_ices_thornback_ray_7e_2024/rjc.27.7e_ICES_Advice_2024.pdf')
-verify_source('source_cache/discovery_ices_thornback_ray_7e_2024/WGEF_2024_full_report.pdf')
+verify_source('source_cache/raja_clavata/ices_thornback_ray_7e_2024/rjc.27.7e_ICES_Advice_2024.pdf')
+verify_source('source_cache/raja_clavata/ices_thornback_ray_7e_2024/WGEF_2024_full_report.pdf')
 advice <- gsub('[[:space:]]+', ' ', paste(readLines(advice_text, warn = FALSE), collapse = ' '))
 wgef <- gsub('[[:space:]]+', ' ', paste(readLines(wgef_text, warn = FALSE), collapse = ' '))
 if (!all(vapply(c('Assessment type No assessment', 'Input data Landings data',

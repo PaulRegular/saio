@@ -7,7 +7,7 @@ register <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
 progress <- candidate_progress()
 units <- candidate_units()
 candidate <- register[register$candidate_id == "AFMA:MITF", , drop = FALSE]
-manifest <- read.csv("provenance/afma_mitf_2025/sources.csv",
+manifest <- read.csv("provenance/afma_patagonian_toothfish_macquarie_2025/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
 check_inventory_accounting(register, progress, units)

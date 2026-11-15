@@ -11,7 +11,7 @@ source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
 source_dir <- file.path(root, "source_cache/rhomboplites_aurorubens/noaa_vermilion_snapper_gulf_sedar67_2020")
 manifest <- read.csv(file.path(root,
-  "provenance/discovery_noaa_vermilion_snapper_gom_2020/sources.csv"),
+  "provenance/noaa_vermilion_snapper_gulf_sedar67_2020/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 
 sha256_file <- function(path) {

@@ -4,8 +4,8 @@ stock_id <- "noaa_goa_dusky_rockfish"
 assessment_id <- "noaa_goa_dusky_rockfish_2024"
 candidate_id <- "NOAA:10559"
 report_url <- "https://www.npfmc.org/wp-content/PDFdocuments/SAFE/2024/GOAdusky.pdf"
-source_dir <- file.path(root, "source_cache/discovery_noaa_dusky_rockfish_2024")
-manifest_path <- file.path(root, "provenance/discovery_noaa_dusky_rockfish_2024/sources.csv")
+source_dir <- file.path(root, "source_cache/sebastes_variabilis/noaa_goa_dusky_rockfish_2024")
+manifest_path <- file.path(root, "provenance/noaa_goa_dusky_rockfish_2024/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 

@@ -24,7 +24,7 @@ The reports describe life-history information and mortality assumptions used by 
 
 ## Cached sources
 
-The four assessment PDFs are stored in the ignored local source cache at `source_cache/discovery_noaa_pacific_billfish_2026/`. Its `sources.csv` records the source URLs, retrieval date, byte counts, checksums, and assessment revision.
+The four assessment PDFs are stored in the ignored local source cache at `source_cache/shared/noaa_pacific_billfish_2026/`. Its `sources.csv` records the source URLs, retrieval date, byte counts, checksums, and assessment revision.
 
 ## Sources
 

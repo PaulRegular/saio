@@ -8,7 +8,7 @@ maritimes <- progress[progress$organization == 'DFO' &
   progress$source_region == 'Maritimes', , drop = FALSE]
 units <- candidate_units()
 review <- 'source_reviews/dfo_maritimes_gaspereau.md'
-cache <- 'source_cache/discovery_dfo_maritimes_gaspereau_2026'
+cache <- 'source_cache/shared/dfo_maritimes_gaspereau_2026'
 manifest_path <- file.path(cache, 'sources.csv')
 
 stopifnot(nrow(row) == 1L,

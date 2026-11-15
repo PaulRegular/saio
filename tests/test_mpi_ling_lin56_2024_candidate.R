@@ -1,7 +1,7 @@
 candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "MPI:LIN56+LIN6B")
-manifest <- read.csv("provenance/mpi_ling_lin56_2024/sources.csv",
+manifest <- read.csv("provenance/mpi_ling_lin56_lin6b_2024/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- readLines("source_reviews/mpi_ling_lin56_lin6b.md",
   warn = FALSE)

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'discovery_noaa_greenspotted_2011')
+cache <- file.path(root, 'source_cache/sebastes_chlorostictus/noaa_greenspotted_2011')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10437'
 candidate_unit_id <- 'noaa_pacific_greenspotted_rockfish'
@@ -92,7 +92,7 @@ screened <- data.frame(
   detailed_source_url = paste(all_urls, collapse = '; '),
   review_date = '2026-10-30',
   decision_reason = 'Its latest detailed assessment is fully accepted and uses data through 2010, but the model fits two independent California components separated at Point Conception. Amendment 37 adopts a coastwide stock definition and notes that the area north of 42 degrees N was not assessed by the 2011 model. The source provides age samples and numeric N-at-age but not catch-at-age; retain eligibility as unresolved until the legacy-boundary fallback and a documented catch-at-age reconstruction are reviewed.',
-  notes = 'Screened; no canonical database records added. The accepted assessment and STAR panel PDFs are locally cached with checksums in source_cache/discovery_noaa_greenspotted_2011/. The 2026 Amendment 37 analysis is cached in discovery_noaa_data_moderate_2013_2026/. See source_reviews/noaa_pacific_greenspotted_rockfish.md.',
+  notes = 'Screened; no canonical database records added. The accepted assessment and STAR panel PDFs are locally cached with checksums in source_cache/sebastes_chlorostictus/noaa_greenspotted_2011/. The 2026 Amendment 37 analysis is cached in source_cache/shared/noaa_data_moderate_2013_2026/. See source_reviews/noaa_pacific_greenspotted_rockfish.md.',
   stringsAsFactors = FALSE, check.names = FALSE)
 
 needs_write <- initial_state || (current_state && !all(vapply(names(screened), function(name)

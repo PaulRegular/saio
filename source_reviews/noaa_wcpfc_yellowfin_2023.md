@@ -8,7 +8,7 @@ The 2023 assessment used a 54-model structural uncertainty grid. The pinned SPC 
 
 ## Source files and provenance
 
-The local ignored cache is `source_cache/discovery_noaa_wcpo_yellowfin_2023/`. The tracked `provenance/discovery_noaa_wcpo_yellowfin_2023/sources.csv` records source URLs, retrieval date, SHA-256 checksums, byte sizes, and pinned repository revisions.
+The local ignored cache is `source_cache/thunnus_albacares/wcpfc_wcpo_yellowfin_2023/`. The tracked `provenance/wcpfc_wcpo_yellowfin_2023/sources.csv` records source URLs, retrieval date, SHA-256 checksums, byte sizes, and pinned repository revisions.
 
 The model and TAF files are pinned to SPC repository commit `54274c0edac84e65fdbd8ef5996038e6a8714641`. The report cache is the NOAA mirror of WCPFC-SC19-2023/SA-WP-04 Rev. 02; the WCPFC meeting page remains the official report entry point. Grid summary CSVs are pinned to SPC repository commit `6b28f0bf4975895beae4df861124b30286ff6fa0`. The full grid-results archive is not needed for the summaries imported here.
 

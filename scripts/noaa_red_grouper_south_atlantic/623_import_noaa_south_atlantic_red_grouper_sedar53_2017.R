@@ -5,7 +5,7 @@ stock_id <- "noaa_red_grouper_south_atlantic"
 candidate_id <- "NOAA:10332"
 write_mode <- "--write" %in% commandArgs(trailingOnly=TRUE) || identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 source("scripts/shared/pacific_tables.R"); source("scripts/shared/candidate_register_io.R")
-manifest <- read.csv("provenance/noaa_red_grouper_sedar53_2017/sources.csv", colClasses="character", check.names=FALSE)
+manifest <- read.csv("provenance/noaa_red_grouper_south_atlantic_sedar53_2017/sources.csv", colClasses="character", check.names=FALSE)
 sha256 <- function(path) {
   x <- system2("certutil.exe", c("-hashfile", shQuote(path), "SHA256"), stdout=TRUE)
   h <- tolower(trimws(grep("^[[:space:]]*[[:xdigit:]]{64}[[:space:]]*$", x, value=TRUE)))

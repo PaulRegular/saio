@@ -29,7 +29,7 @@ candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == "NOAA:10349", , drop = FALSE]
-manifest <- read.csv("provenance/noaa_gag_sedar71_2021/sources.csv",
+manifest <- read.csv("provenance/noaa_gag_south_atlantic_sedar71_2021/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines("source_reviews/noaa_gag_sedar71_2021.md",
   warn = FALSE), collapse = " ")

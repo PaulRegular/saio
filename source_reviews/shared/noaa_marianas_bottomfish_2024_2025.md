@@ -53,7 +53,7 @@ uncertainty outputs.
 ## Sources and local cache status
 
 The pinned NOAA Stock SMART snapshot and source metadata are recorded in
-`source_cache/discovery_noaa_marianas_bottomfish_2025/sources.csv`. The 2024
+`source_cache/shared/noaa_marianas_bottomfish_2025/sources.csv`. The 2024
 Guam, 2025 CNMI, and 2026 CNMI life-history reports are publicly available from
 the NOAA repository, but direct local PDF downloads returned HTTP 403 in this
 environment. Their official repository checksums are retained in the manifest;
