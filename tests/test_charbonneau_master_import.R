@@ -182,36 +182,37 @@ if (file.exists(master_path)) {
       nrow(northern_haddock) == 1L,
       grepl(alias_note, northern_haddock$notes, fixed = TRUE)
     )
-    db_dir <- "database"
-    files <- c("stocks.csv", "assessments.csv", "assumptions.csv", "inputs.csv", "outputs.csv")
+    other_tables <- c("assessments.csv", "assumptions.csv", "inputs.csv", "outputs.csv")
     temp_dir <- tempfile("ck-master-import-")
     dir.create(temp_dir)
-    for (file in files) file.copy(file.path(db_dir, file), temp_dir)
-    original_other_tables <- tools::md5sum(file.path(
-      temp_dir, c("assessments.csv", "assumptions.csv", "inputs.csv", "outputs.csv")
-    ))
-    temp_stocks <- file.path(temp_dir, "stocks.csv")
-    seed_stocks <- source_stocks[!source_stocks$stock_id %in% ck_master_slug(master_ids), ]
-    utils::write.csv(seed_stocks, temp_stocks, row.names = FALSE, na = "")
-    first_import <- ck_import_master(master_path, temp_stocks)
-    imported_stocks <- read.csv(temp_stocks, stringsAsFactors = FALSE, na.strings = c("", "NA"))
-    after_other_tables <- tools::md5sum(file.path(
-      temp_dir, c("assessments.csv", "assumptions.csv", "inputs.csv", "outputs.csv")
-    ))
-    second_import <- ck_import_master(master_path, temp_stocks)
-    second_stocks <- read.csv(temp_stocks, stringsAsFactors = FALSE, na.strings = c("", "NA"))
-    stopifnot(
-      nrow(imported_stocks) == nrow(seed_stocks) + first_import$added,
-      first_import$matched == 27L,
-      first_import$aliased == 1L,
-      first_import$added == 74L,
-      second_import$matched == length(master_ids) - 1L,
-      second_import$aliased == 1L,
-      second_import$added == 0L,
-      identical(imported_stocks, second_stocks),
-      identical(original_other_tables, after_other_tables)
-    )
-    unlink(temp_dir, recursive = TRUE)
+    tryCatch({
+      other_paths <- file.path(temp_dir, other_tables)
+      for (i in seq_along(other_tables)) {
+        header <- readLines(file.path("database", other_tables[i]), n = 1L, warn = FALSE)
+        stopifnot(length(header) == 1L)
+        writeLines(header, other_paths[i])
+      }
+      original_other_tables <- tools::md5sum(other_paths)
+      temp_stocks <- file.path(temp_dir, "stocks.csv")
+      seed_stocks <- source_stocks[!source_stocks$stock_id %in% ck_master_slug(master_ids), ]
+      utils::write.csv(seed_stocks, temp_stocks, row.names = FALSE, na = "")
+      first_import <- ck_import_master(master_path, temp_stocks)
+      imported_stocks <- read.csv(temp_stocks, stringsAsFactors = FALSE, na.strings = c("", "NA"))
+      after_other_tables <- tools::md5sum(other_paths)
+      second_import <- ck_import_master(master_path, temp_stocks)
+      second_stocks <- read.csv(temp_stocks, stringsAsFactors = FALSE, na.strings = c("", "NA"))
+      stopifnot(
+        nrow(imported_stocks) == nrow(seed_stocks) + first_import$added,
+        first_import$matched == 27L,
+        first_import$aliased == 1L,
+        first_import$added == 74L,
+        second_import$matched == length(master_ids) - 1L,
+        second_import$aliased == 1L,
+        second_import$added == 0L,
+        identical(imported_stocks, second_stocks),
+        identical(original_other_tables, after_other_tables)
+      )
+    }, finally = unlink(temp_dir, recursive = TRUE))
   }
 }
 
