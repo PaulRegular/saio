@@ -14,7 +14,7 @@ afsc <- noaa[noaa$source_region == 'AFSC', , drop = FALSE]
 cache <- file.path(root, 'source_cache', 'discovery_noaa_goa_skates_2023_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_goa_skate_component_crosswalk_2023.md'), warn = FALSE), collapse = '\n')
 
 stopifnot(

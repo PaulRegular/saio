@@ -3,7 +3,7 @@ register <- read.csv('discovery/candidates.csv',
 stocks <- read.csv('database/stocks.csv',
   stringsAsFactors = FALSE)
 row <- register[register$candidate_id == 'DFO:Pacific:Chinook Salmon - Yukon', , drop = FALSE]
-review_path <- 'discovery/source_reviews/dfo_yukon_chinook_2024.md'
+review_path <- 'source_reviews/screening/dfo_yukon_chinook_2024.md'
 
 stopifnot(
   nrow(row) == 1L,

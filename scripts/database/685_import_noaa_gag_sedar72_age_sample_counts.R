@@ -188,7 +188,7 @@ if (write_mode) {
       candidates[candidate_row, , drop = FALSE], candidate_id)
   }
 
-  review_path <- file.path(root, "discovery/source_reviews/noaa_gag_sedar72_2022.md")
+  review_path <- file.path(root, "source_reviews/screening/noaa_gag_sedar72_2022.md")
   review <- readLines(review_path, warn = FALSE, encoding = "UTF-8")
   marker <- "Remaining gaps: numeric age-composition arrays"
   at <- which(grepl(marker, review, fixed = TRUE))

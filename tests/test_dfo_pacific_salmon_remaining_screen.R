@@ -75,7 +75,7 @@ stopifnot(
 
 cache <- file.path(root, 'source_cache', 'discovery_dfo_pacific_salmon_2026')
 manifest_path <- file.path(cache, 'sources.csv')
-review_path <- file.path(root, 'discovery', 'source_reviews', 'dfo_pacific_salmon_remaining_2026.md')
+review_path <- file.path(root, 'source_reviews', 'screening', 'dfo_pacific_salmon_remaining_2026.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 if (file.exists(manifest_path)) {
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE)

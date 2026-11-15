@@ -76,7 +76,7 @@ review <- list(
   notes = paste(
     'The Gulf stock is bounded eastward by the Dade-Monroe County line and is distinct from',
     'NOAA:10174 South Atlantic Spanish mackerel. No canonical database values were added.',
-    'See discovery/source_reviews/noaa_gulf_spanish_mackerel_2023.md.'
+    'See source_reviews/screening/noaa_gulf_spanish_mackerel_2023.md.'
   )
 )
 

@@ -5,7 +5,7 @@ stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors =
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsAsFactors = FALSE)
 id <- 'DFO:Pacific:Eulachon - Fraser River'
 row <- register[register$candidate_id == id, , drop = FALSE]
-review_path <- file.path(root, 'discovery', 'source_reviews', 'dfo_eulachon_fraser_2026.md')
+review_path <- file.path(root, 'source_reviews', 'screening', 'dfo_eulachon_fraser_2026.md')
 
 stopifnot(
   nrow(row) == 1L,

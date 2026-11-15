@@ -45,7 +45,7 @@ stopifnot(
     logical(1))),
   nrow(bsai_unit) == 1L, bsai_unit$inventory_entries == 3L,
   grepl('NOAA:15395', bsai_unit$candidate_ids, fixed = TRUE),
-  file.exists('discovery/source_reviews/noaa_rougheye_blackspotted_crosswalk.md')
+  file.exists('source_reviews/screening/noaa_rougheye_blackspotted_crosswalk.md')
 )
 
 cat('NOAA rougheye/blackspotted regional unit crosswalk checks passed.\n')

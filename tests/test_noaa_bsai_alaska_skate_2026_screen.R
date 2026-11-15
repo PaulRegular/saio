@@ -47,7 +47,7 @@ meansize_rows <- section_rows(data_lines, meansize_header)
 meansize_years <- as.integer(sub('^([0-9]{4}).*$', '\\1', meansize_rows[-length(meansize_rows)]))
 naa <- read.csv(file.path(cache, 'NOAA_2023/M14_2NAA_summary.csv'), check.names = FALSE)
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/noaa_bsai_alaska_skate_2026.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/screening/noaa_bsai_alaska_skate_2026.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,

@@ -22,10 +22,10 @@ outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = 
 oregon <- register[register$candidate_id == 'NOAA:15340', , drop = FALSE]
 washington <- register[register$candidate_id == 'NOAA:15341', , drop = FALSE]
 or_review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/noaa_quillback_rockfish_oregon_2021.md'), warn = FALSE),
+  'source_reviews/screening/noaa_quillback_rockfish_oregon_2021.md'), warn = FALSE),
   collapse = ' ')
 wa_review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/noaa_quillback_rockfish_washington_2021.md'), warn = FALSE),
+  'source_reviews/screening/noaa_quillback_rockfish_washington_2021.md'), warn = FALSE),
   collapse = ' ')
 
 stopifnot(nrow(oregon) == 1L, nrow(washington) == 1L,

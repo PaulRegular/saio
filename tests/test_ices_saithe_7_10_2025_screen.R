@@ -16,7 +16,7 @@ sha256_file <- function(path) {
     value = TRUE)))
 }
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/ices_saithe_subareas_7_10_2025.md'), warn = FALSE),
+  'source_reviews/screening/ices_saithe_subareas_7_10_2025.md'), warn = FALSE),
   collapse = '\n')
 review <- gsub('[[:space:]]+', ' ', review)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),

@@ -56,7 +56,7 @@ stopifnot(
 
 cache <- file.path(root, 'source_cache', 'discovery_ices_bay_biscay_elasmobranchs_2026')
 manifest_path <- file.path(cache, 'sources.csv')
-review_path <- file.path(root, 'discovery', 'source_reviews',
+review_path <- file.path(root, 'source_reviews', 'screening',
   'ices_bay_biscay_elasmobranchs_2026.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 stopifnot(

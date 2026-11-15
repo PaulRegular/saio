@@ -39,7 +39,7 @@ stopifnot(
   !any(assessments$stock_id == 'ices_whiting_rockall_6b'),
   !any(inputs$assessment_id == 'ices_whiting_rockall_6b'),
   !any(outputs$assessment_id == 'ices_whiting_rockall_6b'),
-  file.exists(file.path(root, 'discovery/source_reviews/ices_whiting_rockall_2024.md'))
+  file.exists(file.path(root, 'source_reviews/screening/ices_whiting_rockall_2024.md'))
 )
 
 cat('ICES Rockall whiting 2024 current-method and age-input screen checks passed.\n')

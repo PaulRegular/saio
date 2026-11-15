@@ -26,7 +26,7 @@ units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'ices_beaked_redfish_icelandic_slope', , drop = FALSE]
 source_review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/ices_beaked_redfish_icelandic_slope_2026.md'),
+  'source_reviews/screening/ices_beaked_redfish_icelandic_slope_2026.md'),
   warn = FALSE), collapse = '\n')
 
 expected <- c(

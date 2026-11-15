@@ -23,7 +23,7 @@ outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = 
 units <- read.csv(file.path(root, 'discovery/inventory_units.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/noaa_southeastern_mutton_snapper_sedar79_2024.md'), warn = FALSE),
+  'source_reviews/screening/noaa_southeastern_mutton_snapper_sedar79_2024.md'), warn = FALSE),
   collapse = '\n')
 
 expected <- c(

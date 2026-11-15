@@ -89,7 +89,7 @@ screened <- data.frame(
   detailed_source_url = paste(c('https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10465', source_urls), collapse = '; '),
   review_date = '2026-10-30',
   decision_reason = 'This is a distinct current GOA management unit, separate from BSAI Atka mackerel. The latest accepted full assessment is the 2021 Tier 6 catch-based report; the 2025 operational assessment was not completed. The source explicitly says no population assessment model is used, so sampled ages and life-history tables do not establish age-structured model inputs or comparable age-specific outputs.',
-  notes = 'Do not create canonical assessment, input, or output rows from sparse samples or Tier 6 catch limits. See discovery/source_reviews/noaa_goa_atka_mackerel_2021.md and the local source cache.',
+  notes = 'Do not create canonical assessment, input, or output rows from sparse samples or Tier 6 catch limits. See source_reviews/screening/noaa_goa_atka_mackerel_2021.md and the local source cache.',
   stringsAsFactors = FALSE, check.names = FALSE)
 
 needs_write <- initial_state || (current_state && !all(vapply(names(screened), function(name)

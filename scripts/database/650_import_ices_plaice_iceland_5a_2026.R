@@ -399,7 +399,7 @@ register$review_date[candidate_row] <- "2026-11-12"
 register$notes[candidate_row] <- paste(
   "Partial source import completed from the current 2026 MFRI report and ICES SAG key 22531.",
   "Aggregate landings by gear and aggregate historical outputs are imported; age-specific input matrices remain unavailable as numerical data.",
-  "See discovery/source_reviews/ices_plaice_iceland_2026.md."
+  "See source_reviews/screening/ices_plaice_iceland_2026.md."
 )
 
 inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,

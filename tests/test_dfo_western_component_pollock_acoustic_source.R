@@ -38,7 +38,7 @@ source_table <- utils::read.csv(source_file, check.names = FALSE,
 candidate <- subset(utils::read.csv(file.path(root, "discovery", "candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE),
   candidate_id == "DFO:Maritimes:Pollock - NAFO 4X5 (Western Component)")
-review <- paste(readLines(file.path(root, "discovery", "source_reviews",
+review <- paste(readLines(file.path(root, "source_reviews", "screening",
   "dfo_western_component_pollock_2022.md")), collapse = " ")
 
 stopifnot(

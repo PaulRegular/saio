@@ -51,7 +51,7 @@ stopifnot(
   !any(inputs$assessment_id == candidate$candidate_unit_id),
   !any(outputs$assessment_id == candidate$candidate_unit_id),
   file.exists(file.path(root,
-    'discovery/source_reviews/ices_whiting_89a_2026.md'))
+    'source_reviews/screening/ices_whiting_89a_2026.md'))
 )
 
 cat('ICES whiting source-screening checks passed.\n')

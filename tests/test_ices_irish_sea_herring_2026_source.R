@@ -129,7 +129,7 @@ selected <- utils::read.csv(file.path(root, "discovery/selections", "selected_ba
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- utils::read.csv(file.path(root, "discovery", "inventory_units.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-review <- paste(readLines(file.path(root, "discovery", "source_reviews", "ices_irish_sea_herring_2026.md"),
+review <- paste(readLines(file.path(root, "source_reviews", "screening", "ices_irish_sea_herring_2026.md"),
   warn = FALSE), collapse = "\n")
 stopifnot(
   sum(stocks$stock_id == stock_id, na.rm = TRUE) == 1L,

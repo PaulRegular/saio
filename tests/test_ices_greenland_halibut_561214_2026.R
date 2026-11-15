@@ -2,7 +2,7 @@ root <- '.'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- register[register$candidate_id == 'ICES:ghl.27.561214', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'ices_greenland_halibut_561214_2026.md'), warn = FALSE), collapse = '\n')
 units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

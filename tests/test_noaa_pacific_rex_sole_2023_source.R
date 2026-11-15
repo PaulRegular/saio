@@ -135,7 +135,7 @@ total_n <- get_output("total_numbers")
 total_n <- total_n[match(summed_n$year, as.integer(total_n$year)), , drop = FALSE]
 stopifnot(max(abs(summed_n$x - as.numeric(total_n$value))) < 1e-6)
 
-review <- paste(readLines("discovery/source_reviews/noaa_pacific_rex_sole_2023.md",
+review <- paste(readLines("source_reviews/screening/noaa_pacific_rex_sole_2023.md",
   warn = FALSE), collapse = "\n")
 stopifnot(
   grepl("canonical database contains this stock and its 2023 assessment", review, fixed = TRUE),

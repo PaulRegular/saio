@@ -82,7 +82,7 @@ x$notes[i] <- paste(
   'This candidate is the Bay of Fundy Designatable Unit, comprising three',
   'spawning populations, not the assessed southern Gulf of St. Lawrence stock.',
   'The 2024 DFO survey status is Uncertain. No canonical stock or assessment',
-  'records were added. See discovery/source_reviews/',
+  'records were added. See source_reviews/screening/',
   'dfo_striped_bass_bay_of_fundy.md.'
 )
 

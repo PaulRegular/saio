@@ -43,7 +43,7 @@ stopifnot(
   !any(inputs$assessment_id == 'noaa_isc_pacific_bluefin'),
   !any(outputs$assessment_id == 'noaa_isc_pacific_bluefin'),
   file.exists(file.path(root,
-    'discovery/source_reviews/noaa_pacific_bluefin_2024.md'))
+    'source_reviews/screening/noaa_pacific_bluefin_2024.md'))
 )
 
 cat('NOAA Pacific bluefin 2024 assessment identity and age-input screen checks passed.\n')

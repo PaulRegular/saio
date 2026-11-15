@@ -29,7 +29,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
   na.strings = c('', 'NA'), check.names = FALSE)
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
-review_path <- file.path(root, 'discovery/source_reviews/ices_non_age_method_group_2026.md')
+review_path <- file.path(root, 'source_reviews/screening/ices_non_age_method_group_2026.md')
 cache_path <- file.path(root, 'source_cache/discovery_ices_unstarted_age_audit_2026/sources.csv')
 manifest <- read.csv(cache_path, stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')

@@ -72,7 +72,7 @@ for (i in seq_along(codes)) {
     grepl(graph_keys[i], graph_text, fixed = TRUE))
 }
 
-review <- readLines(file.path(root, 'discovery', 'source_reviews',
+review <- readLines(file.path(root, 'source_reviews', 'screening',
   'ices_initial_data_limited_group_2026.md'), warn = FALSE)
 stopifnot(all(vapply(codes, grepl, logical(1L), x = paste(review, collapse = '\n'), fixed = TRUE)))
 cat('ICES initial data-limited group screen: passed.\n')

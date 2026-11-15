@@ -63,7 +63,7 @@ stopifnot(
   nrow(sources) == 2L,
   grepl('HTTP 403', sources$notes[1], fixed = TRUE),
   grepl('d5dfb6b7c1c7ef19', sources$notes[1], fixed = TRUE),
-  file.exists(file.path(root, 'discovery/source_reviews/noaa_mhi_reef_fish_2016.md'))
+  file.exists(file.path(root, 'source_reviews/screening/noaa_mhi_reef_fish_2016.md'))
 )
 
 cat('NOAA Main Hawaiian Islands 2016 age-input screens passed.\n')

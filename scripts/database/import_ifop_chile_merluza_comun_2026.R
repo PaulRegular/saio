@@ -2,7 +2,7 @@ assessment_id <- "ifop_merluza_comun_2026"
 stock_id <- "ifop_merluza_comun_up"
 candidate_id <- "IFOP:merluza_comun_UP"
 source_review_path <- file.path(
-  "discovery", "source_reviews", "ifop_chile_merluza_comun_2026.md"
+  "source_reviews", "screening", "ifop_chile_merluza_comun_2026.md"
 )
 report_path <- file.path(
   "source_cache", "chile_merluza_comun_2026", "ifop_2026_link_01.pdf"

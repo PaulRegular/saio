@@ -4,7 +4,7 @@ nafo <- subset(candidates, organization == "NAFO")
 eligible <- subset(nafo, eligibility == "eligible")
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-review <- readLines("discovery/source_reviews/nafo_inventory_2026.md",
+review <- readLines("source_reviews/screening/nafo_inventory_2026.md",
   warn = FALSE)
 review_text <- paste(review, collapse = " ")
 

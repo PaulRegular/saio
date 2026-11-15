@@ -27,7 +27,7 @@ outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
-review <- paste(readLines("discovery/source_reviews/noaa_golden_tilefish_gulf_sedar22_2011.md",
+review <- paste(readLines("source_reviews/screening/noaa_golden_tilefish_gulf_sedar22_2011.md",
   warn = FALSE), collapse = " ")
 screen_code <- paste(readLines("scripts/discovery/482_screen_noaa_gulf_golden_tilefish_sedar22_2011.R",
   warn = FALSE), collapse = " ")

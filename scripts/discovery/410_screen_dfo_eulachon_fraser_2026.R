@@ -87,7 +87,7 @@ x$notes[i] <- paste(
   'This is the Fraser River Designatable Unit, not all Canadian Eulachon units.',
   'The historic 2012 RPA age-structured model is retained as context; current',
   'management uses aggregate indicators. No canonical stock or assessment data',
-  'were added. See discovery/source_reviews/dfo_eulachon_fraser_2026.md.'
+  'were added. See source_reviews/screening/dfo_eulachon_fraser_2026.md.'
 )
 
 source(file.path(root, 'scripts', 'discovery', 'candidate_register_io.R'))

@@ -33,7 +33,7 @@ selected <- read.csv("discovery/selections/selected_batch_38_2026.csv", stringsA
 selected <- selected[selected$candidate_id == "NOAA:10383", , drop = FALSE]
 manifest <- read.csv("provenance/discovery_noaa_gulf_tilefish_sedar22_2011/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_golden_tilefish_gulf_sedar22_2011.md",
+review <- paste(readLines("source_reviews/screening/noaa_golden_tilefish_gulf_sedar22_2011.md",
   warn = FALSE), collapse = " ")
 
 stock_row <- stock[stock$stock_id == stock_id, , drop = FALSE]

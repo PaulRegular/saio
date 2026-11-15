@@ -4,7 +4,7 @@ stocks <- read.csv('database/stocks.csv',
   stringsAsFactors = FALSE)
 id <- 'DFO:Maritimes:Striped Bass - Bay of Fundy'
 row <- register[register$candidate_id == id, , drop = FALSE]
-review_path <- 'discovery/source_reviews/dfo_striped_bass_bay_of_fundy.md'
+review_path <- 'source_reviews/screening/dfo_striped_bass_bay_of_fundy.md'
 
 stopifnot(
   nrow(row) == 1L,

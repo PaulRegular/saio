@@ -105,7 +105,7 @@ stopifnot(
   output_count('predicted_catch') == 9125L,
   output_count('spawning_potential_biomass') == 1533L,
   all(grepl(',"native_model",', outputs, fixed = TRUE)),
-  file.exists('discovery/source_reviews/noaa_wcpfc_yellowfin_2026.md')
+  file.exists('source_reviews/screening/noaa_wcpfc_yellowfin_2026.md')
 )
 
 cat('WCPFC 2026 WCPO yellowfin source import checks passed.\n')

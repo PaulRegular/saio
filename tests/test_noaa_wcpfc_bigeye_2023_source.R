@@ -108,7 +108,7 @@ stopifnot(
   all(is.na(outputs$se) & is.na(outputs$lwr) & is.na(outputs$upr)),
   all(is.finite(as.numeric(inputs$value))),
   all(is.finite(as.numeric(outputs$value))),
-  file.exists("discovery/source_reviews/noaa_wcpfc_bigeye_2023.md")
+  file.exists("source_reviews/screening/noaa_wcpfc_bigeye_2023.md")
 )
 
 cat("WCPFC 2023 WCPO bigeye source import checks passed.\n")

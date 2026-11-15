@@ -80,7 +80,7 @@ x$notes[i] <- paste(
   'is limited. It is transboundary but is not identical to NOAA Stock SMART',
   '17337, Aggregate Chinook Salmon Complex. No canonical stock record was',
   'added. The 2019 RPA is historical context for this same unit, not a fallback',
-  'for the 2023 assessment. See discovery/source_reviews/',
+  'for the 2023 assessment. See source_reviews/screening/',
   'dfo_okanagan_chinook_2023.md.'
 )
 

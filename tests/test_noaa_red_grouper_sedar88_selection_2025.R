@@ -10,7 +10,7 @@ stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_red_grouper_gom_2025.md",
+review <- paste(readLines("source_reviews/screening/noaa_red_grouper_gom_2025.md",
   warn = FALSE), collapse = " ")
 
 stopifnot(

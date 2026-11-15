@@ -44,7 +44,7 @@ stopifnot(
   !any(inputs$assessment_id == candidate$candidate_unit_id),
   !any(outputs$assessment_id == candidate$candidate_unit_id),
   file.exists(file.path(root,
-    'discovery/source_reviews/ices_southern_hake_8c9a_2026.md'))
+    'source_reviews/screening/ices_southern_hake_8c9a_2026.md'))
 )
 
 cat('ICES southern hake source-screening checks passed.\n')

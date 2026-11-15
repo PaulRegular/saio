@@ -25,7 +25,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/noaa_caribbean_snappers_sedar26_2011.md'), warn = FALSE),
+  'source_reviews/screening/noaa_caribbean_snappers_sedar26_2011.md'), warn = FALSE),
   collapse = ' ')
 review <- gsub('[[:space:]]+', ' ', review)
 

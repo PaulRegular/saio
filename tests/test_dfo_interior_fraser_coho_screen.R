@@ -4,7 +4,7 @@ stocks <- read.csv('database/stocks.csv',
   stringsAsFactors = FALSE)
 id <- 'DFO:Pacific:Coho salmon - Interior Fraser'
 row <- register[register$candidate_id == id, , drop = FALSE]
-review_path <- 'discovery/source_reviews/dfo_interior_fraser_coho_2022.md'
+review_path <- 'source_reviews/screening/dfo_interior_fraser_coho_2022.md'
 
 stopifnot(
   nrow(row) == 1L,

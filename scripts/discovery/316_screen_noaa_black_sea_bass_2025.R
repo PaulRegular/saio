@@ -76,7 +76,7 @@ reviews <- list(
       'proposed rule describes a further revision in progress and a pending formal status',
       'determination. The 2025 report provides N-at-age, F-at-age, and SSB tables, but',
       'does not expose complete annual age-composition matrices in machine-readable form.',
-      'See discovery/source_reviews/noaa_black_sea_bass_south_atlantic_2025.md.'
+      'See source_reviews/screening/noaa_black_sea_bass_south_atlantic_2025.md.'
     )
   ),
   'NOAA:10311' = list(
@@ -140,7 +140,7 @@ reviews <- list(
       '2024 and was accepted. The detailed assessment report link cited by the draft points to',
       'NOAA SASINF; the final run package and its data files remain to be recovered. The model',
       'contains north/south subregions divided near Hudson Canyon; this is one Mid-Atlantic',
-      'management stock, not two inventory units. See discovery/source_reviews/',
+      'management stock, not two inventory units. See source_reviews/screening/',
       'noaa_black_sea_bass_mid_atlantic_2025.md.'
     )
   )

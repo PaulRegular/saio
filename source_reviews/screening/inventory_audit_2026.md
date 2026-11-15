@@ -2,7 +2,7 @@
 
 The detailed three-organization tables below are a historical audit snapshot
 from 2026-11-02. The screened NAFO inventory was added on 2026-11-04. Current row totals and the NAFO screening results are in
-[inventory_progress.csv](inventory_progress.csv); the complete NAFO unit review is in
+[inventory_progress.csv](../../discovery/inventory_progress.csv); the complete NAFO unit review is in
 `source_reviews/nafo_inventory_2026.md`.
 
 At the 2026-11-02 snapshot, the reviewed inventories contained 905 source-list
@@ -25,8 +25,8 @@ Regional supplementation: the [2026 DFO Pacific groundfish plan](https://www.pac
 
 The [Pacific Fishery Management Council groundfish assessment listing](https://www.pcouncil.org/stock-assessments-star-reports-stat-reports-rebuilding-analyses-terms-of-reference/groundfish-stock-assessment-documents/) was retrieved 2026-10-28; cached HTML SHA-256 `77FEB82D8A674A018FD3FC7E02CE16579B36F3101B8603FF61286927B1D8B32D`. It provides reports and model files for recent West Coast assessments. The chilipepper identity has been reviewed, but the remainder of this regional listing still needs reconciliation and screening.
 
-The [NOAA source manifest](../provenance/shared/noaa_stocksmart/sources.csv) and the
-[ICES source manifest](../provenance/shared/ices_sid/sources.csv) record the
+The [NOAA source manifest](../../provenance/shared/noaa_stocksmart/sources.csv) and the
+[ICES source manifest](../../provenance/shared/ices_sid/sources.csv) record the
 cached inventory files.
 
 ## Source-row screening

@@ -90,7 +90,7 @@ stopifnot(
   any(grepl("preliminary observations", manifest$notes, fixed = TRUE))
 )
 
-review <- paste(readLines(file.path(root, "discovery/source_reviews",
+review <- paste(readLines(file.path(root, "source_reviews/screening",
   "ifop_chile_merluza_comun_2026.md"), warn = FALSE), collapse = " ")
 stopifnot(
   grepl("Table 17 reports estimated abundance by age and sex", review, fixed = TRUE),

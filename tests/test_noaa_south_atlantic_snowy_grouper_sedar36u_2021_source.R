@@ -30,7 +30,7 @@ inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
 manifest <- read.csv("provenance/noaa_snowy_grouper_sedar36u_2021/manifest.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_snowy_grouper_sedar36u_2021.md",
+review <- paste(readLines("source_reviews/screening/noaa_snowy_grouper_sedar36u_2021.md",
   warn = FALSE), collapse = " ")
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

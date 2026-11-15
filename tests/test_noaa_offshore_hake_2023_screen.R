@@ -5,7 +5,7 @@ source(file.path(root, 'scripts', 'discovery',
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:10524', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_offshore_hake_us.md'), warn = FALSE), collapse = ' ')
 cache <- file.path(root, 'source_cache', 'discovery_noaa_offshore_hake_2023')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,

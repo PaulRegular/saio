@@ -16,7 +16,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'ices_greenland_halibut_1_2_2026.md'), warn = FALSE), collapse = '\n')
 
 stopifnot(

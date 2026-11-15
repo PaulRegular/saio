@@ -48,7 +48,7 @@ stopifnot(nrow(rows) == 4L, !anyNA(rows$candidate_id),
   all(vapply(file.path(cache, manifest$file), function(path) {
     identical(rawToChar(readBin(path, 'raw', n = 5L)), '%PDF-')
   }, logical(1L))),
-  file.exists(file.path(root, 'discovery', 'source_reviews',
+  file.exists(file.path(root, 'source_reviews', 'screening',
     'noaa_isc_pacific_billfish_swordfish_2026.md')),
   !anyDuplicated(rows$candidate_unit_id))
 

@@ -670,7 +670,7 @@ import_noaa_bsai_rougheye_blackspotted_2024 <- function(root = ".", write = FALS
     assessment_url = source_record$url,
     assumptions_status = "partial", inputs_status = "partial",
     outputs_status = "partial",
-    notes = paste("The December 2024 SAFE updates the accepted AI age-structured model with data through 2024 and reports a 2025 forecast. The EBS component is a separate Tier 5 random-effects assessment. Catch, rounded compositions, survey indices, population weight-at-age, maturity curve, M/q and biomass/SSB/N-at-age outputs are transcribed from report tables; recruitment is reported through 2018. Direct catch-at-age, fishery weight-at-age, numerical age-error and age-length matrices, and F-at-age are not published in the reviewed source. See discovery/source_reviews/noaa_bsai_blackspotted_rougheye_2024.md.")), 1L)
+    notes = paste("The December 2024 SAFE updates the accepted AI age-structured model with data through 2024 and reports a 2025 forecast. The EBS component is a separate Tier 5 random-effects assessment. Catch, rounded compositions, survey indices, population weight-at-age, maturity curve, M/q and biomass/SSB/N-at-age outputs are transcribed from report tables; recruitment is reported through 2018. Direct catch-at-age, fishery weight-at-age, numerical age-error and age-length matrices, and F-at-age are not published in the reviewed source. See source_reviews/noaa_bsai_rougheye_blackspotted.md.")), 1L)
 
   cat("NOAA BSAI blackspotted/rougheye 2024 source extraction\n")
   cat("Inputs:", nrow(inputs), "rows (catches, survey indices, compositions and population weight-at-age).\n")
@@ -727,7 +727,7 @@ import_noaa_bsai_rougheye_blackspotted_2024 <- function(root = ".", write = FALS
   candidates$timing_evidence[ci] <- "Spawning fraction is 0.17 of the year. Fractional within-year timing for survey observations is not specified."
   candidates$output_evidence[ci] <- paste("Imported AI numbers-at-age for ages 3-44 and 45+ for 1977-2024; Table 14.25 total biomass and SSB through 2024, 2025 total biomass/SSB forecasts, and age-3 recruitment through 2018.", "Aggregate Hessian CVs are converted to natural-scale SEs with estimate x CV and documented; numbers-at-age uncertainty and F-at-age are unavailable.")
   candidates$decision_reason[ci] <- paste("The December 2024 SAFE is the latest accepted production update located for NOAA:11382.", "It retains the accepted 2022 AI age-structured model with data updates; the EBS component remains Tier 5 and is not represented by an age-specific surface.")
-  candidates$notes[ci] <- paste("Partial source import from the 2024 SAFE. Rounded composition proportions are retained as printed; source first-stage haul counts are recorded where the assessment identifies them.", "The raster-only 2024 AI survey length composition was visually transcribed. See discovery/source_reviews/noaa_bsai_blackspotted_rougheye_2024.md.")
+  candidates$notes[ci] <- paste("Partial source import from the 2024 SAFE. Rounded composition proportions are retained as printed; source first-stage haul counts are recorded where the assessment identifies them.", "The raster-only 2024 AI survey length composition was visually transcribed. See source_reviews/noaa_bsai_rougheye_blackspotted.md.")
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)
 

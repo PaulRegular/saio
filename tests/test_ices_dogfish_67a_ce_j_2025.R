@@ -11,7 +11,7 @@ sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)
 graph <- paste(readLines(paths[2L], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/ices_dogfish_67a_ce_j_2025.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/screening/ices_dogfish_67a_ce_j_2025.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 

@@ -53,7 +53,7 @@ mcmc <- output[!is.na(output$scenario) &
 
 candidate_row <- candidate[candidate$candidate_id == 'NOAA:11056', , drop = FALSE]
 selected_row <- selected[selected$candidate_id == 'NOAA:11056', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_goa_pacific_ocean_perch.md'), warn = FALSE), collapse = ' ')
 
 stopifnot(

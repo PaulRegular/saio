@@ -73,7 +73,7 @@ x$decision_reason[i] <- paste(
 x$notes[i] <- paste(
   'This is the Interior Fraser Coho SMU upstream of Hells Gate, distinct from',
   'Lower Fraser Coho. The 2022 assessment is the latest detailed source found;',
-  'no canonical stock or assessment records were added. See discovery/source_reviews/',
+  'no canonical stock or assessment records were added. See source_reviews/screening/',
   'dfo_interior_fraser_coho_2022.md.'
 )
 

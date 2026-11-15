@@ -69,7 +69,7 @@ if (x$screening_status[row] == 'not_started') {
     'This is a current Fraser Sockeye management group and PSC production',
     'stock group, not a standalone age-structured population model. Return-year',
     '2025 is incomplete in-season data; no canonical records were added. See',
-    'discovery/source_reviews/dfo_fraser_sockeye_early_stuart.md.'
+    'source_reviews/screening/dfo_fraser_sockeye_early_stuart.md.'
   )
 } else if (x$screening_status[row] == 'screened') {
   stopifnot(

@@ -51,7 +51,7 @@ stopifnot(
     character(1L)), '%PDF-'))
 )
 
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_west_coast_chinook_2026.md'), warn = FALSE), collapse = ' ')
 stopifnot(
   grepl('Composition Input Data is level 4 for all 12', review, fixed = TRUE),

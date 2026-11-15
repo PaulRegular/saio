@@ -19,7 +19,7 @@ sha256_file <- function(path) {
     output, value = TRUE)))
 }
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/ices_spurdog_nea_2026.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/screening/ices_spurdog_nea_2026.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'),
@@ -50,7 +50,7 @@ stopifnot(
   !any(assessments$assessment_id == 'ices_spurdog_nea', na.rm = TRUE),
   !any(inputs$assessment_id == 'ices_spurdog_nea', na.rm = TRUE),
   !any(outputs$assessment_id == 'ices_spurdog_nea', na.rm = TRUE),
-  file.exists(file.path(root, 'discovery/source_reviews/ices_spurdog_nea_2026.md')),
+  file.exists(file.path(root, 'source_reviews/screening/ices_spurdog_nea_2026.md')),
   grepl('not the NOAA/DFO Northwest Atlantic', review, fixed = TRUE),
   grepl('unresolved age-input eligibility', review, fixed = TRUE),
   grepl('assessment was not updated', review, fixed = TRUE)

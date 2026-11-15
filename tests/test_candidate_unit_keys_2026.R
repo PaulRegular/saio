@@ -58,6 +58,6 @@ unlinked <- register[!linked, , drop = FALSE]
 stopifnot(nrow(unlinked) == 130L,
   all(unlinked$match_status %in% c('ambiguous', 'unreviewed')),
   sum(unlinked$match_status == 'unreviewed') == 100L,
-  file.exists(file.path(root, 'discovery', 'source_reviews',
+  file.exists(file.path(root, 'source_reviews', 'screening',
     'inventory_new_unit_keys_2026.md')))
 

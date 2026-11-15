@@ -13,7 +13,7 @@ paths <- file.path(cache, sources$file)
 advice <- paste(readLines(paths[2L], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')
 graph <- paste(readLines(paths[3L], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/ices_plaice_89a_2025.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/screening/ices_plaice_89a_2025.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,

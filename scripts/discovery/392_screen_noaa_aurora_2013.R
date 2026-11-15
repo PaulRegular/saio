@@ -105,7 +105,7 @@ screened <- data.frame(
   detailed_source_url = paste(all_urls, collapse = '; '),
   review_date = '2026-10-30',
   decision_reason = 'The latest assessment used for management remains the fully accepted 2013 coastwide Stock Synthesis run with data through 2012; the Council defines Aurora as coastwide under Amendment 37 and NMFS review was pending. Source evidence includes age-at-length observations, but fishery samples occur only in 2003, 2008 and 2009. Eligibility remains unresolved until an observation-based, source-supported annual catch-at-age reconstruction is shown to be defensible without fitted population states or unsupported extrapolation.',
-  notes = 'Screened; no canonical database records added. Source PDFs and checksums are in gitignored source_cache/discovery_noaa_aurora_2013/. See discovery/source_reviews/noaa_aurora_rockfish_2013.md.',
+  notes = 'Screened; no canonical database records added. Source PDFs and checksums are in gitignored source_cache/discovery_noaa_aurora_2013/. See source_reviews/screening/noaa_aurora_rockfish_2013.md.',
   stringsAsFactors = FALSE, check.names = FALSE)
 
 needs_write <- initial_state || (current_state && !all(vapply(names(screened), function(name)

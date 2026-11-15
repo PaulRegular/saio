@@ -28,7 +28,7 @@ unit_ids <- c('ices_sho_27_89a', 'ices_rjc_27_3a47d', 'ices_rjh_27_4bc7d',
   'ices_rjc_27_7afg', 'ices_syt_27_67')
 screened <- candidates[match(ids, candidates$candidate_id), , drop = FALSE]
 units_screened <- units[match(unit_ids, units$candidate_unit_id), , drop = FALSE]
-source_review <- file.path(root, 'discovery/source_reviews/ices_ray_method_group_2026.md')
+source_review <- file.path(root, 'source_reviews/screening/ices_ray_method_group_2026.md')
 
 stopifnot(nrow(screened) == length(ids),
   identical(screened$candidate_unit_id, unit_ids),

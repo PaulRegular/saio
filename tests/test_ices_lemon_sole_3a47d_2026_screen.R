@@ -44,7 +44,7 @@ stopifnot(
   !any(assessments$assessment_id == 'ices_lemon_sole_3a47d', na.rm = TRUE),
   !any(inputs$assessment_id == 'ices_lemon_sole_3a47d', na.rm = TRUE),
   !any(outputs$assessment_id == 'ices_lemon_sole_3a47d', na.rm = TRUE),
-  file.exists(file.path(root, 'discovery/source_reviews/ices_lemon_sole_3a47d_2026.md'))
+  file.exists(file.path(root, 'source_reviews/screening/ices_lemon_sole_3a47d_2026.md'))
 )
 
 cat('ICES lemon sole screening checks passed.\n')

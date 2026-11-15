@@ -9,7 +9,7 @@ stocks <- read_table("database/stocks.csv")
 stock <- stocks[stocks$stock_id == "noaa_vermilion_rockfish_or_wa", , drop = FALSE]
 assessments <- read_table("database/assessments.csv")
 assessments <- assessments[assessments$stock_id == "noaa_vermilion_rockfish_or_wa", , drop = FALSE]
-review <- paste(readLines("discovery/source_reviews/noaa_vermilion_rockfish_washington_2021.md",
+review <- paste(readLines("source_reviews/screening/noaa_vermilion_rockfish_washington_2021.md",
   warn = FALSE), collapse = " ")
 
 stopifnot(

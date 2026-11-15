@@ -40,5 +40,5 @@ stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE)
 stopifnot(!any(stocks$authority == 'NOAA' &
   stocks$authority_stock_id %in% rows$official_stock_id))
-stopifnot(file.exists(file.path(root, 'discovery', 'source_reviews',
+stopifnot(file.exists(file.path(root, 'source_reviews', 'screening',
   'noaa_remaining_unscreened_2026.md')))

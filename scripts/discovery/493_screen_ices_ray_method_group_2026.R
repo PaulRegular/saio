@@ -179,7 +179,7 @@ for (i in seq_len(nrow(expected))) {
     'samples are absent from other research.')
   source_note <- paste0('Distinct ICES stock code and assessment area reviewed against the ',
     'official 2026 Stock Information Database and the linked current Standard Graphs ',
-    'source. See discovery/source_reviews/ices_ray_method_group_2026.md. No canonical ',
+    'source. See source_reviews/screening/ices_ray_method_group_2026.md. No canonical ',
     'stock, assessment, input, or output record was added.')
   review <- list(
     candidate_unit_id = expected$candidate_unit_id[i],

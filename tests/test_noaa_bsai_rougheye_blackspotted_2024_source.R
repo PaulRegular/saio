@@ -45,7 +45,7 @@ manifest <- read.csv(file.path(root,
   "provenance/discovery_noaa_bsai_rougheye_2024/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines(file.path(root,
-  "discovery/source_reviews/noaa_bsai_blackspotted_rougheye_2024.md"),
+  "source_reviews/noaa_bsai_rougheye_blackspotted.md"),
   warn = FALSE), collapse = " ")
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

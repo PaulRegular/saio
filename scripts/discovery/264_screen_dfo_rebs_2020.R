@@ -4,7 +4,7 @@ x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE)
 
 id <- 'DFO:Pacific:Rougheye Rockfish'
-source_review <- file.path(root, 'discovery', 'source_reviews',
+source_review <- file.path(root, 'source_reviews', 'screening',
   'dfo_rougheye_blackspotted_bc_2020.md')
 i <- match(id, x$candidate_id)
 if (is.na(i)) stop('Expected DFO Rougheye Rockfish inventory row is missing.', call. = FALSE)

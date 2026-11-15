@@ -57,7 +57,7 @@ for (i in seq_along(codes)) {
     grepl(paste0('id="lblYear">', graph_years[i]), graph, fixed = TRUE))
 }
 
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'ices_elasmobranch_group_2026.md'), warn = FALSE), collapse = '\n')
 stopifnot(all(vapply(codes, grepl, logical(1L), x = review, fixed = TRUE)),
   grepl('2020 source data', review, fixed = TRUE), grepl('2024 source data', review, fixed = TRUE))

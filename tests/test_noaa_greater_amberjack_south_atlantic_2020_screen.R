@@ -21,7 +21,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/noaa_greater_amberjack_south_atlantic_2020.md'), warn = FALSE),
+  'source_reviews/screening/noaa_greater_amberjack_south_atlantic_2020.md'), warn = FALSE),
   collapse = '\n')
 
 stopifnot(

@@ -80,7 +80,7 @@ stopifnot(nrow(candidate) == 1L,
   all(grepl('^[[:xdigit:]]{64}$', source_rows$sha256)),
   all(vapply(file.path(cache, required), sha256_file, character(1)) ==
     tolower(source_rows$sha256)),
-  file.exists(file.path(root, 'discovery', 'source_reviews', 'noaa_wcpfc_silky_shark_2024.md')),
+  file.exists(file.path(root, 'source_reviews', 'screening', 'noaa_wcpfc_silky_shark_2024.md')),
   !any(stocks$scientific_name == 'Carcharhinus falciformis', na.rm = TRUE),
   !any(grepl(unit_id, assessments$assessment_id, fixed = TRUE)),
   !any(grepl(unit_id, inputs$assessment_id, fixed = TRUE)),

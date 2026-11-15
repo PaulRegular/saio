@@ -51,7 +51,7 @@ stopifnot(
   !any(inputs$assessment_id == 'ices_roundnose_grenadier_3a'),
   !any(outputs$assessment_id == 'ices_roundnose_grenadier_3a'),
   file.exists(file.path(root,
-    'discovery/source_reviews/ices_roundnose_grenadier_3a_2026.md'))
+    'source_reviews/screening/ices_roundnose_grenadier_3a_2026.md'))
 )
 
 cat('ICES 2026 Division 3.a roundnose-grenadier identity, aggregate-index screen, provenance, and discovery-only checks passed.\n')

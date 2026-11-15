@@ -8,7 +8,7 @@ unit <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 unit <- unit[!is.na(unit$candidate_unit_id) &
   unit$candidate_unit_id == 'noaa_auke_creek_coho_southeast_alaska', , drop = FALSE]
-review <- readLines(file.path(root, 'discovery', 'source_reviews',
+review <- readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_auke_creek_coho_2024.md'), warn = FALSE)
 
 stopifnot(nrow(row) == 1L,

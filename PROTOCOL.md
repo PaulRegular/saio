@@ -695,8 +695,7 @@ new reviews and identify each represented assessment ID within the review.
 Keep distinct runs in separate sections of the stock review. Preserve existing
 review links when consolidating notes.
 
-Use the assessment table for routine citations and the discovery register and
-its reviews for candidate screening. The database tables remain the source of
+Use the assessment table for routine citations and the candidate register for screening decisions. Keep detailed species-specific and shared screening evidence in `source_reviews/screening/`. Consolidate source choices and gaps for imported assessments in the stock review. The database tables remain the source of
 numerical values, assumptions, and completeness statuses.
 
 ## Source cache

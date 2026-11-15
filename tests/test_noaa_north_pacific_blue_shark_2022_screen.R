@@ -64,7 +64,7 @@ stopifnot(
   all(file.exists(file.path(root, 'source_cache/discovery_noaa_north_pacific_blue_shark_2022', sources$file))),
   sources$sha256[1] == '7FE2A05C0DC52DA5AE466AE8046BB62AE839206ECBE941AAFFF2DA7431DAD0FA',
   sources$sha256[2] == '767B0605A3D9A518C80EB73673531D8AF58EF9542F18FD5DC5857FCBAF65A47E',
-  file.exists(file.path(root, 'discovery/source_reviews/noaa_north_pacific_blue_shark_2022.md'))
+  file.exists(file.path(root, 'source_reviews/screening/noaa_north_pacific_blue_shark_2022.md'))
 )
 
 cat('NOAA North Pacific blue shark 2022 age-input screen checks passed.\n')

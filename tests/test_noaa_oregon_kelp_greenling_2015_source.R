@@ -25,7 +25,7 @@ selected <- read.csv("discovery/selections/selected_batch_40_2026.csv", stringsA
 selected <- selected[selected$candidate_id == "NOAA:10462", , drop = FALSE]
 provenance <- read.csv("provenance/discovery_noaa_oregon_kelp_greenling_2015/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_oregon_kelp_greenling_2015.md"), collapse = " ")
+review <- paste(readLines("source_reviews/screening/noaa_oregon_kelp_greenling_2015.md"), collapse = " ")
 
 v <- function(measure, ...) {
   x <- i[i$measure == measure, , drop = FALSE]

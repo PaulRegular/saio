@@ -7,7 +7,7 @@ register <- read.csv(file.path(root, 'discovery/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:lin.27.1-2', , drop = FALSE]
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/ices_ling_1_2_2025.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/screening/ices_ling_1_2_2025.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'),

@@ -176,7 +176,7 @@ inventory <- utils::read.csv(file.path(root, "discovery", "inventory_units.csv")
   na.strings = c("", "NA"), check.names = FALSE)
 selected <- utils::read.csv(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-review <- paste(readLines(file.path(root, "discovery", "source_reviews",
+review <- paste(readLines(file.path(root, "source_reviews", "screening",
   "noaa_acadian_redfish_2025.md"), warn = FALSE), collapse = "\n")
 stopifnot(
   sum(stocks$stock_id == stock_id) == 1L,

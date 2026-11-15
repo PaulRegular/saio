@@ -11,7 +11,7 @@ register <- read.csv(file.path(root, 'discovery/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:cap.27.1-2', , drop = FALSE]
 review_path <- file.path(root,
-  'discovery/source_reviews/ices_barents_capelin_jrn_afwg_2026.md')
+  'source_reviews/screening/ices_barents_capelin_jrn_afwg_2026.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 review <- gsub('[[:space:]]+', ' ', review)
 units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),

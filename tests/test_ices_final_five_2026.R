@@ -82,7 +82,7 @@ stopifnot(all(c('number_1sw', 'number_2sw', 'weight_1sw', 'weight_2sw') %in% nam
   any(neac_pfa$statistic == 'Hindcast' & neac_year <= 2025, na.rm = TRUE))
 }
 
-review_path <- file.path(root, 'discovery', 'source_reviews', 'ices_final_five_2026.md')
+review_path <- file.path(root, 'source_reviews', 'screening', 'ices_final_five_2026.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 stopifnot(file.exists(review_path), grepl('joint stage-based', review, fixed = TRUE),
   grepl('superseded by 2026', review, fixed = TRUE),

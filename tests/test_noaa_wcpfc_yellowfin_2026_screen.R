@@ -6,7 +6,7 @@ units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'wcpfc_wcpo_yellowfin', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_wcpfc_yellowfin_2026.md'), warn = FALSE), collapse = ' ')
 
 stopifnot(

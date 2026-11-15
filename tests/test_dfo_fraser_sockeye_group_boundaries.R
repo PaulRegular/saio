@@ -13,7 +13,7 @@ stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors =
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsAsFactors = FALSE)
 inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors = FALSE)
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors = FALSE)
-review_path <- file.path(root, 'discovery', 'source_reviews',
+review_path <- file.path(root, 'source_reviews', 'screening',
   'dfo_fraser_sockeye_other_groups.md')
 cache <- file.path(root, 'source_cache', 'discovery_dfo_fraser_sockeye')
 production <- read.csv(file.path(cache, 'stock-recruit-data_detailed-format.csv'),

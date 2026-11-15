@@ -96,7 +96,7 @@ screened <- data.frame(
   detailed_source_url = paste(all_urls, collapse = '; '),
   review_date = '2026-10-30',
   decision_reason = 'NOAA Stock SMART 10435 is one coastwide U.S. Pacific unit with no canonical stock match. The latest detailed fit is the fully accepted 2013 data-moderate assessment (published 2015), using data through 2012 and still cited as the latest in the 2025 SAFE. The run file specifies zero age-composition observations and zero mean-size-at-age observations; it uses catch totals and aggregate indices, so its model ages do not provide age-specific observations for this inventory.',
-  notes = 'Screened ineligible for the age-disaggregated set because the accepted 2013 fit has no age-composition or age-specific index likelihood inputs. Aggregate status and harvest outputs remain documented in the report. Source PDFs are cached with checksums in source_cache/discovery_noaa_data_moderate_2013_2026/. See discovery/source_reviews/noaa_sharpchin_rockfish_2013.md. No canonical records were added.',
+  notes = 'Screened ineligible for the age-disaggregated set because the accepted 2013 fit has no age-composition or age-specific index likelihood inputs. Aggregate status and harvest outputs remain documented in the report. Source PDFs are cached with checksums in source_cache/discovery_noaa_data_moderate_2013_2026/. See source_reviews/screening/noaa_sharpchin_rockfish_2013.md. No canonical records were added.',
   stringsAsFactors = FALSE, check.names = FALSE)
 
 needs_write <- initial_state || (current_state && !all(vapply(names(screened), function(name)

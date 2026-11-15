@@ -82,7 +82,7 @@ review <- list(
     'the local download endpoint redirected to an archived-page notice; the 2024',
     'HCR update PDF is cached under source_cache/pollachius_virens/dfo_western_component_pollock_2022_j_m4b/.',
     'Do not merge with NOAA Stock SMART 10515 (5YZ); see',
-    'discovery/source_reviews/dfo_western_component_pollock_2022.md.'
+    'source_reviews/screening/dfo_western_component_pollock_2022.md.'
   )
 )
 

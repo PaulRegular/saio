@@ -2,8 +2,7 @@
 
 Start with `stock_id` in `stocks.csv` and the run’s `assessment_id` in
 `assessments.csv`. Reviews describe material source choices, transformations,
-verification and gaps. The assessment table has routine source links. Candidate
-screening stays with the [discovery register](../discovery/).
+verification and gaps. The assessment table has routine source links. The [screening reviews](screening/) retain species-specific and shared evidence from source searches. The [candidate register](../discovery/candidates.csv) records the screening decisions.
 
 Use the stable stock ID for new review filenames and label each assessment
 within a review. Some established reviews retain older names linked from the

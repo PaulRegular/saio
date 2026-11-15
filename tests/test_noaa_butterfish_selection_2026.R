@@ -12,7 +12,7 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 manifest <- read.csv("provenance/discovery_noaa_butterfish_2024/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_butterfish_2024.md", warn = FALSE),
+review <- paste(readLines("source_reviews/screening/noaa_butterfish_2024.md", warn = FALSE),
   collapse = " ")
 
 cache_options <- c("source_cache/discovery_noaa_butterfish_2024",

@@ -88,7 +88,7 @@ x$decision_reason[i] <- paste(
 x$notes[i] <- paste(
   'Do not combine this Yukon Chinook SMU with the distinct Porcupine Chinook',
   'SMU or the older Yukon mainstem-only unit. See',
-  'discovery/source_reviews/dfo_yukon_chinook_2024.md.'
+  'source_reviews/screening/dfo_yukon_chinook_2024.md.'
 )
 
 source(file.path(root, 'scripts', 'discovery', 'candidate_register_io.R'))

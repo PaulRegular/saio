@@ -621,7 +621,7 @@ candidates$notes[candidate_row] <- paste(
   candidates$notes[candidate_row],
   "A partial canonical source import was added under wcpfc_south_pacific_albacore_2024.",
   "No synthetic catch-at-age or age-specific index was added.",
-  "See discovery/source_reviews/noaa_south_pacific_albacore_2024.md."
+  "See source_reviews/screening/noaa_south_pacific_albacore_2024.md."
 )
 replace_candidate_register_row(file.path(root, "discovery", "candidates.csv"),
   candidate_row, candidates[candidate_row, , drop = FALSE], candidate_id)

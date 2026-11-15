@@ -22,7 +22,7 @@ outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = 
 units <- read.csv(file.path(root, 'discovery/inventory_units.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/ices_thornback_ray_6_2026.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/screening/ices_thornback_ray_6_2026.md'), warn = FALSE), collapse = '\n')
 
 expected <- c(
   ICES_advice_2026_rjc_27_6.pdf = 'dbbc5833c3a48cc912a485c0bb930973c838c52dfd93bfdff569f5715bb5d8d5',

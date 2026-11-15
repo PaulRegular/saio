@@ -1,7 +1,7 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'noaa_windowpane_2023')
 candidate_path <- file.path(root, 'discovery', 'candidates.csv')
-review_path <- file.path(root, 'discovery', 'source_reviews', 'noaa_windowpane_2023.md')
+review_path <- file.path(root, 'source_reviews', 'screening', 'noaa_windowpane_2023.md')
 manifest_path <- file.path(cache, 'manifest.csv')
 
 candidate_ids <- c('NOAA:10192', 'NOAA:10193')

@@ -45,7 +45,7 @@ stopifnot(
   !any(assessments$assessment_id == 'ices_blue_ling_5a14', na.rm = TRUE),
   !any(inputs$assessment_id == 'ices_blue_ling_5a14', na.rm = TRUE),
   !any(outputs$assessment_id == 'ices_blue_ling_5a14', na.rm = TRUE),
-  file.exists(file.path(root, 'discovery/source_reviews/ices_blue_ling_5a14_2026.md'))
+  file.exists(file.path(root, 'source_reviews/screening/ices_blue_ling_5a14_2026.md'))
 )
 
 cat('ICES blue ling screening checks passed.\n')

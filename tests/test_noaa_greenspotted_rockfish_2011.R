@@ -2,7 +2,7 @@ root <- '.'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- register[register$candidate_id == 'NOAA:10437', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_greenspotted_rockfish_2011.md'), warn = FALSE), collapse = ' ')
 units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

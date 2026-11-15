@@ -122,7 +122,7 @@ screened <- rbind(
     'The selected model uses year-indexed biomass and relative-population-weight survey indices; a proportional within-year timing value is not reported.',
     'The report provides regional exploitable-biomass trajectories and uncertainty, plus aggregate OFL/ABC. It does not report annual N-at-age or F-at-age.',
     'NOAA 10553 is the distinct BSAI shortraker management unit. The latest detailed production model located is the 2024 Model 22_2024 operational update, accepted by the Plan Team; the 2025 SAFE chapter is a catch report and the 2026 full assessment is scheduled after this review date. The model is a Tier 5 survey-biomass random-effects model without age-disaggregated population inputs or outputs, so the unit is ineligible for the age-disaggregated set.',
-    'Screened ineligible; no canonical database records added. Source PDFs and hashes are cached in gitignored source_cache/discovery_noaa_shortraker_2023_2025/. See discovery/source_reviews/noaa_shortraker_bsai_2024.md.'),
+    'Screened ineligible; no canonical database records added. Source PDFs and hashes are cached in gitignored source_cache/discovery_noaa_shortraker_2023_2025/. See source_reviews/screening/noaa_shortraker_bsai_2024.md.'),
   make_row(
     'NOAA:10554', 'noaa_goa_shortraker', '10554',
     'Shortraker rockfish - Gulf of Alaska',
@@ -135,7 +135,7 @@ screened <- rbind(
     'The annual survey series are not documented as within-year timing fractions in the REMA model.',
     'The report provides aggregate exploitable-biomass trajectories with uncertainty and harvest limits. It does not report age-specific N, F, recruitment, or SSB surfaces.',
     'NOAA 10554 is the distinct GOA shortraker management unit. The latest operational assessment is the 2023 Model 23.3 REMA assessment; the final 2025 SSC report confirms no later operational assessment was completed and says a new assessment was considered for 2026. The selected Tier 5 model fits aggregate survey indices, not age-disaggregated inputs, so the unit is ineligible for the age-disaggregated set.',
-    'Screened ineligible; no canonical database records added. Source PDFs and hashes are cached in gitignored source_cache/discovery_noaa_shortraker_2023_2025/. See discovery/source_reviews/noaa_shortraker_goa_2023.md.'))
+    'Screened ineligible; no canonical database records added. Source PDFs and hashes are cached in gitignored source_cache/discovery_noaa_shortraker_2023_2025/. See source_reviews/screening/noaa_shortraker_goa_2023.md.'))
 
 row_index <- match(screened$candidate_id, register$candidate_id)
 initial_state <- register$match_status[row_index] == 'unreviewed' &

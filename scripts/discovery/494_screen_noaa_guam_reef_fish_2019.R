@@ -136,7 +136,7 @@ for (i in seq_len(nrow(expected))) {
     detailed_source_url = url,
     review_date = '2026-11-01',
     decision_reason = paste0('The latest reviewed Guam report(s) use the growth-type-group length-based spawning-potential-ratio method, with size compositions, aggregate abundance/biomass, total catch, and life-history inputs. They do not verify age-disaggregated catch or survey likelihood inputs or age-specific population outputs. Ineligible for the age-disaggregated assessment set; this does not establish that age samples are absent from other research.'),
-    notes = paste0('NOAA Stock SMART ID ', expected$id[i], ' identifies a single-species Guam Island reef-fish assessment unit, distinct from Guam bottomfish management-unit species and from nearby offshore banks. The 2019 PIFSC assessment covers 2013–2017 data. See discovery/source_reviews/noaa_guam_reef_fish_2019.md. No canonical stock, assessment, input, or output record was added.', later_note))
+    notes = paste0('NOAA Stock SMART ID ', expected$id[i], ' identifies a single-species Guam Island reef-fish assessment unit, distinct from Guam bottomfish management-unit species and from nearby offshore banks. The 2019 PIFSC assessment covers 2013–2017 data. See source_reviews/screening/noaa_guam_reef_fish_2019.md. No canonical stock, assessment, input, or output record was added.', later_note))
 
   current <- lapply(names(review), function(column) as.character(candidates[[column]][row]))
   names(current) <- names(review)

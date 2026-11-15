@@ -12,7 +12,7 @@ sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 source <- sources[sources$file == 'wgef_2025.pdf', , drop = FALSE]
 path <- file.path(cache, 'wgef_2025.pdf')
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/ices_lesser_spotted_dogfish_3a47d_2025.md'), warn = FALSE),
+  'source_reviews/screening/ices_lesser_spotted_dogfish_3a47d_2025.md'), warn = FALSE),
   collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

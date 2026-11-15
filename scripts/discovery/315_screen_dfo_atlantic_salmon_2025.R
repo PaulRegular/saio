@@ -65,7 +65,7 @@ reviews <- list(
       'The June 2025 Science Response updates indicators through 2024 and states that the',
       'last full assessment was for 2019 returns. It describes five river-level programs,',
       'including empirical-index methods for PEI and multiple index-based methods elsewhere.',
-      'Source review: discovery/source_reviews/dfo_atlantic_salmon_gulf_2025.md. Official',
+      'Source review: source_reviews/screening/dfo_atlantic_salmon_gulf_2025.md. Official',
       'PDFs are cached locally with provenance in the ignored source cache.'
     )
   )),
@@ -110,7 +110,7 @@ reviews <- list(
       'and index-based. Research Document 2024/075 covers the earlier 2022 assessment.',
       'The 2026/021 PDF download redirected to the archived-information page during local',
       'caching; the official page and PDF text were reviewed. Source review:',
-      'discovery/source_reviews/dfo_atlantic_salmon_nl_2026.md.'
+      'source_reviews/screening/dfo_atlantic_salmon_nl_2026.md.'
     )
   ))
 )

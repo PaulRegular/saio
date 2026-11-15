@@ -4,7 +4,7 @@ row <- register[register$candidate_id == "DFO:Pacific:Silvergray Rockfish - Coas
 units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 unit <- units[which(units$candidate_unit_id == "dfo_silvergray_rockfish_coastwide"), , drop = FALSE]
-review <- paste(readLines("discovery/source_reviews/dfo_silvergray_rockfish_2025.md",
+review <- paste(readLines("source_reviews/screening/dfo_silvergray_rockfish_2025.md",
   warn = FALSE), collapse = "\n")
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

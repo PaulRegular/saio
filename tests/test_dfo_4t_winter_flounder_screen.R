@@ -48,7 +48,7 @@ stopifnot(
   all(file.info(paths)$size == sources$bytes),
   all(grepl('^[[:xdigit:]]{64}$', sources$sha256)),
   all(sources$retrieved_utc == '2026-10-30'),
-  file.exists(file.path(root, 'discovery', 'source_reviews',
+  file.exists(file.path(root, 'source_reviews', 'screening',
     'dfo_sgsl_winter_flounder_4t_2017.md')),
   file.exists(file.path(root, 'scripts', 'discovery',
     '341_screen_dfo_4t_winter_flounder_2017.R')),

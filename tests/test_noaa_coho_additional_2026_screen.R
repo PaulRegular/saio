@@ -15,7 +15,7 @@ progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 pacific <- noaa[noaa$source_region == 'NWFSC / SWFSC', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_coho_2026.md'), warn = FALSE), collapse = ' ')
 manifest <- read.csv(file.path(root, 'source_cache',
   'discovery_noaa_coho_2026', 'sources.csv'), stringsAsFactors = FALSE)

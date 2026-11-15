@@ -32,9 +32,9 @@ inventory <- read_table("discovery/inventory_units.csv")
 selected <- read_table("discovery/selections/selected_batch_35_2026.csv")
 manifest <- read_table("provenance/noaa_vermilion_rockfish_or_wa_2021/sources.csv")
 reviews <- paste(unlist(lapply(c(
-  "discovery/source_reviews/noaa_vermilion_rockfish_or_wa_2021.md",
-  "discovery/source_reviews/noaa_vermilion_rockfish_oregon_2021.md",
-  "discovery/source_reviews/noaa_vermilion_rockfish_washington_2021.md"
+  "source_reviews/screening/noaa_vermilion_rockfish_or_wa_2021.md",
+  "source_reviews/screening/noaa_vermilion_rockfish_oregon_2021.md",
+  "source_reviews/screening/noaa_vermilion_rockfish_washington_2021.md"
 ), readLines, warn = FALSE)), collapse = " ")
 
 one_output <- function(id, measure, year, age = NA_integer_, sex = NA_character_) {

@@ -18,7 +18,7 @@ load(file.path(root, 'source_cache', 'shared/noaa_stocksmart',
 stocksmart <- stocksmart_env$stock_assessment_summary
 run <- stocksmart[stocksmart$stock_id == 10257 & stocksmart$assessment_id == 8220,
   , drop = FALSE]
-review_path <- file.path(root, 'discovery', 'source_reviews',
+review_path <- file.path(root, 'source_reviews', 'screening',
   'noaa_vermilion_snapper_south_atlantic_2018.md')
 script_path <- file.path(root, 'scripts', 'discovery',
   '459_screen_noaa_vermilion_snapper_sa_2018.R')

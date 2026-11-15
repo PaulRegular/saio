@@ -87,7 +87,7 @@ stopifnot(
     database$inputs$assessment_id, fixed = TRUE)),
   !any(grepl('noaa_north_pacific_shortfin_mako',
     database$outputs$assessment_id, fixed = TRUE)),
-  file.exists(file.path(root, 'discovery', 'source_reviews',
+  file.exists(file.path(root, 'source_reviews', 'screening',
     'noaa_isc_shortfin_mako_2024.md'))
 )
 cat('NOAA 11715 North Pacific shortfin mako screening checks passed.\n')

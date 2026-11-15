@@ -378,7 +378,7 @@ register$output_evidence[candidate_row] <- paste(
 register$notes[candidate_row] <- paste(
   "Partial source import includes the MFRI supplementary age tables and ICES SAG aggregate outputs.",
   "Inputs remain partial because 1979 catch-at-age is not tabulated, the spawning-stock weight table is empty, and the survey index multiplier is unstated.",
-  "See discovery/source_reviews/ices_plaice_iceland_2026.md.")
+  "See source_reviews/screening/ices_plaice_iceland_2026.md.")
 
 inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE, na.strings = c("", "NA"))

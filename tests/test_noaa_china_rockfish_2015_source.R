@@ -11,7 +11,7 @@ assessments <- import_env$assessments
 inputs <- import_env$inputs
 outputs <- import_env$outputs
 assumptions <- import_env$assumptions
-review <- paste(readLines(file.path(root, "discovery/source_reviews/noaa_china_rockfish_us_pacific_2015.md"),
+review <- paste(readLines(file.path(root, "source_reviews/screening/noaa_china_rockfish_us_pacific_2015.md"),
   warn = FALSE), collapse = " ")
 stock_table <- read.csv(file.path(root, "database/stocks.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

@@ -576,7 +576,7 @@ if (write_mode) {
     "The 2026 update draft was posted for November Plan Team review and is not treated as a finalized run.")
   candidates$notes[ci] <- paste(
     "Partial source data imported from the 2024 SAFE and pinned AFSC source repository.",
-    "The catch table caption mismatch, rounded sample-size discrepancy, unavailable likelihood matrices, missing survey timing, and draft 2026 update are documented in discovery/source_reviews/noaa_northern_rockfish_goa_2024.md.")
+    "The catch table caption mismatch, rounded sample-size discrepancy, unavailable likelihood matrices, missing survey timing, and draft 2026 update are documented in source_reviews/noaa_northern_rockfish_goa.md.")
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)
 

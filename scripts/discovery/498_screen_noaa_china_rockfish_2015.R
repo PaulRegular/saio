@@ -29,7 +29,7 @@ for (file in required) {
     stop('Cached source failed provenance validation: ', file, call. = FALSE)
 }
 
-report <- readLines(file.path(root, 'discovery', 'source_reviews',
+report <- readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_china_rockfish_us_pacific_2015.md'), warn = FALSE)
 if (!any(grepl('2015 PFMC assessment', report, fixed = TRUE)) ||
     !any(grepl('three separate assessment units', report, fixed = TRUE)) ||

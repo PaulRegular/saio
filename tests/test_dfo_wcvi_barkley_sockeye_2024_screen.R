@@ -22,7 +22,7 @@ stopifnot(
   grepl('does not report an age-specific marine abundance', row$survey_age_evidence, fixed = TRUE),
   grepl('does not establish the complete', row$decision_reason, fixed = TRUE),
   grepl('archived-page interstitial', row$notes, fixed = TRUE),
-  file.exists(file.path(root, 'discovery', 'source_reviews', 'dfo_wcvi_barkley_sockeye_2024.md')),
+  file.exists(file.path(root, 'source_reviews', 'screening', 'dfo_wcvi_barkley_sockeye_2024.md')),
   !any(stocks$scientific_name == 'Oncorhynchus nerka', na.rm = TRUE),
   !any(assessments$assessment_id == 'dfo_wcvi_barkley_sockeye_smu', na.rm = TRUE),
   !any(inputs$assessment_id == 'dfo_wcvi_barkley_sockeye_smu', na.rm = TRUE),

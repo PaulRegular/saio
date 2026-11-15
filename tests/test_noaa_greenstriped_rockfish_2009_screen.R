@@ -27,7 +27,7 @@ sha256_file <- function(path) {
   hashes <- trimws(grep('^[[:space:]]*[[:xdigit:]]{64}[[:space:]]*$', output, value = TRUE))
   toupper(hashes)
 }
-review <- paste(readLines(file.path(root, 'discovery/source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews/screening',
   'noaa_greenstriped_rockfish_pacific_2009.md'), warn = FALSE), collapse = '\n')
 unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id == 'noaa_pacific_greenstriped_rockfish_coastwide', , drop = FALSE]
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]

@@ -45,7 +45,7 @@ for (suffix in c('78abd', '8c9a')) {
     !any(assessments$assessment_id == unit),
     !any(inputs$assessment_id == unit),
     !any(outputs$assessment_id == unit),
-    file.exists(file.path(root, 'discovery', 'source_reviews',
+    file.exists(file.path(root, 'source_reviews', 'screening',
       paste0('ices_white_anglerfish_', suffix, '_2026.md')))
   )
 }

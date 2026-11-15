@@ -26,7 +26,7 @@ sha256_file <- function(path) {
 model <- file.path(cache, 'model_files/Squarespot_rockfish_2021_Model_For_Devore')
 dat <- readLines(file.path(model, 'SS_LB.dat'), warn = FALSE)
 report <- readLines(file.path(model, 'Report.sso'), warn = FALSE)
-review <- paste(readLines(file.path(root, 'discovery/source_reviews/noaa_squarespot_rockfish_pacific_2021.md'),
+review <- paste(readLines(file.path(root, 'source_reviews/screening/noaa_squarespot_rockfish_pacific_2021.md'),
   warn = FALSE), collapse = '\n')
 
 stopifnot(

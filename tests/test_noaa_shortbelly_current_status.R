@@ -6,7 +6,7 @@ unit_id <- 'noaa_shortbelly_rockfish_pacific_coast'
 units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 unit <- units[units$unit_key == paste0('candidate:', unit_id), , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_shortbelly_rockfish_current_status.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

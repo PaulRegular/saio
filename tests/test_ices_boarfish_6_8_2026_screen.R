@@ -40,7 +40,7 @@ stopifnot(
   !any(assessments$stock_id == 'ices_boarfish_6_8'),
   !any(inputs$assessment_id == 'ices_boarfish_6_8'),
   !any(outputs$assessment_id == 'ices_boarfish_6_8'),
-  file.exists(file.path(root, 'discovery/source_reviews/ices_boarfish_6_8_2026.md'))
+  file.exists(file.path(root, 'source_reviews/screening/ices_boarfish_6_8_2026.md'))
 )
 
 cat('ICES boarfish 6-8 current-method and age-input screen checks passed.\n')

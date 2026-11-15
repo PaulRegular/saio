@@ -74,7 +74,7 @@ inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
 inventory <- inventory[inventory$candidate_ids == candidate_id, , drop = FALSE]
 batch <- read.csv("discovery/selections/selected_batch_41_2026.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_red_grouper_gom_2025.md",
+review <- paste(readLines("source_reviews/screening/noaa_red_grouper_gom_2025.md",
   warn = FALSE), collapse = " ")
 manifest <- read.csv("provenance/discovery_noaa_red_grouper_gom_2025/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)

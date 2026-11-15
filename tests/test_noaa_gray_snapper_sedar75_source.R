@@ -151,7 +151,7 @@ stopifnot(
 )
 
 review <- paste(readLines(
-  "discovery/source_reviews/noaa_gray_snapper_2022.md", warn = FALSE),
+  "source_reviews/screening/noaa_gray_snapper_2022.md", warn = FALSE),
   collapse = "\n")
 stopifnot(
   grepl("Tables 14-19", review, fixed = TRUE),

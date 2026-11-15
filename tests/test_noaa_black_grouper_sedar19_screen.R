@@ -36,7 +36,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-review <- readLines(file.path(root, 'discovery', 'source_reviews',
+review <- readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_black_grouper_sedar19.md'), warn = FALSE)
 
 stopifnot(nrow(candidate) == 1L,

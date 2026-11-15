@@ -5,7 +5,7 @@ row <- register[register$candidate_id == 'NOAA:11009', , drop = FALSE]
 related <- register[register$candidate_id %in% c(
   'NOAA:11803', 'NOAA:10836', 'NOAA:15412', 'NOAA:15413',
   'NOAA:10040', 'NOAA:15414', 'NOAA:15415'), , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_goa_shallow_flatfish_legacy_2016_2026.md'), warn = FALSE), collapse = '\n')
 cache <- file.path(root, 'source_cache', 'discovery_noaa_goa_shallow_flatfish_2016_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,

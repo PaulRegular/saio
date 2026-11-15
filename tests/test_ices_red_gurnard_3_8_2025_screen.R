@@ -39,7 +39,7 @@ stopifnot(
   !any(assessments$stock_id == 'ices_red_gurnard_3_8'),
   !any(inputs$assessment_id == 'ices_red_gurnard_3_8'),
   !any(outputs$assessment_id == 'ices_red_gurnard_3_8'),
-  file.exists(file.path(root, 'discovery/source_reviews/ices_red_gurnard_3_8_2025.md'))
+  file.exists(file.path(root, 'source_reviews/screening/ices_red_gurnard_3_8_2025.md'))
 )
 
 cat('ICES red gurnard 3-8 2025 current-method and age-input screen checks passed.\n')

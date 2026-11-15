@@ -75,7 +75,7 @@ review <- list(
     'assessment reviewed in October 2022 using data to 2021; Science Response',
     '2025/023 updates indicators to 2024. Five 3KLPs complexes are WBNDB, BBTB,',
     'CBSS, SMBPB and FB; spring/fall spawning components occur within complexes.',
-    'See discovery/source_reviews/dfo_nl_herring_3klps_2025.md. Source PDFs and',
+    'See source_reviews/screening/dfo_nl_herring_3klps_2025.md. Source PDFs and',
     'checksums are cached locally under discovery_dfo_nl_herring_2025/.'
   )
 )

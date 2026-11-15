@@ -12,7 +12,7 @@ unit_ids <- unique(current_units)
 units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', ''))
 units <- units[units$candidate_unit_id %in% unit_ids, , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_black_rockfish_pacific_coast_2023.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

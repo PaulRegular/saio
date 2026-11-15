@@ -19,7 +19,7 @@ stopifnot(nrow(red_hake) == 2L, !anyNA(rows), !anyDuplicated(rows),
   all(grepl('swept-area', red_hake$output_evidence, fixed = TRUE)),
   all(grepl('not estimate annual N-at-age', red_hake$decision_reason, fixed = TRUE)))
 
-review <- readLines('discovery/source_reviews/noaa_red_hake_2023.md',
+review <- readLines('source_reviews/screening/noaa_red_hake_2023.md',
   warn = FALSE)
 review <- paste(review, collapse = ' ')
 stopifnot(grepl('N-at-age', review, fixed = TRUE),

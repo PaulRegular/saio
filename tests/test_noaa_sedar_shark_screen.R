@@ -22,7 +22,7 @@ stopifnot(nrow(rows) == length(ids), !anyNA(rows$candidate_id),
   grepl('length compositions', rows$catch_age_evidence[rows$candidate_id == 'NOAA:10676'], ignore.case = TRUE),
   grepl('reject', rows$output_evidence[rows$candidate_id == 'NOAA:12131'], ignore.case = TRUE),
   grepl('status determinations only', rows$output_evidence[rows$candidate_id == 'NOAA:14141'], ignore.case = TRUE),
-  file.exists(file.path(root, 'discovery', 'source_reviews',
+  file.exists(file.path(root, 'source_reviews', 'screening',
     'noaa_sedar_shark_inventory_2006_2018.md')))
 
 cache <- file.path(root, 'source_cache', 'discovery_noaa_sedar_sharks_2026')

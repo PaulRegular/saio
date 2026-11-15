@@ -30,7 +30,7 @@ selected <- read.csv("discovery/selections/selected_batch_39_2026.csv", stringsA
 selected <- selected[selected$candidate_id == "NOAA:10390", , drop = FALSE]
 manifest <- read.csv("provenance/discovery_noaa_gom_cobia_2020/sources.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_gulf_cobia_2020.md",
+review <- paste(readLines("source_reviews/screening/noaa_gulf_cobia_2020.md",
   warn = FALSE), collapse = " ")
 
 input_values <- function(measure, year = NULL, observation_id = NULL) {

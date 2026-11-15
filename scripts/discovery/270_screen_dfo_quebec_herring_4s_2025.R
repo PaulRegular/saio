@@ -68,7 +68,7 @@ review <- list(
     'a possible future unit-boundary change, but no revised stock definition is',
     'yet adopted. Cached reports and checksums are under',
     'source_cache/discovery_dfo_quebec_herring_4s_2025/. See',
-    'discovery/source_reviews/dfo_quebec_herring_4s_2025.md.'
+    'source_reviews/screening/dfo_quebec_herring_4s_2025.md.'
   )
 )
 

@@ -29,7 +29,7 @@ candidate <- utils::read.csv(file.path(root, "discovery", "candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 candidate <- candidate[candidate$candidate_id ==
   "DFO:Maritimes:Pollock - NAFO 4X5 (Western Component)", , drop = FALSE]
-review <- paste(readLines(file.path(root, "discovery", "source_reviews",
+review <- paste(readLines(file.path(root, "source_reviews", "screening",
   "dfo_western_component_pollock_2022.md")), collapse = " ")
 
 stopifnot(

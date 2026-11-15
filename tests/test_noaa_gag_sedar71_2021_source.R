@@ -31,7 +31,7 @@ assessment <- assessments[assessments$assessment_id == assessment_id, , drop = F
 candidate <- candidates[candidates$candidate_id == "NOAA:10349", , drop = FALSE]
 manifest <- read.csv("provenance/noaa_gag_sedar71_2021/manifest.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_gag_sedar71_2021.md",
+review <- paste(readLines("source_reviews/screening/noaa_gag_sedar71_2021.md",
   warn = FALSE), collapse = " ")
 
 counts <- inputs[inputs$measure == "frequency_at_age", , drop = FALSE]

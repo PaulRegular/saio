@@ -90,7 +90,7 @@ review <- list(
     'but direct local retrieval returned an archived-page interstitial rather',
     'than the PDF, so it was not cached. No canonical inputs/outputs were added',
     'and was attempted. See',
-    'discovery/source_reviews/dfo_wcvi_barkley_sockeye_2024.md.'
+    'source_reviews/screening/dfo_wcvi_barkley_sockeye_2024.md.'
   )
 )
 for (column in names(review)) candidates[[column]][row] <- review[[column]]

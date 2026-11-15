@@ -78,7 +78,7 @@ stopifnot(
   any(ors_outputs$measure == 'SSB' & ors_outputs$year == 2019L &
     ors_outputs$scenario == 'assessment forecast' & ors_outputs$value == 177 &
     ors_outputs$lwr == 128 & ors_outputs$upr == 226),
-  file.exists('discovery/source_reviews/noaa_cabezon_2019.md'),
+  file.exists('source_reviews/screening/noaa_cabezon_2019.md'),
   !any(assessments$stock_id %in% c('noaa_cabezon_washington_2019',
     'noaa_cabezon_northern_california_2019',
     'noaa_cabezon_southern_california_2019')),

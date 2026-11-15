@@ -8,7 +8,7 @@ urls <- paste(
   'https://www-ops2.pac.dfo-mpo.gc.ca/fns-sap/index-eng.cfm?DOC_ID=371699&ID=all&pg=view_notice;',
   'https://www.pac.dfo-mpo.gc.ca/fm-gp/fraser/albion-eng.html'
 )
-review <- 'See discovery/source_reviews/dfo_fraser_chum_2026.md.'
+review <- 'See source_reviews/screening/dfo_fraser_chum_2026.md.'
 
 fraser_id <- 'DFO:Pacific:Fraser Chum Salmon'
 fraser_i <- match(fraser_id, x$candidate_id)

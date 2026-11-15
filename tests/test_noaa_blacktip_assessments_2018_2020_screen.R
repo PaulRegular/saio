@@ -42,7 +42,7 @@ stopifnot(nrow(rows) == 2L, !anyNA(rows$candidate_id),
   all(nzchar(manifest_rows$source_url)), all(nzchar(manifest_rows$pinned_revision)),
   all(file.exists(file.path(cache, expected_files))),
   all(file.info(file.path(cache, expected_files))$size == expected_sizes),
-  file.exists(file.path(root, 'discovery', 'source_reviews',
+  file.exists(file.path(root, 'source_reviews', 'screening',
     'noaa_blacktip_assessments_2018_2020.md')))
 
 for (file in expected_files) {

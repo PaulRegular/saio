@@ -42,7 +42,7 @@ stopifnot(
   any(grepl("Access database extracted", sources$notes, fixed = TRUE))
 )
 
-review <- paste(readLines(file.path(root, "discovery/source_reviews",
+review <- paste(readLines(file.path(root, "source_reviews/screening",
   "ifop_chile_merluza_comun_2026.md"), warn = FALSE), collapse = " ")
 stopifnot(
   grepl("2027 status assessment as in progress", review, fixed = TRUE),

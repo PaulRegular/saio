@@ -9,7 +9,7 @@ candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 unit <- units[units$unit_key == paste0('candidate:', unit_id), , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'ices_small_eyed_ray_7fg_2026.md'), warn = FALSE), collapse = '\n')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,

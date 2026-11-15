@@ -76,7 +76,7 @@ x$decision_reason[i] <- paste(
 x$notes[i] <- paste(
   'Do not use this row as a North Coast-wide stock or merge Skeena-Nass and',
   'Central Coast Chinook. No canonical stock or assessment records were added.',
-  'See discovery/source_reviews/dfo_north_coast_chinook_inventory.md.'
+  'See source_reviews/screening/dfo_north_coast_chinook_inventory.md.'
 )
 
 source(file.path(root, 'scripts', 'discovery', 'candidate_register_io.R'))

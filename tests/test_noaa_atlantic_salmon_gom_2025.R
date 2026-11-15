@@ -10,7 +10,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-review_path <- file.path(root, 'discovery', 'source_reviews',
+review_path <- file.path(root, 'source_reviews', 'screening',
   'noaa_atlantic_salmon_gom_2025.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = '\n')
 cache <- file.path(root, 'source_cache', 'discovery_noaa_atlantic_salmon_2025')

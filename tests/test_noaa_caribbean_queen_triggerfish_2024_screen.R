@@ -3,7 +3,7 @@ register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 ids <- c('NOAA:15496', 'NOAA:15558', 'NOAA:15649')
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_caribbean_queen_triggerfish_2022_2024.md'), warn = FALSE), collapse = '\n')
 cache <- file.path(root, 'source_cache', 'discovery_noaa_caribbean_queen_triggerfish_2024')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,

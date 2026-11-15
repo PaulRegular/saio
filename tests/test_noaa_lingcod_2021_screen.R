@@ -13,7 +13,7 @@ north <- register[register$candidate_id == 'NOAA:12194', , drop = FALSE]
 south <- register[register$candidate_id == 'NOAA:12195', , drop = FALSE]
 units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-review_path <- file.path(root, 'discovery/source_reviews/noaa_lingcod_2021.md')
+review_path <- file.path(root, 'source_reviews/screening/noaa_lingcod_2021.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 review <- gsub('[[:space:]]+', ' ', review)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,

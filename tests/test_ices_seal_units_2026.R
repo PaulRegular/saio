@@ -50,6 +50,6 @@ stopifnot(nrow(screened) == 3L,
   all(units$inventory_entries[match(unit_ids, units$candidate_unit_id)] == 1L),
   file.exists(file.path(root, 'source_cache', 'shared/ices_sid',
     c('stock_list_2026.json', 'sources.csv'))),
-  file.exists(file.path(root, 'discovery/source_reviews/ices_seal_units_2026.md')))
+  file.exists(file.path(root, 'source_reviews/screening/ices_seal_units_2026.md')))
 
 cat('ICES seal identities, stock boundaries, out-of-scope decisions, and no-import checks passed.\n')

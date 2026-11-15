@@ -39,7 +39,7 @@ stopifnot(
   !any(assessments$assessment_id == candidate$candidate_unit_id),
   !any(inputs$assessment_id == candidate$candidate_unit_id),
   !any(outputs$assessment_id == candidate$candidate_unit_id),
-  file.exists(file.path(root, 'discovery/source_reviews/ices_sprat_english_channel_2026.md'))
+  file.exists(file.path(root, 'source_reviews/screening/ices_sprat_english_channel_2026.md'))
 )
 
 cat('ICES English Channel sprat screening checks passed.\n')

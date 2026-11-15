@@ -26,6 +26,6 @@ stopifnot(
   !any(stocks$scientific_name == 'Zoarces americanus'),
   !any(c('NOAA:10525', 'noaa_ocean_pout_10525') %in% c(assessments$assessment_id,
     inputs$assessment_id, outputs$assessment_id)),
-  file.exists(file.path(root, 'discovery', 'source_reviews', 'noaa_ocean_pout_2022.md'))
+  file.exists(file.path(root, 'source_reviews', 'screening', 'noaa_ocean_pout_2022.md'))
 )
 cat('NOAA ocean-pout identity, index-method exclusion, provenance, and no-import checks passed.\n')

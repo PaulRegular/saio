@@ -44,7 +44,7 @@ stopifnot(
   !any(assessments$assessment_id == 'ices_capelin_iegjm'),
   !any(inputs$assessment_id == 'ices_capelin_iegjm'),
   !any(outputs$assessment_id == 'ices_capelin_iegjm'),
-  file.exists(file.path(root, 'discovery', 'source_reviews',
+  file.exists(file.path(root, 'source_reviews', 'screening',
     'ices_capelin_2a514_2026.md'))
 )
 cat('ICES IEGJM capelin source-screening checks passed.\n')

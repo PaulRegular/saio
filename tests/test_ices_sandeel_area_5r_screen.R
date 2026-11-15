@@ -43,7 +43,7 @@ stopifnot(
   !any(assessments$assessment_id == candidate$candidate_unit_id),
   !any(inputs$assessment_id == candidate$candidate_unit_id),
   !any(outputs$assessment_id == candidate$candidate_unit_id),
-  file.exists('discovery/source_reviews/ices_sandeel_area_5r_2025.md')
+  file.exists('source_reviews/screening/ices_sandeel_area_5r_2025.md')
 )
 
 cat('ICES sandeel Area 5r screening checks passed.\n')

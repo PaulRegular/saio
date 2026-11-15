@@ -76,7 +76,7 @@ x$notes[i] <- paste(
   'assessment with updated catches. The 2023 report identifies Stock',
   'Synthesis 3.30.21, while the pinned CIE accepted-run files identify',
   '3.30.13 in their headers; record this version discrepancy. See',
-  'discovery/source_reviews/noaa_goa_dover_sole.md.'
+  'source_reviews/screening/noaa_goa_dover_sole.md.'
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

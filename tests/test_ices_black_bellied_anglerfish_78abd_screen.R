@@ -46,7 +46,7 @@ stopifnot(
   !any(inputs$assessment_id == candidate$candidate_unit_id),
   !any(outputs$assessment_id == candidate$candidate_unit_id),
   file.exists(file.path(root,
-    'discovery/source_reviews/ices_black_bellied_anglerfish_78abd_2026.md'))
+    'source_reviews/screening/ices_black_bellied_anglerfish_78abd_2026.md'))
 )
 
 cat('ICES black-bellied anglerfish screening checks passed.\n')

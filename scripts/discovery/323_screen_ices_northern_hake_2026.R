@@ -1,7 +1,7 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'ices_northern_hake_2026')
 candidate_path <- file.path(root, 'discovery', 'candidates.csv')
-source_review_path <- file.path(root, 'discovery', 'source_reviews',
+source_review_path <- file.path(root, 'source_reviews', 'screening',
   'ices_northern_hake_2026.md')
 manifest_path <- file.path(cache, 'manifest.csv')
 candidate_id <- 'ICES:hke.27.3a46-8abd'

@@ -26,7 +26,7 @@ inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
 provenance <- read.csv(
   "provenance/discovery_noaa_blue_deacon_california_2017/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_blue_deacon_california_2017_2019.md",
+review <- paste(readLines("source_reviews/screening/noaa_blue_deacon_california_2017_2019.md",
   warn = FALSE), collapse = " ")
 
 input_measure <- function(measure, assessment_id = ids[1L]) {

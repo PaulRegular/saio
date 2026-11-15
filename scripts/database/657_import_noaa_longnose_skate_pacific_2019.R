@@ -705,7 +705,7 @@ import_noaa_longnose_skate_pacific_2019 <- function(root = ".", write = FALSE) {
     repository_url = "https://www.pcouncil.org/stock-assessments-star-reports-stat-reports-rebuilding-analyses-terms-of-reference/groundfish-stock-assessment-documents/",
     assumptions_status = "partial", inputs_status = "partial",
     outputs_status = "partial",
-    notes = paste("Latest full assessment located for this current unit; Stock SMART lists 2019 with data through 2018. The supplementary workbook provides fitted abundance-at-age for 1916-2018; no fitted Report.sso or F-at-age surface was found. See discovery/source_reviews/noaa_longnose_skate_pacific_2019.md.")), 1L)
+    notes = paste("Latest full assessment located for this current unit; Stock SMART lists 2019 with data through 2018. The supplementary workbook provides fitted abundance-at-age for 1916-2018; no fitted Report.sso or F-at-age surface was found. See source_reviews/noaa_pacific_coast_longnose_skate.md.")), 1L)
 
   cat("NOAA Pacific Coast Longnose Skate 2019 source extraction\n")
   cat("Inputs:", nrow(inputs), "rows (catch, indices, discard fractions, mean body weight, and native compositions).\n")
@@ -763,7 +763,7 @@ import_noaa_longnose_skate_pacific_2019 <- function(root = ".", write = FALSE) {
   candidates$timing_evidence[ci] <- "Survey observations are in July and the fitted fleet timing is 0.5."
   candidates$output_evidence[ci] <- paste("Imported fitted N-at-age for ages 0-29 and 30+ from 1916-2018, plus total biomass, SSB, age-2+ biomass, depletion, recruitment, catch and relative exploitation from Table 16 through the 2019 forecast.", "Table ES-8 supplies 95% intervals for SSB, recruitment and depletion in 2009-2019.", "F-at-age remains unavailable; the archive has no fitted Report.sso.")
   candidates$decision_reason[ci] <- paste("The 2019 full coastwide assessment remains the latest run identified by Stock SMART and the PFMC 2023 data-availability review.", "The native SS3 file and run-matched report/workbook support source import; sparse age-composition coverage and missing F-at-age are documented.")
-  candidates$notes[ci] <- paste("Partial source import from the 2019 full assessment and supplementary tables.", "The workbook count unit is unstated, so values are preserved without a multiplier.", "See discovery/source_reviews/noaa_longnose_skate_pacific_2019.md.")
+  candidates$notes[ci] <- paste("Partial source import from the 2019 full assessment and supplementary tables.", "The workbook count unit is unstated, so values are preserved without a multiplier.", "See source_reviews/noaa_pacific_coast_longnose_skate.md.")
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)
 

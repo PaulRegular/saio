@@ -28,7 +28,7 @@ candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 imported <- nrow(inputs) > 0L || nrow(outputs) > 0L ||
   any(stocks$stock_id == stock_id) || any(assessments$assessment_id == assessment_id)
 
-review <- paste(readLines("discovery/source_reviews/noaa_gulf_cobia_2020.md",
+review <- paste(readLines("source_reviews/screening/noaa_gulf_cobia_2020.md",
   warn = FALSE), collapse = " ")
 stopifnot(
   nrow(candidate) == 1L,

@@ -52,7 +52,7 @@ stopifnot(
 
 cache <- file.path(root, 'source_cache', 'discovery_ices_baltic_flatfish_2026')
 manifest_path <- file.path(cache, 'sources.csv')
-review_path <- file.path(root, 'discovery', 'source_reviews', 'ices_baltic_flatfish_2026.md')
+review_path <- file.path(root, 'source_reviews', 'screening', 'ices_baltic_flatfish_2026.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 stopifnot(
   grepl('latest detailed report', review, fixed = TRUE),

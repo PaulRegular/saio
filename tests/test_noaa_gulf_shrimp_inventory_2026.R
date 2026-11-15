@@ -29,7 +29,7 @@ stopifnot(
   !any(rows$candidate_unit_id %in% assessments$assessment_id),
   !any(rows$candidate_unit_id %in% inputs$assessment_id),
   !any(rows$candidate_unit_id %in% outputs$assessment_id),
-  file.exists(file.path(root, 'discovery/source_reviews/noaa_gulf_shrimp_inventory_2026.md'))
+  file.exists(file.path(root, 'source_reviews/screening/noaa_gulf_shrimp_inventory_2026.md'))
 )
 
 cat('NOAA Gulf shrimp identity and scope checks passed.\n')

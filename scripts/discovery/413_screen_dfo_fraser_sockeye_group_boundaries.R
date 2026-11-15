@@ -16,7 +16,7 @@ source_urls <- paste(
   'https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41294622.pdf;',
   'https://publications.gc.ca/collections/collection_2026/mpo-dfo/Fs141-9-2026-eng.pdf'
 )
-review <- 'See discovery/source_reviews/dfo_fraser_sockeye_other_groups.md.'
+review <- 'See source_reviews/screening/dfo_fraser_sockeye_other_groups.md.'
 
 for (i in rows) {
   if (x$screening_status[i] == 'not_started') {

@@ -33,7 +33,7 @@ candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
 candidate <- candidates[candidates$candidate_id == candidate_id, , drop = FALSE]
 manifest <- read.csv("provenance/noaa_south_atlantic_red_porgy_sedar60_2020/manifest.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_south_atlantic_red_porgy_2020.md",
+review <- paste(readLines("source_reviews/screening/noaa_south_atlantic_red_porgy_2020.md",
   warn = FALSE), collapse = "\n")
 
 input_value <- function(measure, year = NA_integer_, age = NA_integer_,

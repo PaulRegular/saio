@@ -11,7 +11,7 @@ units <- read.csv(file.path(root, "discovery/inventory_units.csv"),
 progress <- read.csv(file.path(root, "discovery/inventory_progress.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 unit <- units[units$matched_stock_id %in% units_expected | units$candidate_unit_id %in% units_expected, , drop = FALSE]
-review <- paste(readLines(file.path(root, "discovery/source_reviews/noaa_china_rockfish_us_pacific_2015.md"),
+review <- paste(readLines(file.path(root, "source_reviews/screening/noaa_china_rockfish_us_pacific_2015.md"),
   warn = FALSE), collapse = " ")
 stocks <- read.csv(file.path(root, "database/stocks.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)

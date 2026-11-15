@@ -91,7 +91,7 @@ stopifnot(
   candidate$matched_stock_id == "dfo_greenland_halibut_2_3klmno",
   candidate$match_status == "matched",
   candidate$import_status == "partial",
-  file.exists("discovery/source_reviews/dfo_greenland_halibut_2_3klmno_2025.md")
+  file.exists("source_reviews/screening/dfo_greenland_halibut_2_3klmno_2025.md")
 )
 
 cat("DFO/NAFO Greenland halibut source values, event separation, coverage and limitations passed.\n")

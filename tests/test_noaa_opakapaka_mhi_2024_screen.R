@@ -7,7 +7,7 @@ candidate <- register[register$candidate_id == id, , drop = FALSE]
 unit <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 unit <- unit[!is.na(unit$candidate_unit_id) & unit$candidate_unit_id == unit_id, , drop = FALSE]
-review <- readLines(file.path(root, 'discovery', 'source_reviews',
+review <- readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_opakapaka_mhi_2024.md'), warn = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

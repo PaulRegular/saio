@@ -8,8 +8,8 @@ Use the discovery register to track source searches and candidate decisions. The
 | [inventory_units.csv](inventory_units.csv) | The linked entries grouped by stock or candidate unit. |
 | [inventory_progress.csv](inventory_progress.csv) | Current counts by organization and source region. |
 | [selections](selections/) | Dated selections and curation decisions for each batch. |
-| [source reviews](source_reviews/) | Screening evidence and unresolved leads. |
-| [inventory audit](inventory_audit_2026.md) | Sources, coverage limits and historical counts for the initial inventories. |
+| [Screening reviews](../source_reviews/screening/) | Screening evidence and unresolved leads. |
+| [inventory audit](../source_reviews/screening/inventory_audit_2026.md) | Sources, coverage limits and historical counts for the initial inventories. |
 
 An inventory row can represent an alias or a separate run. Use `candidate_unit_id` to link rows once the stock identity is verified. Use `matched_stock_id` for a unit represented in `stocks.csv`.
 A selection list records the basis for choosing a case at the time. Use `candidates.csv` for the current decision and the [stock source reviews](../source_reviews/) for substantive evidence about imported assessments.

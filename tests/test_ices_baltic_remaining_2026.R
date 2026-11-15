@@ -54,7 +54,7 @@ stopifnot(
     character(1L)), '%PDF-'))
 )
 
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'ices_baltic_flatfish_2026.md'), warn = FALSE), collapse = ' ')
 stopifnot(
   grepl('update assessments were conducted', review, fixed = TRUE),

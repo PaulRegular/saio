@@ -14,7 +14,7 @@ candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id == candidate_unit_id, , drop = FALSE]
 org_progress <- progress[progress$organization == "PIRSA / SARDI", , drop = FALSE]
 review <- paste(readLines(
-  "discovery/source_reviews/pirsa_southern_australian_sardine_2025.md",
+  "source_reviews/screening/pirsa_southern_australian_sardine_2025.md",
   warn = FALSE), collapse = "\n")
 
 stopifnot(nrow(candidate) == 1L,

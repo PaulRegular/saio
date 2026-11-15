@@ -33,7 +33,7 @@ stopifnot(nrow(row) == 1L, row$official_stock_id == '14230',
   nzchar(source_row$source_url), nzchar(source_row$pinned_revision),
   file.exists(file.path(cache, file)),
   file.info(file.path(cache, file))$size == expected_size,
-  file.exists(file.path(root, 'discovery', 'source_reviews',
+  file.exists(file.path(root, 'source_reviews', 'screening',
     'noaa_gulf_smoothhound_sedar39_2015.md')))
 
 signature <- readBin(file.path(cache, file), 'raw', n = 5L)

@@ -5,7 +5,7 @@ cache <- file.path(root, 'source_cache', 'discovery_noaa_dusky_rockfish_2024')
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 row <- register[register$candidate_id == candidate_id, , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_dusky_rockfish_goa_2024.md'), warn = FALSE), collapse = ' ')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'), stringsAsFactors = FALSE,

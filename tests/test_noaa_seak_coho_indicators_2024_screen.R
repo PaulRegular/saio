@@ -41,7 +41,7 @@ stopifnot(nrow(rows) == 3L, !anyNA(rows$candidate_id),
   all(file.info(file.path(cache, manifest$file))$size == expected_sizes),
   identical(rawToChar(readBin(file.path(cache, expected_files[1]), 'raw', n = 5L)), '%PDF-'),
   identical(rawToChar(readBin(file.path(cache, expected_files[2]), 'raw', n = 5L)), '%PDF-'),
-  file.exists(file.path(root, 'discovery', 'source_reviews',
+  file.exists(file.path(root, 'source_reviews', 'screening',
     'noaa_southeast_alaska_coho_2024.md')),
   !anyDuplicated(rows$candidate_unit_id))
 

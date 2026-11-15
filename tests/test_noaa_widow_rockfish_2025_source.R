@@ -33,7 +33,7 @@ input <- inputs[inputs$assessment_id == assessment_id, , drop = FALSE]
 output <- outputs[outputs$assessment_id == assessment_id, , drop = FALSE]
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
 projected_output <- output[as.integer(output$year) > 2024L, , drop = FALSE]
-review <- paste(readLines(file.path(root, "discovery", "source_reviews",
+review <- paste(readLines(file.path(root, "source_reviews", "screening",
   "noaa_west_coast_widow_rockfish.md"), warn = FALSE), collapse = "\n")
 
 catch <- input[input$type == "catch" & input$measure == "total_biomass", , drop = FALSE]

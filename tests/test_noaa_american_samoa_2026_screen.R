@@ -71,7 +71,7 @@ stopifnot(
   !any(grepl('American Samoa', assessments$assessment_id, ignore.case = TRUE), na.rm = TRUE),
   !any(grepl('American Samoa', inputs$assessment_id, ignore.case = TRUE), na.rm = TRUE),
   !any(grepl('American Samoa', outputs$assessment_id, ignore.case = TRUE), na.rm = TRUE),
-  file.exists(file.path(root, 'discovery/source_reviews/noaa_american_samoa_bottomfish_2026.md'))
+  file.exists(file.path(root, 'source_reviews/screening/noaa_american_samoa_bottomfish_2026.md'))
 )
 
 cat('American Samoa 2026 unit reconciliation and age-input eligibility checks passed.\n')

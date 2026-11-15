@@ -234,7 +234,7 @@ import_noaa_oregon_kelp_greenling_2015 <- function(root = ".", write = FALSE) {
   cand$mortality_evidence[cr]<-"Fixed age-invariant M scalars imported: female 0.360 and male 0.318 per year."
   cand$timing_evidence[cr]<-"Annual model; all fleets and indices timed at 0.5."
   cand$output_evidence[cr]<-"Table 15 aggregate outputs and recent Table E2/E3 intervals imported; fitted age surfaces unavailable."
-  cand$review_date[cr]<-as.character(Sys.Date()); cand$import_status[cr]<-"partial"; cand$decision_reason[cr]<-"Partial source import from the latest detailed Oregon assessment; native catches, CPUE, compositions, fixed biology and aggregate outputs recovered. Fitted age surfaces remain unavailable."; cand$notes[cr]<-"NOAA Stock SMART 10462; 2015 Oregon benchmark remains latest full fit cited by current management documents. See discovery/source_reviews/noaa_oregon_kelp_greenling_2015.md."
+  cand$review_date[cr]<-as.character(Sys.Date()); cand$import_status[cr]<-"partial"; cand$decision_reason[cr]<-"Partial source import from the latest detailed Oregon assessment; native catches, CPUE, compositions, fixed biology and aggregate outputs recovered. Fitted age surfaces remain unavailable."; cand$notes[cr]<-"NOAA Stock SMART 10462; 2015 Oregon benchmark remains latest full fit cited by current management documents. See source_reviews/screening/noaa_oregon_kelp_greenling_2015.md."
   inv$unit_key[ir]<-paste0("candidate:",stock_id); inv$candidate_unit_id[ir]<-stock_id
   inv$matched_stock_id[ir]<-stock_id; inv$match_status[ir]<-"matched"; inv$import_status[ir]<-"partial"
   batch$curation_status[br]<-"partial_source_import"

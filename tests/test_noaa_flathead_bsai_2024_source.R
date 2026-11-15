@@ -152,7 +152,7 @@ key <- do.call(paste, c(lapply(outputs[output_keys], function(x)
   ifelse(is.na(x), "", as.character(x))), sep = "\r"))
 stopifnot(!anyDuplicated(key))
 
-review <- paste(readLines("discovery/source_reviews/noaa_flathead_bsai.md", warn = FALSE),
+review <- paste(readLines("source_reviews/screening/noaa_flathead_bsai.md", warn = FALSE),
   collapse = "\n")
 stopifnot(
   grepl("bafa7658d31e0b99fe11d626a58e1c01807c69ee` is an earlier, superseded snapshot",

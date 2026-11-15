@@ -11,7 +11,7 @@ candidate <- candidates[candidates$candidate_id == id, , drop = FALSE]
 cache <- file.path(root, 'source_cache/discovery_noaa_atlantic_menhaden_2025')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/noaa_atlantic_menhaden_2025.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/screening/noaa_atlantic_menhaden_2025.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,

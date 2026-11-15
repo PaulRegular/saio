@@ -46,7 +46,7 @@ stopifnot(
   !any(inputs$assessment_id == candidate$candidate_unit_id),
   !any(outputs$assessment_id == candidate$candidate_unit_id),
   file.exists(file.path(root,
-    'discovery/source_reviews/noaa_goa_yelloweye_2024.md'))
+    'source_reviews/screening/noaa_goa_yelloweye_2024.md'))
 )
 
 cat('NOAA Gulf of Alaska yelloweye source-screening checks passed.\n')

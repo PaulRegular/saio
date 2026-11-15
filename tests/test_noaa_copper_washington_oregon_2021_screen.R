@@ -25,7 +25,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/noaa_copper_rockfish_washington_oregon_2021.md'), warn = FALSE),
+  'source_reviews/screening/noaa_copper_rockfish_washington_oregon_2021.md'), warn = FALSE),
   collapse = ' ')
 
 stopifnot(nrow(candidates) == 2L,

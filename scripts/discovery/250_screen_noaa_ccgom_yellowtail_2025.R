@@ -66,7 +66,7 @@ x$decision_reason[i] <- paste(
   'missing age-based inputs and outputs are verified.'
 )
 x$notes[i] <- paste(
-  'Source review: discovery/source_reviews/noaa_yellowtail_ccgom_2025.md.',
+  'Source review: source_reviews/screening/noaa_yellowtail_ccgom_2025.md.',
   'The local, gitignored source cache contains the 2025 support ZIP, its',
   'assessment/results PDFs, and the final September 2025 panel report; its',
   'manifest records retrieval dates and SHA-256 checksums.'

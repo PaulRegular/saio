@@ -9,7 +9,7 @@ outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors
 candidate <- register[register$candidate_id ==
   'DFO:Pacific:Sockeye Salmon - Fraser (Early Stuart)', , drop = FALSE]
 unit_id <- 'dfo_fraser_sockeye_early_stuart'
-review_path <- file.path(root, 'discovery', 'source_reviews',
+review_path <- file.path(root, 'source_reviews', 'screening',
   'dfo_fraser_sockeye_early_stuart.md')
 cache <- file.path(root, 'source_cache', 'discovery_dfo_fraser_sockeye')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)

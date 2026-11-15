@@ -57,7 +57,7 @@ stopifnot(
   !any(assessments$stock_id == 'ices_seabass_8c9a'),
   !any(inputs$assessment_id == 'ices_seabass_8c9a'),
   !any(outputs$assessment_id == 'ices_seabass_8c9a'),
-  file.exists(file.path(root, 'discovery/source_reviews/ices_seabass_8c9a_2025.md'))
+  file.exists(file.path(root, 'source_reviews/screening/ices_seabass_8c9a_2025.md'))
 )
 
 cat('ICES 2025 seabass 8.c/9.a identity, category-5 screen, provenance, and discovery-only checks passed.\n')

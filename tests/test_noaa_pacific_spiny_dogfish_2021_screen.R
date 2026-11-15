@@ -24,7 +24,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
   na.strings = c('', 'NA'), check.names = FALSE)
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
-review_path <- file.path(root, 'discovery/source_reviews/noaa_pacific_spiny_dogfish_2021.md')
+review_path <- file.path(root, 'source_reviews/screening/noaa_pacific_spiny_dogfish_2021.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 
 stopifnot(

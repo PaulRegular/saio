@@ -95,7 +95,7 @@ review <- list(
     'records full acceptance for SEDAR 88; assessment 14350 is a 2026 stock monitoring',
     'update with review result Remand and the same terminal data year. NOAA Stock',
     'SMART 10332 is the distinct South Atlantic red grouper unit. See',
-    'discovery/source_reviews/noaa_red_grouper_gom_2025.md.'
+    'source_reviews/screening/noaa_red_grouper_gom_2025.md.'
   )
 )
 

@@ -115,7 +115,7 @@ stopifnot(
 )
 
 review <- paste(readLines(
-  "discovery/source_reviews/noaa_vermilion_snapper_gulf_2020.md",
+  "source_reviews/screening/noaa_vermilion_snapper_gulf_2020.md",
   warn = FALSE), collapse = "\n")
 stopifnot(
   grepl("Table 18 has been transcribed for 1950-2017", review, fixed = TRUE),

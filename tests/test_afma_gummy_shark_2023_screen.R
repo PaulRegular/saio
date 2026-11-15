@@ -12,7 +12,7 @@ unit <- units[units$unit_key == "stock:afma_gummy_shark_sessf", , drop = FALSE]
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
 manifest <- read_table("provenance/afma_gummy_shark_2023_sources.csv")
-review <- paste(readLines("discovery/source_reviews/afma_gummy_shark_2023.md",
+review <- paste(readLines("source_reviews/screening/afma_gummy_shark_2023.md",
   warn = FALSE, encoding = "UTF-8"), collapse = "\n")
 
 stopifnot(

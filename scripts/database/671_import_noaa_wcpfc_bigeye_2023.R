@@ -736,7 +736,7 @@ candidates$output_evidence[candidate_row] <- paste(
 candidates$notes[candidate_row] <- paste(
   candidates$notes[candidate_row],
   "A partial source import was added under wcpfc_wcpo_bigeye_2023.",
-  "See discovery/source_reviews/noaa_wcpfc_bigeye_2023.md for imported coverage and remaining limits."
+  "See source_reviews/screening/noaa_wcpfc_bigeye_2023.md for imported coverage and remaining limits."
 )
 replace_candidate_register_row(candidate_path, candidate_row,
   candidates[candidate_row, , drop = FALSE], candidate_id)

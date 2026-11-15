@@ -14,7 +14,7 @@ units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_bank_rockfish_california', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery/source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews/screening',
   'noaa_bank_rockfish_california_2010.md'), warn = FALSE), collapse = ' ')
 stocksmart_env <- new.env(parent = emptyenv())
 load(file.path(root, 'source_cache/shared/noaa_stocksmart',

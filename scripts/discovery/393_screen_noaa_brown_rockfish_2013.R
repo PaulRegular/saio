@@ -100,7 +100,7 @@ screened <- data.frame(
   detailed_source_url = paste(all_urls, collapse = '; '),
   review_date = '2026-10-30',
   decision_reason = 'NOAA Stock SMART 10546 is a distinct new Pacific Coast stock unit. Its latest fully accepted assessment is the 2013 coastwide XDB-SRA benchmark with data through 2012; the 2025 SAFE still lists 2013 as the most recent assessment. The selected model uses aggregate removals and aggregate fishery-dependent indices, and its input file sets age, length and mean-size-at-age observations to zero. It is ineligible for the age-disaggregated assessment set despite life-history age information in the source report.',
-  notes = 'Screened ineligible; no canonical database records added. The report and supporting documents are cached under gitignored source_cache/discovery_noaa_data_moderate_2013_2026/. See discovery/source_reviews/noaa_brown_rockfish_pacific_coast_2013.md.',
+  notes = 'Screened ineligible; no canonical database records added. The report and supporting documents are cached under gitignored source_cache/discovery_noaa_data_moderate_2013_2026/. See source_reviews/screening/noaa_brown_rockfish_pacific_coast_2013.md.',
   stringsAsFactors = FALSE, check.names = FALSE)
 
 needs_write <- initial_state || (current_state && !all(vapply(names(screened), function(name)

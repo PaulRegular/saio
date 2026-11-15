@@ -779,7 +779,7 @@ candidates$output_evidence[candidate_row] <- paste(
 )
 candidates$notes[candidate_row] <- paste(
   "NOAA Stock SMART ID 11694 maps to the WCPFC Western and Central Pacific yellowfin unit and is distinct from Eastern Pacific and Indian Ocean yellowfin.",
-  "The pinned 2026 SPC diagnostic files and source limitations are documented in discovery/source_reviews/noaa_wcpfc_yellowfin_2026.md.",
+  "The pinned 2026 SPC diagnostic files and source limitations are documented in source_reviews/screening/noaa_wcpfc_yellowfin_2026.md.",
   "SC22 deferred advice review to SC23; the 2026 diagnostic is the latest detailed source package located, not an adopted advice result."
 )
 replace_candidate_register_row(candidate_path, candidate_row,

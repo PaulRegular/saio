@@ -4,7 +4,7 @@ root <- '.'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 row <- register[register$candidate_id == 'NOAA:10610', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_klamath_spring_chinook_2013.md'), warn = FALSE), collapse = ' ')
 stopifnot(nrow(row) == 1L,
   row$candidate_unit_id == 'noaa_klamath_spring_chinook',

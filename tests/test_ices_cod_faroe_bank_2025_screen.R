@@ -19,7 +19,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/ices_cod_faroe_bank_2025.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/screening/ices_cod_faroe_bank_2025.md'), warn = FALSE), collapse = '\n')
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),

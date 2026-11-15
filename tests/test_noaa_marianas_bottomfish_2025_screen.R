@@ -54,7 +54,7 @@ stopifnot(
   !any(grepl('Guam|Northern Mariana|CNMI', assessments$assessment_id, ignore.case = TRUE), na.rm = TRUE),
   !any(grepl('Guam|Northern Mariana|CNMI', inputs$assessment_id, ignore.case = TRUE), na.rm = TRUE),
   !any(grepl('Guam|Northern Mariana|CNMI', outputs$assessment_id, ignore.case = TRUE), na.rm = TRUE),
-  file.exists(file.path(root, 'discovery/source_reviews/noaa_marianas_bottomfish_2024_2025.md'))
+  file.exists(file.path(root, 'source_reviews/screening/noaa_marianas_bottomfish_2024_2025.md'))
 )
 
 cat('NOAA Guam 2024 and CNMI 2025 current-unit screens passed.\n')

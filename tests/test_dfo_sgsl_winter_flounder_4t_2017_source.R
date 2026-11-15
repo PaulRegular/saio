@@ -115,7 +115,7 @@ stopifnot(
   all(grepl('^[[:xdigit:]]{64}$', manifest$sha256)),
   file.exists(file.path(root, 'scripts', 'database',
     '544_import_dfo_sgsl_winter_flounder_4t_2017.R')),
-  file.exists(file.path(root, 'discovery', 'source_reviews',
+  file.exists(file.path(root, 'source_reviews', 'screening',
     'dfo_sgsl_winter_flounder_4t_2017.md'))
 )
 

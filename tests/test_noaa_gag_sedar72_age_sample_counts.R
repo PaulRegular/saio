@@ -36,7 +36,7 @@ stopifnot(
   all(grepl("not age proportions or effective likelihood sample sizes", rows$notes, fixed = TRUE))
 )
 
-review <- paste(readLines(file.path(root, "discovery/source_reviews/noaa_gag_sedar72_2022.md"),
+review <- paste(readLines(file.path(root, "source_reviews/screening/noaa_gag_sedar72_2022.md"),
   warn = FALSE), collapse = " ")
 stopifnot(grepl("144 fish counts and 144 trip counts are now imported", review, fixed = TRUE))
 cat("Gulf gag SEDAR 72 age-sample count source rows and limitations passed.\n")

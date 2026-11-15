@@ -24,7 +24,7 @@ units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
 stopifnot(all(vapply(rows$candidate_unit_id, function(id)
   sum(units$candidate_unit_id == id) == 1L, logical(1L))))
 
-review <- file.path(root, 'discovery', 'source_reviews',
+review <- file.path(root, 'source_reviews', 'screening',
   'noaa_alaska_sharks_2022.md')
 stopifnot(file.exists(review),
   grepl('2026 groundfish SAFE chapter list',

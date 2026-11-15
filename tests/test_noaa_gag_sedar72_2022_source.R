@@ -33,7 +33,7 @@ candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
 candidate <- candidates[candidates$candidate_id == candidate_id, , drop = FALSE]
 manifest <- read.csv("provenance/noaa_gag_sedar72_2022/manifest.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_gag_sedar72_2022.md",
+review <- paste(readLines("source_reviews/screening/noaa_gag_sedar72_2022.md",
   warn = FALSE), collapse = "\n")
 output_key <- paste(outputs$type, outputs$measure, outputs$year, outputs$sex,
   outputs$fleet, outputs$survey, outputs$age, sep = "|")

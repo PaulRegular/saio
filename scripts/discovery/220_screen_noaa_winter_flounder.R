@@ -62,7 +62,7 @@ x$notes[gom] <- paste(
   'Stock SMART assessment ID 14073 is an Operational assessment using the',
   'area-swept biomass method with data through 2024. The 2025 report was',
   'compiled in August 2025 and posted by ASMFC in January 2026; see',
-  'discovery/source_reviews/noaa_winter_flounder_gom_sne.md.'
+  'source_reviews/screening/noaa_winter_flounder_gom_sne.md.'
 )
 
 sne <- rows[2L]
@@ -125,7 +125,7 @@ x$notes[sne] <- paste(
   'but the 2025 results were presented to the ASMFC Management Board for',
   '2026-2028 management decisions. The 2025 report states that data',
   'structure, model settings, and assumptions were unchanged. See',
-  'discovery/source_reviews/noaa_winter_flounder_gom_sne.md.'
+  'source_reviews/screening/noaa_winter_flounder_gom_sne.md.'
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

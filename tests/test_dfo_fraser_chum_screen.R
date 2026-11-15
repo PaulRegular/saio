@@ -8,7 +8,7 @@ outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors
 
 fraser <- register[register$candidate_id == 'DFO:Pacific:Fraser Chum Salmon', , drop = FALSE]
 inner <- register[register$candidate_id == 'DFO:Pacific:Inner South Coast Chum', , drop = FALSE]
-review_path <- file.path(root, 'discovery', 'source_reviews', 'dfo_fraser_chum_2026.md')
+review_path <- file.path(root, 'source_reviews', 'screening', 'dfo_fraser_chum_2026.md')
 
 stopifnot(
   nrow(fraser) == 1L,
