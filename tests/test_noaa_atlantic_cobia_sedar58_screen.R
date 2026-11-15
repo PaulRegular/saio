@@ -20,8 +20,7 @@ unit <- units[units$candidate_unit_id == 'noaa_cobia_atlantic_2020', , drop = FA
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
   unit$candidate_ids == 'NOAA:12149', unit$eligibility == 'eligible')
 
-review <- file.path(root, 'discovery', 'source_reviews',
-  'noaa_atlantic_cobia_sedar58_2020.md')
+review <- file.path(root, 'source_reviews', 'noaa_atlantic_cobia.md')
 stopifnot(file.exists(review),
   grepl('commercial age compositions were not used',
     paste(readLines(review, warn = FALSE), collapse = ' '), ignore.case = TRUE))

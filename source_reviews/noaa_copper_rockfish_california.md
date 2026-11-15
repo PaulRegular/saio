@@ -1,5 +1,7 @@
 # NOAA California copper rockfish, 2023
 
+SAIO stock `noaa_copper_rockfish_california`. Assessment `noaa_copper_rockfish_california_2023`.
+
 ## Assessment unit and source set
 
 Stock SMART IDs 15332 and 15333 identify the north and south California model

@@ -93,7 +93,7 @@ review <- list(
     'installed in this R execution environment, so fitfromweb retrieval could not be',
     'tested; this is not evidence that no object exists. The 2022 Stock Annex and',
     'WKICEMP framework report are cached or cross-referenced in the local ignored',
-    'source cache. See discovery/source_reviews/ices_atlantic_wolffish_iceland_2026.md.'
+    'source cache. See source_reviews/ices_atlantic_wolffish_iceland_5a.md.'
   )
 )
 already_applied <- all(vapply(names(review), function(column) {

@@ -45,7 +45,7 @@ inventory <- read_columns("discovery/inventory_units.csv", c(
 manifest <- read.csv("provenance/discovery_noaa_goa_rougheye_2023/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines(
-  "discovery/source_reviews/noaa_goa_rougheye_blackspotted_2023.md",
+  "source_reviews/noaa_goa_rougheye_blackspotted.md",
   warn = FALSE), collapse = " ")
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

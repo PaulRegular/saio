@@ -25,7 +25,7 @@ outputs <- read_matching_rows("database/outputs.csv", assessment_id)
 candidate <- read_matching_rows("discovery/candidates.csv", "MPI:TRE7")
 manifest <- read.csv("provenance/mpi_trevally_tre7_2026_sources.csv",
                      stringsAsFactors = FALSE)
-review <- readLines("discovery/source_reviews/mpi_trevally_tre7_2026.md",
+review <- readLines("source_reviews/mpi_trevally_tre7.md",
                     warn = FALSE)
 
 stopifnot(

@@ -10,8 +10,7 @@ units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 unit <- units[units$unit_key == paste0('candidate:', unit_id), , drop = FALSE]
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
-  'ices_four_spot_megrim_8c9a_2026.md'), warn = FALSE), collapse = '\n')
+review <- paste(readLines(file.path(root, 'source_reviews', 'ices_four_spot_megrim_8c9a.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsAsFactors = FALSE,

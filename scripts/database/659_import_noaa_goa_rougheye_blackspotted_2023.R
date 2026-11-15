@@ -572,7 +572,7 @@ import_noaa_goa_rougheye_blackspotted_2023 <- function(root = ".", write = FALSE
       "goa_rougheye_2025_catch_report.pdf"],
     assumptions_status = "partial", inputs_status = "partial",
     outputs_status = "partial",
-    notes = paste("The December 2023 SAFE recommends Model 23.1b. The official December 2025 GOA catch report says the most recent full assessment was 2023 and no assessment was conducted in 2025. A 2026 full-assessment document was uploaded for November Plan Team review but had not yet been reviewed as of 2026-11-12. The source import retains published age compositions, aggregate catches, survey indices, biological inputs, scalar parameters and population outputs; catch-at-age, F-at-age and several model matrices are unavailable. See discovery/source_reviews/noaa_goa_rougheye_blackspotted_2023.md.")), 1L)
+    notes = paste("The December 2023 SAFE recommends Model 23.1b. The official December 2025 GOA catch report says the most recent full assessment was 2023 and no assessment was conducted in 2025. A 2026 full-assessment document was uploaded for November Plan Team review but had not yet been reviewed as of 2026-11-12. The source import retains published age compositions, aggregate catches, survey indices, biological inputs, scalar parameters and population outputs; catch-at-age, F-at-age and several model matrices are unavailable. See source_reviews/noaa_goa_rougheye_blackspotted.md.")), 1L)
 
   cat("NOAA GOA rougheye/blackspotted 2023 source extraction\n")
   cat("Inputs:", nrow(inputs), "rows (catch, age/length compositions, survey indices, weight and maturity at age).\n")
@@ -637,7 +637,7 @@ import_noaa_goa_rougheye_blackspotted_2023 <- function(root = ".", write = FALSE
     "The 2026 full-assessment document uploaded for the upcoming November Plan Team meeting was not yet reviewed as of 2026-11-12.")
   candidates$notes[ci] <- paste(
     "Partial source import from the 2023 SAFE, Model 23.1b. Rounded proportions are retained without renormalization; source sample sizes and haul counts are recorded.",
-    "See discovery/source_reviews/noaa_goa_rougheye_blackspotted_2023.md and provenance/discovery_noaa_goa_rougheye_2023/sources.csv.")
+    "See source_reviews/noaa_goa_rougheye_blackspotted.md and provenance/discovery_noaa_goa_rougheye_2023/sources.csv.")
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)
   inventory_path <- file.path(root, "discovery/inventory_units.csv")

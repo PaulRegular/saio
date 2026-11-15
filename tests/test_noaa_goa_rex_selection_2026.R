@@ -35,7 +35,7 @@ stopifnot(
   sum(assessments$assessment_id == paste0(stock_id, "_2026")) == 1L,
   assessments$inputs_status[assessments$assessment_id == paste0(stock_id, "_2026")] == "partial",
   assessments$outputs_status[assessments$assessment_id == paste0(stock_id, "_2026")] == "partial",
-  file.exists("discovery/source_reviews/noaa_goa_rex_sole_2026.md"),
+  file.exists("source_reviews/noaa_goa_rex_sole.md"),
   file.exists("provenance/discovery_noaa_goa_rex_2026/sources.csv")
 )
 

@@ -221,7 +221,7 @@ register$review_date[candidate_row] <- "2026-11-14"
 register$notes[candidate_row] <- paste(
   "Partial source import includes WGBIE 2026 Tables 6.4.2a and 6.4.2b, Table 6.4.5, the 2026 Stock Annex, and ICES SAG key 26018.",
   "The Table 6.4.2a CV was converted from percent to ratio; eight blank CV cells remain missing, not zero.",
-  "The report's discard table age labels 0-7 differ from the Annex's 0-6+ model bins; see discovery/source_reviews/ices_four_spot_megrim_8c9a_2026.md."
+  "The report's discard table age labels 0-7 differ from the Annex's 0-6+ model bins; see source_reviews/ices_four_spot_megrim_8c9a.md."
 )
 
 inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,

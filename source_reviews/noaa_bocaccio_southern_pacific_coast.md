@@ -1,5 +1,7 @@
 # NOAA Stock SMART 10413: Southern Pacific Coast bocaccio, 2017 fitted assessment
 
+SAIO stock `noaa_bocaccio_southern_pacific_coast`. Assessment `noaa_bocaccio_southern_pacific_2017`.
+
 Reviewed 2026-11-11. NOAA Stock SMART 10413 identifies Southern Pacific Coast bocaccio, *Sebastes paucispinis*. This is geographically distinct from British Columbia bocaccio and northern U.S. Pacific bocaccio units.
 
 ## Assessment selection and stock unit

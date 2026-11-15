@@ -23,7 +23,7 @@ candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, che
 inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE, check.names = FALSE)
 provenance <- read.csv("provenance/discovery_noaa_blue_deacon_2017/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/noaa_blue_deacon_oregon_2017.md"), collapse = " ")
+review <- paste(readLines("source_reviews/noaa_blue_deacon_oregon.md"), collapse = " ")
 
 input_measure <- function(measure) inputs[inputs$measure == measure, , drop = FALSE]
 output_measure <- function(measure) outputs[outputs$measure == measure, , drop = FALSE]

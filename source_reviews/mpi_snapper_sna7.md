@@ -1,5 +1,7 @@
 # Snapper in SNA 7 — 2024 assessment
 
+SAIO stock `mpi_snapper_sna7`. Assessment `mpi_snapper_sna7_2024`.
+
 ## Stock unit and latest assessment
 
 Fisheries New Zealand's detailed 2024 assessment is the latest production assessment located for the current SNA 7 unit. The 2025 Fisheries Assessment Plenary still identifies the 2024 run as the latest assessment, and the 2026/27 research plan schedules the next full assessment for 2027. The accepted 2024 model is Stock Synthesis 3.30.22, with model years 1931–2023, one sex, and ages 1–30+.

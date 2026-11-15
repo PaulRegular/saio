@@ -1,5 +1,7 @@
 # NOAA Gulf of Alaska Rex Sole
 
+SAIO stock `noaa_goa_rex_sole`. Assessment `noaa_goa_rex_sole_2026`.
+
 ## Stock identity and assessment
 
 NOAA Stock SMART IDs 10058, 15410 and 15411 describe one Gulf of Alaska rex sole assessment unit. ID 10058 is the Gulf-wide entry; IDs 15410 and 15411 identify the eastern and western-central areas used by the assessment. NOAA ID 10059, Pacific Coast rex sole, is a separate stock unit.

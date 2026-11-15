@@ -1,5 +1,7 @@
 # Icelandic ling, Division 5.a (2026)
 
+SAIO stock `ices_ling_5a`. Assessment `ices_ling_5a_2026`.
+
 **Review date:** 2026-11-14
 **ICES stock code:** lin.27.5a  
 **Scientific name:** *Molva molva*

@@ -168,7 +168,7 @@ stopifnot(
 candidate <- read_matching_rows("discovery/candidates.csv", "MPI:SNA7")
 manifest <- read.csv("provenance/mpi_snapper_sna7_2024_sources.csv",
                      stringsAsFactors = FALSE)
-review <- readLines("discovery/source_reviews/mpi_snapper_sna7_2024.md",
+review <- readLines("source_reviews/mpi_snapper_sna7.md",
                     warn = FALSE)
 stopifnot(
   nrow(candidate) == 1L,

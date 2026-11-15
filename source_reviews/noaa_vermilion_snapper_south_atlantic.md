@@ -1,5 +1,7 @@
 # South Atlantic vermilion snapper, SEDAR 55
 
+SAIO stock `noaa_vermilion_snapper_south_atlantic`. Assessment `noaa_vermilion_snapper_south_atlantic_sedar55_2018`.
+
 ## Unit and assessment
 
 NOAA Stock SMART identifies stock 10257 as South Atlantic vermilion snapper

@@ -1,5 +1,7 @@
 # Trevally in TRE 7 — 2026 assessment
 
+SAIO stock `mpi_trevally_tre7`. Assessment `mpi_trevally_tre7_2026`.
+
 ## Stock unit and assessment
 
 The latest detailed production assessment located is Fisheries New Zealand FAR 2026/34, published 21 September 2026. It assesses the TRE 7 fishstock for model years 1975–2025 using Stock Synthesis 3.30.23.1. The model combines sexes and uses ages 1–39 plus a 40+ group.

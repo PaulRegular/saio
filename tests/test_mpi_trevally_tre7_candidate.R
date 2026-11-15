@@ -20,7 +20,7 @@ stock <- read_matching_rows("database/stocks.csv", "mpi_trevally_tre7")
 assessment <- read_matching_rows("database/assessments.csv", "mpi_trevally_tre7_2026")
 manifest <- read.csv("provenance/mpi_trevally_tre7_2026_sources.csv",
                      stringsAsFactors = FALSE)
-review <- readLines("discovery/source_reviews/mpi_trevally_tre7_2026.md")
+review <- readLines("source_reviews/mpi_trevally_tre7.md")
 
 stopifnot(
   nrow(candidate) == 1L,

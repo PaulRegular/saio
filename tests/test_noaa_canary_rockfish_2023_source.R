@@ -37,8 +37,7 @@ selected <- selected[selected$candidate_unit_id == "noaa_stocksmart_10415", , dr
 input <- inputs[inputs$assessment_id == assessment_id, , drop = FALSE]
 output <- outputs[outputs$assessment_id == assessment_id, , drop = FALSE]
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
-review <- paste(readLines(file.path(root, "discovery", "source_reviews",
-  "noaa_canary_rockfish_pacific_coast.md"), warn = FALSE), collapse = "\n")
+review <- paste(readLines(file.path(root, "source_reviews", "noaa_canary_rockfish_pacific_coast.md"), warn = FALSE), collapse = "\n")
 get_input <- function(type, measure) input[input$type == type & input$measure == measure, , drop = FALSE]
 get_output <- function(type, measure) output[output$type == type & output$measure == measure, , drop = FALSE]
 setting <- function(name) assumptions$value[assumptions$setting == name]

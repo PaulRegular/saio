@@ -80,7 +80,7 @@ stopifnot(
 )
 
 review <- paste(readLines(
-  file.path(root, "discovery", "source_reviews", "ices_ling_5a_2026.md"), warn = FALSE
+  file.path(root, "source_reviews", "ices_ling_5a.md"), warn = FALSE
 ), collapse = "\n")
 stopifnot(
   grepl("3–12+", review, fixed = TRUE),

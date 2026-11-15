@@ -1,5 +1,7 @@
 # Northern gemfish (SKI 1 and SKI 2), 2023 assessment
 
+SAIO stock `mpi_gemfish_northern_ski1_ski2`. Assessment `mpi_gemfish_ski1_ski2_2023`.
+
 ## Assessment and stock identity
 
 Fisheries New Zealand's 2023 full quantitative assessment treats SKI 1 and SKI 2 as one northern gemfish biological stock. The 2023 Stock Synthesis model represents one population and separates catches and selectivity by area, fishery, and season. The 2025 Fisheries Assessment Plenary still identifies the 2023 assessment as the most recent full assessment for this unit. The later assessment of southern gemfish in SKI 3 and SKI 7 is a different stock and is not combined here.

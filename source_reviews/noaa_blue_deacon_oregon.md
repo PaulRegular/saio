@@ -1,5 +1,7 @@
 # Blue and Deacon Rockfish, Oregon
 
+SAIO stock `noaa_blue_deacon_oregon`. Assessment `noaa_blue_deacon_oregon_2017`.
+
 The current Oregon Blue and Deacon Rockfish complex remains listed in NOAA's 2026 third-quarter stock-status table. The latest detailed production assessment located is the 2017 Stock Synthesis assessment, fitted through 2016 with a 2017 forecast. The 2017 report and Oregon model archive are cached locally; the source manifest records their retrieval dates, URLs, sizes, and checksums.
 
 The native data file contains 625 annual aggregate catches from five fleets (1892–2016), 60 observations from four aggregate fishery-dependent CPUE series (1980–2016), 101 length-composition rows, and 418 age-composition rows. Of the age rows, 371 are conditional age-at-length and 47 are marginal. The native `catch_se` field, including its zero values, is preserved as a source field; the report treats catches as known, and the control file does not activate a catch likelihood. The composition cells are retained at their source scale with sample sizes, age-error IDs, source sex coding, partitions, and signed fleet/year codes. These samples are not annual catch-at-age or age-specific abundance indices. All index and composition records are from month 7 in a one-season model; the corresponding sampling-time fraction is 0.5.

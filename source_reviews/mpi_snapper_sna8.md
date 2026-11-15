@@ -1,5 +1,7 @@
 # Snapper in SNA 8 — 2024 assessment
 
+SAIO stock `mpi_snapper_sna8`. Assessment `mpi_snapper_sna8_2024`.
+
 ## Stock unit and current assessment
 
 The current management stock is SNA 8, covering the west coast of New Zealand's North Island. The 2025 Fisheries Assessment Plenary identifies 2024 as the most recent assessment year. FAR 2024/49 documents the 2024 production assessment, updated with catch, composition, CPUE, and Kaharoa survey data. The assessment uses Stock Synthesis and has model year 2023 corresponding to the 2022/23 fishing year; current status outputs refer to the 2023/24 fishing year.

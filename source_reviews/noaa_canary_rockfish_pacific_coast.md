@@ -1,5 +1,7 @@
 # NOAA Canary Rockfish, U.S. West Coast
 
+SAIO stock `noaa_canary_rockfish_pacific_coast`. Assessment `noaa_canary_rockfish_2023`.
+
 ## Assessment and cached sources
 
 NOAA Stock SMART ID 10415 is the U.S. West Coast management unit for *Sebastes pinniger*. It is separate from the DFO British Columbia canary rockfish unit. The selected production assessment is the 2023 Stock Synthesis 3.30.21 run, published in 2024 and fitted through 2022. Its model report contains historical estimates through 2022 and management projections through 2034. Stock SMART's 2025 inventory label and later harvest actions do not identify a newer full assessment.

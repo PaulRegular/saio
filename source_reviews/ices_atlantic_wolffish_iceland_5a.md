@@ -1,5 +1,7 @@
 # Icelandic Atlantic wolffish (caa.27.5a), 2026 assessment
 
+SAIO stock `ices_atlantic_wolffish_iceland_5a`. Assessment `ices_atlantic_wolffish_iceland_2026`.
+
 Reviewed 2026-11-03. The current Icelandic management unit is Atlantic wolffish (*Anarhichas lupus*) in ICES Division 5.a. The 2026 MFRI production assessment is a statistical catch-at-age SAM assessment, uses data through 2025, and is represented by ICES Standard Graphs key 22633. This is distinct from the U.S. Gulf of Maine/Georges Bank Atlantic wolffish unit.
 
 The current 2026 report and table export provide numeric age-specific inputs and outputs that were not captured in the earlier review. The report states that the model tracks ages 4-16, with age 16 as a plus group, and fixes natural mortality at 0.15 per year for all ages.

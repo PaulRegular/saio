@@ -1,5 +1,7 @@
 # ICES four-spot megrim in divisions 8.c and 9.a
 
+SAIO stock `ices_four_spot_megrim_8c9a`. Assessment `ices_four_spot_megrim_8c9a_2026`.
+
 ## Stock and assessment
 
 `ldb.27.8c9a` is the current four-spot megrim (*Lepidorhombus boscii*) unit in

@@ -15,7 +15,7 @@ assessment <- screen$assessments[screen$assessments$assessment_id == assessment_
 inputs <- screen$inputs[screen$inputs$assessment_id == assessment_id, ]
 outputs <- screen$outputs[screen$outputs$assessment_id == assessment_id, ]
 review <- paste(readLines(file.path(root,
-  "discovery/source_reviews/noaa_copper_rockfish_california_2023.md"),
+  "source_reviews/noaa_copper_rockfish_california.md"),
   warn = FALSE), collapse = " ")
 
 stopifnot(

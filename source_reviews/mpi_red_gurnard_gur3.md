@@ -1,5 +1,7 @@
 # Red gurnard GUR 3: 2022 source screen
 
+SAIO stock `mpi_red_gurnard_gur3`. Assessment `mpi_red_gurnard_gur3_2022`.
+
 ## Stock unit and current assessment
 
 GUR 3 is the Fisheries New Zealand management unit for red gurnard (*Chelidonichthys kumu*) off the east coast of the South Island. The latest full assessment identified in the May 2026 Fisheries Assessment Plenary remains the 2022 production assessment, using data through the 2020/21 fishing year (model year 2021). The proposed 2026–27 research plan schedules an updated GUR 3 assessment for completion in 2027; it is not yet a published production run.

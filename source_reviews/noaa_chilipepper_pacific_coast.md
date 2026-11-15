@@ -1,5 +1,7 @@
 # U.S. Pacific Coast chilipepper rockfish: source review
 
+SAIO stock `noaa_chilipepper_pacific_coast`. Assessment `noaa_chilipepper_2025`.
+
 ## Current stock and assessment
 
 The current assessment unit is the U.S. coastwide *Sebastes goodei* population from the U.S.-Mexico border to the U.S.-Canada border, covering California, Oregon and Washington. NOAA Stock SMART identifies this current unit as NOAA:17357. The legacy NOAA:10395 entry describes an earlier southern-area assessment; the 2025 report does not give a formal identifier crosswalk, so the exact relation remains unresolved and NOAA:10395 is not treated as a second current stock.

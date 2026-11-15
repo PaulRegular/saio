@@ -33,7 +33,7 @@ inventory <- read.csv(file.path(root, "discovery", "inventory_units.csv"),
 )
 inventory <- inventory[inventory$unit_key == "candidate:ices_ling_5a", , drop = FALSE]
 review <- paste(readLines(
-  file.path(root, "discovery", "source_reviews", "ices_ling_5a_2026.md"),
+  file.path(root, "source_reviews", "ices_ling_5a.md"),
   warn = FALSE
 ), collapse = "\n")
 

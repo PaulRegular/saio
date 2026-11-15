@@ -1,5 +1,7 @@
 # NOAA Atlantic cobia — SEDAR 58 (2020)
 
+SAIO stock `noaa_atlantic_cobia`. Assessment `noaa_atlantic_cobia_sedar58_2020`.
+
 ## Stock unit and assessment
 
 NOAA Stock SMART unit 12149 is the Atlantic migratory cobia stock north of the Georgia-Florida border. It is distinct from Gulf of Mexico cobia (NOAA:10390). SEDAR 58 is the latest completed production assessment identified as the basis for current Atlantic cobia status. The September 2020 revised final report incorporates review changes; the CIE review identifies run co23 as the definitive base run. The assessment covers 1986–2017.

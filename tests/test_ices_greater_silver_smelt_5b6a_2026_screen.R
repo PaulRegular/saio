@@ -26,7 +26,7 @@ units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'ices_greater_silver_smelt_5b6a', , drop = FALSE]
 source_review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/ices_greater_silver_smelt_5b6a_2026.md'),
+  'source_reviews/ices_greater_silver_smelt_5b6a.md'),
   warn = FALSE), collapse = '\n')
 
 expected <- c(

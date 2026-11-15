@@ -1,5 +1,7 @@
 # NOAA Northern anchovy central subpopulation — 2021 assessment
 
+SAIO stock `noaa_northern_anchovy_central_subpopulation`. Assessment `noaa_northern_anchovy_central_subpopulation_2021`.
+
 ## Stock unit and assessment
 
 NOAA Stock SMART ID 10574 is labelled “Northern anchovy - Southern Pacific Coast.” The latest detailed production assessment located is the PFMC 2021 benchmark for the Northern anchovy central subpopulation, adopted in June 2022. The assessment uses observations from Ensenada, southern California, and central California and describes the population as extending from California to northern Baja California. The stock record keeps the Stock SMART label and the assessment’s central-subpopulation identity together.

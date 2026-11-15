@@ -11,7 +11,7 @@ unit <- units[units$unit_key == paste0("stock:", candidate_unit_id), , drop = FA
 manifest <- read_table("provenance/mpi_red_gurnard_gur3_2022_sources.csv")
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
-review <- paste(readLines("discovery/source_reviews/mpi_red_gurnard_gur3_2022.md",
+review <- paste(readLines("source_reviews/mpi_red_gurnard_gur3.md",
   warn = FALSE, encoding = "UTF-8"), collapse = "\n")
 
 stopifnot(

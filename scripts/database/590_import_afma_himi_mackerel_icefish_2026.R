@@ -391,7 +391,7 @@ candidates$decision_reason[candidate_rows] <- paste(
 )
 candidates$notes[candidate_rows] <- paste(
   "The 2026 report is the current source record; 2024 and 2025 survey rows are contextual only.",
-  "See discovery/source_reviews/afma_himi_mackerel_icefish_2026.md."
+  "See source_reviews/afma_himi_mackerel_icefish.md."
 )
 replace_row("discovery/candidates.csv", "candidate_id", candidate_id,
   candidates[candidate_rows, , drop = FALSE])

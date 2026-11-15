@@ -118,7 +118,7 @@ stopifnot(
   all(rex_candidates$import_status == "partial"),
   selected$curation_status[selected$candidate_id == "NOAA:10058"] ==
     "source_curated_partial",
-  file.exists("discovery/source_reviews/noaa_goa_rex_sole_2026.md")
+  file.exists("source_reviews/noaa_goa_rex_sole.md")
 )
 
 cat("NOAA GOA rex sole 2026 source records passed.

@@ -75,7 +75,7 @@ stopifnot(
   manifest$retrieved_on == "2026-11-06",
   manifest$sha256 == "17FF6A46D444A633C4BEE736694C56E524B59899A32AA7498EBA6414591DE955",
   file.exists(file.path("source_cache", manifest$local_file)),
-  file.exists("discovery/source_reviews/afma_himi_mackerel_icefish_2026.md")
+  file.exists("source_reviews/afma_himi_mackerel_icefish.md")
 )
 
 cached_file <- file.path("source_cache", manifest$local_file)

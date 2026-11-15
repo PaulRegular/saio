@@ -1,5 +1,7 @@
 # Red gurnard GUR 7: 2022 source screen
 
+SAIO stock `mpi_red_gurnard_gur7`. Assessment `mpi_red_gurnard_gur7_2022`.
+
 ## Unit and latest assessment
 
 Fisheries New Zealand assesses GUR 7 as the Challenger management unit for red gurnard (*Chelidonichthys kumu*). The latest full quantitative assessment identified in the May 2026 Plenary is the 2022 assessment, fitted through the 2020/21 fishing year (model year 2021). The May 2026 Plenary is a status summary, not a new assessment. Fisheries New Zealand's 2026–27 research services plan an update using the 2022, 2024, and 2026 trawl surveys, with project completion scheduled for 2027.

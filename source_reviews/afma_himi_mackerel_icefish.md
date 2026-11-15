@@ -1,5 +1,7 @@
 # AFMA HIMI mackerel icefish, 2026
 
+SAIO stock `afma_himi_mackerel_icefish`. Assessment `afma_himi_mackerel_icefish_2026`.
+
 ## Assessment and stock unit
 
 The current stock unit is mackerel icefish (*Champsocephalus gunnari*) in the Heard Island and McDonald Islands fishery, CCAMLR Division 58.5.2. No matching canonical SAIO stock record was found. It is distinct from HIMI Patagonian toothfish and the separate Macquarie Island toothfish unit.

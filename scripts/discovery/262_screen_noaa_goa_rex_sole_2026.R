@@ -4,8 +4,7 @@ x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE)
 
 ids <- c('NOAA:10058', 'NOAA:15410', 'NOAA:15411')
-source_review <- file.path(root, 'discovery', 'source_reviews',
-  'noaa_goa_rex_sole_2026.md')
+source_review <- file.path(root, 'source_reviews', 'noaa_goa_rex_sole.md')
 i <- match(ids, x$candidate_id)
 if (anyNA(i)) stop('Expected NOAA rex sole inventory rows are missing.', call. = FALSE)
 if (any(stocks$scientific_name == 'Glyptocephalus zachirus')) {

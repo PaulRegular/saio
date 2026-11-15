@@ -1,5 +1,7 @@
 # ICES greater silver smelt, divisions 5.b and 6.a (2026)
 
+SAIO stock `ices_greater_silver_smelt_5b6a`. Assessment `ices_greater_silver_smelt_5b6a_2026`.
+
 ICES stock aru.27.5b6a is the current greater silver smelt unit for the
 Faroes grounds and west of Scotland. It is distinct from the ICES units
 aru.27.5a14, aru.27.123a4, and aru.27.6b7-1012; no canonical database

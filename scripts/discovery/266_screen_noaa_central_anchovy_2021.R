@@ -5,8 +5,7 @@ stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors =
 
 id <- 'NOAA:10574'
 i <- match(id, x$candidate_id)
-source_review <- file.path(root, 'discovery', 'source_reviews',
-  'noaa_northern_anchovy_central_subpopulation_2021.md')
+source_review <- file.path(root, 'source_reviews', 'noaa_northern_anchovy_central_subpopulation.md')
 if (is.na(i) || sum(x$candidate_id == id) != 1L) {
   stop('Expected one NOAA northern anchovy inventory row.', call. = FALSE)
 }

@@ -17,7 +17,7 @@ read_matching_rows <- function(path, id) {
 candidate <- read_matching_rows("discovery/candidates.csv", "MPI:SNA8")
 manifest <- read.csv("provenance/mpi_snapper_sna8_2024_sources.csv",
   stringsAsFactors = FALSE)
-review <- readLines("discovery/source_reviews/mpi_snapper_sna8_2024.md",
+review <- readLines("source_reviews/mpi_snapper_sna8.md",
   warn = FALSE)
 
 stopifnot(
