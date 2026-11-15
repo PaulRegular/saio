@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "database"
 stock_id <- "noaa_petrale_sole_pacific_coast"
 assessment_id <- "noaa_petrale_sole_pacific_coast_2023"
@@ -125,16 +127,15 @@ stopifnot(nrow(a) == 9L,
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidate[candidate$candidate_id == "NOAA:10011", ]
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 inventory <- inventory[inventory$unit_key == "candidate:noaa_stocksmart_10011", ]
-selected <- read.csv("discovery/selections/selected_batch_05_2026.csv",
-  stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-selected <- selected[selected$candidate_unit_id == "noaa_stocksmart_10011", ]
-stopifnot(nrow(candidate) == 1L, candidate$import_status == "partial",
-  candidate$matched_stock_id == stock_id, nrow(inventory) == 1L,
-  inventory$import_status == "partial", nrow(selected) == 1L,
-  selected$curation_status == "partial_source_import")
+stopifnot(
+  nrow(candidate) == 1L,
+  candidate$import_status == "partial",
+  candidate$matched_stock_id == stock_id,
+  nrow(inventory) == 1L,
+  inventory$import_status == "partial"
+)
 
 manifest <- read.csv("provenance/noaa_petrale_sole_pacific_coast/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)

@@ -102,18 +102,20 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-batch <- read.csv("discovery/selections/selected_batch_23_2026.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
 stock <- stock[stock$stock_id == "noaa_gulf_gray_triggerfish", , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == "NOAA:10062", , drop = FALSE]
-selected <- batch[batch$candidate_id == "NOAA:10062", , drop = FALSE]
-stopifnot(nrow(stock) == 1L, stock$ocean == "Northwest Atlantic",
-  nrow(assessment) == 1L, assessment$terminal_year == 2024L,
-  assessment$inputs_status == "partial", assessment$outputs_status == "partial",
+stopifnot(
+  nrow(stock) == 1L,
+  stock$ocean == "Northwest Atlantic",
+  nrow(assessment) == 1L,
+  assessment$terminal_year == 2024L,
+  assessment$inputs_status == "partial",
+  assessment$outputs_status == "partial",
   assessment$is_applied == FALSE,
-  nrow(candidate) == 1L, candidate$matched_stock_id == stock$stock_id,
-  candidate$import_status == "partial",
-  nrow(selected) == 1L, selected$curation_status == "imported_partial")
+  nrow(candidate) == 1L,
+  candidate$matched_stock_id == stock$stock_id,
+  candidate$import_status == "partial"
+)
 
 cat("NOAA Gulf gray triggerfish SEDAR 100 source checks passed.\n")

@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
@@ -25,8 +27,7 @@ stopifnot(nac$candidate_unit_id == joint_id, neac$candidate_unit_id == joint_id,
   thresher$match_status == 'new', thresher$screening_status == 'screened',
   thresher$eligibility == 'ineligible')
 
-unit_path <- file.path(root, 'discovery', 'inventory_units.csv')
-units <- read.csv(unit_path, stringsAsFactors = FALSE, check.names = FALSE)
+units <- candidate_units()
 joint <- units[units$unit_key == paste0('candidate:', joint_id), , drop = FALSE]
 stopifnot(nrow(joint) == 1L, joint$inventory_entries == 2L,
   grepl('ICES:sal.nac.all', joint$candidate_ids, fixed = TRUE),

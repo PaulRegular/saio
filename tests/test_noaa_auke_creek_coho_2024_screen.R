@@ -1,11 +1,12 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source('scripts/discovery/507_screen_noaa_auke_creek_coho_2024.R')
 
 root <- '.'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 row <- register[register$candidate_id == 'NOAA:10580', , drop = FALSE]
-unit <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+unit <- candidate_units()
 unit <- unit[!is.na(unit$candidate_unit_id) &
   unit$candidate_unit_id == 'noaa_auke_creek_coho_southeast_alaska', , drop = FALSE]
 review <- readLines(file.path(root, 'source_reviews', 'screening',
@@ -48,8 +49,7 @@ stopifnot(!any(stocks$authority_stock_id == '10580', na.rm = TRUE),
   !any(grepl('noaa_auke_creek_coho_2024', inputs$assessment_id, fixed = TRUE)),
   !any(grepl('noaa_auke_creek_coho_2024', outputs$assessment_id, fixed = TRUE)))
 
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 afsc <- noaa[noaa$source_region == 'AFSC', , drop = FALSE]
 stopifnot(sum(noaa$inventory_rows) == 432L,

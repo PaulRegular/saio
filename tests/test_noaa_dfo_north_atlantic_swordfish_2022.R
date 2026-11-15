@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 source('tests/helper_inventory.R')
 unit_id <- 'iccat_north_atlantic_swordfish'
@@ -5,11 +7,9 @@ register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate_ids <- c('NOAA:10953', 'DFO:Maritimes:Swordfish - North Atlantic')
 candidates <- register[match(candidate_ids, register$candidate_id), , drop = FALSE]
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[units$unit_key == paste0('candidate:', unit_id), , drop = FALSE]
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+progress <- candidate_progress()
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'),

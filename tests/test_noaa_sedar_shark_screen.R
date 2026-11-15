@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -48,8 +50,7 @@ for (i in seq_along(required)) {
   stopifnot(identical(signature, as.raw(c(0x25, 0x50, 0x44, 0x46))))
 }
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 sharpnose <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id ==
   rows$candidate_unit_id[rows$candidate_id == 'NOAA:10670'], , drop = FALSE]
 stopifnot(nrow(sharpnose) == 1L,
@@ -60,8 +61,7 @@ stopifnot(nrow(sharpnose) == 1L,
   grepl('NOAA:14141', sharpnose$candidate_ids, fixed = TRUE),
   grepl('NOAA:14142', sharpnose$candidate_ids, fixed = TRUE))
 
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 stopifnot(sum(noaa$screening_complete) == 432L,
   sum(noaa$screening_not_started) == 0L,

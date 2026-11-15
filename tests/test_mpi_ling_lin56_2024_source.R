@@ -14,8 +14,6 @@ outputs <- read.csv("database/outputs.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selection <- read.csv("discovery/selections/selected_batch_06_2026.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
 
 stock <- subset(stocks, stock_id == "mpi_ling_lin56_lin6b")
 assessment <- subset(assessments, assessment_id == "mpi_ling_lin56_lin6b_2024")
@@ -23,7 +21,6 @@ input <- subset(inputs, assessment_id == "mpi_ling_lin56_lin6b_2024")
 assumption <- subset(assumptions, assessment_id == "mpi_ling_lin56_lin6b_2024")
 output <- subset(outputs, assessment_id == "mpi_ling_lin56_lin6b_2024")
 candidate_row <- subset(candidate, candidate_id == "MPI:LIN56+LIN6B")
-selection_row <- subset(selection, candidate_id == "MPI:LIN56+LIN6B")
 
 stopifnot(
   nrow(stock) == 1L,
@@ -60,8 +57,7 @@ stopifnot(
   candidate_row$matched_stock_id == stock_id,
   candidate_row$match_status == "matched",
   candidate_row$eligibility == "unresolved",
-  candidate_row$import_status == "partial",
-  selection_row$curation_status == "source_curated_partial"
+  candidate_row$import_status == "partial"
 )
 
 catch <- subset(input, measure == "catch_biomass")

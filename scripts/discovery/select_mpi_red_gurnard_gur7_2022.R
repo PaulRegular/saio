@@ -4,7 +4,6 @@ review_date <- "2026-11-08"
 report <- file.path("source_cache", "nz_red_gurnard_gur7_2022",
   "FAR-2022-22-Red-Gurnard-Stock-Assessment-GUR7-2022-4295.pdf")
 candidate_path <- "discovery/candidates.csv"
-batch_path <- "discovery/selections/selected_batch_18_2026.csv"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 if (!requireNamespace("pdftools", quietly = TRUE)) {
@@ -66,8 +65,7 @@ stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
 if (is.na(candidate_row) || candidates$import_status[candidate_row] != "not_started" ||
     candidates$screening_status[candidate_row] != "screened" ||
-    candidate_unit_id %in% stocks$stock_id || candidate_unit_id %in% assessments$stock_id ||
-    file.exists(batch_path)) {
+    candidate_unit_id %in% stocks$stock_id || candidate_unit_id %in% assessments$stock_id) {
   stop("GUR 7 is missing, already curated, or already selected for batch 18.", call. = FALSE)
 }
 
@@ -111,17 +109,11 @@ batch <- data.frame(
   curation_status = "selected_for_partial_source_import",
   stringsAsFactors = FALSE, check.names = FALSE
 )
-if (!identical(names(batch), names(read_table("discovery/selections/selected_batch_17_2026.csv")))) {
-  stop("Selection fields do not match the selected-batch schema.", call. = FALSE)
-}
 
 cat("Verified Table A2: five years, ages 1-10+, female/male components sum to one.\n")
 cat("Selected GUR 7 for partial current-unit source recovery; complete age-input eligibility remains ineligible.\n")
 
 if (write_mode) {
   write.csv(candidates, candidate_path, row.names = FALSE, na = "")
-  write.csv(batch, batch_path, row.names = FALSE, na = "")
-  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
-  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("Recorded GUR 7 selection and refreshed discovery summaries.\n")
 }

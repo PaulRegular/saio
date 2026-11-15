@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 read_assessment_rows <- function(path, ids) {
   con <- file(path, "rt")
@@ -28,8 +30,7 @@ outputs <- read_assessment_rows("database/outputs.csv", ids)
 assumptions_all <- read_table("database/assumptions.csv")
 assumptions <- assumptions_all[assumptions_all$assessment_id %in% ids, , drop = FALSE]
 candidates <- read_table("discovery/candidates.csv")
-inventory <- read_table("discovery/inventory_units.csv")
-selected <- read_table("discovery/selections/selected_batch_35_2026.csv")
+inventory <- candidate_units()
 manifest <- read_table("provenance/noaa_vermilion_rockfish_or_wa_2021/sources.csv")
 reviews <- paste(unlist(lapply(c(
   "source_reviews/screening/noaa_vermilion_rockfish_or_wa_2021.md",
@@ -49,7 +50,6 @@ or_id <- ids[1L]
 wa_id <- ids[2L]
 candidate_rows <- candidates[candidates$candidate_id %in% c("NOAA:15338", "NOAA:15339"), , drop = FALSE]
 inventory_row <- inventory[inventory$unit_key == paste0("candidate:", stock_id), , drop = FALSE]
-selected_row <- selected[selected$candidate_unit_id == stock_id, , drop = FALSE]
 or_inputs <- inputs[inputs$assessment_id == or_id, , drop = FALSE]
 wa_inputs <- inputs[inputs$assessment_id == wa_id, , drop = FALSE]
 or_outputs <- outputs[outputs$assessment_id == or_id, , drop = FALSE]
@@ -134,8 +134,6 @@ stopifnot(
   nrow(inventory_row) == 1L,
   inventory_row$matched_stock_id == stock_id,
   inventory_row$import_status == "partial",
-  nrow(selected_row) == 1L,
-  selected_row$curation_status == "partial_source_import",
   nrow(manifest) == 16L,
   grepl("Canonical inputs retain", reviews, fixed = TRUE),
   grepl("no estimates are pooled", reviews, fixed = TRUE)

@@ -1,11 +1,11 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source("tests/helper_inventory.R")
 
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selected <- read.csv("discovery/selections/selected_batch_08_2026.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-progress <- read.csv("discovery/inventory_progress.csv", stringsAsFactors = FALSE)
-units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE)
+progress <- candidate_progress()
+units <- candidate_units()
 manifest <- read.csv("provenance/afma_sessf_silver_warehou_2021_sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
@@ -23,9 +23,6 @@ stopifnot(
   candidate$eligibility == "unresolved",
   candidate$import_status == "partial",
   candidate$inventory_assessment_year == 2021L,
-  nrow(selected) == 1L,
-  selected$candidate_id == candidate$candidate_id,
-  selected$curation_status == "source_curated_partial",
   nrow(manifest) == 2L,
   all(manifest$retrieved_on == "2026-11-06"),
   all(vapply(seq_len(nrow(manifest)), function(i) {

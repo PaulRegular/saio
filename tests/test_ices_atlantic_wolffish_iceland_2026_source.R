@@ -115,16 +115,9 @@ candidate <- read.csv(
   stringsAsFactors = FALSE, check.names = FALSE
 )
 candidate <- candidate[candidate$candidate_id == "ICES:caa.27.5a", ]
-selected <- read.csv(
-  "discovery/selections/selected_batch_01_2026.csv",
-  stringsAsFactors = FALSE, check.names = FALSE
-)
-selected <- selected[selected$candidate_id == "ICES:caa.27.5a", ]
 stopifnot(
   nrow(candidate) == 1L,
-  candidate$import_status == "partial",
-  nrow(selected) == 1L,
-  selected$curation_status == "partial_source_import"
+  candidate$import_status == "partial"
 )
 
 cat("Icelandic Atlantic wolffish 2026 source coverage, units, caveats, and outputs passed.\n")

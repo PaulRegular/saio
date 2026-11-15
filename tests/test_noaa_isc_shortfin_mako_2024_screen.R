@@ -1,14 +1,14 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'NOAA:11715', , drop = FALSE]
 atlantic_mako <- register[register$candidate_id == 'NOAA:10657', , drop = FALSE]
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_north_pacific_shortfin_mako', , drop = FALSE]
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 swfsc_pifsc <- noaa[noaa$source_region == 'SWFSC / PIFSC', , drop = FALSE]
 

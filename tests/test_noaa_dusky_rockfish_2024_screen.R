@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 candidate_id <- 'NOAA:10559'
 unit_id <- 'noaa_goa_dusky'
@@ -8,8 +10,7 @@ row <- register[register$candidate_id == candidate_id, , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_dusky_rockfish_goa_2024.md'), warn = FALSE), collapse = ' ')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[units$unit_key == paste0('candidate:', unit_id), , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

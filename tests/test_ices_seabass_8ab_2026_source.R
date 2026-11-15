@@ -7,10 +7,8 @@ sys.source(script, envir = import)
 if (is.na(old_dry_run)) Sys.unsetenv("TAM_SOURCE_DRY_RUN") else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 register <- read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE)
-selected <- read.csv(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"), stringsAsFactors = FALSE)
 assessments <- read.csv(file.path(root, "database", "assessments.csv"), stringsAsFactors = FALSE)
 registered <- register[register$candidate_id == "ICES:bss.27.8ab", , drop = FALSE]
-selected_row <- selected[selected$candidate_id == "ICES:bss.27.8ab", , drop = FALSE]
 assessment_row <- assessments[assessments$assessment_id == "ices_seabass_8ab_2026", , drop = FALSE]
 
 stopifnot(
@@ -46,8 +44,6 @@ stopifnot(
   import$assessment$outputs_status == "partial",
   nrow(registered) == 1L,
   registered$import_status == "partial",
-  nrow(selected_row) == 1L,
-  selected_row$curation_status == "partial_source_import",
   nrow(assessment_row) == 1L,
   assessment_row$terminal_year == 2025L,
   assessment_row$estimate_terminal_year == 2026L,

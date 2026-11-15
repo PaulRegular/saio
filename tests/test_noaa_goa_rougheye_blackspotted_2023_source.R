@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_id) {
   con <- file(path, open = "rb")
   on.exit(close(con), add = TRUE)
@@ -39,9 +41,7 @@ candidates <- read_columns("discovery/candidates.csv", c(
   "catch_age_evidence", "survey_age_evidence", "weights_evidence",
   "maturity_evidence", "mortality_evidence", "timing_evidence",
   "output_evidence"))
-inventory <- read_columns("discovery/inventory_units.csv", c(
-  "unit_key", "matched_stock_id", "match_status", "import_status",
-  "candidate_ids"))
+inventory <- candidate_units()
 manifest <- read.csv("provenance/discovery_noaa_goa_rougheye_2023/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines(

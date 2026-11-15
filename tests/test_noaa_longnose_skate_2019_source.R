@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_id) {
   con <- file(path, open = "rb")
   on.exit(close(con), add = TRUE)
@@ -37,8 +39,7 @@ assessments <- read_columns(file.path(root, "database/assessments.csv"), c(
 candidates <- read_columns(file.path(root, "discovery/candidates.csv"), c(
   "candidate_id", "matched_stock_id", "match_status", "screening_status",
   "eligibility", "import_status", "output_evidence"))
-inventory <- read_columns(file.path(root, "discovery/inventory_units.csv"), c(
-  "unit_key", "matched_stock_id", "match_status", "import_status", "candidate_ids"))
+inventory <- candidate_units()
 manifest <- read.csv(file.path(root,
   "provenance/discovery_noaa_longnose_skate_2019/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)

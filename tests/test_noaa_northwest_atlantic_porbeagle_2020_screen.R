@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source('scripts/discovery/512_screen_noaa_northwest_atlantic_porbeagle_2020.R')
 
 root <- '.'
@@ -19,8 +21,7 @@ stopifnot(nrow(row) == 1L,
   grepl('does not make an age-specific survey index part', review, fixed = TRUE),
   grepl('ineligible for the age-disaggregated assessment set', review, fixed = TRUE))
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_northwest_atlantic_porbeagle', , drop = FALSE]
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
@@ -55,8 +56,7 @@ stopifnot(!any(stocks$authority_stock_id == '10654', na.rm = TRUE),
   !any(grepl('noaa_northwest_atlantic_porbeagle', inputs$assessment_id, fixed = TRUE)),
   !any(grepl('noaa_northwest_atlantic_porbeagle', outputs$assessment_id, fixed = TRUE)))
 
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 stopifnot(sum(noaa$inventory_rows) == 432L,
   sum(noaa$new) == 388L, sum(noaa$identity_unreviewed) == 2L,

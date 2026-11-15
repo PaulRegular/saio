@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 source_paths <- c(list.files("database", pattern = "[.]csv$", full.names = TRUE),
   list.files("discovery", pattern = "[.]csv$", full.names = TRUE))
@@ -172,10 +174,7 @@ outputs <- utils::read.csv(file.path(database, "outputs.csv"), stringsAsFactors 
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- utils::read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-inventory <- utils::read.csv(file.path(root, "discovery", "inventory_units.csv"), stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-selected <- utils::read.csv(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"), stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 review <- paste(readLines(file.path(root, "source_reviews", "screening",
   "noaa_acadian_redfish_2025.md"), warn = FALSE), collapse = "\n")
 stopifnot(
@@ -185,7 +184,6 @@ stopifnot(
   sum(outputs$assessment_id == assessment_id) == nrow(y),
   candidate$import_status[candidate$candidate_id == "NOAA:10455"] == "partial",
   inventory$import_status[import_env$candidate_inventory_row(inventory, "NOAA:10455", stock_id)] == "partial",
-  selected$curation_status[selected$candidate_unit_id == stock_id] == "partial_source_import",
   grepl("source-supplied effective sample size", review, fixed = TRUE)
 )
 

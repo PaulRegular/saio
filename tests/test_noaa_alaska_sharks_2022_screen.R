@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
@@ -19,8 +21,7 @@ stopifnot(nrow(rows) == 4L,
   grepl('Tier 5', rows$decision_reason[3], fixed = TRUE),
   all(grepl('2022/BSAIshark.pdf', rows$detailed_source_url, fixed = TRUE)))
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE)
+units <- candidate_units()
 stopifnot(all(vapply(rows$candidate_unit_id, function(id)
   sum(units$candidate_unit_id == id) == 1L, logical(1L))))
 

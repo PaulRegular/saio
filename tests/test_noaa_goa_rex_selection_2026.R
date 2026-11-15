@@ -3,14 +3,11 @@ stock_id <- "noaa_goa_rex_sole"
 
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selected <- read.csv("discovery/selections/selected_unworked_2026.csv",
-  stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 stock <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == candidate_id, , drop = FALSE]
-selection <- selected[selected$candidate_id == candidate_id, , drop = FALSE]
 aliases <- candidates[!is.na(candidates$candidate_unit_id) &
   candidates$candidate_unit_id == stock_id, , drop = FALSE]
 
@@ -26,11 +23,6 @@ stopifnot(
   all(aliases$import_status == "partial"),
   all(aliases$matched_stock_id == stock_id),
   all(aliases$match_status == "matched"),
-  nrow(selection) == 1L,
-  selection$curation_status == "source_curated_partial",
-  selection$inventory_assessment_year == 2026L,
-  grepl("Table 30", selection$selection_basis, fixed = TRUE),
-  grepl("Appendix E", selection$selection_basis, fixed = TRUE),
   sum(stock$stock_id == stock_id) == 1L,
   sum(assessments$assessment_id == paste0(stock_id, "_2026")) == 1L,
   assessments$inputs_status[assessments$assessment_id == paste0(stock_id, "_2026")] == "partial",

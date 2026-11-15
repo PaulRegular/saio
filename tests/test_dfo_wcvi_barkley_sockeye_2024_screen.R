@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source('scripts/discovery/465_screen_dfo_wcvi_barkley_sockeye_2024.R')
 source('scripts/discovery/195_summarize_discovery.R')
 source('scripts/discovery/196_summarize_inventory_units.R')
@@ -9,8 +11,8 @@ stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors =
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsAsFactors = FALSE)
 inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors = FALSE)
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors = FALSE)
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'), stringsAsFactors = FALSE)
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'), stringsAsFactors = FALSE)
+progress <- candidate_progress()
+units <- candidate_units()
 stopifnot(
   nrow(row) == 1L,
   row$candidate_unit_id == 'dfo_wcvi_barkley_sockeye_smu',

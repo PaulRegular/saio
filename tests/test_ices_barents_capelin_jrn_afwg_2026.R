@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
@@ -14,8 +16,7 @@ review_path <- file.path(root,
   'source_reviews/screening/ices_barents_capelin_jrn_afwg_2026.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 review <- gsub('[[:space:]]+', ' ', review)
-units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'),

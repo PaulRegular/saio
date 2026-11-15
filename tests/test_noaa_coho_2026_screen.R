@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 register <- read.csv('discovery/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 stock_ids <- c(10581:10593, 10596:10600)
@@ -33,8 +35,7 @@ stopifnot(!any(as.character(stock_ids) %in% stocks$authority_stock_id),
   !any(grepl('noaa_coho_', inputs$assessment_id, fixed = TRUE)),
   !any(grepl('noaa_coho_', outputs$assessment_id, fixed = TRUE)))
 
-units <- read.csv('discovery/inventory_units.csv',
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 coho_units <- units[units$candidate_unit_id %in% paste0('noaa_coho_', stock_ids), , drop = FALSE]
 stopifnot(nrow(coho_units) == 18L, all(coho_units$eligibility == 'ineligible'),
   sum(register$organization == 'NOAA') == 432L,

@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 assessment_id <- "noaa_bocaccio_southern_pacific_2017"
 candidate_id <- "NOAA:10413"
 stock_id <- "noaa_bocaccio_southern_pacific_coast"
@@ -22,7 +24,7 @@ read_matching_rows <- function(path, id) {
 stocks <- read.csv("database/stocks.csv", colClasses = "character", check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", colClasses = "character", check.names = FALSE)
 candidates <- read.csv("discovery/candidates.csv", colClasses = "character", check.names = FALSE)
-inventory <- read.csv("discovery/inventory_units.csv", colClasses = "character", check.names = FALSE)
+inventory <- candidate_units()
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == candidate_id, , drop = FALSE]

@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 source(file.path(root, 'scripts', 'discovery',
   '501_screen_noaa_offshore_hake_2023.R'))
@@ -10,10 +12,8 @@ review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
 cache <- file.path(root, 'source_cache', 'discovery_noaa_offshore_hake_2023')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
+units <- candidate_units()
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 nefsc <- noaa[noaa$source_region == 'NEFSC', , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),

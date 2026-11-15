@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source('scripts/discovery/513_screen_noaa_north_atlantic_albacore_2023.R')
 
 root <- '.'
@@ -33,8 +35,7 @@ stopifnot(nrow(assessment) == 1L,
   as.character(assessment$review_result) == 'Full acceptance',
   as.character(assessment$assessment_model) == 'SS')
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_north_atlantic_albacore', , drop = FALSE]
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,

@@ -124,23 +124,17 @@ manifest <- data.frame(
 )
 
 register_path <- "discovery/candidates.csv"
-selected_path <- "discovery/selections/selected_batch_12_2026.csv"
-units_path <- "discovery/inventory_units.csv"
-progress_path <- "discovery/inventory_progress.csv"
 manifest_path <- "provenance/inidep_merluccius_hubbsi_south_2025_sources.csv"
 register <- read.csv(register_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-units <- read.csv(units_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
 if (candidate_id %in% register$candidate_id ||
     candidate_unit_id %in% register$candidate_unit_id ||
-    candidate_unit_id %in% units$candidate_unit_id ||
     any(stocks$scientific_name == candidate$scientific_name &
       grepl("south of 41|41° S", paste(stocks$area, stocks$region, stocks$authority_stock_id),
-        ignore.case = TRUE)) || file.exists(selected_path) || file.exists(manifest_path)) {
+        ignore.case = TRUE)) || file.exists(manifest_path)) {
   stop("The southern hake candidate, stock unit, selection, or manifest already exists; reconcile before proceeding.",
     call. = FALSE)
 }
@@ -200,11 +194,6 @@ cat("Cached, checksummed primary sources:", nrow(manifest), "\n")
 if (write_mode) {
   write.table(candidate, register_path, sep = ",", row.names = FALSE,
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double", na = "")
-  write.csv(selected, selected_path, row.names = FALSE, na = "")
   write.csv(manifest, manifest_path, row.names = FALSE, na = "")
-  write.table(unit, units_path, sep = ",", row.names = FALSE,
-    col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double", na = "")
-  write.table(progress, progress_path, sep = ",", row.names = FALSE,
-    col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double", na = "")
   cat("Registered the source-led candidate and selected its assessment for curation.\n")
 }

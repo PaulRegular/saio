@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 read_table <- function(name) {
   utils::read.csv(file.path(root, "database", paste0(name, ".csv")),
@@ -17,12 +19,8 @@ candidates <- utils::read.csv(file.path(root, "discovery", "candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 candidate <- subset(candidates,
   candidate_unit_id == "dfo_yellowmouth_bc")
-units <- utils::read.csv(file.path(root, "discovery", "inventory_units.csv"),
-  stringsAsFactors = FALSE, check.names = FALSE)
+units <- candidate_units()
 unit <- subset(units, candidate_unit_id == "dfo_yellowmouth_bc")
-batch <- utils::read.csv(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"),
-  stringsAsFactors = FALSE, check.names = FALSE)
-selected <- subset(batch, candidate_unit_id == "dfo_yellowmouth_bc")
 review <- paste(readLines(file.path(root, "source_reviews", "dfo_yellowmouth_bc.md"), warn = FALSE), collapse = " ")
 
 catch <- subset(inputs, type == "catch" & measure == "total_biomass")
@@ -114,8 +112,6 @@ stopifnot(
   nrow(unit) == 1L,
   unit$matched_stock_id == "dfo_yellowmouth_bc",
   unit$import_status == "partial",
-  nrow(selected) == 1L,
-  selected$curation_status == "partial_source_import",
   grepl("midyear timing", review, fixed = TRUE),
   grepl("which CV series was supplied", review, fixed = TRUE),
   grepl("treating the survey compositions as age-specific abundance indices", review, fixed = TRUE),

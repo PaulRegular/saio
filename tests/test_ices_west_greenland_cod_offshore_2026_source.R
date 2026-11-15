@@ -83,19 +83,12 @@ candidate <- read.csv(
   stringsAsFactors = FALSE, check.names = FALSE
 )
 candidate <- candidate[candidate$candidate_id == "ICES:cod.21.1.osc", ]
-selected <- read.csv(
-  "discovery/selections/selected_batch_01_2026.csv",
-  stringsAsFactors = FALSE, check.names = FALSE
-)
-selected <- selected[selected$candidate_id == "ICES:cod.21.1.osc", ]
 review <- readLines(
   "source_reviews/screening/ices_greenland_cod_identity_2026.md"
 )
 stopifnot(
   nrow(candidate) == 1L,
   candidate$import_status == "partial",
-  nrow(selected) == 1L,
-  selected$curation_status == "partial_source_import",
   any(grepl("offshore key 19562", review, fixed = TRUE)),
   any(grepl("no wosc age-specific input arrays were recovered", tolower(review), fixed = TRUE))
 )

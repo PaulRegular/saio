@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, id) {
   con <- file(path, open = "rb")
   on.exit(close(con), add = TRUE)
@@ -28,8 +30,7 @@ assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = 
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == "NOAA:10208", , drop = FALSE]
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 inventory <- inventory[!is.na(inventory$candidate_unit_id) &
   inventory$candidate_unit_id == stock_id, , drop = FALSE]
 manifest <- read.csv("provenance/discovery_noaa_greater_amberjack_south_atlantic_2020/sources.csv",

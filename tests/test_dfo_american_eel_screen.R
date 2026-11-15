@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 register <- read.csv('discovery/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- c('DFO:Maritimes:Eel (Large)', 'DFO:Maritimes:Elvers')
@@ -6,8 +8,7 @@ stocks <- read.csv('database/stocks.csv', stringsAsFactors = FALSE)
 assessments <- read.csv('database/assessments.csv', stringsAsFactors = FALSE)
 inputs <- read.csv('database/inputs.csv', stringsAsFactors = FALSE)
 outputs <- read.csv('database/outputs.csv', stringsAsFactors = FALSE)
-unit_summary <- read.csv('discovery/inventory_units.csv',
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+unit_summary <- candidate_units()
 unit <- unit_summary[!is.na(unit_summary$candidate_unit_id) &
   unit_summary$candidate_unit_id == 'dfo_american_eel_maritimes', , drop = FALSE]
 cache <- 'source_cache/discovery_dfo_american_eel_maritimes_2026'

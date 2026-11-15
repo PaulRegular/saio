@@ -32,9 +32,6 @@ outputs <- subset(read_table("outputs"),
 candidate <- subset(utils::read.csv(file.path(root, "discovery", "candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE),
   candidate_id == "DFO:Maritimes:Pollock - NAFO 4X5 (Western Component)")
-selected <- subset(utils::read.csv(file.path(root, "discovery/selections",
-  "selected_batch_01_2026.csv"), stringsAsFactors = FALSE, check.names = FALSE),
-  candidate_unit_id == stock_key)
 review <- paste(readLines(file.path(root, "source_reviews", "screening",
   "dfo_western_component_pollock_2022.md")), collapse = " ")
 
@@ -88,9 +85,6 @@ stopifnot(
   candidate$import_status == "partial",
   candidate$review_date == "2026-11-14",
   candidate$matched_stock_id == stock_key,
-  nrow(selected) == 1L,
-  selected$inventory_assessment_year == 2025L,
-  selected$curation_status == "partial_source_import",
   grepl("468 commercial catch-at-age rows", review, fixed = TRUE),
   grepl("444 summer RV index-at-age rows", review, fixed = TRUE),
   grepl("archived-page HTML", review, fixed = TRUE),

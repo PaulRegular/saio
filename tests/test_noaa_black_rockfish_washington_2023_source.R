@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 assessment_id <- "noaa_black_rockfish_washington_2023"
 stock_id <- "noaa_black_rockfish_washington"
@@ -28,16 +30,12 @@ assumptions_all <- read.csv("database/assumptions.csv", stringsAsFactors = FALSE
 assumptions <- assumptions_all[assumptions_all$assessment_id == assessment_id, , drop = FALSE]
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-selected <- read.csv("discovery/selections/selected_batch_31_2026.csv", stringsAsFactors = FALSE,
-  check.names = FALSE)
+inventory <- candidate_units()
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == "NOAA:14409", , drop = FALSE]
 inventory <- inventory[inventory$unit_key == "candidate:noaa_black_rockfish_washington_2023", , drop = FALSE]
-selected <- selected[selected$candidate_unit_id == "noaa_black_rockfish_washington_2023", , drop = FALSE]
 
 one_output <- function(measure, year = NA_integer_, age = NA_integer_, sex = NA_character_) {
   x <- outputs[outputs$measure == measure, , drop = FALSE]
@@ -104,7 +102,6 @@ stopifnot(
   candidate$import_status == "partial",
   inventory$matched_stock_id == stock_id,
   inventory$import_status == "partial",
-  selected$curation_status == "partial_source_import",
   any(assumptions$setting == "fixed_constant_M"),
   any(grepl("not estimated", assumptions$notes, fixed = TRUE)),
   nrow(age_error_assumption) == 1L,

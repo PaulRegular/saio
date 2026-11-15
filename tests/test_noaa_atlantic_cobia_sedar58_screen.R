@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
@@ -14,8 +16,7 @@ stopifnot(nrow(row) == 1L,
   grepl('not representative', row$catch_age_evidence, fixed = TRUE),
   grepl('NOAA:10390', row$notes, fixed = TRUE))
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE)
+units <- candidate_units()
 unit <- units[units$candidate_unit_id == 'noaa_cobia_atlantic_2020', , drop = FALSE]
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
   unit$candidate_ids == 'NOAA:12149', unit$eligibility == 'eligible')

@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_rows_csv <- function(records) {
   record_connection <- textConnection(records)
   on.exit(close(record_connection))
@@ -33,8 +35,7 @@ assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
 outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
-units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  check.names = FALSE, na.strings = c("", "NA"))
+units <- candidate_units()
 manifest <- read.csv("provenance/australia_east_coast_sea_mullet_2026_sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 

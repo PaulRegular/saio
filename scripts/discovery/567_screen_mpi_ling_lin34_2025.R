@@ -1,6 +1,5 @@
 root <- "."
 register_path <- file.path(root, "discovery", "candidates.csv")
-selection_path <- file.path(root, "discovery/selections", "selected_batch_02_2026.csv")
 
 candidate_id <- "MPI:LIN34"
 candidate_unit_id <- "nz_ling_lin34"
@@ -101,28 +100,10 @@ selection <- data.frame(
   check.names = FALSE
 )
 
-selected <- read.csv(selection_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-if (!identical(names(selection), names(selected))) stop("Selection row does not match the selected-batch schema.", call. = FALSE)
-if (anyDuplicated(selected$candidate_id)) stop("Selected candidate IDs are not unique.", call. = FALSE)
-existing <- which(selected$candidate_id == candidate_id)
-if (length(existing)) {
-  if (length(existing) != 1L || selected$official_stock_id[existing] != selection$official_stock_id) {
-    stop("Existing selected ling row does not match the reviewed stock unit.", call. = FALSE)
-  }
-} else {
-  selection$priority <- max(selected$priority, na.rm = TRUE) + 1L
-  write.table(selection, selection_path, sep = ",", row.names = FALSE,
-    col.names = FALSE, quote = TRUE, na = "", qmethod = "double",
-    append = TRUE, eol = "\n")
-}
 
 register <- read.csv(register_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selected <- read.csv(selection_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-if (sum(register$candidate_id == candidate_id) != 1L ||
-  sum(selected$candidate_id == candidate_id) != 1L) {
+if (sum(register$candidate_id == candidate_id) != 1L) {
   stop("Ling source-screen record was not written exactly once.", call. = FALSE)
 }
 cat("Screened and selected MPI LIN 3&4 for source curation.\n")

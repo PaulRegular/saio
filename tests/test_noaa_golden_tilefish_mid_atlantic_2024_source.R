@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 assessment_id <- "noaa_golden_tilefish_mid_atlantic_2024"
 stock_id <- "noaa_golden_tilefish_mid_atlantic"
 
@@ -29,8 +31,7 @@ inputs <- read_assessment_rows("inputs")
 outputs <- read_assessment_rows("outputs")
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 
 stock <- stocks[!is.na(stocks$stock_id) & stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[!is.na(assessments$assessment_id) &

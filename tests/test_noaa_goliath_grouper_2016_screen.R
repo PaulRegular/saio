@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
@@ -11,8 +13,7 @@ register <- read.csv(file.path(root, 'discovery/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate_ids <- c('NOAA:10315', 'NOAA:11042')
 candidates <- register[match(candidate_ids, register$candidate_id), , drop = FALSE]
-units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id ==
   'noaa_goliath_grouper_southeastern_us_2016', , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,

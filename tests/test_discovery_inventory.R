@@ -1,11 +1,12 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source("tests/helper_inventory.R")
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 register <- read_table("discovery/candidates.csv")
 stocks <- read_table("database/stocks.csv")
-progress <- read_table("discovery/inventory_progress.csv")
-units <- read_table("discovery/inventory_units.csv")
-selected <- read_table("discovery/selections/selected_batch_01_2026.csv")
+progress <- candidate_progress()
+units <- candidate_units()
 
 # Source-list membership is distinct from current stock and import status.
 stopifnot(nrow(register) > 0L, !anyNA(register$candidate_id),
@@ -52,16 +53,11 @@ stopifnot(all(tolower(ices_matches$official_stock_id) == tolower(stocks$authorit
 # Joint assessments and selected imports must keep their cross-inventory identities.
 lookup <- function(id) register[match(id, register$candidate_id), , drop = FALSE]
 hake <- register[register$matched_stock_id %in% "joint_hake_coastal", , drop = FALSE]
-stopifnot(all(c("NOAA", "DFO") %in% hake$organization),
+stopifnot(
+  all(c("NOAA", "DFO") %in% hake$organization),
   lookup("NOAA:10523")$matched_stock_id == "joint_hake_coastal",
-  lookup("DFO:Pacific:Pacific Hake - Offshore")$matched_stock_id == "joint_hake_coastal",
-  !anyDuplicated(selected$candidate_unit_id), !anyDuplicated(selected$candidate_id),
-  all(selected$candidate_id %in% register$candidate_id))
-selected_rows <- register[match(selected$candidate_id, register$candidate_id), , drop = FALSE]
-stopifnot(identical(selected$candidate_unit_id, selected_rows$candidate_unit_id),
-  all(selected_rows$eligibility == "eligible"),
-  all(selected_rows$import_status %in% c("partial", "imported")),
-  all(selected$curation_status == "partial_source_import"))
+  lookup("DFO:Pacific:Pacific Hake - Offshore")$matched_stock_id == "joint_hake_coastal"
+)
 
 nafo <- register[register$organization == "NAFO", , drop = FALSE]
 stopifnot(nrow(nafo) == 27L, !anyDuplicated(nafo$candidate_id),
@@ -111,15 +107,12 @@ stopifnot(nrow(redfish3ln_unit) == 1L,
   grepl("DFO", redfish3ln_unit$organizations, fixed = TRUE),
   grepl("NAFO", redfish3ln_unit$organizations, fixed = TRUE))
 hoki <- lookup("MPI:HOK1")
-hoki_selection <- read_table("discovery/selections/selected_batch_02_2026.csv")
-hoki_selection <- hoki_selection[hoki_selection$candidate_id == "MPI:HOK1", , drop = FALSE]
-stopifnot(hoki$candidate_unit_id == "nz_hoki_hok1",
+stopifnot(
+  hoki$candidate_unit_id == "nz_hoki_hok1",
   hoki$official_stock_id == "HOK 1",
   grepl("numbers-at-age", hoki$catch_age_evidence, fixed = TRUE),
-  hoki$import_status %in% c("not_started", "partial"),
-  nrow(hoki_selection) == 1L,
-  hoki_selection$candidate_id == "MPI:HOK1",
-  hoki_selection$curation_status %in% c("selected_for_source_curation", "source_curated_partial"))
+  hoki$import_status %in% c("not_started", "partial")
+)
 cat("New Zealand HOK 1 screening and selection passed.\n")
 
 cat("NAFO inventory coverage, screening decisions and DFO crosswalks passed.\n")

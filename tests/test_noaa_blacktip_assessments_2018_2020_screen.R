@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 read_table <- function(name) read.csv(file.path(root, name), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
@@ -50,10 +52,10 @@ for (file in expected_files) {
   stopifnot(identical(rawToChar(signature), '%PDF-'))
 }
 
-progress <- read_table('discovery/inventory_progress.csv')
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 se <- noaa[noaa$source_region == 'SEFSC', , drop = FALSE]
-units <- read_table('discovery/inventory_units.csv')
+units <- candidate_units()
 stopifnot(sum(progress$inventory_rows) == 905L,
   sum(progress$new) == 663L,
   sum(progress$identity_unreviewed) == 100L,

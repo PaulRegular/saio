@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_id) {
   header <- readLines(path, n = 1L, warn = FALSE, encoding = "bytes")
   matches <- system2("rg", c("--color", "never", "--no-heading", "--no-line-number",
@@ -24,8 +26,7 @@ stock <- stocks[stocks$authority == "NOAA Fisheries" & stocks$authority_stock_id
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 inputs <- read_assessment_rows("database/inputs.csv", assessment_id)
 outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
-units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+units <- candidate_units()
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
 review <- paste(readLines("source_reviews/screening/noaa_golden_tilefish_gulf_sedar22_2011.md",
   warn = FALSE), collapse = " ")

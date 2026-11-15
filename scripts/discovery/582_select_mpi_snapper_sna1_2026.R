@@ -3,7 +3,6 @@ candidate_id <- "MPI:SNA1"
 candidate_unit_id <- "mpi_snapper_sna1"
 stock_id <- "mpi_snapper_sna1"
 register_path <- file.path(root, "discovery", "candidates.csv")
-selection_path <- file.path(root, "discovery/selections", "selected_batch_05_2026.csv")
 
 register <- read.csv(register_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
@@ -136,10 +135,7 @@ selection <- data.frame(
   curation_status = "selected",
   stringsAsFactors = FALSE
 )
-write.csv(selection, selection_path, row.names = FALSE, na = "")
 
-source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"))
-source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"))
 
 updated <- read.csv(register_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

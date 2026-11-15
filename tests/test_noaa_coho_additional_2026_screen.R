@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 source(file.path(root, 'scripts', 'discovery',
   '503_screen_noaa_coho_2026_additional.R'))
@@ -9,10 +11,8 @@ register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 rows <- match(candidate_ids, register$candidate_id)
 coho <- register[rows, , drop = FALSE]
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
+units <- candidate_units()
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 pacific <- noaa[noaa$source_region == 'NWFSC / SWFSC', , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews', 'screening',

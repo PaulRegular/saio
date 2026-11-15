@@ -31,8 +31,6 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selected <- read.csv("discovery/selections/selected_unworked_2026.csv",
-  stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
 inputs <- read_assessment_rows("database/inputs.csv", assessment_id)
 outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
@@ -88,7 +86,6 @@ stopifnot(
   recruitment$value[recruitment$year == "2026" & recruitment$age == "3"] == "52685",
   recruitment$value[recruitment$year == "2014" & recruitment$age == "0"] == "74440",
   recruitment$value[recruitment$year == "2014" & recruitment$age == "3"] == "36739",
-
   all(recruitment$unit == "source table units (scale not stated)"),
   nrow(recruitment_sd) == 44L,
   recruitment_sd$value[recruitment_sd$year == "2025"] == "7001",
@@ -116,8 +113,6 @@ stopifnot(
   all(rex_candidates$matched_stock_id == stock_id),
   all(rex_candidates$match_status == "matched"),
   all(rex_candidates$import_status == "partial"),
-  selected$curation_status[selected$candidate_id == "NOAA:10058"] ==
-    "source_curated_partial",
   file.exists("source_reviews/noaa_goa_rex_sole.md")
 )
 

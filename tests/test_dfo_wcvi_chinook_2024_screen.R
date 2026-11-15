@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 register_path <- file.path(root, 'discovery/candidates.csv')
 register_before <- readLines(register_path, warn = FALSE, encoding = 'UTF-8')
@@ -7,10 +9,8 @@ Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 stopifnot(identical(register_before, readLines(register_path, warn = FALSE, encoding = 'UTF-8')))
 
 register <- read.csv(register_path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-progress <- read.csv(file.path(root, 'discovery/inventory_progress.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+progress <- candidate_progress()
+units <- candidate_units()
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,

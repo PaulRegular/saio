@@ -23,8 +23,6 @@ inputs <- read_table('inputs', 'noaa_goa_pop_2023')
 outputs <- read_table('outputs', 'noaa_goa_pop_2023')
 candidate <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-selected <- read.csv(file.path(root, 'discovery/selections', 'selected_batch_01_2026.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 
 assessment_id <- 'noaa_goa_pop_2023'
 stock_id <- 'afsc_goa_pacific_ocean_perch'
@@ -52,7 +50,6 @@ mcmc <- output[!is.na(output$scenario) &
   output$scenario == 'MCMC posterior median; Table 9.8', , drop = FALSE]
 
 candidate_row <- candidate[candidate$candidate_id == 'NOAA:11056', , drop = FALSE]
-selected_row <- selected[selected$candidate_id == 'NOAA:11056', , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_goa_pacific_ocean_perch.md'), warn = FALSE), collapse = ' ')
 
@@ -110,8 +107,6 @@ stopifnot(
   candidate_row$matched_stock_id == stock_id,
   candidate_row$match_status == 'matched',
   candidate_row$import_status == 'partial',
-  nrow(selected_row) == 1L,
-  selected_row$curation_status == 'partial_source_import',
   grepl('1990 survey age composition', review, fixed = TRUE),
   grepl('without survival to spawning', review, fixed = TRUE),
   grepl('survey timing', review, fixed = TRUE)

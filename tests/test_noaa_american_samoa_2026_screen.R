@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/371_screen_noaa_american_samoa_2026.R'))
@@ -11,10 +13,8 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database/outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-progress <- read.csv(file.path(root, 'discovery/inventory_progress.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+progress <- candidate_progress()
+units <- candidate_units()
 
 current_ids <- c('NOAA:11997', 'NOAA:11998', 'NOAA:12003', 'NOAA:12005')
 legacy_species_ids <- c('NOAA:11999', 'NOAA:12007', 'NOAA:12011', 'NOAA:12013',

@@ -1,9 +1,9 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-progress <- read.csv("discovery/inventory_progress.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
+units <- candidate_units()
+progress <- candidate_progress()
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,

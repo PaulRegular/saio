@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source("R/read_database.R")
 source("tests/helper_inventory.R")
 
@@ -7,10 +9,8 @@ candidate_register <- read.csv("discovery/candidates.csv",
 candidate <- candidate_register[
   candidate_register$candidate_id == "AFMA:MITF", , drop = FALSE
 ]
-progress <- read.csv("discovery/inventory_progress.csv",
-  stringsAsFactors = FALSE)
-units <- read.csv("discovery/inventory_units.csv",
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
+units <- candidate_units()
 manifest <- read.csv("provenance/afma_mitf_2025_sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 

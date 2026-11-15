@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_id) {
   con <- file(path, open = "rb")
   on.exit(close(con), add = TRUE)
@@ -38,8 +40,7 @@ assumptions <- read.csv("database/assumptions.csv", stringsAsFactors = FALSE,
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
 candidates <- read_columns("discovery/candidates.csv", c(
   "candidate_id", "matched_stock_id", "match_status", "eligibility", "import_status"))
-inventory <- read_columns("discovery/inventory_units.csv", c(
-  "unit_key", "matched_stock_id", "candidate_unit_id", "match_status", "import_status"))
+inventory <- candidate_units()
 
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

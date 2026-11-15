@@ -98,7 +98,7 @@ candidate <- data.frame(
   notes = paste(
     "Candidate is the management unit, not three separate stocks. The 2019 models",
     "cover areas 025, 027, and 030; the rejected 2024 run groups 027+029.",
-    "See source_reviews/mpi_blue_cod_bco5.md and selected_batch_21_2026.csv."
+    "See source_reviews/mpi_blue_cod_bco5.md."
   ),
   stringsAsFactors = FALSE
 )
@@ -125,8 +125,6 @@ if (!identical(names(candidate), names(candidates))) {
   stop("Candidate columns do not match discovery/candidates.csv.", call. = FALSE)
 }
 
-selection_path <- file.path(root, "discovery/selections", "selected_batch_21_2026.csv")
-if (file.exists(selection_path)) stop("Selected batch 21 already exists; review before rerunning.", call. = FALSE)
 selection <- data.frame(
   priority = 1L,
   candidate_id = candidate$candidate_id,
@@ -183,10 +181,5 @@ if (!write_mode) {
     row.names = FALSE, col.names = FALSE, append = TRUE, na = "", qmethod = "double")
   write.csv(manifest, file.path(root, "provenance", "mpi_blue_cod_bco5_sources.csv"),
     row.names = FALSE, na = "")
-  write.csv(selection, selection_path, row.names = FALSE, na = "")
-  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
-    local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
-    local = new.env(parent = globalenv()))
   cat("Registered BCO 5 as a screened candidate selected for source curation.\n")
 }

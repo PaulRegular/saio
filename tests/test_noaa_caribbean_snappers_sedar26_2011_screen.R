@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
@@ -14,8 +16,7 @@ queen <- register[register$candidate_id == 'NOAA:10247', , drop = FALSE]
 cache <- file.path(root,
   'source_cache/discovery_noaa_caribbean_snappers_sedar26_2011')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
-units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'),

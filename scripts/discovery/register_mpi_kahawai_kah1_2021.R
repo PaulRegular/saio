@@ -1,5 +1,4 @@
 candidate_path <- "discovery/candidates.csv"
-selected_path <- "discovery/selections/selected_batch_04_2026.csv"
 manifest_path <- "provenance/mpi_kahawai_kah1_2021_sources.csv"
 source_pdf <- "source_cache/mpi_kahawai_kah1_2021/FAR2022-54.pdf"
 
@@ -100,11 +99,6 @@ selected <- data.frame(
   stringsAsFactors = FALSE,
   check.names = FALSE
 )
-if (!file.exists(selected_path)) {
-  write.csv(selected, selected_path, row.names = FALSE, na = "")
-} else {
-  stop("The KAH 1 selection file already exists.")
-}
 
 if (!file.exists(source_pdf)) {
   stop("Download the official FAR 2022/54 PDF to the ignored source cache first.")

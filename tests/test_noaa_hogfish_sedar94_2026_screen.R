@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -22,8 +24,7 @@ stopifnot(
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE)
 stopifnot(!any(stocks$scientific_name == 'Lachnolaimus maximus'))
 
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 sefsc <- noaa[noaa$source_region == 'SEFSC', , drop = FALSE]
 stopifnot(
@@ -47,8 +48,7 @@ stopifnot(
   sefsc$screening_not_started == 0L
 )
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE)
+units <- candidate_units()
 stopifnot(nrow(units) == 736L, sum(units$inventory_entries) == 775L)
 
 review_path <- file.path(root, 'source_reviews', 'screening',

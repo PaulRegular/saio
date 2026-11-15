@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 stock_id <- "noaa_pacific_coast_rex_sole"
 assessment_id <- "noaa_pacific_coast_rex_sole_2023"
@@ -21,10 +23,7 @@ assessments <- read_columns("database/assessments.csv", c("assessment_id",
   "inputs_status", "outputs_status", "assumptions_status"))
 candidates <- read_columns("discovery/candidates.csv", c("candidate_id",
   "matched_stock_id", "match_status", "import_status"))
-units <- read_columns("discovery/inventory_units.csv", c("unit_key",
-  "matched_stock_id", "import_status"))
-selected <- read_columns("discovery/selections/selected_batch_15_2026.csv", c(
-  "candidate_id", "curation_status"))
+units <- candidate_units()
 inputs <- read_columns("database/inputs.csv", c("assessment_id", "type",
   "measure", "basis", "value", "unit", "year", "age", "fleet", "survey",
   "sex", "season", "sampling_time", "source_type", "source_reference",
@@ -40,7 +39,6 @@ stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == candidate_id, , drop = FALSE]
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
-selected_case <- selected[selected$candidate_id == candidate_id, , drop = FALSE]
 inputs <- inputs[inputs$assessment_id == assessment_id, , drop = FALSE]
 outputs <- outputs[outputs$assessment_id == assessment_id, , drop = FALSE]
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
@@ -76,8 +74,6 @@ stopifnot(
   nrow(unit) == 1L,
   unit$matched_stock_id == stock_id,
   unit$import_status == "partial",
-  nrow(selected_case) == 1L,
-  selected_case$curation_status == "partial_source_import",
   nrow(assumptions) == 11L,
   nrow(get_input("catch_biomass")) == 107L,
   nrow(get_input("catch_se")) == 107L,

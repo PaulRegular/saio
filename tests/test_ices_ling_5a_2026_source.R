@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 cache <- file.path(root, "source_cache", "molva_molva/ices_ling_5a_2026")
 assessment_id <- "ices_ling_5a_2026"
@@ -28,9 +30,7 @@ candidate <- read.csv(file.path(root, "discovery", "candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA")
 )
 candidate <- candidate[candidate$candidate_id == "ICES:lin.27.5a", , drop = FALSE]
-inventory <- read.csv(file.path(root, "discovery", "inventory_units.csv"),
-  stringsAsFactors = FALSE, na.strings = c("", "NA")
-)
+inventory <- candidate_units()
 inventory <- inventory[inventory$unit_key == "candidate:ices_ling_5a", , drop = FALSE]
 review <- paste(readLines(
   file.path(root, "source_reviews", "ices_ling_5a.md"),

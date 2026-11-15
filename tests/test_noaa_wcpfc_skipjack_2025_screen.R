@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -14,8 +16,7 @@ stopifnot(nrow(row) == 1L,
   grepl('ages 1-16 across eight regions', row$output_evidence, fixed = TRUE),
   row$review_date == '2026-11-02')
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'wcpfc_wcpo_skipjack', , drop = FALSE]
 stopifnot(nrow(unit) == 1L,

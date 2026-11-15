@@ -26,8 +26,6 @@ stocks <- read_columns("database/stocks.csv", c("stock_id", "authority_stock_id"
   "scientific_name", "common_name", "area", "ocean"))
 candidates <- read_columns("discovery/candidates.csv", c("candidate_id", "matched_stock_id",
   "match_status", "import_status"))
-selected <- read_columns("discovery/selections/selected_batch_16_2026.csv", c("candidate_id",
-  "curation_status", "detailed_source_url"))
 
 inputs <- inputs[inputs$assessment_id == assessment_id, , drop = FALSE]
 outputs <- outputs[outputs$assessment_id == assessment_id, , drop = FALSE]
@@ -35,7 +33,6 @@ assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = 
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == "NOAA:10015", , drop = FALSE]
-selected_case <- selected[selected$candidate_id == "NOAA:10015", , drop = FALSE]
 get_input <- function(measure) inputs[inputs$measure == measure, , drop = FALSE]
 get_output <- function(measure, type = NULL) {
   x <- outputs[outputs$measure == measure, , drop = FALSE]
@@ -60,10 +57,6 @@ stopifnot(
   candidate$matched_stock_id == stock_id,
   candidate$match_status == "matched",
   candidate$import_status == "partial",
-  nrow(selected_case) == 1L,
-  selected_case$curation_status == "partial_source_import",
-  grepl("8db5b6c505841aedc4b44c3cac5f85813ddebf94", selected_case$detailed_source_url,
-    fixed = TRUE),
   nrow(assumptions) == 20L,
   nrow(get_input("total_biomass")) == 104L,
   nrow(get_input("catch_se")) == 62L,

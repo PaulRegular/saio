@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -9,8 +11,7 @@ current_units <- c('noaa_black_rockfish_oregon_2023',
   'noaa_black_rockfish_california_2023',
   'noaa_black_rockfish_california_2023')
 unit_ids <- unique(current_units)
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', ''))
+units <- candidate_units()
 units <- units[units$candidate_unit_id %in% unit_ids, , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'noaa_black_rockfish_pacific_coast_2023.md'), warn = FALSE), collapse = '\n')

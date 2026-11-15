@@ -81,9 +81,6 @@ db_assessments <- read_assessment_rows("assessments")
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")
 candidate <- candidate[candidate$candidate_id == "NOAA:10559", , drop = FALSE]
-batch <- read.csv("discovery/selections/selected_batch_27_2026.csv", stringsAsFactors = FALSE,
-  check.names = FALSE)
-batch <- batch[batch$candidate_id == "NOAA:10559", , drop = FALSE]
 stock <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   check.names = FALSE)
 stock <- stock[stock$stock_id == "noaa_goa_dusky_rockfish", , drop = FALSE]
@@ -100,9 +97,7 @@ stopifnot(
   stock$ocean == "Northeast Pacific",
   nrow(candidate) == 1L,
   candidate$matched_stock_id == "noaa_goa_dusky_rockfish",
-  candidate$import_status == "partial",
-  nrow(batch) == 1L,
-  batch$curation_status == "imported_partial"
+  candidate$import_status == "partial"
 )
 
 cat("NOAA GOA dusky rockfish 2024 source checks passed.\n")

@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_id) {
   con <- file(path, open = "rb")
   on.exit(close(con), add = TRUE)
@@ -34,10 +36,7 @@ assessments <- read_columns("database/assessments.csv", c("assessment_id", "stoc
 assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-selected <- read.csv("discovery/selections/selected_batch_25_2026.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 manifest <- read.csv("provenance/noaa_south_atlantic_golden_tilefish_sedar89_2025/manifest.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
@@ -46,7 +45,6 @@ assessment <- assessments[assessments$assessment_id == assessment_id, , drop = F
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == "NOAA:10384", , drop = FALSE]
 inventory <- inventory[inventory$unit_key == "candidate:noaa_golden_tilefish_south_atlantic", , drop = FALSE]
-selected <- selected[selected$candidate_id == "NOAA:10384", , drop = FALSE]
 get_input <- function(measure, age = NULL, year = NULL, type = NULL) {
   x <- inputs[inputs$measure == measure, , drop = FALSE]
   if (!is.null(age)) x <- x[x$age == as.character(age), , drop = FALSE]
@@ -83,8 +81,6 @@ stopifnot(
   nrow(inventory) == 1L,
   inventory$matched_stock_id == stock_id,
   inventory$import_status == "partial",
-  nrow(selected) == 1L,
-  selected$curation_status == "partial_source_import",
   nrow(manifest) == 5L,
   all(grepl("^[[:xdigit:]]{64}$", manifest$sha256)),
   nrow(inputs) == 614L,

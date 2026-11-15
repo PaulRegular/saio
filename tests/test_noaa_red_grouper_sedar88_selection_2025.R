@@ -1,11 +1,10 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidate[candidate$candidate_id == "NOAA:10331", , drop = FALSE]
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 inventory <- inventory[inventory$candidate_ids == "NOAA:10331", , drop = FALSE]
-batch <- read.csv("discovery/selections/selected_batch_41_2026.csv",
-  stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
@@ -24,9 +23,6 @@ stopifnot(
   nrow(inventory) == 1L,
   inventory$eligibility == "eligible",
   inventory$import_status == "not_started",
-  nrow(batch) == 1L,
-  batch$candidate_id == "NOAA:10331",
-  batch$curation_status == "selected_for_partial_source_curation",
   sum(stocks$authority_stock_id == "10331", na.rm = TRUE) == 0L,
   sum(stocks$authority_stock_id == "10332", na.rm = TRUE) == 1L,
   !any(assessments$assessment_id == "noaa_red_grouper_gom_sedar88_2025"),

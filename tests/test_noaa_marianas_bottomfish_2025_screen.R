@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/372_screen_noaa_marianas_bottomfish_2025.R'))
@@ -11,10 +13,8 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database/outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-progress <- read.csv(file.path(root, 'discovery/inventory_progress.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-units <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+progress <- candidate_progress()
+units <- candidate_units()
 
 ids <- c('NOAA:11696', 'NOAA:11731')
 marianas <- register[match(ids, register$candidate_id), , drop = FALSE]

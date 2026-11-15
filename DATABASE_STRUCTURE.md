@@ -43,7 +43,7 @@ already represented in the canonical database. `match_status` describes the curr
 database crosswalk. After a newly curated unit is added, set `matched_stock_id` to
 its canonical `stock_id` and change `match_status` to `matched`. Inventory rows alone
 do not create canonical assessment events or values. `charbonneau_id` may be blank when no
-verified catalogue match exists. Dated batch selections are kept in `discovery/selections/`.
+verified catalogue match exists. Record batch decisions in the candidate rows. Unit and progress summaries are generated from the register.
 
 The current controlled basin vocabulary is validated by the database validator.
 When a verified new stock requires another basin, add and document a specific

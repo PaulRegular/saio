@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
@@ -24,8 +26,7 @@ stopifnot(nrow(rows) == 6L, !anyNA(rows$candidate_id),
   file.exists(file.path(root, 'source_reviews', 'screening', 'noaa_alaska_index_aggregates_2024.md')),
   all(is.na(rows$matched_stock_id)))
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 sculpins <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id == 'noaa_alaska_sculpin_complex', , drop = FALSE]
 stopifnot(nrow(sculpins) == 1L, sculpins$inventory_entries == 2L,
   sculpins$eligibility == 'ineligible', sculpins$screening_status == 'screened',

@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 assessment_id <- "noaa_southeastern_us_mutton_snapper_sedar79_2024"
 stock_id <- "noaa_southeastern_us_mutton_snapper"
 
@@ -27,8 +29,7 @@ assumptions_all <- read.csv("database/assumptions.csv", stringsAsFactors = FALSE
 assumptions <- assumptions_all[assumptions_all$assessment_id == assessment_id, , drop = FALSE]
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]

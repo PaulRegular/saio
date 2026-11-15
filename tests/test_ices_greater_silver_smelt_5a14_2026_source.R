@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 assessment_id <- "ices_greater_silver_smelt_5a14_2026"
 stock_id <- "ices_greater_silver_smelt_5a14"
 
@@ -29,8 +31,7 @@ inputs <- read_assessment_rows("inputs")
 outputs <- read_assessment_rows("outputs")
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]

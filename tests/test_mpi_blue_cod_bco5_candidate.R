@@ -1,8 +1,6 @@
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "MPI:BCO5")
-selection <- read.csv("discovery/selections/selected_batch_21_2026.csv", stringsAsFactors = FALSE,
-  check.names = FALSE)
 manifest <- read.csv("provenance/mpi_blue_cod_bco5_sources.csv", stringsAsFactors = FALSE,
   check.names = FALSE)
 review <- readLines("source_reviews/mpi_blue_cod_bco5.md", warn = FALSE)
@@ -24,9 +22,6 @@ stopifnot(
   grepl("2010, 2014, and 2018", candidate$survey_age_evidence, fixed = TRUE),
   grepl("0.17", candidate$mortality_evidence, fixed = TRUE),
   grepl("derived approximate 2019 SSB", candidate$output_evidence, fixed = TRUE),
-  nrow(selection) == 1L,
-  selection$candidate_id == "MPI:BCO5",
-  selection$curation_status == "source_curated_partial",
   nrow(manifest) == 5L,
   !anyDuplicated(manifest$local_file),
   all(manifest$status == "cached"),

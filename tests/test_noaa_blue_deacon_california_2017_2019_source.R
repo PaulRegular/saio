@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_ids) {
   header <- readLines(path, n = 1L, warn = FALSE)
   rows <- unlist(lapply(assessment_ids, function(id) {
@@ -22,7 +24,7 @@ assumptions <- read_assessment_rows("database/assumptions.csv", ids)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, check.names = FALSE)
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE, check.names = FALSE)
+inventory <- candidate_units()
 provenance <- read.csv(
   "provenance/discovery_noaa_blue_deacon_california_2017/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)

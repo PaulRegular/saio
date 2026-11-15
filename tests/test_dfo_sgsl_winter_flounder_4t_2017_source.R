@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 stock_id <- 'dfo_sgsl_winter_flounder_4t'
 full_id <- 'dfo_sgsl_winter_flounder_2017'
@@ -13,8 +15,7 @@ outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors
   na.strings = c('', 'NA'))
 candidates <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 full <- assessments[assessments$assessment_id == full_id, , drop = FALSE]

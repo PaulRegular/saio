@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 register <- read.csv('discovery/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 stock_ids <- c(10516L, 10517L)
@@ -39,8 +41,7 @@ stopifnot(!any(as.character(stock_ids) %in% stocks$authority_stock_id),
   !any(grepl('noaa_red_hake_', inputs$assessment_id, fixed = TRUE)),
   !any(grepl('noaa_red_hake_', outputs$assessment_id, fixed = TRUE)))
 
-units <- read.csv('discovery/inventory_units.csv',
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 red_hake_units <- units[units$candidate_unit_id %in% paste0('noaa_red_hake_', stock_ids), , drop = FALSE]
 stopifnot(nrow(red_hake_units) == 2L,
   all(red_hake_units$eligibility == 'ineligible'),

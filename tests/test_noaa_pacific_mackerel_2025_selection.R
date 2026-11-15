@@ -5,8 +5,6 @@ cache <- "source_cache/scomber_japonicus/noaa_pacific_mackerel_2025"
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "NOAA:10163")
-selected <- read.csv("discovery/selections/selected_batch_23_2026.csv",
-  stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
@@ -26,13 +24,6 @@ stopifnot(
   candidate$matched_stock_id == stock_id,
   candidate$import_status == "partial",
   candidate$review_date == "2026-11-09",
-  nrow(selected) == 1L,
-  selected$candidate_id == candidate_id,
-  selected$inventory_assessment_year == 2025L,
-  selected$curation_status == "imported",
-  grepl("2025 catch-only update", selected$selection_basis, fixed = TRUE),
-  grepl("2023 benchmark archive", selected$selection_basis, fixed = TRUE),
-  grepl("catch time series only", selected$selection_basis, fixed = TRUE),
   sum(stocks$stock_id == stock_id) == 1L,
   all(c("noaa_pacific_mackerel_2023", "noaa_pacific_mackerel_2025") %in%
     assessments$assessment_id),

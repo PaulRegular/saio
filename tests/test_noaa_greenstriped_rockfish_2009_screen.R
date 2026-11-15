@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/486_screen_noaa_greenstriped_rockfish_2009.R'))
@@ -6,9 +8,8 @@ Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 register <- read.csv(file.path(root, 'discovery/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'NOAA:10566', , drop = FALSE]
-units <- read.csv(file.path(root, 'discovery/inventory_units.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
-progress <- read.csv(file.path(root, 'discovery/inventory_progress.csv'), stringsAsFactors = FALSE)
+units <- candidate_units()
+progress <- candidate_progress()
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,

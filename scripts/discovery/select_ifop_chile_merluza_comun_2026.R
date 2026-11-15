@@ -2,7 +2,6 @@ candidate_id <- "IFOP:merluza_comun_UP"
 candidate_unit_id <- "ifop_merluza_comun_up"
 review_date <- "2026-11-09"
 candidate_path <- "discovery/candidates.csv"
-batch_path <- "discovery/selections/selected_batch_20_2026.csv"
 manifest_path <- "provenance/ifop_merluza_comun_2026_sources.csv"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
@@ -88,7 +87,6 @@ candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 if (candidate_id %in% candidates$candidate_id ||
     candidate_unit_id %in% candidates$candidate_unit_id ||
-    file.exists(batch_path) ||
     grepl("Merluccius gayi", paste(readLines("database/stocks.csv", warn = FALSE), collapse = "\n"), fixed = TRUE)) {
   stop("The candidate, unit, batch, or stock identity already exists; reconcile before selecting.", call. = FALSE)
 }
@@ -189,11 +187,6 @@ batch <- data.frame(
   stringsAsFactors = FALSE,
   check.names = FALSE
 )
-batch_columns <- names(read.csv("discovery/selections/selected_batch_19_2026.csv",
-  stringsAsFactors = FALSE, check.names = FALSE))
-if (!identical(names(batch), batch_columns)) {
-  stop("The new selection row does not match the selected-batch schema.", call. = FALSE)
-}
 
 cat("Verified the current-unit assessment, December revision, quota source, and cached-file checksums.\n")
 cat("Selected the Chilean common-hake unit for partial source curation; age-specific inputs remain unresolved.\n")
@@ -201,7 +194,6 @@ if (write_mode) {
   write.table(candidate, candidate_path, sep = ",", row.names = FALSE,
     col.names = FALSE, quote = TRUE, na = "", append = TRUE,
     qmethod = "double", eol = "\n")
-  write.csv(batch, batch_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
   write.csv(sources, manifest_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
   cat("Wrote the candidate, selection checkpoint, and source manifest.\n")
 }

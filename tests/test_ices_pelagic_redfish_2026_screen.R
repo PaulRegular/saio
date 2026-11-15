@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source('scripts/discovery/468_screen_ices_pelagic_redfish_2026.R')
 root <- "."
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
@@ -11,8 +13,7 @@ stopifnot(nrow(rows) == 2L, !anyNA(rows$candidate_unit_id),
   identical(rows$eligibility, c('unresolved', 'ineligible')),
   grepl('weight and maturity inputs', rows$decision_reason[1L], fixed = TRUE),
   grepl('survey-trends assessment', rows$decision_reason[2L], fixed = TRUE))
-inventory_units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
+inventory_units <- candidate_units()
 stopifnot(all(rows$candidate_unit_id %in% inventory_units$candidate_unit_id))
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)

@@ -5,10 +5,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 source("scripts/discovery/candidate_register_io.R")
 
 candidate_path <- "discovery/candidates.csv"
-inventory_path <- "discovery/inventory_units.csv"
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), colClasses = "character", check.names = FALSE)
-inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), colClasses = "character", check.names = FALSE)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
@@ -16,7 +13,6 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
 ci <- which(candidates$candidate_id == candidate_id)
-ii <- candidate_inventory_row(inventory, candidate_id, stock_id)
 if (length(ci) != 1L || candidates$official_stock_id[ci] != "10331" ||
     candidates$scientific_name[ci] != "Epinephelus morio" ||
     candidates$assessment_area[ci] != "Gulf of Mexico" ||
@@ -50,15 +46,6 @@ selected <- data.frame(
   stringsAsFactors = FALSE,
   check.names = FALSE
 )
-batch_path <- "discovery/selections/selected_batch_41_2026.csv"
-if (file.exists(batch_path)) {
-  old <- read.csv(batch_path, stringsAsFactors = FALSE, check.names = FALSE)
-  if (nrow(old) != 1L || old$candidate_id != candidate_id) {
-    stop("Gulf red grouper selection batch contains unexpected rows.", call. = FALSE)
-  }
-} else if (write_mode) {
-  write.csv(selected, batch_path, row.names = FALSE, na = "")
-}
 
 candidate_update <- candidates[ci, , drop = FALSE]
 candidate_update$eligibility <- "eligible"
@@ -76,14 +63,9 @@ candidate_update$notes <- paste(
   "series is machine-readable or that all age-specific survey data are available."
 )
 
-inventory_update <- inventory[ii, , drop = FALSE]
-inventory_update$eligibility <- "eligible"
 if (!write_mode) {
   cat("NOAA Gulf red grouper SEDAR 88 is eligible for partial source curation.\n")
 } else {
   replace_candidate_register_row(candidate_path, ci, candidate_update, candidate_id)
-  replace_csv_register_row(inventory_path, ii, inventory_update, "unit_key",
-    inventory$unit_key[ii])
-  if (!file.exists(batch_path)) write.csv(selected, batch_path, row.names = FALSE, na = "")
   cat("Selected NOAA Gulf red grouper SEDAR 88 for partial source curation.\n")
 }

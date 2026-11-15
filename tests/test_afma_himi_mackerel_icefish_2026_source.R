@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source("R/read_database.R")
 source("tests/helper_inventory.R")
 
@@ -19,10 +21,8 @@ expected_density_sum <- outputs[outputs$measure == "sum_expected_cohort_density"
 
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-progress <- read.csv("discovery/inventory_progress.csv", stringsAsFactors = FALSE)
-units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE)
-selected <- read.csv("discovery/selections/selected_batch_07_2026.csv", stringsAsFactors = FALSE,
-  check.names = FALSE)
+progress <- candidate_progress()
+units <- candidate_units()
 manifest <- read.csv("provenance/afma_himi_mackerel_icefish_2026_sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == "AFMA:HIMI_ICEFISH", , drop = FALSE]
@@ -70,7 +70,6 @@ stopifnot(
   nrow(candidate) == 1L,
   candidate$eligibility == "unresolved",
   candidate$import_status == "partial",
-  selected$curation_status == "source_curated_partial",
   nrow(manifest) == 1L,
   manifest$retrieved_on == "2026-11-06",
   manifest$sha256 == "17FF6A46D444A633C4BEE736694C56E524B59899A32AA7498EBA6414591DE955",

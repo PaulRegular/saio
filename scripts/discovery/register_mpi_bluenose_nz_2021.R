@@ -115,17 +115,13 @@ manifest <- data.frame(
 )
 
 register_path <- "discovery/candidates.csv"
-units_path <- "discovery/inventory_units.csv"
-progress_path <- "discovery/inventory_progress.csv"
-selected_path <- "discovery/selections/selected_batch_09_2026.csv"
 manifest_path <- "provenance/mpi_bluenose_nz_2021_sources.csv"
 source_paths <- file.path("source_cache", manifest$local_file)
 
 register <- read_table(register_path)
-units <- read_table(units_path)
 stocks <- read_table("database/stocks.csv")
 if (candidate_id %in% register$candidate_id || candidate_unit_id %in% register$candidate_unit_id ||
-    stock_id %in% stocks$stock_id || file.exists(selected_path)) {
+    stock_id %in% stocks$stock_id) {
   stop("Bluenose candidate or stock is already registered.", call. = FALSE)
 }
 if (!identical(names(candidate), names(register))) {
@@ -135,7 +131,7 @@ if (!identical(toupper(unname(tools::sha256sum(source_paths))), toupper(manifest
   stop("Cached source checksums do not match the reviewed bluenose sources.", call. = FALSE)
 }
 unit_key <- paste0("candidate:", candidate_unit_id)
-if (unit_key %in% units$unit_key || file.exists(selected_path) || file.exists(manifest_path)) {
+if (file.exists(manifest_path)) {
   stop("Bluenose inventory unit, batch, or provenance manifest already exists.", call. = FALSE)
 }
 
@@ -146,7 +142,6 @@ cat("Sources cached and checksummed:", nrow(manifest), "\n")
 if (write_mode) {
   write.table(candidate, register_path, sep = ",", row.names = FALSE,
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double", na = "")
-  write.csv(selected, selected_path, row.names = FALSE, na = "")
   write.csv(manifest, manifest_path, row.names = FALSE, na = "")
 
   unit <- data.frame(
@@ -164,21 +159,10 @@ if (write_mode) {
     stringsAsFactors = FALSE,
     check.names = FALSE
   )
-  write.table(unit, units_path, sep = ",", row.names = FALSE, col.names = FALSE,
-    append = TRUE, quote = TRUE, qmethod = "double", na = "")
 
-  progress_lines <- readLines(progress_path, warn = FALSE)
-  progress_index <- grep('^"Fisheries New Zealand","New Zealand",', progress_lines)
-  if (length(progress_index) != 1L) stop("Expected one New Zealand inventory summary row.", call. = FALSE)
-  progress <- read.csv(text = progress_lines[c(1L, progress_index)],
-    stringsAsFactors = FALSE, check.names = FALSE)
   increment <- c("inventory_rows", "new", "eligible", "eligible_new", "screening_complete",
     "crosswalked_candidate_units", "eligible_new_units")
   for (field in increment) progress[[field]][1L] <- progress[[field]][1L] + 1L
-  progress_lines[progress_index] <- capture.output(write.table(progress,
-    sep = ",", row.names = FALSE, col.names = FALSE, quote = TRUE,
-    qmethod = "double", na = ""))
-  writeLines(progress_lines, progress_path, useBytes = TRUE)
   cat("Registered the selected bluenose unit and cached-source provenance.\n")
 }
 

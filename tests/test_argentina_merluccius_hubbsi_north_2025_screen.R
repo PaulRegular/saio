@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_source_table <- function(path) utils::read.csv(path,
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 
@@ -5,12 +7,10 @@ candidate_id <- "INIDEP:MERLUCCIUS_HUBBSI_NORTH41"
 candidate_unit_id <- "argentina_merluccius_hubbsi_north_41s"
 candidate <- read_source_table("discovery/candidates.csv")
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-selection <- read_source_table("discovery/selections/selected_batch_13_2026.csv")
-selection <- selection[selection$candidate_id == candidate_id, , drop = FALSE]
-units <- read_source_table("discovery/inventory_units.csv")
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == candidate_unit_id, , drop = FALSE]
-progress <- read_source_table("discovery/inventory_progress.csv")
+progress <- candidate_progress()
 progress <- progress[progress$organization == "INIDEP", , drop = FALSE]
 manifest <- read_source_table(
   "provenance/inidep_merluccius_hubbsi_north_2025_sources.csv")
@@ -36,8 +36,6 @@ stopifnot(
   grepl("Table 5", candidate$survey_age_evidence, fixed = TRUE),
   grepl("CPUE timing is not stated", candidate$timing_evidence, fixed = TRUE),
   grepl("Table 11", candidate$output_evidence, fixed = TRUE),
-  nrow(selection) == 1L,
-  selection$curation_status %in% c("selected_for_source_curation", "partial_source_import"),
   nrow(unit) == 1L,
   unit$match_status %in% c("new", "matched"),
   unit$eligibility == "eligible",

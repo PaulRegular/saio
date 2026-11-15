@@ -35,9 +35,6 @@ outputs <- read_assessment_rows(file.path(root, "database/outputs.csv"), assessm
 candidate <- read.csv(file.path(root, "discovery/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA"))
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-selection <- read.csv(file.path(root, "discovery/selections/selected_batch_20_2026.csv"),
-  stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA"))
-selection <- selection[selection$candidate_id == candidate_id, , drop = FALSE]
 manifest <- read.csv(file.path(root, "provenance/ifop_merluza_comun_2026_sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA"))
 
@@ -84,8 +81,6 @@ stopifnot(
   candidate$match_status == "matched",
   candidate$eligibility == "unresolved",
   candidate$import_status == "partial",
-  nrow(selection) == 1L,
-  selection$curation_status == "partial_source_import",
   any(grepl("Access database extracted", manifest$notes, fixed = TRUE)),
   any(grepl("preliminary observations", manifest$notes, fixed = TRUE))
 )

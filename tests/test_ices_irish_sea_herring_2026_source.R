@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 import_env <- new.env(parent = globalenv())
 source(file.path(root, "scripts", "database", "549_import_ices_irish_sea_herring_2026.R"),
@@ -125,17 +127,13 @@ assessments <- utils::read.csv(file.path(database, "assessments.csv"), stringsAs
   na.strings = c("", "NA"), check.names = FALSE)
 candidates <- utils::read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selected <- utils::read.csv(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"), stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-inventory <- utils::read.csv(file.path(root, "discovery", "inventory_units.csv"), stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 review <- paste(readLines(file.path(root, "source_reviews", "screening", "ices_irish_sea_herring_2026.md"),
   warn = FALSE), collapse = "\n")
 stopifnot(
   sum(stocks$stock_id == stock_id, na.rm = TRUE) == 1L,
   sum(assessments$assessment_id == assessment_id, na.rm = TRUE) == 1L,
   candidates$import_status[candidates$candidate_id == "ICES:her.27.nirs"] == "partial",
-  selected$curation_status[selected$candidate_id == "ICES:her.27.nirs"] == "partial_source_import",
   inventory$import_status[inventory$unit_key == paste0("candidate:", stock_id)] == "partial",
   grepl("1,747 input rows, 18 assumption records and 276 output rows", review, fixed = TRUE),
   grepl("Fitted N-at-age and F-at-age are unavailable", review, fixed = TRUE)

@@ -48,19 +48,14 @@ if (!all(file.exists(source_files)) ||
 }
 
 candidates_path <- file.path(root, "discovery/candidates.csv")
-units_path <- file.path(root, "discovery/inventory_units.csv")
-selection_path <- file.path(root, "discovery/selections/selected_batch_13_2026.csv")
 candidates <- read_character_csv(candidates_path)
-units <- read_character_csv(units_path)
 stocks <- read_csv(file.path(root, "database/stocks.csv"))
 assessments <- read_csv(file.path(root, "database/assessments.csv"))
 has_value <- function(x, value) any(!is.na(x) & x == value)
 if (has_value(candidates$candidate_id, candidate_id) ||
     has_value(candidates$candidate_unit_id, candidate_unit_id) ||
     has_value(stocks$stock_id, stock_id) ||
-    has_value(assessments$assessment_id, assessment_id) ||
-    has_value(units$candidate_unit_id, candidate_unit_id) ||
-    file.exists(selection_path)) {
+    has_value(assessments$assessment_id, assessment_id)) {
   stop("The candidate or northern stock is already present; review before proceeding.",
     call. = FALSE)
 }
@@ -110,13 +105,6 @@ candidate <- rows(candidate_fields, list(
     "biological effective includes the ZCPAU and adjacent Argentine waters;",
     "the southern effective south of 41°S remains a separate stock record.")))
 
-unit_fields <- fields(units_path)
-unit <- rows(unit_fields, list(
-  unit_key = paste0("candidate:", candidate_unit_id), matched_stock_id = "",
-  candidate_unit_id = candidate_unit_id, match_status = "new", eligibility = "eligible",
-  screening_status = "screened", import_status = "not_started", organizations = "INIDEP",
-  source_regions = "North of 41°S; ZCPAU and adjacent Argentine waters",
-  candidate_ids = candidate_id, inventory_entries = 1L))
 selection <- rows(c("priority", "candidate_id", "candidate_unit_id", "organization",
   "official_stock_id", "scientific_name", "stock_name", "assessment_area",
   "inventory_assessment_year", "detailed_source_url", "review_date",
@@ -155,12 +143,8 @@ cat("Candidate:", candidate_id, "\n")
 cat("Current run: 2025; terminal year: 2024; source screen: eligible\n")
 if (write_mode) {
   append_rows(candidates_path, candidate)
-  append_rows(units_path, unit)
-  utils::write.csv(selection, selection_path, row.names = FALSE, na = "")
   utils::write.csv(manifest, file.path(root,
     "provenance/inidep_merluccius_hubbsi_north_2025_sources.csv"),
     row.names = FALSE, na = "")
-  source(file.path(root, "scripts/discovery/195_summarize_discovery.R"),
-    local = new.env(parent = globalenv()))
   cat("Added the source-led candidate and provenance manifest.\n")
 }

@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
@@ -36,8 +38,7 @@ stopifnot(!any(as.character(ids) %in% stocks$authority_stock_id),
   !any(grepl('noaa_uci_salmon_', inputs$assessment_id, fixed = TRUE)),
   !any(grepl('noaa_uci_salmon_', outputs$assessment_id, fixed = TRUE)))
 
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 stopifnot(sum(noaa$inventory_rows) == 432L,
   sum(noaa$screening_complete) == 432L,

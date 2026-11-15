@@ -1,10 +1,8 @@
 root <- "."
 register <- read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE)
-selected <- read.csv(file.path(root, "discovery/selections", "selected_batch_19_2026.csv"), stringsAsFactors = FALSE)
 provenance <- read.csv(file.path(root, "provenance", "ices_ane_27_8_sources.csv"), stringsAsFactors = FALSE)
 
 candidate <- register[register$candidate_id == "ICES:ane.27.8", , drop = FALSE]
-batch <- selected[selected$candidate_id == "ICES:ane.27.8", , drop = FALSE]
 source_review <- paste(readLines(file.path(root, "source_reviews", "ices_bay_biscay_anchovy_8.md")), collapse = "\n")
 
 stopifnot(
@@ -20,9 +18,6 @@ stopifnot(
   grepl("million fish", candidate$survey_age_evidence, fixed = TRUE),
   grepl("29335520.v3", candidate$detailed_source_url, fixed = TRUE),
   !grepl("52237436", candidate$detailed_source_url, fixed = TRUE),
-  nrow(batch) == 1L,
-  batch$inventory_assessment_year == 2025L,
-  batch$curation_status %in% c("selected_for_source_curation", "partial_source_import"),
   nrow(provenance) == 5L,
   all(grepl("^[A-F0-9]{64}$", provenance$sha256)),
   grepl("source_cache/ices_ane_27_8", source_review, fixed = TRUE),

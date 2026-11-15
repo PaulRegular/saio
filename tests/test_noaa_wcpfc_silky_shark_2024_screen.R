@@ -1,14 +1,14 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 candidate_id <- 'NOAA:11728'
 unit_id <- 'wcpfc_wcpo_silky_shark'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id == unit_id, , drop = FALSE]
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 pifsc <- noaa[noaa$source_region == 'PIFSC', , drop = FALSE]
 cache <- file.path(root, 'source_cache', 'discovery_noaa_wcpfc_silky_shark_2024')

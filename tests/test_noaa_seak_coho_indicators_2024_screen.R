@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 read_table <- function(name) read.csv(file.path(root, name), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
@@ -45,8 +47,8 @@ stopifnot(nrow(rows) == 3L, !anyNA(rows$candidate_id),
     'noaa_southeast_alaska_coho_2024.md')),
   !anyDuplicated(rows$candidate_unit_id))
 
-progress <- read_table('discovery/inventory_progress.csv')
-units <- read_table('discovery/inventory_units.csv')
+progress <- candidate_progress()
+units <- candidate_units()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 afsc <- noaa[noaa$source_region == 'AFSC', , drop = FALSE]
 stopifnot(sum(progress$inventory_rows) == 905L,

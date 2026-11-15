@@ -4,19 +4,12 @@ review_date <- "2026-11-09"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 register_path <- "discovery/candidates.csv"
-units_path <- "discovery/inventory_units.csv"
-progress_path <- "discovery/inventory_progress.csv"
 
-if (!file.exists(register_path) || !file.exists(units_path) ||
-    !file.exists(progress_path)) {
+if (!file.exists(register_path)) {
   stop("Run this script from the SAIO repository root.", call. = FALSE)
 }
 
 register <- read.csv(register_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-units <- read.csv(units_path, stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-progress_table <- read.csv(progress_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
@@ -145,13 +138,13 @@ progress <- data.frame(
   check.names = FALSE
 )
 
-stopifnot(identical(names(candidate), names(register)),
-  identical(names(unit), names(units)),
-  identical(names(progress), names(progress_table)),
+stopifnot(
+  identical(names(candidate), names(register)),
   !any(stocks$scientific_name == candidate$scientific_name &
     grepl("Southern Australia|South Australia",
       paste(stocks$area, stocks$region, stocks$authority_stock_id),
-      ignore.case = TRUE)))
+      ignore.case = TRUE))
+)
 
 append_row <- function(row, path) {
   size <- file.info(path)$size
@@ -178,13 +171,6 @@ cat("No canonical assessment data or local source files will be written.\n")
 if (write_mode) {
   if (!candidate_id %in% register$candidate_id) {
     append_row(candidate, register_path)
-  }
-  if (!candidate_unit_id %in% units$candidate_unit_id) {
-    append_row(unit, units_path)
-  }
-  if (!any(progress_table$organization == progress$organization &
-      progress_table$source_region == progress$source_region)) {
-    append_row(progress, progress_path)
   }
   cat("Registered or completed the unresolved source-led candidate.\n")
 }

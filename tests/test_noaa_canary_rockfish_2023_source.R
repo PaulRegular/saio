@@ -17,8 +17,6 @@ assessments <- read.csv(file.path(root, "database", "assessments.csv"),
 candidate <- read_selected(file.path(root, "discovery", "candidates.csv"),
   c("candidate_id", "matched_stock_id", "import_status", "catch_age_evidence",
     "survey_age_evidence", "mortality_evidence"))
-selected <- read_selected(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"),
-  c("candidate_unit_id", "curation_status"))
 inputs <- read_selected(file.path(root, "database", "inputs.csv"), c(
   "assessment_id", "type", "measure", "basis", "year", "age", "value",
   "unit", "sampling_time", "source_type", "source_reference", "sex", "fleet",
@@ -33,7 +31,6 @@ assumptions <- read_selected(file.path(root, "database", "assumptions.csv"),
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidate[candidate$candidate_id == "NOAA:10415", , drop = FALSE]
-selected <- selected[selected$candidate_unit_id == "noaa_stocksmart_10415", , drop = FALSE]
 input <- inputs[inputs$assessment_id == assessment_id, , drop = FALSE]
 output <- outputs[outputs$assessment_id == assessment_id, , drop = FALSE]
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
@@ -66,7 +63,6 @@ stopifnot(
   all(assessment[c("inputs_status", "outputs_status", "assumptions_status")] == "partial"),
   candidate$matched_stock_id == stock_id,
   candidate$import_status == "partial",
-  selected$curation_status == "partial_source_import",
   nrow(catch) == 1965L,
   min(as.integer(catch$year)) == 1892L,
   max(as.integer(catch$year)) == 2022L,

@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 stock_id <- "noaa_red_grouper_gom"
 assessment_id <- paste0(stock_id, "_sedar88_2025")
 candidate_id <- "NOAA:10331"
@@ -69,11 +71,8 @@ get_output <- function(measure, year = NULL, age = NULL, fleet = NULL) {
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 inventory <- inventory[inventory$candidate_ids == candidate_id, , drop = FALSE]
-batch <- read.csv("discovery/selections/selected_batch_41_2026.csv",
-  stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 review <- paste(readLines("source_reviews/screening/noaa_red_grouper_gom_2025.md",
   warn = FALSE), collapse = " ")
 manifest <- read.csv("provenance/discovery_noaa_red_grouper_gom_2025/sources.csv",
@@ -175,7 +174,6 @@ stopifnot(
   nrow(inventory) == 1L,
   inventory$matched_stock_id == stock_id,
   inventory$import_status == "partial",
-  batch$curation_status == "source_curated_partial",
   grepl("Figure-only age compositions", review, fixed = TRUE),
   !grepl("tinyAM", review, ignore.case = TRUE),
   nrow(source_row) == 1L,

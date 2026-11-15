@@ -1,9 +1,6 @@
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "MPI:LIN56+LIN6B")
-selection <- read.csv("discovery/selections/selected_batch_06_2026.csv",
-  stringsAsFactors = FALSE, check.names = FALSE)
-selection <- subset(selection, candidate_id == "MPI:LIN56+LIN6B")
 manifest <- read.csv("provenance/mpi_ling_lin56_2024_sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- readLines("source_reviews/mpi_ling_lin56_lin6b.md",
@@ -21,8 +18,6 @@ stopifnot(
   candidate$screening_status == "screened",
   candidate$eligibility == "unresolved",
   candidate$import_status == "partial",
-  nrow(selection) == 1L,
-  selection$curation_status == "source_curated_partial",
   nrow(manifest) == 6L,
   all(grepl("^[A-F0-9]{64}$", manifest$sha256)),
   grepl("1972-2023", review_text, fixed = TRUE),

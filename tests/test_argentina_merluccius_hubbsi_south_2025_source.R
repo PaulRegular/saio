@@ -17,8 +17,6 @@ assumptions <- read_source_table("database/assumptions.csv")
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
 candidate <- read_source_table("discovery/candidates.csv")
 candidate <- candidate[candidate$candidate_id == "INIDEP:MERLUCCIUS_HUBBSI_SUR41", , drop = FALSE]
-selection <- read_source_table("discovery/selections/selected_batch_12_2026.csv")
-selection <- selection[selection$candidate_id == "INIDEP:MERLUCCIUS_HUBBSI_SUR41", , drop = FALSE]
 
 catch_age <- inputs[inputs$type == "catch" & inputs$measure == "numbers_at_age", ]
 survey_age <- inputs[inputs$type == "index" & inputs$measure == "numbers_at_age", ]
@@ -89,8 +87,7 @@ stopifnot(
   grepl("Table 11 omits the unit; thousand individuals is inferred",
     outputs$notes[outputs$measure == "recruitment"][1],
     ignore.case = TRUE),
-  candidate$import_status == "partial",
-  selection$curation_status == "partial_source_import"
+  candidate$import_status == "partial"
 )
 
 cat("INIDEP southern hake source import and coverage passed.\n")

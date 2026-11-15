@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source('scripts/discovery/510_screen_noaa_klamath_spring_chinook_2013.R')
 
 root <- '.'
@@ -23,8 +25,7 @@ stopifnot(nrow(row) == 1L,
   !any(register$candidate_id == 'NOAA:10609' &
     register$candidate_unit_id == row$candidate_unit_id))
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_klamath_spring_chinook', , drop = FALSE]
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
@@ -62,8 +63,7 @@ stopifnot(!any(stocks$authority_stock_id == '10610', na.rm = TRUE),
   !any(grepl('noaa_klamath_spring_chinook', inputs$assessment_id, fixed = TRUE)),
   !any(grepl('noaa_klamath_spring_chinook', outputs$assessment_id, fixed = TRUE)))
 
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 swfsc <- noaa[noaa$source_region == 'NWFSC / SWFSC', , drop = FALSE]
 stopifnot(sum(noaa$inventory_rows) == 432L,

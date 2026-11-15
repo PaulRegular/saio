@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 candidate_id <- 'ICES:ldb.27.8c9a'
 unit_id <- 'ices_four_spot_megrim_8c9a'
@@ -6,8 +8,7 @@ cache <- file.path(root, 'source_cache', 'lepidorhombus_boscii/ices_four_spot_me
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[units$unit_key == paste0('candidate:', unit_id), , drop = FALSE]
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 review <- paste(readLines(file.path(root, 'source_reviews', 'ices_four_spot_megrim_8c9a.md'), warn = FALSE), collapse = '\n')

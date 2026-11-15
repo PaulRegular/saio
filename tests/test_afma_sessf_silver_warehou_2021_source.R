@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 assessment_id <- "afma_sessf_silver_warehou_2021"
 
 read_table <- function(path) {
@@ -27,15 +29,13 @@ assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
 inputs <- read_assessment_rows("database/inputs.csv", assessment_id)
 outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 candidates <- read_table("discovery/candidates.csv")
-selected <- read_table("discovery/selections/selected_batch_08_2026.csv")
-progress <- read_table("discovery/inventory_progress.csv")
-units <- read_table("discovery/inventory_units.csv")
+progress <- candidate_progress()
+units <- candidate_units()
 manifest <- read_table("provenance/afma_sessf_silver_warehou_2021_sources.csv")
 
 stock <- stocks[stocks$stock_id == "afma_sessf_silver_warehou", , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == "AFMA:SESSF_SILVER_WAREHOU", , drop = FALSE]
-selection <- selected[selected$candidate_id == candidate$candidate_id, , drop = FALSE]
 check_inventory_accounting(candidates, progress, units)
 
 catch <- inputs[inputs$measure == "catch_biomass", , drop = FALSE]
@@ -88,7 +88,6 @@ stopifnot(
   outputs$value[outputs$measure == "SSB" & outputs$year == 2022] == 5374,
   candidate$eligibility == "unresolved",
   candidate$import_status == "partial",
-  selection$curation_status == "source_curated_partial",
   nrow(manifest) == 2L,
   all(manifest$retrieved_on == "2026-11-06"),
   identical(toupper(unname(tools::sha256sum(file.path("source_cache", manifest$local_file)))),

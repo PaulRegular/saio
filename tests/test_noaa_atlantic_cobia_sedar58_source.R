@@ -85,15 +85,10 @@ stopifnot(
 register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- register[register$candidate_id == "NOAA:12149", , drop = FALSE]
-selected <- read.csv("discovery/selections/selected_batch_37_2026.csv",
-  stringsAsFactors = FALSE, check.names = FALSE)
-selected <- selected[selected$candidate_id == "NOAA:12149", , drop = FALSE]
 stopifnot(
   nrow(candidate) == 1L,
   candidate$matched_stock_id == stock_id,
-  candidate$import_status == "partial",
-  nrow(selected) == 1L,
-  selected$curation_status == "partial_source_import"
+  candidate$import_status == "partial"
 )
 
 cat("NOAA Atlantic cobia SEDAR 58 source records and limitations passed.\n")

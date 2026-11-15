@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_id) {
   con <- file(path, open = "rb")
   on.exit(close(con), add = TRUE)
@@ -37,8 +39,6 @@ assumptions <- read_columns("database/assumptions.csv", c("assessment_id",
 candidates <- read_columns("discovery/candidates.csv", c("candidate_id",
   "matched_stock_id", "match_status", "screening_status", "eligibility",
   "import_status", "survey_age_evidence", "output_evidence"))
-selected <- read_columns("discovery/selections/selected_batch_24_2026.csv", c("candidate_id",
-  "curation_status", "detailed_source_url"))
 manifest <- read.csv("provenance/discovery_noaa_gom_red_snapper_2026/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 
@@ -46,8 +46,7 @@ assessment <- assessments[assessments$assessment_id == assessment_id, , drop = F
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == "NOAA:10230", , drop = FALSE]
-selected_case <- selected[selected$candidate_id == "NOAA:10230", , drop = FALSE]
-units <- read_columns("discovery/inventory_units.csv", c("unit_key", "matched_stock_id", "candidate_unit_id", "match_status", "import_status", "candidate_ids"))
+units <- candidate_units()
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
 get_output <- function(measure, type = NULL) {
   x <- outputs[outputs$measure == measure, , drop = FALSE]
@@ -92,9 +91,6 @@ stopifnot(
   grepl("Tables 12-19", candidate$output_evidence, fixed = TRUE),
   grepl("Tables 5.8.1-5.8.3", candidate$survey_age_evidence, fixed = TRUE),
   grepl("Tables 20-22", candidate$output_evidence, fixed = TRUE),
-  nrow(selected_case) == 1L,
-  selected_case$curation_status == "partial_source_import",
-  grepl("dw-05", selected_case$detailed_source_url, fixed = TRUE),
   nrow(manifest) == 13L,
   !anyDuplicated(manifest$file),
   all(grepl("^[[:xdigit:]]{64}$", manifest$sha256)),

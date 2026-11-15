@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 assessment_id <- "mpi_bluenose_nz_2021"
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
@@ -5,10 +7,9 @@ read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
 candidate_id <- "MPI:BNS_NZ"
 candidate <- read_table("discovery/candidates.csv")
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-selection <- read_table("discovery/selections/selected_batch_09_2026.csv")
 manifest <- read_table("provenance/mpi_bluenose_nz_2021_sources.csv")
-units <- read_table("discovery/inventory_units.csv")
-progress <- read_table("discovery/inventory_progress.csv")
+units <- candidate_units()
+progress <- candidate_progress()
 
 stopifnot(
   nrow(candidate) == 1L,
@@ -22,9 +23,6 @@ stopifnot(
   grepl("no research-survey", candidate$survey_age_evidence, fixed = TRUE),
   grepl("sex-specific empirical", candidate$weights_evidence, fixed = TRUE),
   grepl("Table 5", candidate$output_evidence, fixed = TRUE),
-  nrow(selection) == 1L,
-  selection$candidate_id == candidate_id,
-  selection$curation_status == "source_curated_partial",
   grepl("official 2021 assessment", candidate$decision_reason, fixed = TRUE),
   nrow(manifest) == 2L,
   all(manifest$retrieved_on == "2026-11-06"),

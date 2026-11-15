@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 source_paths <- c(list.files("database", pattern = "[.]csv$", full.names = TRUE),
   list.files("discovery", pattern = "[.]csv$", full.names = TRUE))
@@ -134,11 +136,8 @@ assessments <- utils::read.csv(file.path(database, "assessments.csv"), stringsAs
   na.strings = c("", "NA"), check.names = FALSE)
 candidates <- utils::read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selected <- utils::read.csv(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"), stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
 candidate_note <- candidates$notes[candidates$candidate_id == "ICES:her.27.irls"]
-inventory <- utils::read.csv(file.path(root, "discovery", "inventory_units.csv"), stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 review <- paste(readLines(file.path(root, "source_reviews", "screening", "ices_celtic_herring_2026.md"),
   warn = FALSE), collapse = "\n")
 stopifnot(
@@ -146,7 +145,6 @@ stopifnot(
   sum(assessments$assessment_id == assessment_id, na.rm = TRUE) == 1L,
   candidates$import_status[candidates$candidate_id == "ICES:her.27.irls"] == "partial",
   length(strsplit(candidate_note, "Imported report-table inputs and outputs.", fixed = TRUE)[[1L]]) == 2L,
-  selected$curation_status[selected$candidate_id == "ICES:her.27.irls"] == "partial_source_import",
   inventory$import_status[import_env$candidate_inventory_row(inventory, "ICES:her.27.irls", stock_id)] == "partial",
   grepl("The 2019 acoustic input table prints age-2 abundance as 98,229", review, fixed = TRUE),
   grepl("Both values are imported in their separate source contexts without correction", review, fixed = TRUE)

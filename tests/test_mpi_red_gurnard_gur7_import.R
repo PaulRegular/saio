@@ -13,8 +13,6 @@ assessments <- read_table("database/assessments.csv")
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidates <- read_table("discovery/candidates.csv")
 candidate <- candidates[candidates$candidate_id == "MPI:GUR7", , drop = FALSE]
-selected <- read_table("discovery/selections/selected_batch_18_2026.csv")
-selected <- selected[selected$candidate_id == "MPI:GUR7", , drop = FALSE]
 manifest <- read_table("provenance/mpi_red_gurnard_gur7_2022_sources.csv")
 
 catch <- inputs[inputs$type == "catch" & inputs$measure == "catch_biomass", , drop = FALSE]
@@ -82,7 +80,6 @@ stopifnot(
   candidate$match_status == "matched",
   candidate$eligibility == "ineligible",
   candidate$import_status == "partial",
-  selected$curation_status == "partial_source_import",
   nrow(manifest) == 2L
 )
 

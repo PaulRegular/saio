@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_id) {
   header <- readLines(path, n = 1L, warn = FALSE)
   rows <- suppressWarnings(system2("rg", c("--color", "never", "--no-heading",
@@ -16,8 +18,7 @@ stock_id <- "noaa_cobia_gulf_mexico_2020"
 assessment_id <- paste0(stock_id, "_sedar28_update")
 register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+units <- candidate_units()
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,

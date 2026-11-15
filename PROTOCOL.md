@@ -114,8 +114,7 @@ outputs and access to native or machine-readable sources. Use underrepresented
 regions and species groups to break comparable-readiness ties, followed by stable
 official identifiers. Do not count assessment years, sexes, variants or regional
 components of one unit as additional stocks. Record source blockers and actual
-shortfalls rather than guessing to meet a numerical target. Save each dated selection under `discovery/selections/`. Commit the reviewed
-inventory and selection before importing numerical source data.
+shortfalls rather than guessing to meet a numerical target. Record each selected unit and the basis for the decision in the candidate register. Commit the reviewed candidate rows before importing numerical source data.
 
 ------------------------------------------------------------------------
 

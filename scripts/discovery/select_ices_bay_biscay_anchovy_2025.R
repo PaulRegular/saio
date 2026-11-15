@@ -2,7 +2,6 @@ candidate_id <- "ICES:ane.27.8"
 candidate_unit_id <- "ices_bay_biscay_anchovy_8"
 review_date <- "2026-11-08"
 candidate_path <- "discovery/candidates.csv"
-batch_path <- "discovery/selections/selected_batch_19_2026.csv"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 sources <- data.frame(
@@ -51,8 +50,7 @@ if (length(candidate_row) != 1L ||
     candidates$eligibility[candidate_row] != "eligible" ||
     candidates$import_status[candidate_row] != "not_started" ||
     candidate_unit_id %in% stocks$stock_id ||
-    candidate_unit_id %in% assessments$stock_id ||
-    file.exists(batch_path)) {
+    candidate_unit_id %in% assessments$stock_id) {
   stop("The ICES candidate is not eligible for a new selection checkpoint.", call. = FALSE)
 }
 
@@ -141,9 +139,6 @@ batch <- data.frame(
   curation_status = "selected_for_source_curation",
   stringsAsFactors = FALSE, check.names = FALSE
 )
-if (!identical(names(batch), names(read_table("discovery/selections/selected_batch_18_2026.csv")))) {
-  stop("Selection fields do not match the selected-batch schema.", call. = FALSE)
-}
 
 cat("Verified official 2025 assessment tables, current assessment identity, and cached source checksums.\n")
 cat("Selected ICES ane.27.8 for source curation; historical survey data remain to be recovered.\n")
@@ -151,8 +146,5 @@ if (write_mode) {
   source("scripts/discovery/candidate_register_io.R", local = TRUE)
   replace_candidate_register_row(candidate_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  write.csv(batch, batch_path, row.names = FALSE, na = "")
-  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
-  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("Recorded selected batch 19 and refreshed discovery summaries.\n")
 }

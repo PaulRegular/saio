@@ -72,8 +72,6 @@ if (any(stocks$scientific_name == candidate$scientific_name &
 utils::write.table(candidate, candidate_path, sep = ",", quote = TRUE,
   row.names = FALSE, col.names = FALSE, append = TRUE, na = "", qmethod = "double")
 
-selection_path <- file.path(root, "discovery/selections/selected_batch_11_2026.csv")
-if (file.exists(selection_path)) stop("Selection batch 11 already exists; review it manually.", call. = FALSE)
 selection <- data.frame(
   priority = 1L,
   candidate_id = candidate_id,
@@ -90,7 +88,6 @@ selection <- data.frame(
   curation_status = "selected_for_source_curation",
   stringsAsFactors = FALSE
 )
-utils::write.csv(selection, selection_path, row.names = FALSE, na = "")
 
 manifest <- data.frame(
   local_file = "source_cache/australia_qld_spanish_mackerel_2025/east_coast_assessment_2025.pdf",
@@ -106,7 +103,5 @@ utils::write.csv(manifest,
   file.path(root, "provenance/australia_qld_spanish_mackerel_2025_sources.csv"),
   row.names = FALSE, na = "")
 
-source(file.path(root, "scripts/discovery/195_summarize_discovery.R"), local = new.env(parent = globalenv()))
-source(file.path(root, "scripts/discovery/196_summarize_inventory_units.R"), local = new.env(parent = globalenv()))
 
 cat("Screened the current east coast Spanish mackerel unit and selected it for partial source curation.\n")

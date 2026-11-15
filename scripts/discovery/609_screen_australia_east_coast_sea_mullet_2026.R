@@ -83,12 +83,8 @@ candidate <- data.frame(
 )
 
 candidate_path <- file.path(root, "discovery/candidates.csv")
-units_path <- file.path(root, "discovery/inventory_units.csv")
-progress_path <- file.path(root, "discovery/inventory_progress.csv")
 stocks <- read_csv(file.path(root, "database/stocks.csv"))
 candidates <- read_csv(candidate_path)
-units <- read_csv(units_path)
-progress <- read_csv(progress_path)
 
 if (stock_id %in% stocks$stock_id || "Mugil cephalus" %in% stocks$scientific_name) {
   stop("A current sea mullet stock record already exists; review before writing.", call. = FALSE)
@@ -138,18 +134,9 @@ progress_row <- data.frame(
 )
 
 registered_candidate <- candidates[candidates$candidate_id %in% candidate_id, , drop = FALSE]
-registered_unit <- units[units$candidate_unit_id %in% stock_id, , drop = FALSE]
-registered_progress <- progress[progress$organization %in% progress_row$organization &
-  progress$source_region %in% progress_row$source_region, , drop = FALSE]
-if (nrow(registered_candidate) > 1L || nrow(registered_unit) > 1L ||
-    nrow(registered_progress) > 1L ||
+if (nrow(registered_candidate) > 1L ||
     (nrow(registered_candidate) == 1L &&
-      registered_candidate$candidate_unit_id != stock_id) ||
-    (nrow(registered_unit) == 1L &&
-      registered_unit$candidate_ids != candidate_id) ||
-    (nrow(registered_progress) == 1L &&
-      any(as.character(unlist(registered_progress[names(progress_row)], use.names = FALSE)) !=
-        as.character(unlist(progress_row, use.names = FALSE))))) {
+      registered_candidate$candidate_unit_id != stock_id)) {
   stop("The screened register state differs from this source review.", call. = FALSE)
 }
 
@@ -158,7 +145,5 @@ if (!write_mode) {
   cat("Dry run only. Re-run with --write to add the screened candidate and unit crosswalk.\n")
 } else {
   if (nrow(registered_candidate) == 0L) append_row(candidate_path, candidate)
-  if (nrow(registered_unit) == 0L) append_row(units_path, unit)
-  if (nrow(registered_progress) == 0L) append_row(progress_path, progress_row)
   cat("Screened sea mullet candidate, unit crosswalk and targeted inventory status are recorded.\n")
 }

@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_id) {
   header <- readLines(path, n = 1L, warn = FALSE, encoding = "bytes")
   matches <- system2("rg", c("--color", "never", "--no-heading", "--no-line-number",
@@ -25,12 +27,8 @@ assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = 
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == "NOAA:10383", , drop = FALSE]
-units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+units <- candidate_units()
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
-selected <- read.csv("discovery/selections/selected_batch_38_2026.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-selected <- selected[selected$candidate_id == "NOAA:10383", , drop = FALSE]
 manifest <- read.csv("provenance/discovery_noaa_gulf_tilefish_sedar22_2011/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines("source_reviews/screening/noaa_golden_tilefish_gulf_sedar22_2011.md",
@@ -130,8 +128,6 @@ stopifnot(
   nrow(unit) == 1L,
   unit$matched_stock_id == stock_id,
   unit$import_status == "partial",
-  nrow(selected) == 1L,
-  selected$curation_status == "partial_source_import",
   nrow(manifest) == 8L,
   !anyDuplicated(manifest$file),
   all(grepl("^[[:xdigit:]]{64}$", manifest$sha256)),

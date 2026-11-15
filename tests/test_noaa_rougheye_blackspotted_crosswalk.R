@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source('scripts/discovery/485_reconcile_noaa_rougheye_blackspotted_units.R')
 
 register <- read.csv('discovery/candidates.csv',
@@ -11,8 +13,7 @@ west_coast <- lookup('NOAA:14516')
 bsai <- lookup('NOAA:11382')
 ebs <- lookup('NOAA:15394')
 historical_ai <- lookup('NOAA:15395')
-units <- read.csv('discovery/inventory_units.csv',
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 bsai_unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_bsai_rougheye_blackspotted', , drop = FALSE]
 

@@ -27,8 +27,6 @@ inputs <- read_assessment(file.path(root, "database/inputs.csv"), assessment_id)
 outputs <- read_assessment(file.path(root, "database/outputs.csv"), assessment_id)
 candidate_register <- read.csv(file.path(root, "discovery/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
-selected <- read.csv(file.path(root, "discovery/selections/selected_batch_19_2026.csv"),
-  stringsAsFactors = FALSE, check.names = FALSE)
 source_review <- paste(readLines(file.path(root,
   "source_reviews/ices_bay_biscay_anchovy_8.md")), collapse = "\n")
 
@@ -97,7 +95,6 @@ stopifnot(
   all(total_n$source_type == "derived_source_output"),
   !any(outputs$measure == "natural_mortality_at_age"),
   candidate_register$import_status[candidate_register$candidate_id == "ICES:ane.27.8"] == "partial",
-  selected$curation_status[selected$candidate_id == "ICES:ane.27.8"] == "partial_source_import",
   grepl("2007-2009", source_review, fixed = TRUE),
   grepl("unit mapping remains unresolved", source_review, fixed = TRUE),
   grepl("Total abundance is derived", source_review, fixed = TRUE)

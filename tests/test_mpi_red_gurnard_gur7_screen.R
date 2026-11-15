@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
@@ -6,11 +8,9 @@ candidate_unit_id <- "mpi_red_gurnard_gur7"
 all_candidates <- read_table("discovery/candidates.csv")
 candidate <- all_candidates
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-selection <- read_table("discovery/selections/selected_batch_18_2026.csv")
-selection <- selection[selection$candidate_id == candidate_id, , drop = FALSE]
-units <- read_table("discovery/inventory_units.csv")
+units <- candidate_units()
 unit <- units[units$unit_key == paste0("stock:", candidate_unit_id), , drop = FALSE]
-progress <- read_table("discovery/inventory_progress.csv")
+progress <- candidate_progress()
 nz_progress <- progress[progress$organization == "Fisheries New Zealand" &
   progress$source_region == "New Zealand", , drop = FALSE]
 stocks <- read_table("database/stocks.csv")
@@ -32,10 +32,6 @@ stopifnot(
   candidate$eligibility == "ineligible",
   candidate$import_status == "partial",
   grepl("Table A2 tabulates the complete", candidate$survey_age_evidence, fixed = TRUE),
-  nrow(selection) == 1L,
-  selection$candidate_unit_id == candidate_unit_id,
-  grepl("Selected for partial current-unit source recovery", selection$selection_basis, fixed = TRUE),
-  selection$curation_status == "partial_source_import",
   nrow(unit) == 1L,
   unit$eligibility == "ineligible",
   unit$screening_status == "screened",

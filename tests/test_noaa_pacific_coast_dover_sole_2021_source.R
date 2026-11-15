@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 assessment_id <- "noaa_pacific_coast_dover_sole_2021"
 stock_id <- "noaa_pacific_coast_dover_sole"
@@ -17,10 +19,7 @@ assessments <- read.csv(file.path(root, "database", "assessments.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 candidate <- read_selected(file.path(root, "discovery", "candidates.csv"),
   c("candidate_id", "matched_stock_id", "match_status", "import_status"))
-inventory <- read_selected(file.path(root, "discovery", "inventory_units.csv"),
-  c("unit_key", "matched_stock_id", "import_status"))
-selected <- read_selected(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"),
-  c("candidate_unit_id", "curation_status"))
+inventory <- candidate_units()
 input <- read_selected(file.path(root, "database", "inputs.csv"), c(
   "assessment_id", "type", "measure", "basis", "year", "age", "value",
   "unit", "year_basis", "sampling_time", "source_reference", "observation_id",
@@ -37,7 +36,6 @@ stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidate[candidate$candidate_id == "NOAA:10022", , drop = FALSE]
 inventory <- inventory[inventory$unit_key == paste0("candidate:", candidate_unit_id), , drop = FALSE]
-selected <- selected[selected$candidate_unit_id == candidate_unit_id, , drop = FALSE]
 input <- input[input$assessment_id == assessment_id, , drop = FALSE]
 output <- output[output$assessment_id == assessment_id, , drop = FALSE]
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
@@ -59,13 +57,17 @@ stopifnot(
   assessment$terminal_year == 2020L,
   assessment$estimate_terminal_year == 2032L,
   assessment$model_version == "3.30.16.02",
-  isTRUE(assessment$is_current), isTRUE(assessment$is_applied),
+  isTRUE(assessment$is_current),
+  isTRUE(assessment$is_applied),
   all(assessment[c("inputs_status", "outputs_status", "assumptions_status")] == "partial"),
-  candidate$matched_stock_id == stock_id, candidate$match_status == "new",
-  candidate$import_status == "partial", inventory$matched_stock_id == stock_id,
+  candidate$matched_stock_id == stock_id,
+  candidate$match_status == "new",
+  candidate$import_status == "partial",
+  inventory$matched_stock_id == stock_id,
   inventory$import_status == "partial",
-  selected$curation_status == "partial_source_import",
-  nrow(input) == 69354L, nrow(output) == 105042L, nrow(assumptions) == 28L,
+  nrow(input) == 69354L,
+  nrow(output) == 105042L,
+  nrow(assumptions) == 28L,
   nrow(get_input("landings_biomass")) == 220L,
   nrow(get_input("catch_se")) == 220L,
   nrow(get_input("relative_abundance_index")) == 35L,
@@ -93,7 +95,8 @@ stopifnot(
     get_input("frequency_at_length")$observation_id))) == 175L,
   any(grepl("sex code 0 is a combined-sex sample", input$notes, fixed = TRUE)),
   any(grepl("not an independent observation", input$notes, fixed = TRUE)),
-  all(nzchar(input$source_reference)), all(nzchar(output$source_reference)),
+  all(nzchar(input$source_reference)),
+  all(nzchar(output$source_reference)),
   nrow(get_output("total_biomass")) == 122L,
   nrow(get_output("summary_biomass_age3plus")) == 122L,
   nrow(get_output("spawning_biomass")) == 122L,

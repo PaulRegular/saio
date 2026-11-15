@@ -53,9 +53,6 @@ candidate_rows <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidates <- candidate_rows[!is.na(candidate_rows$candidate_unit_id) &
   candidate_rows$candidate_unit_id == stock_id, , drop = FALSE]
-selection <- read.csv("discovery/selections/selected_unworked_2026.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-selection <- selection[selection$candidate_id == "NOAA:11082", , drop = FALSE]
 
 stopifnot(
   nrow(stock) == 1L,
@@ -119,8 +116,6 @@ stopifnot(
   nrow(candidates) == 2L,
   all(candidates$matched_stock_id == stock_id),
   all(candidates$import_status == "partial"),
-  nrow(selection) == 1L,
-  selection$curation_status == "source_curated_partial",
   file.exists("source_reviews/iphc_pacific_halibut.md")
 )
 

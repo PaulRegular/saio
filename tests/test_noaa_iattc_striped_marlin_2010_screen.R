@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source('scripts/discovery/464_screen_noaa_iattc_striped_marlin_2010.R')
 source('scripts/discovery/195_summarize_discovery.R')
 source('scripts/discovery/196_summarize_inventory_units.R')
@@ -16,10 +18,8 @@ outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
 manifest <- read.csv(file.path(root, 'source_cache',
   'discovery_noaa_iattc_striped_marlin_2010', 'sources.csv'),
   stringsAsFactors = FALSE)
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
+units <- candidate_units()
 
 stopifnot(nrow(row) == 1L,
   row$candidate_unit_id == 'iattc_northeast_pacific_striped_marlin',

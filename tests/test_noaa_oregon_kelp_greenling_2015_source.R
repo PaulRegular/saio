@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_id) {
   header <- readLines(path, n = 1L, warn = FALSE)
   rows <- suppressWarnings(system2("rg", c("--color", "never", "--no-heading",
@@ -19,10 +21,8 @@ stock <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, check.names =
 assessment <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, check.names = FALSE)
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
 candidate <- candidate[candidate$candidate_id == "NOAA:10462", , drop = FALSE]
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE, check.names = FALSE)
+inventory <- candidate_units()
 inventory <- inventory[inventory$candidate_ids == "NOAA:10462", , drop = FALSE]
-selected <- read.csv("discovery/selections/selected_batch_40_2026.csv", stringsAsFactors = FALSE, check.names = FALSE)
-selected <- selected[selected$candidate_id == "NOAA:10462", , drop = FALSE]
 provenance <- read.csv("provenance/discovery_noaa_oregon_kelp_greenling_2015/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines("source_reviews/screening/noaa_oregon_kelp_greenling_2015.md"), collapse = " ")
@@ -49,11 +49,14 @@ stopifnot(
   assessment$estimate_terminal_year[assessment$assessment_id == id] == 2015,
   assessment$inputs_status[assessment$assessment_id == id] == "partial",
   assessment$outputs_status[assessment$assessment_id == id] == "partial",
-  nrow(i) == 7247L, nrow(o) == 704L, nrow(a) == 10L,
-  candidate$matched_stock_id == stock_id, candidate$match_status == "matched",
-  candidate$import_status == "partial", inventory$matched_stock_id == stock_id,
+  nrow(i) == 7247L,
+  nrow(o) == 704L,
+  nrow(a) == 10L,
+  candidate$matched_stock_id == stock_id,
+  candidate$match_status == "matched",
+  candidate$import_status == "partial",
+  inventory$matched_stock_id == stock_id,
   inventory$unit_key == paste0("candidate:", stock_id),
-  selected$curation_status == "partial_source_import",
   nrow(v("catch_biomass")) == 575L,
   num(v("catch_biomass", year = 1900, fleet = "Commercial")) == 0,
   abs(num(v("catch_biomass", year = 1915, fleet = "Recreational Estuary")) - 1.729441593) < 1e-10,
@@ -68,15 +71,19 @@ stopifnot(
   setequal(unique(len$sex), c("combined", "female", "male")),
   all(as.numeric(len$value) >= 0),
   length(unique(as.numeric(len$sample_size))) > 1L,
-  nrow(age) == 468L, length(unique(age$observation_id)) == 36L,
+  nrow(age) == 468L,
+  length(unique(age$observation_id)) == 36L,
   setequal(as.numeric(unique(age$age)), 0:12),
   all(grepl("Negative-fleet", age$notes, fixed = TRUE)),
-  nrow(cal) == 2821L, length(unique(cal$observation_id)) == 217L,
+  nrow(cal) == 2821L,
+  length(unique(cal$observation_id)) == 217L,
   all(as.numeric(cal$length_bin_lower) <= as.numeric(cal$length_bin_upper)),
-  all(!is.na(cal$sample_size)), all(!is.na(cal$age_error)),
+  all(!is.na(cal$sample_size)),
+  all(!is.na(cal$age_error)),
   identical(as.numeric(mat$value), c(rep(0, 13), .115, .25, .7933, .944, rep(1, 14))),
   identical(as.numeric(mat$length_bin), seq(0, 60, 2)),
-  nrow(m) == 2L, setequal(m$sex, c("female", "male")),
+  nrow(m) == 2L,
+  setequal(m$sex, c("female", "male")),
   as.numeric(m$value[m$sex == "female"]) == .360,
   as.numeric(m$value[m$sex == "male"]) == .318,
   nrow(out("total_biomass", 1915)) == 1L,
@@ -92,7 +99,8 @@ stopifnot(
   as.numeric(out("recruitment", 2015)$upr) == 3318,
   all(is.na(o$se)),
   nrow(o[!is.na(o$age) & o$measure != "recruitment", , drop = FALSE]) == 0L,
-  nrow(provenance) == 7L, all(grepl("^[[:xdigit:]]{64}$", provenance$sha256)),
+  nrow(provenance) == 7L,
+  all(grepl("^[[:xdigit:]]{64}$", provenance$sha256)),
   all(as.numeric(provenance$bytes) > 0),
   grepl("age 12 as the accumulator", review, fixed = TRUE),
   grepl("rather than likelihood observations", review, fixed = TRUE),

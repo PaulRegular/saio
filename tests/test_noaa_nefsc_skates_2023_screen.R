@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 source(file.path(root, 'scripts', 'discovery',
   '499_screen_noaa_nefsc_skates_2023.R'))
@@ -7,8 +9,7 @@ register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
 ids <- c('NOAA:11036', 'NOAA:11047', 'NOAA:11063', 'NOAA:11071',
   'NOAA:11076', 'NOAA:11080', 'NOAA:11269')
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_northeast_skate_complex', , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
@@ -42,8 +43,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 
 stopifnot(nrow(rows) == 7L, !anyDuplicated(rows$candidate_id),

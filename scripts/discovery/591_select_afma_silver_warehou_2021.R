@@ -1,6 +1,5 @@
 candidate_id <- "AFMA:SESSF_SILVER_WAREHOU"
 candidate_unit_id <- "afma_sessf_silver_warehou"
-selected_path <- "discovery/selections/selected_batch_08_2026.csv"
 
 if (!file.exists("database/stocks.csv")) {
   stop("Run this script from the SAIO repository root.")
@@ -10,7 +9,7 @@ candidates_path <- "discovery/candidates.csv"
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
   colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
 
-if (candidate_id %in% candidates$candidate_id || file.exists(selected_path)) {
+if (candidate_id %in% candidates$candidate_id) {
   stop("The candidate or selected batch already exists; review before rerunning.")
 }
 
@@ -106,9 +105,6 @@ selected <- data.frame(
   curation_status = "selected_for_partial_source_curation",
   stringsAsFactors = FALSE
 )
-write.csv(selected, selected_path, row.names = FALSE, na = "")
 
-source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
-source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
 
 cat("Selected AFMA SESSF Silver Warehou for partial source curation.\n")

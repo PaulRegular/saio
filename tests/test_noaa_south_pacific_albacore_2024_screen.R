@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -15,8 +17,7 @@ stopifnot(nrow(row) == 1L,
   grepl('100-model ensemble', row$output_evidence, fixed = TRUE),
   row$review_date == '2026-11-09')
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id == 'wcpfc_south_pacific_albacore', , drop = FALSE]
 stopifnot(nrow(unit) == 1L,
   unit$match_status == 'matched',

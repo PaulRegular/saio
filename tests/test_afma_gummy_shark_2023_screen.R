@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
@@ -5,9 +7,7 @@ candidate_id <- "AFMA:SESSF_GUMMY_SHARK_2023"
 candidate_unit_id <- "afma_gummy_shark_sessf"
 candidate <- read_table("discovery/candidates.csv")
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-selection <- read_table("discovery/selections/selected_batch_14_2026.csv")
-selection <- selection[selection$candidate_id == candidate_id, , drop = FALSE]
-units <- read_table("discovery/inventory_units.csv")
+units <- candidate_units()
 unit <- units[units$unit_key == "stock:afma_gummy_shark_sessf", , drop = FALSE]
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
@@ -26,8 +26,6 @@ stopifnot(
   candidate$import_status == "partial",
   candidate$matched_stock_id == "afma_gummy_shark_sessf",
   candidate$match_status == "matched",
-  nrow(selection) == 1L,
-  selection$curation_status == "partial_source_import",
   nrow(unit) == 1L,
   unit$matched_stock_id == "afma_gummy_shark_sessf",
   unit$match_status == "matched",

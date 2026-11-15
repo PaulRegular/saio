@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
@@ -5,8 +7,7 @@ candidate_id <- "MPI:GUR3"
 candidate_unit_id <- "mpi_red_gurnard_gur3"
 candidate <- read_table("discovery/candidates.csv")
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-batch <- read_table("discovery/selections/selected_batch_17_2026.csv")
-units <- read_table("discovery/inventory_units.csv")
+units <- candidate_units()
 unit <- units[units$unit_key == paste0("stock:", candidate_unit_id), , drop = FALSE]
 manifest <- read_table("provenance/mpi_red_gurnard_gur3_2022_sources.csv")
 stocks <- read_table("database/stocks.csv")
@@ -24,9 +25,6 @@ stopifnot(
   candidate$screening_status == "screened",
   candidate$eligibility == "eligible",
   candidate$import_status == "partial",
-  nrow(batch) == 1L,
-  batch$candidate_id == candidate_id,
-  batch$curation_status == "partial_source_import",
   nrow(unit) == 1L,
   unit$eligibility == "eligible",
   unit$screening_status == "screened",

@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source("R/read_database.R")
 source("tests/helper_inventory.R")
 
@@ -11,8 +13,8 @@ manifest <- read.csv("provenance/ccsbt_sbt_2026_sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-progress <- read.csv("discovery/inventory_progress.csv", stringsAsFactors = FALSE)
-units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE)
+progress <- candidate_progress()
+units <- candidate_units()
 check_inventory_accounting(register, progress, units)
 ccsbt_progress <- progress[progress$organization == "CCSBT", , drop = FALSE]
 ccsbt_unit <- units[units$candidate_unit_id == "ccsbt_sbt", , drop = FALSE]

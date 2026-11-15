@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 assessment_id <- "noaa_yellowtail_rockfish_north_2025"
 stock_id <- "noaa_yellowtail_rockfish_north"
 read_table <- function(name) read.csv(file.path("database",name),stringsAsFactors=FALSE,
@@ -84,15 +86,16 @@ stopifnot(nrow(assumptions)==10L,any(assumptions$setting=="natural_mortality"),
 candidate <- read.csv("discovery/candidates.csv",stringsAsFactors=FALSE,
   na.strings=c("","NA"),check.names=FALSE)
 candidate <- candidate[candidate$candidate_id=="NOAA:10393",]
-inventory <- read.csv("discovery/inventory_units.csv",stringsAsFactors=FALSE,
-  na.strings=c("","NA"),check.names=FALSE)
+inventory <- candidate_units()
 inventory <- inventory[inventory$unit_key=="candidate:noaa_stocksmart_10393",]
-selected <- read.csv("discovery/selections/selected_batch_10_2026.csv",stringsAsFactors=FALSE,
-  na.strings=c("","NA"),check.names=FALSE)
-stopifnot(nrow(candidate)==1L,candidate$match_status=="matched",
-  candidate$matched_stock_id==stock_id,candidate$import_status=="partial",
-  nrow(inventory)==1L,inventory$import_status=="partial",
-  nrow(selected)==1L,selected$curation_status=="partial_source_import")
+stopifnot(
+  nrow(candidate)==1L,
+  candidate$match_status=="matched",
+  candidate$matched_stock_id==stock_id,
+  candidate$import_status=="partial",
+  nrow(inventory)==1L,
+  inventory$import_status=="partial"
+)
 manifest <- read.csv("provenance/noaa_yellowtail_rockfish_north_2025_sources.csv",
   stringsAsFactors=FALSE,check.names=FALSE)
 stopifnot(nrow(manifest)==8L,all(nzchar(manifest$source_url)),

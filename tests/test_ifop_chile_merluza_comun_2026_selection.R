@@ -4,8 +4,6 @@ stock_id <- "ifop_merluza_comun_up"
 
 candidates <- read.csv(file.path(root, "discovery/candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-selection <- read.csv(file.path(root, "discovery/selections/selected_batch_20_2026.csv"),
-  stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 sources <- read.csv(file.path(root, "provenance/ifop_merluza_comun_2026_sources.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv(file.path(root, "database/stocks.csv"),
@@ -28,11 +26,7 @@ stopifnot(
   nrow(stock) == 1L
 )
 
-selection_row <- selection[selection$candidate_id == candidate_id, , drop = FALSE]
 stopifnot(
-  nrow(selection_row) == 1L,
-  selection_row$inventory_assessment_year == 2026L,
-  selection_row$curation_status == "partial_source_import",
   nrow(sources) == 8L,
   all(grepl("^[A-F0-9]{64}$", sources$sha256)),
   all(file.exists(file.path(root, sources$file))),

@@ -3,7 +3,6 @@ candidate_id <- "MPI:LIN56+LIN6B"
 candidate_unit_id <- "mpi_ling_lin56_lin6b"
 stock_id <- "mpi_ling_lin56_lin6b"
 register_path <- file.path(root, "discovery", "candidates.csv")
-selection_path <- file.path(root, "discovery/selections", "selected_batch_06_2026.csv")
 
 register <- read.csv(register_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
@@ -122,18 +121,14 @@ selection <- data.frame(
   curation_status = "selected",
   stringsAsFactors = FALSE
 )
-write.csv(selection, selection_path, row.names = FALSE, na = "")
 
 selected_candidate_id <- candidate_id
-source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
-  local = new.env(parent = globalenv()))
-source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
-  local = new.env(parent = globalenv()))
 updated <- read.csv(register_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-stopifnot(sum(updated$candidate_id == selected_candidate_id) == 1L,
+stopifnot(
+  sum(updated$candidate_id == selected_candidate_id) == 1L,
   sum(updated$candidate_unit_id == candidate_unit_id) == 1L,
   updated$match_status[updated$candidate_id == selected_candidate_id] == "new",
-  updated$eligibility[updated$candidate_id == selected_candidate_id] == "unresolved",
-  file.exists(selection_path))
+  updated$eligibility[updated$candidate_id == selected_candidate_id] == "unresolved"
+)
 cat("Selected the 2024 Sub-Antarctic ling assessment for partial source curation.")

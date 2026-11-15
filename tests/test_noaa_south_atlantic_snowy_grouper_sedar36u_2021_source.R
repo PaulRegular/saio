@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, id) {
   rows <- suppressWarnings(system2("rg", c("--color", "never", "--no-heading",
     "--no-line-number", "-F", id, path), stdout = TRUE, stderr = FALSE))
@@ -26,8 +28,7 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
+inventory <- candidate_units()
 manifest <- read.csv("provenance/noaa_snowy_grouper_sedar36u_2021/manifest.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines("source_reviews/screening/noaa_snowy_grouper_sedar36u_2021.md",

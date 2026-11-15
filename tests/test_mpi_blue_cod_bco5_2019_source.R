@@ -24,9 +24,6 @@ outputs <- read_matching_rows("database/outputs.csv", assessment_id)
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "MPI:BCO5")
-selected <- read.csv("discovery/selections/selected_batch_21_2026.csv", stringsAsFactors = FALSE,
-  check.names = FALSE)
-selected <- subset(selected, candidate_id == "MPI:BCO5")
 
 stopifnot(
   nrow(stock) == 1L,
@@ -47,9 +44,7 @@ stopifnot(
   nrow(outputs) == 10L,
   nrow(candidate) == 1L,
   candidate$matched_stock_id == stock_id,
-  candidate$import_status == "partial",
-  nrow(selected) == 1L,
-  selected$curation_status == "source_curated_partial"
+  candidate$import_status == "partial"
 )
 
 catch <- inputs[inputs$measure == "catch_biomass", , drop = FALSE]

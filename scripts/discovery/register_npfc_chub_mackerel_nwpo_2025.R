@@ -127,7 +127,6 @@ read_table <- function(path) {
 
 register <- read_table(candidate_path)
 stocks <- read_table("database/stocks.csv")
-units <- read_table("discovery/inventory_units.csv")
 cached_files <- manifest$local_file
 actual_hashes <- toupper(unname(tools::sha256sum(cached_files)))
 
@@ -135,7 +134,6 @@ stopifnot(
   identical(names(candidate), names(register)),
   !candidate_id %in% register$candidate_id,
   !candidate_unit_id %in% register$candidate_unit_id,
-  !candidate_unit_id %in% units$candidate_unit_id,
   !candidate$stock_name %in% stocks$common_name,
   identical(actual_hashes, toupper(manifest$sha256))
 )
@@ -162,8 +160,6 @@ if (write_mode) {
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double",
     na = "", eol = "\n")
   write.csv(manifest, manifest_path, row.names = FALSE, na = "")
-  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
-  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("Registered the screened NPFC unit and source provenance.\n")
 }
 

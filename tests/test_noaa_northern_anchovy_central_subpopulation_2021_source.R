@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_id) {
   con <- file(path, open = "rb")
   on.exit(close(con), add = TRUE)
@@ -34,10 +36,7 @@ assessments <- read_columns("database/assessments.csv", c("assessment_id",
   "outputs_status", "assumptions_status"))
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-selected <- read.csv("discovery/selections/selected_batch_26_2026.csv",
-  stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
+inventory <- candidate_units()
 manifest <- read.csv("provenance/discovery_noaa_anchovy_2021/sources.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 
@@ -45,7 +44,6 @@ stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == "NOAA:10574", , drop = FALSE]
 inventory <- inventory[grepl("NOAA:10574", inventory$candidate_ids, fixed = TRUE), , drop = FALSE]
-selected <- selected[selected$candidate_id == "NOAA:10574", , drop = FALSE]
 get_input <- function(measure, age = NULL, year = NULL, season = NULL,
                       fleet = NULL, survey = NULL, age_error = NULL) {
   x <- inputs[inputs$measure == measure, , drop = FALSE]
@@ -94,8 +92,6 @@ stopifnot(
   nrow(inventory) == 1L,
   inventory$matched_stock_id == stock_id,
   inventory$import_status == "partial",
-  nrow(selected) == 1L,
-  selected$curation_status == "partial_source_import",
   nrow(manifest) == 8L,
   all(grepl("^[[:xdigit:]]{64}$", manifest$sha256)),
   sum(inputs$measure == "catch_biomass") == 92L,

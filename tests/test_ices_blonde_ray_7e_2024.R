@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 candidate_id <- 'ICES:rjh.27.7e'
 unit_id <- 'ices_blonde_ray_7e'
@@ -9,8 +11,7 @@ manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 advice <- paste(readLines(file.path(cache, 'ICES_Advice_2024_text.txt'), warn = FALSE), collapse = ' ')
 wgef <- gsub('[[:space:]]+', ' ', paste(readLines(file.path(cache,
   'WGEF_2024_page_483.txt'), warn = FALSE), collapse = ' '))
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[units$unit_key == paste0('candidate:', unit_id), , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

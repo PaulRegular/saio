@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source('scripts/discovery/509_screen_noaa_far_north_chinook_2024.R')
 
 root <- '.'
@@ -18,8 +20,7 @@ stopifnot(nrow(row) == 1L,
   grepl('not mean catch-at-age', review, fixed = TRUE),
   grepl('No canonical assessment, input, or output rows were added', review, fixed = TRUE))
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id == 'noaa_chinook_10604', , drop = FALSE]
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
   unit$match_status == 'new', unit$eligibility == 'ineligible',
@@ -48,8 +49,7 @@ stopifnot(!any(stocks$authority_stock_id == '10604', na.rm = TRUE),
   !any(grepl('noaa_chinook_10604', inputs$assessment_id, fixed = TRUE)),
   !any(grepl('noaa_chinook_10604', outputs$assessment_id, fixed = TRUE)))
 
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 afsc <- noaa[noaa$source_region == 'AFSC', , drop = FALSE]
 stopifnot(sum(noaa$inventory_rows) == 432L,

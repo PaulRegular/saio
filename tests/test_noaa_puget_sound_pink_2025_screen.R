@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source('scripts/discovery/508_screen_noaa_puget_sound_pink_2025.R')
 
 root <- '.'
@@ -20,8 +22,7 @@ stopifnot(nrow(row) == 1L,
   grepl('not report catch-at-age or age composition', review_text, fixed = TRUE),
   grepl('not imported into the canonical database', review_text, fixed = TRUE))
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_puget_sound_pink_salmon', , drop = FALSE]
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
@@ -51,8 +52,7 @@ stopifnot(!any(stocks$authority_stock_id == '10576', na.rm = TRUE),
   !any(grepl('noaa_puget_sound_pink_salmon', inputs$assessment_id, fixed = TRUE)),
   !any(grepl('noaa_puget_sound_pink_salmon', outputs$assessment_id, fixed = TRUE)))
 
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 stopifnot(sum(noaa$inventory_rows) == 432L,
   sum(noaa$screening_complete) == 432L,

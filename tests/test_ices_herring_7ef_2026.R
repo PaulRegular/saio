@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 candidate_id <- 'ICES:her.27.7ef'
 unit_id <- 'ices_herring_7ef'
@@ -9,8 +11,7 @@ manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 report <- file.path(root, manifest$file[1L])
 excerpt <- gsub('[[:space:]]+', ' ', paste(readLines(file.path(cache,
   'HAWG_2026_pages_414_419.txt'), warn = FALSE), collapse = ' '))
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[units$unit_key == paste0('candidate:', unit_id), , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

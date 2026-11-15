@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_matching_rows <- function(path, id) {
   connection <- file(path, open = "rt")
   on.exit(close(connection))
@@ -23,12 +25,8 @@ assumptions <- read_matching_rows("database/assumptions.csv", assessment_id)
 inputs <- read_matching_rows("database/inputs.csv", assessment_id)
 outputs <- read_matching_rows("database/outputs.csv", assessment_id)
 candidate <- read_matching_rows("discovery/candidates.csv", candidate_id)
-units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+units <- candidate_units()
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
-selection <- read.csv("discovery/selections/selected_batch_05_2026.csv",
-  stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-selection <- selection[selection$candidate_id == candidate_id, , drop = FALSE]
 manifest <- read.csv("provenance/mpi_snapper_sna1_2023_sources.csv",
   stringsAsFactors = FALSE)
 
@@ -55,8 +53,6 @@ stopifnot(
   unit$matched_stock_id == stock_id,
   unit$import_status == "partial",
   grepl(candidate_id, unit$candidate_ids, fixed = TRUE),
-  nrow(selection) == 1L,
-  selection$curation_status == "source_curated_partial",
   nrow(manifest) == 7L,
   all(grepl("^[A-F0-9]{64}$", toupper(manifest$sha256)))
 )

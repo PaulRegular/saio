@@ -87,7 +87,6 @@ source_hashes <- unname(toupper(tools::sha256sum(c(assessment_pdf, input_pdf))))
 if (!identical(source_hashes, manifest$sha256)) stop("Cached source checksums do not match the source manifest.", call. = FALSE)
 write.csv(manifest, file.path(root, "provenance", "mpi_hoki_hok1_2025_sources.csv"), row.names = FALSE, na = "")
 
-selection_path <- file.path(root, "discovery/selections", "selected_batch_02_2026.csv")
 selection <- data.frame(
   priority = 1L,
   candidate_id = candidate_id,
@@ -104,10 +103,7 @@ selection <- data.frame(
   curation_status = "selected_for_source_curation",
   stringsAsFactors = FALSE
 )
-if (!file.exists(selection_path)) write.csv(selection, selection_path, row.names = FALSE, na = "")
 
-source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"), local = TRUE)
-source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"), local = TRUE)
 updated <- read.csv(register_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stopifnot(sum(updated$candidate_id == candidate_id) == 1L,

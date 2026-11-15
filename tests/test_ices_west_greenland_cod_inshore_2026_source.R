@@ -81,19 +81,12 @@ candidate <- read.csv(
   stringsAsFactors = FALSE, check.names = FALSE
 )
 candidate <- candidate[candidate$candidate_id == "ICES:cod.21.1.isc", ]
-selected <- read.csv(
-  "discovery/selections/selected_batch_01_2026.csv",
-  stringsAsFactors = FALSE, check.names = FALSE
-)
-selected <- selected[selected$candidate_id == "ICES:cod.21.1.isc", ]
 review <- readLines(
   "source_reviews/screening/ices_greenland_cod_identity_2026.md"
 )
 stopifnot(
   nrow(candidate) == 1L,
   candidate$import_status == "partial",
-  nrow(selected) == 1L,
-  selected$curation_status == "partial_source_import",
   any(grepl("ICES SAG source-data page for assessment key 20951", review, fixed = TRUE)),
   any(grepl("no values were imputed", tolower(review), fixed = TRUE))
 )

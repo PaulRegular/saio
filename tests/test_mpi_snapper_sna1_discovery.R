@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
@@ -5,9 +7,8 @@ register <- read_table("discovery/candidates.csv")
 row <- register[register$candidate_id == "MPI:SNA1", , drop = FALSE]
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
-units <- read_table("discovery/inventory_units.csv")
+units <- candidate_units()
 unit_row <- units[units$unit_key == "stock:mpi_snapper_sna1", , drop = FALSE]
-selection <- read_table("discovery/selections/selected_batch_05_2026.csv")
 manifest <- read_table("provenance/mpi_snapper_sna1_2023_sources.csv")
 review_path <- "source_reviews/mpi_snapper_sna1.md"
 review <- paste(readLines(review_path, warn = FALSE, encoding = "UTF-8"),
@@ -27,10 +28,6 @@ stopifnot(
   row$matched_stock_id == "mpi_snapper_sna1",
   "mpi_snapper_sna1" %in% stocks$stock_id,
   "mpi_snapper_sna1_2023" %in% assessments$assessment_id,
-  nrow(selection) == 1L,
-  selection$candidate_id == "MPI:SNA1",
-  selection$candidate_unit_id == row$candidate_unit_id,
-  selection$curation_status == "source_curated_partial",
   nrow(unit_row) == 1L,
   unit_row$matched_stock_id == "mpi_snapper_sna1",
   unit_row$inventory_entries == 1L,

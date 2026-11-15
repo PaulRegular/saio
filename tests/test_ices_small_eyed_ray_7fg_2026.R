@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- '.'
 candidate_id <- 'ICES:rje.27.7fg'
 unit_id <- 'ices_small_eyed_ray_7fg'
@@ -6,8 +8,7 @@ cache <- file.path(root, 'source_cache', 'discovery_ices_small_eyed_ray_7fg_2026
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[units$unit_key == paste0('candidate:', unit_id), , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
   'ices_small_eyed_ray_7fg_2026.md'), warn = FALSE), collapse = '\n')

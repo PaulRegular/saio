@@ -1,9 +1,11 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
 register <- read_table("discovery/candidates.csv")
 components <- register[register$candidate_id %in% c("NOAA:15338", "NOAA:15339"), , drop = FALSE]
-units <- read_table("discovery/inventory_units.csv")
+units <- candidate_units()
 unit <- units[units$unit_key == "candidate:noaa_vermilion_rockfish_or_wa", , drop = FALSE]
 stocks <- read_table("database/stocks.csv")
 stock <- stocks[stocks$stock_id == "noaa_vermilion_rockfish_or_wa", , drop = FALSE]

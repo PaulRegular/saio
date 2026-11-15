@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 root <- "."
 read_table <- function(name) read.csv(file.path(root, name), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
@@ -52,8 +54,8 @@ stopifnot(nrow(rows) == 4L, !anyNA(rows$candidate_id),
     'noaa_isc_pacific_billfish_swordfish_2026.md')),
   !anyDuplicated(rows$candidate_unit_id))
 
-progress <- read_table('discovery/inventory_progress.csv')
-units <- read_table('discovery/inventory_units.csv')
+progress <- candidate_progress()
+units <- candidate_units()
 stopifnot(sum(progress$inventory_rows) == 905L,
   sum(progress$new) == 663L,
   sum(progress$identity_unreviewed) == 100L,

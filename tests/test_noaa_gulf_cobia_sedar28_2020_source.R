@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 read_assessment_rows <- function(path, assessment_id) {
   header <- readLines(path, n = 1L, warn = FALSE)
   rows <- suppressWarnings(system2("rg", c("--color", "never", "--no-heading",
@@ -22,12 +24,8 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidate[candidate$candidate_id == "NOAA:10390", , drop = FALSE]
-units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
+units <- candidate_units()
 unit <- units[!is.na(units$matched_stock_id) & units$matched_stock_id == stock_id, , drop = FALSE]
-selected <- read.csv("discovery/selections/selected_batch_39_2026.csv", stringsAsFactors = FALSE,
-  na.strings = c("", "NA"), check.names = FALSE)
-selected <- selected[selected$candidate_id == "NOAA:10390", , drop = FALSE]
 manifest <- read.csv("provenance/discovery_noaa_gom_cobia_2020/sources.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 review <- paste(readLines("source_reviews/screening/noaa_gulf_cobia_2020.md",
@@ -46,16 +44,19 @@ output_values <- function(measure, year) {
 numeric_values <- function(x) as.numeric(x$value)
 
 stopifnot(
-  nrow(candidate) == 1L, candidate$match_status == "matched",
-  candidate$import_status == "partial", candidate$matched_stock_id == stock_id,
-  nrow(unit) == 1L, unit$import_status == "partial",
-  nrow(selected) == 1L, selected$curation_status == "partial_source_import",
+  nrow(candidate) == 1L,
+  candidate$match_status == "matched",
+  candidate$import_status == "partial",
+  candidate$matched_stock_id == stock_id,
+  nrow(unit) == 1L,
+  unit$import_status == "partial",
   nrow(stocks[stocks$stock_id == stock_id, , drop = FALSE]) == 1L,
   nrow(assessments[assessments$assessment_id == assessment_id, , drop = FALSE]) == 1L,
   assessments$terminal_year[assessments$assessment_id == assessment_id] == 2018,
   assessments$inputs_status[assessments$assessment_id == assessment_id] == "partial",
   assessments$outputs_status[assessments$assessment_id == assessment_id] == "partial",
-  nrow(inputs) == 1190L, nrow(outputs) == 844L,
+  nrow(inputs) == 1190L,
+  nrow(outputs) == 844L,
   nrow(input_values("landings_biomass", observation_id =
     "cobia_commercial_landings_total_1927_2018")) == 92L,
   numeric_values(input_values("landings_biomass", 1927,
@@ -102,8 +103,11 @@ stopifnot(
     output_values("apical_fishing_mortality", 2018)$fleet == "Recreational", , drop = FALSE]) == 0.545,
   numeric_values(output_values("exploitation_rate", 2018)) == 0.366,
   nrow(outputs[!is.na(outputs$age) & outputs$measure != "recruitment", , drop = FALSE]) == 0L,
-  all(is.na(outputs$se)), all(is.na(outputs$lwr)), all(is.na(outputs$upr)),
-  nrow(manifest) == 6L, !anyDuplicated(manifest$file),
+  all(is.na(outputs$se)),
+  all(is.na(outputs$lwr)),
+  all(is.na(outputs$upr)),
+  nrow(manifest) == 6L,
+  !anyDuplicated(manifest$file),
   all(grepl("^[[:xdigit:]]{64}$", manifest$sha256)),
   grepl("composition cells are presented in figures", review, fixed = TRUE),
   grepl("Tables 13", review, fixed = TRUE),

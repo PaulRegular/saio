@@ -1,3 +1,5 @@
+source("scripts/discovery/candidate_reports.R", local = TRUE)
+
 source('scripts/discovery/511_screen_noaa_north_atlantic_shortfin_mako_2026.R')
 
 root <- '.'
@@ -19,8 +21,7 @@ stopifnot(nrow(row) == 1L,
   grepl('not documented as annual catch-at-age', review, fixed = TRUE),
   grepl('eligibility unresolved', review, fixed = TRUE))
 
-units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
-  stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_north_atlantic_shortfin_mako', , drop = FALSE]
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
@@ -55,8 +56,7 @@ stopifnot(!any(stocks$authority_stock_id == '10657', na.rm = TRUE),
   !any(grepl('noaa_north_atlantic_shortfin_mako', inputs$assessment_id, fixed = TRUE)),
   !any(grepl('noaa_north_atlantic_shortfin_mako', outputs$assessment_id, fixed = TRUE)))
 
-progress <- read.csv(file.path(root, 'discovery', 'inventory_progress.csv'),
-  stringsAsFactors = FALSE)
+progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 sefsc <- noaa[noaa$source_region == 'SEFSC', , drop = FALSE]
 stopifnot(sum(noaa$inventory_rows) == 432L,
