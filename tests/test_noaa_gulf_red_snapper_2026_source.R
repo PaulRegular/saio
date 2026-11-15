@@ -73,7 +73,6 @@ stopifnot(
   assessment$is_applied == "FALSE",
   assessment$model_family == "Stock Synthesis",
   assessment$model_version == "3.30.20",
-  grepl("Tables 12-19", assessment$notes, fixed = TRUE),
   assessment$inputs_status == "partial",
   assessment$outputs_status == "partial",
   assessment$assumptions_status == "partial",
@@ -347,6 +346,8 @@ stopifnot(
   as.numeric(west_charter_rate$value[west_charter_rate$year == "1950"]) == 0.002,
   as.numeric(west_headboat_discard_rate$value[
     west_headboat_discard_rate$year == "1950"]) == 0.001,
+  setequal(exploitation$source_reference,
+    paste0("SEDAR98_SAR.pdf, Table ", 12:19)),
   all(is.na(exploitation$age)),
   all(exploitation$unit == "ratio")
 )
