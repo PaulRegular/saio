@@ -14,4 +14,4 @@ Use the discovery register to track source searches and candidate decisions. The
 An inventory row can represent an alias or a separate run. Use `candidate_unit_id` to link rows once the stock identity is verified. Use `matched_stock_id` for a unit represented in `stocks.csv`.
 A selection list records the basis for choosing a case at the time. Use `candidates.csv` for the current decision and the [stock source reviews](../source_reviews/) for substantive evidence about imported assessments.
 
-Follow the [curation protocol](../PROTOCOL.md#1-discovering-candidate-assessments) when adding or revisiting rows. Dated narratives and earlier counts are in the [pre-cleanup discovery history](https://github.com/PaulRegular/saio/blob/7ef1dfa82d0d12819a86243f11b33395c41b871a/discovery/README.md).
+Follow the [curation protocol](../PROTOCOL.md#1-discovering-candidate-assessments) when adding or revisiting rows. Earlier counts and summaries are in the Git history for this page at revision `7ef1dfa82d0d12819a86243f11b33395c41b871a`.
