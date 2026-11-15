@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 assessment_id <- "noaa_golden_tilefish_mid_atlantic_2024"
 stock_id <- "noaa_golden_tilefish_mid_atlantic"

@@ -1,10 +1,10 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 screen_review <- new.env(parent = globalenv())
-source(file.path(root, 'scripts/discovery/493_screen_ices_ray_method_group_2026.R'),
+source(file.path(root, 'scripts/shared/493_screen_ices_ray_method_group_2026.R'),
   local = screen_review)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)

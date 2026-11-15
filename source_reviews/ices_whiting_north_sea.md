@@ -10,7 +10,7 @@ The official `NSwhiting_2026n` model and data objects, native input files, and r
 
 The report SHA-256 is `9d33846cf100dd8544ba30dbeffc7435a857a71854d318dbc7b383d668b03857`. The model object SHA-256 is `6bd2d93ad87b6cbbE6f479346d478796183a24befb6c2d87da97216b4ef5f6b8`, and the native data object SHA-256 is `689003079c3fede21befdf735d0af68b20a26e631d9ed9214ba06994e1b3914c`.
 
-The import script is `scripts/database/049_import_ices_whiting_north_sea_2026.R`.
+The import script is `scripts/ices_whiting_north_sea/049_import_ices_whiting_north_sea_2026.R`.
 
 The April `NSwhiting_2026n` run is treated as official because its input data and fitted object reproduce published recruitment, SSB, Fbar, and TSB values for 1978–2025 in Table 22.22 to the table's rounding precision. Its calculated SSB also reproduces the reported 2026 intermediate-year value.
 

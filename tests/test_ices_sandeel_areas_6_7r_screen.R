@@ -1,5 +1,5 @@
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source('scripts/discovery/343_screen_ices_sandeel_areas_6_7r_2023.R')
+source('scripts/shared/343_screen_ices_sandeel_areas_6_7r_2023.R')
 
 register <- read.csv('database/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

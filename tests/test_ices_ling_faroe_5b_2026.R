@@ -1,7 +1,7 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
-source(file.path(root, 'scripts/database/548_import_ices_ling_faroe_5b_2026.R'),
+source(file.path(root, 'scripts/ices_ling_faroe_5b/548_import_ices_ling_faroe_5b_2026.R'),
   local = new.env(parent = globalenv()))
 
 database <- file.path(root, 'database')

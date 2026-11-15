@@ -19,8 +19,7 @@ stocksmart <- stocksmart_env$stock_assessment_summary
 run <- stocksmart[stocksmart$stock_id == 10257 & stocksmart$assessment_id == 8220,
   , drop = FALSE]
 review_path <- file.path(root, 'source_reviews/noaa_vermilion_snapper_south_atlantic.md')
-script_path <- file.path(root, 'scripts', 'discovery',
-  '459_screen_noaa_vermilion_snapper_sa_2018.R')
+script_path <- file.path(root, 'scripts/noaa_vermilion_snapper_south_atlantic/459_screen_noaa_vermilion_snapper_sa_2018.R')
 
 stopifnot(
   nrow(row) == 1L,

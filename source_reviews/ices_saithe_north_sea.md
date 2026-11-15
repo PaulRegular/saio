@@ -17,7 +17,7 @@ Its SHA-256 is
 `9d33846cf100dd8544ba30dbeffc7435a857a71854d318dbc7b383d668b03857`.
 The cache is gitignored. Numerical values imported into the canonical database
 are transcribed from this report's tables by
-`scripts/database/048_import_ices_saithe_north_sea_2026.R`.
+`scripts/ices_saithe_north_sea/048_import_ices_saithe_north_sea_2026.R`.
 
 ## Official assessment recovered
 

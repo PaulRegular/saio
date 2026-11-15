@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
 read_table <- function(name) read.csv(file.path(root, name), stringsAsFactors = FALSE,
@@ -8,8 +8,7 @@ canonical_paths <- c(stocks = 'database/stocks.csv',
   inputs = 'database/inputs.csv', outputs = 'database/outputs.csv')
 canonical_before <- tools::md5sum(file.path(root, canonical_paths))
 
-source(file.path(root, 'scripts', 'discovery',
-  '532_screen_noaa_blacktip_assessments_2018_2020.R'))
+source(file.path(root, 'scripts/shared/532_screen_noaa_blacktip_assessments_2018_2020.R'))
 
 register <- read_table('database/candidates.csv')
 ids <- c('NOAA:11026', 'NOAA:11027')

@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- '.'
 candidate_id <- 'ICES:pol.27.89a'
@@ -45,8 +45,7 @@ stopifnot(
   grepl('B_index', review, fixed = TRUE),
   grepl('kilograms per hour', review, fixed = TRUE),
   grepl('not treated as spawning-stock biomass', review, fixed = TRUE),
-  file.exists(file.path(root, 'scripts', 'discovery',
-    '379_screen_ices_pollack_89a_2025.R'))
+  file.exists(file.path(root, 'scripts/ices_pollack_89a/379_screen_ices_pollack_89a_2025.R'))
 )
 
 cat('ICES pollack identity, aggregate-index screen, and no-import checks passed.\n')

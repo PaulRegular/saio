@@ -1,7 +1,7 @@
 root <- "."
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root,
-  'scripts/discovery/355_reconcile_ices_eastern_baltic_cod_2026.R'))
+  'scripts/ck_ices_wgbfas_morhua_bs_25_32/355_reconcile_ices_eastern_baltic_cod_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),

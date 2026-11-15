@@ -106,7 +106,7 @@ BC petrale has numerical SSB preserved in the canonical database, but the origin
 ## Cache and checks — 2026-10-17
 
 The import is reproducible through
-`scripts/database/069_import_bc_petrale_2024.R`. It retrieves pinned public
+`scripts/dfo_petrale_bc/069_import_bc_petrale_2024.R`. It retrieves pinned public
 sources into `source_cache/eopsetta_jordani/dfo_petrale_bc/`, validates draw coverage and appends
 only this stock. Retrieval is part of curation, not the routine fitting path.
 The wider search inventory is retained under

@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 read_assessment_rows <- function(path, id) {
   rows <- suppressWarnings(system2("rg", c("--color", "never", "--no-heading",

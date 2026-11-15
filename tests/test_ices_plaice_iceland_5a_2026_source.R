@@ -1,6 +1,6 @@
 Sys.setenv(TAM_SOURCE_DRY_RUN = "1")
 e <- new.env(parent = globalenv())
-sys.source("scripts/database/650_import_ices_plaice_iceland_5a_2026.R", envir = e)
+sys.source("scripts/ices_plaice_iceland_5a/650_import_ices_plaice_iceland_5a_2026.R", envir = e)
 
 num <- function(x) as.numeric(x)
 catch <- e$inputs[e$inputs$measure == "landings_biomass", , drop = FALSE]

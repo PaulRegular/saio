@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
 assessment_id <- "noaa_pacific_coast_dover_sole_2021"

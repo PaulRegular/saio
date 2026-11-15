@@ -19,7 +19,7 @@ The official 2026/004 PDF is cached under `source_cache/gadus_morhua/ck_dfo_morh
 
 The applied model spans calendar years 1959–2024 and ages 2–14+, with age 2 as recruitment. It fits annual landings with a censored likelihood and the age composition using continuation-ratio logits. Fishing mortality follows an age-correlated multivariate random walk for ages 3+, with age 2 separate and a break at the 1993 moratorium. Natural mortality varies with a scaled fish-condition index, with condition-response coefficients shared across ages 2–5 and 6+; the mean of 1978–1982 supplies the index values for 1959–1977.
 
-The import script `scripts/database/073_import_dfo_cod_3ps_2024.R` transcribes Appendix A tables A-1 through A-11 into `inputs.csv`:
+The import script `scripts/ck_dfo_morhua_3ps/073_import_dfo_cod_3ps_2024.R` transcribes Appendix A tables A-1 through A-11 into `inputs.csv`:
 
 - Table A-1: calendar-year landings and the lower and upper bounds used by the censored likelihood, in tonnes, 1959–2024. The report says 2024 landings are set to the 2024/25 TAC.
 - Table A-2: commercial catch numbers at age, 1959–2023, ages 2–14+. The current table omits the scale label. DFO Research Documents 2023/025 and 2024/002 label the same catch-at-age series in thousands of fish (000s); this confirms the unit convention, but their revised historical values are not copied into the 2024/051 input series.

@@ -57,7 +57,7 @@ row label as an independently verified stock code.
 
 ## Canonical records
 
-`scripts/database/162_import_ices_herring_6a_s_7bc.R` imports separate 2025
+`scripts/ck_ices_hawg_harengus_cs6_a_s_7b_c/162_import_ices_herring_6a_s_7bc.R` imports separate 2025
 and 2026 records, with 1,903 and 1,960 input rows and 22 and 24 indicator
 outputs, respectively. Inputs include the reported catch-at-age series,
 catch and spawning-time weights, genetically split survey numbers-at-age,

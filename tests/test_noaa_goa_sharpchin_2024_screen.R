@@ -1,6 +1,6 @@
 root <- "."
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts/discovery/357_screen_noaa_goa_sharpchin_2024.R'))
+source(file.path(root, 'scripts/noaa_goa_sharpchin_2024/357_screen_noaa_goa_sharpchin_2024.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 register <- read.csv(file.path(root, 'database/candidates.csv'),

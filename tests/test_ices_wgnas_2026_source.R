@@ -1,4 +1,4 @@
-source("scripts/database/677_import_ices_wgnas_2026.R")
+source("scripts/shared/677_import_ices_wgnas_2026.R")
 wg <- import_ices_wgnas_2026(write = FALSE)
 
 stopifnot(

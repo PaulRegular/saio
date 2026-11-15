@@ -33,7 +33,7 @@ used to verify category, series labels, blank units and absent stock outputs.
 Both files and their retrieval hashes are cached under
 `source_cache/ammodytes_dubius/ck_ices_hawg_dubius_ns/2026_san.sa.4/`.
 The separate import is reproducible from
-`scripts/database/180_import_ices_sandeel_area_4_2026_summary.R`.
+`scripts/ices_sandeel_area_4/180_import_ices_sandeel_area_4_2026_summary.R`.
 
 The SAG XML identifies category 5, names the data as coming from a previous
 assessment, and reports no model name or recruitment, stock-size, or fishing-

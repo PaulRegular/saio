@@ -1,8 +1,8 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- '.'
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts/discovery/372_screen_noaa_marianas_bottomfish_2025.R'))
+source(file.path(root, 'scripts/shared/372_screen_noaa_marianas_bottomfish_2025.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 register <- read.csv(file.path(root, 'database/candidates.csv'),

@@ -1,6 +1,6 @@
 Sys.setenv(TAM_SOURCE_DRY_RUN = "1")
 e <- new.env(parent = globalenv())
-sys.source("scripts/database/558_import_ices_whiting_7b_ce_k_2026.R", envir = e)
+sys.source("scripts/ices_whg_27_7b_ce_k/558_import_ices_whiting_7b_ce_k_2026.R", envir = e)
 i <- e$inputs
 o <- e$outputs
 num <- function(x) suppressWarnings(as.numeric(x))

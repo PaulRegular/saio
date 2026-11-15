@@ -1,6 +1,6 @@
 Sys.setenv(TAM_SOURCE_DRY_RUN = "1")
 e <- new.env(parent = globalenv())
-sys.source("scripts/database/650_import_ices_four_spot_megrim_discard_ratios_2026.R", envir = e)
+sys.source("scripts/ices_four_spot_megrim_8c9a/650_import_ices_four_spot_megrim_discard_ratios_2026.R", envir = e)
 
 inputs <- e$inputs
 weight_ratio <- inputs[inputs$measure == "discard_fraction" &

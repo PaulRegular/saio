@@ -8,7 +8,7 @@ The pinned file contains 102 rows and 102 unique `unique_ID` values. This differ
 
 ## Import and crosswalk
 
-The importer is `scripts/database/071_import_charbonneau_master.R`. It uses the source scientific name, assessor code, `unique_ID` area suffix and PDF label. It does not import the catalogue’s model flags, estimated quantities or status fields. All 102 source identifiers are now present exactly once in `stocks.csv`: 27 were linked to existing stock rows and 75 were added as metadata-only rows, increasing the stock table from 37 to 112 rows. The other four canonical database tables were not changed.
+The importer is `scripts/shared/071_import_charbonneau_master.R`. It uses the source scientific name, assessor code, `unique_ID` area suffix and PDF label. It does not import the catalogue’s model flags, estimated quantities or status fields. All 102 source identifiers are now present exactly once in `stocks.csv`: 27 were linked to existing stock rows and 75 were added as metadata-only rows, increasing the stock table from 37 to 112 rows. The other four canonical database tables were not changed.
 
 For the 27 existing records, the Master `unique_ID` is now the `charbonneau_id`; any previous identifier is retained in the stock note as an alias. The reviewed crosswalk is explicit in the importer and requires both scientific-name and regional-basin agreement. The importer rejects stale or duplicate matches rather than dropping them silently. Its focused test checks the crosswalk, area preservation, provenance notes, duplicate protection, rerun stability and that imports leave assessment, assumption, input and output tables unchanged.
 
@@ -32,7 +32,7 @@ assessment. This boundary relationship does not copy data across stock rows.
 
 ## Reviewed historical and sex-specific relationships
 
-`scripts/database/156_review_catalogue_stock_relationships.R` records ten
+`scripts/shared/156_review_catalogue_stock_relationships.R` records ten
 catalogue relationships to five already curated stocks. It updates only
 stock names and explanatory notes, preserving original stock IDs, Master
 identifiers, scientific names, area suffixes and basin labels. It does not

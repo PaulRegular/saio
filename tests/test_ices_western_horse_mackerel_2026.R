@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
 candidate_id <- 'ICES:hom.27.2a3a4a5b6a7a-ce-k8'

@@ -5,7 +5,7 @@ if (!file.exists(file.path(cache, "model_files_2021.zip"))) {
   source_env <- new.env(parent = globalenv())
   old_test_mode <- Sys.getenv("TAM_SOURCE_TEST_MODE", unset = NA_character_)
   Sys.setenv(TAM_SOURCE_TEST_MODE = "1")
-  source("scripts/database/674_import_noaa_vermilion_sunset_north_2021.R", local = source_env)
+  source("scripts/noaa_vermilion_sunset_northern_california/674_import_noaa_vermilion_sunset_north_2021.R", local = source_env)
   if (is.na(old_test_mode)) Sys.unsetenv("TAM_SOURCE_TEST_MODE") else
     Sys.setenv(TAM_SOURCE_TEST_MODE = old_test_mode)
 

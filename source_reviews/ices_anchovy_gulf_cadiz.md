@@ -52,7 +52,7 @@ or substituted for missing 2025 files.
 
 ## Recovered observations and biology
 
-The source importer is `scripts/database/157_import_ices_anchovy_gulf_cadiz_2025.R`.
+The source importer is `scripts/ices_anchovy_gulf_cadiz/157_import_ices_anchovy_gulf_cadiz_2025.R`.
 
 - Annual sums of the quarterly model catch inputs cover 1989–2025 in tonnes.
   These are one stock-level summary, not another fleet. The 2025 value

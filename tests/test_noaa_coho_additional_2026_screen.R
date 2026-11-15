@@ -1,8 +1,7 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
-source(file.path(root, 'scripts', 'discovery',
-  '503_screen_noaa_coho_2026_additional.R'))
+source(file.path(root, 'scripts/shared/503_screen_noaa_coho_2026_additional.R'))
 
 ids <- c(11869L, 11874L, 11875L)
 candidate_ids <- paste0('NOAA:', ids)

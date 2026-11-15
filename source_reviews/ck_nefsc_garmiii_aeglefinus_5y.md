@@ -4,7 +4,7 @@
 
 The metadata record is `ck_nefsc_garmiii_aeglefinus_5y` (Charbonneau–Keith identifier `NEFSC-GARMIII_aeglefinus_5Y`), Gulf of Maine haddock (*Melanogrammus aeglefinus*). It is distinct from Georges Bank haddock, which has its own stock record and assessment area.
 
-The current official assessment is NOAA's 2026 Management Track WHAM assessment, with fitted data through 2025. The September 2026 peer-review panel concluded that it was technically sufficient for stock-status evaluation and catch advice and that it met the assessment terms of reference. The assessment updates the 2024 WHAM Management Track model. Its partial numerical record is now in the canonical database; the import is maintained in `scripts/database/094_import_nefsc_gom_haddock_2026.R`.
+The current official assessment is NOAA's 2026 Management Track WHAM assessment, with fitted data through 2025. The September 2026 peer-review panel concluded that it was technically sufficient for stock-status evaluation and catch advice and that it met the assessment terms of reference. The assessment updates the 2024 WHAM Management Track model. Its partial numerical record is now in the canonical database; the import is maintained in `scripts/ck_nefsc_garmiii_aeglefinus_5y/094_import_nefsc_gom_haddock_2026.R`.
 
 ## 2026 model and data inventory
 

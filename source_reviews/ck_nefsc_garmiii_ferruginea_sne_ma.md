@@ -58,7 +58,7 @@ annual model weights remain missing.
 
 ## Canonical coverage
 
-`scripts/database/148_import_nefsc_snema_yellowtail.R` adds 2,152 inputs,
+`scripts/ck_nefsc_garmiii_ferruginea_sne_ma/148_import_nefsc_snema_yellowtail.R` adds 2,152 inputs,
 21 assumptions and 37 outputs across the two records. All three completeness
 statuses remain **partial** for both records.
 

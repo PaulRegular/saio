@@ -1,7 +1,7 @@
 source_env <- new.env(parent = globalenv())
 old_test_mode <- Sys.getenv("TAM_SOURCE_TEST_MODE", unset = NA_character_)
 Sys.setenv(TAM_SOURCE_TEST_MODE = "1")
-source("scripts/database/645_import_noaa_cabezon_oregon_2019.R", local = source_env)
+source("scripts/noaa_cabezon_oregon/645_import_noaa_cabezon_oregon_2019.R", local = source_env)
 if (is.na(old_test_mode)) Sys.unsetenv("TAM_SOURCE_TEST_MODE") else
   Sys.setenv(TAM_SOURCE_TEST_MODE = old_test_mode)
 

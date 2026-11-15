@@ -2,7 +2,7 @@ old_dry_run <- Sys.getenv("SAIO_SOURCE_DRY_RUN", unset = NA_character_)
 Sys.setenv(SAIO_SOURCE_DRY_RUN = "1")
 
 e <- new.env(parent = globalenv())
-sys.source("scripts/database/651_import_ices_plaice_iceland_5a_2026_age_tables.R", envir = e)
+sys.source("scripts/ices_plaice_iceland_5a/651_import_ices_plaice_iceland_5a_2026_age_tables.R", envir = e)
 
 # Round-trip the punctuation that was corrupted in the assumptions table.
 fixture <- data.frame(value = c("1947\u20132026", "N \u00d7 weight", "\u00a74.1"))

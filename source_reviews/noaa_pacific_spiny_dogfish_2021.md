@@ -51,7 +51,7 @@ direct annual age indices are material limitations. No canonical stock,
 assessment, input or output rows were added during this screening.
 
 The source checks in
-`scripts/discovery/475_screen_noaa_spiny_dogfish_2021.R` verify the assessment
+`scripts/noaa_spiny_dogfish_pacific_coast/475_screen_noaa_spiny_dogfish_2021.R` verify the assessment
 years, fleet structure, age bins, 2010 age sample, fixed M and reported age
 surfaces against the cached files.
 

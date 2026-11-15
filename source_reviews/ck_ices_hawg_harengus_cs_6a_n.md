@@ -62,7 +62,7 @@ Source interpretation requires care:
 
 ## Canonical records
 
-The source importer `scripts/database/161_import_ices_herring_6a_n.R` records
+The source importer `scripts/ck_ices_hawg_harengus_cs_6a_n/161_import_ices_herring_6a_n.R` records
 the 2025 adopted advice and the 2026 HAWG assessment separately. The latter is
 the selected detailed record, and `is_applied` records its use as the basis of
 published ACOM advice; the ASD advice record is currently Invalid. That flag

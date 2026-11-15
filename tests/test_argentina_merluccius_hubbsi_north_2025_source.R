@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 read_source_table <- function(path) utils::read.csv(path,
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)

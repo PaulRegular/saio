@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 stock_id <- "noaa_red_grouper_gom"
 assessment_id <- paste0(stock_id, "_sedar88_2025")

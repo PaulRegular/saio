@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 register <- data.frame(
   candidate_id = c("NOAA:A", "DFO:Atlantic:A", "ICES:B", "DFO:Atlantic:C"),

@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 assessment_id <- "noaa_bocaccio_southern_pacific_2017"
 candidate_id <- "NOAA:10413"

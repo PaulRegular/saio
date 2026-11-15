@@ -1,5 +1,5 @@
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source('scripts/discovery/344_screen_ices_capelin_2a514_2026.R')
+source('scripts/ices_capelin_2a514_2026/344_screen_ices_capelin_2a514_2026.R')
 
 root <- '.'
 candidate <- read.csv(file.path(root, 'database/candidates.csv'),

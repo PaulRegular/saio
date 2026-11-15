@@ -1,8 +1,7 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
-source(file.path(root, 'scripts', 'discovery',
-  '502_screen_noaa_pacific_grenadier_2010.R'))
+source(file.path(root, 'scripts/noaa_pacific_coast_pacific_grenadier/502_screen_noaa_pacific_grenadier_2010.R'))
 
 register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)

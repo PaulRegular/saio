@@ -1,8 +1,8 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
-source('scripts/discovery/465_screen_dfo_wcvi_barkley_sockeye_2024.R')
-source('scripts/discovery/195_summarize_discovery.R')
-source('scripts/discovery/196_summarize_inventory_units.R')
+source('scripts/dfo_wcvi_barkley_sockeye_smu/465_screen_dfo_wcvi_barkley_sockeye_2024.R')
+source('scripts/shared/195_summarize_candidates.R')
+source('scripts/shared/196_summarize_inventory_units.R')
 root <- "."
 candidate <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

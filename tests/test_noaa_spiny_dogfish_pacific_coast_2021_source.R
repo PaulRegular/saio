@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 assessment_id <- "noaa_spiny_dogfish_pacific_coast_2021"
 .libPaths(c(file.path(".", "source_cache", "r-lib"), .libPaths()))

@@ -6,4 +6,4 @@ The first seven columns are `file`, `url`, `revision`, `retrieved_on`, `sha256`,
 
 Keep reviewed transcriptions with the assessment they support. The original PDFs, native files and assessment objects are cached locally under `source_cache/`.
 
-For an importer that writes a tracked manifest, load [the manifest writer](../scripts/database/source_manifest_io.R) and use `write_source_manifest()`. The release manifests in [database/releases](../database/releases/) identify the published SAIO tables and their checksums.
+For an importer that writes a tracked manifest, load [the manifest writer](../scripts/shared/source_manifest_io.R) and use `write_source_manifest()`. The release manifests in [database/releases](../database/releases/) identify the published SAIO tables and their checksums.

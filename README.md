@@ -50,7 +50,7 @@ To restore the tables into an SAIO checkout, install the R package
 `openssl`, then run this command from the repository root:
 
 ```sh
-Rscript scripts/database/003_restore_release.R path/to/downloaded/assets
+Rscript scripts/003_restore_release.R path/to/downloaded/assets
 ```
 
 The restore script checks the compressed assets and the resulting CSVs before

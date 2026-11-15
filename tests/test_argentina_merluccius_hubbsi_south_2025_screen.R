@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 read_source_table <- function(path) {
   read.csv(path, stringsAsFactors = FALSE, na.strings = c("", "NA"),
@@ -17,7 +17,7 @@ progress <- progress[progress$organization == "INIDEP", , drop = FALSE]
 manifest <- read_source_table(
   "provenance/inidep_merluccius_hubbsi_south_2025/sources.csv")
 review <- paste(readLines(
-  "source_reviews/inidep_merluccius_hubbsi_south.md", warn = FALSE),
+  "source_reviews/argentina_merluccius_hubbsi_south_41s.md", warn = FALSE),
   collapse = "\n")
 
 stopifnot(

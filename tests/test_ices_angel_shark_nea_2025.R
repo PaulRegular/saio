@@ -1,6 +1,6 @@
 root <- "."
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts/discovery/440_screen_ices_angel_shark_nea_2025.R'))
+source(file.path(root, 'scripts/ices_angel_shark_nea/440_screen_ices_angel_shark_nea_2025.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 candidate_id <- 'ICES:agn.27.nea'

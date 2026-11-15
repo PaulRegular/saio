@@ -1,10 +1,10 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- '.'
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 screen <- new.env(parent = globalenv())
-source(file.path(root, 'scripts/discovery/481_screen_noaa_wreckfish_2014.R'),
+source(file.path(root, 'scripts/noaa_south_atlantic_wreckfish/481_screen_noaa_wreckfish_2014.R'),
   local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)

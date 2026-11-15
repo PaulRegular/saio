@@ -69,7 +69,7 @@ the current report identify NY Age 1. That label discrepancy is unresolved.
 
 ## Imported records
 
-`scripts/database/145_import_asmfc_striped_bass_2024.R` imports:
+`scripts/ck_nefsc_garmiii_saxatilis_gom_chatt/145_import_asmfc_striped_bass_2024.R` imports:
 
 - 84 native fleet total-removal observations in fish, including harvest and
   dead discards/releases; no catch-at-age is reconstructed without compositions;

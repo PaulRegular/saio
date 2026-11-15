@@ -1,4 +1,4 @@
-source("scripts/database/002_validate_database.R")
+source("scripts/002_validate_database.R")
 
 stock_id <- "ck_nefsc_saw_chrysops_usatl"
 a15 <- assessments[assessments$assessment_id == "nefsc_scup_2015", , drop = FALSE]

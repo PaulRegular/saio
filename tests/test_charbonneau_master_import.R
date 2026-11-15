@@ -1,4 +1,4 @@
-source("scripts/database/071_import_charbonneau_master.R")
+source("scripts/shared/071_import_charbonneau_master.R")
 
 stock_path <- "database/stocks.csv"
 stock_bytes <- readBin(stock_path, what = "raw", n = file.info(stock_path)$size)

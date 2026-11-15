@@ -8,7 +8,7 @@ Review date: 2026-11-08
 
 The assessment unit is anchovy (*Engraulis encrasicolus*) in ICES Subarea 8 (Bay of Biscay). It is distinct from the two Iberian anchovy units in Division 9.a. The 2025 WGHANSA Stock Synthesis run (version 3.30.22.beta; ICES Standard Graphs key 21265) is the current detailed production assessment used for 2026 advice (advice record 4005).
 
-The historical batch 19 selection for this unit is recorded at Git revision `b4145de`. The partial import is defined by `scripts/database/611_import_ices_bay_biscay_anchovy_2025.R`; imported values remain traceable to the official report tables and retain their reported scales.
+The historical batch 19 selection for this unit is recorded at Git revision `b4145de`. The partial import is defined by `scripts/ices_bay_biscay_anchovy_8/611_import_ices_bay_biscay_anchovy_2025.R`; imported values remain traceable to the official report tables and retain their reported scales.
 
 ## Source evidence
 

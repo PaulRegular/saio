@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
 stock_id <- 'dfo_sgsl_winter_flounder_4t'
@@ -114,8 +114,7 @@ stopifnot(
   all(file.exists(source_paths)),
   all(file.info(source_paths)$size == manifest$bytes),
   all(grepl('^[[:xdigit:]]{64}$', manifest$sha256)),
-  file.exists(file.path(root, 'scripts', 'database',
-    '544_import_dfo_sgsl_winter_flounder_4t_2017.R')),
+  file.exists(file.path(root, 'scripts/dfo_sgsl_winter_flounder_4t/544_import_dfo_sgsl_winter_flounder_4t_2017.R')),
   file.exists(file.path(root, 'source_reviews/dfo_sgsl_winter_flounder_4t.md'))
 )
 

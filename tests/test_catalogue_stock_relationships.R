@@ -1,4 +1,4 @@
-source("scripts/database/156_review_catalogue_stock_relationships.R")
+source("scripts/shared/156_review_catalogue_stock_relationships.R")
 source("R/read_database.R")
 db <- read_database()
 links <- ck_stock_relationships

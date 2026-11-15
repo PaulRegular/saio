@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 read_assessment_rows <- function(path, assessment_id) {
   header <- readLines(path, n = 1L, warn = FALSE, encoding = "bytes")
@@ -30,7 +30,7 @@ units <- candidate_units()
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
 review <- paste(readLines("source_reviews/noaa_golden_tilefish_gulf_sedar22_2011.md",
   warn = FALSE), collapse = " ")
-screen_code <- paste(readLines("scripts/discovery/482_screen_noaa_gulf_golden_tilefish_sedar22_2011.R",
+screen_code <- paste(readLines("scripts/noaa_gulf_golden_tilefish/482_screen_noaa_gulf_golden_tilefish_sedar22_2011.R",
   warn = FALSE), collapse = " ")
 
 imported <- nrow(stock) == 1L || nrow(assessment) == 1L || nrow(inputs) > 0L || nrow(outputs) > 0L
@@ -38,7 +38,7 @@ if (!imported) {
   old_dry_run <- Sys.getenv("TAM_SOURCE_DRY_RUN", unset = NA_character_)
   Sys.setenv(TAM_SOURCE_DRY_RUN = "1")
   screen <- new.env(parent = globalenv())
-  source("scripts/discovery/482_screen_noaa_gulf_golden_tilefish_sedar22_2011.R", local = screen)
+  source("scripts/noaa_gulf_golden_tilefish/482_screen_noaa_gulf_golden_tilefish_sedar22_2011.R", local = screen)
   if (is.na(old_dry_run)) Sys.unsetenv("TAM_SOURCE_DRY_RUN") else
     Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
   register <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,

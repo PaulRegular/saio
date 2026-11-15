@@ -15,7 +15,7 @@ The 2022 MSE is component-specific. Its public conditioning report (Research Doc
 `dfo_herring_4vwx_2025_indicators` is a **summary-only**, applied record with
 all completeness statuses partial and `is_current = FALSE`. No current
 detailed production assessment has yet been populated. The importer
-`scripts/database/144_import_dfo_herring_4vwx_2025_summary.R` uses only the
+`scripts/ck_dfo_mar_harengus_4vwx/144_import_dfo_herring_4vwx_2025_summary.R` uses only the
 verified 2025 PDF; it does not read numerical inputs from the older archive.
 
 The 68 input records preserve SWNS/BoF landings for 2020–2024 in the original

@@ -8,7 +8,7 @@ source_hash <- "D5626CA8A0C9A6E6989291EBE7BFB0BFD7EB02E232E41CA62A810B2F31FA9DE7
 stopifnot(file.exists(report))
 
 import <- new.env(parent = globalenv())
-source("scripts/database/import_mpi_red_gurnard_gur3_2022.R", local = import)
+source("scripts/mpi_red_gurnard_gur3/import_mpi_red_gurnard_gur3_2022.R", local = import)
 stopifnot(identical(toupper(import$sha256_file(report)), source_hash))
 
 numeric_values <- function(x) as.numeric(x$value)

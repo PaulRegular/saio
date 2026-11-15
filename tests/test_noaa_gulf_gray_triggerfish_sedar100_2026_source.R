@@ -1,5 +1,5 @@
 assessment_id <- "noaa_gulf_gray_triggerfish_sedar100_2026"
-source("scripts/database/638_import_noaa_gulf_gray_triggerfish_sedar100_2026.R", local = TRUE)
+source("scripts/noaa_gulf_gray_triggerfish/638_import_noaa_gulf_gray_triggerfish_sedar100_2026.R", local = TRUE)
 
 stopifnot(
   nrow(new_inputs) == 645L,

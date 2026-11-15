@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 assessment_id <- "mpi_bluenose_nz_2021"
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,

@@ -1,6 +1,6 @@
 root <- "."
 import <- new.env(parent = globalenv())
-source(file.path(root, "scripts/database/644_import_noaa_rougheye_blackspotted_2025.R"),
+source(file.path(root, "scripts/noaa_uswc_rougheye_blackspotted/644_import_noaa_rougheye_blackspotted_2025.R"),
   local = import)
 
 inputs <- import$input_data

@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
 source_paths <- list.files("database", pattern = "[.]csv$", full.names = TRUE)
@@ -7,7 +7,7 @@ import_env <- new.env(parent = globalenv())
 import_env$commandArgs <- function(trailingOnly = FALSE) {
   if (trailingOnly) "--dry-run" else base::commandArgs(trailingOnly = FALSE)
 }
-source(file.path(root, "scripts", "database", "551_import_noaa_acadian_redfish_2025.R"),
+source(file.path(root, "scripts/noaa_acadian_redfish_gom_gb/551_import_noaa_acadian_redfish_2025.R"),
   local = import_env
 )
 

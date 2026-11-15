@@ -3,7 +3,7 @@ cache <- file.path(root, 'source_cache/discovery_ices_spurdog_nea_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 before <- readLines(candidate_path, warn = FALSE)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts/discovery/457_screen_ices_spurdog_nea_2026.R'))
+source(file.path(root, 'scripts/ices_spurdog_nea/457_screen_ices_spurdog_nea_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 stopifnot(identical(before, readLines(candidate_path, warn = FALSE)))
 

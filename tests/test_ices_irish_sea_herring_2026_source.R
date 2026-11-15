@@ -1,8 +1,8 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
 import_env <- new.env(parent = globalenv())
-source(file.path(root, "scripts", "database", "549_import_ices_irish_sea_herring_2026.R"),
+source(file.path(root, "scripts/ices_her_27_nirs/549_import_ices_irish_sea_herring_2026.R"),
   local = import_env
 )
 

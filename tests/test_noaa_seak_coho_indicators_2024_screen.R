@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
 read_table <- function(name) read.csv(file.path(root, name), stringsAsFactors = FALSE,
@@ -8,8 +8,7 @@ canonical_paths <- c(stocks = 'database/stocks.csv',
   outputs = 'database/outputs.csv')
 canonical_before <- lapply(canonical_paths, read_table)
 
-source(file.path(root, 'scripts', 'discovery',
-  '531_screen_noaa_seak_coho_indicators_2024.R'))
+source(file.path(root, 'scripts/shared/531_screen_noaa_seak_coho_indicators_2024.R'))
 
 register <- read_table('database/candidates.csv')
 ids <- c('NOAA:10959', 'NOAA:10960', 'NOAA:10961')

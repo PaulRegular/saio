@@ -1,6 +1,6 @@
 Sys.setenv(TAM_SOURCE_DRY_RUN = "1")
 e <- new.env(parent = globalenv())
-sys.source("scripts/database/649_import_ices_four_spot_megrim_8c9a_2026.R", envir = e)
+sys.source("scripts/ices_four_spot_megrim_8c9a/649_import_ices_four_spot_megrim_8c9a_2026.R", envir = e)
 
 num <- function(x) as.numeric(x)
 age_discard <- e$inputs[e$inputs$measure == "discard_numbers_at_age", ]

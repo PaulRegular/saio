@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- '.'
 candidate_id <- 'ICES:ghl.27.1-2'
@@ -49,8 +49,7 @@ stopifnot(
   grepl('2024 model version', review, fixed = TRUE),
   grepl('not verified as the exact run bundle', review, fixed = TRUE),
   grepl('eligibility unresolved', review, fixed = TRUE),
-  file.exists(file.path(root, 'scripts', 'discovery',
-    '377_screen_ices_greenland_halibut_1_2_2026.R'))
+  file.exists(file.path(root, 'scripts/ices_greenland_halibut_1_2/377_screen_ices_greenland_halibut_1_2_2026.R'))
 )
 
 cat('ICES Greenland halibut in subareas 1 and 2 identity, evidence, unresolved eligibility, and no-import checks passed.\n')

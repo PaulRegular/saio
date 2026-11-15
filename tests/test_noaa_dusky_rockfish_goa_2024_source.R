@@ -1,5 +1,5 @@
 env <- new.env(parent = globalenv())
-source("scripts/database/639_import_noaa_goa_dusky_rockfish_2024.R", local = env)
+source("scripts/noaa_goa_dusky_rockfish/639_import_noaa_goa_dusky_rockfish_2024.R", local = env)
 
 inputs <- env$new_inputs
 outputs <- env$new_outputs

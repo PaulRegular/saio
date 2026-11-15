@@ -42,7 +42,7 @@ independent absolute age-specific indices.
 ## Canonical coverage
 
 The reproducible importer is
-`scripts/database/143_import_jrn_beaked_redfish_2026.R`.
+`scripts/ck_ices_afwg_mentella_deep_1_2/143_import_jrn_beaked_redfish_2026.R`.
 All three completeness statuses remain **partial**.
 
 | Component | Recovered source records | Important qualification |

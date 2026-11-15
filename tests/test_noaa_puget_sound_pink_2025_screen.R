@@ -1,6 +1,6 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
-source('scripts/discovery/508_screen_noaa_puget_sound_pink_2025.R')
+source('scripts/noaa_puget_sound_pink_2025/508_screen_noaa_puget_sound_pink_2025.R')
 
 root <- '.'
 register <- read.csv(file.path(root, 'database/candidates.csv'),

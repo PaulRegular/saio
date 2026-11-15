@@ -1,8 +1,7 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
-source(file.path(root, 'scripts', 'discovery',
-  '501_screen_noaa_offshore_hake_2023.R'))
+source(file.path(root, 'scripts/noaa_offshore_hake_us/501_screen_noaa_offshore_hake_2023.R'))
 
 register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)

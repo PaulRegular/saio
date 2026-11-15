@@ -1,6 +1,6 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
-source('scripts/discovery/509_screen_noaa_far_north_chinook_2024.R')
+source('scripts/noaa_far_north_chinook_2024/509_screen_noaa_far_north_chinook_2024.R')
 
 root <- '.'
 register <- read.csv(file.path(root, 'database/candidates.csv'),

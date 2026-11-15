@@ -1,6 +1,6 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
-source('scripts/discovery/511_screen_noaa_north_atlantic_shortfin_mako_2026.R')
+source('scripts/noaa_north_atlantic_shortfin_mako/511_screen_noaa_north_atlantic_shortfin_mako_2026.R')
 
 root <- '.'
 register <- read.csv(file.path(root, 'database/candidates.csv'),

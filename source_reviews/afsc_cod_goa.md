@@ -129,11 +129,11 @@ Coverage is now 12,689 input cells, 3,437 outputs and 34 assumptions. Source val
 
 ## Active-survey catchability controls
 
-The official native control estimates baseline log q for both active surveys (phase 1). Bottom-trawl q has no environmental term; longline q also estimates the environmental coefficient (phase 5, env-var/link 101). Neither baseline uses annual deviations or time blocks. These parameter controls are now explicit assumptions, verified by scripts/database/023_review_goa_cod_catchability.R. Parameter starting values are not exported as estimates. This source-review script supplements the initial importer. Structural validation passes. The published baseline q estimates are summarized below; selectivity details remain unresolved.
+The official native control estimates baseline log q for both active surveys (phase 1). Bottom-trawl q has no environmental term; longline q also estimates the environmental coefficient (phase 5, env-var/link 101). Neither baseline uses annual deviations or time blocks. These parameter controls are now explicit assumptions, verified by scripts/afsc_cod_goa/023_review_goa_cod_catchability.R. Parameter starting values are not exported as estimates. This source-review script supplements the initial importer. Structural validation passes. The published baseline q estimates are summarized below; selectivity details remain unresolved.
 
 ## Published baseline catchability estimates
 
-Table 2.6 supplies bottom-trawl baseline q=1.28 (SD 0.123) and longline baseline q=1.17 (SD 0.108). Both are now outputs, with no invented confidence limits. The cached safe_tbls.R confirms exponentiation of log-q estimates and natural-scale delta-method SDs. These rounded baseline coefficients are distinct from starting values and from the environmentally varying annual longline q surface. scripts/database/024_import_goa_cod_catchability.R records and checks the published values.
+Table 2.6 supplies bottom-trawl baseline q=1.28 (SD 0.123) and longline baseline q=1.17 (SD 0.108). Both are now outputs, with no invented confidence limits. The cached safe_tbls.R confirms exponentiation of log-q estimates and natural-scale delta-method SDs. These rounded baseline coefficients are distinct from starting values and from the environmentally varying annual longline q surface. scripts/afsc_cod_goa/024_import_goa_cod_catchability.R records and checks the published values.
 
 The current report explicitly states that CFSR was discontinued and no 2025 value was available. SS3 uses a zero environmental effect in that year; this model rule is now an assumption, not an observed-zero input. The 46 supplied covariates remain 1979–2024. Physical anomaly units remain unresolved.
 

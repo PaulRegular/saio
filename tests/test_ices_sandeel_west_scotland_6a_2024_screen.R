@@ -2,8 +2,7 @@ root <- "."
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 screen <- new.env(parent = globalenv())
-source(file.path(root, 'scripts/discovery',
-  '445_screen_ices_sandeel_west_scotland_6a_2024.R'), local = screen)
+source(file.path(root, 'scripts/ices_sandeel_west_scotland_6a/445_screen_ices_sandeel_west_scotland_6a_2024.R'), local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
 register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,

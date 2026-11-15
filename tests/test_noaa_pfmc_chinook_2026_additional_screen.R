@@ -1,8 +1,7 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
-source(file.path(root, 'scripts', 'discovery',
-  '504_screen_noaa_pfmc_chinook_2026.R'))
+source(file.path(root, 'scripts/shared/504_screen_noaa_pfmc_chinook_2026.R'))
 
 stock_ids <- c(10605L, 10606L, 10607L, 10609L, 10611L, 10612L, 10613L,
   10614L, 10615L, 10616L, 10617L, 10618L, 10620L, 10621L, 10622L,

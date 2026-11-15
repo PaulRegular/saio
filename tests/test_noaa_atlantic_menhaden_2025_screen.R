@@ -1,6 +1,6 @@
 root <- "."
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts/discovery/444_screen_noaa_atlantic_menhaden_2025.R'))
+source(file.path(root, 'scripts/noaa_atlantic_menhaden/444_screen_noaa_atlantic_menhaden_2025.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 id <- 'NOAA:11089'

@@ -121,7 +121,7 @@ cat("NOAA Alaska sablefish source rows, units, outputs, and provenance checks pa
 dry_run_script <- tempfile(fileext = ".R")
 writeLines(c(
   'Sys.setenv(TAM_SOURCE_DRY_RUN = "1")',
-  'source("scripts/database/396_import_noaa_alaska_sablefish_2024.R")'
+  'source("scripts/noaa_alaska_sablefish/396_import_noaa_alaska_sablefish_2024.R")'
 ), dry_run_script)
 dry_run <- system2(
   file.path(R.home("bin"), paste0("Rscript", .Platform$exe)),

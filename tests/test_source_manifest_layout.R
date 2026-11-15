@@ -1,4 +1,4 @@
-source("scripts/database/source_manifest_io.R", local = TRUE)
+source("scripts/shared/source_manifest_io.R", local = TRUE)
 
 fields <- c("file", "url", "revision", "retrieved_on", "sha256", "bytes", "notes")
 legacy <- data.frame(

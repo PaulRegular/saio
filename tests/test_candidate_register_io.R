@@ -1,4 +1,4 @@
-source('scripts/discovery/candidate_register_io.R')
+source('scripts/shared/candidate_register_io.R')
 
 path <- tempfile(fileext = '.csv')
 writeLines(c(

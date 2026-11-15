@@ -1,5 +1,5 @@
 root <- "."
-script <- file.path(root, "scripts", "database", "557_import_ices_seabass_8ab_2026.R")
+script <- file.path(root, "scripts/ices_seabass_8ab/557_import_ices_seabass_8ab_2026.R")
 old_dry_run <- Sys.getenv("TAM_SOURCE_DRY_RUN", unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = "1")
 import <- new.env(parent = globalenv())

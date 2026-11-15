@@ -1,7 +1,7 @@
 root <- "."
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root,
-  'scripts/discovery/352_screen_ices_black_bellied_anglerfish_8c9a_2026.R'))
+  'scripts/ices_black_bellied_anglerfish_8c9a/352_screen_ices_black_bellied_anglerfish_8c9a_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 register <- read.csv(file.path(root, 'database/candidates.csv'),

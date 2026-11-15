@@ -67,7 +67,7 @@ The native N/F/M surfaces, benchmark configuration, source timing and missing-va
 
 8,682 input rows, 4,843 output rows and 41 assumptions are represented. Original SAM log-observations are exponentiated to their native scale; missing slots are omitted rather than filled. Fixed final M includes externally iterated cannibalism mortality. N and summary quantities extend through fitted survey year 2026; historical F/Fbar end in catch year 2025. Predictions use the corresponding native observation rows. Available summary intervals are preserved; log-scale SEs are not placed in the canonical natural-scale SE field.
 
-Structural validation and scripts/database/007_validate_northeast_arctic_cod.R passed. Source exporters and report crosschecks are retained in the cache. No core package mathematics changed.
+Structural validation and scripts/ices_cod_northeast_arctic/007_validate_northeast_arctic_cod.R passed. Source exporters and report crosschecks are retained in the cache. No core package mathematics changed.
 
 ## Benchmark follow-up
 

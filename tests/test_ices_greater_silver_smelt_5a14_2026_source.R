@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 assessment_id <- "ices_greater_silver_smelt_5a14_2026"
 stock_id <- "ices_greater_silver_smelt_5a14"

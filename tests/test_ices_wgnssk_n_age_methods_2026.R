@@ -1,6 +1,6 @@
 root <- '.'
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts/discovery/365_screen_ices_wgnssk_n_age_methods.R'))
+source(file.path(root, 'scripts/shared/365_screen_ices_wgnssk_n_age_methods.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 register <- read.csv(file.path(root, 'database/candidates.csv'),

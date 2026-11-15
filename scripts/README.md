@@ -1,34 +1,36 @@
-# SAIO scripts
 
-Run these commands from the repository root.
+# SAIO processing scripts
 
-| Folder | Purpose |
-|---|---|
-| [database](database/) | Restore and validate releases, and import and verify official assessment records. |
-| [discovery](discovery/) | Build and screen the candidate register and generate inventory summaries. |
+Run these commands from the SAIO root. Start with the stock ID in the stock
+table. Its folder contains the scripts used to screen sources, import records
+and check values for that unit. The filenames retain their original script
+numbers and identify the operation or the assessment run. Cases still under
+review use the organization-prefixed candidate key.
 
-Find the stock and assessment IDs in the database tables. Search the importers
-for the assessment ID, and check the source files and supported arguments near
-the top of the script before running it. A stock may have separate importers
-for its assessment, inputs and outputs. The prefix in a filename identifies
-a script from the curation history.
+For example, the Northern Gulf cod stock has [these scripts](dfo_cod_3pn4rs/)
+and a [source review](../source_reviews/dfo_cod_3pn4rs.md). The review and
+assessment table identify the official run, and the assessment ID identifies
+its source manifest.
+
+[Shared scripts](shared/) handle inventories, multi-stock sources and helpers.
+The two commands at this level restore and check the five published tables.
 
 ~~~sh
-rg --fixed-strings -l ices_sol_27_7a_2026 scripts/database
-Rscript scripts/database/003_restore_release.R path/to/release/assets
-Rscript scripts/database/002_validate_database.R
+Rscript scripts/003_restore_release.R path/to/release/assets
+Rscript scripts/002_validate_database.R
 ~~~
 
 See the [curation protocol](../PROTOCOL.md) for source selection, provenance
-and validation of an import.
+and validation. Check each script's inputs and arguments before running it.
 
-## Discovery reports
+## Candidate summaries
 
-Run these from the repository root to print the current linked units or progress as CSV.
+Print the register overview and linked stock units as CSV from the SAIO root.
 
 ~~~sh
-Rscript scripts/discovery/196_summarize_inventory_units.R
-Rscript scripts/discovery/195_summarize_discovery.R
+Rscript scripts/shared/195_summarize_candidates.R
+Rscript scripts/shared/196_summarize_inventory_units.R
 ~~~
 
-Both commands derive their reports from the candidate register. The cached Stock SMART inventory supplies NOAA science centres when present. The database importers record screening and import updates in the candidate register.
+Both commands read the [candidate register](../database/candidates.csv). The
+cached Stock SMART inventory supplies NOAA science centres when present.

@@ -139,7 +139,7 @@ not silently stand in for those revised observation arrays.
 
 ### Validation and source coverage
 
-The importer is `scripts/database/147_import_dfo_eastern_georges_bank_cod.R`.
+The importer is `scripts/ck_nefsc_trac_cert_morhua_gb/147_import_dfo_eastern_georges_bank_cod.R`.
 It verifies cached source hashes and table dimensions, preserves original
 ages/years/units and changes only this stock and its three assessment records.
 The focused test checks current-versus-summary selection, all three fleet

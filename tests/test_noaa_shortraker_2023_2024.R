@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- '.'
 register <- read.csv(file.path(root, 'database/candidates.csv'),
@@ -63,6 +63,6 @@ cat('NOAA BSAI and GOA shortraker identity, source, ineligibility and no-import 
 
 old_dry_run <- Sys.getenv("TAM_SOURCE_DRY_RUN", unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = "1")
-source(file.path(root, "scripts", "discovery", "394_screen_noaa_shortraker_2023_2024.R"))
+source(file.path(root, "scripts/shared/394_screen_noaa_shortraker_2023_2024.R"))
 if (is.na(old_dry_run)) Sys.unsetenv("TAM_SOURCE_DRY_RUN") else Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 

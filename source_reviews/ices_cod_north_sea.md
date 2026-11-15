@@ -134,9 +134,9 @@ The canonical database preserves the official substock inputs, fitted outputs, s
 Cached sources remain gitignored. The source-specific importer requires Python with pdfplumber and base R:
 
 ```sh
-python scripts/database/004_import_north_sea_cod.py . --rscript Rscript
-Rscript scripts/database/002_validate_database.R
-Rscript scripts/database/005_validate_north_sea_cod.R
+python scripts/ices_cod_north_sea/004_import_north_sea_cod.py . --rscript Rscript
+Rscript scripts/002_validate_database.R
+Rscript scripts/ices_cod_north_sea/005_validate_north_sea_cod.R
 ```
 
 The importer validates all 2,688 native N/F/M values against the detailed report and can be rerun independently of other assessments. Input completeness remains partial.

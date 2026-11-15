@@ -140,7 +140,7 @@ digitization notes.
 
 The cached source files and checksums are listed in
 `source_cache/dfo_cod_3pn4rs_2025/manifest.csv`.
-`scripts/database/038_import_dfo_cod_3pn4rs_2025.R` reproduces table imports and
+`scripts/dfo_cod_3pn4rs/038_import_dfo_cod_3pn4rs_2025.R` reproduces table imports and
 digitizes the fitted biological curves from the cached assessment PDF;
 `039_validate_dfo_cod_3pn4rs_2025.R` checks coverage, units, provenance, values,
 and biological constraints. `057_cache_dfo_cod_3pn4rs_sources.R` retrieves the

@@ -45,7 +45,7 @@ stopifnot(
 )
 
 structure <- paste(readLines(file.path(root, "DATABASE_STRUCTURE.md"), warn = FALSE), collapse = " ")
-validator <- paste(readLines(file.path(root, "scripts/database/002_validate_database.R"), warn = FALSE), collapse = " ")
+validator <- paste(readLines(file.path(root, "scripts/002_validate_database.R"), warn = FALSE), collapse = " ")
 stopifnot(
   grepl("Southeast Pacific", structure, fixed = TRUE),
   grepl("Southeast Pacific", validator, fixed = TRUE)

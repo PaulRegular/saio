@@ -2,7 +2,7 @@ root <- "."
 old_dry_run <- Sys.getenv("TAM_SOURCE_DRY_RUN", unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = "1")
 import_env <- new.env(parent = globalenv())
-sys.source(file.path(root, "scripts/database/670_import_noaa_china_rockfish_2015.R"), envir = import_env)
+sys.source(file.path(root, "scripts/shared/670_import_noaa_china_rockfish_2015.R"), envir = import_env)
 if (is.na(old_dry_run)) Sys.unsetenv("TAM_SOURCE_DRY_RUN") else Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
 ids <- c("noaa_china_rockfish_northern_pacific_coast", "noaa_china_rockfish_central_pacific_coast",

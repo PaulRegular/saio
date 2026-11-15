@@ -6,7 +6,7 @@ if (!file.exists(file.path(cache, "post_model_files_2019.zip"))) {
 source_env <- new.env(parent = globalenv())
 old_test_mode <- Sys.getenv("TAM_SOURCE_TEST_MODE", unset = NA_character_)
 Sys.setenv(TAM_SOURCE_TEST_MODE = "1")
-source("scripts/database/672_import_noaa_gopher_black_yellow_2019.R", local = source_env)
+source("scripts/noaa_gopher_black_yellow_s_of_4010n/672_import_noaa_gopher_black_yellow_2019.R", local = source_env)
 if (is.na(old_test_mode)) Sys.unsetenv("TAM_SOURCE_TEST_MODE") else
   Sys.setenv(TAM_SOURCE_TEST_MODE = old_test_mode)
 

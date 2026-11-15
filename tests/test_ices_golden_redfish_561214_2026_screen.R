@@ -2,8 +2,7 @@ root <- "."
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 screen <- new.env(parent = globalenv())
-result <- source(file.path(root, 'scripts', 'discovery',
-  '432_screen_ices_golden_redfish_561214_2026.R'), local = screen)$value
+result <- source(file.path(root, 'scripts/ices_golden_redfish_561214/432_screen_ices_golden_redfish_561214_2026.R'), local = screen)$value
 if (is.na(old_dry_run)) {
   Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 } else {

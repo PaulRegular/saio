@@ -7,7 +7,7 @@ source_manifest <- read.csv(
   file.path(root, "provenance/discovery_ices_ling_5a_2026/supplementary/sources.csv"),
   stringsAsFactors = FALSE
 )
-importer <- file.path(root, "scripts", "database", "661_import_ices_ling_5a_supplementary_tables.R")
+importer <- file.path(root, "scripts/ices_ling_5a/661_import_ices_ling_5a_supplementary_tables.R")
 old_dry_run <- Sys.getenv("TAM_SOURCE_DRY_RUN", unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = "1")
 import_env <- new.env(parent = globalenv())

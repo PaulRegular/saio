@@ -10,7 +10,7 @@ The 2025 production benchmark is the latest detailed assessment for NOAA:17357. 
 
 ## Inputs captured
 
-Importer: scripts/database/641_import_noaa_chilipepper_2025.R. The import preserves native Stock Synthesis inputs and does not reconstruct fitted quantities as observations.
+Importer: scripts/noaa_chilipepper_pacific_coast/641_import_noaa_chilipepper_2025.R. The import preserves native Stock Synthesis inputs and does not reconstruct fitted quantities as observations.
 
 - 756 annual catch-biomass rows across eight fishery fleets, in metric tons, with a matching log-scale catch SD for each row. Seven -999 equilibrium sentinels are excluded.
 - 146 aggregate index observations and their se_log values. Two are fishery CPUE series; the others are WCGBT, Triennial, CalCOFI spawning output and RREAS age-0 recruitment indices. Stock Synthesis units codes 1, 30 and 33 are retained in the unit descriptions. Twenty-two negative source years mark evaluation-only index rows; the canonical year is stored as its calendar-year magnitude and the signed source year is retained in observation_id and notes.

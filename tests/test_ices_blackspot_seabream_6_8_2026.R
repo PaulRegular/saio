@@ -1,4 +1,4 @@
-source("scripts/discovery/candidate_reports.R", local = TRUE)
+source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- '.'
 candidate_id <- 'ICES:sbr.27.6-8'
@@ -44,8 +44,7 @@ stopifnot(
   !any(outputs$assessment_id == unit_id, na.rm = TRUE),
   grepl('2026 advice is category 6', review, fixed = TRUE),
   grepl('aggregate landings, catches, and discards', review, fixed = TRUE),
-  file.exists(file.path(root, 'scripts', 'discovery',
-    '378_screen_ices_blackspot_seabream_6_8_2026.R'))
+  file.exists(file.path(root, 'scripts/ices_blackspot_seabream_6_8/378_screen_ices_blackspot_seabream_6_8_2026.R'))
 )
 
 cat('ICES blackspot seabream identity, aggregate-only screen, and no-import checks passed.\n')

@@ -1,5 +1,5 @@
 source("R/read_database.R")
-source("scripts/database/bc_petrale_posterior.R")
+source("scripts/dfo_petrale_bc/bc_petrale_posterior.R")
 source("R/plot_stock_order.R")
 x <- read_assessment("dfo_petrale_bc_2024")
 stopifnot(x$stocks$scientific_name == "Eopsetta jordani", is.na(x$stocks$charbonneau_id),

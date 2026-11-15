@@ -2,7 +2,7 @@ root <- "."
 env <- new.env(parent = globalenv())
 env$write_database <- FALSE
 sys.source(
-  file.path(root, "scripts", "database", "075_import_dfo_sgsl_fall_herring_2024.R"),
+  file.path(root, "scripts/ck_dfo_gsl_harengus_4t_fall/075_import_dfo_sgsl_fall_herring_2024.R"),
   envir = env
 )
 

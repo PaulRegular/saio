@@ -55,7 +55,7 @@ documents a recovery gap, not a claim that those files do not exist.
 
 ## Inputs and assumptions recovered
 
-`scripts/database/158_import_nefsc_cod_georges_bank_2024.R` imports Table 1's
+`scripts/nefsc_cod_georges_bank/158_import_nefsc_cod_georges_bank_2024.R` imports Table 1's
 2014–2023 combined catch in tonnes and the documented fixed M of 0.29 per
 year for ages 1–9+. The presentation explicitly says the MT retains this
 M assumption. It is not the older catalogue M value or an estimated-M output.

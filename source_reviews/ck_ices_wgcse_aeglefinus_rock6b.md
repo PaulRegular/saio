@@ -6,7 +6,7 @@ The local ignored source cache is `source_cache/melanogrammus_aeglefinus/ck_ices
 
 ## Inputs and assumptions
 
-The importer `scripts/database/088_import_ices_haddock_rockall_2026.R` transcribes the current report's input and output tables into the canonical database. The local `source_cache/.../extracted_tables/` files are table-shaped extracts from the cached report PDF used by that importer; they are not separate official source data.
+The importer `scripts/ck_ices_wgcse_aeglefinus_rock6b/088_import_ices_haddock_rockall_2026.R` transcribes the current report's input and output tables into the canonical database. The local `source_cache/.../extracted_tables/` files are table-shaped extracts from the cached report PDF used by that importer; they are not separate official source data.
 
 - Table 8.7 gives total catch numbers-at-age, including landings, discards and BMS, for 1991–2025, ages 1–8+, in thousands of fish. Table 8.8 gives the landing fraction by age. Table 8.11 gives catch weights-at-age in kg per fish. These are retained as separate catch, fraction and catch-weight inputs.
 - Table 8.12 gives the Rockall pt1 Q3 index for 1991–1997, ages 1–8+ used by the assessment. The printed `-1` for age 8 in 1995 is a missing-value sentinel, not an index; it is omitted and recorded as missing. The table does not specify a physical index unit, so values remain on their native relative scale.

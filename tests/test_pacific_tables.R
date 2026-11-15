@@ -1,4 +1,4 @@
-source("scripts/database/pacific_tables.R")
+source("scripts/shared/pacific_tables.R")
 for(table in c("stocks","assessments","assumptions","inputs","outputs")) {
   expected <- names(read.csv(file.path("database",paste0(table,".csv")),nrows=0,check.names=FALSE))
   z <- pacific_database_row(table,n=2)

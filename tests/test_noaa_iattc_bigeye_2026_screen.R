@@ -1,4 +1,4 @@
-source('scripts/discovery/460_screen_noaa_iattc_bigeye_2026.R')
+source('scripts/iattc_eastern_pacific_bigeye/460_screen_noaa_iattc_bigeye_2026.R')
 root <- "."
 candidate <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

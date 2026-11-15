@@ -68,7 +68,7 @@ The [scope and provenance statement](README.md#scope-and-verification) applies
 to all records and their downstream use. Extraction and automated checks do
 not substitute for verification against the authoritative sources.
 
-Use this protocol and `DATABASE_STRUCTURE.md` to curate or repair source records. New source extraction and validation code should use R. Keep source importers separate from secondary analyses. Official assumptions, source reconstructions and unresolved data gaps belong here; downstream model settings, fitting attempts and comparison statistics do not.
+Use this protocol and `DATABASE_STRUCTURE.md` to curate or repair source records. New source extraction and validation code should use R. Keep each stock’s source-search, import and validation scripts in its stock folder under scripts/. Use the organization-prefixed candidate key for a unit still under review. Put shared processing and inventory scripts in scripts/shared/. Keep source importers separate from secondary analyses. Official assumptions, source reconstructions and unresolved data gaps belong here; downstream model settings, fitting attempts and comparison statistics do not.
 
 At the start of source work, read both governing documents. Complete source curation independently of downstream software or model performance.
 
@@ -847,7 +847,7 @@ When information is unclear, inspect native files, fitted objects, framework doc
 1. Review assessment changes in a local working copy. Preserve provenance,
    units and correction notes with the importers and source tests.
 2. For a major data milestone, validate the combined tables with
-   `Rscript scripts/database/002_validate_database.R` and run the affected
+   `Rscript scripts/002_validate_database.R` and run the affected
    source tests. Record the added or revised assessment IDs and any changes to
    the schema or interpretation.
 3. Package the five canonical CSVs as individually compressed release assets.
@@ -857,7 +857,7 @@ When information is unclear, inspect native files, fitted objects, framework doc
    file with the assets. Keep one compressed file per complete table.
    Choose a data repository that can accommodate the full release.
 4. Restore the release into a clean directory with
-   `Rscript scripts/database/003_restore_release.R <assets-dir> <database-dir>`.
+   `Rscript scripts/003_restore_release.R <assets-dir> <database-dir>`.
    Verify all five files and check that an analysis can select the intended
    release before publication.
 5. Commit the release manifest and reviewed changes together on the main

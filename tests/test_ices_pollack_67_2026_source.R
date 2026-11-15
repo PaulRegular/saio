@@ -1,6 +1,6 @@
 Sys.setenv(TAM_SOURCE_DRY_RUN = "1")
 e <- new.env(parent = globalenv())
-sys.source("scripts/database/648_import_ices_pollack_6_7_2026.R", envir = e)
+sys.source("scripts/ices_pol_27_67/648_import_ices_pollack_6_7_2026.R", envir = e)
 
 inputs <- e$inputs
 outputs <- e$outputs
