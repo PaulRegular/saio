@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path("source_cache", "noaa_snowy_grouper_sedar36u_2021")
+cache <- file.path("source_cache", "epinephelus_niveatus/noaa_snowy_grouper_south_atlantic_sedar36u_2021")
 manifest_path <- file.path("provenance", "noaa_snowy_grouper_sedar36u_2021", "manifest.csv")
 stock_id <- "noaa_snowy_grouper_south_atlantic"
 assessment_id <- "noaa_snowy_grouper_south_atlantic_sedar36u_2021"
@@ -8,7 +8,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source("scripts/database/pacific_tables.R")
-source("scripts/database/candidate_register_io.R")
+source("scripts/discovery/candidate_register_io.R")
 
 if (!requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install pdftools to extract SEDAR 36 Update tables.", call. = FALSE)

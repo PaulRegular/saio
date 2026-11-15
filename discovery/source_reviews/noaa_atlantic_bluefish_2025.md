@@ -4,7 +4,7 @@
 
 NOAA Stock SMART identifies assessment 13933 as the 2025 Atlantic Coast bluefish management-track run, with data through 2024. The June 2025 peer-review panel concluded that the assessment met its terms of reference and represented the best scientific information available. The assessment updates the 2022 research-track WHAM model and the 2023 management-track update.
 
-The source cache is under source_cache/discovery_noaa_bluefish_2025/. The tracked manifest in provenance/discovery_noaa_bluefish_2025/sources.csv records source URLs, retrieval dates, revisions, file sizes, and SHA-256 hashes. The 2025 and 2022 archive-container checksums changed when re-downloaded on 2026-11-11 UTC; the cited report and working-paper files extracted from them retain the previously recorded member hashes.
+The source cache is under source_cache/pomatomus_saltatrix/noaa_bluefish_atlantic_2025/. The tracked manifest in provenance/discovery_noaa_bluefish_2025/sources.csv records source URLs, retrieval dates, revisions, file sizes, and SHA-256 hashes. The 2025 and 2022 archive-container checksums changed when re-downloaded on 2026-11-11 UTC; the cited report and working-paper files extracted from them retain the previously recorded member hashes.
 
 Sources:
 

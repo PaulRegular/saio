@@ -14,7 +14,7 @@ outputs <- read.csv("database/outputs.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selection <- read.csv("discovery/selected_batch_06_2026.csv", stringsAsFactors = FALSE,
+selection <- read.csv("discovery/selections/selected_batch_06_2026.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
 stock <- subset(stocks, stock_id == "mpi_ling_lin56_lin6b")

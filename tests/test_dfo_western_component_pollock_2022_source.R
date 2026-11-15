@@ -32,7 +32,7 @@ outputs <- subset(read_table("outputs"),
 candidate <- subset(utils::read.csv(file.path(root, "discovery", "candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE),
   candidate_id == "DFO:Maritimes:Pollock - NAFO 4X5 (Western Component)")
-selected <- subset(utils::read.csv(file.path(root, "discovery",
+selected <- subset(utils::read.csv(file.path(root, "discovery/selections",
   "selected_batch_01_2026.csv"), stringsAsFactors = FALSE, check.names = FALSE),
   candidate_unit_id == stock_key)
 review <- paste(readLines(file.path(root, "discovery", "source_reviews",

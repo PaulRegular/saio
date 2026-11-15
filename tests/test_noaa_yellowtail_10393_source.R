@@ -87,7 +87,7 @@ candidate <- candidate[candidate$candidate_id=="NOAA:10393",]
 inventory <- read.csv("discovery/inventory_units.csv",stringsAsFactors=FALSE,
   na.strings=c("","NA"),check.names=FALSE)
 inventory <- inventory[inventory$unit_key=="candidate:noaa_stocksmart_10393",]
-selected <- read.csv("discovery/selected_batch_10_2026.csv",stringsAsFactors=FALSE,
+selected <- read.csv("discovery/selections/selected_batch_10_2026.csv",stringsAsFactors=FALSE,
   na.strings=c("","NA"),check.names=FALSE)
 stopifnot(nrow(candidate)==1L,candidate$match_status=="matched",
   candidate$matched_stock_id==stock_id,candidate$import_status=="partial",

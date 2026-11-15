@@ -38,4 +38,4 @@ were added.
 - [DFO Research Document 2015/024: Overview of 2013 biology and general status](https://waves-vagues.dfo-mpo.gc.ca/Library/359709.pdf)
 - [DFO Sustainability Survey, 2024 results](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/survey-sondage/index-en.html)
 
-The two DFO PDFs are cached in the ignored `source_cache/discovery_dfo_striped_bass_bay_of_fundy/` directory. The existing sustainability-survey snapshot is cached under `source_cache/discovery_dfo_sustainability/`. Manifests record retrieval dates, source URLs, file sizes, and SHA-256 checksums.
+The two DFO PDFs are cached in the ignored `source_cache/discovery_dfo_striped_bass_bay_of_fundy/` directory. The existing sustainability-survey snapshot is cached under `source_cache/shared/dfo_sustainability/`. Manifests record retrieval dates, source URLs, file sizes, and SHA-256 checksums.

@@ -5,7 +5,7 @@ candidate_id <- "MPI:GUR3"
 candidate_unit_id <- "mpi_red_gurnard_gur3"
 candidate <- read_table("discovery/candidates.csv")
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-batch <- read_table("discovery/selected_batch_17_2026.csv")
+batch <- read_table("discovery/selections/selected_batch_17_2026.csv")
 units <- read_table("discovery/inventory_units.csv")
 unit <- units[units$unit_key == paste0("stock:", candidate_unit_id), , drop = FALSE]
 manifest <- read_table("provenance/mpi_red_gurnard_gur3_2022_sources.csv")

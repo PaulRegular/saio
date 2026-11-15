@@ -36,7 +36,7 @@ candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-selected <- read.csv("discovery/selected_batch_26_2026.csv",
+selected <- read.csv("discovery/selections/selected_batch_26_2026.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 manifest <- read.csv("provenance/discovery_noaa_anchovy_2021/sources.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)

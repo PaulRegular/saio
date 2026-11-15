@@ -10,7 +10,7 @@ assessment <- read.csv(
   na.strings = c("", "NA"), check.names = FALSE
 )
 fit_env <- new.env(parent = baseenv())
-load(file.path(root, "source_cache",
+load(file.path(root, "source_cache/gadus_morhua",
   assessment_id, "baserun_model.RData"), envir = fit_env)
 fit <- fit_env$fit
 

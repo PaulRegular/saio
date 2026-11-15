@@ -447,7 +447,7 @@ if (!write_mode) {
     "labels are retained in observation_id; later catch-age reports are not mixed",
     "into the 2022-23 assessment."
   )
-  source("scripts/database/candidate_register_io.R")
+  source("scripts/discovery/candidate_register_io.R")
   replace_candidate_register_row("discovery/candidates.csv", candidate_index,
     candidates[candidate_index, , drop = FALSE], candidate_id)
 }

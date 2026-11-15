@@ -9,7 +9,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 .libPaths(c(file.path(root, "source_cache/r-lib"), .libPaths()))
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 manifest <- read.csv(file.path(root, "provenance/discovery_noaa_copper_california_2023/sources.csv"),
   colClasses = "character", check.names = FALSE)

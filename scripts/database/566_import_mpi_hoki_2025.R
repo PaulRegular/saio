@@ -8,8 +8,8 @@ write_biological_assumptions_only <- "--write-biological-assumptions" %in% args
 dry_run <- !("--write" %in% args || write_assumptions_only || write_biological_assumptions_only)
 .libPaths(c(file.path(root, "source_cache", "R-library"), .libPaths()))
 
-assessment_pdf <- file.path(root, "source_cache", "mpi_hoki_hok1_2025", "FAR-2026-04-Assessment-of-hoki-in-2025.pdf")
-input_pdf <- file.path(root, "source_cache", "mpi_hoki_hok1_2025", "FAR-2025-42-Hoki-input-data.pdf")
+assessment_pdf <- file.path(root, "source_cache", "macruronus_novaezelandiae/mpi_hoki_hok1_2025", "FAR-2026-04-Assessment-of-hoki-in-2025.pdf")
+input_pdf <- file.path(root, "source_cache", "macruronus_novaezelandiae/mpi_hoki_hok1_2025", "FAR-2025-42-Hoki-input-data.pdf")
 manifest <- read.csv(file.path(root, "provenance", "mpi_hoki_hok1_2025_sources.csv"), stringsAsFactors = FALSE)
 if (!requireNamespace("pdftools", quietly = TRUE) || !all(file.exists(c(assessment_pdf, input_pdf)))) {
   stop("Install pdftools and cache both verified Hoki reports before importing.", call. = FALSE)
@@ -500,12 +500,12 @@ if (write_biological_assumptions_only) {
   candidates$maturity_evidence[selected] <- "The base model uses stock and sex-specific maturity settings. The source parameters are retained as model assumptions rather than converted to a maturity-at-age surface."
   candidates$mortality_evidence[selected] <- "Natural mortality is fixed in the model as a category-level instantaneous-M vector with relative age selectivity; it is not a time-varying M-at-age series."
   write.csv(candidates, candidate_path, row.names = FALSE, na = "")
-  selection_path <- file.path(root, "discovery", "selected_batch_02_2026.csv")
+  selection_path <- file.path(root, "discovery/selections", "selected_batch_02_2026.csv")
   selection <- read.csv(selection_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
   selection$curation_status[selection$candidate_id == candidate_id] <- "source_curated_partial"
   write.csv(selection, selection_path, row.names = FALSE, na = "")
-  source(file.path(root, "scripts", "database", "195_summarize_discovery.R"), local = TRUE)
-  source(file.path(root, "scripts", "database", "196_summarize_inventory_units.R"), local = TRUE)
+  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"), local = TRUE)
+  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"), local = TRUE)
 }
 cat("Hoki source import ", if (write_biological_assumptions_only) "biological assumptions written" else if (write_assumptions_only) "assumptions written" else if (dry_run) "validated (dry run)" else "written", ": ",
   nrow(inputs), " input rows, ", nrow(assumptions), " assumption rows, ",

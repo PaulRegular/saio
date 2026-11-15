@@ -11,7 +11,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 if (!requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install pdftools to parse the cached SEDAR 100 tables.", call. = FALSE)
 }
@@ -408,7 +408,7 @@ if (write_mode) {
   candidate$import_status <- "partial"
   candidate$notes <- "Partial SEDAR 100 source records imported: landings, commercial discards, selected aggregate indices, Review Panel revised-base annual aggregate outputs, and documented M assumptions. Native catch-at-age, annual N/F-at-age, weight-at-age and maturity-at-age remain unavailable."
   replace_candidate_register_row(candidates_path, candidate_row, candidate, candidate_id)
-  batch_path <- file.path(root, "discovery/selected_batch_23_2026.csv")
+  batch_path <- file.path(root, "discovery/selections/selected_batch_23_2026.csv")
   batch <- read.csv(batch_path, stringsAsFactors = FALSE, check.names = FALSE)
   batch_row <- which(batch$candidate_id == candidate_id)
   if (length(batch_row) != 1L) stop("Expected one selected-batch row for NOAA:10062.", call. = FALSE)

@@ -1,6 +1,6 @@
-source('scripts/database/465_screen_dfo_wcvi_barkley_sockeye_2024.R')
-source('scripts/database/195_summarize_discovery.R')
-source('scripts/database/196_summarize_inventory_units.R')
+source('scripts/discovery/465_screen_dfo_wcvi_barkley_sockeye_2024.R')
+source('scripts/discovery/195_summarize_discovery.R')
+source('scripts/discovery/196_summarize_inventory_units.R')
 root <- "."
 candidate <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

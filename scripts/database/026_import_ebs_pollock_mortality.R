@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache", "afsc_pollock_ebs_2024")
+cache <- file.path(root, "source_cache", "gadus_chalcogrammus/afsc_pollock_ebs_2024")
 id <- "afsc_pollock_ebs_2024"
 input_path <- file.path(root, "database", "inputs.csv")
 review_path <- file.path(root, "source_reviews", "afsc_pollock_ebs.md")

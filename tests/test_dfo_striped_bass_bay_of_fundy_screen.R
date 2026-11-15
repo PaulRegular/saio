@@ -34,7 +34,7 @@ stopifnot(
 )
 
 survey <- paste(readLines(
-  'source_cache/discovery_dfo_sustainability/survey_2024.html',
+  'source_cache/shared/dfo_sustainability/survey_2024.html',
   warn = FALSE), collapse = '\n')
 stopifnot(grepl('<td>Striped Bass - Bay of Fundy</td>', survey, fixed = TRUE),
   grepl('<td>Uncertain</td>', survey, fixed = TRUE))

@@ -29,7 +29,7 @@ assumptions_all <- read_table("database/assumptions.csv")
 assumptions <- assumptions_all[assumptions_all$assessment_id %in% ids, , drop = FALSE]
 candidates <- read_table("discovery/candidates.csv")
 inventory <- read_table("discovery/inventory_units.csv")
-selected <- read_table("discovery/selected_batch_35_2026.csv")
+selected <- read_table("discovery/selections/selected_batch_35_2026.csv")
 manifest <- read_table("provenance/noaa_vermilion_rockfish_or_wa_2021/sources.csv")
 reviews <- paste(unlist(lapply(c(
   "discovery/source_reviews/noaa_vermilion_rockfish_or_wa_2021.md",

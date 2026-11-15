@@ -45,7 +45,7 @@ announcement anticipating a June 2026 update is not treated as a new fit.
   not the native fitted WHAM object.
 
 Original PDFs and current portal results are cached under
-`source_cache/ck_nefsc_garmiii_morhua_gb_2024/`, with URLs, verification dates
+`source_cache/gadus_morhua/nefsc_cod_georges_bank_2024/`, with URLs, verification dates
 and SHA-256 checksums. Fresh downloads of the current report and background
 match the previously cached originals. The portal's complete current listing
 has the report, background, discard tracker and presentation PDFs; its ZIP

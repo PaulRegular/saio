@@ -1,7 +1,7 @@
 root <- "."
 cache_name <- "noaa_gag_sedar72_2022"
 cache_candidates <- c(
-  file.path(root, "source_cache", cache_name),
+  file.path(root, "source_cache", "mycteroperca_microlepis/noaa_gag_gulf_sedar72_srfs_2022"),
   file.path(root, "..", "..", cache_name)
 )
 cache_dir <- cache_candidates[dir.exists(cache_candidates)][1L]
@@ -13,7 +13,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 if (is.na(cache_dir) || !length(cache_dir)) {
   stop("Could not find the gitignored SEDAR 72 source cache.", call. = FALSE)

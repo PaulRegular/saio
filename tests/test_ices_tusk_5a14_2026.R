@@ -70,8 +70,7 @@ stopifnot(
   all(grepl('coverage level', outputs$notes, ignore.case = TRUE))
 )
 
-review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
-  'ices_tusk_5a14_2026.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews', 'ices_tusk_5a14.md'), warn = FALSE), collapse = ' ')
 stopifnot(
   grepl('combined 5.a+14 unit', review, fixed = TRUE),
   grepl('2026 is a forecast', review, fixed = TRUE),
@@ -81,7 +80,7 @@ stopifnot(
   grepl('age-disaggregated curation', review, fixed = TRUE)
 )
 
-cache_options <- c(file.path(root, 'source_cache', 'discovery_ices_tusk_5a14_2026'),
+cache_options <- c(file.path(root, 'source_cache', 'brosme_brosme/ices_tusk_5a14_2026'),
   file.path(root, '..', '..', 'discovery_ices_tusk_5a14_2026'))
 cache <- cache_options[dir.exists(cache_options)][1L]
 manifest <- read.csv(file.path(root, 'provenance', assessment_id, 'sources.csv'),

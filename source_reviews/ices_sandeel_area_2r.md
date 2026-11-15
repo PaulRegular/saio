@@ -113,7 +113,7 @@ conceal this reproducibility gap. The official output series remain anchored
 by report/SAG agreement and independent numerical equation checks.
 
 Source files, manifests and verification logs are cached in
-`source_cache/ck_ices_hawg_dubius_ns/2026_san.sa.2r/`. The manifest references
+`source_cache/ammodytes_dubius/ck_ices_hawg_dubius_ns/2026_san.sa.2r/`. The manifest references
 the shared full HAWG report, benchmark and pinned software locally rather
 than duplicating large files. Importer checks and focused tests protect
 dimensions, units, mixed state dates, survey coverage, source gaps, yield

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache", "ck_ices_wgcse_aeglefinus_rock6b")
+cache <- file.path(root, "source_cache", "melanogrammus_aeglefinus/ck_ices_wgcse_aeglefinus_rock6b")
 tables <- file.path(cache, "extracted_tables")
 db <- file.path(root, "database")
 assessment_id <- "ices_haddock_rockall_2026"

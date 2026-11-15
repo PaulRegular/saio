@@ -398,7 +398,7 @@ if (write_mode) {
   if (!nrow(inputs_existing)) append_csv(inputs_new, inputs_path)
   if (!nrow(outputs_existing)) append_csv(outputs_new, outputs_path)
 
-  source(file.path(root, "scripts", "database", "candidate_register_io.R"),
+  source(file.path(root, "scripts", "discovery", "candidate_register_io.R"),
     local = TRUE)
   candidate_path <- file.path(root, "discovery", "candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,

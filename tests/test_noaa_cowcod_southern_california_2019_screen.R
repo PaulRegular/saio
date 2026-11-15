@@ -1,6 +1,6 @@
 root <- "."
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts/database/433_screen_noaa_cowcod_southern_california_2019.R'))
+source(file.path(root, 'scripts/discovery/433_screen_noaa_cowcod_southern_california_2019.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 register <- read.csv(file.path(root, 'discovery/candidates.csv'),
@@ -14,7 +14,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database/outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-cache <- file.path(root, 'source_cache/discovery_noaa_cowcod_southern_california_2019')
+cache <- file.path(root, 'source_cache/sebastes_levis/noaa_cowcod_southern_california_2019')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 paths <- file.path(cache, sources$file)
@@ -26,7 +26,7 @@ sha256_file <- function(path) {
 model <- file.path(cache, 'model_files')
 dat <- readLines(file.path(model, 'cowcod2019.dat'), warn = FALSE)
 report <- readLines(file.path(model, 'Report.sso'), warn = FALSE)
-review <- paste(readLines(file.path(root, 'discovery/source_reviews',
+review <- paste(readLines(file.path(root, 'source_reviews',
   'noaa_cowcod_southern_california_2019.md'), warn = FALSE), collapse = '\n')
 signatures <- vapply(paths, function(path) rawToChar(readBin(path, 'raw', n = 2L)), character(1L))
 

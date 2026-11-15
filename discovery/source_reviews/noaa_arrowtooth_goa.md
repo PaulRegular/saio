@@ -4,7 +4,7 @@
 
 NOAA Stock SMART ID 10004 is the Gulf of Alaska arrowtooth flounder unit. Stock SMART lists *Reinhardtius stomias*, while the official assessment identifies *Atheresthes stomias*; the common name and Gulf of Alaska area resolve the nomenclature discrepancy. The latest full assessment is the 2026 operational assessment. The October 2026 SSC selected Model 25.0 for management advice. The detailed September 2026 SAFE chapter remains a pre-dissemination draft as of the review date, so it is used for data and model detail while the SSC report records the selected model. Stock SMART's 2024 inventory year is stale for this candidate.
 
-The September 2025 data-review report, September 2026 detailed assessment draft, and October 2026 final SSC report are cached under `source_cache/noaa_flatfish_screening_20261029/`; `sources.csv` records URLs, retrieval dates, sizes and checksums. The 2026 assessment materials are attached to the [September Plan Team meeting](https://meetings.npfmc.org/Meeting/Details/5140), and the selection is documented in the [October 2026 SSC report](https://meetings.npfmc.org/Meeting/Details/7160).
+The September 2025 data-review report, September 2026 detailed assessment draft, and October 2026 final SSC report are cached under `source_cache/shared/noaa_flatfish_screening_20261029/`; `sources.csv` records URLs, retrieval dates, sizes and checksums. The 2026 assessment materials are attached to the [September Plan Team meeting](https://meetings.npfmc.org/Meeting/Details/5140), and the selection is documented in the [October 2026 SSC report](https://meetings.npfmc.org/Meeting/Details/7160).
 
 ## Age-input screen
 

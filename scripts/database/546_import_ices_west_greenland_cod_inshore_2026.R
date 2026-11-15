@@ -17,7 +17,7 @@ run_url <- paste0(
 
 if (!dir.exists(cache)) stop("The reviewed Greenland cod source cache is missing.", call. = FALSE)
 source(file.path(root, "scripts", "database", "pacific_tables.R"))
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 sha256_file <- function(path) {
   result <- system2(
@@ -423,7 +423,7 @@ replace_discovery_row(
   "unit_key", paste0("candidate:", candidate_unit_id)
 )
 
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 selected <- utils::read.csv(
   selected_path, stringsAsFactors = FALSE, na.strings = c("", "NA"),
   check.names = FALSE

@@ -3,7 +3,7 @@
 
 root <- "."
 db <- file.path(root, "database")
-source_dir <- file.path(root, "source_cache", "ck_dfo_morhua_3ps", "assessment_2024")
+source_dir <- file.path(root, "source_cache", "gadus_morhua/ck_dfo_morhua_3ps", "assessment_2024")
 source_file <- file.path(source_dir, "Fs70-5-2026-051-eng.pdf")
 assessment_id <- "dfo_cod_3ps_2024"
 abort <- function(...) stop(paste0(...), call. = FALSE)

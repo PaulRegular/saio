@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "noaa_pacific_coast_dover_sole_20261029")
+cache <- file.path(root, "source_cache", "microstomus_pacificus/noaa_pacific_coast_dover_sole_2021")
 model_dir <- file.path(cache, "model_files", "DoverSole_Model_For_DeVore")
 assessment_id <- "noaa_pacific_coast_dover_sole_2021"
 stock_id <- "noaa_pacific_coast_dover_sole"
@@ -15,7 +15,7 @@ summary_output <- file.path(model_dir, "ss_summary.sso")
 report_text <- file.path(cache, "2021_US_West_Coast_Dover_Sole_Assessment.txt")
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 read_csv <- function(path) utils::read.csv(path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
@@ -770,7 +770,7 @@ stocks_path <- file.path(database, "stocks.csv")
 assessments_path <- file.path(database, "assessments.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
 candidate <- read_csv(candidate_path)
@@ -836,7 +836,7 @@ candidate_row$timing_evidence <- "Native month fields are retained; survey month
 candidate_row$output_evidence <- "Imported N, biomass, M, F, dead catch, weight-at-age and maturity outputs through 2032; published SSB and recruitment intervals are available for 2011-2021."
 candidate_row$review_date <- format(Sys.Date(), "%Y-%m-%d")
 candidate_row$decision_reason <- "Imported the run-matched 2021 production benchmark from its official assessment report and Stock Synthesis archive."
-candidate_row$notes <- "Partial source import completed. Source compositions remain compositions; no fitted model surface is treated as an observed input. See discovery/source_reviews/noaa_pacific_coast_dover_sole.md."
+candidate_row$notes <- "Partial source import completed. Source compositions remain compositions; no fitted model surface is treated as an observed input. See source_reviews/noaa_pacific_coast_dover_sole.md."
 inventory_row <- inventory[ii, , drop = FALSE]
 inventory_row$matched_stock_id <- stock_id
 inventory_row$import_status <- "partial"

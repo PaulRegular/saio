@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "ck_dfo_mar_harengus_4vwx")
+cache <- file.path(base, "source_cache", "clupea_harengus/ck_dfo_mar_harengus_4vwx")
 pdf <- file.path(cache, "DFO_2025_026_4VWX_herring_update_2024.pdf")
 stopifnot(file.exists(pdf), digest::digest(readBin(pdf, "raw", n = file.info(pdf)$size),
   serialize = FALSE, algo = "sha256") == "609c335ec5b41fc704398ea21c4c2a341033ca24170ebf91e8104dd4f84eb9c3")

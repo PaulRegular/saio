@@ -2,7 +2,7 @@ assessment_id <- "ices_saithe_iceland_2026"
 stock_id <- "ck_ices_nwwg_virens_fa5a"
 root <- "."
 database_dir <- file.path(root, "database")
-cache_dir <- file.path(root, "source_cache", "ices_saithe_iceland_2026")
+cache_dir <- file.path(root, "source_cache", "pollachius_virens/ices_saithe_iceland_2026")
 tables_path <- file.path(cache_dir, "mfri_2026_tables.html")
 sag_path <- file.path(cache_dir, "ices_sag_2026_stockdata.xml")
 

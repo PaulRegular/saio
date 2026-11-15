@@ -13,7 +13,7 @@ The official 2025 SAFE catch report states that no new assessment was conducted 
 
 2025 notice: https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=1.+Pollock+.pdf&p=edbdecfa-ca53-4fc2-a7a2-7caeed6ec8f8.pdf
 2024 detailed chapter: https://www.npfmc.org/wp-content/PDFdocuments/SAFE/2024/EBSpollock.pdf
-Both PDFs are cached in source_cache/afsc_pollock_ebs_2024/. The detailed chapter has 212 pages and identifies Model 23.0, with methodology unchanged from 2023. The 2025 rollover ABC/OFL values match its Tier 3 recommendations (2026 ABC 2,036,000 t, OFL 2,496,000 t), providing a production-use crosscheck. The detailed chapter itself is labeled draft for December Council review; verify official model configuration against final SSC/Council decisions before importing numerical records.
+Both PDFs are cached in source_cache/gadus_chalcogrammus/afsc_pollock_ebs_2024/. The detailed chapter has 212 pages and identifies Model 23.0, with methodology unchanged from 2023. The 2025 rollover ABC/OFL values match its Tier 3 recommendations (2026 ABC 2,036,000 t, OFL 2,496,000 t), providing a production-use crosscheck. The detailed chapter itself is labeled draft for December Council review; verify official model configuration against final SSC/Council decisions before importing numerical records.
 
 ## Native source trail
 

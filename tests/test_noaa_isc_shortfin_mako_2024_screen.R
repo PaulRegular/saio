@@ -59,7 +59,7 @@ stopifnot(
 )
 
 stocksmart_env <- new.env(parent = emptyenv())
-load(file.path(root, 'source_cache', 'discovery_noaa_stocksmart',
+load(file.path(root, 'source_cache', 'shared/noaa_stocksmart',
   'stock_assessment_summary.rda'), envir = stocksmart_env)
 stocksmart <- stocksmart_env$stock_assessment_summary
 stocksmart <- stocksmart[as.character(stocksmart$stock_id) == '11715', , drop = FALSE]

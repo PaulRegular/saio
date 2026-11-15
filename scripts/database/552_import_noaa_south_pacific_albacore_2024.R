@@ -475,7 +475,7 @@ if (length(candidate_row) != 1L || stock_id %in% stocks$stock_id ||
 }
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
 inventory <- read_table("discovery/inventory_units.csv")
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
 if (inventory$import_status[inventory_row] != "not_started") {
   stop("The albacore inventory unit has already been imported.", call. = FALSE)

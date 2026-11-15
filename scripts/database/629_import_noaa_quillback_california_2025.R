@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "noaa_quillback_rockfish_california"
 assessment_id <- "noaa_quillback_california_2025"
 candidate_id <- "NOAA:15342"
-cache <- file.path(root, "source_cache", "discovery_noaa_quillback_ca_2025")
+cache <- file.path(root, "source_cache", "sebastes_maliger/noaa_quillback_california_2025")
 manifest_path <- file.path(root, "provenance", "discovery_noaa_quillback_ca_2025", "sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 .libPaths(c(file.path(root, "source_cache", "r-lib"), .libPaths()))
@@ -341,6 +341,6 @@ tmp_candidate <- tempfile(fileext = ".csv")
 write.csv(candidate[ci, , drop = FALSE], tmp_candidate, row.names = FALSE, na = "", fileEncoding = "UTF-8")
 candidate_lines[ci + 1L] <- readLines(tmp_candidate, warn = FALSE, encoding = "UTF-8")[-1L]
 unlink(tmp_candidate); writeLines(candidate_lines, candidate_path, useBytes = TRUE)
-source(file.path(root, "scripts", "database", "196_summarize_inventory_units.R"), local = TRUE)
+source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"), local = TRUE)
 source(file.path(root, "scripts", "database", "002_validate_database.R"), local = TRUE)
 cat("Import written and database validation passed.\n")

@@ -1,10 +1,10 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_ices_iceland_plaice_2026")
+cache <- file.path(root, "source_cache", "pleuronectes_platessa/ices_plaice_iceland_5a_2026")
 manifest_path <- file.path(root, "provenance", "ices_plaice_iceland_5a_2026", "sources.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery", "selected_batch_34_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_34_2026.csv")
 
 assessment_id <- "ices_plaice_iceland_5a_2026"
 stock_id <- "ices_plaice_iceland_5a"
@@ -380,7 +380,7 @@ assumptions <- do.call(rbind, list(
     "The public report and ICES source data provide aggregate outputs, not fitted age-specific surfaces.")
 ))
 
-candidate_register_io <- file.path(root, "scripts", "database", "candidate_register_io.R")
+candidate_register_io <- file.path(root, "scripts", "discovery", "candidate_register_io.R")
 source(candidate_register_io)
 register <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

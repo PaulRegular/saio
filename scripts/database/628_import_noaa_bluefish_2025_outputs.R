@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache", "discovery_noaa_bluefish_2025")
+cache <- file.path(root, "source_cache", "pomatomus_saltatrix/noaa_bluefish_atlantic_2025")
 manifest_path <- file.path(root, "provenance", "discovery_noaa_bluefish_2025", "sources.csv")
 stock_id <- "noaa_bluefish_atlantic_coast"
 assessment_id <- "noaa_bluefish_atlantic_2025"
@@ -10,7 +10,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
 .libPaths(c(file.path(root, "source_cache", "r-lib"), .libPaths()))
 if (!requireNamespace("pdftools", quietly = TRUE)) stop("pdftools is required.", call. = FALSE)
 source(file.path(root, "scripts", "database", "pacific_tables.R"))
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 read_csv <- function(path) read.csv(path, stringsAsFactors = FALSE, colClasses = "character",
   na.strings = c("", "NA"), check.names = FALSE)
 manifest <- read_csv(manifest_path)

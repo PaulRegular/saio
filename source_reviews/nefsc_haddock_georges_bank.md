@@ -16,7 +16,7 @@ Public search parameters: species_id=5, stock_id=1, year=2026, review_type_id=6.
 
 ## Cached source files
 
-The gitignored source_cache/nefsc_haddock_georges_bank_2026 directory contains the 2026 assessment plan, peer-review report, detailed nine-page assessment report, portal HTML/search results and the official 2026_HAD_GB.zip download. The latter is a document bundle, not a native fitted-model archive. Its nested diagnostic archives contain 62 files in the principal diagnostics bundle but no RDS/RData/R/CSV/DAT files were found by filename extension. Further native-source searches are required before concluding that model files are unavailable.
+The gitignored source_cache/melanogrammus_aeglefinus/nefsc_haddock_georges_bank_2026 directory contains the 2026 assessment plan, peer-review report, detailed nine-page assessment report, portal HTML/search results and the official 2026_HAD_GB.zip download. The latter is a document bundle, not a native fitted-model archive. Its nested diagnostic archives contain 62 files in the principal diagnostics bundle but no RDS/RData/R/CSV/DAT files were found by filename extension. Further native-source searches are required before concluding that model files are unavailable.
 
 Detailed report URL:
 https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2026&species_id=5&stock_id=1&review_type_id=6&info_type_id=-1&map_type_id=&filename=Georges_Bank_haddock_Update_2026_06_17_100805.801712.pdf

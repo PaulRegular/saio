@@ -1,10 +1,10 @@
 root <- "."
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_noaa_acadian_redfish_2025")
+cache <- file.path(root, "source_cache", "sebastes_fasciatus/noaa_acadian_redfish_gom_gb_2025")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 
 candidate_id <- "NOAA:10455"
 stock_id <- "noaa_acadian_redfish_gom_gb"
@@ -18,7 +18,7 @@ output_file <- "2025_RED_UNIT_FIG_BaseWHAMFiguresTables.html"
 output_name <- file.path("figures", output_file)
 output_sha256 <- "009dd6a38215b2e4ce2eb8f10dc51e2fa5959542cfd198af7a8e938fd5ed679b"
 
-source(file.path(root, "scripts", "database", "candidate_register_io.R"), local = TRUE)
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"), local = TRUE)
 
 read_table <- function(path) {
   utils::read.csv(path, stringsAsFactors = FALSE, check.names = FALSE,

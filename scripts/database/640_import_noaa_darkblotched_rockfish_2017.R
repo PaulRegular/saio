@@ -1,5 +1,5 @@
 root <- "."
-source_dir <- file.path(root, "source_cache/discovery_noaa_darkblotched_2017")
+source_dir <- file.path(root, "source_cache/sebastes_crameri/noaa_darkblotched_rockfish_2017")
 model_dir <- file.path(source_dir, "model_files")
 assessment_id <- "noaa_darkblotched_rockfish_2017"
 stock_id <- "noaa_darkblotched_rockfish_pacific"
@@ -12,7 +12,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 .libPaths(c(file.path(root, "source_cache/r-lib"), .libPaths()))
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 manifest <- read.csv(file.path(root, "provenance/discovery_noaa_darkblotched_2017/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
@@ -350,7 +350,7 @@ if (write_mode) {
   replace_csv_register_row(inventory_path, inventory_row, inventory[inventory_row, , drop = FALSE],
     "unit_key", inventory$unit_key[inventory_row])
 
-  batch_path <- file.path(root, "discovery/selected_batch_28_2026.csv")
+  batch_path <- file.path(root, "discovery/selections/selected_batch_28_2026.csv")
   batch <- read.csv(batch_path, stringsAsFactors = FALSE, colClasses = "character", check.names = FALSE)
   batch_row <- which(batch$candidate_id == candidate_id)
   if (length(batch_row) != 1L) stop("Expected one selected-batch row for NOAA:10562.", call. = FALSE)

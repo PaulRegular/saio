@@ -2,7 +2,7 @@ root <- "."
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 screen_review <- new.env(parent = globalenv())
-source(file.path(root, 'scripts/database/492_screen_ices_seals_2026.R'),
+source(file.path(root, 'scripts/discovery/492_screen_ices_seals_2026.R'),
   local = screen_review)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
@@ -48,7 +48,7 @@ stopifnot(nrow(screened) == 3L,
   !any(unit_ids %in% outputs$assessment_id),
   all(unit_ids %in% units$candidate_unit_id),
   all(units$inventory_entries[match(unit_ids, units$candidate_unit_id)] == 1L),
-  file.exists(file.path(root, 'source_cache', 'discovery_ices_sid',
+  file.exists(file.path(root, 'source_cache', 'shared/ices_sid',
     c('stock_list_2026.json', 'sources.csv'))),
   file.exists(file.path(root, 'discovery/source_reviews/ices_seal_units_2026.md')))
 

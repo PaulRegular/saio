@@ -162,8 +162,8 @@ if (write_mode) {
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double",
     na = "", eol = "\n")
   write.csv(manifest, manifest_path, row.names = FALSE, na = "")
-  source("scripts/database/195_summarize_discovery.R", local = TRUE)
-  source("scripts/database/196_summarize_inventory_units.R", local = TRUE)
+  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
+  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("Registered the screened NPFC unit and source provenance.\n")
 }
 

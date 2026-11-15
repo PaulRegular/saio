@@ -5,7 +5,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 manifest <- read.csv(
   file.path(root, "provenance/discovery_noaa_gulf_gray_triggerfish_2026/sources.csv"),

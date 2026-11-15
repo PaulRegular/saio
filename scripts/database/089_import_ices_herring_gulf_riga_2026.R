@@ -1,7 +1,7 @@
 assessment_id <- "ices_herring_gulf_riga_2026"
 stock_id <- "ck_ices_wgbfas_harengus_bs_28_1"
 root <- "."
-cache <- file.path(root, "source_cache", stock_id, "assessment_2026")
+cache <- file.path(root, "source_cache/clupea_harengus", stock_id, "assessment_2026")
 db <- file.path(root, "database")
 model_file <- file.path(cache, "run_model.RData")
 if (!requireNamespace("stockassessment", quietly = TRUE)) {

@@ -36,7 +36,7 @@ aggregate assessment output for other comparisons.
 - [2024 Gulf of Alaska SAFE, Chapter 14](https://files.npfmc.org/SAFE/2024/GOAdsr.pdf), especially the executive summary, pp. 1–5, data-gap section p. 29, Table 14.12, and Figures 14.13–14.21.
 - [NPFMC SSC Final Report, December 2024](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=SSC+Report+Dec+2024_FINAL.pdf&p=dc61bc73-be5c-492f-89b3-a723ea14311d.pdf), pp. 45–47.
 - [NPFMC November 2026 meeting schedule](https://meetings.npfmc.org/Meeting/Details/8165), listing DSR proposed models for November 18–20.
-- NOAA Stock SMART source snapshot: `source_cache/discovery_noaa_stocksmart/stock_assessment_summary.rda`, assessment 13892.
+- NOAA Stock SMART source snapshot: `source_cache/shared/noaa_stocksmart/stock_assessment_summary.rda`, assessment 13892.
 
 The official SAFE chapter, SSC report, and meeting page are cached in the
 gitignored `source_cache/discovery_noaa_goa_yelloweye_2024/`. Their retrieval

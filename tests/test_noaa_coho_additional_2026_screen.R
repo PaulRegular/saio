@@ -1,5 +1,5 @@
 root <- "."
-source(file.path(root, 'scripts', 'database',
+source(file.path(root, 'scripts', 'discovery',
   '503_screen_noaa_coho_2026_additional.R'))
 
 ids <- c(11869L, 11874L, 11875L)

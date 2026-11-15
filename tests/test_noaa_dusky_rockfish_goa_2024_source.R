@@ -81,7 +81,7 @@ db_assessments <- read_assessment_rows("assessments")
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")
 candidate <- candidate[candidate$candidate_id == "NOAA:10559", , drop = FALSE]
-batch <- read.csv("discovery/selected_batch_27_2026.csv", stringsAsFactors = FALSE,
+batch <- read.csv("discovery/selections/selected_batch_27_2026.csv", stringsAsFactors = FALSE,
   check.names = FALSE)
 batch <- batch[batch$candidate_id == "NOAA:10559", , drop = FALSE]
 stock <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,

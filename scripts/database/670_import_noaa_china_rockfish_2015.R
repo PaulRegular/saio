@@ -8,7 +8,7 @@ dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 
 .libPaths(c(file.path(root, "source_cache/R-library"), file.path(root, "source_cache/R-lib"), .libPaths()))
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 sha256_file <- function(path) {
   if (requireNamespace("digest", quietly = TRUE)) {

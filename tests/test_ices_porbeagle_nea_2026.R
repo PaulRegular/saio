@@ -55,6 +55,6 @@ cat('ICES porbeagle identity, current aggregate assessment, and no-import checks
 
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts', 'database', '397_screen_ices_porbeagle_nea_2026.R'))
+source(file.path(root, 'scripts', 'discovery', '397_screen_ices_porbeagle_nea_2026.R'))
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv('TAM_SOURCE_DRY_RUN' = old_dry_run)

@@ -15,7 +15,7 @@ The more recent 2023 NEFSC management-track sources do not provide a separate of
 
 Screening result: **new U.S. management stock; ineligible for the age-disaggregated source set on current public evidence**. This is a source-availability conclusion, not a claim that offshore hake are biologically unimportant. No canonical stock, assessment, input, or output records were added.
 
-The 2023 northern silver hake report and 2024–2026 small-mesh specifications are cached in the gitignored `source_cache/discovery_noaa_offshore_hake_2023/`. Direct PDF retrieval for the 2011 SAW summary and full assessment report, and the 2023 panel report, returned Access Denied; their NOAA Repository pages and extracted text were accessible. The attempts and URLs are recorded in the cache manifest. The pinned NOAA Stock SMART snapshot is already cached at `source_cache/discovery_noaa_stocksmart/`.
+The 2023 northern silver hake report and 2024–2026 small-mesh specifications are cached in the gitignored `source_cache/discovery_noaa_offshore_hake_2023/`. Direct PDF retrieval for the 2011 SAW summary and full assessment report, and the 2023 panel report, returned Access Denied; their NOAA Repository pages and extracted text were accessible. The attempts and URLs are recorded in the cache manifest. The pinned NOAA Stock SMART snapshot is already cached at `source_cache/shared/noaa_stocksmart/`.
 
 ## Sources
 

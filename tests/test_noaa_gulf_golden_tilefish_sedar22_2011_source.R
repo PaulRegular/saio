@@ -28,7 +28,7 @@ candidate <- candidates[candidates$candidate_id == "NOAA:10383", , drop = FALSE]
 units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
-selected <- read.csv("discovery/selected_batch_38_2026.csv", stringsAsFactors = FALSE,
+selected <- read.csv("discovery/selections/selected_batch_38_2026.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 selected <- selected[selected$candidate_id == "NOAA:10383", , drop = FALSE]
 manifest <- read.csv("provenance/discovery_noaa_gulf_tilefish_sedar22_2011/sources.csv",

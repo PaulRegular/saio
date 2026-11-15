@@ -102,7 +102,7 @@ record and its applied-production status are distinct from those fields.
 
 ## Cache and validation
 
-Sources are cached under gitignored `source_cache/dfo_canary_bc/`, with URLs,
+Sources are cached under gitignored `source_cache/sebastes_pinniger/dfo_canary_bc/`, with URLs,
 dates, checksums and pinned revisions. Input files use PBSsynth commit
 `16f1d4368ad7d3e854219ca1c2d9d6353252c861`; posterior data use gftrends
 commit `7f1c59b8cc3895a3477204ac16da6cf15e2466c6`.

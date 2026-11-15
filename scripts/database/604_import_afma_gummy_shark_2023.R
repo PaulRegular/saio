@@ -131,7 +131,7 @@ assumptions_path <- file.path(root, "database/assumptions.csv")
 inputs_path <- file.path(root, "database/inputs.csv")
 outputs_path <- file.path(root, "database/outputs.csv")
 candidates_path <- file.path(root, "discovery/candidates.csv")
-selected_path <- file.path(root, "discovery/selected_batch_14_2026.csv")
+selected_path <- file.path(root, "discovery/selections/selected_batch_14_2026.csv")
 
 stocks_existing <- read_csv(stocks_path)
 assessments_existing <- read_csv(assessments_path)
@@ -366,9 +366,9 @@ if (write_mode) {
   replace_row_text(selected_path, c(paste0("1,\"", candidate_id, "\","),
       paste0("\"1\",\"", candidate_id, "\",")),
     "\"selected_for_source_curation\"", "\"partial_source_import\"")
-  source(file.path(root, "scripts/database/195_summarize_discovery.R"),
+  source(file.path(root, "scripts/discovery/195_summarize_discovery.R"),
     local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts/database/196_summarize_inventory_units.R"),
+  source(file.path(root, "scripts/discovery/196_summarize_inventory_units.R"),
     local = new.env(parent = globalenv()))
   cat("Imported the verified source tables and marked the assessment partial.\n")
 }

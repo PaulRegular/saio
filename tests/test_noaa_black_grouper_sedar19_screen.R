@@ -24,7 +24,7 @@ sha256_file <- function(path) {
   tolower(hashes)
 }
 e <- new.env(parent = emptyenv())
-load(file.path(root, 'source_cache', 'discovery_noaa_stocksmart',
+load(file.path(root, 'source_cache', 'shared/noaa_stocksmart',
   'stock_assessment_summary.rda'), e)
 smart <- e$stock_assessment_summary
 smart <- smart[as.character(smart$stock_id) == '14148', , drop = FALSE]

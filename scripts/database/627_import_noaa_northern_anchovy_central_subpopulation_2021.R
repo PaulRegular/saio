@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache", "discovery_noaa_anchovy_2021")
+cache <- file.path(root, "source_cache", "engraulis_mordax/noaa_northern_anchovy_central_subpopulation_2021")
 manifest_path <- file.path(root, "provenance", "discovery_noaa_anchovy_2021", "sources.csv")
 assessment_id <- "noaa_northern_anchovy_central_subpopulation_2021"
 stock_id <- "noaa_northern_anchovy_central_subpopulation"
@@ -14,7 +14,7 @@ if (!requireNamespace("r4ss", quietly = TRUE) ||
   stop("The cached r4ss and pdftools packages are required.", call. = FALSE)
 }
 source(file.path(root, "scripts", "database", "pacific_tables.R"))
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 read_csv <- function(path, ... ) utils::read.csv(path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"), ...)
 sha256_file <- function(path) {
@@ -603,7 +603,7 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
 assumptions <- do.call(rbind, assumption_rows)
 candidate_path <- file.path(root, "discovery", "candidates.csv")
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selection_path <- file.path(root, "discovery", "selected_batch_26_2026.csv")
+selection_path <- file.path(root, "discovery/selections", "selected_batch_26_2026.csv")
 candidates <- read_csv(candidate_path)
 candidate_row <- which(candidates$candidate_id == candidate_id)
 stocks_existing <- read_csv(file.path(root, "database", "stocks.csv"))

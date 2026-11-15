@@ -69,6 +69,6 @@ and aggregate series; age-specific uncertainty is unavailable.
 - [ICES 2022 WKICEMP benchmark report](https://doi.org/10.17895/ices.pub.19663971).
 
 The reviewed report, advice, tables page, graph pages, and framework PDFs are
-cached under the gitignored `source_cache/discovery_ices_iceland_plaice_2026/`.
+cached under the gitignored `source_cache/pleuronectes_platessa/ices_plaice_iceland_5a_2026/`.
 Their retrieval dates, revisions, byte sizes, URLs and SHA-256 checksums are
 recorded in `provenance/ices_plaice_iceland_5a_2026/sources.csv`.

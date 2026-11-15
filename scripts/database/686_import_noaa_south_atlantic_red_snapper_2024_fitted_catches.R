@@ -3,7 +3,7 @@ assessment_id <- "noaa_south_atlantic_red_snapper_2024"
 candidate_id <- "NOAA:10231"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
-source("scripts/database/candidate_register_io.R")
+source("scripts/discovery/candidate_register_io.R")
 
 manifest <- utils::read.csv(
   "provenance/discovery_noaa_satl_red_snapper_2024/sources.csv",

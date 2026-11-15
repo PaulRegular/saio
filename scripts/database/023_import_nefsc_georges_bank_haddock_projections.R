@@ -8,7 +8,7 @@ source_url <- paste0(
   "filename=Georges_Bank_haddock_Update_2026_06_17_100805.801712.pdf"
 )
 report_text <- file.path(
-  root, "source_cache", "nefsc_haddock_georges_bank_2026",
+  root, "source_cache", "melanogrammus_aeglefinus/nefsc_haddock_georges_bank_2026",
   "2026_assessment_text.txt"
 )
 

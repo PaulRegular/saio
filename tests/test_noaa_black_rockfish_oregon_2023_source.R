@@ -32,8 +32,7 @@ assessment <- assessments[assessments$assessment_id == assessment_id, , drop = F
 candidate_row <- candidate[candidate$candidate_id == 'NOAA:14407', , drop = FALSE]
 input <- inputs[inputs$assessment_id == assessment_id, , drop = FALSE]
 output <- outputs[outputs$assessment_id == assessment_id, , drop = FALSE]
-source_review <- paste(readLines(file.path(root, 'discovery', 'source_reviews',
-  'noaa_black_rockfish_oregon_2023.md'), warn = FALSE), collapse = '\n')
+source_review <- paste(readLines(file.path(root, 'source_reviews', 'noaa_black_rockfish_oregon.md'), warn = FALSE), collapse = '\n')
 
 catch <- input[input$type == 'catch' & input$measure == 'total_biomass', , drop = FALSE]
 index <- input[input$type == 'index' & input$measure %in% c('total_biomass', 'total_numbers'), , drop = FALSE]

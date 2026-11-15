@@ -484,7 +484,7 @@ register$notes[candidate_row] <- paste(
   "The report's model-age text states 1-12+, while table headers print ages 1-16; the discrepancy is retained."
 )
 
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
 inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
@@ -496,7 +496,7 @@ inventory$import_status[inventory_row] <- "partial"
 if ("matched_stock_id" %in% names(inventory)) {
   inventory$matched_stock_id[inventory_row] <- stock_id
 }
-selected_path <- file.path(root, "discovery", "selected_batch_37_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_37_2026.csv")
 selected <- read.csv(selected_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 selected_row <- which(selected$candidate_id == candidate_id)

@@ -125,7 +125,7 @@ assessments <- utils::read.csv(file.path(database, "assessments.csv"), stringsAs
   na.strings = c("", "NA"), check.names = FALSE)
 candidates <- utils::read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selected <- utils::read.csv(file.path(root, "discovery", "selected_batch_01_2026.csv"), stringsAsFactors = FALSE,
+selected <- utils::read.csv(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- utils::read.csv(file.path(root, "discovery", "inventory_units.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

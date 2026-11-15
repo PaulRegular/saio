@@ -9,7 +9,7 @@ The most recent full assessment is the March 2016 VPA, published as DFO Research
 - DFO Research Document 2016/057, *Assessment of the southern Gulf of St. Lawrence (NAFO Division 4T) stock of American plaice*: https://waves-vagues.dfo-mpo.gc.ca/Library/365839.pdf
 - DFO Science Response 2025/010, *Gulf of St. Lawrence NAFO Division 4T American Plaice ... Stock Indicators to 2024*: https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41282851.pdf
 
-PDFs and text extractions are cached under `source_cache/dfo_american_plaice_4t_2016/`. The local `sources.csv` manifest records retrieval dates and checksums. The 2016 report describes the production model and its parameterization; no separate framework document, native ADMB inputs, or fitted object was located in the reviewed sources.
+PDFs and text extractions are cached under `source_cache/hippoglossoides_platessoides/dfo_american_plaice_4t_2016/`. The local `sources.csv` manifest records retrieval dates and checksums. The 2016 report describes the production model and its parameterization; no separate framework document, native ADMB inputs, or fitted object was located in the reviewed sources.
 
 ## 2016 assessment inputs and model
 

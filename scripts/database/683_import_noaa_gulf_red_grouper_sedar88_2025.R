@@ -9,7 +9,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 .libPaths(c(file.path("source_cache", "R-library"), .libPaths()))
 source("scripts/database/pacific_tables.R")
-source("scripts/database/candidate_register_io.R")
+source("scripts/discovery/candidate_register_io.R")
 
 if (!requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install pdftools to parse the cached SEDAR 88 report.", call. = FALSE)
@@ -519,7 +519,7 @@ if (write_mode) {
   inventory_update$import_status <- "partial"
   replace_csv_register_row(inventory_path, ii, inventory_update, "unit_key",
     inventory$unit_key[ii])
-  batch_path <- "discovery/selected_batch_41_2026.csv"
+  batch_path <- "discovery/selections/selected_batch_41_2026.csv"
   batch <- read.csv(batch_path, stringsAsFactors = FALSE, check.names = FALSE)
   batch$curation_status[batch$candidate_id == candidate_id] <- "source_curated_partial"
   batch$selection_basis[batch$candidate_id == candidate_id] <- paste(

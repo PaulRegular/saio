@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "ck_nefsc_americanus_5z")
+cache <- file.path(root, "source_cache", "pseudopleuronectes_americanus/ck_nefsc_americanus_5z")
 input_file <- file.path(cache, "2022_FLW_GB", "2022_WFL_GB_VPA.dat")
 
 assessment_2022 <- "nefsc_winter_flounder_gb_2022_vpa"

@@ -55,7 +55,7 @@ assumptions_path <- file.path(root, "database/assumptions.csv")
 inputs_path <- file.path(root, "database/inputs.csv")
 outputs_path <- file.path(root, "database/outputs.csv")
 candidates_path <- file.path(root, "discovery/candidates.csv")
-selected_path <- file.path(root, "discovery/selected_batch_13_2026.csv")
+selected_path <- file.path(root, "discovery/selections/selected_batch_13_2026.csv")
 units_path <- file.path(root, "discovery/inventory_units.csv")
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
@@ -636,7 +636,7 @@ if (write_mode) {
       "\",\"new\",\"eligible\",\"screened\",\"not_started\",\"INIDEP\""),
     paste0("\"candidate:", stock_id, "\",\"", stock_id, "\",\"", stock_id,
       "\",\"matched\",\"eligible\",\"screened\",\"partial\",\"INIDEP\""))
-  source(file.path(root, "scripts/database/195_summarize_discovery.R"),
+  source(file.path(root, "scripts/discovery/195_summarize_discovery.R"),
     local = new.env(parent = globalenv()))
   cat("Imported the reviewed source tables and marked the record partial.\n")
 }

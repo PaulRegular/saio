@@ -2,7 +2,7 @@ root <- "."
 read_csv <- function(path) utils::read.csv(path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
-selected <- read_csv(file.path(root, "discovery", "selected_batch_01_2026.csv"))
+selected <- read_csv(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"))
 candidates <- read_csv(file.path(root, "discovery", "candidates.csv"))
 inventory <- read_csv(file.path(root, "discovery", "inventory_units.csv"))
 stocks <- read_csv(file.path(root, "database", "stocks.csv"))

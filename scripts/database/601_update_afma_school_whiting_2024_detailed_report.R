@@ -18,7 +18,7 @@ read_csv <- function(path) utils::read.csv(path, stringsAsFactors = FALSE,
 read_fields <- function(path) names(utils::read.csv(path, nrows = 0L,
   check.names = FALSE))
 
-source(file.path(root, "scripts/database/candidate_register_io.R"), local = TRUE)
+source(file.path(root, "scripts/discovery/candidate_register_io.R"), local = TRUE)
 
 blank_row <- function(fields, values) {
   row <- as.list(rep("", length(fields)))

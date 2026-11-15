@@ -9,7 +9,7 @@ framework_url <- paste0("https://sedarweb.org/documents/",
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
-source("scripts/database/candidate_register_io.R")
+source("scripts/discovery/candidate_register_io.R")
 manifest <- read.csv(
   "provenance/discovery_noaa_satl_red_snapper_2024/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character"

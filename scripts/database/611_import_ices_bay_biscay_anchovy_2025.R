@@ -662,20 +662,20 @@ if (!write_mode) {
   register$timing_evidence[candidate_row] <- "Two seasons, spawning date, and recruitment settlement are recorded. Exact model sampling fractions for BIOMAN, PELGAS, and JUVENA remain unresolved."
   register$output_evidence[candidate_row] <- "Annual SSB, recruitment, and apical F with reported 95% intervals are imported through 2025; seasonal F-at-age and beginning-of-year N-at-age are imported through 2024. The 16 non-deviation Stock Synthesis parameter estimates and reported SEs from Table 2.5.3.1 are imported. Total N is derived from reported age groups; age-specific output uncertainty is unavailable."
   register$decision_reason[candidate_row] <- "Partially curated the latest official detailed assessment. Inputs and outputs are recoverable from report tables, while historical survey age-specific observations, exact survey timing, and native model data remain unavailable; keep the canonical record partial."
-  note_suffix <- "Partial source import completed; see discovery/source_reviews/ices_bay_biscay_anchovy_2025.md and scripts/database/611_import_ices_bay_biscay_anchovy_2025.R."
+  note_suffix <- "Partial source import completed; see source_reviews/ices_bay_biscay_anchovy_8.md and scripts/database/611_import_ices_bay_biscay_anchovy_2025.R."
   old_notes <- sub(" Partial source import completed;.*$", "", register$notes[candidate_row])
   register$notes[candidate_row] <- paste0(old_notes, " ", note_suffix)
-  source(file.path("scripts", "database", "candidate_register_io.R"))
+  source(file.path("scripts", "discovery", "candidate_register_io.R"))
   replace_candidate_register_row(register_path, candidate_row, register[candidate_row, , drop = FALSE], candidate_id)
 
-  selected_path <- file.path("discovery", "selected_batch_19_2026.csv")
+  selected_path <- file.path("discovery/selections", "selected_batch_19_2026.csv")
   selected <- read.csv(selected_path, stringsAsFactors = FALSE, check.names = FALSE)
   selected_row <- which(selected$candidate_id == candidate_id)
   if (length(selected_row) == 1L) {
     selected$curation_status[selected_row] <- "partial_source_import"
     utils::write.csv(selected, selected_path, row.names = FALSE, na = "")
   }
-  source(file.path("scripts", "database", "195_summarize_discovery.R"), local = new.env(parent = globalenv()))
-  source(file.path("scripts", "database", "196_summarize_inventory_units.R"), local = new.env(parent = globalenv()))
+  source(file.path("scripts", "discovery", "195_summarize_discovery.R"), local = new.env(parent = globalenv()))
+  source(file.path("scripts", "discovery", "196_summarize_inventory_units.R"), local = new.env(parent = globalenv()))
   cat("Appended the partial canonical source record and updated the discovery register.\n")
 }

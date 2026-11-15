@@ -33,7 +33,7 @@ category therefore does not mean that an analytical assessment is absent.
   pinned to `075ed16570d08be9378848ddabe15c3b64feb07b`.
 
 Original PDFs, XML, source scripts and extracted review text are cached in
-`source_cache/ck_ices_wghansa_mordax_sp9a/`, with URL/date/checksum manifests.
+`source_cache/engraulis_encrasicolus/ck_ices_wghansa_mordax_sp9a/`, with URL/date/checksum manifests.
 The public TAF tree contains code but no `LastYear` or `update2025` folders,
 and has no release assets. Its code is inspected as text, not executed.
 I rechecked the pinned repository on 2026-10-26: the same SHA is still the

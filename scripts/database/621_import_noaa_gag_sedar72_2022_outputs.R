@@ -1,5 +1,5 @@
 root <- "."
-cache_dir <- file.path("source_cache", "noaa_gag_sedar72_2022")
+cache_dir <- file.path("source_cache", "mycteroperca_microlepis/noaa_gag_gulf_sedar72_srfs_2022")
 manifest_path <- file.path("provenance", "noaa_gag_sedar72_2022", "manifest.csv")
 stock_id <- "noaa_gag_gulf"
 assessment_id <- "noaa_gag_gulf_sedar72_srfs_2022"
@@ -9,7 +9,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")

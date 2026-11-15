@@ -35,7 +35,7 @@ candidates <- read_columns("discovery/candidates.csv", c("candidate_id", "candid
   "output_evidence"))
 inventory <- read_columns("discovery/inventory_units.csv", c("unit_key", "candidate_unit_id",
   "matched_stock_id", "match_status", "import_status", "candidate_ids"))
-selected <- read_columns("discovery/selected_batch_28_2026.csv", c("candidate_id", "candidate_unit_id", "curation_status"))
+selected <- read_columns("discovery/selections/selected_batch_28_2026.csv", c("candidate_id", "candidate_unit_id", "curation_status"))
 manifest <- read.csv("provenance/discovery_noaa_darkblotched_2017/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 

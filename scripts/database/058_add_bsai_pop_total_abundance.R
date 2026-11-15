@@ -2,9 +2,9 @@ source("scripts/database/pacific_tables.R")
 
 root <- "."
 id <- "afsc_pop_bsai_2024"
-native_dir <- file.path(root, "source_cache/afsc_pop_bsai/native")
+native_dir <- file.path(root, "source_cache/sebastes_alutus/afsc_pop_bsai/native")
 revision_lines <- grep('"sha"', readLines(
-  file.path(root, "source_cache/afsc_pop_bsai/repository_revision.json")
+  file.path(root, "source_cache/sebastes_alutus/afsc_pop_bsai/repository_revision.json")
 ), value = TRUE)
 revision <- sub('.*"sha"[[:space:]]*:[[:space:]]*"([^"]+)".*', "\\1", revision_lines)
 stopifnot(length(revision) == 1L, grepl("^[a-f0-9]{40}$", revision))

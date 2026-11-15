@@ -6,7 +6,7 @@ NOAA Stock SMART ID 11056 is the Gulf of Alaska (GOA) Pacific ocean perch unit (
 
 The latest completed detailed fit located on 2026-11-02 is the 2023 operational update, Model 20.1, with data through 2023. Its configuration matches the 2021 full assessment. The 2024 SAFE treated 2024 as a harvest projection; the scheduled 2025 full assessment was cancelled. A new GOA assessment was scheduled for December 2026 and had not yet been released by the review date. The canonical record therefore identifies the 2023 update as the latest detailed assessment available for this unit, not as a 2026 assessment.
 
-The 2023 SAFE, subsequent assessment-schedule and catch documents, and native model files are cached locally in `source_cache/noaa_goa_pop_20261029/`. Native repository files are pinned to commit `e87bbfc60ab8bfc87d05e02ed1b4b39b76059d7e`. The cache manifest records the source URLs, retrieval dates, revisions, byte counts and SHA-256 checksums.
+The 2023 SAFE, subsequent assessment-schedule and catch documents, and native model files are cached locally in `source_cache/sebastes_alutus/noaa_goa_pop_2023/`. Native repository files are pinned to commit `e87bbfc60ab8bfc87d05e02ed1b4b39b76059d7e`. The cache manifest records the source URLs, retrieval dates, revisions, byte counts and SHA-256 checksums.
 
 ## Inputs and assumptions recovered
 

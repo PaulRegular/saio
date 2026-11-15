@@ -3,10 +3,10 @@ old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 identity_review <- new.env(parent = globalenv())
 source(file.path(root,
-  'scripts/database/490_reconcile_ices_greenland_cod_identities_2026.R'), local = identity_review)
+  'scripts/discovery/490_reconcile_ices_greenland_cod_identities_2026.R'), local = identity_review)
 screen_review <- new.env(parent = globalenv())
 source(file.path(root,
-  'scripts/database/491_screen_ices_greenland_cod_2026.R'), local = screen_review)
+  'scripts/discovery/491_screen_ices_greenland_cod_2026.R'), local = screen_review)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 

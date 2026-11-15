@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_ices_iceland_wolffish_2026")
+cache <- file.path(root, "source_cache", "anarhichas_lupus/ices_atlantic_wolffish_iceland_2026")
 assessment_id <- "ices_atlantic_wolffish_iceland_2026"
 stock_id <- "ices_atlantic_wolffish_iceland_5a"
 candidate_id <- "ICES:caa.27.5a"
@@ -563,7 +563,7 @@ if (!all(source_map$file %in% source_manifest_ids)) {
   stop("The local source manifest update failed.", call. = FALSE)
 }
 append_pacific_case(stock, assessment, assumptions, inputs, outputs)
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 candidate_path <- file.path(root, "discovery", "candidates.csv")
 candidates <- utils::read.csv(
   candidate_path, stringsAsFactors = FALSE,
@@ -599,7 +599,7 @@ candidates$decision_reason[candidate_row] <- paste(
   "Import as partial because the exact likelihood settings, index scaling, 2011 autumn-series provenance, and complete uncertainty are unresolved."
 )
 candidates$notes[candidate_row] <- paste(
-  "The source cache stores the 2026 MFRI report/advice/tables, ICES key 22633 data pages, and table exports under source_cache/discovery_ices_iceland_wolffish_2026/.",
+  "The source cache stores the 2026 MFRI report/advice/tables, ICES key 22633 data pages, and table exports under source_cache/anarhichas_lupus/ices_atlantic_wolffish_iceland_2026/.",
   "The run uses data through 2025 and publishes a 2026 forecast.",
   "The MFRI assessment-summary landings field does not reconcile directly with the raw landings table and ICES series; this is documented in the stock source review.",
   "No current native SAM object was located in this execution environment; stockassessment is not installed here."
@@ -675,7 +675,7 @@ replace_discovery_row(
   "unit_key", paste0("candidate:", candidate_unit_id)
 )
 
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 selected <- utils::read.csv(
   selected_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE

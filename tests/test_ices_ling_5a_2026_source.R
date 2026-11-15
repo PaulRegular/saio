@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache", "discovery_ices_ling_5a_2026")
+cache <- file.path(root, "source_cache", "molva_molva/ices_ling_5a_2026")
 assessment_id <- "ices_ling_5a_2026"
 
 source_manifest <- read.csv(file.path(cache, "sources.csv"), stringsAsFactors = FALSE)

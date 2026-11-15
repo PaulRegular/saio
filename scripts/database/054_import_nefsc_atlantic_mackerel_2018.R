@@ -1,5 +1,5 @@
 root <- "."
-cache_dir <- file.path(root, "source_cache", "nefsc_atlantic_mackerel_2018")
+cache_dir <- file.path(root, "source_cache", "scomber_scombrus/nefsc_atlantic_mackerel_2018")
 pdf_path <- file.path(cache_dir, "assessment.pdf")
 assessment_id <- "nefsc_atlantic_mackerel_2018"
 summary_id <- "nefsc_atlantic_mackerel_2025"

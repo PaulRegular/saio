@@ -1,6 +1,6 @@
 root <- "."
 source(file.path(root, "scripts", "database", "pacific_tables.R"))
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 stock_id <- "dfo_western_component_pollock_4xopqrs5"
 assessment_id <- "dfo_western_component_pollock_2022_j_m4b"
@@ -10,7 +10,7 @@ source_url <- "https://publications.gc.ca/collections/collection_2026/mpo-dfo/fs
 ages <- 2:13
 age_columns <- paste0("age_", ages)
 cache_options <- c(
-  file.path(root, "source_cache", "discovery_dfo_western_pollock_2022"),
+  file.path(root, "source_cache", "pollachius_virens/dfo_western_component_pollock_2022_j_m4b"),
   file.path("..", "..", "discovery_dfo_western_pollock_2022")
 )
 source_name <- "dfo_western_pollock_2026_029_table10_acoustic_biomass_at_age.csv"

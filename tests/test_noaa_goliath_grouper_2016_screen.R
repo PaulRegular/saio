@@ -3,7 +3,7 @@ old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 screen <- new.env(parent = globalenv())
 source(file.path(root,
-  'scripts/database/480_screen_noaa_goliath_grouper_2016.R'), local = screen)
+  'scripts/discovery/480_screen_noaa_goliath_grouper_2016.R'), local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 

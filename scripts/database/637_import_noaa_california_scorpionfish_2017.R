@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "noaa_california_scorpionfish_southern_california"
 assessment_id <- "noaa_california_scorpionfish_southern_california_2017"
 candidate_id <- "NOAA:10461"
-cache <- file.path(root, "source_cache", "discovery_noaa_california_scorpionfish_2017")
+cache <- file.path(root, "source_cache", "scorpaena_guttata/noaa_california_scorpionfish_southern_california_2017")
 manifest_path <- file.path(root, "provenance", "noaa_california_scorpionfish_southern_california_2017", "manifest.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 .libPaths(c(file.path(root, "source_cache", "r-lib"), .libPaths()))
@@ -477,7 +477,7 @@ if (!write_mode) {
   if (!nrow(inputs_existing)) append_csv(inputs_new, inputs_path)
   if (!nrow(outputs_existing)) append_csv(outputs_new, outputs_path)
 
-  source(file.path(root, "scripts", "database", "candidate_register_io.R"), local = TRUE)
+  source(file.path(root, "scripts", "discovery", "candidate_register_io.R"), local = TRUE)
   candidate_path <- file.path(root, "discovery", "candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)

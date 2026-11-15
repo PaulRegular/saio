@@ -16,7 +16,7 @@ outputs <- subset(read_table("outputs"),
 candidate <- subset(utils::read.csv(file.path(root, "discovery", "candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE),
   candidate_id == "DFO:Gulf:Yellowtail Flounder - NAFO 4T")
-selected <- subset(utils::read.csv(file.path(root, "discovery",
+selected <- subset(utils::read.csv(file.path(root, "discovery/selections",
   "selected_batch_01_2026.csv"), stringsAsFactors = FALSE, check.names = FALSE),
   candidate_unit_id == "dfo_sff_2024_gulf_yellowtail_flounder_nafo_4t")
 review <- paste(readLines(file.path(root, "discovery", "source_reviews",

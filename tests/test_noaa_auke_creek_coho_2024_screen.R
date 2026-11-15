@@ -1,4 +1,4 @@
-source('scripts/database/507_screen_noaa_auke_creek_coho_2024.R')
+source('scripts/discovery/507_screen_noaa_auke_creek_coho_2024.R')
 
 root <- '.'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),

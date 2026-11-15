@@ -2,7 +2,7 @@ source("tests/helper_inventory.R")
 
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selected <- read.csv("discovery/selected_batch_08_2026.csv", stringsAsFactors = FALSE,
+selected <- read.csv("discovery/selections/selected_batch_08_2026.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 progress <- read.csv("discovery/inventory_progress.csv", stringsAsFactors = FALSE)
 units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE)
@@ -35,7 +35,7 @@ stopifnot(
       toupper(manifest$sha256[i])
     )
   }, logical(1))),
-  file.exists("discovery/source_reviews/afma_sessf_silver_warehou_2021.md")
+  file.exists("source_reviews/afma_sessf_silver_warehou.md")
 )
 
 cat("AFMA SESSF silver warehou candidate-selection checks passed.\n")

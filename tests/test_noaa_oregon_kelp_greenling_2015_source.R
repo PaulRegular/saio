@@ -21,7 +21,7 @@ candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, chec
 candidate <- candidate[candidate$candidate_id == "NOAA:10462", , drop = FALSE]
 inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE, check.names = FALSE)
 inventory <- inventory[inventory$candidate_ids == "NOAA:10462", , drop = FALSE]
-selected <- read.csv("discovery/selected_batch_40_2026.csv", stringsAsFactors = FALSE, check.names = FALSE)
+selected <- read.csv("discovery/selections/selected_batch_40_2026.csv", stringsAsFactors = FALSE, check.names = FALSE)
 selected <- selected[selected$candidate_id == "NOAA:10462", , drop = FALSE]
 provenance <- read.csv("provenance/discovery_noaa_oregon_kelp_greenling_2015/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)

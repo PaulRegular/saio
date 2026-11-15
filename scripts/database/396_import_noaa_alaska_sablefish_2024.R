@@ -1,7 +1,7 @@
 root <- "."
 assessment_id <- "noaa_alaska_sablefish_2024"
 stock_id <- "noaa_alaska_sablefish"
-cache <- file.path(root, "source_cache", "discovery_noaa_alaska_sablefish_2024_2025")
+cache <- file.path(root, "source_cache", "anoplopoma_fimbria/noaa_alaska_sablefish_2024")
 revision <- "d080576086110b6dcfca2c37918bab3101fff44a"
 data_file <- file.path(cache, "alaska_sablefish_2024_input.dat")
 output_file <- file.path(cache, "alaska_sablefish_2024_output.rdat")
@@ -770,7 +770,7 @@ assessment <- data.frame(
   model_url = paste0(source_url, "/Model/Base%20%2823.5%29_final%20model/tem.tpl"),
   repository_url = paste0("https://github.com/dgoethel-noaa/2024-Sablefish-SAFE/tree/", revision),
   assumptions_status = "partial", inputs_status = "partial", outputs_status = "partial",
-  notes = "2024 Model 23.5 is the latest full production assessment located; the 2025 SAFE confirms no new assessment. Direct age/length compositions, catch and index inputs, biological vectors, annual N-at-age, scalar M, recruitment, SSB, and total biomass are captured. Survey timing and numerical F-at-age remain unavailable. See discovery/source_reviews/noaa_alaska_sablefish_2024.md.",
+  notes = "2024 Model 23.5 is the latest full production assessment located; the 2025 SAFE confirms no new assessment. Direct age/length compositions, catch and index inputs, biological vectors, annual N-at-age, scalar M, recruitment, SSB, and total biomass are captured. Survey timing and numerical F-at-age remain unavailable. See source_reviews/noaa_alaska_sablefish_2024.md.",
   stringsAsFactors = FALSE
 )
 
@@ -843,9 +843,9 @@ register$notes[candidate] <- paste(
   "Imported the 2024 Model 23.5 native catch, index, composition, biology, and output records.",
   "Raw sample counts remain separate from the supplied relative likelihood sample-size weights.",
   "The input contains age compositions rather than direct catch numbers-at-age. No numeric F-at-age",
-  "or within-year survey timing was inferred. See discovery/source_reviews/noaa_alaska_sablefish_2024.md."
+  "or within-year survey timing was inferred. See source_reviews/noaa_alaska_sablefish_2024.md."
 )
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 replace_candidate_register_row(file.path(root, "discovery", "candidates.csv"),
   candidate, register[candidate, , drop = FALSE], "NOAA:10956")
 

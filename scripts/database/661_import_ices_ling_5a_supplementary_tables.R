@@ -1,7 +1,7 @@
 root <- "."
 .libPaths(c(file.path(root, "source_cache", "r-library"), .libPaths()))
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_ices_ling_5a_2026")
+cache <- file.path(root, "source_cache", "molva_molva/ices_ling_5a_2026")
 assessment_id <- "ices_ling_5a_2026"
 candidate_id <- "ICES:lin.27.5a"
 unit_id <- "ices_ling_5a"
@@ -15,7 +15,7 @@ source_bytes <- 4700509
 
 if (!dir.exists(cache)) stop("The reviewed Icelandic ling source cache is missing.", call. = FALSE)
 source(file.path(root, "scripts", "database", "pacific_tables.R"))
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 sha256_file <- function(path) {
   result <- system2("certutil.exe", c("-hashfile", shQuote(normalizePath(path)), "SHA256"),

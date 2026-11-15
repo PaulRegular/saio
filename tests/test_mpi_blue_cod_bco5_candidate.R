@@ -1,7 +1,7 @@
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "MPI:BCO5")
-selection <- read.csv("discovery/selected_batch_21_2026.csv", stringsAsFactors = FALSE,
+selection <- read.csv("discovery/selections/selected_batch_21_2026.csv", stringsAsFactors = FALSE,
   check.names = FALSE)
 manifest <- read.csv("provenance/mpi_blue_cod_bco5_sources.csv", stringsAsFactors = FALSE,
   check.names = FALSE)

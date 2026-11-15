@@ -4,7 +4,7 @@ stock_id <- "ifop_merluza_comun_up"
 
 candidates <- read.csv(file.path(root, "discovery/candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-selection <- read.csv(file.path(root, "discovery/selected_batch_20_2026.csv"),
+selection <- read.csv(file.path(root, "discovery/selections/selected_batch_20_2026.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 sources <- read.csv(file.path(root, "provenance/ifop_merluza_comun_2026_sources.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)

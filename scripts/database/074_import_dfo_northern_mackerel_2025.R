@@ -2,7 +2,7 @@ root <- "."
 db <- file.path(root, "database")
 assessment_id <- "dfo_northern_mackerel_2025"
 stock_id <- "ck_dfo_qc_scombrus_4t"
-cache <- file.path(root, "source_cache", "dfo_northern_mackerel_2025")
+cache <- file.path(root, "source_cache", "scomber_scombrus/dfo_northern_mackerel_2025")
 repo <- file.path(cache, "model_repository")
 data_dir <- file.path(repo, "data", "2025")
 csv_dir <- file.path(repo, "csv", "2025")

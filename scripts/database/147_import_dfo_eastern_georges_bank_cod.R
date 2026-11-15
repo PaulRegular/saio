@@ -1,7 +1,7 @@
 base <- "."
 database <- file.path(base, "database")
 stock_id <- "ck_nefsc_trac_cert_morhua_gb"
-cache <- file.path(base, "source_cache", stock_id)
+cache <- file.path(base, "source_cache/gadus_morhua", stock_id)
 framework_id <- "dfo_cod_eastern_georges_bank_2025_framework"
 summary_ids <- c("dfo_cod_eastern_georges_bank_2025_summary",
   "dfo_cod_eastern_georges_bank_2026_summary")

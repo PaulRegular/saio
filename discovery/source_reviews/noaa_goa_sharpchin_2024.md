@@ -14,6 +14,6 @@ No annual catch-at-age, age-specific abundance index, weight-at-age, maturity-at
 - [2024 Gulf of Alaska SAFE, Chapter 16](https://files.npfmc.org/SAFE/2024/GOAorock.pdf), operational update and assessment methods/results.
 - [2025 Gulf of Alaska SAFE, Chapter 16](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=16.+Other+Rockfish.pdf&p=005cba48-4f2b-4649-9661-0669bc41cb56.pdf), catch report and rollover note.
 - [NPFMC SSC draft report, December 2025](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=Draft+SSC+Report+Dec+2025.pdf&p=74322a78-4de1-451c-a10f-13b11286f8b9.pdf), confirmation that no 2025 assessment update was conducted.
-- NOAA Stock SMART source snapshot: `source_cache/discovery_noaa_stocksmart/stock_assessment_summary.rda`, assessment 13120.
+- NOAA Stock SMART source snapshot: `source_cache/shared/noaa_stocksmart/stock_assessment_summary.rda`, assessment 13120.
 
 The PDFs are cached in the gitignored `source_cache/discovery_noaa_sharpchin_goa_2024/`; retrieval date, file size, revision description and SHA-256 checksum are recorded in its `sources.csv` manifest.

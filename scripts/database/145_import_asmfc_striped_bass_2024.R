@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "ck_nefsc_garmiii_saxatilis_gom_chatt")
+cache <- file.path(base, "source_cache", "morone_saxatilis/ck_nefsc_garmiii_saxatilis_gom_chatt")
 assessment_id <- "asmfc_striped_bass_atlantic_2024"
 stock_id <- "ck_nefsc_garmiii_saxatilis_gom_chatt"
 report_url <- "https://asmfc.org/wp-content/uploads/2025/01/2024_AtlStripedBassAssessmentUpdate.pdf"

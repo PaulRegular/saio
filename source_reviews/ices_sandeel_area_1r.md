@@ -97,7 +97,7 @@ future assumption is imported as a historical observation.
 
 Sources and inspection logs are cached under
 `source_cache/ices_sandeel_area_1r_2026/`, with the broader catalogue/repository
-search under `source_cache/ck_ices_hawg_dubius_ns/`. Manifests retain URLs,
+search under `source_cache/ammodytes_dubius/ck_ices_hawg_dubius_ns/`. Manifests retain URLs,
 retrieval/verification dates, revisions and SHA-256 hashes. The focused source
 test protects units, seasonal hazards, observation roles, mixed state dates,
 reported gaps and uncertainty.

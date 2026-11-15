@@ -6,7 +6,7 @@ candidate_unit_id <- "mpi_red_gurnard_gur7"
 all_candidates <- read_table("discovery/candidates.csv")
 candidate <- all_candidates
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-selection <- read_table("discovery/selected_batch_18_2026.csv")
+selection <- read_table("discovery/selections/selected_batch_18_2026.csv")
 selection <- selection[selection$candidate_id == candidate_id, , drop = FALSE]
 units <- read_table("discovery/inventory_units.csv")
 unit <- units[units$unit_key == paste0("stock:", candidate_unit_id), , drop = FALSE]

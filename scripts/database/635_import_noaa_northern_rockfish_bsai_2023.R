@@ -3,8 +3,8 @@ stock_id <- "noaa_northern_rockfish_bsai"
 assessment_id <- paste0(stock_id, "_2023")
 candidate_id <- "NOAA:10416"
 source_url <- "https://apps-afsc.fisheries.noaa.gov/Plan_Team/2023/BSAInork.pdf"
-cache <- file.path(root, "source_cache", "noaa_northern_rockfish_bsai_2023")
-manifest_path <- file.path(root, "provenance", "noaa_northern_rockfish_20261029", "sources.csv")
+cache <- file.path(root, "source_cache", "shared", "noaa_northern_rockfish")
+manifest_path <- file.path(root, "provenance", "shared", "noaa_northern_rockfish", "sources.csv")
 transcription_dir <- file.path(root, "provenance", assessment_id, "transcriptions")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
@@ -501,7 +501,7 @@ if (write_mode) {
   if (!nrow(inputs_existing)) append_csv(inputs_new, inputs_path)
   if (!nrow(outputs_existing)) append_csv(outputs_new, outputs_path)
 
-  source(file.path(root, "scripts", "database", "candidate_register_io.R"),
+  source(file.path(root, "scripts", "discovery", "candidate_register_io.R"),
     local = TRUE)
   candidate_path <- file.path(root, "discovery", "candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,

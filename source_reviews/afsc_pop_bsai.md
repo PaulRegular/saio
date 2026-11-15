@@ -11,9 +11,9 @@ The newer catch reports do not supply replacement historical fitted states.
 The [2024 SAFE chapter](https://files.npfmc.org/SAFE/2024/BSAIpop.pdf) is checked
 against the pinned [native model repository](https://github.com/afsc-assessments/BSAI-POP)
 at revision `e4055266868ada8740fe95f0f27a10ee2825175f`. The SAFE PDF remains
-cached under `source_cache/afsc_pop_bsai_2024/`; native data/control/code, the
+cached under `source_cache/sebastes_alutus/afsc_pop_bsai_2024/`; native data/control/code, the
 `.rdat`, `.std`, `.rep` and composition exports are cached under
-`source_cache/afsc_pop_bsai/`. The native-file manifest records retrieval dates,
+`source_cache/sebastes_alutus/afsc_pop_bsai/`. The native-file manifest records retrieval dates,
 URLs, Git blob IDs and SHA-256 checksums. Each native file was verified against
 the pinned repository tree. Run `057_import_bsai_pop_2024.R` to reproduce the
 numerical import from that cache.

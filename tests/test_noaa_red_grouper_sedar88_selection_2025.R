@@ -4,7 +4,7 @@ candidate <- candidate[candidate$candidate_id == "NOAA:10331", , drop = FALSE]
 inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- inventory[inventory$candidate_ids == "NOAA:10331", , drop = FALSE]
-batch <- read.csv("discovery/selected_batch_41_2026.csv",
+batch <- read.csv("discovery/selections/selected_batch_41_2026.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

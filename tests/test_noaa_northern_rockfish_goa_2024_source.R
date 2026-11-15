@@ -126,7 +126,7 @@ manifest <- read.csv(
   "provenance/noaa_northern_rockfish_goa_2024/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines(
-  "discovery/source_reviews/noaa_northern_rockfish_goa.md", warn = FALSE),
+  "source_reviews/noaa_northern_rockfish_goa.md", warn = FALSE),
   collapse = "\n")
 stopifnot(
   any(grepl("dcf94241c58ad5ccd0056bc7c50c4db338ba61d8", manifest$repository_revision, fixed = TRUE)),

@@ -469,7 +469,7 @@ if (write_mode) {
   append_rows("database/inputs.csv", inputs)
   append_rows("database/outputs.csv", outputs)
 
-  source("scripts/database/candidate_register_io.R")
+  source("scripts/discovery/candidate_register_io.R")
   candidates$matched_stock_id[candidate_row] <- stock_id
   candidates$match_status[candidate_row] <- "matched"
   candidates$import_status[candidate_row] <- "partial"
@@ -477,7 +477,7 @@ if (write_mode) {
     "discovery/candidates.csv", candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id
   )
-  source("scripts/database/195_summarize_discovery.R", local = TRUE)
-  source("scripts/database/196_summarize_inventory_units.R", local = TRUE)
+  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
+  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("ORH 3B source records and discovery summaries were written.\n")
 }

@@ -470,7 +470,7 @@ ck_prepare_master_import <- function(
   )
 }
 
-ck_cache_master <- function(path = file.path("source_cache", "charbonneau_keith", "Master.csv"
+ck_cache_master <- function(path = file.path("source_cache", "shared/charbonneau_keith", "Master.csv"
 )) {
   dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
   if (!file.exists(path)) {
@@ -508,7 +508,7 @@ ck_cache_master <- function(path = file.path("source_cache", "charbonneau_keith"
 }
 
 ck_import_master <- function(
-  master_path = file.path("source_cache", "charbonneau_keith", "Master.csv"
+  master_path = file.path("source_cache", "shared/charbonneau_keith", "Master.csv"
   ),
   stocks_path = file.path("database", "stocks.csv")
 ) {

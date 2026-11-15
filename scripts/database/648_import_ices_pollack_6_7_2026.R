@@ -3,7 +3,7 @@ database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "ices_pollack_67_2026")
 register_path <- file.path(root, "discovery", "candidates.csv")
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery", "selected_batch_32_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_32_2026.csv")
 manifest_path <- file.path(root, "provenance", "ices_pollack_67_2026", "sources.csv")
 
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
@@ -394,7 +394,7 @@ register$notes[candidate_row] <- paste(
   "The exact current SS3 configuration and numerical age-composition, survey-index, and LPUE series remain unavailable; see source_reviews/ices_pollack_67_2026.md."
 )
 
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 inventory <- read.csv(inventory_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
 if ((!dry_run && inventory$import_status[inventory_row] != "not_started") ||

@@ -89,8 +89,8 @@ stopifnot(
   all(herring_recruitment$value == herring_N$value[herring_N$age == 1][order(herring_N$year[herring_N$age == 1])])
 )
 
-sole_review <- paste(readLines("discovery/source_reviews/ices_sole_7a_2026.md", warn = FALSE), collapse = " ")
-herring_review <- paste(readLines("discovery/source_reviews/noaa_atlantic_herring_2026.md", warn = FALSE), collapse = " ")
+sole_review <- paste(readLines("source_reviews/ices_sol_27_7a.md", warn = FALSE), collapse = " ")
+herring_review <- paste(readLines("source_reviews/noaa_atlantic_herring_gom_georges_bank.md", warn = FALSE), collapse = " ")
 stopifnot(
   grepl("3,845 tonnes", sole_review, fixed = TRUE),
   grepl("5,107 tonnes", sole_review, fixed = TRUE),

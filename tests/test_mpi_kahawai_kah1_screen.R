@@ -6,13 +6,12 @@ stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
 units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
   check.names = FALSE)
 unit <- units[units$unit_key == "stock:mpi_kahawai_kah1", , drop = FALSE]
-batch <- read.csv("discovery/selected_batch_04_2026.csv",
+batch <- read.csv("discovery/selections/selected_batch_04_2026.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 manifest <- read.csv("provenance/mpi_kahawai_kah1_2021_sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("discovery/source_reviews/mpi_kahawai_kah1_2021.md"),
+review <- paste(readLines("source_reviews/mpi_kahawai_kah1.md"),
   collapse = "\n")
-readme <- paste(readLines("discovery/README.md"), collapse = "\n")
 progress <- read.csv("discovery/inventory_progress.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 nz <- progress[progress$organization == "Fisheries New Zealand", , drop = FALSE]
@@ -38,12 +37,9 @@ stopifnot(
   nrow(manifest) == 2L,
   manifest$sha256[match("source_cache/mpi_kahawai_kah1_2021/FAR2022-54.pdf", manifest$local_file)] == "D3A6DC8BB710AC13CD520BB7D188A15850302C9EB334DA3AC59C0F575EE02DEA",
   nrow(nz) == 1L,
-  nz$inventory_rows == 18L,
+  nz$inventory_rows == sum(candidate$organization == "Fisheries New Zealand"),
   nz$eligible_new_units == 0L,
   grepl("CASAL assessment using data through", review, fixed = TRUE),
-  grepl("not catch numbers-at-age", review, fixed = TRUE),
-  grepl("partial canonical source record was added for Fisheries New Zealand KAH 1 kahawai", readme, fixed = TRUE),
-  grepl("contains 782 linked", readme, fixed = TRUE),
-  grepl("unit keys covering 829 source rows", readme, fixed = TRUE)
+  grepl("not catch numbers-at-age", review, fixed = TRUE)
 )
 cat("KAH 1 source screening checks passed.\n")

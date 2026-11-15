@@ -1,7 +1,7 @@
 root <- "."
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_ices_celtic_sea_herring_2026")
+cache <- file.path(root, "source_cache", "clupea_harengus/ices_her_27_irls_2026")
 candidate_id <- "ICES:her.27.irls"
 stock_id <- "ices_her_27_irls"
 assessment_id <- "ices_her_27_irls_2026"
@@ -10,7 +10,7 @@ report_reference <- "ICES HAWG 2026, section 6 and Tables 6.6.1.1-6.6.1.4"
 survey <- "Celtic Sea Pelagic Ecosystem Survey (CSHAS)"
 
 source(file.path(root, "scripts", "database", "pacific_tables.R"), local = TRUE)
-source(file.path(root, "scripts", "database", "candidate_register_io.R"), local = TRUE)
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"), local = TRUE)
 
 sha256_file <- function(path) {
   result <- system2("certutil.exe", c("-hashfile", shQuote(path), "SHA256"),
@@ -480,7 +480,7 @@ if (!dry_run) {
   replace_discovery_row(inventory_path, inventory_row,
     inventory[inventory_row, , drop = FALSE], "unit_key", inventory$unit_key[inventory_row])
 
-  selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+  selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
   selected <- utils::read.csv(selected_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   selected_row <- which(selected$candidate_id == candidate_id)

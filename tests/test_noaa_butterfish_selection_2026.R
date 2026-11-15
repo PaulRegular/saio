@@ -4,7 +4,7 @@ stock_id <- "noaa_butterfish_gom_cape_hatteras"
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-selected <- read.csv("discovery/selected_batch_22_2026.csv",
+selected <- read.csv("discovery/selections/selected_batch_22_2026.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

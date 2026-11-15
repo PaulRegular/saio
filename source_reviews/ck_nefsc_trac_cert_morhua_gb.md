@@ -156,7 +156,7 @@ There are 1,440 recovered inputs (1,410 for the framework, including 414 approxi
 - [2025 assessment summary, SAR 2025/039](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41299206.pdf).
 - [2026 assessment summary, SAR 2026/046](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41341557.pdf).
 
-Authoritative PDFs are cached under `source_cache/ck_nefsc_trac_cert_morhua_gb/`
+Authoritative PDFs are cached under `source_cache/gadus_morhua/ck_nefsc_trac_cert_morhua_gb/`
 with URLs, retrieval dates, sizes and SHA256 checksums in `manifest.csv`.
 The earlier `_2025` cache contains HTML landing pages bearing PDF suffixes;
 those are not PDFs and are excluded from extraction. A landing page response

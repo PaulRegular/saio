@@ -15,8 +15,8 @@ provenance <- read.csv(file.path(root, "provenance/ices_ane_27_8_sources.csv"),
 candidate <- register[register$candidate_id %in% candidate_id, , drop = FALSE]
 stock <- stocks[stocks$stock_id %in% stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id %in% assessment_id, , drop = FALSE]
-review <- paste(readLines(file.path(root, "discovery/source_reviews",
-  "ices_bay_biscay_anchovy_2025.md"), warn = FALSE), collapse = " ")
+review <- paste(readLines(file.path(root, "source_reviews",
+  "ices_bay_biscay_anchovy_8.md"), warn = FALSE), collapse = " ")
 
 stopifnot(
   nrow(candidate) == 1L,

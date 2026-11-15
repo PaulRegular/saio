@@ -52,6 +52,6 @@ managed complexes and the data limitations for Pacific sleeper shark. The
   <https://www.fisheries.noaa.gov/alaska/ecosystems/shark-research-alaska>
 
 The 2022 SAFE chapter and 2024 SAFE introduction were downloaded to the
-gitignored `source_cache/discovery_noaa_stocksmart/` folder on 2026-11-02.
+gitignored `source_cache/shared/noaa_stocksmart/` folder on 2026-11-02.
 Their retrieval URLs, byte sizes, SHA-256 hashes and report revisions are in
 that folder's `sources.csv` manifest.

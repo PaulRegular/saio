@@ -124,7 +124,7 @@ manifest <- data.frame(
 )
 
 register_path <- "discovery/candidates.csv"
-selected_path <- "discovery/selected_batch_12_2026.csv"
+selected_path <- "discovery/selections/selected_batch_12_2026.csv"
 units_path <- "discovery/inventory_units.csv"
 progress_path <- "discovery/inventory_progress.csv"
 manifest_path <- "provenance/inidep_merluccius_hubbsi_south_2025_sources.csv"

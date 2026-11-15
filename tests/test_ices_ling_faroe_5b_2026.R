@@ -15,12 +15,12 @@ assumptions <- read.csv(file.path(database, 'assumptions.csv'), stringsAsFactors
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- read.csv(file.path(root, 'discovery/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
-selected <- read.csv(file.path(root, 'discovery/selected_batch_01_2026.csv'),
+selected <- read.csv(file.path(root, 'discovery/selections/selected_batch_01_2026.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 inventory <- read.csv(file.path(root, 'discovery/inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 source_review <- paste(readLines(file.path(root,
-  'discovery/source_reviews/ices_ling_faroe_5b_2026.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/ices_ling_faroe_5b.md'), warn = FALSE), collapse = '\n')
 
 stock_id <- 'ices_ling_faroe_5b'
 assessment_id <- 'ices_ling_faroe_5b_2026'

@@ -16,7 +16,7 @@ portal's archived-notice page rather than the document.
 
 The most recent detailed research document located is DFO Research Document
 2025/061, which reports data through 2024. It is cached in
-`source_cache/discovery_dfo_capelin_2j3kl/` with its source URL and checksum.
+`source_cache/mallotus_villosus/dfo_capelin_2j3kl/` with its source URL and checksum.
 Keep its detailed 2024 material separate from the newer 2025 observations in
 the 2026 advice; do not treat the 2024 report as a detailed report for the
 2025 assessment.

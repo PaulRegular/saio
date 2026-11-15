@@ -17,7 +17,7 @@ assessments <- read.csv(file.path(root, "database", "assessments.csv"),
 candidate <- read_selected(file.path(root, "discovery", "candidates.csv"),
   c("candidate_id", "matched_stock_id", "import_status", "catch_age_evidence",
     "survey_age_evidence", "mortality_evidence"))
-selected <- read_selected(file.path(root, "discovery", "selected_batch_01_2026.csv"),
+selected <- read_selected(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"),
   c("candidate_unit_id", "curation_status"))
 inputs <- read_selected(file.path(root, "database", "inputs.csv"), c(
   "assessment_id", "type", "measure", "basis", "year", "age", "value",

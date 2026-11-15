@@ -53,7 +53,7 @@ candidate_rows <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidates <- candidate_rows[!is.na(candidate_rows$candidate_unit_id) &
   candidate_rows$candidate_unit_id == stock_id, , drop = FALSE]
-selection <- read.csv("discovery/selected_unworked_2026.csv", stringsAsFactors = FALSE,
+selection <- read.csv("discovery/selections/selected_unworked_2026.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 selection <- selection[selection$candidate_id == "NOAA:11082", , drop = FALSE]
 
@@ -121,7 +121,7 @@ stopifnot(
   all(candidates$import_status == "partial"),
   nrow(selection) == 1L,
   selection$curation_status == "source_curated_partial",
-  file.exists("discovery/source_reviews/iphc_pacific_halibut_2025.md")
+  file.exists("source_reviews/iphc_pacific_halibut.md")
 )
 
 cat("IPHC Pacific halibut 2025 source records passed.\n")

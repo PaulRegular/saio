@@ -49,7 +49,7 @@ stopifnot(
   grepl('2024 model version', review, fixed = TRUE),
   grepl('not verified as the exact run bundle', review, fixed = TRUE),
   grepl('eligibility unresolved', review, fixed = TRUE),
-  file.exists(file.path(root, 'scripts', 'database',
+  file.exists(file.path(root, 'scripts', 'discovery',
     '377_screen_ices_greenland_halibut_1_2_2026.R'))
 )
 

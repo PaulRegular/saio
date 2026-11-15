@@ -2,7 +2,7 @@
 
 ## Source and scope
 
-The metadata snapshot is the `Master.csv` file from the [Age-structured marine fish database](https://github.com/JulieCharbonneau/Age-structured-marine-fish-database), pinned to revision `7e4daca3cbfc14ce7fa0b28ed824eebe7113249b`. It was retrieved on 2026-10-17 from the [revision-specific raw file](https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/Master.csv). The local gitignored copy is `source_cache/charbonneau_keith/Master.csv`; its MD5 is `430d85ba1f4144fc87bca098c8090699` and SHA-256 is `52FA158B197574B45B92D485D738E1DC7D62A4904315AEEF90C0EDB526E449ED`. The manifest records the URL, retrieval date, checksum and revision.
+The metadata snapshot is the `Master.csv` file from the [Age-structured marine fish database](https://github.com/JulieCharbonneau/Age-structured-marine-fish-database), pinned to revision `7e4daca3cbfc14ce7fa0b28ed824eebe7113249b`. It was retrieved on 2026-10-17 from the [revision-specific raw file](https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/Master.csv). The local gitignored copy is `source_cache/shared/charbonneau_keith/Master.csv`; its MD5 is `430d85ba1f4144fc87bca098c8090699` and SHA-256 is `52FA158B197574B45B92D485D738E1DC7D62A4904315AEEF90C0EDB526E449ED`. The [source manifest](../provenance/shared/charbonneau_keith/sources.csv) records the URL, retrieval date, checksums and revision.
 
 The pinned file contains 102 rows and 102 unique `unique_ID` values. This differs from the 101-row count anticipated in the task plan; the import follows the source file and represents all 102 identifiers once. This is catalogue metadata only. The catalogue’s historical model flags and labels do not establish that any record is a current official production assessment.
 
@@ -55,6 +55,6 @@ historical assessment data. The combined Baltic stocks retain blank Master
 IDs because neither is a one-to-one match to a single historical component.
 Original authoritative PDFs are cached with retrieval details and checksums
 under the corresponding current assessment directories; the plaice benchmark
-is also cached under `source_cache/ck_ices_wgcse_platessa_is7e/`.
+is also cached under `source_cache/pleuronectes_platessa/ck_ices_wgcse_platessa_is7e/`.
 
 Reviewed relationships prevent counting empty component rows as ten additional distinct current assessments. They establish stock identity only, not source completeness or downstream model readiness. Each primary source review retains its own gaps.

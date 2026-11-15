@@ -25,7 +25,7 @@ units are not combined with this historical record.
   uncertainty are not available from the recovered files.
 
 The source PDFs and their checksums are recorded in the local, gitignored
-`source_cache/ck_ices_hawg_harengus_cs_6a_7b_7c/source_manifest.yml`.
+`source_cache/clupea_harengus/ck_ices_hawg_harengus_cs_6a_7b_7c/source_manifest.yml`.
 
 ## Inputs recovered
 

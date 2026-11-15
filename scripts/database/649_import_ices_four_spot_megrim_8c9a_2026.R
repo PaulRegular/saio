@@ -4,7 +4,7 @@ cache <- file.path(root, "source_cache", "ices_four_spot_megrim_8c9a_2026")
 manifest_path <- file.path(root, "provenance", "ices_four_spot_megrim_8c9a_2026", "sources.csv")
 register_path <- file.path(root, "discovery", "candidates.csv")
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery", "selected_batch_33_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_33_2026.csv")
 
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 stock_id <- "ices_four_spot_megrim_8c9a"
@@ -508,7 +508,7 @@ register$notes[candidate_row] <- paste(
   "See source_reviews/ices_four_spot_megrim_8c9a_2026.md."
 )
 
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 inventory <- read.csv(inventory_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
 if (!inventory$import_status[inventory_row] %in% c("not_started", "partial"))

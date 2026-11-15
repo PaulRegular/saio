@@ -118,7 +118,7 @@ assessment states are not current input surfaces.
 
 Original sources, pinned scripts, repository metadata and checksums are
 cached in the gitignored
-`source_cache/ck_ices_wgsce_platessa_cs7f_g/` folder. The catalogue scientific
+`source_cache/pleuronectes_platessa/ck_ices_wgsce_platessa_cs7f_g/` folder. The catalogue scientific
 identity and area were checked against the 2026 advice before updating the
 existing stock row.
 

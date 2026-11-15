@@ -7,9 +7,9 @@ stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
 units <- read_table("discovery/inventory_units.csv")
 unit_row <- units[units$unit_key == "stock:mpi_snapper_sna1", , drop = FALSE]
-selection <- read_table("discovery/selected_batch_05_2026.csv")
+selection <- read_table("discovery/selections/selected_batch_05_2026.csv")
 manifest <- read_table("provenance/mpi_snapper_sna1_2023_sources.csv")
-review_path <- "discovery/source_reviews/mpi_snapper_sna1_2023.md"
+review_path <- "source_reviews/mpi_snapper_sna1.md"
 review <- paste(readLines(review_path, warn = FALSE, encoding = "UTF-8"),
   collapse = "\n")
 

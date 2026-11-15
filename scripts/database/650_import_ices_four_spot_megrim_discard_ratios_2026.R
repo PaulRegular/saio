@@ -4,7 +4,7 @@ cache <- file.path(root, "source_cache", "ices_four_spot_megrim_8c9a_2026")
 manifest_path <- file.path(root, "provenance", "ices_four_spot_megrim_8c9a_2026", "sources.csv")
 register_path <- file.path(root, "discovery", "candidates.csv")
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery", "selected_batch_33_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_33_2026.csv")
 stock_id <- "ices_four_spot_megrim_8c9a"
 assessment_id <- paste0(stock_id, "_2026")
 candidate_id <- "ICES:ldb.27.8c9a"
@@ -201,7 +201,7 @@ if (sum(stocks$stock_id == stock_id) != 1L ||
     sum(assessments$assessment_id == assessment_id & assessments$stock_id == stock_id) != 1L)
   stop("The current four-spot megrim stock and assessment must already exist.", call. = FALSE)
 
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 register <- read.csv(register_path, stringsAsFactors = FALSE, na.strings = c("", "NA"),
   check.names = FALSE)
 candidate_row <- which(register$candidate_id == candidate_id)

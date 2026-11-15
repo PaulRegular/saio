@@ -6,7 +6,7 @@ The latest detailed official assessment is the 2026 AFWG run for `reg.27.1-2`. I
 
 ## Sources
 
-- [AFWG 2026 report, chapter 7](https://doi.org/10.17895/ices.pub.32134696.v1): current assessment, inputs, outputs, and advice basis. The chapter PDF is cached locally with retrieval date and SHA-256 in `source_cache/ck_ices_afwg_norvegicus_deep1_2/manifest.csv`.
+- [AFWG 2026 report, chapter 7](https://doi.org/10.17895/ices.pub.32134696.v1): current assessment, inputs, outputs, and advice basis. The chapter PDF is cached locally with retrieval date and SHA-256 in `source_cache/sebastes_norvegicus/ck_ices_afwg_norvegicus_deep1_2/manifest.csv`.
 - [WKBWNG benchmark report (ICES Scientific Reports 8:27)](https://doi.org/10.17895/ices.pub.32019630.v1): method review and benchmark decision. The report and Golden Redfish data working document are cached in the same folder.
 - [AFWG 2024 report (ICES Scientific Reports 6:61)](https://doi.org/10.17895/ices.pub.25970272.v1): describes the superseded age-based GADGET assessment. The report is cached locally for historical reference.
 - [ICES advice for 2026 assessment year](https://asd.ices.dk/viewAdvice/7190): confirms the current advice for 2027.

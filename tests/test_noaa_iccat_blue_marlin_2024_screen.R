@@ -1,6 +1,6 @@
-source('scripts/database/462_screen_noaa_iccat_blue_marlin_2024.R')
-source('scripts/database/195_summarize_discovery.R')
-source('scripts/database/196_summarize_inventory_units.R')
+source('scripts/discovery/462_screen_noaa_iccat_blue_marlin_2024.R')
+source('scripts/discovery/195_summarize_discovery.R')
+source('scripts/discovery/196_summarize_inventory_units.R')
 root <- "."
 candidate <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

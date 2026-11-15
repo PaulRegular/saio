@@ -7,7 +7,7 @@ revision <- "81fc412ad1f36416f78f84ef6bd2d5dff68d14c8"
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 
 .libPaths(c(file.path(root, "source_cache/.Rlib"), .libPaths()))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 cache_options <- c(
   file.path(root, "source_cache", cache_name),

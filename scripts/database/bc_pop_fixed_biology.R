@@ -1,6 +1,6 @@
 # Run separately from curation and fitting; evaluate fixed source biology only.
 source("scripts/database/pacific_sources.R")
-cache <- "source_cache/dfo_pop_bc"
+cache <- "source_cache/sebastes_alutus/dfo_pop_bc"
 url <- "https://github.com/nmfs-ost/ss3-source-code/releases/download/v3.30.20/ss_win.exe"
 exe <- cache_pacific_source("dfo_pop_bc",url,"framework/ss3_3.30.20.exe","v3.30.20")
 directory <- file.path(cache,"fixed_biology_evaluation")

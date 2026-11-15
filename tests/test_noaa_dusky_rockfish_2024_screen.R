@@ -61,5 +61,5 @@ cat('NOAA dusky rockfish identity, current assessment, source evidence and no-im
 
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts', 'database', '402_screen_noaa_dusky_rockfish_2024.R'))
+source(file.path(root, 'scripts', 'discovery', '402_screen_noaa_dusky_rockfish_2024.R'))
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv('TAM_SOURCE_DRY_RUN', old_dry_run)

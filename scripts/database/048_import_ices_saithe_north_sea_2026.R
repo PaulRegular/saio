@@ -1,7 +1,7 @@
 assessment_id <- "ices_saithe_north_sea_2026"
 stock_id <- "ices_saithe_north_sea"
 root <- "."
-cache_dir <- file.path(root, "source_cache", "ices_saithe_north_sea_2026")
+cache_dir <- file.path(root, "source_cache", "pollachius_virens/ices_saithe_north_sea_2026")
 pdf_path <- file.path(cache_dir, "WGNSSK_2026.pdf")
 
 if (!requireNamespace("pdftools", quietly = TRUE)) {

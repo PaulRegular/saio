@@ -1,7 +1,7 @@
 root <- normalizePath(".", mustWork = TRUE)
 id <- "afsc_pollock_goa_2024"
 assumption_file <- file.path(root, "database/assumptions.csv")
-source_file <- file.path(root, "source_cache/afsc_pollock_goa_2024/data_2024_goa_pk.cpp")
+source_file <- file.path(root, "source_cache/gadus_chalcogrammus/afsc_pollock_goa_2024/data_2024_goa_pk.cpp")
 source <- readLines(source_file, warn = FALSE, encoding = "UTF-8")
 active_source <- source[!grepl("^\\s*//", source)]
 required_terms <- c("dnorm(log_slp1_fsh_mean, Type(-1.0),Type(1.5), true)", "dnorm(log_slp2_fsh_mean, Type(-1.0),Type(1.5), true)", "dnorm(inf1_fsh_mean, Type(0.0),Type(3.0), true)", "dnorm(inf2_fsh_mean, Type(10.0),Type(3.0), true)", "dnorm(log_DM_pars, Type(0.0), Type(2.0),true).sum()")

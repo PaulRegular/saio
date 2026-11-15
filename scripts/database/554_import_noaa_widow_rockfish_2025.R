@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "noaa_pacific_coast_widow_rockfish_20261029")
+cache <- file.path(root, "source_cache", "sebastes_entomelas/noaa_west_coast_widow_2025")
 model_dir <- file.path(cache, "model_files")
 assessment_id <- "noaa_west_coast_widow_2025"
 stock_id <- "noaa_west_coast_widow"
@@ -9,7 +9,7 @@ candidate_id <- "NOAA:10568"
 report_file <- "2025_Widow_Rockfish_Assessment.pdf"
 archive_file <- "Widow_Rockfish_2025_Model_Files.zip"
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 read_csv <- function(path) utils::read.csv(path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
@@ -403,7 +403,7 @@ stocks_path <- file.path(database, "stocks.csv")
 assessments_path <- file.path(database, "assessments.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 stocks <- read_csv(stocks_path); assessments <- read_csv(assessments_path)
 candidate <- read_csv(candidate_path); inventory <- read_csv(inventory_path)
 selected <- read_csv(selected_path)

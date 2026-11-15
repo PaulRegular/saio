@@ -13,7 +13,7 @@ control_file <- file.path(native, "YTRK.North.control.ss")
 report_output <- file.path(native, "Report.sso")
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 read_csv <- function(path) utils::read.csv(path, stringsAsFactors=FALSE,
   check.names=FALSE, na.strings=c("", "NA"))
 read_fields <- function(path) names(utils::read.csv(path, nrows=0L,
@@ -428,7 +428,7 @@ if(anyDuplicated(a_key))stop("Duplicate assumptions generated.",call.=FALSE)
 
 candidate_path<-file.path(root,"discovery","candidates.csv")
 inventory_path<-file.path(root,"discovery","inventory_units.csv")
-selected_path<-file.path(root,"discovery","selected_batch_10_2026.csv")
+selected_path<-file.path(root,"discovery/selections","selected_batch_10_2026.csv")
 stocks_path<-file.path(database,"stocks.csv");assessments_path<-file.path(database,"assessments.csv")
 stocks<-read_csv(stocks_path);assessments<-read_csv(assessments_path)
 candidate<-read_csv(candidate_path);inventory<-read_csv(inventory_path);selected<-read_csv(selected_path)

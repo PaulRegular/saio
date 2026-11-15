@@ -1,5 +1,7 @@
 # NOAA Cowcod, Southern California Bight, 2019
 
+SAIO stock `noaa_cowcod_southern_california`. Assessment `noaa_cowcod_southern_california_2019`.
+
 ## Assessment unit and source run
 
 The 2019 assessment covers Cowcod (*Sebastes levis*) in the Southern California Bight, south of Point Conception. The assessment report and native Stock Synthesis archive are the latest detailed run located for this current unit. The model is Stock Synthesis 3.30.13.09, uses data through 2018, and reports a 2019 terminal-year estimate. The report's separate northern-area sustainable-yield appendix is not part of this stock assessment.
@@ -26,6 +28,10 @@ The canonical import preserves the observations in their source forms. It does n
 `Report.sso` provides beginning-year numbers-at-age, biomass-at-age, natural mortality-at-age, fleet-specific fishing mortality-at-age, model-generated dead catch numbers-at-age, recruitment and spawning output for 1900–2018. Total abundance is derived by summing reported N-at-age and has no separately reported uncertainty. The report gives 2019 spawning output of 163 billion eggs with 95% asymptotic limits of 130–195 billion eggs. The archive's single-sex `SpawnBio` values are approximately twice the report scale; the imported annual series is divided by two, matching the report's stated plotting convention and Table E after rounding (the 2019 output is 163 billion eggs).
 
 Spawning output is measured in eggs, not conventional spawning-stock biomass in tonnes. The annual series is reported on the official report scale after dividing native `SpawnBio` by two. The archive has no fitted parameter or covariance file, so uncertainty for age-specific surfaces and annual trajectories is unavailable from the cached native files. The 2019 summary interval is retained from the official report. No age-specific catch or survey abundance observations are reported as native model inputs.
+
+The native archive contains `cowcod2019.dat`, `cowcod2019.ctl` and `Report.sso`. The report describes an initial commercial sample of 129 aged fish in 1982–1986, including two without lengths, and 131 recreational otoliths in 1975–1981 before exclusions. It gives the weight-length relationship `W = 9.6788e-6 * L^3.1462` using whole weight in kilograms and fork length in centimetres. The maturity data include 174 females and the report distinguishes biological and functional length ogives.
+
+The source screen used NOAA Stock SMART ID 10443 and cross-checked it against the accepted PFMC unit south of Point Conception. [NOAA Stock SMART](https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10443) · [2019 STAR panel report](https://www.pcouncil.org/documents/2019/10/cowcod-star-panel-report-july-22-26-2019.pdf)
 
 ## Completeness
 

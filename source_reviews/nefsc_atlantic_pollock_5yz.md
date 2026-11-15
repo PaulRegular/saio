@@ -4,7 +4,7 @@
 
 The stock record is `ck_nefsc_virens_5yz` (Charbonneau–Keith identifier `NEFSC_ virens_5YZ`), Atlantic pollock (*Pollachius virens*) in the NOAA 5YZ assessment area. The assessment used here is the 2024 Management Track update, fitted through 2023. The final NOAA peer-review panel report found the assessment technically sufficient and best scientific information available. Its SASI base run is Run10.
 
-The native ASAP3 input and output files are the most complete record of the fitted run. The 2024 assessment report in SASI is marked draft and is used only to clarify and cross-check model details. The 2026 SASI item is a data/projection update, not a later age-structured assessment, so its values are not mixed into this record. The local source cache and checksums are recorded in `source_cache/nefsc_pollock_5yz_2024/manifest.csv`.
+The native ASAP3 input and output files are the most complete record of the fitted run. The 2024 assessment report in SASI is marked draft and is used only to clarify and cross-check model details. The 2026 SASI item is a data/projection update, not a later age-structured assessment, so its values are not mixed into this record. The local source cache and checksums are recorded in `source_cache/pollachius_virens/nefsc_pollock_5yz_2024/manifest.csv`.
 
 ## Model inputs
 

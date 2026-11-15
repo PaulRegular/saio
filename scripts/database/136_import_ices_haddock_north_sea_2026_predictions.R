@@ -1,7 +1,7 @@
 assessment_id <- "ices_haddock_north_sea_2026"
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", assessment_id)
+cache <- file.path(root, "source_cache/melanogrammus_aeglefinus", assessment_id)
 model_url <- paste0(
   "https://stockassessment.org/datadisk/stockassessment/userdirs/user3/",
   "NShaddock_WGNSSK2026_Run1/run/model.RData"

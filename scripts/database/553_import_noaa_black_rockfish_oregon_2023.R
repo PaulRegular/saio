@@ -1,10 +1,10 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_noaa_black_rockfish_2023")
+cache <- file.path(root, "source_cache", "sebastes_melanops/noaa_black_rockfish_oregon_2023")
 model_dir <- file.path(cache, "oregon_model_files", "Reference model")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 
 candidate_id <- "NOAA:14407"
@@ -17,7 +17,7 @@ report_url <- "https://www.pcouncil.org/documents/2024/02/status-of-black-rockfi
 archive_url <- "https://www.pcouncil.org/documents/black-rockfish-or-2023-model-files-zip-file/"
 manual_url <- "https://nmfs-ost.github.io/ss3-doc/SS330_User_Manual_release.html"
 
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 read_table <- function(path) {
   utils::read.csv(path, stringsAsFactors = FALSE, check.names = FALSE,

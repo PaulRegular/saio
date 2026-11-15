@@ -2,7 +2,7 @@
 
 The stock is ICES haddock in Division 6.b (`had.27.6b`), represented by the existing metadata record `ck_ices_wgcse_aeglefinus_rock6b`. The 2026 WGCSE assessment is the current applied assessment represented here. It uses data through 2025; the report's stochastic 2026 projection row is not mixed into fitted historical outputs.
 
-The local ignored source cache is `source_cache/ck_ices_wgcse_aeglefinus_rock6b/`. Its manifest records the 2026 WGCSE report and annexes, the 2024 WKBGAD benchmark report, the 2025 SAM fit object, and a pinned public copy of the 2026 TAF code, with retrieval dates, URLs, revisions and SHA-256 checksums. The 2025 object is not the 2026 fit. It was used only to check overlapping observations and to recover Q3 sample-time fractions that the 2026 report identifies only as quarter 3.
+The local ignored source cache is `source_cache/melanogrammus_aeglefinus/ck_ices_wgcse_aeglefinus_rock6b/`. Its manifest records the 2026 WGCSE report and annexes, the 2024 WKBGAD benchmark report, the 2025 SAM fit object, and a pinned public copy of the 2026 TAF code, with retrieval dates, URLs, revisions and SHA-256 checksums. The 2025 object is not the 2026 fit. It was used only to check overlapping observations and to recover Q3 sample-time fractions that the 2026 report identifies only as quarter 3.
 
 ## Inputs and assumptions
 

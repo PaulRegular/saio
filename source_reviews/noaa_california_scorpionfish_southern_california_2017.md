@@ -1,5 +1,7 @@
 # NOAA California scorpionfish: Southern California
 
+SAIO stock `noaa_california_scorpionfish_southern_california`. Assessment `noaa_california_scorpionfish_southern_california_2017`.
+
 ## Stock and assessment
 
 NOAA Stock SMART ID 10461 is the California scorpionfish (*Scorpaena guttata*) unit south of Point Conception to the U.S.–Mexico border. The 2017 benchmark assessment is the latest full assessment located and uses data through 2016. The July 2025 Pacific Coast Groundfish SAFE continues to report the stock from that assessment. The official report, model archive and SAFE are cached locally; URLs, retrieval date, byte counts and SHA-256 checksums are recorded in `provenance/noaa_california_scorpionfish_southern_california_2017/manifest.csv`.
@@ -17,6 +19,8 @@ The 233 native length-composition records cover 1970–2016. They retain source 
 The archive also supplies 198 NWFSC bottom-trawl conditional age-at-length records from 2005–2016. The input contains female and male raw age counts for ages 0–21, length bounds 14–39, source sample size, partition code and age-error code 1. The paired age vectors sum to each source row's `Nsamp`. The database stores these as sex-specific cells while preserving the shared source sample size and joint-sex origin. These are conditional samples, not an unconditional age distribution or age-specific abundance index.
 
 The model generates age-specific weights from sex-specific growth and length-weight relationships. Maturity is specified as a length-based logistic relationship. The base model fixes natural mortality at 0.235 per year for both sexes. The report's 0.164 value is a separate low-M sensitivity state, not the base-case input.
+
+Point Conception is at 34°27′ N in the source assessment description. A reconstruction of the NWFSC index by age would need to align its conditional age-at-length samples, length compositions and aggregate biomass index. For fishery removals, applying a survey age-length key to fishery length compositions would also require evidence that the key represents those fishery samples. The canonical record preserves the source likelihood inputs.
 
 ## Outputs
 

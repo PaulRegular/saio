@@ -5,7 +5,7 @@ candidate_id <- "INIDEP:MERLUCCIUS_HUBBSI_NORTH41"
 candidate_unit_id <- "argentina_merluccius_hubbsi_north_41s"
 candidate <- read_source_table("discovery/candidates.csv")
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-selection <- read_source_table("discovery/selected_batch_13_2026.csv")
+selection <- read_source_table("discovery/selections/selected_batch_13_2026.csv")
 selection <- selection[selection$candidate_id == candidate_id, , drop = FALSE]
 units <- read_source_table("discovery/inventory_units.csv")
 unit <- units[!is.na(units$candidate_unit_id) &

@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_noaa_pacific_mackerel_2025")
+cache <- file.path(root, "source_cache", "scomber_japonicus/noaa_pacific_mackerel_2025")
 model_files <- file.path(cache, "Mackerel_2023_Model_Files")
 assessment_2023 <- "noaa_pacific_mackerel_2023"
 assessment_2025 <- "noaa_pacific_mackerel_2025"
@@ -8,7 +8,7 @@ stock_id <- "noaa_pacific_mackerel_pacific_coast"
 candidate_id <- "NOAA:10163"
 candidate_unit_id <- stock_id
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 read_csv <- function(path) utils::read.csv(path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
@@ -587,7 +587,7 @@ inventory$matched_stock_id[inventory_i] <- stock_id
 inventory$match_status[inventory_i] <- "matched"
 inventory$import_status[inventory_i] <- "partial"
 
-selected_path <- file.path(root, "discovery", "selected_batch_23_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_23_2026.csv")
 selected <- read_csv(selected_path)
 selected_i <- which(selected$candidate_id == candidate_id)
 if (length(selected_i) != 1L ||

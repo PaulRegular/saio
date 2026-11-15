@@ -8,7 +8,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 cache_dir <- file.path("source_cache", "discovery_noaa_south_atlantic_vermilion_snapper_2018")
 manifest_path <- file.path("provenance", "discovery_noaa_south_atlantic_vermilion_snapper_2018", "sources.csv")

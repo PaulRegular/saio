@@ -1,4 +1,4 @@
-source('scripts/database/468_screen_ices_pelagic_redfish_2026.R')
+source('scripts/discovery/468_screen_ices_pelagic_redfish_2026.R')
 root <- "."
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)

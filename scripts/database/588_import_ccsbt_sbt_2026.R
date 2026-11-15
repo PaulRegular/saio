@@ -166,7 +166,7 @@ output <- function(type, measure, value, unit, year, lwr = NA_character_,
     scenario = scenario,
     stringsAsFactors = FALSE
   )
-)
+}
 
 table1 <- "CCSBT ESC31/20 (2026), Table 1, PDF p. 12"
 table4 <- "CCSBT ESC31/20 (2026), Table 4, PDF p. 19"
@@ -245,8 +245,8 @@ append_rows("database/assumptions.csv", assumptions)
 append_rows("database/outputs.csv", outputs)
 append_rows("discovery/candidates.csv", candidate)
 
-source("scripts/database/195_summarize_discovery.R", local = TRUE)
-source("scripts/database/196_summarize_inventory_units.R", local = TRUE)
+source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
+source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
 
 cat("Imported CCSBT 2026 SBT source review and partial stock-status outputs.\n")
 cat("No numerical input arrays or annual age-specific output surfaces were available for import.\n")

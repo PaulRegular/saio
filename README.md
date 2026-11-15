@@ -102,8 +102,8 @@ Use `source_reference`, `source_type`, `transformation` and `notes` to trace a r
 
 ## Where SAIO started
 
-The Charbonneau–Keith Age-structured Marine Fish Database supplied SAIO’s initial list of stocks. The optional `charbonneau_id` column preserves the link to that catalogue. Use `stock_id` to join the SAIO tables. The original catalogue and the Master file used for the import are linked in the catalogue review.
-[Charbonneau–Keith catalogue](https://github.com/JulieCharbonneau/Age-structured-marine-fish-database) · [Pinned Master file and import notes](source_reviews/charbonneau_keith_master_catalogue.md)
+The Charbonneau–Keith Age-structured Marine Fish Database supplied SAIO’s initial list of stocks. The optional `charbonneau_id` column preserves the link to that catalogue. Use `stock_id` to join the SAIO tables.
+[Charbonneau–Keith catalogue](https://github.com/JulieCharbonneau/Age-structured-marine-fish-database) · [Pinned Master CSV](https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/Master.csv) · [SAIO catalogue review](source_reviews/charbonneau_keith_master_catalogue.md)
 
 ## Scope and verification
 

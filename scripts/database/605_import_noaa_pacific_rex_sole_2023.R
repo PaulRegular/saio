@@ -9,10 +9,10 @@ archive_url <- "https://www.pcouncil.org/documents/2024/02/rex-sole-2023-model-f
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 cache_options <- c(
-  file.path(root, "source_cache", cache_name),
+  file.path(root, "source_cache", "glyptocephalus_zachirus/noaa_pacific_coast_rex_sole_2023"),
   file.path(root, "..", "..", cache_name)
 )
 cache <- cache_options[dir.exists(cache_options)][1L]
@@ -519,7 +519,7 @@ stocks_existing <- read.csv(file.path(root, "database/stocks.csv"),
 assessments_existing <- read.csv(file.path(root, "database/assessments.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA"))
 candidates_path <- file.path(root, "discovery/candidates.csv")
-selected_path <- file.path(root, "discovery/selected_batch_15_2026.csv")
+selected_path <- file.path(root, "discovery/selections/selected_batch_15_2026.csv")
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"), colClasses = "character")
 selected <- read.csv(selected_path, stringsAsFactors = FALSE,
@@ -571,14 +571,14 @@ if (write_mode) {
   candidate$timing_evidence <- "The model uses one 12-month season and a native month/season code of 1. No fractional-year timing is verified; timing is not converted."
   candidate$output_evidence <- "The official report gives spawning-output and recruitment estimates with 95% asymptotic intervals for 2013-2023. Report.sso provides point-estimate age surfaces through the archived forecast year 2034; age-specific uncertainty is unavailable."
   candidate$decision_reason <- "Selected and partially imported from the official 2023 production base run. Native catch, discard, aggregate index, composition, assumption, and fitted-output data are preserved. No observed fishery catch-at-age or age-specific abundance index is present; keep reconstructed age series outside the canonical source record."
-  candidate$notes <- "NOAA Stock SMART entity 10059, assessment 12970 (locked); separate from Gulf of Alaska rex sole entities 10058, 15410 and 15411. Stock Synthesis 3.30.21; data through 2022; default archived forecast through 2034. See source_reviews/noaa_pacific_rex_sole_2023.md and source_cache/discovery_noaa_pacific_rex_2023/sources.csv."
+  candidate$notes <- "NOAA Stock SMART entity 10059, assessment 12970 (locked); separate from Gulf of Alaska rex sole entities 10058, 15410 and 15411. Stock Synthesis 3.30.21; data through 2022; default archived forecast through 2034. See source_reviews/noaa_pacific_rex_sole_2023.md and source_cache/glyptocephalus_zachirus/noaa_pacific_coast_rex_sole_2023/sources.csv."
   replace_candidate_register_row(candidates_path, candidate_row, candidate, candidate_id)
 
   selected$curation_status[selected_row] <- "partial_source_import"
   write.csv(selected, selected_path, row.names = FALSE, na = "")
-  source(file.path(root, "scripts/database/195_summarize_discovery.R"),
+  source(file.path(root, "scripts/discovery/195_summarize_discovery.R"),
     local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts/database/196_summarize_inventory_units.R"),
+  source(file.path(root, "scripts/discovery/196_summarize_inventory_units.R"),
     local = new.env(parent = globalenv()))
   cat("Imported the verified source record and marked it partial.\n")
 }

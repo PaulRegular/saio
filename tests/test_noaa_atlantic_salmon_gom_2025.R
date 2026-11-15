@@ -24,7 +24,7 @@ database_hash <- if (.Platform$OS.type == 'windows') {
 }
 
 metadata_env <- new.env(parent = emptyenv())
-load(file.path(root, 'source_cache', 'discovery_noaa_stocksmart',
+load(file.path(root, 'source_cache', 'shared/noaa_stocksmart',
   'stock_assessment_summary.rda'), envir = metadata_env)
 metadata <- metadata_env$stock_assessment_summary
 latest <- metadata[metadata$stock_id == 10498, , drop = FALSE]

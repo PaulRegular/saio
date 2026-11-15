@@ -1,7 +1,7 @@
 root <- normalizePath(".", mustWork = TRUE)
 id <- "afsc_pollock_goa_2024"
 assumptions <- read.csv(file.path(root, "database/assumptions.csv"), stringsAsFactors = FALSE, check.names = FALSE, na.strings = character())
-source <- readLines(file.path(root, "source_cache/afsc_pollock_goa_2024/data_2024_goa_pk.cpp"), warn = FALSE, encoding = "UTF-8")
+source <- readLines(file.path(root, "source_cache/gadus_chalcogrammus/afsc_pollock_goa_2024/data_2024_goa_pk.cpp"), warn = FALSE, encoding = "UTF-8")
 active_source <- source[!grepl("^\\s*//", source)]
 rows <- assumptions[assumptions$assessment_id == id, ]
 expected <- data.frame(

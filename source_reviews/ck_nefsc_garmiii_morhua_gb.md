@@ -80,7 +80,7 @@ the revised 2024 Georges Bank assessment have been copied into this record.
   used only to review later assessment status.
 
 The 2012 report and summary are cached in the gitignored
-`source_cache/ck_nefsc_garmiii_morhua_gb_2012/` folder with retrieval dates,
+`source_cache/gadus_morhua/nefsc_garmiii_gb_cod_2012/` folder with retrieval dates,
 URLs and SHA-256 hashes. A direct download of the 2015 review returned Access
 Denied; it is recorded as unavailable in the local cache manifest and was not
 used to extract numerical data.

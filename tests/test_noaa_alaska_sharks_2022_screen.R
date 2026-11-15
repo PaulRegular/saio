@@ -32,7 +32,7 @@ stopifnot(file.exists(review),
   grepl('species components and multi-species complexes remain distinct',
     paste(readLines(review, warn = FALSE), collapse = ' '), fixed = TRUE))
 
-cache <- file.path(root, 'source_cache', 'discovery_noaa_stocksmart')
+cache <- file.path(root, 'source_cache', 'shared/noaa_stocksmart')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 expected <- c('noaa_bsai_shark_assessment_2022.pdf',
   'npfmc_bsai_safe_intro_2024.pdf')

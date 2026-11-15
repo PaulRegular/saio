@@ -63,7 +63,7 @@ supporting source data, not converted into an age-specific abundance index.
 ## Source files and provenance
 
 The five official SEDAR PDFs listed below are cached in the ignored local
-directory source_cache/noaa_gag_sedar71_2021/.
+directory source_cache/mycteroperca_microlepis/noaa_gag_south_atlantic_sedar71_2021/.
 Their retrieval date, URLs, cited revision, byte sizes, and SHA-256 checksums
 are recorded in that directory's manifest.csv.
 

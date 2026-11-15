@@ -23,7 +23,7 @@ inputs <- read_table('inputs', 'noaa_goa_pop_2023')
 outputs <- read_table('outputs', 'noaa_goa_pop_2023')
 candidate <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-selected <- read.csv(file.path(root, 'discovery', 'selected_batch_01_2026.csv'),
+selected <- read.csv(file.path(root, 'discovery/selections', 'selected_batch_01_2026.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 
 assessment_id <- 'noaa_goa_pop_2023'

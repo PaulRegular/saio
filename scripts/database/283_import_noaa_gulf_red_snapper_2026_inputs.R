@@ -1,14 +1,14 @@
 root <- "."
 assessment_id <- "noaa_gulf_red_snapper_2026"
 candidate_id <- "NOAA:10230"
-source_dir <- "source_cache/discovery_noaa_gom_red_snapper_2026"
+source_dir <- "source_cache/lutjanus_campechanus/noaa_gulf_red_snapper_2026"
 manifest <- read.csv("provenance/discovery_noaa_gom_red_snapper_2026/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source("scripts/database/pacific_tables.R")
-source("scripts/database/candidate_register_io.R")
+source("scripts/discovery/candidate_register_io.R")
 
 sha256_file <- function(path) {
   if (.Platform$OS.type == "windows") {
@@ -604,7 +604,7 @@ update_database_metadata <- function() {
       "SSC review was pending, so is_applied=FALSE. Source inputs now include aggregate indices,",
       "commercial and recreational catches, reported discard errors, and fixed M-at-age.",
       "Catch compositions, numerical age-specific maturity/weight surfaces, and age-specific N/F remain incomplete.",
-      "See discovery/source_reviews/noaa_gulf_red_snapper_2026.md."
+      "See source_reviews/noaa_gulf_red_snapper_2026.md."
     )
   )))
   upsert_small_csv("database/assessments.csv", "assessment_id", assessment_id,
@@ -646,7 +646,7 @@ update_database_metadata <- function() {
   candidates$notes[candidate_row] <- paste(
     "Official aggregate catches, fixed M, survey index series and summary outputs are imported.",
     "The final model's numerical composition arrays, age-specific biological surfaces, and age-specific N/F outputs remain unavailable.",
-    "See discovery/source_reviews/noaa_gulf_red_snapper_2026.md."
+    "See source_reviews/noaa_gulf_red_snapper_2026.md."
   )
   replace_candidate_register_row(candidate_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)

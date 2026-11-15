@@ -8,7 +8,7 @@ The canonical record represents the official 2025 ICES assessment of Faroe saith
 
 The native fit used `stockassessment` 0.12.0 at RemoteSha `1cc464b80f6f`. It converged with optimizer code 0 (`relative convergence (4)`), objective -211.8084, a positive-definite Hessian, and maximum absolute fixed-effect gradient `2.46e-12`. Its 2025 recruitment, SSB, total biomass, and Fbar are 23,847.31 thousand fish, 57,508.5 tonnes, 118,011.9 tonnes, and 0.4804 per year. These agree with Table 6.5.3 of the 2025 NWWG report after its displayed rounding.
 
-The native model, data object, configuration, R code, input files, ICES SAG XML and the NWWG chapter are cached locally in the gitignored `source_cache/ck_ices_nwwg_virens_fa5b_2025/` folder. Its `manifest.csv` records retrieval times, source URLs, byte sizes, and SHA-256 checksums.
+The native model, data object, configuration, R code, input files, ICES SAG XML and the NWWG chapter are cached locally in the gitignored `source_cache/pollachius_virens/ices_saithe_faroe_2025/` folder. Its `manifest.csv` records retrieval times, source URLs, byte sizes, and SHA-256 checksums.
 
 ## Inputs and assumptions
 

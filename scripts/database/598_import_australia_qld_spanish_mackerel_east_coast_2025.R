@@ -56,7 +56,7 @@ outputs_path <- file.path(database, "outputs.csv")
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
 candidates_path <- file.path(root, "discovery/candidates.csv")
-selected_path <- file.path(root, "discovery/selected_batch_11_2026.csv")
+selected_path <- file.path(root, "discovery/selections/selected_batch_11_2026.csv")
 candidates <- read_csv(candidates_path)
 selected <- read_csv(selected_path)
 ci <- which(candidates$candidate_id == candidate_id)
@@ -221,13 +221,13 @@ if (dry_run) {
   for (path in c(inputs_path, outputs_path)) {
     if (assessment_id %in% first_column(path)) stop("Assessment rows already exist in ", basename(path), call. = FALSE)
   }
-  source(file.path(root, "scripts/database/candidate_register_io.R"))
+  source(file.path(root, "scripts/discovery/candidate_register_io.R"))
   candidate <- candidates[ci, , drop = FALSE]
   candidate$matched_stock_id <- stock_id
   candidate$match_status <- "matched"
   candidate$import_status <- "partial"
   candidate$review_date <- retrieved_on
-  candidate$notes <- "See discovery/source_reviews/australia_qld_spanish_mackerel_east_coast_2025.md. Canonical record contains only the selected rounded catch table and published summary outputs; raw likelihood inputs remain unavailable."
+  candidate$notes <- "See source_reviews/australia_qld_spanish_mackerel_east_coast.md. Canonical record contains only the selected rounded catch table and published summary outputs; raw likelihood inputs remain unavailable."
   selected_row <- selected[si, , drop = FALSE]
   selected_row$curation_status <- "partial_source_import"
   append_rows(stocks_path, stock)
@@ -238,7 +238,7 @@ if (dry_run) {
   replace_candidate_register_row(candidates_path, ci, candidate, candidate_id)
   selected[si, ] <- selected_row
   utils::write.csv(selected, selected_path, row.names = FALSE, na = "")
-  source(file.path(root, "scripts/database/195_summarize_discovery.R"), local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts/database/196_summarize_inventory_units.R"), local = new.env(parent = globalenv()))
+  source(file.path(root, "scripts/discovery/195_summarize_discovery.R"), local = new.env(parent = globalenv()))
+  source(file.path(root, "scripts/discovery/196_summarize_inventory_units.R"), local = new.env(parent = globalenv()))
   cat("Imported a partial, source-reported 2025 assessment record for Australian east coast Spanish mackerel.\n")
 }

@@ -1,6 +1,6 @@
 base <- "."
 db <- file.path(base, "database")
-cache <- file.path(base, "source_cache/ices_cod_western_baltic_2026")
+cache <- file.path(base, "source_cache/gadus_morhua/ices_cod_western_baltic_2026")
 id <- "ices_cod_western_baltic_2026"
 old_id <- "ices_cod_western_baltic_2025"
 source_url <- "https://literatur.thuenen.de/digbib_extern/dn071152.pdf"

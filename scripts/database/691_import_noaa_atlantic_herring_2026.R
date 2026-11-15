@@ -11,7 +11,7 @@ run_report <- paste0(zip_url, "#archive/Atlantic_Herring_MT2026.pdf")
 parameter_report <- paste0(zip_url, "#archive/wham_par_tables.pdf")
 fixed_source <- paste0(zip_url, "#archive/FixedCAA_Proportions_Table.csv")
 mobile_source <- paste0(zip_url, "#archive/MobileCAA_Proportions_Table.csv")
-cache <- file.path(root, "source_cache/discovery_noaa_herring_2026")
+cache <- file.path(root, "source_cache/clupea_harengus/noaa_atlantic_herring_gom_georges_bank_2026")
 provenance <- file.path(root, "provenance", assessment_id, "sources.csv")
 manifest <- read.csv(provenance, stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE)
@@ -266,7 +266,7 @@ if (write_mode) {
   append_csv(inputs_new, file.path(database, "inputs.csv"))
   append_csv(outputs_new, file.path(database, "outputs.csv"))
 
-  source(file.path(root, "scripts/database/candidate_register_io.R"), local = TRUE)
+  source(file.path(root, "scripts/discovery/candidate_register_io.R"), local = TRUE)
   candidates_path <- file.path(root, "discovery/candidates.csv")
   candidates <- read.csv(candidates_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
   ci <- which(candidates$candidate_id == candidate_id)
@@ -296,7 +296,7 @@ if (write_mode) {
   inventory$eligibility[ui] <- "unresolved"
   inventory$import_status[ui] <- "partial"
   replace_csv_register_row(inventory_path, ui, inventory[ui, , drop = FALSE], "unit_key", paste0("candidate:", stock_id))
-  batch_path <- file.path(root, "discovery/selected_batch_42_2026.csv")
+  batch_path <- file.path(root, "discovery/selections/selected_batch_42_2026.csv")
   batch <- read.csv(batch_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
   batch$curation_status[batch$candidate_id == candidate_id] <- "partial_source_import"
   write.csv(batch, batch_path, row.names = FALSE, na = "")

@@ -6,7 +6,7 @@ canonical_paths <- c(stocks = 'database/stocks.csv',
   inputs = 'database/inputs.csv', outputs = 'database/outputs.csv')
 canonical_before <- tools::md5sum(file.path(root, canonical_paths))
 
-source(file.path(root, 'scripts', 'database',
+source(file.path(root, 'scripts', 'discovery',
   '532_screen_noaa_blacktip_assessments_2018_2020.R'))
 
 register <- read_table('discovery/candidates.csv')

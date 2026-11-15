@@ -1,5 +1,5 @@
 root <- "."
-source(file.path(root, 'scripts', 'database',
+source(file.path(root, 'scripts', 'discovery',
   '502_screen_noaa_pacific_grenadier_2010.R'))
 
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),

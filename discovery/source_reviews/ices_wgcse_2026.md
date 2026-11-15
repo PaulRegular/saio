@@ -1,6 +1,6 @@
 # ICES WGCSE 2026 regional screening
 
-The full [2026 Working Group for the Celtic Seas Ecoregion report](https://doi.org/10.17895/ices.pub.32625759.v1) was retrieved from ICES Figshare on 2026-10-29 and cached under `source_cache/discovery_ices_wgbie_2026/`. The report’s section 1.3 classifies assessment methods; stock chapters and the audit annex provide run-specific evidence. The full report and its direct-file URL and checksum are recorded in that cache manifest. This review does not create canonical assessment records.
+The full [2026 Working Group for the Celtic Seas Ecoregion report](https://doi.org/10.17895/ices.pub.32625759.v1) was retrieved from ICES Figshare on 2026-10-29 and cached under `source_cache/shared/ices_wgbie_2026/`. The report’s section 1.3 classifies assessment methods; stock chapters and the audit annex provide run-specific evidence. The full report and its direct-file URL and checksum are recorded in that cache manifest. This review does not create canonical assessment records.
 
 ## Age-based assessments
 
@@ -13,11 +13,11 @@ WGCSE identified 14 category-1 age-based assessment units. Category 1 describes 
 | `whg.27.7b-ce-k` Celtic Sea whiting | Provisional new; screened | Eligible; partial source import | The 2026 WGCSE chapter supplies catch, weight, VAST survey, commercial index, fixed biology, F-at-age, N-at-age and aggregate outputs. Run-matched landings fractions, exact timing and age-specific output uncertainty remain unavailable; see `ices_whiting_7b_ce_k_2026.md`. |
 | `anf.27.3a46` Northern Shelf anglerfish | Provisional new; screened | Ineligible | Although assessed with age-structured SS3, the 2026 production assessment uses commercial catch-at-length and size-class abundance indices. The report says the 2011 ageing exchange found little agreement among readers; no catch-at-age or survey age series was verified. |
 | `bss.27.4bc7ad-h` northern seabass | Provisional new; screened | Unresolved | The 2026 SS3 update reports length compositions and conditional age-at-length, plus length-based maturity. |
-| `sol.27.7a` Irish Sea sole | Provisional new; screened | Unresolved | The separate `ices_sol_27_7a_2026.md` review documents the unrecovered revised maturity surface and run-matched input files. |
+| `sol.27.7a` Irish Sea sole | Matched; partial import | Unresolved | The [stock source review](../../source_reviews/ices_sol_27_7a.md) identifies the imported fields and the missing maturity and observation weights. |
 
 The two new eligible candidates are distinct from existing same-species records: pollack is *Pollachius pollachius*, not saithe (*P. virens*); Celtic Sea whiting is a different ICES stock code and boundary from Irish Sea whiting. New identities remain provisional until the NOAA, ICES and DFO inventories are reconciled across organizations.
 
-The current 2026 production evidence for pollack and Celtic Sea whiting was checked against the WGCSE report, the 2026 stock annexes, and the applicable ICES Stock Assessment Graphs. Official PDFs for those annexes, the WKBSS3 pollack benchmark report and the WKBSEABASS benchmark report are cached locally in `source_cache/discovery_ices_wgcse_2026/`; that folder's `sources.csv` records direct download URLs, retrieval dates and SHA-256 checksums. The WKBSEABASS and WGCSE sources show that an age-based model label can coexist with length-composition likelihoods, which is why northern seabass remains unresolved.
+The current 2026 production evidence for pollack and Celtic Sea whiting was checked against the WGCSE report, the 2026 stock annexes, and the applicable ICES Stock Assessment Graphs. Official PDFs for those annexes, the WKBSS3 pollack benchmark report and the WKBSEABASS benchmark report are cached locally in `source_cache/shared/ices_wgcse_2026/`; that folder's `sources.csv` records direct download URLs, retrieval dates and SHA-256 checksums. The WKBSEABASS and WGCSE sources show that an age-based model label can coexist with length-composition likelihoods, which is why northern seabass remains unresolved.
 
 ## Other assessment methods
 

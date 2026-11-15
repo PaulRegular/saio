@@ -6,9 +6,9 @@ args <- commandArgs(trailingOnly = TRUE)
 write_mode <- "--write" %in% args
 .libPaths(c(file.path(root, "source_cache", "R-library"), .libPaths()))
 
-assessment_pdf <- file.path(root, "source_cache", "mpi_ling_lin34_2025", "FAR-2025-48-LIN3-4-assessment.pdf")
-support_pdf <- file.path(root, "source_cache", "mpi_ling_lin34_2025", "FAR-2025-47-LIN3-4-inputs.pdf")
-plenary_pdf <- file.path(root, "source_cache", "mpi_ling_lin34_2025", "Fisheries-Assessment-Plenary-2025-volume-2-ling.pdf")
+assessment_pdf <- file.path(root, "source_cache", "genypterus_blacodes/mpi_ling_lin34_2025", "FAR-2025-48-LIN3-4-assessment.pdf")
+support_pdf <- file.path(root, "source_cache", "genypterus_blacodes/mpi_ling_lin34_2025", "FAR-2025-47-LIN3-4-inputs.pdf")
+plenary_pdf <- file.path(root, "source_cache", "genypterus_blacodes/mpi_ling_lin34_2025", "Fisheries-Assessment-Plenary-2025-volume-2-ling.pdf")
 manifest_path <- file.path(root, "provenance", "mpi_ling_lin34_2025_sources.csv")
 source_files <- c(assessment_pdf, support_pdf, plenary_pdf)
 expected_hash <- c(
@@ -541,7 +541,7 @@ if (write_mode) {
     timing_evidence = "Calendar-year model; Tangaroa summer survey sampling time is 0.2. The commercial age-composition time_step differs between the embedded input blocks and Table 1; no fraction was inferred.",
     output_evidence = "Imported posterior B0 and B2025 with 95% credible intervals, B2025/B0, Table 8 M parameter estimates, and Table 10 B2030 projection summaries. Annual numerical N-at-age and F-at-age arrays are not tabulated."
   ))
-  replace_register_row(file.path(root, "discovery", "selected_batch_02_2026.csv"), "candidate_id", candidate_id,
+  replace_register_row(file.path(root, "discovery/selections", "selected_batch_02_2026.csv"), "candidate_id", candidate_id,
     list(curation_status = "partial_source_import"))
 }
 

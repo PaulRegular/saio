@@ -85,7 +85,7 @@ stopifnot(
 register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- register[register$candidate_id == "NOAA:12149", , drop = FALSE]
-selected <- read.csv("discovery/selected_batch_37_2026.csv",
+selected <- read.csv("discovery/selections/selected_batch_37_2026.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 selected <- selected[selected$candidate_id == "NOAA:12149", , drop = FALSE]
 stopifnot(

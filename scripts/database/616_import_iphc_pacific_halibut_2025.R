@@ -10,7 +10,7 @@ if (!requireNamespace("pdftools", quietly = TRUE)) {
 }
 
 cache_candidates <- c(
-  file.path(root, "source_cache", "discovery_iphc_pacific_halibut"),
+  file.path(root, "source_cache", "hippoglossus_stenolepis/iphc_pacific_halibut"),
   file.path(root, "..", "..", "discovery_iphc_pacific_halibut")
 )
 cache <- cache_candidates[dir.exists(cache_candidates)][1L]
@@ -546,7 +546,7 @@ if (!write_mode) {
     write.csv(x, path, row.names = FALSE, na = "")
   }
   register_env <- new.env(parent = globalenv())
-  source(file.path(root, "scripts", "database", "candidate_register_io.R"),
+  source(file.path(root, "scripts", "discovery", "candidate_register_io.R"),
     local = register_env)
 
   existing_stocks <- read_csv("database/stocks.csv")
@@ -557,7 +557,7 @@ if (!write_mode) {
     stop("IPHC Pacific halibut rows already exist in the canonical database.", call. = FALSE)
   }
   candidates <- read_csv("discovery/candidates.csv")
-  selected <- read_csv("discovery/selected_unworked_2026.csv")
+  selected <- read_csv("discovery/selections/selected_unworked_2026.csv")
   inventory <- read_csv("discovery/inventory_units.csv")
   candidate_rows <- match(candidate_ids, candidates$candidate_id)
   selected_row <- which(selected$candidate_id == "NOAA:11082")
@@ -630,7 +630,7 @@ if (!write_mode) {
     register_env$replace_candidate_register_row("discovery/candidates.csv",
       candidate_row, candidate, candidate$candidate_id)
   }
-  replace_register_row("discovery/selected_unworked_2026.csv", "candidate_id", "NOAA:11082",
+  replace_register_row("discovery/selections/selected_unworked_2026.csv", "candidate_id", "NOAA:11082",
     list(curation_status = "source_curated_partial",
       selection_basis = paste("The 2025 IPHC production assessment, with a 31 October",
         "2025 data cutoff, remains the latest completed run. Imported public",
@@ -642,9 +642,9 @@ if (!write_mode) {
     list(unit_key = paste0("stock:", stock_id), matched_stock_id = stock_id,
       match_status = "matched", import_status = "partial"))
 
-  source(file.path(root, "scripts", "database", "195_summarize_discovery.R"),
+  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
     local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts", "database", "196_summarize_inventory_units.R"),
+  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
     local = new.env(parent = globalenv()))
   cat("Imported partial IPHC Pacific halibut 2025 source data.\n")
 }

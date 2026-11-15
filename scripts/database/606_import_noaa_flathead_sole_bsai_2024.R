@@ -11,8 +11,8 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
-cache_root <- file.path(root, "source_cache/noaa_flatfish_screening_20261029")
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
+cache_root <- file.path(root, "source_cache/shared/noaa_flatfish_screening_20261029")
 cache <- file.path(cache_root, "bsai_fhs_2024_final_model")
 manifest <- read.csv(file.path(root,
   "provenance/noaa_flatfish_screening_20261029/sources.csv"),
@@ -471,7 +471,7 @@ stocks_existing <- read.csv(file.path(root, "database/stocks.csv"),
 assessments_existing <- read.csv(file.path(root, "database/assessments.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA"))
 candidates_path <- file.path(root, "discovery/candidates.csv")
-selected_path <- file.path(root, "discovery/selected_batch_16_2026.csv")
+selected_path <- file.path(root, "discovery/selections/selected_batch_16_2026.csv")
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"), colClasses = "character")
 selected <- read.csv(selected_path, stringsAsFactors = FALSE,
@@ -516,9 +516,9 @@ if (write_mode) {
   selected$curation_status[selected_row] <- "partial_source_import"
   selected$detailed_source_url[selected_row] <- paste(report_url, model_reference, sep = "; ")
   write.csv(selected, selected_path, row.names = FALSE, na = "")
-  source(file.path(root, "scripts/database/195_summarize_discovery.R"),
+  source(file.path(root, "scripts/discovery/195_summarize_discovery.R"),
     local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts/database/196_summarize_inventory_units.R"),
+  source(file.path(root, "scripts/discovery/196_summarize_inventory_units.R"),
     local = new.env(parent = globalenv()))
   cat("Imported the verified source record and marked it partial.\n")
 }

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache/afsc_pollock_ebs_2024")
+cache <- file.path(root, "source_cache/gadus_chalcogrammus/afsc_pollock_ebs_2024")
 data_file <- file.path(cache, "pm_24.dat")
 inputs_file <- file.path(root, "database/inputs.csv")
 assessment_id <- "afsc_pollock_ebs_2024"

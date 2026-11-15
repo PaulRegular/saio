@@ -1,6 +1,6 @@
 source("scripts/database/pacific_tables.R")
 id <- "afsc_cod_ai_2024"
-cache <- "source_cache/afsc_cod_ai"
+cache <- "source_cache/gadus_macrocephalus/afsc_cod_ai"
 report <- "https://files.npfmc.org/SAFE/2024/AIpcod.pdf"
 lines <- unlist(strsplit(paste(pdftools::pdf_text(file.path(cache,"assessment_2024.pdf")),collapse="\n"),"\n"))
 table_lines <- function(number) {

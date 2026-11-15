@@ -10,4 +10,4 @@ The [2024 SAFE chapter](https://files.npfmc.org/SAFE/2024/BSAIkamchatka.pdf) doc
 
 The report fixes natural mortality at 0.11 per year and describes growth, length-weight and maturity biology. Age-specific biological vectors and timing would still need to be extracted or stated as approximations if the source search is reopened. The assessment output is available, but inputs do not meet the catch-age requirement.
 
-The 2024 SAFE, survey introduction and 2024 SSC report are cached with retrieval details and checksums in `source_cache/noaa_flatfish_screening_20261029/sources.csv`.
+The 2024 SAFE, survey introduction and 2024 SSC report are cached with retrieval details and checksums in `source_cache/shared/noaa_flatfish_screening_20261029/sources.csv`.

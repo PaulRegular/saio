@@ -51,13 +51,13 @@ visible; do not substitute inaccessible historical details for the documented
 
 ## Sources
 
-- [NOAA Stock SMART](https://apps-st.fisheries.noaa.gov/stocksmart) — candidate 10448, assessment 11866, year 2010, data through 2009, DB-SRA, full acceptance; snapshot is cached under `source_cache/discovery_noaa_stocksmart/`.
+- [NOAA Stock SMART](https://apps-st.fisheries.noaa.gov/stocksmart) — candidate 10448, assessment 11866, year 2010, data through 2009, DB-SRA, full acceptance; snapshot is cached under `source_cache/shared/noaa_stocksmart/`.
 - [NOAA Technical Memorandum SWFSC-460 (2010)](https://www.pcouncil.org/documents/2010/06/estimates-of-sustainable-yield-for-50-data-poor-stocks-in-the-pacific-coast-groundfish-fishery-management-plan-noaa-technical-memorandum-noaa-tm-nmfs-swfsc-460-june-2010.pdf/) — DB-SRA methods, life-history priors, catch histories and 2010 OFL results.
 - [PFMC 2022 detailed data summary for 2023 assessments](https://www.pcouncil.org/documents/2022/05/f-3-attachment-4-detailed-summary-of-available-data-to-support-west-coast-groundfish-stock-assessments-in-2023-electronic-only.pdf/) — most recent assessment label and age-sample counts.
 - [NOAA Amendment 37 Phase 2 analysis (2026)](https://www.fisheries.noaa.gov/s3/2026-02/am-37-fpa-analysis-01-2026.pdf) — identifies the 2000 California-only assessment in its assessment history.
 - [Bank Rockfish 2000 assessment](http://www.pcouncil.org/wp-content/uploads/Bank_Rockfish_2000_Assessment.pdf) — cited by NOAA/PFMC sources but unavailable at that URL on 2026-10-31.
 
 The three retrieved PDFs are cached locally under
-`source_cache/discovery_noaa_bank_rockfish_california/`; `sources.csv` records
+`source_cache/sebastes_rufus/noaa_bank_rockfish_california/`; `sources.csv` records
 their revisions, retrieval date, byte counts and SHA-256 checksums. The source
 cache is gitignored.

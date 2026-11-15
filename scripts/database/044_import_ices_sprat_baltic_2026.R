@@ -1,7 +1,7 @@
 assessment_id <- "ices_sprat_baltic_2026"
 stock_id <- "ices_sprat_baltic"
 root <- "."
-cache <- file.path(root, "source_cache", assessment_id)
+cache <- file.path(root, "source_cache/sprattus_sprattus", assessment_id)
 report_path <- file.path(cache, "wgbfas_2026_report.pdf")
 text_path <- file.path(cache, "wgbfas_2026_report.txt")
 report_url <- "https://doi.org/10.17895/ices.pub.32455056"

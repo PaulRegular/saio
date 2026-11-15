@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache/afsc_cod_goa_2026")
+cache <- file.path(root, "source_cache/gadus_macrocephalus/afsc_cod_goa_2026")
 run_dir <- file.path(cache, "model24_0_native_report_reconstruction")
 assessment_id <- "afsc_cod_goa_2026"
 outputs_path <- file.path(root, "database", "outputs.csv")

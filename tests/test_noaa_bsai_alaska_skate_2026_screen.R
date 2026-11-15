@@ -1,7 +1,7 @@
 root <- '.'
 cache <- file.path(root, 'source_cache/discovery_noaa_bsai_alaska_skate_2026')
 candidate_path <- file.path(root, 'discovery/candidates.csv')
-screen_path <- file.path(root, 'scripts/database/458_screen_noaa_bsai_alaska_skate_2026.R')
+screen_path <- file.path(root, 'scripts/discovery/458_screen_noaa_bsai_alaska_skate_2026.R')
 before <- readLines(candidate_path, warn = FALSE)
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')

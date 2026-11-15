@@ -4,7 +4,7 @@ cache <- file.path(root, "source_cache", "noaa_black_rockfish_california_2023")
 model_root <- file.path(cache, "model_files")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery", "selected_batch_36_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_36_2026.csv")
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 
 candidate_ids <- c("NOAA:17194", "NOAA:17195")
@@ -32,7 +32,7 @@ report_index_url <- paste0(
   "rebuilding-analyses-terms-of-reference/groundfish-stock-assessment-documents/"
 )
 
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 source(file.path(root, "scripts", "database", "pacific_tables.R"))
 
 if (!requireNamespace("r4ss", quietly = TRUE)) {

@@ -1,4 +1,4 @@
-source('scripts/database/508_screen_noaa_puget_sound_pink_2025.R')
+source('scripts/discovery/508_screen_noaa_puget_sound_pink_2025.R')
 
 root <- '.'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),

@@ -3,7 +3,7 @@ import_noaa_gulf_cobia_sedar28 <- function(root = ".", write = FALSE) {
   stock_id <- "noaa_cobia_gulf_mexico_2020"
   candidate_id <- "NOAA:10390"
   report_file <- "sedar28_gulf_cobia_update_2020.pdf"
-  source_dir <- file.path(root, "source_cache/discovery_noaa_gom_cobia_2020")
+  source_dir <- file.path(root, "source_cache/rachycentron_canadum/noaa_cobia_gulf_mexico_2020_sedar28_update")
   manifest <- read.csv(file.path(root, "provenance/discovery_noaa_gom_cobia_2020/sources.csv"),
     stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 
@@ -466,9 +466,9 @@ import_noaa_gulf_cobia_sedar28 <- function(root = ".", write = FALSE) {
   inventory_path <- file.path(root, "discovery/inventory_units.csv")
   inventory <- read.csv(inventory_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
-  source(file.path(root, "scripts/database/candidate_register_io.R"))
+  source(file.path(root, "scripts/discovery/candidate_register_io.R"))
   inventory_row <- candidate_inventory_row(inventory, candidate_id, stock_id)
-  selected_path <- file.path(root, "discovery/selected_batch_39_2026.csv")
+  selected_path <- file.path(root, "discovery/selections/selected_batch_39_2026.csv")
   selected <- read.csv(selected_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
   selected_row <- match(candidate_id, selected$candidate_id)

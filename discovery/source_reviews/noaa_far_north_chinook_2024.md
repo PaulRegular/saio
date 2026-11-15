@@ -53,4 +53,4 @@ The two status PDFs and data dictionary are cached under
 `source_cache/noaa_far_north_chinook_2024/`; its `sources.csv` records each URL,
 retrieval date, file size, and SHA-256 checksum. The pinned Stock SMART summary
 snapshot and provenance are retained in
-`source_cache/discovery_noaa_stocksmart/`.
+`source_cache/shared/noaa_stocksmart/`.

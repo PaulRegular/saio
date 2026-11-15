@@ -49,5 +49,5 @@ cat('ICES thornback ray 7.e identity, no-assessment evidence, and no-import chec
 
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts', 'database', '400_screen_ices_thornback_ray_7e_2024.R'))
+source(file.path(root, 'scripts', 'discovery', '400_screen_ices_thornback_ray_7e_2024.R'))
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)

@@ -42,7 +42,7 @@ The input tables report no 9-ring fish in 2025; corresponding catch-weight and s
 
 ## Provenance
 
-The locally cached HAWG full report, ICES SAG and advice pages, and scripts from the pinned TAF snapshot are listed with URLs, retrieval dates, and SHA-256 checksums in the gitignored `source_cache/discovery_ices_celtic_sea_herring_2026/sources.csv` manifest. The import is pinned to the report SHA-256 `A0C3928FDE2693CBBCC176ABFB7450E7F426E47898D2020529E1FB563542BB66` and extracted-table text SHA-256 `8CBE6EFE0D82F03F9D4F87EDF4D16FBCC48B491017532140803DD8A69A557FC6`.
+The locally cached HAWG full report, ICES SAG and advice pages, and scripts from the pinned TAF snapshot are listed with URLs, retrieval dates, and SHA-256 checksums in the gitignored `source_cache/clupea_harengus/ices_her_27_irls_2026/sources.csv` manifest. The import is pinned to the report SHA-256 `A0C3928FDE2693CBBCC176ABFB7450E7F426E47898D2020529E1FB563542BB66` and extracted-table text SHA-256 `8CBE6EFE0D82F03F9D4F87EDF4D16FBCC48B491017532140803DD8A69A557FC6`.
 
 - [ICES HAWG 2026 full report, section 6 and Tables 6.6.1.1–6.6.1.4](https://doi.org/10.17895/ices.pub.31424315)
 - [ICES SAG assessment graphs, key 21307](https://standardgraphs.ices.dk/ViewCharts.aspx?key=21307)

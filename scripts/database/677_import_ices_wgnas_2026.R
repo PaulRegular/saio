@@ -508,7 +508,7 @@ import_ices_wgnas_2026 <- function(root = ".", write = FALSE) {
   append_csv(input_add, inputs_path)
   append_csv(output_add, outputs_path)
 
-  source(file.path(root, "scripts", "database", "candidate_register_io.R"),
+  source(file.path(root, "scripts", "discovery", "candidate_register_io.R"),
     local = TRUE)
   candidate_path <- file.path(root, "discovery", "candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
@@ -583,9 +583,9 @@ import_ices_wgnas_2026 <- function(root = ".", write = FALSE) {
   )
   writeLines(review_lines, discovery_review, useBytes = TRUE)
 
-  source(file.path(root, "scripts", "database", "195_summarize_discovery.R"),
+  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
     local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts", "database", "196_summarize_inventory_units.R"),
+  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
     local = new.env(parent = globalenv()))
   source(file.path(root, "scripts", "database", "002_validate_database.R"),
     local = new.env(parent = globalenv()))

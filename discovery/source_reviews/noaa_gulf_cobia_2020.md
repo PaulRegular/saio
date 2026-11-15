@@ -8,7 +8,7 @@ The model is used for status determinations. The assessment review did not accep
 
 ## Sources and imported data
 
-The official assessment and its supporting work papers are cached locally under the ignored source_cache/discovery_noaa_gom_cobia_2020/ directory. The tracked provenance manifest records source URLs, retrieval date, file sizes, and SHA-256 checksums.
+The official assessment and its supporting work papers are cached locally under the ignored source_cache/rachycentron_canadum/noaa_cobia_gulf_mexico_2020_sedar28_update/ directory. The tracked provenance manifest records source URLs, retrieval date, file sizes, and SHA-256 checksums.
 
 - [SEDAR 28 Gulf Cobia Update report](https://sedarweb.org/documents/2019-update-sedar-28-gulf-of-mexico-cobia-final-report/)
 - [Recreational survey data work paper](https://sedarweb.org/documents/2019-s28update-wp-02-recreational-survey-data-for-cobia-in-the-gulf-of-mexico/)

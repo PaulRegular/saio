@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_ices_ling_5a_2026")
+cache <- file.path(root, "source_cache", "molva_molva/ices_ling_5a_2026")
 candidate_id <- "ICES:lin.27.5a"
 unit_id <- "ices_ling_5a"
 stock_id <- unit_id
@@ -15,7 +15,7 @@ graph_ref <- "ICES Standard Graphs, 2026 assessment, key 22475"
 
 if (!dir.exists(cache)) stop("The reviewed Icelandic ling source cache is missing.", call. = FALSE)
 source(file.path(root, "scripts", "database", "pacific_tables.R"))
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 sha256_file <- function(path) {
   result <- system2("certutil.exe", c("-hashfile", shQuote(normalizePath(path)), "SHA256"),
@@ -318,7 +318,7 @@ candidate_updated$output_evidence <- paste(
 candidate_updated$review_date <- "2026-11-12"
 candidate_updated$notes <- paste(
   "Current 2026 production assessment; inputs fitted through 2025 and selected 2026 outputs are projections.",
-  "Source cache and SHA-256 manifest are recorded in source_cache/discovery_ices_ling_5a_2026/sources.csv."
+  "Source cache and SHA-256 manifest are recorded in source_cache/molva_molva/ices_ling_5a_2026/sources.csv."
 )
 
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")

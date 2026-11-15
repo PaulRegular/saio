@@ -1,5 +1,5 @@
 candidate_path <- "discovery/candidates.csv"
-selected_path <- "discovery/selected_batch_04_2026.csv"
+selected_path <- "discovery/selections/selected_batch_04_2026.csv"
 manifest_path <- "provenance/mpi_kahawai_kah1_2021_sources.csv"
 source_pdf <- "source_cache/mpi_kahawai_kah1_2021/FAR2022-54.pdf"
 

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path("source_cache", "noaa_gag_sedar71_2021")
+cache <- file.path("source_cache", "mycteroperca_microlepis/noaa_gag_south_atlantic_sedar71_2021")
 manifest_source <- file.path(cache, "manifest.csv")
 manifest_path <- file.path("provenance", "noaa_gag_sedar71_2021", "manifest.csv")
 stock_id <- "noaa_gag_south_atlantic"
@@ -9,7 +9,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source("scripts/database/pacific_tables.R")
-source("scripts/database/candidate_register_io.R")
+source("scripts/discovery/candidate_register_io.R")
 
 if (!requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install pdftools to extract SEDAR 71 tables.", call. = FALSE)
@@ -17,7 +17,7 @@ if (!requireNamespace("pdftools", quietly = TRUE)) {
 
 manifest <- read.csv(manifest_source, stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")
-manifest$file <- paste0("source_cache/noaa_gag_sedar71_2021/",
+manifest$file <- paste0("source_cache/mycteroperca_microlepis/noaa_gag_south_atlantic_sedar71_2021/",
   basename(manifest$file))
 sha256_file <- function(path) {
   output <- system2("certutil.exe", c("-hashfile", shQuote(path), "SHA256"),

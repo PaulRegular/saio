@@ -45,7 +45,7 @@ stopifnot(
   grepl('B_index', review, fixed = TRUE),
   grepl('kilograms per hour', review, fixed = TRUE),
   grepl('not treated as spawning-stock biomass', review, fixed = TRUE),
-  file.exists(file.path(root, 'scripts', 'database',
+  file.exists(file.path(root, 'scripts', 'discovery',
     '379_screen_ices_pollack_89a_2025.R'))
 )
 

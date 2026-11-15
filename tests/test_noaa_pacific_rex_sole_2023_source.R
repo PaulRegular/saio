@@ -23,7 +23,7 @@ candidates <- read_columns("discovery/candidates.csv", c("candidate_id",
   "matched_stock_id", "match_status", "import_status"))
 units <- read_columns("discovery/inventory_units.csv", c("unit_key",
   "matched_stock_id", "import_status"))
-selected <- read_columns("discovery/selected_batch_15_2026.csv", c(
+selected <- read_columns("discovery/selections/selected_batch_15_2026.csv", c(
   "candidate_id", "curation_status"))
 inputs <- read_columns("database/inputs.csv", c("assessment_id", "type",
   "measure", "basis", "value", "unit", "year", "age", "fleet", "survey",

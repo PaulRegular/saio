@@ -3,7 +3,7 @@ summary_assessment_id <- "ices_sole_20_24_2026_summary"
 stock_id <- "ck_ices_wgbfas_solea_ns_iiia_22_24"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
-cache <- file.path(base, "source_cache", "ices_sole_20_24_2025")
+cache <- file.path(base, "source_cache", "solea_solea/ices_sole_20_24_2025")
 report_file <- file.path(cache, "WGBFAS_2025.pdf")
 model_file <- file.path(cache, "run", "model.RData")
 data_file <- file.path(cache, "run", "data.RData")

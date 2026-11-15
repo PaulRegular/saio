@@ -1,6 +1,6 @@
 root <- "."
 source(file.path(root, "scripts", "database", "pacific_tables.R"))
-cache <- file.path(root, "source_cache", "noaa_goa_pop_20261029")
+cache <- file.path(root, "source_cache", "sebastes_alutus/noaa_goa_pop_2023")
 model <- file.path(cache, "model_files")
 processed <- file.path(model, "processed")
 assessment_id <- "noaa_goa_pop_2023"

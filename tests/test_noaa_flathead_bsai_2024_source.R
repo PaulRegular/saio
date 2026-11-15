@@ -26,7 +26,7 @@ stocks <- read_columns("database/stocks.csv", c("stock_id", "authority_stock_id"
   "scientific_name", "common_name", "area", "ocean"))
 candidates <- read_columns("discovery/candidates.csv", c("candidate_id", "matched_stock_id",
   "match_status", "import_status"))
-selected <- read_columns("discovery/selected_batch_16_2026.csv", c("candidate_id",
+selected <- read_columns("discovery/selections/selected_batch_16_2026.csv", c("candidate_id",
   "curation_status", "detailed_source_url"))
 
 inputs <- inputs[inputs$assessment_id == assessment_id, , drop = FALSE]

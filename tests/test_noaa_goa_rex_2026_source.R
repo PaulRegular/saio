@@ -31,7 +31,7 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selected <- read.csv("discovery/selected_unworked_2026.csv",
+selected <- read.csv("discovery/selections/selected_unworked_2026.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
 inputs <- read_assessment_rows("database/inputs.csv", assessment_id)

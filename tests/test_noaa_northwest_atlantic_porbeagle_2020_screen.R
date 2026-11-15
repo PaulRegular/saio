@@ -1,4 +1,4 @@
-source('scripts/database/512_screen_noaa_northwest_atlantic_porbeagle_2020.R')
+source('scripts/discovery/512_screen_noaa_northwest_atlantic_porbeagle_2020.R')
 
 root <- '.'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),

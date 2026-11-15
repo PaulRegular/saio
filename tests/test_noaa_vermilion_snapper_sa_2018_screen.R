@@ -13,14 +13,14 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocksmart_env <- new.env(parent = emptyenv())
-load(file.path(root, 'source_cache', 'discovery_noaa_stocksmart',
+load(file.path(root, 'source_cache', 'shared/noaa_stocksmart',
   'stock_assessment_summary.rda'), envir = stocksmart_env)
 stocksmart <- stocksmart_env$stock_assessment_summary
 run <- stocksmart[stocksmart$stock_id == 10257 & stocksmart$assessment_id == 8220,
   , drop = FALSE]
 review_path <- file.path(root, 'discovery', 'source_reviews',
   'noaa_vermilion_snapper_south_atlantic_2018.md')
-script_path <- file.path(root, 'scripts', 'database',
+script_path <- file.path(root, 'scripts', 'discovery',
   '459_screen_noaa_vermilion_snapper_sa_2018.R')
 
 stopifnot(

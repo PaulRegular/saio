@@ -5,7 +5,7 @@ candidate_id <- "ICES:usk.27.5a14"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 cache_options <- c(
-  file.path(root, "source_cache", "discovery_ices_tusk_5a14_2026"),
+  file.path(root, "source_cache", "brosme_brosme/ices_tusk_5a14_2026"),
   file.path(root, "..", "..", "discovery_ices_tusk_5a14_2026")
 )
 cache <- cache_options[dir.exists(cache_options)][1L]
@@ -308,7 +308,7 @@ if (write_mode) {
   if (!nrow(assumptions_existing)) append_csv(assumptions_new, assumptions_path)
   if (!nrow(outputs_existing)) append_csv(outputs_new, outputs_path)
 
-  source(file.path(root, "scripts", "database", "candidate_register_io.R"), local = TRUE)
+  source(file.path(root, "scripts", "discovery", "candidate_register_io.R"), local = TRUE)
   candidate_path <- file.path(root, "discovery", "candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)

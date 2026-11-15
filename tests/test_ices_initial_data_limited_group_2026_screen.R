@@ -36,10 +36,10 @@ for (i in seq_len(nrow(manifest))) {
     identical(sha256_file(path), tolower(manifest$sha256[i])))
 }
 
-sid <- paste(readLines(file.path(root, 'source_cache', 'discovery_ices_sid',
+sid <- paste(readLines(file.path(root, 'source_cache', 'shared/ices_sid',
   'stock_list_2026.json'), warn = FALSE), collapse = '')
-sid_path <- file.path(root, 'source_cache', 'discovery_ices_sid', 'stock_list_2026.json')
-sid_manifest <- read.csv(file.path(root, 'source_cache', 'discovery_ices_sid', 'sources.csv'),
+sid_path <- file.path(root, 'source_cache', 'shared/ices_sid', 'stock_list_2026.json')
+sid_manifest <- read.csv(file.path(root, 'source_cache', 'shared/ices_sid', 'sources.csv'),
   stringsAsFactors = FALSE, check.names = FALSE)
 stopifnot(sid_manifest$retrieved_on[match('stock_list_2026.json', sid_manifest$file)] == '2026-10-28',
   tolower(sha256_file(sid_path)) == '913d6a3eeab9449ae3cd0dd15661a150d36ff79b6e6a9ba78d86d46ba1035f42')

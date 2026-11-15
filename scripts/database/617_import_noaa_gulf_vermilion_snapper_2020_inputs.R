@@ -1,7 +1,7 @@
 root <- "."
 assessment_id <- "noaa_vermilion_snapper_gulf_sedar67_2020"
 candidate_id <- "NOAA:10256"
-source_dir <- "source_cache/discovery_noaa_vermilion_snapper_gom_2020"
+source_dir <- "source_cache/rhomboplites_aurorubens/noaa_vermilion_snapper_gulf_sedar67_2020"
 report_url <- paste0(
   "https://sedarweb.org/documents/",
   "sedar-67-gulf-of-mexico-vermilion-snapper-final-stock-assessment-report/"
@@ -10,7 +10,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source("scripts/database/pacific_tables.R")
-source("scripts/database/candidate_register_io.R")
+source("scripts/discovery/candidate_register_io.R")
 
 manifest <- read.csv(
   "provenance/discovery_noaa_vermilion_snapper_gom_2020/sources.csv",

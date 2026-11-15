@@ -27,10 +27,10 @@ inputs <- read_assessment(file.path(root, "database/inputs.csv"), assessment_id)
 outputs <- read_assessment(file.path(root, "database/outputs.csv"), assessment_id)
 candidate_register <- read.csv(file.path(root, "discovery/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
-selected <- read.csv(file.path(root, "discovery/selected_batch_19_2026.csv"),
+selected <- read.csv(file.path(root, "discovery/selections/selected_batch_19_2026.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 source_review <- paste(readLines(file.path(root,
-  "discovery/source_reviews/ices_bay_biscay_anchovy_2025.md")), collapse = "\n")
+  "source_reviews/ices_bay_biscay_anchovy_8.md")), collapse = "\n")
 
 catch_age <- inputs[inputs$type %in% "catch" & inputs$measure %in% "numbers_at_age", , drop = FALSE]
 catch_weight <- inputs[inputs$type %in% "catch_weight" & inputs$measure %in% "catch_weight_at_age", , drop = FALSE]

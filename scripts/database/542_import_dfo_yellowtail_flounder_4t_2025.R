@@ -132,7 +132,7 @@ candidate_text <- prepare_record_update(candidate_path, "candidate_id", candidat
     notes = "Current DFO 4T unit; imported the official 2025 age-5+ biomass estimate and recent F=0 statement only. Detailed numerical inputs and historical outputs remain blocked by unavailable Research Document 2026/054 PDF. See discovery/source_reviews/dfo_gulf_yellowtail_flounder_2025.md."
   ))
 
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 selected <- utils::read.csv(selected_path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
 selected_row <- match(candidate_id, selected$candidate_id)

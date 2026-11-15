@@ -114,8 +114,8 @@ outputs and access to native or machine-readable sources. Use underrepresented
 regions and species groups to break comparable-readiness ties, followed by stable
 official identifiers. Do not count assessment years, sexes, variants or regional
 components of one unit as additional stocks. Record source blockers and actual
-shortfalls rather than guessing to meet a numerical target. Commit the reviewed
-inventory and selected batch before importing numerical source data.
+shortfalls rather than guessing to meet a numerical target. Save each dated selection under `discovery/selections/`. Commit the reviewed
+inventory and selection before importing numerical source data.
 
 ------------------------------------------------------------------------
 
@@ -688,20 +688,16 @@ a logistic survey curve does not establish logistic fishery F. Preserve these
 source facts in the canonical assumptions; downstream candidate choices and
 their diagnostics belong in the translation review, not the database.
 
-Keep stock-specific review notes in one Markdown file per stock under
-`source_reviews/`, named with the stable stock ID.
-Use that file for official-run verification, source trails, input and output
-coverage, transformations, validation findings, and unresolved gaps. When a
-stock has several assessment records, identify the assessment IDs and keep
-run-specific notes clearly separated within the stock's file.
+Keep a substantive Markdown review under `source_reviews/` when the record
+needs an explanation of run selection, source interpretation, transformations,
+validation findings, or gaps. Use the stable stock ID in the filename for
+new reviews and identify each represented assessment ID within the review.
+Keep distinct runs in separate sections of the stock review. Preserve existing
+review links when consolidating notes.
 
-Keep the README focused on the database's purpose, structure and usage, with
-a compact index linking to the stock review files. Do not put detailed
-stock-specific review notes in the README or duplicate them there. Move any
-existing stock notes into the appropriate review file when revisiting a stock.
-The database tables remain the source of numerical values, assumptions,
-provenance and completeness statuses; review files explain the supporting
-checks and limitations.
+Use the assessment table for routine citations and the discovery register and
+its reviews for candidate screening. The database tables remain the source of
+numerical values, assumptions, and completeness statuses.
 
 ## Source cache
 
@@ -716,10 +712,20 @@ This directory must remain gitignored.
 
 Useful cached artifacts include assessment/framework PDFs, native input/output files, fitted objects, supplementary CSVs, and configuration files.
 
-Organize files by stock and assessment run. Maintain a manifest identifying the
-source URL, retrieval date, file checksum, and represented assessment. Record
-failed or restricted downloads and any alternative source used. Keep useful
-files already cached; do not download every document or unrelated material.
+Group cached source files by scientific name and run, for example
+`source_cache/solea_solea/ices_sol_27_7a_2026/`. Use the candidate key for
+a screened unit with no assessment record. Keep inventories and files shared
+by multiple assessments under `source_cache/shared/`. Update importers and
+source references together when moving an existing cache.
+
+Record the exact files used for import or verification in `sources.csv` under
+`provenance/<assessment_id>/` or the corresponding candidate or shared
+collection. For new and relocated manifests, use `file`, `url`, `revision`,
+`retrieved_on`, `sha256`, `bytes` and `notes`. Give the file path relative
+to its cache directory and identify that directory in the review or manifest.
+Record consequential failed or restricted downloads with their source URL and
+date. Preserve older metadata and source transcriptions when migrating a manifest.
+The candidate register or review can hold routine screening citations.
 
 Use the cache to repair canonical records. Routine downstream data preparation and
 fitting workflow reads the database, not native files from the cache.
@@ -860,6 +866,8 @@ When information is unclear, inspect native files, fitted objects, framework doc
    release line. Keep generated tables, compressed downloads and scratch copies
    outside Git. Tag the validated commit and attach its assets to the release.
    Preserve published data versions. Publish corrections as a new release.
+   Keep local checkpoint manifests with their archived assets outside Git.
+   Use `database/releases/` for published release manifests.
 
 ------------------------------------------------------------------------
 

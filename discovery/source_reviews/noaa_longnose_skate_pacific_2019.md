@@ -18,4 +18,4 @@ The public model archive includes the native data, control, starter, and forecas
 
 ## Sources and status
 
-The authoritative assessment report, STAR review, supplementary tables, 2023 available-data review, and native model archive are cached under the gitignored `source_cache/discovery_noaa_longnose_skate_2019/`. The tracked provenance manifest records source URLs, retrieval dates, revisions, file sizes, and SHA-256 checksums. The import is marked partial because age-specific mortality and direct annual catch/index-at-age inputs and several biological surfaces are not publicly available in the reviewed materials.
+The authoritative assessment report, STAR review, supplementary tables, 2023 available-data review, and native model archive are cached under the gitignored `source_cache/beringraja_rhina/noaa_pacific_coast_longnose_skate_2019/`. The tracked provenance manifest records source URLs, retrieval dates, revisions, file sizes, and SHA-256 checksums. The import is marked partial because age-specific mortality and direct annual catch/index-at-age inputs and several biological surfaces are not publicly available in the reviewed materials.

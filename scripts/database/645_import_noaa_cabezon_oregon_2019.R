@@ -19,7 +19,7 @@ if (test_mode && write_mode) {
 .libPaths(c(file.path(root, "source_cache/r-lib"),
   file.path(root, "source_cache/R-library"), .libPaths()))
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 manifest <- read.csv(file.path(root,
   "provenance/noaa_cabezon_oregon_2019_sources.csv"),
@@ -504,7 +504,7 @@ assessment <- blank_row(names(assessments_table), list(
 
 candidate_path <- file.path(root, "discovery/candidates.csv")
 inventory_path <- file.path(root, "discovery/inventory_units.csv")
-unworked_path <- file.path(root, "discovery/selected_unworked_2026.csv")
+unworked_path <- file.path(root, "discovery/selections/selected_unworked_2026.csv")
 candidates <- read.csv(candidate_path, colClasses = "character", check.names = FALSE)
 inventory <- read.csv(inventory_path, colClasses = "character", check.names = FALSE)
 ci <- which(candidates$candidate_id == candidate_id)

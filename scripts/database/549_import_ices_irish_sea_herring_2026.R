@@ -1,7 +1,7 @@
 root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "discovery_ices_irish_sea_herring_2026")
-shared_cache <- file.path(root, "source_cache", "discovery_ices_celtic_sea_herring_2026")
+shared_cache <- file.path(root, "source_cache", "clupea_harengus/ices_her_27_irls_2026")
 candidate_id <- "ICES:her.27.nirs"
 candidate_unit_id <- "ices_her_27_nirs"
 stock_id <- candidate_unit_id
@@ -14,7 +14,7 @@ report_reference <- paste(
 )
 
 source(file.path(root, "scripts", "database", "pacific_tables.R"))
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 sha256_file <- function(path) {
   result <- system2("certutil.exe", c("-hashfile", shQuote(path), "SHA256"),
@@ -527,7 +527,7 @@ inventory$import_status[inventory_row] <- "partial"
   replace_discovery_row(inventory_path, inventory_row, inventory[inventory_row, , drop = FALSE],
     "unit_key", paste0("candidate:", candidate_unit_id))
 
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 selected <- utils::read.csv(selected_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 selected_row <- which(selected$candidate_id == candidate_id)
 if (length(selected_row) != 1L) stop("Expected one selected Irish Sea herring row.", call. = FALSE)

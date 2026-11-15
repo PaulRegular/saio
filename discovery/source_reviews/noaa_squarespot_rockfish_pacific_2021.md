@@ -39,6 +39,6 @@ SHA-256 hashes are in
 
 ## Sources
 
-- [NOAA Stock SMART](https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10442); the pinned metadata snapshot and checksum are in `source_cache/discovery_noaa_stocksmart/sources.csv`.
+- [NOAA Stock SMART](https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10442); the pinned metadata snapshot and checksum are in `source_cache/shared/noaa_stocksmart/sources.csv`.
 - [2021 Squarespot rockfish assessment](https://www.pcouncil.org/documents/2021/10/stock-assessment-of-the-squarespot-rockfish-sebastes-hopkinsi-along-the-california-u-s-west-coast-in-2021-using-catch-length-and-fishery-independent-abundance-data.pdf/), especially pp. 2–10, 14, and the model-input description in section 3.2.
 - [2021 Squarespot rockfish Stock Synthesis model archive](https://www.pcouncil.org/documents/squarespot-rockfish-2021-model-files-zip-file/), including `SS_LB.dat`, `SS_LB.ctl`, and `Report.sso`.

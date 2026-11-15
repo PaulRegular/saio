@@ -1,5 +1,5 @@
 root <- "."
-source_dir <- file.path(root, "../../discovery_noaa_bocaccio_southern_pacific_2017")
+source_dir <- file.path(root, "source_cache/sebastes_paucispinis/noaa_bocaccio_southern_pacific_2017")
 model_dir <- file.path(source_dir, "bocaccio_2017_model_files")
 assessment_id <- "noaa_bocaccio_southern_pacific_2017"
 stock_id <- "noaa_bocaccio_southern_pacific_coast"
@@ -12,7 +12,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 .libPaths(c(file.path(root, "source_cache/r-lib"), .libPaths()))
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 manifest <- read.csv(file.path(root, "provenance/discovery_noaa_bocaccio_southern_pacific_2017/sources.csv"),
   colClasses = "character", check.names = FALSE)
@@ -377,8 +377,8 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
 
 candidate_path <- file.path(root, "discovery/candidates.csv")
 inventory_path <- file.path(root, "discovery/inventory_units.csv")
-batch_path <- file.path(root, "discovery/selected_batch_30_2026.csv")
-unworked_path <- file.path(root, "discovery/selected_unworked_2026.csv")
+batch_path <- file.path(root, "discovery/selections/selected_batch_30_2026.csv")
+unworked_path <- file.path(root, "discovery/selections/selected_unworked_2026.csv")
 candidates <- read.csv(candidate_path, colClasses = "character", check.names = FALSE)
 inventory <- read.csv(inventory_path, colClasses = "character", check.names = FALSE)
 batch <- read.csv(batch_path, colClasses = "character", check.names = FALSE)
@@ -426,7 +426,7 @@ if (!write_mode) {
   replace_csv_register_row(inventory_path, ii, inv, "unit_key", inventory$unit_key[ii])
   batch$curation_status[bi] <- "partial_source_import"
   write.csv(batch, batch_path, row.names = FALSE, na = "", fileEncoding = "UTF-8")
-  unworked_path <- file.path(root, "discovery/selected_unworked_2026.csv")
+  unworked_path <- file.path(root, "discovery/selections/selected_unworked_2026.csv")
   if (file.exists(unworked_path)) {
     unworked <- read.csv(unworked_path, colClasses = "character", check.names = FALSE)
     ui <- which(unworked$candidate_id == candidate_id)

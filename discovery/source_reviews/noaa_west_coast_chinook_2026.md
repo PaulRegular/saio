@@ -131,4 +131,4 @@ The PFMC reports, Stock SMART dictionary, and FRAM pages are cached under the gi
 `source_cache/discovery_noaa_puget_sound_chinook_2026/`; their retrieval date,
 URLs, byte sizes, and SHA-256 checksums are in `sources.csv`. The cached NOAA
 Stock SMART summary and its pinned repository revision are documented in
-`source_cache/discovery_noaa_stocksmart/sources.csv`.
+`source_cache/shared/noaa_stocksmart/sources.csv`.

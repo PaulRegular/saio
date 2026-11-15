@@ -803,7 +803,7 @@ if (!write_mode) {
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
   candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
-  selected <- read.csv("discovery/selected_batch_09_2026.csv", stringsAsFactors = FALSE,
+  selected <- read.csv("discovery/selections/selected_batch_09_2026.csv", stringsAsFactors = FALSE,
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
   units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
@@ -865,7 +865,7 @@ if (!write_mode) {
     "The May 2026 Plenary identifies the 2021 official Casal2 assessment as the latest run.",
     "FAR 2021/82 contains detailed model inputs and base-run summary outputs."
   )
-  replace_csv_row("discovery/selected_batch_09_2026.csv",
+  replace_csv_row("discovery/selections/selected_batch_09_2026.csv",
     selected$priority[selected_index], selected[selected_index, ])
   units$import_status[unit_index] <- "partial"
   replace_csv_row("discovery/inventory_units.csv", paste0("candidate:", stock_id), units[unit_index, ])

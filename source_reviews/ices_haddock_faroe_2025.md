@@ -6,7 +6,7 @@ Source review revision: 2026-10-23.
 
 The current detailed record is the official ICES 2025 Faroe haddock assessment, fitted as the public SAM run NWWG2025_had. It covers 1957–2025, ages 1–10+, with age 10 as the catch plus group. The fitted model converged with optimizer code 0, a positive-definite Hessian, objective 1214.389, and maximum absolute fixed-effect gradient 7.93e-11.
 
-The native run and its complete model data, configuration, build script, validation code, input files, and plotting code are cached locally under source_cache/ices_haddock_faroe_2025/. The README in that folder lists source URLs, retrieval date, and SHA-256 checksums. The cache is gitignored. The advice PDF is retained as a source document. The selected native run is NWWG2025_had; no newer completed detailed production run was available in the public run directory during this review.
+The native run and its complete model data, configuration, build script, validation code, input files, and plotting code are cached locally under source_cache/melanogrammus_aeglefinus/ices_haddock_faroe_2025/. The README in that folder lists source URLs, retrieval date, and SHA-256 checksums. The cache is gitignored. The advice PDF is retained as a source document. The selected native run is NWWG2025_had; no newer completed detailed production run was available in the public run directory during this review.
 
 ## Inputs and assumptions
 

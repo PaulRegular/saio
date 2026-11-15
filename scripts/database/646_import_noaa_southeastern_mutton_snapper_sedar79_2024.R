@@ -10,7 +10,7 @@ if (write_mode && test_mode) stop("Source test mode cannot write.", call. = FALS
 .libPaths(c(file.path(root, "tmp/Rlib"), file.path(root, "source_cache/r-lib"),
   file.path(root, "source_cache/R-library"), .libPaths()))
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 cache_name <- "discovery_noaa_mutton_snapper_sedar79_2024"
 cache <- file.path(root, "source_cache", cache_name)

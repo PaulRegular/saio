@@ -2,7 +2,7 @@
 
 ## Official assessment
 
-The current detailed official assessment is the 2026 ICES assessment of sprat in subdivisions 22–32, stock `spr.27.22-32`. The WGBFAS 2026 report presents the complete SAM input tables, configuration, and numerical population outputs in Chapter 7. The full report is cached locally under `source_cache/ices_sprat_baltic_2026/`.
+The current detailed official assessment is the 2026 ICES assessment of sprat in subdivisions 22–32, stock `spr.27.22-32`. The WGBFAS 2026 report presents the complete SAM input tables, configuration, and numerical population outputs in Chapter 7. The full report is cached locally under `source_cache/sprattus_sprattus/ices_sprat_baltic_2026/`.
 
 Sources:
 

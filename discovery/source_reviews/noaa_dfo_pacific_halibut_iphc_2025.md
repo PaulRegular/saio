@@ -88,5 +88,5 @@ not started.
 - [IPHC commercial landings by regulatory area](https://www.iphc.int/data/fishery-landings-by-iphc-regulatory-area/)
 
 The assessment PDFs, public FISS file, and relevant IPHC spreadsheets are
-cached under `source_cache/discovery_iphc_pacific_halibut/`, with checksums,
+cached under `source_cache/hippoglossus_stenolepis/iphc_pacific_halibut/`, with checksums,
 retrieval date and pinned source identifiers recorded in `sources.csv`.

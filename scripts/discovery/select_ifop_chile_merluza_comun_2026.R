@@ -2,7 +2,7 @@ candidate_id <- "IFOP:merluza_comun_UP"
 candidate_unit_id <- "ifop_merluza_comun_up"
 review_date <- "2026-11-09"
 candidate_path <- "discovery/candidates.csv"
-batch_path <- "discovery/selected_batch_20_2026.csv"
+batch_path <- "discovery/selections/selected_batch_20_2026.csv"
 manifest_path <- "provenance/ifop_merluza_comun_2026_sources.csv"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
@@ -189,7 +189,7 @@ batch <- data.frame(
   stringsAsFactors = FALSE,
   check.names = FALSE
 )
-batch_columns <- names(read.csv("discovery/selected_batch_19_2026.csv",
+batch_columns <- names(read.csv("discovery/selections/selected_batch_19_2026.csv",
   stringsAsFactors = FALSE, check.names = FALSE))
 if (!identical(names(batch), batch_columns)) {
   stop("The new selection row does not match the selected-batch schema.", call. = FALSE)

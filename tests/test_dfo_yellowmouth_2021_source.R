@@ -20,11 +20,10 @@ candidate <- subset(candidates,
 units <- utils::read.csv(file.path(root, "discovery", "inventory_units.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 unit <- subset(units, candidate_unit_id == "dfo_yellowmouth_bc")
-batch <- utils::read.csv(file.path(root, "discovery", "selected_batch_01_2026.csv"),
+batch <- utils::read.csv(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 selected <- subset(batch, candidate_unit_id == "dfo_yellowmouth_bc")
-review <- paste(readLines(file.path(root, "discovery", "source_reviews",
-  "dfo_yellowmouth_2021.md"), warn = FALSE), collapse = " ")
+review <- paste(readLines(file.path(root, "source_reviews", "dfo_yellowmouth_bc.md"), warn = FALSE), collapse = " ")
 
 catch <- subset(inputs, type == "catch" & measure == "total_biomass")
 survey_index <- subset(inputs, type == "index" & measure == "total_biomass")

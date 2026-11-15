@@ -153,7 +153,7 @@ stopifnot(tryCatch({
     matches = matches, overlaps = overlaps); FALSE
 }, error = function(e) grepl("conflicting scientific names", conditionMessage(e), fixed = TRUE)))
 
-master_path <- file.path("source_cache", "charbonneau_keith", "Master.csv"
+master_path <- file.path("source_cache", "shared/charbonneau_keith", "Master.csv"
 )
 if (file.exists(master_path)) {
   source_stocks <- read.csv(

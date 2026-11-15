@@ -628,7 +628,7 @@ cat("  Table 5-1: ", nrow(table51), " values; 5-2: ", nrow(table52),
 if (!write_mode) {
   cat("Dry run only. Add --write to append the verified source records.\n")
 } else {
-  source(file.path(root, "scripts/database/candidate_register_io.R"), local = TRUE)
+  source(file.path(root, "scripts/discovery/candidate_register_io.R"), local = TRUE)
   ensure_append("database/stocks.csv", stock_row, "stock_id")
   ensure_append("database/assessments.csv", assessment_row, "assessment_id")
   append_csv("database/assumptions.csv", assumptions_to_add)

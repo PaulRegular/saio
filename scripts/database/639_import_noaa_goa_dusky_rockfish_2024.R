@@ -10,7 +10,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 if (!requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install pdftools to parse the cached GOA dusky rockfish SAFE tables.", call. = FALSE)
 }
@@ -339,7 +339,7 @@ if (write_mode) {
   candidate$output_evidence <- "Tables 12-12 and 12-14 report annual female SSB, total biomass, fully selected F and age-4+ recruitment through 2024. Table 12-14 gives MCMC means and 2.5/97.5 percentiles. Numerical N-at-age and F-at-age surfaces are not provided."
   candidate$notes <- "Partial source import committed for the latest full 2024 m22.5a assessment of the current GOA unit. Catch biomass, both published age-composition tables, VAST index and uncertainty, eight model/biology assumptions, and MLE/MCMC aggregate outputs are recorded. Maturity raw observations, the exact final fishery composition likelihood arrays, survey timing, weight-at-age values, N-at-age and F-at-age remain unavailable or unresolved."
   replace_candidate_register_row(candidates_path, candidate_row, candidate, candidate_id)
-  batch_path <- file.path(root, "discovery/selected_batch_27_2026.csv")
+  batch_path <- file.path(root, "discovery/selections/selected_batch_27_2026.csv")
   batch <- read.csv(batch_path, stringsAsFactors = FALSE, check.names = FALSE)
   batch_row <- which(batch$candidate_id == candidate_id)
   if (length(batch_row) != 1L) stop("Expected one selected-batch row for NOAA:10559.", call. = FALSE)

@@ -39,7 +39,7 @@ The available materials do not yet identify one production fitted N/F/M-at-age s
 
 The actual production input update and official reference OM outputs remain unavailable, and the ensemble and population definitions require resolution. Source tests verify the reported values, units, component separation and the distinction between an acoustic indicator and population SSB.
 
-The source PDFs and pinned code/data archive are cached under `source_cache/ck_dfo_mar_harengus_4vwx/`; checksums and URLs are recorded in `accessible_sources_manifest.csv`. The cache remains local and gitignored.
+The source PDFs and pinned code/data archive are cached under `source_cache/clupea_harengus/ck_dfo_mar_harengus_4vwx/`; checksums and URLs are recorded in `accessible_sources_manifest.csv`. The cache remains local and gitignored.
 
 ## Sources
 

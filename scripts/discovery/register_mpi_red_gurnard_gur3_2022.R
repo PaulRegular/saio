@@ -117,7 +117,7 @@ batch <- data.frame(
 
 register_path <- "discovery/candidates.csv"
 manifest_path <- "provenance/mpi_red_gurnard_gur3_2022_sources.csv"
-batch_path <- "discovery/selected_batch_17_2026.csv"
+batch_path <- "discovery/selections/selected_batch_17_2026.csv"
 source_paths <- file.path("source_cache", manifest$local_file)
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
@@ -131,7 +131,7 @@ if (candidate_id %in% register$candidate_id ||
   stop("GUR 3 is already registered or has canonical records.", call. = FALSE)
 }
 if (!identical(names(candidate), names(register)) ||
-    !identical(names(batch), names(read_table("discovery/selected_batch_16_2026.csv")))) {
+    !identical(names(batch), names(read_table("discovery/selections/selected_batch_16_2026.csv")))) {
   stop("Candidate or batch fields do not match their register schemas.", call. = FALSE)
 }
 if (!all(file.exists(source_paths)) ||
@@ -149,7 +149,7 @@ if (write_mode) {
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double", na = "")
   write.csv(manifest, manifest_path, row.names = FALSE, na = "")
   write.csv(batch, batch_path, row.names = FALSE, na = "")
-  source("scripts/database/195_summarize_discovery.R", local = TRUE)
-  source("scripts/database/196_summarize_inventory_units.R", local = TRUE)
+  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
+  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("Registered the GUR 3 source screen and selected partial curation.\n")
 }

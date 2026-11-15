@@ -5,7 +5,7 @@ candidate_id <- "AFMA:SESSF_GUMMY_SHARK_2023"
 candidate_unit_id <- "afma_gummy_shark_sessf"
 candidate <- read_table("discovery/candidates.csv")
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-selection <- read_table("discovery/selected_batch_14_2026.csv")
+selection <- read_table("discovery/selections/selected_batch_14_2026.csv")
 selection <- selection[selection$candidate_id == candidate_id, , drop = FALSE]
 units <- read_table("discovery/inventory_units.csv")
 unit <- units[units$unit_key == "stock:afma_gummy_shark_sessf", , drop = FALSE]

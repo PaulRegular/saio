@@ -32,7 +32,7 @@ stopifnot(nrow(sculpins) == 1L, sculpins$inventory_entries == 2L,
   identical(sculpins$candidate_ids, 'NOAA:11405 | NOAA:11448'))
 
 stocksmart_env <- new.env(parent = emptyenv())
-load(file.path(root, 'source_cache', 'discovery_noaa_stocksmart',
+load(file.path(root, 'source_cache', 'shared/noaa_stocksmart',
   'stock_assessment_summary.rda'), envir = stocksmart_env)
 stocksmart <- stocksmart_env$stock_assessment_summary
 assessment_ids <- c('11254', '13871', '13123', '13122', '13893', '13100')

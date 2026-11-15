@@ -6,7 +6,7 @@ canonical_paths <- c(stocks = 'database/stocks.csv',
   outputs = 'database/outputs.csv')
 canonical_before <- lapply(canonical_paths, read_table)
 
-source(file.path(root, 'scripts', 'database',
+source(file.path(root, 'scripts', 'discovery',
   '530_screen_noaa_isc_pacific_swordfish_marlin_2026.R'))
 
 register <- read_table('discovery/candidates.csv')

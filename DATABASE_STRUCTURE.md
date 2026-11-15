@@ -43,7 +43,7 @@ already represented in the canonical database. `match_status` describes the curr
 database crosswalk. After a newly curated unit is added, set `matched_stock_id` to
 its canonical `stock_id` and change `match_status` to `matched`. Inventory rows alone
 do not create canonical assessment events or values. `charbonneau_id` may be blank when no
-verified catalogue match exists.
+verified catalogue match exists. Dated batch selections are kept in `discovery/selections/`.
 
 The current controlled basin vocabulary is validated by the database validator.
 When a verified new stock requires another basin, add and document a specific
@@ -98,7 +98,7 @@ One row per biological or management stock.
 | Column | Description |
 |------------------------------------|------------------------------------|
 | `stock_id` | Stable internal identifier for the stock |
-| `charbonneau_id` | Identifier in the Charbonneau–Keith database, when applicable |
+| `charbonneau_id` | Optional cross-reference to the original Charbonneau–Keith catalogue |
 | `authority` | Assessment authority, e.g. DFO, ICES, NOAA-AFSC |
 | `authority_stock_id` | Current official stock identifier/code |
 | `scientific_name` | Scientific name |

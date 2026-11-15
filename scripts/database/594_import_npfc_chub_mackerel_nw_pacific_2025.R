@@ -438,8 +438,8 @@ if (write_mode) {
   replace_csv_record("discovery/candidates.csv", "candidate_id", candidate_id,
     candidates[candidate_row, , drop = FALSE])
 
-  source("scripts/database/195_summarize_discovery.R", local = TRUE)
-  source("scripts/database/196_summarize_inventory_units.R", local = TRUE)
+  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
+  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("Imported", stock_id, "with", nrow(inputs), "age-specific M inputs and",
     nrow(outputs), "Table E-1 outputs.\n")
 } else {

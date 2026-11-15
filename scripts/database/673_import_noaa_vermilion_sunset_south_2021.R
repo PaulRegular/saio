@@ -18,7 +18,7 @@ if (test_mode && write_mode) stop("Source test mode cannot write database record
 
 .libPaths(c(file.path(root, "source_cache/r-lib"), .libPaths()))
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 if (!requireNamespace("r4ss", quietly = TRUE) || !requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install r4ss and pdftools to read the cached assessment sources.", call. = FALSE)
 }

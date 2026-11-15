@@ -1,4 +1,4 @@
-source('scripts/database/485_reconcile_noaa_rougheye_blackspotted_units.R')
+source('scripts/discovery/485_reconcile_noaa_rougheye_blackspotted_units.R')
 
 register <- read.csv('discovery/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

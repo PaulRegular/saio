@@ -3,7 +3,7 @@ old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 screen <- new.env(parent = globalenv())
 source(file.path(root,
-  'scripts/database/472_screen_ices_barents_capelin_jrn_afwg_2026.R'), local = screen)
+  'scripts/discovery/472_screen_ices_barents_capelin_jrn_afwg_2026.R'), local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 

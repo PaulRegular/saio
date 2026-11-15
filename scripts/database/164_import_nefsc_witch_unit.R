@@ -1,6 +1,6 @@
 base <- "."
 db <- file.path(base, "database")
-cache <- file.path(base, "source_cache/ck_nefsc_garmiii_cynoglossus_5y")
+cache <- file.path(base, "source_cache/glyptocephalus_cynoglossus/ck_nefsc_garmiii_cynoglossus_5y")
 stock_id <- "nefsc_witch_flounder_unit"
 ids <- c("nefsc_witch_flounder_unit_2024", "nefsc_witch_flounder_unit_2026_data_update")
 url24 <- "https://d23h0vhsm26o6d.cloudfront.net/13d.-2024_WIT_UNIT_RPT_09_02_203738.pdf"

@@ -16,7 +16,7 @@ The run identifies `stockassessment` 0.12.0 and RemoteSha
 its fitted 2025 recruitment, SSB, Fbar and total biomass reproduce the ICES
 SAG estimates at the published precision. The model object, input object,
 configuration, input files and HTML output tables are cached locally in the
-gitignored `source_cache/ices_nea_saithe_2026/` directory. Its manifest records
+gitignored `source_cache/pollachius_virens/ices_saithe_northeast_arctic_2026/` directory. Its manifest records
 retrieval dates, URLs, byte counts and SHA-256 checksums; the source servers do
 not provide a verified last-modified date for these downloads.
 

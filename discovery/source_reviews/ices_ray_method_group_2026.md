@@ -43,7 +43,7 @@ database. Candidate rows remain import_status = not_started.
 ## Sources and provenance
 
 - [ICES SID 2026](https://sid.ices.dk/services/year/2026), cached as
-  source_cache/discovery_ices_sid/stock_list_2026.json. The snapshot manifest
+  source_cache/shared/ices_sid/stock_list_2026.json. The snapshot manifest
   records retrieval date, URL, byte size, and checksum.
 - Official ICES Standard Graphs source pages, cached individually with URLs,
   retrieval date, byte size, and SHA-256 in

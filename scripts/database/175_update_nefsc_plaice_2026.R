@@ -1,4 +1,4 @@
-base<-".";db<-file.path(base,"database");cache<-file.path(base,"source_cache/nefsc_american_plaice_5yz/2026")
+base<-".";db<-file.path(base,"database");cache<-file.path(base,"source_cache/hippoglossoides_platessoides/nefsc_american_plaice_5yz_2022_run29f4/2026")
 id<-"nefsc_american_plaice_5yz_2026_mt_provisional"; earlier<-"nefsc_american_plaice_5yz_2022_run29f4"
 report_url<-"https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2026&species_id=2&stock_id=4&review_type_id=6&filename=2026_PLA_GMGB.zip"
 peer_url<-"https://www.fisheries.noaa.gov/s3/fileserve?filepath=2026-10/september-2026-management-track-peer-review-panel-report_20261007.pdf"

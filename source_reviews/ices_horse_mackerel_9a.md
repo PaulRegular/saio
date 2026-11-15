@@ -9,7 +9,7 @@ The latest detailed assessment recovered is the 2024 WGHANSA assessment for 1992
 - [ICES 2026 SAG source table, key 23760](https://sg.ices.dk/ViewSourceData.aspx?key=23760), for the separate 2026 summary-only record.
 - The cited [2024 assessment TAF repository](https://github.com/ices-taf/2024_hom.27.9a_assessment) did not provide a recoverable model bundle when checked. No native model object or CPUE input series was imported.
 
-The PDFs and SAG source page are cached locally under source_cache/ck_ices_wghansa_trachurus_sp9a/. source_manifest.csv records retrieval dates, URLs, SHA-256 checksums, and the unavailable model-repository attempt.
+The PDFs and SAG source page are cached locally under source_cache/trachurus_trachurus/ck_ices_wghansa_trachurus_sp9a/. source_manifest.csv records retrieval dates, URLs, SHA-256 checksums, and the unavailable model-repository attempt.
 
 ## Recovered 2024 inputs
 

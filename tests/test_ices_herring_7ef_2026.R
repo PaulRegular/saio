@@ -59,5 +59,5 @@ cat('ICES herring 7.e-f identity, current method, source integrity, and no-impor
 
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts', 'database', '399_screen_ices_herring_7ef_2026.R'))
+source(file.path(root, 'scripts', 'discovery', '399_screen_ices_herring_7ef_2026.R'))
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)

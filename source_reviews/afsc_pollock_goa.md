@@ -5,7 +5,7 @@ Charbonneau identifier: AFSC_GOA_Gadus_chalcogrammus.
 
 ## Official assessment
 
-The November 2024 detailed SAFE chapter is cached as source_cache/afsc_pollock_goa_2024/2024_GOA_pollock_SAFE.pdf (118 pages).
+The November 2024 detailed SAFE chapter is cached as source_cache/gadus_chalcogrammus/afsc_pollock_goa_2024/2024_GOA_pollock_SAFE.pdf (118 pages).
 Source: https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=GOA+Pollock+2024.pdf&p=bd9a9aa2-3a33-4841-9133-d9ccf593e051.pdf
 
 Final December 2024 SSC report, page 40, explicitly accepts Model 23d for the Western/Central/West Yakutat stock. It endorses revised survey CVs/sample sizes, a Shelikof catchability covariate, removal of Shelikof age-1/age-2 indices, and Dirichlet-multinomial composition likelihoods. The separate Southeast Outside Tier 5 assessment must not be combined with this age-structured stock.

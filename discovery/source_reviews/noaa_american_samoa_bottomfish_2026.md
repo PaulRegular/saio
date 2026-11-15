@@ -106,4 +106,4 @@ access-denied response was retained as if it were an assessment file.
 - [2026 WPSAR summary and individual reports](https://www.wpcouncil.org/wp-content/uploads/2026/04/09.E.21-WPSAR-for-AS-Bottomfish-stock-assessment-2026-update-Summary-Report-and-Individual-Reports.pdf)
 - [2023 NOAA PIFSC report, NMFS-PIFSC-143](https://repository.library.noaa.gov/view/noaa/50907)
 - [2019 NOAA PIFSC report, NMFS-PIFSC-86](https://repository.library.noaa.gov/view/noaa/21164)
-- [Pinned NOAA Stock SMART snapshot](../../source_cache/discovery_noaa_stocksmart/stock_assessment_summary.rda)
+- [Pinned NOAA Stock SMART snapshot](../../source_cache/shared/noaa_stocksmart/stock_assessment_summary.rda)

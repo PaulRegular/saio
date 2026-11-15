@@ -1,11 +1,11 @@
 root <- "."
 register <- read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE)
-selected <- read.csv(file.path(root, "discovery", "selected_batch_19_2026.csv"), stringsAsFactors = FALSE)
+selected <- read.csv(file.path(root, "discovery/selections", "selected_batch_19_2026.csv"), stringsAsFactors = FALSE)
 provenance <- read.csv(file.path(root, "provenance", "ices_ane_27_8_sources.csv"), stringsAsFactors = FALSE)
 
 candidate <- register[register$candidate_id == "ICES:ane.27.8", , drop = FALSE]
 batch <- selected[selected$candidate_id == "ICES:ane.27.8", , drop = FALSE]
-source_review <- paste(readLines(file.path(root, "discovery", "source_reviews", "ices_bay_biscay_anchovy_2025.md")), collapse = "\n")
+source_review <- paste(readLines(file.path(root, "source_reviews", "ices_bay_biscay_anchovy_8.md")), collapse = "\n")
 
 stopifnot(
   nrow(candidate) == 1L,

@@ -3,7 +3,7 @@ old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 screen <- new.env(parent = globalenv())
 source(file.path(root,
-  'scripts/database/452_screen_ices_greater_silver_smelt_5b6a_2026.R'), local = screen)
+  'scripts/discovery/452_screen_ices_greater_silver_smelt_5b6a_2026.R'), local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN, old_dry_run)
 
@@ -11,7 +11,7 @@ register <- read.csv(file.path(root, 'discovery/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:aru.27.5b6a', , drop = FALSE]
 review <- screen$review
-cache <- file.path(root, 'source_cache/discovery_ices_gss_5b6a_2026')
+cache <- file.path(root, 'source_cache/argentina_silus/ices_greater_silver_smelt_5b6a_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

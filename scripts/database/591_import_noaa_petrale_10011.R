@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_noaa_petrale_10011")
+cache <- file.path(root, "source_cache", "eopsetta_jordani/noaa_petrale_sole_pacific_coast_2023")
 assessment_id <- "noaa_petrale_sole_pacific_coast_2023"
 projection_id <- "noaa_petrale_sole_pacific_coast_2025_projection"
 stock_id <- "noaa_petrale_sole_pacific_coast"
@@ -15,7 +15,7 @@ report_output <- file.path(cache, "outputs", "Report.sso")
 report_text <- file.path(cache, "petrale_2023_report.txt")
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 read_csv <- function(path) utils::read.csv(path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
@@ -699,7 +699,7 @@ stocks_path <- file.path(database, "stocks.csv")
 assessments_path <- file.path(database, "assessments.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
 inventory_path <- file.path(root, "discovery", "inventory_units.csv")
-selected_path <- file.path(root, "discovery", "selected_batch_05_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_05_2026.csv")
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
 candidate <- read_csv(candidate_path)
@@ -821,14 +821,11 @@ append_rows <- function(path, rows) if (nrow(rows)) utils::write.table(rows,
   qmethod = "double", na = "", append = TRUE, eol = "\n")
 
 cache_manifest <- data.frame(
-  local_file = c(paste0("discovery_noaa_petrale_10011/", report_file),
-    paste0("discovery_noaa_petrale_10011/", archive_file),
-    paste0("discovery_noaa_petrale_10011/", projection_file),
-    "discovery_noaa_petrale_10011/inputs/petrale_data.ss",
-    "discovery_noaa_petrale_10011/inputs/petrale_control.ss",
-    "discovery_noaa_petrale_10011/outputs/Report.sso",
-    "discovery_noaa_petrale_10011/outputs/ss_summary.sso"),
-  source_url = c(report_url, model_url, projection_url, rep(model_url, 4L)),
+  file = c(report_file, archive_file, projection_file,
+    "inputs/petrale_data.ss", "inputs/petrale_control.ss",
+    "outputs/Report.sso", "outputs/ss_summary.sso"),
+  url = c(report_url, model_url, projection_url, rep(model_url, 4L)),
+  revision = "",
   retrieved_on = c(source_manifest$retrieved_on[match(c(report_file,
     archive_file, projection_file), source_manifest$file)], rep("2026-10-28", 4L)),
   sha256 = c(sha256_file(file.path(cache, report_file)),
@@ -853,8 +850,11 @@ if (!dry_run) {
   replace_candidate_register_row(candidate_path, ci, candidate_row, candidate_id)
   replace_csv_row(inventory_path, "unit_key", paste0("candidate:", candidate_unit_id), ii, inventory_row)
   replace_csv_row(selected_path, "candidate_unit_id", candidate_unit_id, si, selected_row)
+  manifest_dir <- file.path(root, "provenance/noaa_petrale_sole_pacific_coast")
+  dir.create(manifest_dir, recursive = TRUE, showWarnings = FALSE)
+  cache_manifest$notes <- ""
   utils::write.csv(cache_manifest,
-    file.path(root, "provenance", "noaa_petrale_10011_sources.csv"),
+    file.path(manifest_dir, "sources.csv"),
     row.names = FALSE, na = "", fileEncoding = "UTF-8")
 }
 cat(if (dry_run) "Dry run parsed " else "Imported ", nrow(input_data),

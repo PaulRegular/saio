@@ -279,16 +279,16 @@ cat("  age-input eligibility remains unresolved; no series have been digitized o
 if (!write_mode) {
   cat("Dry run only. Add --write to append the reviewed source values.\n")
 } else {
-  source(file.path(root, "scripts/database/candidate_register_io.R"), local = TRUE)
+  source(file.path(root, "scripts/discovery/candidate_register_io.R"), local = TRUE)
   ensure_append("database/stocks.csv", stock_row, "stock_id")
   ensure_append("database/assessments.csv", assessment_row, "assessment_id")
   append_csv("database/assumptions.csv", assumptions_to_add)
   append_csv("database/inputs.csv", inputs_to_add)
   append_csv("database/outputs.csv", outputs_to_add)
   replace_candidate_register_row(candidate_path, candidate_index, candidate, candidate_id)
-  source(file.path(root, "scripts/database/195_summarize_discovery.R"),
+  source(file.path(root, "scripts/discovery/195_summarize_discovery.R"),
     local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts/database/196_summarize_inventory_units.R"),
+  source(file.path(root, "scripts/discovery/196_summarize_inventory_units.R"),
     local = new.env(parent = globalenv()))
   cat("Appended the partial source record and updated the candidate crosswalk.\n")
 }

@@ -40,7 +40,7 @@ For each stock, the matching ICES Advice and Scenarios Database record and
 Standard Graphs source-data page are cached locally in the gitignored
 `source_cache/discovery_ices_screen_first_six_2026/`. The adjacent `sources.csv`
 records direct URLs, retrieval date, byte count and SHA-256 checksum. The 2026
-SID inventory snapshot is cached under `source_cache/discovery_ices_sid/`.
+SID inventory snapshot is cached under `source_cache/shared/ices_sid/`.
 
 | Stock | ICES advice | Standard Graphs source data |
 |---|---|---|

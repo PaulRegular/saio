@@ -38,7 +38,7 @@ The 2024 summary table reports a different model's catch, SSB, full F, and recru
 
 ## Cache and source coverage
 
-The 2024 and 2026 NOAA Stock Assessment Information System (SASI) listings, both assessment bundles, and the September 2026 peer-review report are cached under `source_cache/nefsc_haddock_gulf_of_maine_2026/`. The local `manifest.csv` records source URLs, retrieval and verification dates, and SHA-256 checksums. The source bundles contain reports and figures, not native input tables or a fitted WHAM object.
+The 2024 and 2026 NOAA Stock Assessment Information System (SASI) listings, both assessment bundles, and the September 2026 peer-review report are cached under `source_cache/melanogrammus_aeglefinus/nefsc_haddock_gulf_of_maine_2026/`. The local `manifest.csv` records source URLs, retrieval and verification dates, and SHA-256 checksums. The source bundles contain reports and figures, not native input tables or a fitted WHAM object.
 
 The partial database import preserves the recent aggregate catch series, historical SSB/F/recruitment tables, reference points, and reported projections. Inputs remain partial: there are no numerical catch-at-age or survey series, survey weights, biological age surfaces, or exact model age grid. Outputs remain partial: no full N-at-age or F-at-age surfaces or numerical historical uncertainty estimates were recovered. Continue searching NOAA SASI and linked model/data systems; do not fill these gaps by digitizing charts or borrowing the 2024/2022 numerical model inputs.
 

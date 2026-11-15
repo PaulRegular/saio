@@ -56,7 +56,7 @@ values has not been verified. The report also gives estimated MSY and its 95% in
 not estimate population N or F at age or recruitment.
 
 The AFWG report, extracted text, SAG XML and 2024 benchmark report are cached
-locally under `source_cache/ck_ices_afwg_morhua_coastnor_1_2/assessment_2026/`
+locally under `source_cache/gadus_morhua/ck_ices_afwg_morhua_coastnor_1_2/assessment_2026/`
 with their source URLs and checksums. Source completeness is partial: the
 native production run, full priors, exact timing and recreational catch
 estimation details remain unresolved.

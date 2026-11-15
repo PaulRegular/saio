@@ -13,7 +13,7 @@ The previous detailed run is WGNSSK 2025, with data through 2024 and a 2025 fore
 - Framework: [WKBFLATFISH 2024](https://doi.org/10.17895/ices.pub.25471987.v1). The sole chapter documents survey standardization, benchmark choices and SS3 structure.
 - Annual summaries: [ICES SAG 2025, key 21217](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21217) and [ICES SAG 2026, key 23777](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=23777), with the corresponding XML exports.
 
-The PDFs, extracted text and SAG HTML/XML are cached locally under the gitignored `source_cache/ices_sole_north_sea_2025/`. `SOURCES.md` there records retrieval date, source versions, URLs and SHA-256 hashes. Public ICES TAF/GitHub searches did not identify a matching native 2026 SS3 run archive; this import therefore uses the detailed official report tables and the ICES SAG machine-readable outputs.
+The PDFs, extracted text and SAG HTML/XML are cached locally under the gitignored `source_cache/solea_solea/ices_sole_north_sea_2025/`. `SOURCES.md` there records retrieval date, source versions, URLs and SHA-256 hashes. Public ICES TAF/GitHub searches did not identify a matching native 2026 SS3 run archive; this import therefore uses the detailed official report tables and the ICES SAG machine-readable outputs.
 
 ## 2026 inputs
 

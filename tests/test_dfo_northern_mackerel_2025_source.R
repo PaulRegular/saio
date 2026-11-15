@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache", "dfo_northern_mackerel_2025")
+cache <- file.path(root, "source_cache", "scomber_scombrus/dfo_northern_mackerel_2025")
 repo <- file.path(cache, "model_repository")
 csv_dir <- file.path(repo, "csv", "2025")
 data_dir <- file.path(repo, "data", "2025")

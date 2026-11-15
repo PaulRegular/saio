@@ -7,10 +7,10 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 cache_options <- c(
-  file.path("source_cache", "discovery_noaa_south_atlantic_greater_amberjack_2020"),
+  file.path("source_cache", "seriola_dumerili/noaa_greater_amberjack_south_atlantic_sedar59_2020"),
   file.path("..", "..", "discovery_noaa_south_atlantic_greater_amberjack_2020")
 )
 source_dir <- cache_options[

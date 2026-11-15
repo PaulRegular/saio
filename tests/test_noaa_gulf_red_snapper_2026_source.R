@@ -37,7 +37,7 @@ assumptions <- read_columns("database/assumptions.csv", c("assessment_id",
 candidates <- read_columns("discovery/candidates.csv", c("candidate_id",
   "matched_stock_id", "match_status", "screening_status", "eligibility",
   "import_status", "survey_age_evidence", "output_evidence"))
-selected <- read_columns("discovery/selected_batch_24_2026.csv", c("candidate_id",
+selected <- read_columns("discovery/selections/selected_batch_24_2026.csv", c("candidate_id",
   "curation_status", "detailed_source_url"))
 manifest <- read.csv("provenance/discovery_noaa_gom_red_snapper_2026/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
@@ -352,7 +352,7 @@ stopifnot(
   all(exploitation$unit == "ratio")
 )
 
-review <- paste(readLines("discovery/source_reviews/noaa_gulf_red_snapper_2026.md",
+review <- paste(readLines("source_reviews/noaa_gulf_red_snapper_2026.md",
   warn = FALSE), collapse = "\n")
 stopifnot(
   grepl("tables do not provide standard errors or intervals", review, fixed = TRUE),

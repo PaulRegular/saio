@@ -1,7 +1,7 @@
 assessment_id <- "ices_plaice_north_sea_2026"
 stock_id <- "ices_plaice_north_sea"
 root <- "."
-cache <- file.path(root, "source_cache", assessment_id)
+cache <- file.path(root, "source_cache/pleuronectes_platessa", assessment_id)
 report_path <- file.path(cache, "wgnssk_2026_plaice_chapter.txt")
 xml_path <- file.path(cache, "ices_sag_2026_key_22489.xml")
 report_url <- "https://doi.org/10.17895/ices.pub.32676345"

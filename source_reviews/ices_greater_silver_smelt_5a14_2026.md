@@ -1,5 +1,7 @@
 # ICES greater silver smelt, aru.27.5a14, 2026
 
+SAIO stock `ices_greater_silver_smelt_5a14`. Assessment `ices_greater_silver_smelt_5a14_2026`.
+
 ## Assessment unit and run
 
 This record covers greater silver smelt (*Argentina silus*) in ICES Subarea 14 and Division 5.a (East Greenland and Iceland grounds). The 2026 MFRI assessment supported 2026/2027 advice and used an annual statistical catch-at-age (SAM) model. The reported fitted series ends in 2025; the 2026 values on the ICES Standard Graphs page are forecast/advice values and are not included in the fitted output series.
@@ -24,8 +26,12 @@ The current MFRI report's Table 3 provides landings separately for Section 5.a a
 
 The standard-graph 2026 row is excluded from the fitted series because it represents the advice-year forecast. Published forecast values remain available in the cached source but are not mixed with the 2000–2025 assessment estimates.
 
+The initial screen identified catch biomass by age in MFRI Figure 8 and mean catch weight at age in Figure 9. Any reconstruction would require compatible age-year coverage and verified units. Figures 15–17 show the age-specific survey indices, stock weights and maturity. The report describes a March spring survey and stock weights from the autumn groundfish survey in October. Exact observation fractions were unavailable. The benchmark’s M of 0.15 per year was a sensitivity within the profile-likelihood range. The selected M was 0.1.
+
+The ICES SAG XML endpoint returned HTTP 503 during the initial search. The graph, source table, advice page and technical report provided the documented alternative. [ICES advice record](https://asd.ices.dk/viewAdvice/7182)
+
 ## Remaining source gaps
 
 The current report describes commercial catch age data and age-specific indices from the IS-SMB spring groundfish survey and IS-SMH autumn groundfish survey. The age composition, survey-at-age, stock-weight-at-age and maturity-at-age information is presented in figures rather than recoverable numerical tables. A native SAM input file or fitted object was not located. The assessment-specific catch values before 2000, annual within-year survey timing fractions, numeric age-specific biological surfaces, and age-specific N and F outputs therefore remain unavailable.
 
-The imported assessment is partial. The available annual catch and aggregate outputs support source-level review, but they do not yet provide the numeric age-specific inputs needed for a defensible tinyAM translation.
+The imported assessment is partial. The available annual catch and aggregate outputs support source-level review, but they do not yet provide numeric age-specific observation and biology arrays.

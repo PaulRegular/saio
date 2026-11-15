@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_dfo_gulf_white_hake_2025")
+cache <- file.path(root, "source_cache", "urophycis_tenuis/dfo_white_hake_4t_2024")
 pdf_path <- file.path(cache, "research_document_2025_008.pdf")
 manifest <- utils::read.csv(
   file.path(cache, "sources.csv"), stringsAsFactors = FALSE,

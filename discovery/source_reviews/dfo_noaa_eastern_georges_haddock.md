@@ -85,7 +85,7 @@ source arrays, not evidence that the model lacks age structure.
   https://publications.gc.ca/site/eng/9.963875/publication.html
 - NOAA Eastern Georges Bank Haddock TRAC Status Report 2023/01:
   https://repository.library.noaa.gov/view/noaa/55818
-- NOAA Stock SMART metadata: pinned snapshot documented in discovery/README.md.
+- NOAA Stock SMART metadata: pinned snapshot documented in the [NOAA Stock SMART source manifest](../../provenance/shared/noaa_stocksmart/sources.csv).
 
 Local DFO reports and the catalogue page, retrieval URLs, and SHA-256 checksums
 are recorded in the gitignored source cache manifest. The management-plan page

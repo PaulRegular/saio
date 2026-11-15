@@ -1,7 +1,7 @@
 root <- '.'
 candidate_id <- 'ICES:ldb.27.8c9a'
 unit_id <- 'ices_four_spot_megrim_8c9a'
-cache <- file.path(root, 'source_cache', 'discovery_ices_four_spot_megrim_8c9a_2026')
+cache <- file.path(root, 'source_cache', 'lepidorhombus_boscii/ices_four_spot_megrim_8c9a_2026')
 
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -55,6 +55,6 @@ cat('ICES four-spot megrim identity, age-specific assessment evidence, provenanc
 
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts', 'database', '398_screen_ices_four_spot_megrim_8c9a_2026.R'))
+source(file.path(root, 'scripts', 'discovery', '398_screen_ices_four_spot_megrim_8c9a_2026.R'))
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)

@@ -1,7 +1,7 @@
 source("scripts/database/pacific_tables.R")
 source("scripts/database/pacific_ss.R")
 id <- "dfo_pop_bc_2023"
-cache <- "source_cache/dfo_pop_bc"
+cache <- "source_cache/sebastes_alutus/dfo_pop_bc"
 revision <- "16f1d4368ad7d3e854219ca1c2d9d6353252c861"
 native <- paste0("https://github.com/pbs-software/pbs-synth/tree/",revision,"/models/input/2023/POP/CST/Base/R21v3/21.01")
 report <- "https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41282565.pdf"

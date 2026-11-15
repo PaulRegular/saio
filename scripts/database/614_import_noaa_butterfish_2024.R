@@ -511,7 +511,7 @@ if (!write_mode) {
     stop("NOAA Butterfish rows are already present in the canonical database.", call. = FALSE)
   }
   candidates <- read_csv("discovery/candidates.csv")
-  selected <- read_csv("discovery/selected_batch_22_2026.csv")
+  selected <- read_csv("discovery/selections/selected_batch_22_2026.csv")
   candidate_row <- which(candidates$candidate_id == candidate_id)
   selected_row <- which(selected$candidate_id == candidate_id)
   if (length(candidate_row) != 1L || length(selected_row) != 1L ||
@@ -545,13 +545,13 @@ if (!write_mode) {
       maturity_evidence = "The current model uses annual maturity ogives, but numerical values for the 2024 WHAM run are not in the public support archive; older-run values were not substituted.",
       output_evidence = "Imported 1989-2023 SSB, fully selected F at age 3, and age-0 recruitment with source-reported CVs. Numeric N-at-age/F-at-age arrays were not found.",
       notes = "The 2024 Level 2 assessment has been partially imported from the official support tables. The catch age proportions are weight-based; the source does not provide the effective sample size or conversion used in the fitted likelihood."))
-  replace_register_row("discovery/selected_batch_22_2026.csv", "candidate_id", candidate_id,
+  replace_register_row("discovery/selections/selected_batch_22_2026.csv", "candidate_id", candidate_id,
     list(curation_status = "source_curated_partial",
       selection_basis = "The 2024 Management Track remains the current production assessment. Imported 1,198 source input rows, 21 assumptions and 105 output rows; unresolved current-run survey timing/weights, YOY values, maturity values and age-specific population outputs keep the record partial."))
 
-  source(file.path(root, "scripts", "database", "195_summarize_discovery.R"),
+  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
     local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts", "database", "196_summarize_inventory_units.R"),
+  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
     local = new.env(parent = globalenv()))
   cat("Imported partial NOAA Butterfish 2024 source data.\n")
 }

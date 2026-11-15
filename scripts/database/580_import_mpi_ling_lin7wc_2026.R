@@ -667,7 +667,7 @@ if (write_mode) {
   append_table(inputs, "inputs.csv")
   append_table(outputs, "outputs.csv")
 
-  source("scripts/database/candidate_register_io.R")
+  source("scripts/discovery/candidate_register_io.R")
   candidates$matched_stock_id[candidate_index] <- stock_id
   candidates$match_status[candidate_index] <- "matched"
   candidates$import_status[candidate_index] <- "partial"

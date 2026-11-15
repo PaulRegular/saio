@@ -3,13 +3,13 @@ stock_id <- "noaa_gulf_red_snapper"
 assessment_id <- "noaa_gulf_red_snapper_2026"
 candidate_id <- "NOAA:10230"
 report_url <- "https://sedarweb.org/documents/sedar-98-gulf-red-snapper-final-stock-assessment-report/"
-source_dir <- file.path(root, "source_cache/discovery_noaa_gom_red_snapper_2026")
+source_dir <- file.path(root, "source_cache/lutjanus_campechanus/noaa_gulf_red_snapper_2026")
 manifest_path <- file.path(root, "provenance/discovery_noaa_gom_red_snapper_2026/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
 
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")
 
@@ -458,7 +458,7 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
   notes = paste("Latest detailed run located for NOAA:10230; final report released in October 2026.",
     "The final report states SSC review was pending, so the assessment is not marked applied for advice.",
     "Area-specific summary outputs from Tables 20-22 and exploitation rates from Tables 12-19 have been imported; age-specific N/F and numeric",
-    "inputs remain incomplete. See discovery/source_reviews/noaa_gulf_red_snapper_2026.md."))
+    "inputs remain incomplete. See source_reviews/noaa_gulf_red_snapper_2026.md."))
 
 inputs <- index_inputs
 if (anyDuplicated(input_key(inputs))) {
@@ -559,7 +559,7 @@ if (!write_mode) {
   )
   candidates$notes[candidate_row] <- paste(
     "The official final report and supporting data papers are cached under",
-    "source_cache/discovery_noaa_gom_red_snapper_2026/ with provenance and SHA-256 hashes.",
+    "source_cache/lutjanus_campechanus/noaa_gulf_red_snapper_2026/ with provenance and SHA-256 hashes.",
     "Report-derived population outputs from Tables 12-22 and aggregate survey indices are imported; catch, age",
     "compositions and numeric biological inputs remain under source review."
   )
@@ -571,10 +571,10 @@ if (!write_mode) {
   assessment_rows$notes[assessment_row] <- assessment$notes
   replace_csv_register_row(assessment_path, assessment_row,
     assessment_rows[assessment_row, , drop = FALSE], "assessment_id", assessment_id)
-  source("scripts/database/candidate_register_io.R")
+  source("scripts/discovery/candidate_register_io.R")
   replace_candidate_register_row(candidate_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  selected_path <- file.path(root, "discovery/selected_batch_24_2026.csv")
+  selected_path <- file.path(root, "discovery/selections/selected_batch_24_2026.csv")
   selected <- read.csv(selected_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   selected_row <- which(selected$candidate_id == candidate_id)

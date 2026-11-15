@@ -20,7 +20,7 @@ Current official reproducible repository: [ices-advice/2026_her.27.3a47d](https:
 
 Pinned inspected revision: `d2690dac28a0b44f1735193cf8c7c87fe8fcbbbe`.
 
-The repository tree and relevant scripts are cached in `source_cache/ices_herring_north_sea_2026/`. The local manifest records cached filenames, source URLs, SHA-256 checksums and verification dates. Retrieval dates were not recorded for all pre-existing cached files.
+The repository tree and relevant scripts are cached in `source_cache/clupea_harengus/ices_herring_north_sea_2026/`. The local manifest records cached filenames, source URLs, SHA-256 checksums and verification dates. Retrieval dates were not recorded for all pre-existing cached files.
 
 The older `ICES-dk/wg_HAWG` repository contains historical NSAS artifacts and is not used as the current-run source.
 
@@ -111,7 +111,7 @@ Annual stock and catch weights and maturity are available through 2025. The comp
 
 ## Report-table staging and configuration checks
 
-The source-specific staging extraction retains 6,131 report-native values in `source_cache/ices_herring_north_sea_2026/report_tables_raw.csv`.
+The source-specific staging extraction retains 6,131 report-native values in `source_cache/clupea_harengus/ices_herring_north_sea_2026/report_tables_raw.csv`.
 
 Tables 2.6.1.2–6 cover 1947–2025; the N and F surfaces in Tables 2.6.2.3–4 extend through 2026.
 

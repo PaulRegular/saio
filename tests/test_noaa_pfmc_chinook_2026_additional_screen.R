@@ -1,5 +1,5 @@
 root <- "."
-source(file.path(root, 'scripts', 'database',
+source(file.path(root, 'scripts', 'discovery',
   '504_screen_noaa_pfmc_chinook_2026.R'))
 
 stock_ids <- c(10605L, 10606L, 10607L, 10609L, 10611L, 10612L, 10613L,

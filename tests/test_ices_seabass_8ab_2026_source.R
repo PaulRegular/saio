@@ -7,7 +7,7 @@ sys.source(script, envir = import)
 if (is.na(old_dry_run)) Sys.unsetenv("TAM_SOURCE_DRY_RUN") else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 register <- read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE)
-selected <- read.csv(file.path(root, "discovery", "selected_batch_01_2026.csv"), stringsAsFactors = FALSE)
+selected <- read.csv(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"), stringsAsFactors = FALSE)
 assessments <- read.csv(file.path(root, "database", "assessments.csv"), stringsAsFactors = FALSE)
 registered <- register[register$candidate_id == "ICES:bss.27.8ab", , drop = FALSE]
 selected_row <- selected[selected$candidate_id == "ICES:bss.27.8ab", , drop = FALSE]

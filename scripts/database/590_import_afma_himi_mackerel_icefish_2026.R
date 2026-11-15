@@ -68,7 +68,7 @@ replace_row <- function(path, key, value, replacement) {
 stock_table <- read_table("database/stocks.csv")
 assessment_table <- read_table("database/assessments.csv")
 candidates <- read_table("discovery/candidates.csv")
-selected <- read_table("discovery/selected_batch_07_2026.csv")
+selected <- read_table("discovery/selections/selected_batch_07_2026.csv")
 candidate_rows <- which(candidates$candidate_id == candidate_id)
 selected_rows <- which(selected$candidate_id == candidate_id)
 stopifnot(
@@ -397,11 +397,11 @@ replace_row("discovery/candidates.csv", "candidate_id", candidate_id,
   candidates[candidate_rows, , drop = FALSE])
 
 selected$curation_status[selected_rows] <- "source_curated_partial"
-replace_row("discovery/selected_batch_07_2026.csv", "candidate_id", candidate_id,
+replace_row("discovery/selections/selected_batch_07_2026.csv", "candidate_id", candidate_id,
   selected[selected_rows, , drop = FALSE])
 
-source("scripts/database/195_summarize_discovery.R", local = TRUE)
-source("scripts/database/196_summarize_inventory_units.R", local = TRUE)
+source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
+source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
 
 cat("Imported the partial AFMA HIMI mackerel icefish 2026 source record.\n")
 cat("Historical catch-at-age and annual N/F population outputs remain unavailable; no tinyAM fit was attempted.\n")

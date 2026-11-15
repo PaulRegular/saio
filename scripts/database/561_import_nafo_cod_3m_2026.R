@@ -1,7 +1,7 @@
 root <- "."
 assessment_id <- "nafo_cod_3m_2026"
 stock_id <- "nafo_cod_3m"
-cache_dir <- file.path(root, "source_cache", "nafo_cod_3m_2026")
+cache_dir <- file.path(root, "source_cache", "gadus_morhua/nafo_cod_3m_2026")
 report_path <- file.path(cache_dir, "nafo_scr26_023_cod3m_2026.pdf")
 
 if (!requireNamespace("pdftools", quietly = TRUE)) {
@@ -489,7 +489,7 @@ assessment_new <- data.frame(
 source_reviews <- file.path(root, "source_reviews")
 manifest_path <- file.path(root, "provenance", "nafo_cod_3m_2026", "manifest.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 read_csv <- function(path) read.csv(path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

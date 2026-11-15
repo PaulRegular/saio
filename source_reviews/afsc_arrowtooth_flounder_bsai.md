@@ -11,7 +11,7 @@ full assessment for 2026 at that time. The newer 2026 off-cycle report now
 lists 2027; neither projection report replaces the detailed 2022 fit.
 
 The detailed 2022 SAFE and the 2024 off-cycle projection report are cached
-under `source_cache/afsc_arrowtooth_flounder_bsai_2022/` with URLs, retrieval
+under `source_cache/atheresthes_stomias/afsc_arrowtooth_flounder_bsai_2022/` with URLs, retrieval
 dates and SHA-256 checksums. Searches covered AFSC assessment/code repositories,
 the cited NOAA/NPFMC portals and the authors' public repositories. No matching
 production native input/object was recovered. The old framework archive URLs

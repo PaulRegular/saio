@@ -1,8 +1,8 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "ices_whiting_7b_ce_k_2026")
+cache <- file.path(root, "source_cache", "merlangius_merlangus/ices_whg_27_7b_ce_k_2026")
 register_path <- file.path(root, "discovery", "candidates.csv")
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 
 stock_id <- "ices_whg_27_7b_ce_k"
@@ -504,7 +504,7 @@ if (dry_run) {
   append_rows("assumptions.csv", assumptions)
   append_rows("inputs.csv", inputs)
   append_rows("outputs.csv", outputs)
-  source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+  source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
   replace_candidate_register_row(register_path, candidate_row, register[candidate_row, , drop = FALSE], candidate_id)
   replace_csv_row(selected_path, selected[selected_row, , drop = FALSE], "candidate_id", candidate_id)
   cat("Imported partial ICES 2026 Celtic Sea whiting source data.\n")

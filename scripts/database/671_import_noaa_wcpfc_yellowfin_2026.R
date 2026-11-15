@@ -7,7 +7,7 @@ revision <- "b00a02f3537ef54520b219488f899188ea6eff3f"
 dry_run <- identical(Sys.getenv("SAIO_SOURCE_DRY_RUN"), "1")
 
 .libPaths(c(file.path(root, "source_cache/.Rlib"), .libPaths()))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 cache_options <- c(
   file.path(root, "source_cache", cache_name),

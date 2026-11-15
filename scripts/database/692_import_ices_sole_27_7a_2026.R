@@ -11,7 +11,7 @@ advice_url <- "https://doi.org/10.17895/ices.advice.30932405"
 framework_url <- "https://doi.org/10.17895/ices.pub.25471987.v1"
 repo_url <- "https://github.com/ices-advice/2026_sol.27.7a/tree/bff4518e75378685700c849a24c5ba9c86e5a575/2026_sol.27.7a_assessment"
 sag_url <- "https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22641"
-cache <- file.path(root, "source_cache/discovery_ices_sol_27_7a_2026")
+cache <- file.path(root, "source_cache/solea_solea/ices_sol_27_7a_2026")
 provenance <- file.path(root, "provenance", assessment_id, "sources.csv")
 manifest <- read.csv(provenance, stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE)
@@ -312,7 +312,7 @@ if (write_mode) {
   append_csv(inputs_new, file.path(database, "inputs.csv"))
   append_csv(outputs_new, file.path(database, "outputs.csv"))
 
-  source(file.path(root, "scripts/database/candidate_register_io.R"), local = TRUE)
+  source(file.path(root, "scripts/discovery/candidate_register_io.R"), local = TRUE)
   candidates_path <- file.path(root, "discovery/candidates.csv")
   candidates <- read.csv(candidates_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
   ci <- which(candidates$candidate_id == candidate_id)
@@ -341,7 +341,7 @@ if (write_mode) {
   inventory$eligibility[ui] <- "unresolved"
   inventory$import_status[ui] <- "partial"
   replace_csv_register_row(inventory_path, ui, inventory[ui, , drop = FALSE], "unit_key", paste0("candidate:", stock_id))
-  batch_path <- file.path(root, "discovery/selected_batch_42_2026.csv")
+  batch_path <- file.path(root, "discovery/selections/selected_batch_42_2026.csv")
   batch <- read.csv(batch_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
   batch$curation_status[batch$candidate_id == candidate_id] <- "partial_source_import"
   write.csv(batch, batch_path, row.names = FALSE, na = "")

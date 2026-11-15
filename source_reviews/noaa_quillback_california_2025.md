@@ -1,5 +1,7 @@
 # NOAA California Quillback Rockfish — 2025 assessment
 
+SAIO stock `noaa_quillback_rockfish_california`. Assessment `noaa_quillback_california_2025`.
+
 ## Stock and assessment
 
 NOAA Stock SMART ID 15342 identifies the California quillback rockfish unit, which is separate from Canadian Quillback. The database record is `noaa_quillback_rockfish_california`.
@@ -21,6 +23,8 @@ The model does not take observed catch-at-age or an age-specific abundance index
 `Report.sso` provides beginning-year N-at-age, biomass-at-age, M-at-age, fleet-specific F-at-age, and dead catch numbers-at-age for 1916–2024. The imported N surface was cross-checked against the archive's `natage.csv`. Total abundance is derived by summing N-at-age; total F is derived by summing the two reported fishery-fleet F surfaces. The report time series also provides all-age biomass and its age-3+ summary biomass.
 
 The model's spawning quantity is **spawning output in eggs**, not spawning-stock biomass. Reported spawning-output and recruitment point estimates and 95% confidence limits are retained for 2015–2025. Point estimates use the native report file; confidence limits are the rounded values in Tables ii and iii. The 2025 rows are identified as one-year forecasts.
+
+The report’s age samples span 2007–2024. The 128 active positive-year conditional age-composition records span 2010–2024. The model’s spawning month is January. The native archive was retrieved on 2026-10-29. [PFMC assessment document index](https://www.pcouncil.org/stock-assessments-star-reports-stat-reports-rebuilding-analyses-terms-of-reference/groundfish-stock-assessment-documents/)
 
 ## Gaps and limits
 

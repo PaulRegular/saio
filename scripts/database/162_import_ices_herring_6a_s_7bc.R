@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache/ck_ices_hawg_harengus_cs6_a_s_7b_c")
+cache <- file.path(base, "source_cache/clupea_harengus/ck_ices_hawg_harengus_cs6_a_s_7b_c")
 stock_id <- "ck_ices_hawg_harengus_cs6_a_s_7b_c"
 report_2025 <- "https://doi.org/10.17895/ices.pub.28389008.v5"
 report_2026 <- "https://doi.org/10.17895/ices.pub.31424315"
@@ -10,7 +10,7 @@ verify <- function(file, sha) {
     cli::cli_abort("Cached source {file} is missing or differs from its pinned checksum.")
   path
 }
-invisible(verify("../ck_ices_hawg_dubius_ns/2025_san.sa.4/HAWG_2025.pdf", "06967082a29ef54ffb33ce7d2e8f89a4695dd6d1ca70f3e78510c03c6c813097"))
+invisible(verify("../../ammodytes_dubius/ck_ices_hawg_dubius_ns/2025_san.sa.4/HAWG_2025.pdf", "06967082a29ef54ffb33ce7d2e8f89a4695dd6d1ca70f3e78510c03c6c813097"))
 invisible(verify("HAWG_2026_full_report.pdf", "0af113dedfea05c1dabc75402ebd5846d4a6ea931e121ca9e9702b0811c9832e"))
 paths <- list(
   `2025` = list(

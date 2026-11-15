@@ -2,7 +2,7 @@ import_noaa_longnose_skate_pacific_2019 <- function(root = ".", write = FALSE) {
   assessment_id <- "noaa_pacific_coast_longnose_skate_2019"
   stock_id <- "noaa_pacific_coast_longnose_skate"
   candidate_id <- "NOAA:10731"
-  cache <- file.path(root, "source_cache/discovery_noaa_longnose_skate_2019")
+  cache <- file.path(root, "source_cache/beringraja_rhina/noaa_pacific_coast_longnose_skate_2019")
   manifest_path <- file.path(cache, "sources.csv")
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
     check.names = FALSE)
@@ -739,7 +739,7 @@ import_noaa_longnose_skate_pacific_2019 <- function(root = ".", write = FALSE) {
   append_csv(inputs, input_path)
   append_csv(outputs, output_path)
 
-  source(file.path(root, "scripts/database/candidate_register_io.R"),
+  source(file.path(root, "scripts/discovery/candidate_register_io.R"),
     local = TRUE)
   candidate_path <- file.path(root, "discovery/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
@@ -782,7 +782,7 @@ import_noaa_longnose_skate_pacific_2019 <- function(root = ".", write = FALSE) {
   replace_csv_register_row(inventory_path, ir,
     inventory[ir, , drop = FALSE], "candidate_ids", inventory$candidate_ids[ir])
 
-  batch_path <- file.path(root, "discovery/selected_batch_40_2026.csv")
+  batch_path <- file.path(root, "discovery/selections/selected_batch_40_2026.csv")
   batch <- read.csv(batch_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   bi <- which(batch$candidate_id == candidate_id)

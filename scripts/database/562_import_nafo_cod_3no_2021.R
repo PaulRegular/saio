@@ -2,7 +2,7 @@ root <- "."
 assessment_id <- "nafo_cod_3no_2021"
 stock_id <- "nafo_cod_3no"
 dry_run <- identical(Sys.getenv("SAIO_NAFO_IMPORT_DRY_RUN"), "1")
-cache_dir <- file.path(root, "source_cache", assessment_id)
+cache_dir <- file.path(root, "source_cache/gadus_morhua", assessment_id)
 report_path <- file.path(cache_dir, "nafo_scr21_031_cod3no_2021.pdf")
 
 required_packages <- c("pdftools", "png", "tesseract")
@@ -703,7 +703,7 @@ assumptions_path <- file.path(root, "database", "assumptions.csv")
 inputs_path <- file.path(root, "database", "inputs.csv")
 outputs_path <- file.path(root, "database", "outputs.csv")
 candidate_path <- file.path(root, "discovery", "candidates.csv")
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
 candidates <- read_csv(candidate_path)

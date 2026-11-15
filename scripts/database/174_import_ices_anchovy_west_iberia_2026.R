@@ -1,4 +1,4 @@
-base<-".";db<-file.path(base,"database");cache<-file.path(base,"source_cache/ices_anchovy_west_iberia_2026")
+base<-".";db<-file.path(base,"database");cache<-file.path(base,"source_cache/engraulis_encrasicolus/ices_anchovy_west_iberia_2026")
 stock_id<-"ices_anchovy_west_iberia";id<-"ices_anchovy_west_iberia_2026"; report<-"https://doi.org/10.17895/ices.pub.32614524.v2";sag<-"https://sag.ices.dk/SAG_API/StockXmlDownload/23750"
 verify<-function(f,h){p<-file.path(cache,f);stopifnot(digest::digest(readBin(p,"raw",n=file.info(p)$size),serialize=FALSE,algo="sha256")==h);p}
 pdf<-pdftools::pdf_text(verify("WGHANSA_2026.pdf","f4588a787acb7530ba95befbe57d4cfbc50dee7620cc73c01d24159c527d4b95")); xml<-xml2::read_xml(verify("SAG_2026_23750.xml","85fb4e3b349988288151b1599070ea33ad944d68a46e39326a891a8d44f18507"))

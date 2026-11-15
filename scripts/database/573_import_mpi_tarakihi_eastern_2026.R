@@ -429,7 +429,7 @@ if (write_mode) {
   append_csv(outputs, file.path(database_dir, "outputs.csv"))
   write.csv(manifest, "provenance/mpi_tarakihi_eastern_2026_sources.csv", row.names = FALSE, na = "")
 
-  source("scripts/database/candidate_register_io.R")
+  source("scripts/discovery/candidate_register_io.R")
   register_path <- file.path(root, "discovery", "candidates.csv")
   register <- read.csv(register_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
   position <- match(candidate_id, register$candidate_id)
@@ -447,6 +447,6 @@ if (write_mode) {
   candidate$decision_reason <- "Partial source import completed from the latest detailed 2026 eastern tarakihi production assessment. Catch biomass, age compositions, available base-model indices, biological assumptions and terminal/projection outputs are represented; missing daily CPUE and annual fitted state arrays remain explicit source gaps."
   candidate$notes <- "One eastern biological stock spanning TAR 3, TAR 2 and eastern portions of TAR 1 and TAR 7; the official model has three spatial regions and estimated movement."
   replace_candidate_register_row(register_path, position, candidate, candidate_id)
-  sys.source("scripts/database/195_summarize_discovery.R", envir = new.env(parent = globalenv()))
-  sys.source("scripts/database/196_summarize_inventory_units.R", envir = new.env(parent = globalenv()))
+  sys.source("scripts/discovery/195_summarize_discovery.R", envir = new.env(parent = globalenv()))
+  sys.source("scripts/discovery/196_summarize_inventory_units.R", envir = new.env(parent = globalenv()))
 }

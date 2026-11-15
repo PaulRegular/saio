@@ -87,7 +87,7 @@ likelihood is not confirmed.
 
 Relevant PDFs, extracted text, the acoustic data and dictionary, retrieval
 URLs, and checksums are listed in the ignored
-`source_cache/ck_dfo_gsl_harengus_4t_fall/manifest.csv`. The 2026 PDF URLs
+`source_cache/clupea_harengus/ck_dfo_gsl_harengus_4t_fall/manifest.csv`. The 2026 PDF URLs
 currently redirect to the Government Publications HTML archive page in the
 local downloader, so those PDFs are not represented as cached files.
 

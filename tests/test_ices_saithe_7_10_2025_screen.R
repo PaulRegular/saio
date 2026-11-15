@@ -1,6 +1,6 @@
 root <- '.'
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts/database/484_screen_ices_saithe_7_10_2025.R'))
+source(file.path(root, 'scripts/discovery/484_screen_ices_saithe_7_10_2025.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 cache <- file.path(root, 'source_cache/discovery_ices_saithe_subareas_7_10_2025')

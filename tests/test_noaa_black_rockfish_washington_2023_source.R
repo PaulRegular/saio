@@ -30,7 +30,7 @@ candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-selected <- read.csv("discovery/selected_batch_31_2026.csv", stringsAsFactors = FALSE,
+selected <- read.csv("discovery/selections/selected_batch_31_2026.csv", stringsAsFactors = FALSE,
   check.names = FALSE)
 
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

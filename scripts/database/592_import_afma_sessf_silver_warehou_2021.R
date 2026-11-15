@@ -1,7 +1,7 @@
 assessment_id <- "afma_sessf_silver_warehou_2021"
 stock_id <- "afma_sessf_silver_warehou"
 candidate_id <- "AFMA:SESSF_SILVER_WAREHOU"
-selected_path <- "discovery/selected_batch_08_2026.csv"
+selected_path <- "discovery/selections/selected_batch_08_2026.csv"
 manifest_path <- "provenance/afma_sessf_silver_warehou_2021_sources.csv"
 report_url <- "https://www.afma.gov.au/sites/default/files/2023-02/Stock%20Assessments%20for%20SESSF%202020%E2%80%9321%20-%20Part%201.pdf"
 summary_url <- "https://www.afma.gov.au/sites/default/files/2026-01/SESSF-Species-Summaries-2026.pdf"
@@ -431,7 +431,7 @@ candidate$decision_reason <- paste(
 )
 candidate$notes <- paste(
   "Imported source rows are limited to reported tables; no compositions or fitted annual age-specific surfaces were reconstructed.",
-  "The 2024 Tier 1 assessment was not accepted. See discovery/source_reviews/afma_sessf_silver_warehou_2021.md."
+  "The 2024 Tier 1 assessment was not accepted. See source_reviews/afma_sessf_silver_warehou.md."
 )
 
 selected_row <- selected[selected_index, , drop = FALSE]
@@ -451,7 +451,7 @@ if (!write_mode) {
   append_csv("database/outputs.csv", outputs)
   replace_csv_row("discovery/candidates.csv", candidate_id, candidate)
   replace_csv_row(selected_path, candidate_id, selected_row)
-  source("scripts/database/195_summarize_discovery.R", local = TRUE)
-  source("scripts/database/196_summarize_inventory_units.R", local = TRUE)
+  source("scripts/discovery/195_summarize_discovery.R", local = TRUE)
+  source("scripts/discovery/196_summarize_inventory_units.R", local = TRUE)
   cat("Imported the partial AFMA SESSF silver warehou source record.\n")
 }

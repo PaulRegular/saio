@@ -3,7 +3,7 @@ import_noaa_gulf_golden_tilefish <- function(root = ".", write = FALSE) {
   stock_id <- "noaa_gulf_golden_tilefish"
   candidate_id <- "NOAA:10383"
   candidate_unit_id <- stock_id
-  source_dir <- file.path(root, "source_cache/discovery_noaa_gulf_tilefish_sedar22_2011")
+  source_dir <- file.path(root, "source_cache/lopholatilus_chamaeleonticeps/noaa_gulf_golden_tilefish_2011")
   manifest_path <- file.path(root, "provenance/discovery_noaa_gulf_tilefish_sedar22_2011/sources.csv")
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE, check.names = FALSE,
     colClasses = "character")
@@ -570,7 +570,7 @@ import_noaa_gulf_golden_tilefish <- function(root = ".", write = FALSE) {
       !identical(candidates$match_status[candidate_row], "matched"))
     stop("The candidate register has an unexpected match status.", call. = FALSE)
 
-  selected_path <- file.path(root, "discovery/selected_batch_38_2026.csv")
+  selected_path <- file.path(root, "discovery/selections/selected_batch_38_2026.csv")
   selected <- read.csv(selected_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   selected_row <- match(candidate_id, selected$candidate_id)
@@ -592,7 +592,7 @@ import_noaa_gulf_golden_tilefish <- function(root = ".", write = FALSE) {
     append_table("assumptions", assumptions[, assumption_columns, drop = FALSE])
     append_table("inputs", inputs)
     append_table("outputs", outputs)
-    source(file.path(root, "scripts/database/candidate_register_io.R"))
+    source(file.path(root, "scripts/discovery/candidate_register_io.R"))
     for (name in names(candidate_updates)) candidates[[name]][candidate_row] <- candidate_updates[[name]]
     replace_candidate_register_row(candidates_path, candidate_row,
       candidates[candidate_row, , drop = FALSE], candidate_id)

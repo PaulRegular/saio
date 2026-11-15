@@ -1,6 +1,6 @@
 root <- '.'
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts/database/347_screen_ices_small_eyed_ray_7de_2024.R'))
+source(file.path(root, 'scripts/discovery/347_screen_ices_small_eyed_ray_7de_2024.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 register <- read.csv(file.path(root, 'discovery/candidates.csv'),

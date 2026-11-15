@@ -1,6 +1,6 @@
 # Run separately from fitting. Evaluate fixed biology; do not optimize or import states.
 source("scripts/database/pacific_sources.R")
-cache <- "source_cache/dfo_canary_bc"
+cache <- "source_cache/sebastes_pinniger/dfo_canary_bc"
 url <- "https://github.com/nmfs-ost/ss3-source-code/releases/download/v3.30.18/ss_win.exe"
 exe <- cache_pacific_source("dfo_canary_bc", url, "framework/ss3_3.30.18.exe", "v3.30.18")
 directory <- file.path(cache, "fixed_biology_evaluation")

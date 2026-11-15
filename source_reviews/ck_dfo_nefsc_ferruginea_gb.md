@@ -28,7 +28,7 @@ data through 2021, whereas the archived file extends through 2022; that
 discrepancy is retained rather than resolved by dropping a year. These files
 are useful source leads, but do not close the production-run gap and are not
 imported as official inputs or used to generate replacement official outputs.
-They are retained under `source_cache/ck_dfo_nefsc_ferruginea_gb/zenodo_19443644_research/`
+They are retained under `source_cache/limanda_ferruginea/ck_dfo_nefsc_ferruginea_gb/zenodo_19443644_research/`
 with the original record metadata and `manifest.csv`; the section check is
 recorded in `zenodo_research_review.log` in the stock cache. Downloaded scripts
 were inspected as text, not executed.

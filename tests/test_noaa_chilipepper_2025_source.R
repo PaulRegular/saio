@@ -25,7 +25,7 @@ candidates <- read.csv("discovery/candidates.csv",
   colClasses = "character", check.names = FALSE)
 inventory <- read.csv("discovery/inventory_units.csv",
   colClasses = "character", check.names = FALSE)
-batch <- read.csv("discovery/selected_batch_29_2026.csv",
+batch <- read.csv("discovery/selections/selected_batch_29_2026.csv",
   colClasses = "character", check.names = FALSE)
 manifest <- read.csv("provenance/discovery_noaa_chilipepper_2025/sources.csv",
   colClasses = "character", check.names = FALSE)

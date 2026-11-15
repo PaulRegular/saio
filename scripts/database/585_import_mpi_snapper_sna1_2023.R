@@ -494,11 +494,11 @@ if (!write_data) {
     "Imported partial source records: fleet-specific catch mass, four 2019-20 composition series, fixed M and maturity, tag estimates, and selected reported outputs.",
     "Fitted CPUE/survey index vectors, most composition years, full annual weights, and age-specific population outputs remain unavailable."
   )
-  source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+  source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
   row_index <- candidate_row
   replace_candidate_register_row(candidate_path, row_index,
     candidates[candidate_row, , drop = FALSE], candidate_id)
-  selection_path <- file.path(root, "discovery", "selected_batch_05_2026.csv")
+  selection_path <- file.path(root, "discovery/selections", "selected_batch_05_2026.csv")
   selection <- read.csv(selection_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   selection_row <- which(selection$candidate_id == candidate_id)
@@ -508,9 +508,9 @@ if (!write_data) {
   }
   selection$curation_status[selection_row] <- "source_curated_partial"
   write.csv(selection, selection_path, row.names = FALSE, na = "")
-  source(file.path(root, "scripts", "database", "196_summarize_inventory_units.R"),
+  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
     local = TRUE)
-  source(file.path(root, "scripts", "database", "195_summarize_discovery.R"),
+  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
     local = TRUE)
   cat("Imported SNA 1 source records and updated the candidate register.\n")
 }

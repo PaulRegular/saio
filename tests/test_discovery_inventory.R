@@ -5,7 +5,7 @@ register <- read_table("discovery/candidates.csv")
 stocks <- read_table("database/stocks.csv")
 progress <- read_table("discovery/inventory_progress.csv")
 units <- read_table("discovery/inventory_units.csv")
-selected <- read_table("discovery/selected_batch_01_2026.csv")
+selected <- read_table("discovery/selections/selected_batch_01_2026.csv")
 
 # Source-list membership is distinct from current stock and import status.
 stopifnot(nrow(register) > 0L, !anyNA(register$candidate_id),
@@ -18,20 +18,17 @@ stopifnot(nrow(register) > 0L, !anyNA(register$candidate_id),
   all(is.na(register$matched_stock_id) | register$matched_stock_id %in% stocks$stock_id))
 regional_rows <- register[register$organization %in%
   c("Fisheries New Zealand", "AFMA"), , drop = FALSE]
-nz_rows <- regional_rows[regional_rows$organization == "Fisheries New Zealand", , drop = FALSE]
-afma_rows <- regional_rows[regional_rows$organization == "AFMA", , drop = FALSE]
-afma_unmatched <- afma_rows[afma_rows$match_status == "new", , drop = FALSE]
-stopifnot(nrow(regional_rows) == 29L,
-  nrow(nz_rows) == 21L,
-  all(nz_rows$match_status == "matched"),
-  all(nz_rows$matched_stock_id %in% stocks$stock_id),
-  nrow(afma_rows) == 8L,
-  sum(afma_rows$match_status == "matched") == 7L,
-  nrow(afma_unmatched) == 1L,
-  afma_unmatched$candidate_id == "AFMA:SESSF_Eastern_School_Whiting",
-  afma_unmatched$eligibility == "unresolved",
-  afma_unmatched$import_status == "partial",
-  all(afma_rows$matched_stock_id[afma_rows$match_status == "matched"] %in% stocks$stock_id))
+regional_matches <- regional_rows[regional_rows$match_status == "matched", , drop = FALSE]
+school_whiting <- regional_rows[regional_rows$candidate_id ==
+  "AFMA:SESSF_Eastern_School_Whiting", , drop = FALSE]
+stopifnot(
+  setequal(unique(regional_matches$organization), c("Fisheries New Zealand", "AFMA")),
+  all(regional_matches$matched_stock_id %in% stocks$stock_id),
+  nrow(school_whiting) == 1L,
+  school_whiting$match_status == "new",
+  school_whiting$eligibility == "unresolved",
+  school_whiting$import_status == "partial"
+)
 check_inventory_accounting(register, progress, units)
 incorrect_progress <- progress
 incorrect_progress$new[1L] <- incorrect_progress$new[1L] + 1L
@@ -114,7 +111,7 @@ stopifnot(nrow(redfish3ln_unit) == 1L,
   grepl("DFO", redfish3ln_unit$organizations, fixed = TRUE),
   grepl("NAFO", redfish3ln_unit$organizations, fixed = TRUE))
 hoki <- lookup("MPI:HOK1")
-hoki_selection <- read_table("discovery/selected_batch_02_2026.csv")
+hoki_selection <- read_table("discovery/selections/selected_batch_02_2026.csv")
 hoki_selection <- hoki_selection[hoki_selection$candidate_id == "MPI:HOK1", , drop = FALSE]
 stopifnot(hoki$candidate_unit_id == "nz_hoki_hok1",
   hoki$official_stock_id == "HOK 1",

@@ -25,7 +25,7 @@ candidate <- candidate[candidate$candidate_id == "NOAA:10390", , drop = FALSE]
 units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 unit <- units[!is.na(units$matched_stock_id) & units$matched_stock_id == stock_id, , drop = FALSE]
-selected <- read.csv("discovery/selected_batch_39_2026.csv", stringsAsFactors = FALSE,
+selected <- read.csv("discovery/selections/selected_batch_39_2026.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 selected <- selected[selected$candidate_id == "NOAA:10390", , drop = FALSE]
 manifest <- read.csv("provenance/discovery_noaa_gom_cobia_2020/sources.csv",

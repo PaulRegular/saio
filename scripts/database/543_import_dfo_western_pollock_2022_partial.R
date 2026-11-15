@@ -162,7 +162,7 @@ candidate_text <- prepare_record_update(candidate_path, "candidate_id", candidat
     notes = "Current DFO science unit 4Xopqrs plus Canadian 5Yb and 5Zc, distinct from 4Xmn management geography and NOAA 5YZ. See source_reviews/dfo_western_component_pollock_2022.md."
   ))
 
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 selected <- utils::read.csv(selected_path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
 selected_row <- match("dfo_western_component_pollock_4xopqrs5", selected$candidate_unit_id)

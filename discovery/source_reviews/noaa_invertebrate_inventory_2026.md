@@ -53,7 +53,7 @@ finding that the underlying assessments lack age data. No canonical
 assessment, input, or output records were added.
 
 The metadata snapshot is cached at
-`source_cache/discovery_noaa_stocksmart/stock_assessment_summary.rda`. Its
+`source_cache/shared/noaa_stocksmart/stock_assessment_summary.rda`. Its
 pinned repository revision, retrieval date, URL, and SHA-256 are listed in the
 adjacent `sources.csv` manifest.
 

@@ -54,6 +54,6 @@ cat('ICES small-eyed ray identity, current aggregate assessment, and no-import c
 
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts', 'database', '396_screen_ices_small_eyed_ray_7fg_2026.R'))
+source(file.path(root, 'scripts', 'discovery', '396_screen_ices_small_eyed_ray_7fg_2026.R'))
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)

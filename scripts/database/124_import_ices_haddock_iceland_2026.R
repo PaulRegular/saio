@@ -1,5 +1,5 @@
 root <- "."
-cache_dir <- file.path(root, "source_cache", "ices_haddock_iceland_2026")
+cache_dir <- file.path(root, "source_cache", "melanogrammus_aeglefinus/ices_haddock_iceland_2026")
 assessment_id <- "ices_haddock_iceland_2026"
 stock_id <- "ices_haddock_iceland"
 source_name <- "MFRI 2026 Icelandic haddock assessment tables and technical report"

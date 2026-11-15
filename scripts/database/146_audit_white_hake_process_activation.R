@@ -1,6 +1,6 @@
 # Rebuild only this assessment's assumptions from the reviewed native input.
 base <- "."
-cache <- file.path(base, "source_cache", "ck_nefsc_garmiii_tenuis_gom_gb")
+cache <- file.path(base, "source_cache", "urophycis_tenuis/ck_nefsc_garmiii_tenuis_gom_gb")
 input <- file.path(cache, "RUN_005.DAT")
 stopifnot(file.exists(input),
   digest::digest(readBin(input, "raw", n = file.info(input)$size),

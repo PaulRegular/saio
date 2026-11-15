@@ -1,5 +1,7 @@
 # Pacific chub mackerel, Pacific Coast
 
+SAIO stock `noaa_pacific_mackerel_pacific_coast`. Assessments `noaa_pacific_mackerel_2023` and `noaa_pacific_mackerel_2025`.
+
 ## Official assessments and sources
 
 The 2025 Council-adopted catch-only update is the current assessment used for
@@ -12,10 +14,14 @@ The 2023 benchmark is therefore recorded separately as the detailed source of
 the inherited age-composition, survey and biological inputs, and of the
 available fitted age surfaces. Its Stock Synthesis 3.30.20 model covers
 2008–2021. The reports and native archive are cached under
-`source_cache/discovery_noaa_pacific_mackerel_2025/`; source URLs, retrieval
+`source_cache/scomber_japonicus/noaa_pacific_mackerel_2025/`; source URLs, retrieval
 dates and checksums are in the adjacent provenance manifest. Checksums for the
 extracted native files are recorded in
 `provenance/noaa_pacific_mackerel_2023_model_files.csv`.
+
+Stock SMART ID 10163 identifies the U.S.-managed Pacific mackerel stock north of Punta Abreojos, Baja California. The assessment includes U.S. and Mexican fisheries. The detailed 2025 report identifies Stock Synthesis 3.30.22.1. The cached Stock SMART metadata gives a 2024 data year, Stock Synthesis 3.30.20 and 2022 biomass of 46,682 tonnes. The Council adoption record and the 2025 report establish the run and the published model-year results. The benchmark report describes a maturity sample of 494 females.
+
+[2025 catch-only report](https://www.pcouncil.org/documents/2025/05/catch-only-stock-assessment-of-pacific-mackerel-scomber-japonicus-for-u-s-management-in-the-2025-26-and-2026-27-fishing-years.pdf) · [2023 benchmark model archive](https://www.pcouncil.org/documents/mackerel-2023-model-files-zip-file/) · [Council adoption in the Federal Register](https://www.govinfo.gov/content/pkg/FR-2025-08-25/pdf/2025-16233.pdf)
 
 ## Inputs
 

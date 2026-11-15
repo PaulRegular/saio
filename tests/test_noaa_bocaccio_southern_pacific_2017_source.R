@@ -81,7 +81,7 @@ stopifnot(
 
 manifest <- read.csv("provenance/discovery_noaa_bocaccio_southern_pacific_2017/sources.csv",
   colClasses = "character", check.names = FALSE)
-source_dir <- normalizePath("../../discovery_noaa_bocaccio_southern_pacific_2017")
+source_dir <- normalizePath("source_cache/sebastes_paucispinis/noaa_bocaccio_southern_pacific_2017")
 for (i in seq_len(nrow(manifest))) {
   path <- file.path(source_dir, manifest$file[i])
   stopifnot(file.exists(path),

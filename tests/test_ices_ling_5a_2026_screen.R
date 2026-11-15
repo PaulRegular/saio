@@ -1,7 +1,7 @@
 root <- '.'
-cache <- file.path(root, 'source_cache/discovery_ices_ling_5a_2026')
+cache <- file.path(root, 'source_cache/molva_molva/ices_ling_5a_2026')
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts/database/360_screen_ices_ling_5a_2026.R'))
+source(file.path(root, 'scripts/discovery/360_screen_ices_ling_5a_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 register <- read.csv(file.path(root, 'discovery/candidates.csv'),

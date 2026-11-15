@@ -2,7 +2,7 @@ root <- '.'
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 screen <- new.env(parent = globalenv())
-source(file.path(root, 'scripts/database/483_screen_noaa_bank_rockfish_california_2010.R'),
+source(file.path(root, 'scripts/discovery/483_screen_noaa_bank_rockfish_california_2010.R'),
   local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
@@ -17,11 +17,11 @@ unit <- units[!is.na(units$candidate_unit_id) &
 review <- paste(readLines(file.path(root, 'discovery/source_reviews',
   'noaa_bank_rockfish_california_2010.md'), warn = FALSE), collapse = ' ')
 stocksmart_env <- new.env(parent = emptyenv())
-load(file.path(root, 'source_cache/discovery_noaa_stocksmart',
+load(file.path(root, 'source_cache/shared/noaa_stocksmart',
   'stock_assessment_summary.rda'), envir = stocksmart_env)
 smart <- get('stock_assessment_summary', envir = stocksmart_env)
 smart_row <- smart[as.character(smart$stock_id) == '10448', , drop = FALSE]
-manifest <- read.csv(file.path(root, 'source_cache/discovery_noaa_bank_rockfish_california',
+manifest <- read.csv(file.path(root, 'source_cache/sebastes_rufus/noaa_bank_rockfish_california',
   'sources.csv'), stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)

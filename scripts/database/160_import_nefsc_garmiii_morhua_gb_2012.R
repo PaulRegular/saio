@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache/ck_nefsc_garmiii_morhua_gb_2012")
+cache <- file.path(base, "source_cache/gadus_morhua/nefsc_garmiii_gb_cod_2012")
 stock_id <- "ck_nefsc_garmiii_morhua_gb"
 assessment_id <- "nefsc_garmiii_gb_cod_2012"
 report_url <- "https://repository.library.noaa.gov/view/noaa/4432/noaa_4432_DS1.pdf"

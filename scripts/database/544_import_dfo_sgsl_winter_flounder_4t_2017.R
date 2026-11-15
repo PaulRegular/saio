@@ -319,7 +319,7 @@ candidates$notes[i] <- paste(
   "One combined-sex DFO population for NAFO Division 4T.",
   "The 2025/010 report states that a full assessment was planned for 2026, but no later full assessment was located as of 2026-11-03."
 )
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 replace_candidate_register_row(candidate_path, i, candidates[i, , drop = FALSE], candidate_id)
 
 unit_path <- file.path(root, "discovery", "inventory_units.csv")

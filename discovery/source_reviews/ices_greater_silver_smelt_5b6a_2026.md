@@ -82,5 +82,5 @@ https://github.com/ices-advice/2026_aru.27.5b6a/tree/7b7436c9e90c66c18411b7bf53b
 
 Downloaded sources, retrieval dates, byte counts, URLs, revisions, and SHA-256
 checksums are recorded in
-source_cache/discovery_ices_gss_5b6a_2026/sources.csv; the cache is
+source_cache/argentina_silus/ices_greater_silver_smelt_5b6a_2026/sources.csv; the cache is
 gitignored.

@@ -9,7 +9,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
 local_lib <- file.path("source_cache", "r-lib")
 if (dir.exists(local_lib)) .libPaths(c(local_lib, .libPaths()))
 source("scripts/database/pacific_tables.R")
-source("scripts/database/candidate_register_io.R")
+source("scripts/discovery/candidate_register_io.R")
 
 if (!requireNamespace("pdftools", quietly = TRUE)) {
   stop("Install pdftools to extract the SEDAR 89 report tables.", call. = FALSE)
@@ -598,7 +598,7 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
 
 candidate_path <- file.path("discovery", "candidates.csv")
 inventory_path <- file.path("discovery", "inventory_units.csv")
-selection_path <- file.path("discovery", "selected_batch_25_2026.csv")
+selection_path <- file.path("discovery/selections", "selected_batch_25_2026.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv(file.path("database", "stocks.csv"), stringsAsFactors = FALSE,

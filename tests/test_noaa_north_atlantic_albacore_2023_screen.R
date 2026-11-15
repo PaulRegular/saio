@@ -1,4 +1,4 @@
-source('scripts/database/513_screen_noaa_north_atlantic_albacore_2023.R')
+source('scripts/discovery/513_screen_noaa_north_atlantic_albacore_2023.R')
 
 root <- '.'
 register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
@@ -22,7 +22,7 @@ stopifnot(nrow(row) == 1L,
   grepl('Do not add canonical numerical records', review, fixed = TRUE))
 
 stocksmart_env <- new.env(parent = emptyenv())
-load(file.path(root, 'source_cache', 'discovery_noaa_stocksmart',
+load(file.path(root, 'source_cache', 'shared/noaa_stocksmart',
   'stock_assessment_summary.rda'), envir = stocksmart_env)
 assessment <- stocksmart_env$stock_assessment_summary[
   as.character(stocksmart_env$stock_assessment_summary$assessment_id) == '13464', , drop = FALSE]

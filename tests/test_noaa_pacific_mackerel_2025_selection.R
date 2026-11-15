@@ -1,11 +1,11 @@
 candidate_id <- "NOAA:10163"
 stock_id <- "noaa_pacific_mackerel_pacific_coast"
-cache <- "source_cache/discovery_noaa_pacific_mackerel_2025"
+cache <- "source_cache/scomber_japonicus/noaa_pacific_mackerel_2025"
 
 candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "NOAA:10163")
-selected <- read.csv("discovery/selected_batch_23_2026.csv",
+selected <- read.csv("discovery/selections/selected_batch_23_2026.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

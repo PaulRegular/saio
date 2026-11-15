@@ -1,6 +1,6 @@
 root <- "."
 source(file.path(root, "scripts", "database", "pacific_tables.R"))
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 stock_id <- "dfo_western_component_pollock_4xopqrs5"
 assessment_id <- "dfo_western_component_pollock_2022_j_m4b"
@@ -8,7 +8,7 @@ candidate_id <- "DFO:Maritimes:Pollock - NAFO 4X5 (Western Component)"
 source_url <- "https://publications.gc.ca/collections/collection_2026/mpo-dfo/fs70-5/Fs70-5-2026-029-eng.pdf"
 source_file_name <- "dfo_western_pollock_2026_029_table12_mortality_m4b.csv"
 cache_options <- c(
-  file.path(root, "source_cache", "discovery_dfo_western_pollock_2022"),
+  file.path(root, "source_cache", "pollachius_virens/dfo_western_component_pollock_2022_j_m4b"),
   file.path("..", "..", "discovery_dfo_western_pollock_2022")
 )
 cache_dirs <- cache_options[dir.exists(cache_options)]

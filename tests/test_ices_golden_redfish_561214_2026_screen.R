@@ -2,7 +2,7 @@ root <- "."
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 screen <- new.env(parent = globalenv())
-result <- source(file.path(root, 'scripts', 'database',
+result <- source(file.path(root, 'scripts', 'discovery',
   '432_screen_ices_golden_redfish_561214_2026.R'), local = screen)$value
 if (is.na(old_dry_run)) {
   Sys.unsetenv('TAM_SOURCE_DRY_RUN')
@@ -20,7 +20,7 @@ autumn_index <- result$tables$autumn_index
 stock_numbers <- result$tables$stock_numbers
 fishing_mortality <- result$tables$fishing_mortality
 manifest <- result$manifest
-cache <- file.path(root, 'source_cache', 'discovery_ices_golden_redfish_561214_2026')
+cache <- file.path(root, 'source_cache', 'sebastes_norvegicus/ices_golden_redfish_561214_2026')
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsAsFactors = FALSE,

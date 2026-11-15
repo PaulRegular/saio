@@ -6,7 +6,7 @@ cache_name <- "discovery_noaa_gray_snapper_2022"
 report_url <- "https://sedarweb.org/assessments/sedar-75/"
 
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 cache <- file.path(root, "source_cache", cache_name)
 manifest <- read.csv(file.path(root, "provenance", cache_name, "sources.csv"),

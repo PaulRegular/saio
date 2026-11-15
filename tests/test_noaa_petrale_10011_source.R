@@ -128,7 +128,7 @@ candidate <- candidate[candidate$candidate_id == "NOAA:10011", ]
 inventory <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- inventory[inventory$unit_key == "candidate:noaa_stocksmart_10011", ]
-selected <- read.csv("discovery/selected_batch_05_2026.csv",
+selected <- read.csv("discovery/selections/selected_batch_05_2026.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 selected <- selected[selected$candidate_unit_id == "noaa_stocksmart_10011", ]
 stopifnot(nrow(candidate) == 1L, candidate$import_status == "partial",
@@ -136,11 +136,11 @@ stopifnot(nrow(candidate) == 1L, candidate$import_status == "partial",
   inventory$import_status == "partial", nrow(selected) == 1L,
   selected$curation_status == "partial_source_import")
 
-manifest <- read.csv("provenance/noaa_petrale_10011_sources.csv",
+manifest <- read.csv("provenance/noaa_petrale_sole_pacific_coast/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 stopifnot(nrow(manifest) == 7L)
 for (j in seq_len(nrow(manifest))) {
-  path <- file.path("source_cache", manifest$local_file[j])
+  path <- file.path("source_cache/eopsetta_jordani/noaa_petrale_sole_pacific_coast_2023", manifest$file[j])
   stopifnot(file.exists(path),
     file.info(path)$size == manifest$bytes[j],
     toupper(unname(tools::sha256sum(path))) == manifest$sha256[j])

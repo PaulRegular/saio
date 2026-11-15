@@ -3,7 +3,7 @@ summary_id <- "ices_whiting_irish_sea_2025_sag_summary"
 stock_id <- "ck_ices_wgcse_merlangus_cs7a"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
-cache <- file.path(base, "source_cache", stock_id)
+cache <- file.path(base, "source_cache/merlangius_merlangus", stock_id)
 database <- file.path(base, "database")
 
 if (!requireNamespace("stockassessment", quietly = TRUE) ||

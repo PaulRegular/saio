@@ -15,7 +15,7 @@ The selected fit converged with optimizer code 0, a positive-definite Hessian, a
 - [ICES Northwestern Working Group report (2026)](https://doi.org/10.17895/ices.pub.32414577), whose published work plan schedules the Faroe Plateau cod assessment for 28–30 October 2026 and says stock sections will be added after the autumn meetings
 - [Selected native SAM run](https://stockassessment.org/datadisk/stockassessment/userdirs/user3/Cod_27_5b1_2025/)
 
-The source files are cached locally under `source_cache/ck_ices_nwwg_morhua_fapl5b1/`. The local `manifest.csv` records URLs, retrieval date, SHA-256 checksums, and the represented assessment. The native SAM model and data objects, configuration, code, advice, stock-graph table, IBPFAR framework report, and 2026 work-plan extract are retained there. As of the 2026-10-21 source review, the 2026 NWWG assessment meeting had not yet occurred, so the 2025 official run is the latest completed assessment available for this record. The cache is gitignored.
+The source files are cached locally under `source_cache/gadus_morhua/ck_ices_nwwg_morhua_fapl5b1/`. The local `manifest.csv` records URLs, retrieval date, SHA-256 checksums, and the represented assessment. The native SAM model and data objects, configuration, code, advice, stock-graph table, IBPFAR framework report, and 2026 work-plan extract are retained there. As of the 2026-10-21 source review, the 2026 NWWG assessment meeting had not yet occurred, so the 2025 official run is the latest completed assessment available for this record. The cache is gitignored.
 
 ## Inputs and assumptions
 

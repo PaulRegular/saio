@@ -12,7 +12,7 @@ The assessment uses Casal2 v23.04. Model years run October through September and
 - [FAR 2025/42: Hoki catch, size, and age information used for the 2025 assessment](https://fs.fish.govt.nz/Doc/26136/FAR-2025-42-Catches-size-and-age-structure-2023-24-hoki-fishery-and-input-data-for-2025-stock-assessment.pdf.ashx)
 - [Fisheries New Zealand Hoki stock page](https://www.mpi.govt.nz/fishing-aquaculture/fisheries-management/fish-stock-status/hoki-new-zealands-largest-fishery)
 
-The two reports are cached locally under the ignored `source_cache/mpi_hoki_hok1_2025/` directory. Retrieval dates and SHA-256 checksums are in `provenance/mpi_hoki_hok1_2025_sources.csv`. The assessment report embeds the Casal2 base-model input files in Appendix B.
+The two reports are cached locally under the ignored `source_cache/macruronus_novaezelandiae/mpi_hoki_hok1_2025/` directory. Retrieval dates and SHA-256 checksums are in `provenance/mpi_hoki_hok1_2025_sources.csv`. The assessment report embeds the Casal2 base-model input files in Appendix B.
 
 ## Inputs recovered
 

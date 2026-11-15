@@ -29,4 +29,4 @@ The source import is recorded in the canonical database as a partial assessment.
 - [2023 Status of Rex Sole along the U.S. West Coast assessment](https://www.pcouncil.org/documents/2024/02/status-of-rex-sole-glyptocephalus-zachirus-along-the-u-s-west-coast-in-2023.pdf/) (including Tables ii–iii and model description)
 - [2023 Rex Sole Stock Synthesis model files](https://www.pcouncil.org/documents/2024/02/rex-sole-2023-model-files.zip/)
 - [NOAA Rex Sole species information](https://www.fisheries.noaa.gov/species/rex-sole)
-- NOAA Stock SMART entity 10059; the retrieved record and source manifest are in the ignored local `source_cache/discovery_noaa_pacific_rex_2023/` folder.
+- NOAA Stock SMART entity 10059; the retrieved record and source manifest are in the ignored local `source_cache/glyptocephalus_zachirus/noaa_pacific_coast_rex_sole_2023/` folder.

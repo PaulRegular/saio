@@ -8,7 +8,7 @@ read_csv <- function(path) read.csv(path, stringsAsFactors = FALSE,
 append_csv <- function(x, path) write.table(x, path, sep = ",", quote = TRUE,
   row.names = FALSE, col.names = FALSE, append = TRUE, na = "",
   qmethod = "double")
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 add_input <- function(year, value) data.frame(
   assessment_id = assessment_id, type = "catch", measure = "total_biomass",

@@ -4,10 +4,13 @@
 
 NOAA Stock SMART unit 10416 is Bering Sea / Aleutian Islands northern rockfish (Sebastes polyspinis). The December 2023 BSAI SAFE documents Model 21, the latest full assessment fit located for this unit. It is an age-structured model implemented in AD Model Builder. The report says the model is unchanged from the accepted 2021 model.
 
-The planned 2025 full assessment was cancelled. The 2026 BSAI chapter carries forward estimates from the 2023 fit for a harvest projection; it is not a new full model fit. The database therefore records the 2023 fit and does not mix later projection values into its historical fitted series. Source URLs, retrieval dates, file sizes, and checksums are in provenance/noaa_northern_rockfish_20261029/sources.csv; local source copies are in the ignored source_cache/noaa_northern_rockfish_bsai_2023/ folder.
+The Gulf of Alaska unit (Stock SMART 10417) is assessed separately. The 2025 BSAI catch report says the scheduled full assessment was cancelled during the federal shutdown. The 2026 BSAI chapter carries forward the 2023 population estimates, updates catches through 2026 and lists the next operational assessment for 2027. The database records the 2023 fit. The [source manifest](../provenance/shared/noaa_northern_rockfish/sources.csv) identifies the files cached under the shared northern rockfish collection.
 
 - [2023 BSAI northern rockfish SAFE](https://apps-afsc.fisheries.noaa.gov/Plan_Team/2023/BSAInork.pdf)
 - [2026 harvest-projection chapter](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=13.+BSAI+Northern+Rockfish.pdf&p=c7d07ded-c246-4798-883b-1aacc01d8172.pdf)
+
+- [2025 BSAI catch report](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=C5+BSAI+2025+Catch+Reports.pdf&p=b2b4068a-522e-42f6-a0ca-68a7ffa83ae7.pdf)
+- [2026 SSC assessment review plan](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=F+2026+Groundfish+Stock+Assessment+SSC+Review.pdf&p=2aa31081-76e1-4025-af01-e17fd99ba0d6.pdf)
 
 ## Data recorded
 
@@ -27,5 +30,5 @@ The SAFE does not provide annual catch numbers-at-age or age-specific survey abu
 
 The original age-specific weight and maturity input schedules, full ageing-error matrix, exact fractional survey timing, and some likelihood details were not recovered from the public tables. Table 17 contains fitted average biological surfaces, not those original inputs. Table 22 gives a scalar average-F parameter, but no numeric annual F-at-age surface was recovered. The database preserves the parameter on its reported log scale rather than transforming it into an unsupported F series.
 
-The record remains partial. No source observation has been adjusted to improve agreement, and no translation has been attempted from these records.
+The record remains partial.
 

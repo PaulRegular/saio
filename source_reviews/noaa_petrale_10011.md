@@ -1,10 +1,12 @@
 # Petrale sole - U.S. Pacific Coast
 
+SAIO stock `noaa_petrale_sole_pacific_coast`. Assessments `noaa_petrale_sole_pacific_coast_2023` and `noaa_petrale_sole_pacific_coast_2025_projection`.
+
 ## Assessment and source selection
 
 NOAA Stock SMART ID 10011 is the Pacific Coast U.S. management unit for *Eopsetta jordani*. It is distinct from Canadian petrale sole and the Alaska flatfish-complex entries. The latest full benchmark located is the 2023 Stock Synthesis assessment, fitted through 2022. The September 2025 catch-only projection updates removals using 2023-2024 information and provides two 2026 catch scenarios. NOAA's 2026 emergency action and the 2027-2028 harvest-specification analysis use the 2025 projection; the alternative Table 2 scenario is the basis for the adopted 2026 increase.
 
-The official 2023 assessment report, native model archive, and 2025 projection are cached under `source_cache/discovery_noaa_petrale_10011/`. Their retrieval dates, source links, sizes, and SHA-256 hashes are recorded in `provenance/noaa_petrale_10011_sources.csv`. The native files identify Stock Synthesis 3.30.21.00, a final gradient of 0.00271749, final phase 7, 2,302 iterations, and total LogL 647.723.
+The official 2023 assessment report, native model archive, and 2025 projection are cached under `source_cache/eopsetta_jordani/noaa_petrale_sole_pacific_coast_2023/`. Their retrieval dates, source links, sizes, and SHA-256 hashes are recorded in `provenance/noaa_petrale_sole_pacific_coast/sources.csv`. The native files identify Stock Synthesis 3.30.21.00, a final gradient of 0.00271749, final phase 7, 2,302 iterations, and total LogL 647.723.
 
 ## Inputs retained
 
@@ -34,6 +36,10 @@ The 2023 `Report.sso` provides annual fitted and forecast time series from 1876 
 Spawning output is reported in trillions of eggs; it is not spawning biomass. The 2023 report's Tables ii and iii provide 95% intervals for spawning output and recruitment for 2013-2023. No uncertainty is assigned to age-specific surfaces or derived total abundance.
 
 The 2025 projection Tables 1 and 2 are retained as two separately labelled scenarios through 2036. They provide updated and assumed removals, OFL, buffer, ABC, ACL, spawning output and fraction of unfished spawning output. These projection estimates are rounded and have no reported uncertainty intervals. Table 2 assumes 2026 removals equal 92% of the 2,489 mt ACL; NOAA implemented the resulting 2026 harvest-specification increase in its 2026 emergency action.
+
+Stock SMART ID 10011 identifies the U.S. West Coast unit. The 2023 benchmark is the latest detailed full assessment located. A June 2026 PFMC planning document still identifies it as the benchmark and places a new assessment in a later cycle. The 2025 catch-only projection is recorded separately.
+
+The source survey records use month 7 and fleet timing code 1007. The Triennial survey has no age samples in the report. The base archive’s 2023 spawning-output estimate is 7.68553 trillion eggs, which rounds to 7.686 in the report. Reconstruction from fishery age samples or a WCGBTS age split would require matching compatible observations and retaining the native likelihood definitions.
 
 ## Status and remaining source gaps
 

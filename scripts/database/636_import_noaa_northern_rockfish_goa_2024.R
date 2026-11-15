@@ -534,7 +534,7 @@ if (write_mode) {
   if (!nrow(inputs_existing)) append_csv(inputs_new, inputs_path)
   if (!nrow(outputs_existing)) append_csv(outputs_new, outputs_path)
 
-  source(file.path(root, "scripts", "database", "candidate_register_io.R"), local = TRUE)
+  source(file.path(root, "scripts", "discovery", "candidate_register_io.R"), local = TRUE)
   candidate_path <- file.path(root, "discovery", "candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
@@ -580,7 +580,7 @@ if (write_mode) {
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)
 
-  source(file.path(root, "scripts", "database", "196_summarize_inventory_units.R"),
+  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
     local = new.env(parent = globalenv()))
   source(file.path(root, "scripts", "database", "002_validate_database.R"),
     local = new.env(parent = globalenv()))

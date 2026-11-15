@@ -23,7 +23,7 @@ series. The 2026 assessment uses the same broad model structure.
 - [Official fitted SAM object](https://stockassessment.org/datadisk/stockassessment/userdirs/user3/GoR_WGBFAS_2026/run/model.RData) and the matching `data/`, `conf/`, and `src/` files.
 
 The PDF and native model files are cached locally at
-`source_cache/ck_ices_wgbfas_harengus_bs_28_1/assessment_2026/`.
+`source_cache/clupea_harengus/ck_ices_wgbfas_harengus_bs_28_1/assessment_2026/`.
 `source_manifest.csv` records the retrieval date, source URL, assessment name,
 and SHA-256 checksum for each cached file. The cache is gitignored. The fitted
 object reports `stockassessment` version 0.12.0 and RemoteSha

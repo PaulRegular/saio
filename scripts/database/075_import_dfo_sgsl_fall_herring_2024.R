@@ -2,7 +2,7 @@ assessment_id <- "dfo_herring_4tvn_fall_2024"
 summary_id <- "dfo_herring_4tvn_fall_2026"
 stock_id <- "ck_dfo_gsl_harengus_4t_fall"
 root <- "."
-source_dir <- file.path(root, "source_cache", stock_id)
+source_dir <- file.path(root, "source_cache/clupea_harengus", stock_id)
 support_file <- file.path(source_dir, "dfo_2024_supporting_material_2024-058.txt")
 methods_file <- file.path(source_dir, "dfo_2022_assessment_2022-068.txt")
 if (!file.exists(support_file) || !file.exists(methods_file)) {

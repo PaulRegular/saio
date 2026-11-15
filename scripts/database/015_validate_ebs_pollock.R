@@ -105,7 +105,7 @@ stopifnot(
   all(grepl("reconstructed", f$notes, ignore.case = TRUE))
 )
 
-par_path <- file.path("source_cache", id, "pm_or.parxx"
+par_path <- file.path("source_cache/gadus_chalcogrammus", id, "pm_or.parxx"
 )
 par_lines <- readLines(par_path, warn = FALSE)
 markers <- grep("^# [A-Za-z0-9_]+:$", par_lines)

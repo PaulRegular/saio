@@ -15,7 +15,7 @@ assessments <- read.csv(file.path(root, "database", "assessments.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 candidate <- read.csv(file.path(root, "discovery", "candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
-selected <- read.csv(file.path(root, "discovery", "selected_batch_01_2026.csv"),
+selected <- read.csv(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 inputs <- read_selected(file.path(root, "database", "inputs.csv"), c(
   "assessment_id", "type", "measure", "basis", "year", "age", "value",
@@ -36,8 +36,7 @@ selected <- selected[selected$candidate_unit_id == "noaa_stocksmart_10426", , dr
 input <- inputs[inputs$assessment_id == assessment_id, , drop = FALSE]
 output <- outputs[outputs$assessment_id == assessment_id, , drop = FALSE]
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
-review <- paste(readLines(file.path(root, "discovery", "source_reviews",
-  "noaa_west_coast_yelloweye_2025.md"), warn = FALSE), collapse = "\n")
+review <- paste(readLines(file.path(root, "source_reviews", "noaa_west_coast_yelloweye.md"), warn = FALSE), collapse = "\n")
 get_input <- function(type, measure) input[input$type == type & input$measure == measure, , drop = FALSE]
 get_output <- function(type, measure) output[output$type == type & output$measure == measure, , drop = FALSE]
 assumption_value <- function(setting) {

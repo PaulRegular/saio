@@ -8,7 +8,7 @@ manifest <- read.csv("provenance/noaa_goa_pop_20261029/sources.csv",
 report_name <- "GOA_Pacific_Ocean_Perch_2023_SAFE.pdf"
 source_row <- manifest[manifest$local_file == report_name, , drop = FALSE]
 cache_options <- c(
-  file.path("source_cache", "noaa_goa_pop_20261029"),
+  file.path("source_cache", "sebastes_alutus/noaa_goa_pop_2023"),
   file.path("..", "..", "noaa_goa_pop_20261029")
 )
 cache <- cache_options[vapply(cache_options, function(path) {

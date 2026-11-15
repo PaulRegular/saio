@@ -6,7 +6,7 @@ from collections import defaultdict
 from pathlib import Path
 
 root = Path(sys.argv[1])
-cache = root / 'source_cache/afsc_pollock_goa_2024'
+cache = root / 'source_cache/gadus_chalcogrammus/afsc_pollock_goa_2024'
 assessment = 'afsc_pollock_goa_2024'
 stock_id = 'afsc_pollock_goa'
 revision = 'aefe1692520510d55fd25db60121b292a53840a3'

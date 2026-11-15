@@ -1,6 +1,6 @@
 base <- "."
 db <- file.path(base, "database")
-cache <- file.path(base, "source_cache/nefsc_summer_flounder_2025")
+cache <- file.path(base, "source_cache/paralichthys_dentatus/nefsc_summer_flounder_2025")
 id <- "nefsc_summer_flounder_2025"
 report_url <- "https://asmfc.org/wp-content/uploads/2025/08/SF_Management_Track_Assessment_2025.pdf"
 archive_url <- "https://raw.githubusercontent.com/NOAA-EDAB/stocksmart/664c4237e26520b260a090e1821a2cee5d1cdf07/data/stock_assessment_data.rda"

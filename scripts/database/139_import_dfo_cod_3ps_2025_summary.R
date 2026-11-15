@@ -3,7 +3,7 @@
 
 root <- "."
 db <- file.path(root, "database")
-source_dir <- file.path(root, "source_cache", "ck_dfo_morhua_3ps")
+source_dir <- file.path(root, "source_cache", "gadus_morhua/ck_dfo_morhua_3ps")
 summary_file <- file.path(source_dir, "assessment_2025", "Fs70-6-2026-004-eng.pdf")
 inputs_file <- file.path(source_dir, "assessment_2024", "Fs70-5-2026-047-eng.pdf")
 assessment_id <- "dfo_cod_3ps_2025"

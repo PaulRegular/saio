@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache", "ck_ices_afwg_aeglefinus_nea_1_2", "assessment_2026")
+cache <- file.path(root, "source_cache", "melanogrammus_aeglefinus/ck_ices_afwg_aeglefinus_nea_1_2", "assessment_2026")
 assessment_id <- "jrn_afwg_haddock_northeast_arctic_2026"
 stock_id <- "ck_ices_afwg_aeglefinus_nea_1_2"
 report <- "JRN-AFWG Report 2026, section 4: Haddock in subareas 1 and 2"

@@ -30,7 +30,7 @@ total_index <- subset(inputs, type == "index" & measure == "total_biomass" & sur
 source_file <- file.path("..", "..", "discovery_dfo_western_pollock_2022",
   "dfo_western_pollock_2026_029_table10_acoustic_biomass_at_age.csv")
 if (!file.exists(source_file)) {
-  source_file <- file.path(root, "source_cache", "discovery_dfo_western_pollock_2022",
+  source_file <- file.path(root, "source_cache", "pollachius_virens/dfo_western_component_pollock_2022_j_m4b",
     basename(source_file))
 }
 source_table <- utils::read.csv(source_file, check.names = FALSE,

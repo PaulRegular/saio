@@ -6,7 +6,7 @@ candidate <- candidates[candidates$candidate_id ==
 units <- read.csv(file.path(root, 'discovery', 'inventory_units.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 unit <- units[units$unit_key == 'candidate:dfo_sgsl_winter_flounder_4t', , drop = FALSE]
-selected <- read.csv(file.path(root, 'discovery', 'selected_batch_01_2026.csv'),
+selected <- read.csv(file.path(root, 'discovery/selections', 'selected_batch_01_2026.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 selected <- selected[selected$candidate_unit_id == 'dfo_sgsl_winter_flounder_4t', , drop = FALSE]
 cache <- file.path(root, 'source_cache', 'discovery_dfo_4t_winter_flounder_2019')
@@ -50,7 +50,7 @@ stopifnot(
   all(sources$retrieved_utc == '2026-10-30'),
   file.exists(file.path(root, 'discovery', 'source_reviews',
     'dfo_sgsl_winter_flounder_4t_2017.md')),
-  file.exists(file.path(root, 'scripts', 'database',
+  file.exists(file.path(root, 'scripts', 'discovery',
     '341_screen_dfo_4t_winter_flounder_2017.R')),
   any(stocks$stock_id == 'dfo_sgsl_winter_flounder_4t'),
   any(assessments$assessment_id == 'dfo_sgsl_winter_flounder_2017'),

@@ -21,7 +21,7 @@ candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 progress <- read.csv("discovery/inventory_progress.csv", stringsAsFactors = FALSE)
 units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE)
-selected <- read.csv("discovery/selected_batch_07_2026.csv", stringsAsFactors = FALSE,
+selected <- read.csv("discovery/selections/selected_batch_07_2026.csv", stringsAsFactors = FALSE,
   check.names = FALSE)
 manifest <- read.csv("provenance/afma_himi_mackerel_icefish_2026_sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)

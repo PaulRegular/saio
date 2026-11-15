@@ -2,7 +2,7 @@
 import csv,io,re,sys
 from pathlib import Path
 root=Path(sys.argv[1])
-cache=root/'source_cache/nefsc_haddock_georges_bank_2026'
+cache=root/'source_cache/melanogrammus_aeglefinus/nefsc_haddock_georges_bank_2026'
 assessment='nefsc_haddock_georges_bank_2026'
 stock_id='nefsc_haddock_georges_bank'
 portal='https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2026&species_id=5&stock_id=1&review_type_id=6&info_type_id=-1&map_type_id=&filename=Georges_Bank_haddock_Update_2026_06_17_100805.801712.pdf'

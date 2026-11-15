@@ -11,7 +11,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 .libPaths(c(file.path(root, "source_cache/r-lib"), .libPaths()))
 source(file.path(root, "scripts/database/pacific_tables.R"))
-source(file.path(root, "scripts/database/candidate_register_io.R"))
+source(file.path(root, "scripts/discovery/candidate_register_io.R"))
 
 manifest_path <- file.path(root, "provenance/noaa_rougheye_blackspotted_2025_sources.csv")
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
@@ -461,7 +461,7 @@ assessment <- blank_row(names(assessments_table), list(
 
 candidate_path <- file.path(root, "discovery/candidates.csv")
 inventory_path <- file.path(root, "discovery/inventory_units.csv")
-unworked_path <- file.path(root, "discovery/selected_unworked_2026.csv")
+unworked_path <- file.path(root, "discovery/selections/selected_unworked_2026.csv")
 candidates <- read.csv(candidate_path, colClasses = "character", check.names = FALSE)
 inventory <- read.csv(inventory_path, colClasses = "character", check.names = FALSE)
 ci <- which(candidates$candidate_id == candidate_id)

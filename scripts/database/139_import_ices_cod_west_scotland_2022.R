@@ -2,7 +2,7 @@ assessment_id <- "ices_cod_west_scotland_2022"
 stock_id <- "ck_ices_wgcse_morhua_ns6a"
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "ck_ices_wgcse_morhua_ns6a_2022")
+cache <- file.path(base, "source_cache", "gadus_morhua/ices_cod_west_scotland_2022")
 run_url <- "https://stockassessment.org/datadisk/stockassessment/userdirs/user3/cod.27.6a_2022"
 framework_url <- "https://doi.org/10.17895/ices.pub.5548"
 

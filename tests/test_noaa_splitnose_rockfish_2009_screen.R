@@ -1,7 +1,7 @@
 root <- "."
 register_path <- file.path(root, 'discovery', 'candidates.csv')
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
-source(file.path(root, 'scripts/database/487_screen_noaa_splitnose_rockfish_2009.R'))
+source(file.path(root, 'scripts/discovery/487_screen_noaa_splitnose_rockfish_2009.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 register <- read.csv(register_path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))

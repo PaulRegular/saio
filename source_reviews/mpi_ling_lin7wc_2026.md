@@ -1,5 +1,7 @@
 # West Coast South Island ling (LIN 7WC), 2026 assessment
 
+SAIO stock `mpi_ling_lin7wc`. Assessment `mpi_ling_lin7wc_2026`.
+
 ## Stock unit and assessment
 
 The 2026 Fisheries New Zealand assessment defines the west coast South Island ling biological stock (LIN 7WC), including Statistical Area 032. This is distinct from the Chatham Rise LIN 3&4 stock already represented in SAIO.
@@ -28,6 +30,8 @@ FAR 2026/06 Tables 15 and 23 contain 87 reported sex-specific numbers-at-age val
 Table 4 of FAR 2026/26 supplies 20 fixed maturity-at-age values for ages 3-12 by sex. The assessment's full modeled ages 1-28 are not all tabulated. The model's growth and length-weight parameters, fixed M, recruitment, observation likelihoods, selectivity, q treatment, and annual timing are recorded in assumptions.csv.
 
 Tables 7-8 provide nine selected source outputs: MPD B0 and 2023/2026 spawning biomass and status estimates, posterior median B0 and 2026 status ratio with 95% credible intervals, and probabilities relative to the 40% and 20% B0 reference levels. The posterior 2026 SSB/B0 ratio is not converted to an absolute posterior SSB estimate.
+
+The scaled catch biomass is from FAR 2026/25 Appendix E. Adjusted CPUE is from its Appendix D. FAR 2025/41 Table 16 reports the core and all-strata survey biomass separately. FAR 2026/26 Table 3 gives M of 0.18 per year, steepness of 0.84, recruitment variability of 0.6, ageing CV of 0.05, male proportion at birth of 0.5 and proportion of mature fish that spawn of 1.0. In the January–December cycle the source applies half of total annual mortality before observations.
 
 ## Source gaps
 

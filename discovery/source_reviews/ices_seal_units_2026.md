@@ -30,7 +30,7 @@ candidate units only.
 ## Source and provenance
 
 The official [ICES SID 2026 stock list](https://sid.ices.dk/services/year/2026)
-is cached at `source_cache/discovery_ices_sid/stock_list_2026.json`. Its local
+is cached at `source_cache/shared/ices_sid/stock_list_2026.json`. Its local
 manifest records retrieval date, URL, byte size and SHA-256. The reviewed
 snapshot is 324,088 bytes with SHA-256
 `913D6A3EEAB9449AE3CD0DD15661A150D36FF79B6E6A9BA78D86D46BA1035F42`.

@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "discovery_ices_ling_5b_2026")
+cache <- file.path(root, "source_cache", "molva_molva/ices_ling_faroe_5b_2026")
 candidate_id <- "ICES:lin.27.5b"
 candidate_unit_id <- "ices_ling_faroe_5b"
 stock_id <- candidate_unit_id
@@ -18,7 +18,7 @@ report_ref <- paste(
 
 if (!dir.exists(cache)) stop("The reviewed Faroes ling source cache is missing.", call. = FALSE)
 source(file.path(root, "scripts", "database", "pacific_tables.R"))
-source(file.path(root, "scripts", "database", "candidate_register_io.R"))
+source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 sha256_file <- function(path) {
   result <- system2("certutil.exe", c("-hashfile", shQuote(path), "SHA256"), stdout = TRUE)
@@ -512,7 +512,7 @@ replace_discovery_row(
   "unit_key", paste0("candidate:", candidate_unit_id)
 )
 
-selected_path <- file.path(root, "discovery", "selected_batch_01_2026.csv")
+selected_path <- file.path(root, "discovery/selections", "selected_batch_01_2026.csv")
 selected <- utils::read.csv(
   selected_path, stringsAsFactors = FALSE, na.strings = c("", "NA"),
   check.names = FALSE

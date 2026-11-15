@@ -102,7 +102,7 @@ stopifnot(
   nrow(manifest) == 5L,
   !anyDuplicated(manifest$file),
   all(grepl("^[[:xdigit:]]{64}$", manifest$sha256)),
-  all(file.exists(file.path("source_cache/discovery_noaa_longnose_skate_2019",
+  all(file.exists(file.path("source_cache/beringraja_rhina/noaa_pacific_coast_longnose_skate_2019",
     manifest$file)))
 )
 

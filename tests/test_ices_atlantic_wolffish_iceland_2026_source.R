@@ -116,7 +116,7 @@ candidate <- read.csv(
 )
 candidate <- candidate[candidate$candidate_id == "ICES:caa.27.5a", ]
 selected <- read.csv(
-  "discovery/selected_batch_01_2026.csv",
+  "discovery/selections/selected_batch_01_2026.csv",
   stringsAsFactors = FALSE, check.names = FALSE
 )
 selected <- selected[selected$candidate_id == "ICES:caa.27.5a", ]

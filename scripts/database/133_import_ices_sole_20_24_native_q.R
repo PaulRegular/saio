@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "ices_sole_20_24_2025")
+cache <- file.path(root, "source_cache", "solea_solea/ices_sole_20_24_2025")
 assessment_id <- "ices_sole_20_24_2025"
 source_dir <- paste0(
   "https://stockassessment.org/datadisk/stockassessment/userdirs/user3/",

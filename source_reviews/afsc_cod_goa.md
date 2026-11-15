@@ -22,7 +22,7 @@ Sources:
 - September 2026 Plan Team docket:
   https://meetings.npfmc.org/Meeting/Details/5140
 - Cached spatial-research presentation:
-  source_cache/afsc_cod_goa_2026/2026_09_goa_pcod_spatial_research_plan_team.pdf
+  source_cache/gadus_macrocephalus/afsc_cod_goa_2026/2026_09_goa_pcod_spatial_research_plan_team.pdf
 - November 2026 Plan Team schedule:
   https://meetings.npfmc.org/Meeting/Details/8165
 
@@ -31,7 +31,7 @@ a freely estimated BH curve would change that source assumption.
 
 ## January 2026 assessment
 
-The January 2026 update (presented February 2026) uses Model 24.0 official in 2024, updated through 2025. The 54-page detailed update and 2024 full model-defining chapter are cached under source_cache/afsc_cod_goa_2026/.
+The January 2026 update (presented February 2026) uses Model 24.0 official in 2024, updated through 2025. The 54-page detailed update and 2024 full model-defining chapter are cached under source_cache/gadus_macrocephalus/afsc_cod_goa_2026/.
 Current detailed source: https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=C1+GOA+Pcod+Assessment.pdf&p=f00593eb-12f5-458c-842e-a5cdd45306bb.pdf
 Framework/full 2024 source: https://files.npfmc.org/SAFE/2024/GOApcod.pdf
 
@@ -57,7 +57,7 @@ An older author repository, https://github.com/pete-hulson/goa_pcod at facf41573
 
 ## Reconstructed native age-specific outputs
 
-The report-linked January archive at `e632807e4947686c16caf99b864bfe8466f8dbca` supplies the Model 24.0 data and control files. The saved management-run `ss3.par` at `facf41573f9a0b609d0096611bc9302aaab43abe` matches the current report's objective (2108.97949000959) and maximum gradient (6.44551037822919e-06; reported as 6.45e-6). Using the official Stock Synthesis 3.30.22.1 executable, the archived files and saved parameters reproduced `Report.sso` with a single parameter evaluation (`-maxfn 0 -phase 50 -nohess`); this did not refit or change the saved estimates. The native inputs, parameter file, executable and generated report are cached locally and listed with checksums in `source_cache/afsc_cod_goa_2026/manifest.csv`.
+The report-linked January archive at `e632807e4947686c16caf99b864bfe8466f8dbca` supplies the Model 24.0 data and control files. The saved management-run `ss3.par` at `facf41573f9a0b609d0096611bc9302aaab43abe` matches the current report's objective (2108.97949000959) and maximum gradient (6.44551037822919e-06; reported as 6.45e-6). Using the official Stock Synthesis 3.30.22.1 executable, the archived files and saved parameters reproduced `Report.sso` with a single parameter evaluation (`-maxfn 0 -phase 50 -nohess`); this did not refit or change the saved estimates. The native inputs, parameter file, executable and generated report are cached locally and listed with checksums in `source_cache/gadus_macrocephalus/afsc_cod_goa_2026/manifest.csv`.
 
 `NUMBERS_AT_AGE report:35` supplies beginning-of-year N for ages 0–10 (age 10 is the plus group) in 1977–2025. `F_AT_AGE report:39` supplies annual F at ages 0–10 for the three removal fleets, FshTrawl, FshLL and FshPot, over the same years. The canonical outputs now retain all three fleet surfaces and their age-specific sum. N is recorded in thousand fish and F in per year. The summed F is a derived common surface; it is not the annual Sum Apical F reported in Table 2.9. The native age surfaces have no age-specific SE because uncertainty estimation was not run. No uncertainty has been inferred.
 

@@ -417,7 +417,7 @@ if (!write_mode) {
     stop("NOAA GOA rex sole rows are already present in the canonical database.", call. = FALSE)
   }
   candidates <- read_csv("discovery/candidates.csv")
-  selected <- read_csv("discovery/selected_unworked_2026.csv")
+  selected <- read_csv("discovery/selections/selected_unworked_2026.csv")
   candidate_rows <- which(candidates$candidate_id %in% candidate_ids)
   selected_row <- which(selected$candidate_id == "NOAA:10058")
   if (length(candidate_rows) != 3L || length(selected_row) != 1L ||
@@ -454,13 +454,13 @@ if (!write_mode) {
       output_evidence = "Table 30 recruitment at ages 0 and 3 and age-0 recruitment standard deviations, Table 31 total biomass age 3+, female SSB and source-reported SSB standard deviation, and Appendix F numbers-at-age are imported for 1982-2026. Recruitment and Appendix F number scales are not stated, so values are not rescaled. Table 30 omits age-0 recruitment SD for 2026. The report does not tabulate an F-at-age surface.",
       decision_reason = "The September 2026 final SAFE chapter documents the latest full assessment for the current Gulf of Alaska unit. Model 25.1 was recommended by the Plan Team and supported by the October 2026 SSC. Verified report-table data and official Appendix F outputs support partial source curation; unverified draft compositions and unspecified N scaling remain explicit gaps.",
       notes = "NOAA IDs 10058, 15410 and 15411 are one Gulf of Alaska management unit; 15410 and 15411 are area entries, not separate stocks. Imported verified Table 9, Table 14, Table 31 and Appendix F values. Appendix E is labelled draft and the cached AFSC repository has earlier proposed runs, not final 2026 model files. See the source review and source-cache manifest."))
-  replace_register_rows("discovery/selected_unworked_2026.csv", "candidate_id", "NOAA:10058",
+  replace_register_rows("discovery/selections/selected_unworked_2026.csv", "candidate_id", "NOAA:10058",
     list(curation_status = "source_curated_partial",
       selection_basis = "The 2026 final SAFE report and its official table attachments provide verified catch, survey biomass/log standard errors, recruitment, total/spawning biomass and age-specific population outputs. Imported Table 9, Table 14, Table 30, Table 31 and Appendix F values; retained unresolved cutoff, survey-year and population-scale details and left Appendix E draft composition data unused."))
 
-  source(file.path(root, "scripts", "database", "195_summarize_discovery.R"),
+  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
     local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts", "database", "196_summarize_inventory_units.R"),
+  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
     local = new.env(parent = globalenv()))
   cat("Imported partial NOAA GOA rex sole 2026 source data.\n")
 }

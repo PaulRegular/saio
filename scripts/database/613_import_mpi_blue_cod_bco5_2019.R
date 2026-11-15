@@ -483,7 +483,7 @@ if (!write_mode) {
   }
   candidates <- read_csv("discovery/candidates.csv")
   candidate_row <- which(candidates$candidate_id == candidate_id)
-  selected <- read_csv("discovery/selected_batch_21_2026.csv")
+  selected <- read_csv("discovery/selections/selected_batch_21_2026.csv")
   selected_row <- which(selected$candidate_id == candidate_id)
   if (length(candidate_row) != 1L || length(selected_row) != 1L ||
       candidates$import_status[candidate_row] != "not_started" ||
@@ -521,13 +521,13 @@ if (!write_mode) {
       weights_evidence = "Imported growth and length-weight assumptions; a complete age-specific weight surface is not published.",
       maturity_evidence = "Imported the shared fixed logistic maturity ogive parameters A50 = 4.1 and Ato95 = 2.47; the report provides no numeric age-specific maturity vector.",
       output_evidence = "Imported MPD and MCMC B0/depletion summaries and derived approximate 2019 SSB. Annual numerical N-at-age, F-at-age, recruitment, and SSB trajectories are not tabulated."))
-  replace_register_row("discovery/selected_batch_21_2026.csv", "candidate_id", candidate_id,
+  replace_register_row("discovery/selections/selected_batch_21_2026.csv", "candidate_id", candidate_id,
     list(curation_status = "source_curated_partial",
       selection_basis = "The 2019 assessment remains the advice basis. The source import preserves 1,738 numeric input rows, 28 assumptions, and 10 output rows; gaps remain in the source's recreational length composition, raw sample sizes, and annual population surfaces."))
 
-  source(file.path(root, "scripts", "database", "195_summarize_discovery.R"),
+  source(file.path(root, "scripts", "discovery", "195_summarize_discovery.R"),
     local = new.env(parent = globalenv()))
-  source(file.path(root, "scripts", "database", "196_summarize_inventory_units.R"),
+  source(file.path(root, "scripts", "discovery", "196_summarize_inventory_units.R"),
     local = new.env(parent = globalenv()))
   cat("Imported partial BCO 5 2019 source data.\n")
 }

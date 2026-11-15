@@ -19,7 +19,7 @@ candidate <- read_selected(file.path(root, "discovery", "candidates.csv"),
   c("candidate_id", "matched_stock_id", "match_status", "import_status"))
 inventory <- read_selected(file.path(root, "discovery", "inventory_units.csv"),
   c("unit_key", "matched_stock_id", "import_status"))
-selected <- read_selected(file.path(root, "discovery", "selected_batch_01_2026.csv"),
+selected <- read_selected(file.path(root, "discovery/selections", "selected_batch_01_2026.csv"),
   c("candidate_unit_id", "curation_status"))
 input <- read_selected(file.path(root, "database", "inputs.csv"), c(
   "assessment_id", "type", "measure", "basis", "year", "age", "value",
@@ -150,8 +150,7 @@ reported_n <- get_output("total_numbers")
 reported_n <- reported_n[match(total_n$year, reported_n$year), , drop = FALSE]
 stopifnot(max(abs(total_n$x - as.numeric(reported_n$value))) < 1e-6)
 
-review <- paste(readLines(file.path(root, "discovery", "source_reviews",
-  "noaa_pacific_coast_dover_sole.md"), warn = FALSE), collapse = "\n")
+review <- paste(readLines(file.path(root, "source_reviews", "noaa_pacific_coast_dover_sole.md"), warn = FALSE), collapse = "\n")
 stopifnot(
   grepl("220 retained-catch observations", review, fixed = TRUE),
   grepl("925 age-composition records", review, fixed = TRUE),

@@ -56,7 +56,7 @@ for (survey in unique(q$survey)) {
     x$se[x$age == 11] == x$se[x$age == 12]
   )
 }
-native_q <- read.csv("source_cache/ices_cod_northeast_arctic_2026/native_catchability.csv")
+native_q <- read.csv("source_cache/gadus_morhua/ices_cod_northeast_arctic_2026/native_catchability.csv")
 joined <- merge(q, native_q, by = c("survey", "age"))
 stopifnot(
   nrow(joined) == 50, all(abs(joined$value.x - exp(joined$log_estimate)) < 1e-10),
@@ -65,7 +65,7 @@ stopifnot(
 cat("Spawning fractions and q sharing/uncertainty scales verified.\n")
 
 model_env <- new.env()
-load("source_cache/ices_cod_northeast_arctic_2026/baserun_model.RData", model_env)
+load("source_cache/gadus_morhua/ices_cod_northeast_arctic_2026/baserun_model.RData", model_env)
 stopifnot(
   model_env$fit$conf$initState == 0,
   length(model_env$fit$pl$initN) == 0, length(model_env$fit$pl$initF) == 0,

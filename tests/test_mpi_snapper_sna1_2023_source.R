@@ -26,7 +26,7 @@ candidate <- read_matching_rows("discovery/candidates.csv", candidate_id)
 units <- read.csv("discovery/inventory_units.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
-selection <- read.csv("discovery/selected_batch_05_2026.csv",
+selection <- read.csv("discovery/selections/selected_batch_05_2026.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 selection <- selection[selection$candidate_id == candidate_id, , drop = FALSE]
 manifest <- read.csv("provenance/mpi_snapper_sna1_2023_sources.csv",
@@ -163,7 +163,7 @@ stopifnot(
   !any(outputs$measure %in% c("numbers_at_age", "fishing_mortality_at_age", "natural_mortality_at_age"))
 )
 
-review <- paste(readLines("discovery/source_reviews/mpi_snapper_sna1_2023.md",
+review <- paste(readLines("source_reviews/mpi_snapper_sna1.md",
   warn = FALSE, encoding = "UTF-8"), collapse = " ")
 stopifnot(
   grepl("catch-mass histories, not catch numbers-at-age", review, fixed = TRUE),

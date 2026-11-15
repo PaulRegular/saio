@@ -13,7 +13,7 @@ The official fitted model and data object were recovered from the public stockas
 - [Native SAM fitted model](https://stockassessment.org/datadisk/stockassessment/userdirs/user3/whg.27.7a_WKBNSCS_final/run/model.RData), [data object](https://stockassessment.org/datadisk/stockassessment/userdirs/user3/whg.27.7a_WKBNSCS_final/run/data.RData), configuration, version file and Makefile.
 - [ICES SAG whg.27.7a summary series](https://sg.ices.dk/ViewSourceData.aspx?key=20997), kept as a separate summary-only event because its 2023 SSB differs from the detailed benchmark.
 
-The source files are cached locally under `source_cache/ck_ices_wgcse_merlangus_cs7a/`. `manifest.csv` records each URL, retrieval date, SHA-256 checksum and represented assessment. The cache is gitignored.
+The source files are cached locally under `source_cache/merlangius_merlangus/ck_ices_wgcse_merlangus_cs7a/`. `manifest.csv` records each URL, retrieval date, SHA-256 checksum and represented assessment. The cache is gitignored.
 
 ## Inputs and assumptions
 

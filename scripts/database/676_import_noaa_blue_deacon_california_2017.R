@@ -597,7 +597,7 @@ import_noaa_blue_deacon_california_2017 <- function(root = ".", write = FALSE) {
   cat("Import remains partial: no catch-at-age, age-specific survey index, numeric weight/maturity-at-age, or fitted N/F-at-age surfaces were located.\n")
 
   if (write) {
-    source(file.path(root, "scripts/database/candidate_register_io.R"), local = environment())
+    source(file.path(root, "scripts/discovery/candidate_register_io.R"), local = environment())
     for (table in names(records)) {
       utils::write.table(records[[table]], file.path(root, "database", paste0(table, ".csv")),
         sep = ",", row.names = FALSE, col.names = FALSE, append = TRUE, na = "")

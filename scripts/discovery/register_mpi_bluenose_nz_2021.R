@@ -117,7 +117,7 @@ manifest <- data.frame(
 register_path <- "discovery/candidates.csv"
 units_path <- "discovery/inventory_units.csv"
 progress_path <- "discovery/inventory_progress.csv"
-selected_path <- "discovery/selected_batch_09_2026.csv"
+selected_path <- "discovery/selections/selected_batch_09_2026.csv"
 manifest_path <- "provenance/mpi_bluenose_nz_2021_sources.csv"
 source_paths <- file.path("source_cache", manifest$local_file)
 

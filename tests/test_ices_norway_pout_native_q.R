@@ -12,7 +12,7 @@ q <- outputs[
     outputs$measure == "q", , drop = FALSE
 ]
 fit_env <- new.env(parent = baseenv())
-load(file.path(root, "source_cache",
+load(file.path(root, "source_cache/trisopterus_esmarkii",
   assessment_id, "native", "sum.RData"), envir = fit_env)
 fit <- fit_env$sesamsum
 survey_names <- c(
