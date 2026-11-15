@@ -23,7 +23,7 @@ read_matching_rows <- function(path, id) {
 
 stocks <- read.csv("database/stocks.csv", colClasses = "character", check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", colClasses = "character", check.names = FALSE)
-candidates <- read.csv("discovery/candidates.csv", colClasses = "character", check.names = FALSE)
+candidates <- read.csv("database/candidates.csv", colClasses = "character", check.names = FALSE)
 inventory <- candidate_units()
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]

@@ -21,7 +21,7 @@ assessments <- read_columns("database/assessments.csv", c("assessment_id",
   "model_family", "model_version", "is_current", "is_applied",
   "framework_url",
   "inputs_status", "outputs_status", "assumptions_status"))
-candidates <- read_columns("discovery/candidates.csv", c("candidate_id",
+candidates <- read_columns("database/candidates.csv", c("candidate_id",
   "matched_stock_id", "match_status", "import_status"))
 units <- candidate_units()
 inputs <- read_columns("database/inputs.csv", c("assessment_id", "type",
@@ -131,7 +131,7 @@ total_n <- get_output("total_numbers")
 total_n <- total_n[match(summed_n$year, as.integer(total_n$year)), , drop = FALSE]
 stopifnot(max(abs(summed_n$x - as.numeric(total_n$value))) < 1e-6)
 
-review <- paste(readLines("source_reviews/screening/noaa_pacific_rex_sole_2023.md",
+review <- paste(readLines("source_reviews/noaa_pacific_coast_rex_sole.md",
   warn = FALSE), collapse = "\n")
 stopifnot(
   grepl("canonical database contains this stock and its 2023 assessment", review, fixed = TRUE),

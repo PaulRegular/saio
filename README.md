@@ -33,11 +33,11 @@ The assessment table distinguishes:
 
 The `inputs_status`, `assumptions_status` and `outputs_status` columns describe how much of the official assessment has been captured. A `partial` record contains useful information but has documented gaps; `complete` refers to extraction coverage, rather than independent scientific verification. Some stocks have catalogue information only and no assessment data yet.
 
-Assessment records link to the original reports and, where available, data files and assessment objects. The [source reviews](source_reviews/) explain what was recovered, how values were interpreted or reconstructed, and what remains unavailable. Additional stocks being investigated are listed separately under [discovery](discovery/).
+Assessment records link to the original reports and, where available, data files and assessment objects. The [source reviews](source_reviews/) explain what was recovered, how values were interpreted or reconstructed, and what remains unavailable. The [candidate register](database/candidates.csv) records stocks under review and progress toward adding them.
 
 For the Greenland halibut unit in NAFO Subarea 2 and Divisions 3KLMNO, see the [stock source review](source_reviews/dfo_greenland_halibut_2_3klmno.md).
 
-For NOAA Pacific Coast petrale sole, see the [stock source review](source_reviews/noaa_petrale_10011.md).
+For NOAA Pacific Coast petrale sole, see the [stock source review](source_reviews/noaa_petrale_sole_pacific_coast.md).
 
 ## Getting the data
 
@@ -103,7 +103,7 @@ Use `source_reference`, `source_type`, `transformation` and `notes` to trace a r
 ## Where SAIO started
 
 The Charbonneau–Keith Age-structured Marine Fish Database supplied SAIO’s initial list of stocks. The optional `charbonneau_id` column preserves the link to that catalogue. Use `stock_id` to join the SAIO tables.
-[Charbonneau–Keith catalogue](https://github.com/JulieCharbonneau/Age-structured-marine-fish-database) · [Pinned Master CSV](https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/Master.csv) · [SAIO catalogue review](source_reviews/charbonneau_keith_master_catalogue.md)
+[Charbonneau–Keith catalogue](https://github.com/JulieCharbonneau/Age-structured-marine-fish-database) · [Pinned Master CSV](https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/Master.csv) · [SAIO catalogue review](source_reviews/shared/charbonneau_keith_master_catalogue.md)
 
 ## Scope and verification
 

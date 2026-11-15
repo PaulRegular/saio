@@ -1,7 +1,7 @@
 root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "merlangius_merlangus/ices_whg_27_7b_ce_k_2026")
-register_path <- file.path(root, "discovery", "candidates.csv")
+register_path <- file.path(root, "database/candidates.csv")
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 
 stock_id <- "ices_whg_27_7b_ce_k"

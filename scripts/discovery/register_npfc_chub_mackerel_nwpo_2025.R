@@ -5,7 +5,7 @@ candidate_unit_id <- "npfc_chub_mackerel_nw_pacific"
 retrieved_on <- "2026-11-06"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 manifest_path <- "provenance/npfc_chub_mackerel_nw_pacific_2025/sources.csv"
 cache_root <- file.path("source_cache", "npfc_northwest_pacific_chub_mackerel_2025")
 

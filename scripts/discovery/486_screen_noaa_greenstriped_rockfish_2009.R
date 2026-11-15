@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_noaa_greenstriped_rockfish_2009')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10566'
 unit_id <- 'noaa_pacific_greenstriped_rockfish_coastwide'
 files <- c('assessment.pdf', 'star_review.pdf', 'stock_structure_review_2025.pdf',

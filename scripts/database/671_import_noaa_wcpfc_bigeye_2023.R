@@ -217,7 +217,7 @@ if (anyNA(index_match) || anyDuplicated(index_key) ||
     call. = FALSE)
 }
 
-candidate_path <- file.path(root, "discovery/candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 stocks_path <- file.path(root, "database/stocks.csv")
 assessments_path <- file.path(root, "database/assessments.csv")
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
@@ -729,7 +729,7 @@ candidates$output_evidence[candidate_row] <- paste(
 candidates$notes[candidate_row] <- paste(
   candidates$notes[candidate_row],
   "A partial source import was added under wcpfc_wcpo_bigeye_2023.",
-  "See source_reviews/screening/noaa_wcpfc_bigeye_2023.md for imported coverage and remaining limits."
+  "See source_reviews/wcpfc_wcpo_bigeye.md for imported coverage and remaining limits."
 )
 replace_candidate_register_row(candidate_path, candidate_row,
   candidates[candidate_row, , drop = FALSE], candidate_id)

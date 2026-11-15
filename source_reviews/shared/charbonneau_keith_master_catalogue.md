@@ -2,7 +2,7 @@
 
 ## Source and scope
 
-The metadata snapshot is the `Master.csv` file from the [Age-structured marine fish database](https://github.com/JulieCharbonneau/Age-structured-marine-fish-database), pinned to revision `7e4daca3cbfc14ce7fa0b28ed824eebe7113249b`. It was retrieved on 2026-10-17 from the [revision-specific raw file](https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/Master.csv). The local gitignored copy is `source_cache/shared/charbonneau_keith/Master.csv`; its MD5 is `430d85ba1f4144fc87bca098c8090699` and SHA-256 is `52FA158B197574B45B92D485D738E1DC7D62A4904315AEEF90C0EDB526E449ED`. The [source manifest](../provenance/shared/charbonneau_keith/sources.csv) records the URL, retrieval date, checksums and revision.
+The metadata snapshot is the `Master.csv` file from the [Age-structured marine fish database](https://github.com/JulieCharbonneau/Age-structured-marine-fish-database), pinned to revision `7e4daca3cbfc14ce7fa0b28ed824eebe7113249b`. It was retrieved on 2026-10-17 from the [revision-specific raw file](https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/Master.csv). The local gitignored copy is `source_cache/shared/charbonneau_keith/Master.csv`; its MD5 is `430d85ba1f4144fc87bca098c8090699` and SHA-256 is `52FA158B197574B45B92D485D738E1DC7D62A4904315AEEF90C0EDB526E449ED`. The [source manifest](../../provenance/shared/charbonneau_keith/sources.csv) records the URL, retrieval date, checksums and revision.
 
 The pinned file contains 102 rows and 102 unique `unique_ID` values. This differs from the 101-row count anticipated in the task plan; the import follows the source file and represents all 102 identifiers once. This is catalogue metadata only. The catalogue’s historical model flags and labels do not establish that any record is a current official production assessment.
 
@@ -19,11 +19,11 @@ New `stock_id` values are stable slugs of the Master `unique_ID`, prefixed with 
 - The initial import flagged nine possible overlaps. Three non-sex-specific cases remain unresolved: NEFSC summer flounder area, NEFSC 5Y haddock variant and ICES western Baltic herring subdivisions 22–24. The six Alaska sex-specific entries have since received the relationship review below. They retain separate catalogue identifiers but are not additional current assessment cases.
 - `ICES-WGCSE_merlangus_CS7a` has the source assessor code `ICES-WGSCE`. Both values are retained in its note rather than silently correcting the identifier.
 - `AFSC_ macrocephalus_BSAI` is linked to the existing Eastern Bering Sea cod record based on its legacy identifier and PDF label, although the Master area suffix says `BSAI`. This discrepancy is explicitly recorded in the stock note; confirm it against an assessment source before using the catalogue row as assessment identity.
-- `ICES-WGHANSA_mordax_SP9a` misnames the Iberian European anchovy stock as *Engraulis mordax*. The [southern anchovy review](ices_anchovy_gulf_cadiz.md) verifies *E. encrasicolus* and the 2024 split into western and southern stocks. The original ID and area remain on the historical combined row; the new southern stock does not inherit that Master ID. The importer permits this correction only for that exact identifier, without treating the two species as synonyms.
+- `ICES-WGHANSA_mordax_SP9a` misnames the Iberian European anchovy stock as *Engraulis mordax*. The [southern anchovy review](../ices_anchovy_gulf_cadiz.md) verifies *E. encrasicolus* and the 2024 split into western and southern stocks. The original ID and area remain on the historical combined row; the new southern stock does not inherit that Master ID. The importer permits this correction only for that exact identifier, without treating the two species as synonyms.
 
 These exceptions are visible in `stocks.csv` and the importer crosswalk. They do not add assessments, assumptions, numerical inputs or outputs. Stock-specific production assessment curation remains governed by the corresponding stock source review.
 
-The [2024 Georges Bank cod review](nefsc_cod_georges_bank.md) also distinguishes
+The [2024 Georges Bank cod review](../nefsc_cod_georges_bank.md) also distinguishes
 `NEFSC-GARMIII_morhua_GB` from the revised 2023 GB unit. The latter excludes
 statistical areas 521 and 526 and is now `nefsc_cod_georges_bank`; the older
 Master ID remains on its historical wider unit. The US assessment combines

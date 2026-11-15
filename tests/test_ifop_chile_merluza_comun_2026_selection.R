@@ -2,7 +2,7 @@ root <- "."
 candidate_id <- "IFOP:merluza_comun_UP"
 stock_id <- "ifop_merluza_comun_up"
 
-candidates <- read.csv(file.path(root, "discovery/candidates.csv"),
+candidates <- read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 sources <- read.csv(file.path(root, "provenance/ifop_merluza_comun_2026/sources.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
@@ -36,8 +36,7 @@ stopifnot(
   any(grepl("Access database extracted", sources$notes, fixed = TRUE))
 )
 
-review <- paste(readLines(file.path(root, "source_reviews/screening",
-  "ifop_chile_merluza_comun_2026.md"), warn = FALSE), collapse = " ")
+review <- paste(readLines(file.path(root, "source_reviews/ifop_chile_merluza_comun_2026.md"), warn = FALSE), collapse = " ")
 stopifnot(
   grepl("2027 status assessment as in progress", review, fixed = TRUE),
   grepl("not observed catch", review, fixed = TRUE),

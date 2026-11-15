@@ -7,7 +7,7 @@ inputs <- import$input_data
 outputs <- import$output_data
 assessment <- import$assessment
 review <- paste(readLines(file.path(root,
-  "source_reviews/screening/noaa_rougheye_blackspotted_2025.md"), warn = FALSE),
+  "source_reviews/noaa_rougheye_blackspotted_2025.md"), warn = FALSE),
   collapse = " ")
 composition_obs <- unique(inputs$observation_id[!is.na(inputs$observation_id)])
 

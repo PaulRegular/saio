@@ -1,5 +1,5 @@
 root <- "."
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 cache <- file.path(root, 'source_cache', 'discovery_noaa_red_grouper_gom_2025')
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -95,7 +95,7 @@ review <- list(
     'records full acceptance for SEDAR 88; assessment 14350 is a 2026 stock monitoring',
     'update with review result Remand and the same terminal data year. NOAA Stock',
     'SMART 10332 is the distinct South Atlantic red grouper unit. See',
-    'source_reviews/screening/noaa_red_grouper_gom_2025.md.'
+    'source_reviews/noaa_red_grouper_gom.md.'
   )
 )
 

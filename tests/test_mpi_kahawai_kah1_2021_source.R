@@ -118,7 +118,7 @@ stopifnot(
   ))
 )
 
-candidates <- read.csv("discovery/candidates.csv",
+candidates <- read.csv("database/candidates.csv",
   stringsAsFactors = FALSE, colClasses = "character",
   check.names = FALSE
 )

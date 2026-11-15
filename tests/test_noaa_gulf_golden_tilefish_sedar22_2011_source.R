@@ -24,14 +24,14 @@ outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 assumptions <- read.csv("database/assumptions.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == "NOAA:10383", , drop = FALSE]
 units <- candidate_units()
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
 manifest <- read.csv("provenance/discovery_noaa_gulf_tilefish_sedar22_2011/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("source_reviews/screening/noaa_golden_tilefish_gulf_sedar22_2011.md",
+review <- paste(readLines("source_reviews/noaa_golden_tilefish_gulf_sedar22_2011.md",
   warn = FALSE), collapse = " ")
 
 stock_row <- stock[stock$stock_id == stock_id, , drop = FALSE]

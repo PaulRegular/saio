@@ -443,7 +443,7 @@ if (write_biological_assumptions_only) {
   }
   write.table(model_assumptions, path, sep = ",", quote = TRUE, row.names = FALSE,
     col.names = FALSE, append = TRUE, na = "", qmethod = "double")
-  candidate_path <- file.path(root, "discovery", "candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidate_lines <- readLines(candidate_path, warn = FALSE)
   candidates <- read.csv(candidate_path,
     stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
@@ -487,7 +487,7 @@ if (write_biological_assumptions_only) {
   append_csv(assumptions, file.path(db, "assumptions.csv"))
   append_csv(outputs, file.path(db, "outputs.csv"))
   append_csv(inputs, file.path(db, "inputs.csv"))
-  candidate_path <- file.path(root, "discovery", "candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
   selected <- which(candidates$candidate_id == candidate_id)
   if (length(selected) != 1L) stop("Expected exactly one Hoki discovery candidate.", call. = FALSE)

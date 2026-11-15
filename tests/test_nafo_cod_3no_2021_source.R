@@ -15,7 +15,7 @@ stocks <- read.csv(file.path(root, "database", "stocks.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 assessments <- read.csv(file.path(root, "database", "assessments.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
-candidates <- read.csv(file.path(root, "discovery", "candidates.csv"),
+candidates <- read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 inputs <- read_selected(file.path(root, "database", "inputs.csv"), c(
   "assessment_id", "type", "measure", "basis", "year", "age", "value",
@@ -186,7 +186,7 @@ stopifnot(
   all(manifest$assessment_id == assessment_id),
   all(grepl("^[0-9A-F]{64}$", manifest$sha256)),
   all(grepl("^https://", manifest$source_url)),
-  file.exists(file.path(root, "source_reviews", "nafo_cod_3no_2021.md"))
+  file.exists(file.path(root, "source_reviews/nafo_cod_3no.md"))
 )
 
 message("NAFO cod 3NO source records validated.")

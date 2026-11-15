@@ -5,7 +5,7 @@ if (!file.exists("database/stocks.csv")) {
   stop("Run this script from the SAIO repository root.")
 }
 
-candidates_path <- "discovery/candidates.csv"
+candidates_path <- "database/candidates.csv"
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
   colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
 

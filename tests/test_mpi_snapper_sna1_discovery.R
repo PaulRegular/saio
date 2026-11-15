@@ -3,7 +3,7 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
-register <- read_table("discovery/candidates.csv")
+register <- read_table("database/candidates.csv")
 row <- register[register$candidate_id == "MPI:SNA1", , drop = FALSE]
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")

@@ -455,7 +455,7 @@ if (write_mode) {
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
   assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
-  candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+  candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
   candidate_row <- match(candidate_id, candidates$candidate_id)
   if (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id ||
@@ -474,7 +474,7 @@ if (write_mode) {
   candidates$match_status[candidate_row] <- "matched"
   candidates$import_status[candidate_row] <- "partial"
   replace_candidate_register_row(
-    "discovery/candidates.csv", candidate_row,
+    "database/candidates.csv", candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id
   )
   cat("ORH 3B source records and discovery summaries were written.\n")

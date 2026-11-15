@@ -1,7 +1,7 @@
 candidate_id <- "ICES:ane.27.8"
 candidate_unit_id <- "ices_bay_biscay_anchovy_8"
 review_date <- "2026-11-08"
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 sources <- data.frame(

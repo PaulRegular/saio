@@ -4,7 +4,7 @@ root <- '.'
 candidate_id <- 'ICES:rjc.27.7e'
 unit_id <- 'ices_thornback_ray_7e'
 cache <- file.path(root, 'source_cache', 'discovery_ices_thornback_ray_7e_2024')
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)

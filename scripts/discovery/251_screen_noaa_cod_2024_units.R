@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 
 cod_urls <- c(
@@ -24,7 +24,7 @@ updates <- list(
     output_evidence = paste('The report contains survey biomass and age-structured indicators, not fitted N/F/M-at-age or recruitment surfaces. The current-unit DFO assessment outputs are recorded under the existing Eastern Georges Bank stock.'),
     detailed_source_url = cod_urls['egb'], review_date = '2026-10-29',
     decision_reason = paste('NOAA Stock SMART ID 12805 is the Eastern Georges Bank transboundary unit already represented by ck_nefsc_trac_cert_morhua_gb. The linked 2023 TRAC document is an indicator-based status report without an assessment model; the latest detailed age-structured assessment is the existing DFO EGB framework record. No separate stock or duplicate assessment is created from this NOAA inventory row.'),
-    notes = paste('Identity crosswalk: NOAA 12805 Eastern Georges Bank = DFO NAFO 5Zjm / legacy 5Zejm. See source_reviews/screening/noaa_eastern_georges_bank_2023_identity.md and dfo_cod_5zjm_identity.md. The NOAA repository PDF is linked for review; direct local download returned HTTP 403, while the current-unit DFO source files are already cached.')
+    notes = paste('Identity crosswalk: NOAA 12805 Eastern Georges Bank = DFO NAFO 5Zjm / legacy 5Zejm. See source_reviews/ck_nefsc_trac_cert_morhua_gb.md and dfo_cod_5zjm_identity.md. The NOAA repository PDF is linked for review; direct local download returned HTTP 403, while the current-unit DFO source files are already cached.')
   ),
   'NOAA:17280' = list(
     match_status = 'new', matched_stock_id = NA_character_, screening_status = 'screened',

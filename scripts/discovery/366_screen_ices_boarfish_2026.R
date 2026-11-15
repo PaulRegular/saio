@@ -1,5 +1,5 @@
 root <- "."
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 cache_dir <- file.path(root, 'source_cache', 'discovery_ices_boarfish_2026')
 source_manifest <- read.csv(file.path(cache_dir, 'sources.csv'), stringsAsFactors = FALSE)
 expected <- data.frame(

@@ -35,7 +35,7 @@ assessments <- read_columns("database/assessments.csv", c(
   "assessment_id", "stock_id", "assessment_year", "terminal_year",
   "estimate_terminal_year", "is_current", "inputs_status", "outputs_status",
   "assumptions_status"))
-candidates <- read_columns("discovery/candidates.csv", c(
+candidates <- read_columns("database/candidates.csv", c(
   "candidate_id", "matched_stock_id", "match_status", "screening_status",
   "eligibility", "import_status", "review_date", "detailed_source_url",
   "catch_age_evidence", "survey_age_evidence", "weights_evidence",

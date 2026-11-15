@@ -1,5 +1,5 @@
 # Screen the current NOAA northern yellowtail rockfish assessment.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('NOAA:10393', x$candidate_id)
 if (is.na(i)) stop('Expected NOAA Yellowtail Rockfish row is missing.', call. = FALSE)

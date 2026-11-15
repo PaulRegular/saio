@@ -41,7 +41,7 @@ if (!identical(actual_hashes, toupper(manifest$sha256))) {
 
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
-candidates <- read_table("discovery/candidates.csv")
+candidates <- read_table("database/candidates.csv")
 candidate_rows <- which(candidates$candidate_id == candidate_id)
 stopifnot(!stock_id %in% stocks$stock_id,
   !source_id %in% assessments$assessment_id,
@@ -297,9 +297,9 @@ candidates$notes[candidate_rows] <- paste(
   "Partial source import now includes all reported Table 2 fleet catches and terminal",
   "female SSB/B0 summaries for the whole stock, North, and South. No age compositions,",
   "length-frequency arrays, tag arrays, or annual population time series were imported.",
-  "See source_reviews/afma_mitf_2025.md."
+  "See source_reviews/afma_patagonian_toothfish_macquarie.md."
 )
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 candidate_lines <- readLines(candidate_path, warn = FALSE)
 candidate_line_index <- which(startsWith(candidate_lines, paste0('"', candidate_id, '",')))
 if (length(candidate_line_index) != 1L) {

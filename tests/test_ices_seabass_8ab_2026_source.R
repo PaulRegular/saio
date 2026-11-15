@@ -6,7 +6,7 @@ import <- new.env(parent = globalenv())
 sys.source(script, envir = import)
 if (is.na(old_dry_run)) Sys.unsetenv("TAM_SOURCE_DRY_RUN") else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
-register <- read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE)
+register <- read.csv(file.path(root, "database/candidates.csv"), stringsAsFactors = FALSE)
 assessments <- read.csv(file.path(root, "database", "assessments.csv"), stringsAsFactors = FALSE)
 registered <- register[register$candidate_id == "ICES:bss.27.8ab", , drop = FALSE]
 assessment_row <- assessments[assessments$assessment_id == "ices_seabass_8ab_2026", , drop = FALSE]

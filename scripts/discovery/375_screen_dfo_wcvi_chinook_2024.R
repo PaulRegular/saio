@@ -1,5 +1,5 @@
 root <- "."
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 cache_path <- file.path(root, 'source_cache', 'discovery_dfo_wcvi_chinook_2024')
 
 register <- read.csv(register_path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))

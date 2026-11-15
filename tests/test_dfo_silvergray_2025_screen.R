@@ -1,11 +1,11 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
-register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+register <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 row <- register[register$candidate_id == "DFO:Pacific:Silvergray Rockfish - Coastwide", , drop = FALSE]
 units <- candidate_units()
 unit <- units[which(units$candidate_unit_id == "dfo_silvergray_rockfish_coastwide"), , drop = FALSE]
-review <- paste(readLines("source_reviews/screening/dfo_silvergray_rockfish_2025.md",
+review <- paste(readLines("source_reviews/dfo_silvergray_rockfish_coastwide.md",
   warn = FALSE), collapse = "\n")
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

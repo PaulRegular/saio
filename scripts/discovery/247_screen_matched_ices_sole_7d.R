@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'ICES:sol.27.7d'
 i <- which(x$candidate_id == id)
@@ -54,7 +54,7 @@ x$decision_reason[i] <- paste0(
   'those are translation limits rather than missing age inputs.'
 )
 x$notes[i] <- paste0(
-  'See source_reviews/ices_sole_eastern_channel_7d_2026.md. The source ' ,
+  'See source_reviews/ck_ices_wgnssk_solea_ns_7d.md. The source ' ,
   '' ,
   'is a reason to alter the official inputs or suppress the source-based eligibility classification.'
 )

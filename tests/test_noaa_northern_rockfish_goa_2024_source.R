@@ -23,7 +23,7 @@ stock <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessment <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
 stock <- stock[stock$stock_id == stock_id, ]

@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'rachycentron_canadum/noaa_cobia_gulf_mexico_2020_sedar28_update')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe',

@@ -1,5 +1,5 @@
 root <- "."
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 cache <- file.path(root, 'source_cache', 'discovery_noaa_ocean_pout_2022')
 mirror_file <- 'FallMT2022_text_mirror.html'
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,

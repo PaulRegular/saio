@@ -26,7 +26,7 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
 assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
 inputs <- read_assessment_rows("database/inputs.csv", assessment_id)
 outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 manifest <- read.csv(
   "provenance/discovery_noaa_south_atlantic_vermilion_snapper_2018/sources.csv",

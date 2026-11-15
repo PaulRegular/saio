@@ -32,7 +32,7 @@ assessments <- read_columns("database/assessments.csv", c("assessment_id", "stoc
 stocks <- read_columns("database/stocks.csv", c("stock_id", "authority_stock_id", "scientific_name",
   "common_name", "area", "region", "ocean"))
 assumptions <- read_columns("database/assumptions.csv", c("assessment_id", "component", "setting", "value"))
-candidates <- read_columns("discovery/candidates.csv", c("candidate_id", "candidate_unit_id",
+candidates <- read_columns("database/candidates.csv", c("candidate_id", "candidate_unit_id",
   "matched_stock_id", "match_status", "eligibility", "import_status", "survey_age_evidence",
   "output_evidence"))
 inventory <- candidate_units()

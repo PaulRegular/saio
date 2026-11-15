@@ -1,6 +1,6 @@
 source('scripts/discovery/460_screen_noaa_iattc_bigeye_2026.R')
 root <- "."
-candidate <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+candidate <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- candidate[candidate$candidate_id == 'NOAA:11685', , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
@@ -20,8 +20,7 @@ stopifnot(nrow(row) == 1L,
   grepl('catch-at-age', row$catch_age_evidence, fixed = TRUE),
   grepl('aggregate', row$survey_age_evidence, fixed = TRUE),
   grepl('SAC-17-03_BET-assessment-EN.pdf', row$detailed_source_url, fixed = TRUE),
-  file.exists(file.path(root, 'source_reviews', 'screening',
-    'noaa_iattc_bigeye_eastern_pacific_2026.md')),
+  file.exists(file.path(root, 'source_reviews/noaa_iattc_bigeye_eastern_pacific_2026.md')),
   !any(stocks$authority_stock_id == '11685', na.rm = TRUE),
   !any(assessments$assessment_id == 'iattc_eastern_pacific_bigeye', na.rm = TRUE),
   !any(inputs$assessment_id == 'iattc_eastern_pacific_bigeye', na.rm = TRUE),

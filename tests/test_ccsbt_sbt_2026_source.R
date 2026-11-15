@@ -6,12 +6,12 @@ source("tests/helper_inventory.R")
 assessment_id <- "ccsbt_sbt_2026"
 x <- read_assessment(assessment_id)
 outputs <- x$outputs
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == "CCSBT:SBT", , drop = FALSE]
 manifest <- read.csv("provenance/ccsbt_sbt_2026/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+register <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 progress <- candidate_progress()
 units <- candidate_units()
@@ -69,7 +69,7 @@ stopifnot(
   all(manifest$retrieved_on == "2026-11-06"),
   all(nchar(manifest$sha256) == 64L),
   any(grepl("ESC31_20", manifest$source_url, fixed = TRUE)),
-  file.exists("source_reviews/ccsbt_sbt_2026.md")
+  file.exists("source_reviews/ccsbt_sbt.md")
 )
 
 cached_files <- file.path("source_cache", manifest$local_file)

@@ -1,5 +1,5 @@
 root <- "."
-candidates <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- candidates[candidates$candidate_id == 'NOAA:10257', , drop = FALSE]
 gulf <- candidates[candidates$candidate_id == 'NOAA:10256', , drop = FALSE]
@@ -18,8 +18,7 @@ load(file.path(root, 'source_cache', 'shared/noaa_stocksmart',
 stocksmart <- stocksmart_env$stock_assessment_summary
 run <- stocksmart[stocksmart$stock_id == 10257 & stocksmart$assessment_id == 8220,
   , drop = FALSE]
-review_path <- file.path(root, 'source_reviews', 'screening',
-  'noaa_vermilion_snapper_south_atlantic_2018.md')
+review_path <- file.path(root, 'source_reviews/noaa_vermilion_snapper_south_atlantic.md')
 script_path <- file.path(root, 'scripts', 'discovery',
   '459_screen_noaa_vermilion_snapper_sa_2018.R')
 

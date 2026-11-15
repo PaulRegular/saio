@@ -5,7 +5,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/370_screen_noaa_mhi_deep7_2024.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -55,7 +55,7 @@ stopifnot(
   !any(assessments$stock_id == 'noaa_mhi_deep7_complex'),
   !any(inputs$assessment_id == 'noaa_mhi_deep7_complex'),
   !any(outputs$assessment_id == 'noaa_mhi_deep7_complex'),
-  file.exists(file.path(root, 'source_reviews/screening/noaa_mhi_deep7_2024.md'))
+  file.exists(file.path(root, 'source_reviews/noaa_mhi_deep7_2024.md'))
 )
 
 cat('NOAA Deep 7 2024 assessment identity and age-input screen checks passed.\n')

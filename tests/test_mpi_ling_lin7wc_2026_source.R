@@ -98,7 +98,7 @@ stopifnot(
   ))
 )
 
-candidates <- read.csv("discovery/candidates.csv",
+candidates <- read.csv("database/candidates.csv",
   stringsAsFactors = FALSE, colClasses = "character",
   na.strings = c("", "NA"), check.names = FALSE
 )
@@ -106,7 +106,7 @@ candidate <- candidates[candidates$candidate_id == "MPI:LIN7WC", , drop = FALSE]
 manifest <- read.csv("provenance/mpi_ling_lin7wc_2026/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE
 )
-review <- readLines("source_reviews/mpi_ling_lin7wc_2026.md", warn = FALSE)
+review <- readLines("source_reviews/mpi_ling_lin7wc.md", warn = FALSE)
 stopifnot(
   nrow(candidate) == 1L,
   candidate$matched_stock_id == "mpi_ling_lin7wc",

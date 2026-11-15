@@ -596,7 +596,7 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
   inputs_status = "partial", outputs_status = "partial",
   notes = "Latest accepted NOAA Stock SMART assessment reviewed for unit 10384; data through 2022. Numerical composition arrays and the age-error matrix remain unrecovered. Table 18 SSB benchmark scale conflicts with Section 4.8 and Table 10; both source representations are retained without conversion.")
 
-candidate_path <- file.path("discovery", "candidates.csv")
+candidate_path <- file.path("database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv(file.path("database", "stocks.csv"), stringsAsFactors = FALSE,

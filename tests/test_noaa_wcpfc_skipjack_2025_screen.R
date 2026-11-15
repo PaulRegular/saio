@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- register[register$candidate_id == 'NOAA:11691', , drop = FALSE]
 stopifnot(nrow(row) == 1L,

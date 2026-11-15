@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 id <- 'DFO:Pacific:Coho salmon - Interior Fraser'
 i <- match(id, x$candidate_id)
@@ -73,7 +73,7 @@ x$decision_reason[i] <- paste(
 x$notes[i] <- paste(
   'This is the Interior Fraser Coho SMU upstream of Hells Gate, distinct from',
   'Lower Fraser Coho. The 2022 assessment is the latest detailed source found;',
-  'no canonical stock or assessment records were added. See source_reviews/screening/',
+  'no canonical stock or assessment records were added. See source_reviews/',
   'dfo_interior_fraser_coho_2022.md.'
 )
 

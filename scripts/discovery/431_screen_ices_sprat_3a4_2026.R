@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_ices_sprat_3a4_2026')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:spr.27.3a4'
 unit_id <- 'ices_sprat_3a4'
 

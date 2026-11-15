@@ -1,6 +1,6 @@
 # Source documentation can describe official model methods and diagnostics.
 # Secondary recipes and their artifacts belong to the consuming analysis.
-reviews <- unlist(lapply(c('source_reviews', 'source_reviews/screening'),
+reviews <- unlist(lapply(c('source_reviews', 'source_reviews'),
   list.files, pattern = '[.]md$', full.names = TRUE))
 stopifnot(length(reviews) > 0L)
 secondary <- 'scripts/translation/|results/cache/|^#{1,6} .*([Tt]ranslation|[Ss]econdary fit|[Mm]odel agreement)'

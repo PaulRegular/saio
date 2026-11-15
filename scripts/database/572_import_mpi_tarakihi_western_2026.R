@@ -476,7 +476,7 @@ if (write_mode) {
   write.csv(western_import$manifest, "provenance/mpi_tarakihi_western_2026/sources.csv", row.names = FALSE, na = "")
 
   source("scripts/discovery/candidate_register_io.R")
-  register_path <- file.path(root, "discovery", "candidates.csv")
+  register_path <- file.path(root, "database/candidates.csv")
   register <- read.csv(register_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
   position <- match(candidate_id, register$candidate_id)
   if (is.na(position)) stop("Western tarakihi candidate is missing from the register.", call. = FALSE)

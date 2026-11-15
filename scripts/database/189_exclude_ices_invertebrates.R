@@ -1,5 +1,5 @@
 # Screen named ICES invertebrates outside the initial marine-finfish scope.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 i <- which(x$organization == 'ICES' & x$screening_status == 'not_started' &
   tolower(trimws(x$scientific_name)) %in% c('nephrops norvegicus', 'pandalus borealis'))

@@ -82,7 +82,7 @@ stopifnot(
     scenario = "projection_initialization")) == 16L
 )
 
-register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+register <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- register[register$candidate_id == "NOAA:12149", , drop = FALSE]
 stopifnot(

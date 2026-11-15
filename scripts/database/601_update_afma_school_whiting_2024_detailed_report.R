@@ -97,7 +97,7 @@ rows_to_add <- function(existing, proposed, key_fields) {
 database <- file.path(root, "database")
 assumptions_path <- file.path(database, "assumptions.csv")
 outputs_path <- file.path(database, "outputs.csv")
-candidates_path <- file.path(root, "discovery/candidates.csv")
+candidates_path <- file.path(root, "database/candidates.csv")
 assumptions_fields <- read_fields(assumptions_path)
 outputs_fields <- read_fields(outputs_path)
 assumptions <- function(setting, value, notes = "") {
@@ -241,7 +241,7 @@ candidate$decision_reason <- paste(
 )
 candidate$notes <- paste(
   "FRDC 2019-030 final report provides supporting biological parameters and selected 2024 assessment outputs; it does not provide raw annual likelihood inputs.",
-  "See source_reviews/afma_school_whiting_sessf.md."
+  "See source_reviews/afma_sessf_eastern_school_whiting.md."
 )
 
 cat("AFMA eastern school whiting: ", nrow(assumptions_to_add),

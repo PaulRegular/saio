@@ -506,7 +506,7 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
   inputs_status = "partial", outputs_status = "partial",
   notes = "Latest completed detailed assessment located for NOAA unit 10339; data through 2018 with 2019 projection estimates. Numeric composition matrices are not reported in the assessment tables; annual output uncertainty is not available, although Table 16 reports benchmark Monte Carlo/Bootstrap summaries.")
 
-candidate_path <- file.path("discovery", "candidates.csv")
+candidate_path <- file.path("database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv(file.path("database", "stocks.csv"), stringsAsFactors = FALSE,

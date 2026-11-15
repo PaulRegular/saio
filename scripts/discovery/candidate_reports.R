@@ -1,5 +1,5 @@
 read_candidate_register <- function(root = ".") {
-  utils::read.csv(file.path(root, "discovery", "candidates.csv"),
+  utils::read.csv(file.path(root, "database/candidates.csv"),
     stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 }
 

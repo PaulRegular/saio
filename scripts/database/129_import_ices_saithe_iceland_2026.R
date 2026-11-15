@@ -452,7 +452,7 @@ stocks$notes[stock_row] <- paste(
   "Charbonneau-Keith identity retained (ICES-NWWG_virens_FA5a).",
   "Official ICES stock pok.27.5a is saithe in Division 5.a (Iceland grounds),",
   "distinct from the Northeast Arctic, North Sea, and Faroe stocks.",
-  "Source review: source_reviews/ices_saithe_iceland_2026.md."
+  "Source review: source_reviews/ck_ices_nwwg_virens_fa5a.md."
 )
 
 assessments <- rbind(assessments, align_columns(assessment, assessments))

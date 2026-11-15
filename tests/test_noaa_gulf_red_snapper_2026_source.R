@@ -36,7 +36,7 @@ stocks <- read_columns("database/stocks.csv", c("stock_id", "authority_stock_id"
   "scientific_name", "common_name", "area", "ocean"))
 assumptions <- read_columns("database/assumptions.csv", c("assessment_id",
   "component", "setting", "value", "source_reference", "notes"))
-candidates <- read_columns("discovery/candidates.csv", c("candidate_id",
+candidates <- read_columns("database/candidates.csv", c("candidate_id",
   "matched_stock_id", "match_status", "screening_status", "eligibility",
   "import_status", "survey_age_evidence", "output_evidence"))
 manifest <- read.csv("provenance/discovery_noaa_gom_red_snapper_2026/sources.csv",
@@ -348,7 +348,7 @@ stopifnot(
   all(exploitation$unit == "ratio")
 )
 
-review <- paste(readLines("source_reviews/noaa_gulf_red_snapper_2026.md",
+review <- paste(readLines("source_reviews/noaa_gulf_red_snapper.md",
   warn = FALSE), collapse = "\n")
 stopifnot(
   grepl("tables do not provide standard errors or intervals", review, fixed = TRUE),
@@ -362,7 +362,7 @@ stopifnot(
   grepl("denominator remains unresolved", review, fixed = TRUE)
 )
 
-gulf_candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+gulf_candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   check.names = FALSE)
 gulf_candidate <- gulf_candidate[gulf_candidate$candidate_id == "NOAA:10230", , drop = FALSE]
 survey_evidence <- gulf_candidate$survey_age_evidence

@@ -3,7 +3,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/365_reconcile_ices_invertebrate_inventory.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -34,7 +34,7 @@ stopifnot(
   !any(rows$candidate_unit_id %in% assessments$assessment_id),
   !any(rows$candidate_unit_id %in% inputs$assessment_id),
   !any(rows$candidate_unit_id %in% outputs$assessment_id),
-  file.exists(file.path(root, 'source_reviews/screening/ices_invertebrate_inventory_2026.md'))
+  file.exists(file.path(root, 'source_reviews/shared/ices_invertebrate_inventory_2026.md'))
 )
 
 cat('ICES invertebrate inventory identity and scope checks passed.\n')

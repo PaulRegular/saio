@@ -3,7 +3,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/348_screen_ices_alfonsinos_nea_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -40,7 +40,7 @@ stopifnot(
   !any(inputs$assessment_id == candidate$candidate_unit_id),
   !any(outputs$assessment_id == candidate$candidate_unit_id),
   file.exists(file.path(root,
-    'source_reviews/screening/ices_alfonsinos_nea_2026.md'))
+    'source_reviews/ices_alfonsinos_nea.md'))
 )
 
 cat('ICES alfonsinos screening checks passed.\n')

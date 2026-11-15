@@ -15,12 +15,12 @@ outputs <- subset(read_source_table("database/outputs.csv"),
   assessment_id == "npfc_chub_mackerel_nw_pacific_2025")
 assumptions <- subset(read_source_table("database/assumptions.csv"),
   assessment_id == "npfc_chub_mackerel_nw_pacific_2025")
-candidates <- read_source_table("discovery/candidates.csv")
+candidates <- read_source_table("database/candidates.csv")
 candidate <- subset(candidates, candidates$candidate_id == "NPFC:CM_NWPO")
 manifest <- read_source_table(
   "provenance/npfc_chub_mackerel_nw_pacific_2025/sources.csv")
 review <- paste(readLines(
-  "source_reviews/npfc_chub_mackerel_nw_pacific_2025.md", warn = FALSE),
+  "source_reviews/npfc_chub_mackerel_nw_pacific.md", warn = FALSE),
   collapse = "\n")
 
 stopifnot(

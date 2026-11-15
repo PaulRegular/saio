@@ -180,7 +180,7 @@ close(connection)
 write.table(inputs, database_path, sep = ",", row.names = FALSE,
   col.names = FALSE, append = TRUE, na = "", qmethod = "double")
 
-candidate_path <- file.path(root, "discovery/candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate_row <- which(candidates$candidate_id == candidate_id)

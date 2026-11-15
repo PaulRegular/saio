@@ -1,5 +1,5 @@
 root <- "."
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 cache <- file.path(root, 'source_cache', 'pleuronectes_platessa/ices_plaice_iceland_5a_2026')
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -75,7 +75,7 @@ review <- list(
     'The MFRI public assessment-data directory located during review only lists annual CSV',
     'folders through 2018. The 2022 stock annex and WKICEMP benchmark report document the',
     'model framework; the current report does not link a 2026 model repository or fitted object.',
-    'See source_reviews/screening/ices_plaice_iceland_2026.md.'
+    'See source_reviews/ices_plaice_iceland_5a.md.'
   )
 )
 already_applied <- all(vapply(names(review), function(column) {

@@ -111,7 +111,7 @@ stopifnot(
 )
 
 candidate <- read.csv(
-  "discovery/candidates.csv",
+  "database/candidates.csv",
   stringsAsFactors = FALSE, check.names = FALSE
 )
 candidate <- candidate[candidate$candidate_id == "ICES:caa.27.5a", ]

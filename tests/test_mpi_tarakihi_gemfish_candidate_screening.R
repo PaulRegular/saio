@@ -1,4 +1,4 @@
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 ids <- c("MPI:TAR:EASTERN", "MPI:TAR:WESTERN", "MPI:SKI3+SKI7")
 screened <- candidates[match(ids, candidates$candidate_id), , drop = FALSE]

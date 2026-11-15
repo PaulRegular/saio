@@ -26,7 +26,7 @@ assessment_rows_exist <- function(path, id) {
 
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, check.names = FALSE)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
 
 if (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id ||
     candidate_id %in% candidates$candidate_id ||
@@ -179,6 +179,6 @@ append_csv("database/stocks.csv", stock)
 append_csv("database/assessments.csv", assessment)
 append_csv("database/assumptions.csv", assumptions)
 append_csv("database/outputs.csv", outputs)
-append_csv("discovery/candidates.csv", candidate)
+append_csv("database/candidates.csv", candidate)
 
 cat("Imported partial 2025 AFMA Blue Grenadier CTS assessment sources.\n")

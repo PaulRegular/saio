@@ -1,14 +1,13 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 row <- register[register$candidate_id == 'NOAA:10788', , drop = FALSE]
 unit <- candidate_units()
 unit <- unit[!is.na(unit$candidate_unit_id) &
   unit$candidate_unit_id == 'noaa_ocean_quahog_atlantic', , drop = FALSE]
-review <- readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_ocean_quahog_2020.md'), warn = FALSE)
+review <- readLines(file.path(root, 'source_reviews/noaa_ocean_quahog_2020.md'), warn = FALSE)
 
 stopifnot(nrow(row) == 1L,
   row$candidate_unit_id == 'noaa_ocean_quahog_atlantic',

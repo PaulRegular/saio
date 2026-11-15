@@ -429,7 +429,7 @@ stocks$region[stock_row] <- "Celtic Seas and West of Scotland"
 stocks$ocean[stock_row] <- "Northeast Atlantic"
 stocks$notes[stock_row] <- paste(
   "Official ICES stock code whg.27.6a; detailed 2025 SAM assessment imported.",
-  "Source review: source_reviews/ices_whiting_west_scotland_2025.md."
+  "Source review: source_reviews/ck_ices_wgsce_merlangus_cs27_6a.md."
 )
 
 for (table_name in c("assessments.csv", "assumptions.csv", "inputs.csv", "outputs.csv")) {

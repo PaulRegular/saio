@@ -3,7 +3,7 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 root <- "."
 candidate_id <- 'NOAA:10545'
 unit_id <- 'noaa_pacific_coast_pop_uswc'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 units <- candidate_units()
@@ -16,8 +16,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_pacific_coast_pop_2017.md'), warn = FALSE), collapse = '\n')
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_pacific_coast_pop_2017.md'), warn = FALSE), collapse = '\n')
 
 stopifnot(
   nrow(candidate) == 1L,

@@ -127,7 +127,7 @@ if (!write_mode) {
 } else {
   stocks <- read_csv(file.path("database", "stocks.csv"))
   assessments <- read_csv(file.path("database", "assessments.csv"))
-  candidates <- read_csv(file.path("discovery", "candidates.csv"))
+  candidates <- read_csv(file.path("database/candidates.csv"))
   stock_row <- which(stocks$stock_id == stock_id)
   assessment_row <- which(assessments$assessment_id == assessment_id)
   candidate_row <- which(candidates$candidate_id == candidate_id)
@@ -164,7 +164,7 @@ if (!write_mode) {
   )
   candidates$review_date[candidate_row] <- "2026-11-13"
   replace_candidate_register_row(
-    "discovery/candidates.csv", candidate_row,
+    "database/candidates.csv", candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id
   )
   cat("Appended 66 NOAA Atlantic bluefish parameter outputs. Completeness remains partial.\n")

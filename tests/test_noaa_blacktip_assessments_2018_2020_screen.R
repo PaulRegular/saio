@@ -11,7 +11,7 @@ canonical_before <- tools::md5sum(file.path(root, canonical_paths))
 source(file.path(root, 'scripts', 'discovery',
   '532_screen_noaa_blacktip_assessments_2018_2020.R'))
 
-register <- read_table('discovery/candidates.csv')
+register <- read_table('database/candidates.csv')
 ids <- c('NOAA:11026', 'NOAA:11027')
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
 expected_units <- c('noaa_atlantic_blacktip_shark', 'noaa_gulf_blacktip_shark')
@@ -44,8 +44,7 @@ stopifnot(nrow(rows) == 2L, !anyNA(rows$candidate_id),
   all(nzchar(manifest_rows$source_url)), all(nzchar(manifest_rows$pinned_revision)),
   all(file.exists(file.path(cache, expected_files))),
   all(file.info(file.path(cache, expected_files))$size == expected_sizes),
-  file.exists(file.path(root, 'source_reviews', 'screening',
-    'noaa_blacktip_assessments_2018_2020.md')))
+  file.exists(file.path(root, 'source_reviews/shared/noaa_blacktip_assessments_2018_2020.md')))
 
 for (file in expected_files) {
   signature <- readBin(file.path(cache, file), 'raw', n = 5L)

@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'ICES:her.27.20-24'
 i <- which(x$candidate_id == id)
@@ -50,7 +50,7 @@ x$decision_reason[i] <- paste0(
   'observation ages to resolve the differing survey plus groups; this is recorded separately.'
 )
 x$notes[i] <- paste0(
-  'See source_reviews/ices_herring_western_baltic_2026.md. The official ' ,
+  'See source_reviews/ices_herring_western_baltic.md. The official ' ,
   'population model is ages 0-8+, whereas the documented uses ages 0-5+; ' ,
   'preserve that as a translation approximation, not a source-data change.'
 )

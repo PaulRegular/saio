@@ -1,7 +1,7 @@
 candidate_id <- "NOAA:11082"
 stock_id <- "iphc_pacific_halibut"
 
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

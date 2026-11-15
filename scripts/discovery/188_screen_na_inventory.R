@@ -1,6 +1,6 @@
 # Reviewed exact-name/area matches and unambiguous non-finfish exclusions.
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 candidates <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE, na.strings = 'NA')
 map <- data.frame(candidate_id = c(

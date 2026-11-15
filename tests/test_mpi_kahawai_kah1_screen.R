@@ -1,6 +1,6 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 kah <- candidate[candidate$candidate_id == "MPI:KAH1", , drop = FALSE]
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,

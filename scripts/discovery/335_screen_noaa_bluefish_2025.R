@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'pomatomus_saltatrix/noaa_bluefish_atlantic_2025')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 
 base_url <- paste0(
   'https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?',

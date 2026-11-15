@@ -499,7 +499,7 @@ replace_discovery_row <- function(path, row_index, row, key_column, key) {
   }
 }
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- utils::read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 candidate_row <- which(candidates$candidate_id == candidate_id)
 if (length(candidate_row) != 1L) stop("Expected one Irish Sea herring candidate row.", call. = FALSE)

@@ -24,7 +24,7 @@ assessment <- read_matching_rows("database/assessments.csv", assessment_id)
 assumptions <- read_matching_rows("database/assumptions.csv", assessment_id)
 inputs <- read_matching_rows("database/inputs.csv", assessment_id)
 outputs <- read_matching_rows("database/outputs.csv", assessment_id)
-candidate <- read_matching_rows("discovery/candidates.csv", candidate_id)
+candidate <- read_matching_rows("database/candidates.csv", candidate_id)
 units <- candidate_units()
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
 manifest <- read.csv("provenance/mpi_snapper_sna1_2023/sources.csv",

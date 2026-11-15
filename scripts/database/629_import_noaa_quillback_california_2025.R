@@ -284,7 +284,7 @@ input_key_cols <- c("assessment_id", "type", "measure", "basis", "fleet", "surve
 output_key_cols <- c("assessment_id", "type", "measure", "fleet", "survey", "sex", "region", "season", "year", "age", "age_group", "scenario")
 if (anyDuplicated(key(inputs_new, input_key_cols)) || anyDuplicated(key(outputs_new, output_key_cols))) stop("New records contain duplicate canonical keys.", call. = FALSE)
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidate <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 ci <- match(candidate_id, candidate$candidate_id)
 if (is.na(ci) || candidate$screening_status[ci] != "screened" || candidate$eligibility[ci] != "eligible" ||
@@ -295,7 +295,7 @@ candidate$import_status[ci] <- "partial"
 candidate$notes[ci] <- paste("Official 2025 California Quillback assessment imported from its native Stock Synthesis archive and detailed report.",
   "Inputs preserve catch biomass, relative CPUE, length frequencies, conditional age-at-length frequencies, and fixed M.",
   "Outputs include age-specific surfaces through 2024 and aggregate spawning-output/recruitment uncertainty through the 2025 forecast.",
-  "See source_reviews/noaa_quillback_california_2025.md for coverage and limits.")
+  "See source_reviews/noaa_quillback_rockfish_california.md for coverage and limits.")
 
 existing_rows <- function(path) {
   rg <- Sys.which("rg")

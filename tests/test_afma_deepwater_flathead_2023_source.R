@@ -72,7 +72,7 @@ stopifnot(
   all(is.na(o$upr))
 )
 
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE)
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE)
 candidate <- candidate[candidate$candidate_id == "AFMA:SESSF_GABTF_Deepwater_Flathead", ]
 stopifnot(
   nrow(candidate) == 1L,

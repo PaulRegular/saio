@@ -28,7 +28,7 @@ outputs <- read_assessment(file.path(root, "database/outputs.csv"), assessment_i
 assumptions <- read.csv(file.path(root, "database/assumptions.csv"), stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
-candidate <- read.csv(file.path(root, "discovery/candidates.csv"), stringsAsFactors = FALSE,
+candidate <- read.csv(file.path(root, "database/candidates.csv"), stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
 candidate <- candidate[candidate$candidate_id == "NOAA:11688", , drop = FALSE]
 

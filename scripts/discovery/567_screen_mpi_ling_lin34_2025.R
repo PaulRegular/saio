@@ -1,5 +1,5 @@
 root <- "."
-register_path <- file.path(root, "discovery", "candidates.csv")
+register_path <- file.path(root, "database/candidates.csv")
 
 candidate_id <- "MPI:LIN34"
 candidate_unit_id <- "nz_ling_lin34"

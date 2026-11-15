@@ -15,7 +15,7 @@ outputs <- read_source_table("database/outputs.csv")
 outputs <- outputs[outputs$assessment_id == assessment_id, , drop = FALSE]
 assumptions <- read_source_table("database/assumptions.csv")
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
-candidate <- read_source_table("discovery/candidates.csv")
+candidate <- read_source_table("database/candidates.csv")
 candidate <- candidate[candidate$candidate_id == "INIDEP:MERLUCCIUS_HUBBSI_SUR41", , drop = FALSE]
 
 catch_age <- inputs[inputs$type == "catch" & inputs$measure == "numbers_at_age", ]

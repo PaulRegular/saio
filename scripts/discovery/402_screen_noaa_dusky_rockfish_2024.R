@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_noaa_dusky_rockfish_2024')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10559'
 unit_id <- 'noaa_goa_dusky'
 source_files <- c('GOA_dusky_rockfish_SAFE_2024.pdf', 'GOA_dusky_rockfish_harvest_projection_2026.pdf')

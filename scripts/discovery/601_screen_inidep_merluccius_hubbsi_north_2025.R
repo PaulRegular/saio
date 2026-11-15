@@ -49,7 +49,7 @@ if (!all(file.exists(source_files)) ||
     call. = FALSE)
 }
 
-candidates_path <- file.path(root, "discovery/candidates.csv")
+candidates_path <- file.path(root, "database/candidates.csv")
 candidates <- read_character_csv(candidates_path)
 stocks <- read_csv(file.path(root, "database/stocks.csv"))
 assessments <- read_csv(file.path(root, "database/assessments.csv"))

@@ -1,11 +1,10 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE)
 
 unit_id <- 'pacific_sardine_northern_subpopulation'
-source_review <- file.path(root, 'source_reviews', 'screening',
-  'pacific_sardine_northern_subpopulation_2025.md')
+source_review <- file.path(root, 'source_reviews/shared/noaa_dfo_pacific_sardine_northern_subpopulation_2025.md')
 noaa_i <- match('NOAA:10573', x$candidate_id)
 dfo_i <- which(x$organization == 'DFO' & grepl('^DFO:Pacific:Sardine', x$candidate_id))
 if (is.na(noaa_i) || length(dfo_i) != 1L) {

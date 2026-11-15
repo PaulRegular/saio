@@ -69,7 +69,7 @@ replace_row <- function(path, key, value, replacement) {
 
 stock_table <- read_table("database/stocks.csv")
 assessment_table <- read_table("database/assessments.csv")
-candidates <- read_table("discovery/candidates.csv")
+candidates <- read_table("database/candidates.csv")
 candidate_rows <- which(candidates$candidate_id == candidate_id)
 stopifnot(
   !stock_id %in% stock_table$stock_id,
@@ -391,7 +391,7 @@ candidates$notes[candidate_rows] <- paste(
   "The 2026 report is the current source record; 2024 and 2025 survey rows are contextual only.",
   "See source_reviews/afma_himi_mackerel_icefish.md."
 )
-replace_row("discovery/candidates.csv", "candidate_id", candidate_id,
+replace_row("database/candidates.csv", "candidate_id", candidate_id,
   candidates[candidate_rows, , drop = FALSE])
 
 

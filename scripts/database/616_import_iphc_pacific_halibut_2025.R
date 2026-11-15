@@ -556,7 +556,7 @@ if (!write_mode) {
         stream_has_id, logical(1L), id = assessment_id))) {
     stop("IPHC Pacific halibut rows already exist in the canonical database.", call. = FALSE)
   }
-  candidates <- read_csv("discovery/candidates.csv")
+  candidates <- read_csv("database/candidates.csv")
   candidate_rows <- match(candidate_ids, candidates$candidate_id)
   registered_ids <- candidates$candidate_id[candidates$candidate_unit_id %in% stock_id]
   if (anyNA(candidate_rows) || anyDuplicated(registered_ids) ||
@@ -581,7 +581,7 @@ if (!write_mode) {
   append_csv("database/inputs.csv", input_rows)
   append_csv("database/outputs.csv", output_rows)
 
-  candidates <- read_csv("discovery/candidates.csv")
+  candidates <- read_csv("database/candidates.csv")
   for (candidate_row in candidate_rows) {
     candidate <- candidates[candidate_row, , drop = FALSE]
     candidate$matched_stock_id <- stock_id
@@ -619,7 +619,7 @@ if (!write_mode) {
       "NOAA:11082 and DFO:Pacific:Pacific Halibut map to one IPHC Convention Area",
       "assessment stock. Imported public time series are partial and do not replace",
       "the exact permission-restricted native assessment files. See the source review.")
-    register_env$replace_candidate_register_row("discovery/candidates.csv",
+    register_env$replace_candidate_register_row("database/candidates.csv",
       candidate_row, candidate, candidate$candidate_id)
   }
 

@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 
 urls <- paste(
@@ -8,7 +8,7 @@ urls <- paste(
   'https://www-ops2.pac.dfo-mpo.gc.ca/fns-sap/index-eng.cfm?DOC_ID=371699&ID=all&pg=view_notice;',
   'https://www.pac.dfo-mpo.gc.ca/fm-gp/fraser/albion-eng.html'
 )
-review <- 'See source_reviews/screening/dfo_fraser_chum_2026.md.'
+review <- 'See source_reviews/shared/dfo_fraser_chum_2026.md.'
 
 fraser_id <- 'DFO:Pacific:Fraser Chum Salmon'
 fraser_i <- match(fraser_id, x$candidate_id)

@@ -19,7 +19,7 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]

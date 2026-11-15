@@ -5,14 +5,14 @@ read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
 
 candidate_id <- "AFMA:SESSF_GUMMY_SHARK_2023"
 candidate_unit_id <- "afma_gummy_shark_sessf"
-candidate <- read_table("discovery/candidates.csv")
+candidate <- read_table("database/candidates.csv")
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
 units <- candidate_units()
 unit <- units[units$unit_key == "stock:afma_gummy_shark_sessf", , drop = FALSE]
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
 manifest <- read_table("provenance/afma_gummy_shark_2023/sources.csv")
-review <- paste(readLines("source_reviews/screening/afma_gummy_shark_2023.md",
+review <- paste(readLines("source_reviews/afma_gummy_shark_2023.md",
   warn = FALSE, encoding = "UTF-8"), collapse = "\n")
 
 stopifnot(

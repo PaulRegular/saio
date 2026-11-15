@@ -482,7 +482,7 @@ if (write_mode) {
   if (nrow(stock) != 1L || nrow(assessment) != 1L) {
     stop("Expected exactly one stock row and one assessment row.", call. = FALSE)
   }
-  candidates_path <- "discovery/candidates.csv"
+  candidates_path <- "database/candidates.csv"
   candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), colClasses = "character", check.names = FALSE)
   ci <- which(candidates$candidate_id == candidate_id)

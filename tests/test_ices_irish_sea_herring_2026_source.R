@@ -125,10 +125,10 @@ stocks <- utils::read.csv(file.path(database, "stocks.csv"), stringsAsFactors = 
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- utils::read.csv(file.path(database, "assessments.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-candidates <- utils::read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE,
+candidates <- utils::read.csv(file.path(root, "database/candidates.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- candidate_units()
-review <- paste(readLines(file.path(root, "source_reviews", "screening", "ices_irish_sea_herring_2026.md"),
+review <- paste(readLines(file.path(root, "source_reviews/ices_her_27_nirs.md"),
   warn = FALSE), collapse = "\n")
 stopifnot(
   sum(stocks$stock_id == stock_id, na.rm = TRUE) == 1L,

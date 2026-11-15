@@ -3,7 +3,7 @@ source("scripts/database/source_manifest_io.R", local = TRUE)
 candidate_id <- "IFOP:merluza_comun_UP"
 candidate_unit_id <- "ifop_merluza_comun_up"
 review_date <- "2026-11-09"
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 manifest_path <- "provenance/ifop_merluza_comun_2026/sources.csv"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 

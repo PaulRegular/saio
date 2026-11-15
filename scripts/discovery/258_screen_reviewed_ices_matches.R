@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 
 reviews <- list(
@@ -26,7 +26,7 @@ reviews <- list(
     output = 'The official result is an acoustic biomass index and harvest-rate advice. No fitted population N-at-age, F-at-age, recruitment, or SSB surface is produced.',
     urls = 'https://doi.org/10.17895/ices.pub.32614524.v2; https://sag.ices.dk/SAG_API/StockXmlDownload/23750; https://asd.ices.dk/viewAdvice/7195',
     reason = 'The latest official 2026 assessment is a category-3.2 biomass-index harvest rule, not an age-structured population assessment. Supporting age tables do not change the official model structure.',
-    notes = 'Current unit is distinct from the southern 9.a anchovy stock and historical combined catalogue row. See source_reviews/ices_anchovy_west_iberia_2026.md.'
+    notes = 'Current unit is distinct from the southern 9.a anchovy stock and historical combined catalogue row. See source_reviews/ices_anchovy_west_iberia.md.'
   ),
   'ICES:cod.27.1-2.coastN' = list(
     stock = 'ices_cod_northern_coastal', eligibility = 'eligible',
@@ -39,7 +39,7 @@ reviews <- list(
     output = 'AFWG tables provide age-specific N-at-age and F-at-age for 1994-2025 and aggregate recruitment, SSB, Fbar and total biomass; key aggregate outputs include reported uncertainty.',
     urls = 'https://doi.org/10.17895/ices.pub.32134696.v1; https://doi.org/10.17895/ices.pub.7920; https://standardgraphs.ices.dk/ViewCharts.aspx?key=22637',
     reason = 'The latest official 2026 SAM assessment provides numerical age-based catch and survey information, biological inputs, mortality assumptions, survey timing and comparable age-specific and aggregate outputs. The exact fitted object is unavailable, but detailed report inputs and outputs support source curation.',
-    notes = 'Matched to the split northern coastal cod unit; do not pool it with the southern component or the historical composite catalogue record. See source_reviews/ices_cod_northern_coastal_2026.md.'
+    notes = 'Matched to the split northern coastal cod unit; do not pool it with the southern component or the historical composite catalogue record. See source_reviews/ices_cod_northern_coastal.md.'
   ),
   'ICES:cod.27.2.coastS' = list(
     stock = 'ices_cod_southern_coastal', eligibility = 'ineligible',
@@ -52,7 +52,7 @@ reviews <- list(
     output = 'The official assessment reports B/Bmsy and F/Fmsy, not absolute SSB, instantaneous F, recruitment or population numbers-at-age.',
     urls = 'https://doi.org/10.17895/ices.pub.32134696.v1; https://asd.ices.dk/viewAdvice/7204; https://sag.ices.dk/SAG_API/StockXmlDownload/23775; https://doi.org/10.17895/ices.pub.24998858',
     reason = 'The latest official 2026 production assessment is SPiCT. Age tables are supporting information rather than likelihood inputs, and the model does not produce age-structured population outputs.',
-    notes = 'Keep distinct from northern coastal cod and the historical composite coastal-cod catalogue record. See source_reviews/ices_cod_southern_coastal_2026.md.'
+    notes = 'Keep distinct from northern coastal cod and the historical composite coastal-cod catalogue record. See source_reviews/ices_cod_southern_coastal.md.'
   ),
   'ICES:cod.27.22-24' = list(
     stock = 'ck_ices_wgbfas_morhua_bs', eligibility = 'eligible',
@@ -91,7 +91,7 @@ reviews <- list(
     output = 'ICES SAG key 22377 reports age-0 recruitment, SSB and Fbar (ages 3-7) through 2025 with central 90% intervals. No fitted N-at-age, F-at-age or estimated M-at-age surfaces were recovered.',
     urls = 'https://literatur.thuenen.de/digbib_extern/dn071152.pdf; https://sg.ices.dk/ViewSourceData.aspx?key=22377; https://sag.ices.dk/SAG_API/StockXmlDownload/22377; https://doi.org/10.17895/ices.pub.5989; https://jukuri.luke.fi/bitstreams/adfbdc03-5e3b-45f2-8492-ec5bf7085724/download',
     reason = 'The latest official age-based SS3 model has recoverable catch age, acoustic age abundance, biology, a documented fixed-M proxy and comparable aggregate outputs. Catch weights proxy for unrecovered stock weights and exact survey timing is approximated; these limitations are explicit in the source review.',
-    notes = 'The current stock combines subdivisions 30 and 31. Older catalogue rows for each subdivision are not separate current assessments. See source_reviews/ices_herring_gulf_bothnia_2026.md.'
+    notes = 'The current stock combines subdivisions 30 and 31. Older catalogue rows for each subdivision are not separate current assessments. See source_reviews/ices_herring_gulf_bothnia.md.'
   ),
   'ICES:her.27.6aN' = list(
     stock = 'ck_ices_hawg_harengus_cs_6a_n', eligibility = 'ineligible',
@@ -143,7 +143,7 @@ reviews <- list(
     output = 'WGBFAS tables provide 2002-2025 recruitment, SSB, Fbar and N/F-at-age; aggregate measures include reported 95% limits, and the native SAM fit is available.',
     urls = 'https://literatur.thuenen.de/digbib_extern/dn071152.pdf; https://literatur.thuenen.de/digbib_extern/dn069680.pdf; https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22470; https://stockassessment.org/datadisk/stockassessment/userdirs/user3/ple.27.21.32_WGBFAS_2026_SA/',
     reason = 'The current combined 2026 SAM unit has run-matched native age-based observations, biological inputs, fixed mortality, sampling times and fitted age-specific/aggregate outputs. Report-versus-object point-estimate differences are documented but do not prevent source curation.',
-    notes = 'The current combined subdivisions 21-32 assessment replaces the two older component units for this review; preserve those as historical records. See source_reviews/ices_plaice_baltic_21_32_2026.md.'
+    notes = 'The current combined subdivisions 21-32 assessment replaces the two older component units for this review; preserve those as historical records. See source_reviews/ices_plaice_baltic_21_32.md.'
   ),
   'ICES:pok.27.1-2' = list(
     stock = 'ck_ices_afwg_virens_nea_1_2', eligibility = 'eligible',

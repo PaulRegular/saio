@@ -20,7 +20,7 @@ assessment <- read_id_rows("database/assessments.csv", assessment_id)
 inputs <- read_id_rows("database/inputs.csv", assessment_id)
 assumptions <- read_id_rows("database/assumptions.csv", assessment_id)
 outputs <- read_id_rows("database/outputs.csv", assessment_id)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == "MPI:SKI3+SKI7", , drop = FALSE]
 manifest <- read.csv("provenance/mpi_gemfish_ski3_ski7_2025/sources.csv",

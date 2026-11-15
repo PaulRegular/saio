@@ -3,7 +3,7 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 source("tests/helper_inventory.R")
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-register <- read_table("discovery/candidates.csv")
+register <- read_table("database/candidates.csv")
 stocks <- read_table("database/stocks.csv")
 progress <- candidate_progress()
 units <- candidate_units()

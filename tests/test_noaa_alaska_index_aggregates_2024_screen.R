@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 ids <- paste0('NOAA:', c(10973, 10974, 11405, 11448, 11803, 11804))
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
@@ -23,7 +23,7 @@ stopifnot(nrow(rows) == 6L, !anyNA(rows$candidate_id),
   grepl('no new Tier 4/5 model', rows$decision_reason[rows$candidate_id == 'NOAA:11804'], fixed = TRUE),
   grepl('2024 operational update', rows$decision_reason[rows$candidate_id == 'NOAA:10973'], fixed = TRUE),
   grepl('latest listed full-acceptance record is assessment 11254', rows$decision_reason[rows$candidate_id == 'NOAA:10973'], fixed = TRUE),
-  file.exists(file.path(root, 'source_reviews', 'screening', 'noaa_alaska_index_aggregates_2024.md')),
+  file.exists(file.path(root, 'source_reviews/shared/noaa_alaska_index_aggregates_2024.md')),
   all(is.na(rows$matched_stock_id)))
 
 units <- candidate_units()

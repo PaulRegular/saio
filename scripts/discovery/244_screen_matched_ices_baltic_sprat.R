@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'ICES:spr.27.22-32'
 i <- which(x$candidate_id == id)

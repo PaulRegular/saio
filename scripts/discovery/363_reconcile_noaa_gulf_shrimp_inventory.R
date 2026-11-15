@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'shared/noaa_stocksmart')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 cache_file <- 'stock_assessment_summary.rda'
 cache_path <- file.path(cache, cache_file)
 expected_url <- paste0('https://raw.githubusercontent.com/NOAA-EDAB/stocksmart/',

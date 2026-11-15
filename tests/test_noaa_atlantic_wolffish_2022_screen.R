@@ -4,11 +4,10 @@ root <- "."
 source(file.path(root, 'scripts', 'discovery',
   '500_screen_noaa_atlantic_wolffish_2022.R'))
 
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:11562', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_atlantic_wolffish_us.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_atlantic_wolffish_us.md'), warn = FALSE), collapse = ' ')
 cache <- file.path(root, 'source_cache', 'discovery_noaa_atlantic_wolffish_2022')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)

@@ -95,13 +95,13 @@ candidate <- data.frame(
     "ORH 3B is the official management unit. This assessment covers the East &",
     "South and Northwest Chatham Rise components; retain them as regions rather",
     "than counting them as separate stock units. See",
-    "source_reviews/mpi_orh3b_chatham_rise_2025.md."
+    "source_reviews/mpi_orh3b_chatham_rise.md."
   ),
   stringsAsFactors = FALSE,
   check.names = FALSE
 )
 
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 if (candidate_id %in% candidates$candidate_id ||

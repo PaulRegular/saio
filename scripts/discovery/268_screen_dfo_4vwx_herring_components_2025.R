@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 
 detailed_source_url <- paste(
@@ -119,7 +119,7 @@ for (id in names(component_reviews)) {
       'age-specific outputs were not verified. Keep eligibility unresolved.'
     ),
     notes = paste(component$notes,
-      'See source_reviews/screening/dfo_4vwx_herring_component_crosswalk_2025.md',
+      'See source_reviews/shared/dfo_4vwx_herring_component_crosswalk_2025.md',
       'and source_reviews/ck_dfo_mar_harengus_4vwx.md. Sources are already cached',
       'with checksums under source_cache/clupea_harengus/ck_dfo_mar_harengus_4vwx/.'
     )
@@ -182,7 +182,7 @@ juvenile_review <- list(
   ),
   notes = paste(
     '2025 Science Response 2025/026 reports 2,328 t of 2024 landings and states',
-    'the fishery is not indicative of abundance. See source_reviews/screening/',
+    'the fishery is not indicative of abundance. See source_reviews/',
     'dfo_4vwx_herring_component_crosswalk_2025.md and source_reviews/',
     'ck_dfo_mar_harengus_4vwx.md. Source PDFs and checksums are cached under',
     'source_cache/clupea_harengus/ck_dfo_mar_harengus_4vwx/.'

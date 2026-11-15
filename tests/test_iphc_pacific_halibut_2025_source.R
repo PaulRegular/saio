@@ -49,7 +49,7 @@ recruitment <- outputs[outputs$measure == "recruitment" & outputs$age == "0", , 
 age8_biomass <- outputs[outputs$measure == "biomass_by_age_group" &
   outputs$age_group == "8+", , drop = FALSE]
 
-candidate_rows <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate_rows <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidates <- candidate_rows[!is.na(candidate_rows$candidate_unit_id) &
   candidate_rows$candidate_unit_id == stock_id, , drop = FALSE]

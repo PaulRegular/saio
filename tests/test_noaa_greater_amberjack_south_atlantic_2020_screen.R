@@ -6,7 +6,7 @@ source(file.path(root,
   'scripts/discovery/449_screen_noaa_greater_amberjack_south_atlantic_2020.R'), local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:10208', , drop = FALSE]
 gulf <- register[register$candidate_id == 'NOAA:10207', , drop = FALSE]
@@ -21,7 +21,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/noaa_greater_amberjack_south_atlantic_2020.md'), warn = FALSE),
+  'source_reviews/noaa_greater_amberjack_south_atlantic.md'), warn = FALSE),
   collapse = '\n')
 
 stopifnot(

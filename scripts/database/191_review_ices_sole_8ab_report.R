@@ -1,6 +1,6 @@
 # Record 2026 WGBIE tables and unresolved input-definition discrepancies.
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 i <- which(x$candidate_id == 'ICES:sol.27.8ab')
 if (length(i) != 1L || x$screening_status[i] != 'in_progress' || x$eligibility[i] != 'unresolved') stop('Preserve the existing review; candidate state has changed.', call. = FALSE)

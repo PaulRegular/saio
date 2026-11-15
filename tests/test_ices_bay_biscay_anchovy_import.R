@@ -25,7 +25,7 @@ stock <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 inputs <- read_assessment(file.path(root, "database/inputs.csv"), assessment_id)
 outputs <- read_assessment(file.path(root, "database/outputs.csv"), assessment_id)
-candidate_register <- read.csv(file.path(root, "discovery/candidates.csv"),
+candidate_register <- read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 source_review <- paste(readLines(file.path(root,
   "source_reviews/ices_bay_biscay_anchovy_8.md")), collapse = "\n")

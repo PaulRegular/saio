@@ -1,8 +1,7 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'noaa_scamp_sedar68oa')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
-review_path <- file.path(root, 'source_reviews', 'screening',
-  'noaa_scamp_sedar68oa_2022.md')
+candidate_path <- file.path(root, 'database/candidates.csv')
+review_path <- file.path(root, 'source_reviews/noaa_scamp_sedar68oa_2022.md')
 manifest_path <- file.path(cache, 'manifest.csv')
 
 files <- c(

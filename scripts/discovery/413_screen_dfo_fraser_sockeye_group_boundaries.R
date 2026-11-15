@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 
 candidate_ids <- c(
@@ -16,7 +16,7 @@ source_urls <- paste(
   'https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41294622.pdf;',
   'https://publications.gc.ca/collections/collection_2026/mpo-dfo/Fs141-9-2026-eng.pdf'
 )
-review <- 'See source_reviews/screening/dfo_fraser_sockeye_other_groups.md.'
+review <- 'See source_reviews/shared/dfo_fraser_sockeye_other_groups.md.'
 
 for (i in rows) {
   if (x$screening_status[i] == 'not_started') {

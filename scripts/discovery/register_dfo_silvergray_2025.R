@@ -97,7 +97,7 @@ read_table <- function(path) {
     na.strings = c("", "NA"), check.names = FALSE)
 }
 
-register <- read_table("discovery/candidates.csv")
+register <- read_table("database/candidates.csv")
 stocks <- read_table("database/stocks.csv")
 stopifnot(
   identical(names(candidate), names(register)),
@@ -112,7 +112,7 @@ stopifnot(
 if ("--write" %in% commandArgs(trailingOnly = TRUE)) {
   manifest_path <- "provenance/dfo_silvergray_rockfish_coastwide/sources.csv"
   dir.create(dirname(manifest_path), recursive = TRUE, showWarnings = FALSE)
-  write.table(candidate, "discovery/candidates.csv", sep = ",", row.names = FALSE,
+  write.table(candidate, "database/candidates.csv", sep = ",", row.names = FALSE,
     col.names = FALSE, append = TRUE, quote = TRUE, qmethod = "double", na = "")
   write_source_manifest(manifest, manifest_path,
     row.names = FALSE, na = "")

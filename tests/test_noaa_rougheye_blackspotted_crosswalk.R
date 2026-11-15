@@ -2,7 +2,7 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 source('scripts/discovery/485_reconcile_noaa_rougheye_blackspotted_units.R')
 
-register <- read.csv('discovery/candidates.csv',
+register <- read.csv('database/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 lookup <- function(id) register[register$candidate_id == id, , drop = FALSE]
 
@@ -46,7 +46,7 @@ stopifnot(
     logical(1))),
   nrow(bsai_unit) == 1L, bsai_unit$inventory_entries == 3L,
   grepl('NOAA:15395', bsai_unit$candidate_ids, fixed = TRUE),
-  file.exists('source_reviews/screening/noaa_rougheye_blackspotted_crosswalk.md')
+  file.exists('source_reviews/shared/noaa_rougheye_blackspotted_crosswalk.md')
 )
 
 cat('NOAA rougheye/blackspotted regional unit crosswalk checks passed.\n')

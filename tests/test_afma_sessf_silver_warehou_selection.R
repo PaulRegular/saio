@@ -2,7 +2,7 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 source("tests/helper_inventory.R")
 
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 progress <- candidate_progress()
 units <- candidate_units()

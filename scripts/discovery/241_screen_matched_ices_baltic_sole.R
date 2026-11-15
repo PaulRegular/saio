@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'ICES:sol.27.20-24'
 i <- which(x$candidate_id == id)
@@ -51,7 +51,7 @@ x$decision_reason[i] <- paste0(
   'and must be treated as translation approximations.'
 )
 x$notes[i] <- paste0(
-  'See source_reviews/ices_sole_20_24_2026.md. The 2026 run is ' ,
+  'See source_reviews/ck_ices_wgbfas_solea_ns_iiia_22_24.md. The 2026 run is ' ,
   'the latest detailed assessment; retain the 2025 run as a separate historical record.'
 )
 

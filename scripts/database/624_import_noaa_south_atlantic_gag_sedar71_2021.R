@@ -517,7 +517,7 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
   inputs_status = "partial", outputs_status = "partial",
   notes = "Latest completed detailed assessment located for NOAA unit 10349; data through 2019. Tables 6-8 include selected first-year projection values for 2020. Fishery age-composition proportions and annual population uncertainty remain unavailable as numeric tables. WP04 chevron count and percentage tables disagree in 8 shared age-year cells and are retained separately as published.")
 
-candidate_path <- file.path("discovery", "candidates.csv")
+candidate_path <- file.path("database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv(file.path("database", "stocks.csv"), stringsAsFactors = FALSE,

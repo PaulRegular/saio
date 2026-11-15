@@ -1,5 +1,5 @@
 # Screen the North Sea witch assessment against its 2026 report and code.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 i <- which(x$candidate_id == 'ICES:wit.27.3a47d')
 if (length(i) != 1L || x$match_status[i] != 'unreviewed' || x$screening_status[i] != 'not_started') stop('Preserve the existing review; candidate state has changed.', call. = FALSE)

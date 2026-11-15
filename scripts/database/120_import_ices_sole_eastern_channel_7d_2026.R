@@ -552,7 +552,7 @@ assessment_row <- data.frame(
     "Table 17.19 SSB-at-age values for 2021-2025 do not sum to Table 17.16 annual SSB and appear misaligned; the raw table is preserved and output completeness is partial.",
     "The pinned public TAF repository contains processing/configuration code but does not track bootstrap input data or the fitted SAM object.",
     "The three commercial fishable-stock-biomass indices are preserved as aggregate source inputs.",
-    "See source_reviews/ices_sole_eastern_channel_7d_2026.md."
+    "See source_reviews/ck_ices_wgnssk_solea_ns_7d.md."
   ),
   stringsAsFactors = FALSE
 )

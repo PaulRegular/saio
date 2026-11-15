@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 id <- 'DFO:Pacific:Chinook Salmon - North Coast'
 i <- match(id, x$candidate_id)
@@ -76,7 +76,7 @@ x$decision_reason[i] <- paste(
 x$notes[i] <- paste(
   'Do not use this row as a North Coast-wide stock or merge Skeena-Nass and',
   'Central Coast Chinook. No canonical stock or assessment records were added.',
-  'See source_reviews/screening/dfo_north_coast_chinook_inventory.md.'
+  'See source_reviews/dfo_pacific_chinook_salmon_north_coast.md.'
 )
 
 source(file.path(root, 'scripts', 'discovery', 'candidate_register_io.R'))

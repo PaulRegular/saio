@@ -105,7 +105,7 @@ candidate <- data.frame(
   stringsAsFactors = FALSE
 )
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv(file.path(root, "database", "stocks.csv"), stringsAsFactors = FALSE,
@@ -124,7 +124,7 @@ if (any(stocks$authority_stock_id == "BCO 5", na.rm = TRUE)) {
   stop("BCO 5 already exists in the canonical stock table; reconcile before adding.", call. = FALSE)
 }
 if (!identical(names(candidate), names(candidates))) {
-  stop("Candidate columns do not match discovery/candidates.csv.", call. = FALSE)
+  stop("Candidate columns do not match database/candidates.csv.", call. = FALSE)
 }
 
 selection <- data.frame(

@@ -3,7 +3,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/365_screen_ices_wgnssk_n_age_methods.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- c('ICES:gug.27.3a47d', 'ICES:bll.27.3a47de', 'ICES:fle.27.420')
 unit_ids <- c('ices_grey_gurnard_3a47d', 'ices_brill_3a47de', 'ices_flounder_420')
@@ -33,7 +33,7 @@ stopifnot(
   !any(rows$candidate_unit_id %in% assessments$assessment_id),
   !any(rows$candidate_unit_id %in% inputs$assessment_id),
   !any(rows$candidate_unit_id %in% outputs$assessment_id),
-  file.exists(file.path(root, 'source_reviews/screening/ices_wgnssk_n_age_methods_2026.md'))
+  file.exists(file.path(root, 'source_reviews/shared/ices_wgnssk_n_age_methods_2026.md'))
 )
 
 cat('ICES WGNSSK non-age method screening checks passed.\n')

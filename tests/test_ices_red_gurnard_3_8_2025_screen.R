@@ -5,7 +5,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/368_screen_ices_red_gurnard_2025.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -40,7 +40,7 @@ stopifnot(
   !any(assessments$stock_id == 'ices_red_gurnard_3_8'),
   !any(inputs$assessment_id == 'ices_red_gurnard_3_8'),
   !any(outputs$assessment_id == 'ices_red_gurnard_3_8'),
-  file.exists(file.path(root, 'source_reviews/screening/ices_red_gurnard_3_8_2025.md'))
+  file.exists(file.path(root, 'source_reviews/ices_red_gurnard_3_8.md'))
 )
 
 cat('ICES red gurnard 3-8 2025 current-method and age-input screen checks passed.\n')

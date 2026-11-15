@@ -1,5 +1,5 @@
 # Screen the current NOAA Pacific Coast Sablefish assessment.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('NOAA:10466', x$candidate_id)
 if (is.na(i)) stop('Expected NOAA Sablefish row is missing.', call. = FALSE)

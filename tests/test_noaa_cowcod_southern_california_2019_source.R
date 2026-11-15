@@ -71,7 +71,7 @@ stopifnot(nrow(M_parameter) == 1L, M_parameter$value == 0.088, M_parameter$se ==
 
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
 stock <- stocks[stocks$stock_id == "noaa_cowcod_southern_california", ]
 assessment <- assessments[assessments$assessment_id == assessment_id, ]
 candidate <- candidates[candidates$candidate_id == "NOAA:10443", ]

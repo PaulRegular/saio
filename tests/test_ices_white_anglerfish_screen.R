@@ -4,7 +4,7 @@ source(file.path(root,
   'scripts/discovery/350_screen_ices_white_anglerfish_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -45,7 +45,7 @@ for (suffix in c('78abd', '8c9a')) {
     !any(assessments$assessment_id == unit),
     !any(inputs$assessment_id == unit),
     !any(outputs$assessment_id == unit),
-    file.exists(file.path(root, 'source_reviews', 'screening',
+    file.exists(file.path(root, 'source_reviews',
       paste0('ices_white_anglerfish_', suffix, '_2026.md')))
   )
 }

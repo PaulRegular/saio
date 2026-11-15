@@ -333,7 +333,7 @@ if (stock_row_count == 0L && assessment_row_count == 0L) {
   replace_discovery_row(file.path(database, "stocks.csv"), stock_row, stock, "stock_id", stock_id)
 }
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- utils::read.csv(
   candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE
 )

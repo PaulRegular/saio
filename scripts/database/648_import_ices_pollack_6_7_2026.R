@@ -1,7 +1,7 @@
 root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "ices_pollack_67_2026")
-register_path <- file.path(root, "discovery", "candidates.csv")
+register_path <- file.path(root, "database/candidates.csv")
 manifest_path <- file.path(root, "provenance", "ices_pollack_67_2026", "sources.csv")
 
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
@@ -336,7 +336,7 @@ stock$ocean <- "Northeast Atlantic"
 stock$notes <- paste(
   "Current ICES unit pol.27.67. The 2026 WGCSE assessment for 2027 advice",
   "uses an age-structured SS3 model. The recovered numerical records are",
-  "partial; see source_reviews/ices_pollack_67_2026.md."
+  "partial; see source_reviews/ices_pol_27_67.md."
 )
 
 assessments_table <- read.csv(file.path(database, "assessments.csv"), stringsAsFactors = FALSE,
@@ -389,7 +389,7 @@ register$output_evidence[candidate_row] <- "ICES SAG key 23709 provides age-0 re
 register$import_status[candidate_row] <- "partial"
 register$notes[candidate_row] <- paste(
   "Imported the official 2026 aggregate landings and output series, 2026 forecast values, 2027 advice, and Stock Annex biological inputs as benchmark-reported values.",
-  "The exact current SS3 configuration and numerical age-composition, survey-index, and LPUE series remain unavailable; see source_reviews/ices_pollack_67_2026.md."
+  "The exact current SS3 configuration and numerical age-composition, survey-index, and LPUE series remain unavailable; see source_reviews/ices_pol_27_67.md."
 )
 
 source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))

@@ -21,7 +21,7 @@ assessments <- read_table('assessments')
 assumptions <- read_table('assumptions', 'noaa_goa_pop_2023')
 inputs <- read_table('inputs', 'noaa_goa_pop_2023')
 outputs <- read_table('outputs', 'noaa_goa_pop_2023')
-candidate <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+candidate <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 
 assessment_id <- 'noaa_goa_pop_2023'
@@ -50,8 +50,7 @@ mcmc <- output[!is.na(output$scenario) &
   output$scenario == 'MCMC posterior median; Table 9.8', , drop = FALSE]
 
 candidate_row <- candidate[candidate$candidate_id == 'NOAA:11056', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_goa_pacific_ocean_perch.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/afsc_goa_pacific_ocean_perch.md'), warn = FALSE), collapse = ' ')
 
 stopifnot(
   nrow(stock) == 1L,

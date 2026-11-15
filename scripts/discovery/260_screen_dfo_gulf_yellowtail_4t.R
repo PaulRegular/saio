@@ -1,12 +1,11 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 
 id <- 'DFO:Gulf:Yellowtail Flounder - NAFO 4T'
-source_review <- file.path(root, 'source_reviews',
-  'dfo_yellowtail_flounder_4t_2025.md')
+source_review <- file.path(root, 'source_reviews/dfo_yellowtail_flounder_4t.md')
 
 if (any(stocks$scientific_name %in% c('Myzopsetta ferruginea', 'Limanda ferruginea') &
     grepl('4T', stocks$area, fixed = TRUE), na.rm = TRUE)) {

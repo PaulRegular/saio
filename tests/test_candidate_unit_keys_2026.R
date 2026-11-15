@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 units <- candidate_units()
 progress <- candidate_progress()
@@ -58,6 +58,5 @@ unlinked <- register[!linked, , drop = FALSE]
 stopifnot(nrow(unlinked) == 130L,
   all(unlinked$match_status %in% c('ambiguous', 'unreviewed')),
   sum(unlinked$match_status == 'unreviewed') == 100L,
-  file.exists(file.path(root, 'source_reviews', 'screening',
-    'inventory_new_unit_keys_2026.md')))
+  file.exists(file.path(root, 'source_reviews/shared/inventory_new_unit_keys_2026.md')))
 

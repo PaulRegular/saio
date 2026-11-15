@@ -446,7 +446,7 @@ assessment <- data.frame(
   stringsAsFactors = FALSE
 )
 
-register_path <- file.path(root, "discovery", "candidates.csv")
+register_path <- file.path(root, "database/candidates.csv")
 register <- read.csv(register_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate_row <- which(register$candidate_id == candidate_id)

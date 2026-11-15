@@ -5,7 +5,7 @@ candidate_id <- 'ICES:ldb.27.8c9a'
 unit_id <- 'ices_four_spot_megrim_8c9a'
 cache <- file.path(root, 'source_cache', 'lepidorhombus_boscii/ices_four_spot_megrim_8c9a_2026')
 
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 units <- candidate_units()

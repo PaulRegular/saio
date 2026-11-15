@@ -2,7 +2,7 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
 source(file.path(root, "tests/helper_inventory.R"))
-register <- read.csv(file.path(root, "discovery/candidates.csv"),
+register <- read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 ids <- c("NOAA:14410", "NOAA:14430", "NOAA:14429")
 units_expected <- c("noaa_china_rockfish_northern_pacific_coast",
@@ -11,7 +11,7 @@ candidate <- register[match(ids, register$candidate_id), , drop = FALSE]
 units <- candidate_units()
 progress <- candidate_progress()
 unit <- units[units$matched_stock_id %in% units_expected | units$candidate_unit_id %in% units_expected, , drop = FALSE]
-review <- paste(readLines(file.path(root, "source_reviews/screening/noaa_china_rockfish_us_pacific_2015.md"),
+review <- paste(readLines(file.path(root, "source_reviews/noaa_china_rockfish_us_pacific_2015.md"),
   warn = FALSE), collapse = " ")
 stocks <- read.csv(file.path(root, "database/stocks.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)

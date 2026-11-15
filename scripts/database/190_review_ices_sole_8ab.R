@@ -1,6 +1,6 @@
 # Record the 2026 Bay of Biscay sole discovery review without importing source data.
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 i <- which(x$candidate_id == 'ICES:sol.27.8ab')
 if (length(i) != 1L) stop('Expected one ICES sole 8ab candidate.', call. = FALSE)

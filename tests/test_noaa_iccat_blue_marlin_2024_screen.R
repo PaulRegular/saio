@@ -4,7 +4,7 @@ source('scripts/discovery/462_screen_noaa_iccat_blue_marlin_2024.R')
 source('scripts/discovery/195_summarize_discovery.R')
 source('scripts/discovery/196_summarize_inventory_units.R')
 root <- "."
-candidate <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+candidate <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- candidate[candidate$candidate_id == 'NOAA:11254', , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),

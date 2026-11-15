@@ -5,7 +5,7 @@ screen <- new.env(parent = globalenv())
 source(file.path(root, 'scripts/discovery/448_screen_ices_seabass_8c9a_2025.R'), local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:bss.27.8c9a', , drop = FALSE]
 neighbor <- register[register$candidate_id == 'ICES:bss.27.8ab', , drop = FALSE]
@@ -57,7 +57,7 @@ stopifnot(
   !any(assessments$stock_id == 'ices_seabass_8c9a'),
   !any(inputs$assessment_id == 'ices_seabass_8c9a'),
   !any(outputs$assessment_id == 'ices_seabass_8c9a'),
-  file.exists(file.path(root, 'source_reviews/screening/ices_seabass_8c9a_2025.md'))
+  file.exists(file.path(root, 'source_reviews/ices_seabass_8c9a.md'))
 )
 
 cat('ICES 2025 seabass 8.c/9.a identity, category-5 screen, provenance, and discovery-only checks passed.\n')

@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'DFO:National Capital Region:Atlantic Mackerel'
 i <- match(id, x$candidate_id)
@@ -53,7 +53,7 @@ review <- list(
     'the aggregate egg-production likelihood remains an important translation limitation.'
   ),
   notes = paste(
-    'See source_reviews/dfo_northern_mackerel_2025.md. The source fit and inputs are',
+    'See source_reviews/ck_dfo_qc_scombrus_4t.md. The source fit and inputs are',
     'already imported under ck_dfo_qc_scombrus_4t; cached source manifest is under',
     'source_cache/scomber_scombrus/dfo_northern_mackerel_2025/. NOAA:10164 is a different, broader',
     'assessment unit and remains linked to nefsc_atlantic_mackerel.'

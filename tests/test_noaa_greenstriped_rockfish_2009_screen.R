@@ -5,7 +5,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/486_screen_noaa_greenstriped_rockfish_2009.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'NOAA:10566', , drop = FALSE]
 units <- candidate_units()
@@ -28,8 +28,7 @@ sha256_file <- function(path) {
   hashes <- trimws(grep('^[[:space:]]*[[:xdigit:]]{64}[[:space:]]*$', output, value = TRUE))
   toupper(hashes)
 }
-review <- paste(readLines(file.path(root, 'source_reviews/screening',
-  'noaa_greenstriped_rockfish_pacific_2009.md'), warn = FALSE), collapse = '\n')
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_greenstriped_rockfish_pacific_2009.md'), warn = FALSE), collapse = '\n')
 unit <- units[!is.na(units$candidate_unit_id) & units$candidate_unit_id == 'noaa_pacific_greenstriped_rockfish_coastwide', , drop = FALSE]
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 

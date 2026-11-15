@@ -1,5 +1,5 @@
 # Screen five Alaska flatfish candidates against current official assessment sources.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- paste0('NOAA:', c('10002', '10003', '10004', '10015', '10016'))
 i <- match(ids, x$candidate_id)
@@ -85,7 +85,7 @@ x$notes[i] <- c(
   'NOAA Stock SMART 10002; 2024 Model 16.0b is the latest full run located. Sparse survey age samples and age-structured model outputs are not substitutes for fishery catch-age data.',
   'NOAA:10003 maps to afsc_arrowtooth_flounder_bsai; Stock SMART lists Reinhardtius stomias, while the official report and canonical record use Atheresthes stomias. The existing canonical assessment record is partial; do not count this inventory row as new.',
   'NOAA Stock SMART snapshot says 2024 and lists Reinhardtius stomias, while the assessment report uses Atheresthes stomias. The latest full assessment reviewed is 2026; the October SSC selected Model 25.0 for management advice, though the detailed SAFE chapter was still a draft on 2026-10-29.',
-  'NOAA Stock SMART 10015 is the Flathead Sole-Bering Flounder stock-complex assessment. Treat as one assessment, not separate flathead and Bering flounder candidates; see source_reviews/screening/noaa_flathead_bsai.md.',
+  'NOAA Stock SMART 10015 is the Flathead Sole-Bering Flounder stock-complex assessment. Treat as one assessment, not separate flathead and Bering flounder candidates; see source_reviews/noaa_flathead_sole_bsai.md.',
   'NOAA Stock SMART 10016; use the 2022 operational run. The 2024 and 2026 documents are projection updates rather than new full age-data assessments.'
 )
 

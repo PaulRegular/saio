@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'noaa_cook_inlet_salmon_2026')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 stock_ids <- 17337:17341
 assessment_ids <- c(14570L, 14575L, 14574L, 14573L, 14572L)
 review_date <- '2026-11-01'

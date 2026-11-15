@@ -5,7 +5,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/371_screen_noaa_american_samoa_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -71,7 +71,7 @@ stopifnot(
   !any(grepl('American Samoa', assessments$assessment_id, ignore.case = TRUE), na.rm = TRUE),
   !any(grepl('American Samoa', inputs$assessment_id, ignore.case = TRUE), na.rm = TRUE),
   !any(grepl('American Samoa', outputs$assessment_id, ignore.case = TRUE), na.rm = TRUE),
-  file.exists(file.path(root, 'source_reviews/screening/noaa_american_samoa_bottomfish_2026.md'))
+  file.exists(file.path(root, 'source_reviews/noaa_american_samoa_bottomfish_2026.md'))
 )
 
 cat('American Samoa 2026 unit reconciliation and age-input eligibility checks passed.\n')

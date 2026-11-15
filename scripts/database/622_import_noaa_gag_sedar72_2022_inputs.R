@@ -176,7 +176,7 @@ assessment_path <- file.path("database", "assessments.csv")
 assessments <- read.csv(assessment_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessment_row <- which(assessments$assessment_id == assessment_id)
-candidate_path <- file.path("discovery", "candidates.csv")
+candidate_path <- file.path("database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
 candidate_row <- which(candidates$candidate_id == candidate_id)

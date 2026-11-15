@@ -3,7 +3,7 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 root <- "."
 candidate_id <- 'NOAA:14148'
 unit_id <- 'noaa_black_grouper_south_atlantic_gulf'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 units <- candidate_units()
@@ -36,8 +36,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-review <- readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_black_grouper_sedar19.md'), warn = FALSE)
+review <- readLines(file.path(root, 'source_reviews/noaa_black_grouper_sedar19.md'), warn = FALSE)
 
 stopifnot(nrow(candidate) == 1L,
   candidate$candidate_unit_id == unit_id,

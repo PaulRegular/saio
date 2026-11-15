@@ -1,10 +1,10 @@
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 nafo <- subset(candidates, organization == "NAFO")
 eligible <- subset(nafo, eligibility == "eligible")
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-review <- readLines("source_reviews/screening/nafo_inventory_2026.md",
+review <- readLines("source_reviews/shared/nafo_inventory_2026.md",
   warn = FALSE)
 review_text <- paste(review, collapse = " ")
 

@@ -1,6 +1,6 @@
 root <- '.'
 cache <- file.path(root, 'source_cache/discovery_noaa_bsai_alaska_skate_2026')
-candidate_path <- file.path(root, 'discovery/candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 screen_path <- file.path(root, 'scripts/discovery/458_screen_noaa_bsai_alaska_skate_2026.R')
 before <- readLines(candidate_path, warn = FALSE)
 old_dry_run <- Sys.getenv('TAM_SOURCE_DRY_RUN', unset = NA_character_)
@@ -47,7 +47,7 @@ meansize_rows <- section_rows(data_lines, meansize_header)
 meansize_years <- as.integer(sub('^([0-9]{4}).*$', '\\1', meansize_rows[-length(meansize_rows)]))
 naa <- read.csv(file.path(cache, 'NOAA_2023/M14_2NAA_summary.csv'), check.names = FALSE)
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/noaa_bsai_alaska_skate_2026.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/noaa_bsai_alaska_skate.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,

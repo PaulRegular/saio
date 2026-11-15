@@ -60,7 +60,7 @@ stopifnot(
     o$value[o$measure == "Fbar" & o$year == 2023]) < 1e-7
 )
 
-review <- readLines("source_reviews/nefsc_atlantic_pollock_5yz.md", warn = FALSE)
+review <- readLines("source_reviews/ck_nefsc_virens_5yz.md", warn = FALSE)
 stock_bytes <- readBin("database/stocks.csv", "raw",
   n = as.integer(file.info("database/stocks.csv")[["size"]])
 )

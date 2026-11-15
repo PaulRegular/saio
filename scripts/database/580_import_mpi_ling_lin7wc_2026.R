@@ -653,7 +653,7 @@ if (write_mode) {
     }
   }
 
-  candidates <- read.csv("discovery/candidates.csv",
+  candidates <- read.csv("database/candidates.csv",
     stringsAsFactors = FALSE, colClasses = "character",
     na.strings = c("", "NA"), check.names = FALSE
   )
@@ -674,7 +674,7 @@ if (write_mode) {
   candidates$match_status[candidate_index] <- "matched"
   candidates$import_status[candidate_index] <- "partial"
   replace_candidate_register_row(
-    "discovery/candidates.csv", candidate_index,
+    "database/candidates.csv", candidate_index,
     candidates[candidate_index, , drop = FALSE], candidate_id
   )
 

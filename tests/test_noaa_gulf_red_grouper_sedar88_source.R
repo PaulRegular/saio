@@ -68,12 +68,12 @@ get_output <- function(measure, year = NULL, age = NULL, fleet = NULL) {
   x
 }
 
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
 inventory <- candidate_units()
 inventory <- inventory[inventory$candidate_ids == candidate_id, , drop = FALSE]
-review <- paste(readLines("source_reviews/screening/noaa_red_grouper_gom_2025.md",
+review <- paste(readLines("source_reviews/noaa_red_grouper_gom.md",
   warn = FALSE), collapse = " ")
 manifest <- read.csv("provenance/discovery_noaa_red_grouper_gom_2025/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)

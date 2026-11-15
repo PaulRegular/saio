@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 register <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 header_rows <- which(vapply(seq_len(nrow(register)), function(i) {
   identical(as.character(unlist(register[i, , drop = FALSE], use.names = FALSE)), names(register))

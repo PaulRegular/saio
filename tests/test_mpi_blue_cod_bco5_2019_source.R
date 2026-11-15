@@ -21,7 +21,7 @@ assessment <- read_matching_rows("database/assessments.csv", assessment_id)
 inputs <- read_matching_rows("database/inputs.csv", assessment_id)
 assumptions <- read_matching_rows("database/assumptions.csv", assessment_id)
 outputs <- read_matching_rows("database/outputs.csv", assessment_id)
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "MPI:BCO5")
 

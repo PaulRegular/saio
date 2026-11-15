@@ -1,7 +1,7 @@
 root <- "."
 cache <- file.path(root, 'source_cache',
   'discovery_noaa_caribbean_snappers_sedar26_2011')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 unit_area <- 'U.S. Caribbean: Puerto Rico and U.S. Virgin Islands'
 
 sha256_file <- function(path) {

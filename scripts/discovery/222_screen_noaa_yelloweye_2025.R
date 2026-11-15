@@ -1,5 +1,5 @@
 # Screen the current NOAA Pacific Coast Yelloweye Rockfish assessment.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('NOAA:10426', x$candidate_id)
 if (is.na(i)) stop('Expected NOAA Yelloweye Rockfish row is missing.', call. = FALSE)

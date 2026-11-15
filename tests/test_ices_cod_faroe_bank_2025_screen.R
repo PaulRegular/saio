@@ -3,7 +3,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/435_screen_ices_cod_faroe_bank_2025.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:cod.27.5b2', , drop = FALSE]
 cache <- file.path(root, 'source_cache/discovery_ices_cod_faroe_bank_2025')
@@ -19,7 +19,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/ices_cod_faroe_bank_2025.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/ices_cod_faroe_bank.md'), warn = FALSE), collapse = '\n')
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),

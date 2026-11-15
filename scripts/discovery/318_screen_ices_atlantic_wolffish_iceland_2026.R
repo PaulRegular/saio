@@ -1,5 +1,5 @@
 root <- "."
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 cache <- file.path(root, 'source_cache', 'anarhichas_lupus/ices_atlantic_wolffish_iceland_2026')
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

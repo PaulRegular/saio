@@ -1,6 +1,6 @@
 # Reconcile DFO inventory entries with assessed units and their components.
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE, na.strings = 'NA')
 map <- data.frame(candidate = c('DFO:Maritimes:Atlantic Cod - NAFO 5Zjm', 'DFO:Pacific:Canary Rockfish',

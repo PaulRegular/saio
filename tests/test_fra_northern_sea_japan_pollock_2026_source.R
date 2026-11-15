@@ -37,7 +37,7 @@ stocks <- utils::read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- utils::read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-candidates <- utils::read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- utils::read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 manifest <- utils::read.csv(
   "provenance/fra_northern_sea_japan_pollock_2026/sources.csv",

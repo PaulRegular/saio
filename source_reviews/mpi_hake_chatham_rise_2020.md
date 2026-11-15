@@ -47,4 +47,4 @@ series. It remains in discovery.
 - [FAR 2026/45](https://www.mpi.govt.nz/dmsdocument/72980/sitemap), later monitoring data.
 
 The cached Plenary and assessment PDFs are listed in the
-[provenance manifest](../../provenance/discovery_mpi_hake_chatham_rise/sources.csv).
+[provenance manifest](../provenance/discovery_mpi_hake_chatham_rise/sources.csv).

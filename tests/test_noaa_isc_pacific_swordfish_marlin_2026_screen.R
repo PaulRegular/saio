@@ -11,7 +11,7 @@ canonical_before <- lapply(canonical_paths, read_table)
 source(file.path(root, 'scripts', 'discovery',
   '530_screen_noaa_isc_pacific_swordfish_marlin_2026.R'))
 
-register <- read_table('discovery/candidates.csv')
+register <- read_table('database/candidates.csv')
 ids <- c('NOAA:11642', 'NOAA:11643', 'NOAA:11692', 'NOAA:11706')
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
 expected_units <- c('noaa_wcnpo_swordfish', 'noaa_eastern_pacific_swordfish',
@@ -50,8 +50,7 @@ stopifnot(nrow(rows) == 4L, !anyNA(rows$candidate_id),
   all(vapply(file.path(cache, manifest$file), function(path) {
     identical(rawToChar(readBin(path, 'raw', n = 5L)), '%PDF-')
   }, logical(1L))),
-  file.exists(file.path(root, 'source_reviews', 'screening',
-    'noaa_isc_pacific_billfish_swordfish_2026.md')),
+  file.exists(file.path(root, 'source_reviews/shared/noaa_isc_pacific_billfish_swordfish_2026.md')),
   !anyDuplicated(rows$candidate_unit_id))
 
 progress <- candidate_progress()

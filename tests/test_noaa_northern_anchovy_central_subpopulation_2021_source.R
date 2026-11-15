@@ -34,7 +34,7 @@ assessments <- read_columns("database/assessments.csv", c("assessment_id",
   "stock_id", "assessment_year", "terminal_year", "estimate_terminal_year",
   "is_current", "is_applied", "model_version", "inputs_status",
   "outputs_status", "assumptions_status"))
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- candidate_units()
 manifest <- read.csv("provenance/discovery_noaa_anchovy_2021/sources.csv",

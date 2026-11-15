@@ -15,7 +15,7 @@ read_assessment_rows <- function(path, assessment_id) {
 candidate_id <- "NOAA:10383"
 stock_id <- "noaa_gulf_golden_tilefish"
 assessment_id <- paste0(stock_id, "_2011")
-register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+register <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
@@ -28,7 +28,7 @@ inputs <- read_assessment_rows("database/inputs.csv", assessment_id)
 outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 units <- candidate_units()
 unit <- units[units$unit_key == paste0("stock:", stock_id), , drop = FALSE]
-review <- paste(readLines("source_reviews/screening/noaa_golden_tilefish_gulf_sedar22_2011.md",
+review <- paste(readLines("source_reviews/noaa_golden_tilefish_gulf_sedar22_2011.md",
   warn = FALSE), collapse = " ")
 screen_code <- paste(readLines("scripts/discovery/482_screen_noaa_gulf_golden_tilefish_sedar22_2011.R",
   warn = FALSE), collapse = " ")
@@ -41,7 +41,7 @@ if (!imported) {
   source("scripts/discovery/482_screen_noaa_gulf_golden_tilefish_sedar22_2011.R", local = screen)
   if (is.na(old_dry_run)) Sys.unsetenv("TAM_SOURCE_DRY_RUN") else
     Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
-  register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+  register <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 }

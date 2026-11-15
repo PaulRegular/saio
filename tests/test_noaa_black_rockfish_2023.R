@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- c('NOAA:14407', 'NOAA:14409', 'NOAA:17194', 'NOAA:17195',
   'NOAA:10402', 'NOAA:11302', 'NOAA:14408')
@@ -13,8 +13,7 @@ current_units <- c('noaa_black_rockfish_oregon_2023',
 unit_ids <- unique(current_units)
 units <- candidate_units()
 units <- units[units$candidate_unit_id %in% unit_ids, , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_black_rockfish_pacific_coast_2023.md'), warn = FALSE), collapse = '\n')
+review <- paste(readLines(file.path(root, 'source_reviews/shared/noaa_black_rockfish_pacific_coast_2023.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'),
@@ -50,8 +49,7 @@ california_outputs <- read_assessment_rows(
   'noaa_black_rockfish_california_2023',
   measures = c('spawning_output', 'natural_mortality_at_age')
 )
-source_review <- paste(readLines(file.path(root, 'source_reviews',
-  'noaa_black_rockfish_california_2023.md'), warn = FALSE), collapse = '\n')
+source_review <- paste(readLines(file.path(root, 'source_reviews/noaa_black_rockfish_california.md'), warn = FALSE), collapse = '\n')
 source_manifest <- read.csv(file.path(root, 'provenance/noaa_black_rockfish_california_2023/sources.csv'),
   stringsAsFactors = FALSE)
 california_inputs <- inputs[

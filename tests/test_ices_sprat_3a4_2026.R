@@ -1,5 +1,5 @@
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -11,8 +11,7 @@ outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 cache <- file.path(root, 'source_cache', 'discovery_ices_sprat_3a4_2026')
 candidate <- register[register$candidate_id == 'ICES:spr.27.3a4', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'ices_sprat_3a4_2026.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/ices_sprat_3a4.md'), warn = FALSE), collapse = ' ')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 manifest_files <- file.path(cache, manifest$file)
 

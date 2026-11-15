@@ -445,7 +445,7 @@ if (write_mode || inputs_only) {
     write.csv(manifest_rows(5:7), file.path(root, "provenance/mpi_hake_hak7_2024/sources.csv"), row.names = FALSE, na = "")
     for (i in seq_along(stock_ids)) {
     candidate_id <- if (i == 1L) "MPI:HAK1:SubAntarctic" else "MPI:HAK7:WCSI"
-    replace_register_row(file.path(root, "discovery", "candidates.csv"), "candidate_id", candidate_id, list(
+    replace_register_row(file.path(root, "database/candidates.csv"), "candidate_id", candidate_id, list(
       matched_stock_id = stock_ids[i], import_status = "partial",
       inventory_assessment_year = if (i == 1L) 2025L else 2024L,
       catch_age_evidence = if (i == 1L) "Imported scaled summer/winter catch totals for 1975-2025 and separate official 2023-24 sex-specific numbers-at-age estimates. The assessment's exact historical age-composition likelihood vectors are not tabulated." else

@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 id <- 'DFO:Maritimes:Striped Bass - Bay of Fundy'
 i <- match(id, x$candidate_id)
@@ -82,7 +82,7 @@ x$notes[i] <- paste(
   'This candidate is the Bay of Fundy Designatable Unit, comprising three',
   'spawning populations, not the assessed southern Gulf of St. Lawrence stock.',
   'The 2024 DFO survey status is Uncertain. No canonical stock or assessment',
-  'records were added. See source_reviews/screening/',
+  'records were added. See source_reviews/',
   'dfo_striped_bass_bay_of_fundy.md.'
 )
 

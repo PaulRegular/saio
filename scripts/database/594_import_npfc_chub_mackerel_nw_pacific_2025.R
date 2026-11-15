@@ -89,7 +89,7 @@ assessments <- read_table("database/assessments.csv")
 assumptions_existing <- read_table("database/assumptions.csv")
 inputs_existing <- read_table("database/inputs.csv")
 outputs_existing <- read_table("database/outputs.csv")
-candidates <- read_table("discovery/candidates.csv")
+candidates <- read_table("database/candidates.csv")
 
 candidate_row <- which(candidates$candidate_id == candidate_id)
 if (length(candidate_row) != 1L) {
@@ -435,7 +435,7 @@ if (write_mode) {
   candidates$matched_stock_id[candidate_row] <- stock_id
   candidates$match_status[candidate_row] <- "matched"
   candidates$import_status[candidate_row] <- "partial"
-  replace_csv_record("discovery/candidates.csv", "candidate_id", candidate_id,
+  replace_csv_record("database/candidates.csv", "candidate_id", candidate_id,
     candidates[candidate_row, , drop = FALSE])
 
   cat("Imported", stock_id, "with", nrow(inputs), "age-specific M inputs and",

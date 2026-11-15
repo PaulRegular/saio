@@ -262,7 +262,7 @@ assumptions <- do.call(rbind, assumptions)
 yellowtail_case <- list(stocks = stock, assessments = assessment, assumptions = assumptions,
   inputs = inputs, outputs = outputs)
 if ("--write" %in% commandArgs(trailingOnly = TRUE)) {
-  candidate_path <- "discovery/candidates.csv"
+  candidate_path <- "database/candidates.csv"
   candidate_id <- "DFO:Pacific:Yellowtail Rockfish - British Columbia coastwide"
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"))
   row <- which(candidates$candidate_id == candidate_id)

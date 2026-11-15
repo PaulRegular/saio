@@ -3,7 +3,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/356_screen_noaa_goa_yelloweye_2024.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -46,7 +46,7 @@ stopifnot(
   !any(inputs$assessment_id == candidate$candidate_unit_id),
   !any(outputs$assessment_id == candidate$candidate_unit_id),
   file.exists(file.path(root,
-    'source_reviews/screening/noaa_goa_yelloweye_2024.md'))
+    'source_reviews/noaa_goa_yelloweye_2024.md'))
 )
 
 cat('NOAA Gulf of Alaska yelloweye source-screening checks passed.\n')

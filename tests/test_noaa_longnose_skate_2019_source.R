@@ -36,7 +36,7 @@ assessments <- read_columns(file.path(root, "database/assessments.csv"), c(
   "assessment_id", "stock_id", "assessment_year", "terminal_year",
   "estimate_terminal_year", "is_current", "inputs_status", "outputs_status",
   "assumptions_status"))
-candidates <- read_columns(file.path(root, "discovery/candidates.csv"), c(
+candidates <- read_columns(file.path(root, "database/candidates.csv"), c(
   "candidate_id", "matched_stock_id", "match_status", "screening_status",
   "eligibility", "import_status", "output_evidence"))
 inventory <- candidate_units()

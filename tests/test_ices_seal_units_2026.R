@@ -9,7 +9,7 @@ source(file.path(root, 'scripts/discovery/492_screen_ices_seals_2026.R'),
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-candidates <- read.csv(file.path(root, 'discovery/candidates.csv'),
+candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 units <- candidate_units()
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
@@ -51,6 +51,6 @@ stopifnot(nrow(screened) == 3L,
   all(units$inventory_entries[match(unit_ids, units$candidate_unit_id)] == 1L),
   file.exists(file.path(root, 'source_cache', 'shared/ices_sid',
     c('stock_list_2026.json', 'sources.csv'))),
-  file.exists(file.path(root, 'source_reviews/screening/ices_seal_units_2026.md')))
+  file.exists(file.path(root, 'source_reviews/shared/ices_seal_units_2026.md')))
 
 cat('ICES seal identities, stock boundaries, out-of-scope decisions, and no-import checks passed.\n')

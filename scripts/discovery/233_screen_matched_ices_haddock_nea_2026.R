@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'ICES:had.27.1-2'
 i <- which(x$candidate_id == id)
@@ -53,7 +53,7 @@ x$decision_reason[i] <- paste0(
   'physical survey scales remain unresolved but do not prevent screening eligibility.'
 )
 x$notes[i] <- paste0(
-  'See source_reviews/jrn_afwg_haddock_northeast_arctic_2026.md; ',
+  'See source_reviews/ck_ices_afwg_aeglefinus_nea_1_2.md; ',
   '2026 run outputs are verified against the cached native fit. Grouped plus-age survey ',
   'observations must retain their group definition downstream.'
 )

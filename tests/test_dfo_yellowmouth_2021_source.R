@@ -15,7 +15,7 @@ assumptions <- subset(read_table("assumptions"),
   assessment_id == "dfo_yellowmouth_2021")
 outputs <- subset(read_table("outputs"),
   assessment_id == "dfo_yellowmouth_2021")
-candidates <- utils::read.csv(file.path(root, "discovery", "candidates.csv"),
+candidates <- utils::read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 candidate <- subset(candidates,
   candidate_unit_id == "dfo_yellowmouth_bc")

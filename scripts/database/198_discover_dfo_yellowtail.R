@@ -1,5 +1,5 @@
 # Add the 2024 Canadian yellowtail assessment identified in the Pacific regional listing.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 id <- 'DFO:Pacific:Yellowtail Rockfish - British Columbia coastwide'
 if (id %in% x$candidate_id) { cat('Candidate already exists; preserve its review.\n'); quit(save = 'no', status = 0L) }

@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 candidates <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -59,7 +59,7 @@ stocks$notes[s] <- paste(
   'Originally added as Charbonneau-Keith metadata; matched to official ICES stock',
   'tur.27.4 using species and North Sea area. Detailed 2025 WKBNSCS M9 inputs and',
   'outputs and separate 2026 advice summaries are recorded; see',
-  'source_reviews/ices_turbot_north_sea.md.'
+  'source_reviews/ck_ices_wgnssk_maximus_ns_4.md.'
 )
 
 review <- list(
@@ -78,7 +78,7 @@ review <- list(
   detailed_source_url = paste('https://doi.org/10.17895/ices.pub.28715180', 'https://asd.ices.dk/viewAdvice/5097', sep = '; '),
   review_date = '2026-10-30',
   decision_reason = paste('Matched by official ICES code tur.27.4, scientific name and North Sea area to the existing canonical stock. The latest 2026 advice summary and the detailed 2025 M9 benchmark are already recorded separately; the latter contains a complete age-structured input/output set. This inventory row is a crosswalk, not a new stock or assessment import.'),
-  notes = paste('The 2026 ICES Advice View is assessment year 2026 and is summary-only in the canonical database. The 2025 WKBNSCS benchmark M9 is a distinct detailed run and was not the model used for 2025 advice. See source_reviews/ices_turbot_north_sea.md and the ignored local cache under source_cache/scophthalmus_maximus/ices_turbot_north_sea_2025_benchmark/.')
+  notes = paste('The 2026 ICES Advice View is assessment year 2026 and is summary-only in the canonical database. The 2025 WKBNSCS benchmark M9 is a distinct detailed run and was not the model used for 2025 advice. See source_reviews/ck_ices_wgnssk_maximus_ns_4.md and the ignored local cache under source_cache/scophthalmus_maximus/ices_turbot_north_sea_2025_benchmark/.')
 )
 if (!is.na(candidates$matched_stock_id[i]) && candidates$matched_stock_id[i] != stock_id) {
   stop('Inventory row is already linked to a different stock.', call. = FALSE)

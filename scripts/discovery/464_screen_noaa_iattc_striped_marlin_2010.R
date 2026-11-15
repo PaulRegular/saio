@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_noaa_iattc_striped_marlin_2010')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:11073'
 unit_id <- 'iattc_northeast_pacific_striped_marlin'
 

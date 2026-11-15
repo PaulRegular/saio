@@ -3,7 +3,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/364_reconcile_noaa_invertebrate_inventory.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- paste0('NOAA:', c(10080, 10082, 10084, 10087, 10088, 10786, 10787,
   10792, 10798, 10802, 10803, 10809, 10810, 10811, 10813, 10814, 10816,
@@ -32,7 +32,7 @@ stopifnot(
   !any(rows$candidate_unit_id %in% assessments$assessment_id),
   !any(rows$candidate_unit_id %in% inputs$assessment_id),
   !any(rows$candidate_unit_id %in% outputs$assessment_id),
-  file.exists(file.path(root, 'source_reviews/screening/noaa_invertebrate_inventory_2026.md'))
+  file.exists(file.path(root, 'source_reviews/shared/noaa_invertebrate_inventory_2026.md'))
 )
 
 cat('NOAA invertebrate identity and scope checks passed.\n')

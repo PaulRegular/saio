@@ -107,7 +107,7 @@ if (nrow(manifest) != 1L || manifest$sha256 != expected_hash ||
   stop("The provenance record does not match the reviewed assessment PDF.", call. = FALSE)
 }
 
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 candidate_rows <- read_csv(candidate_path)
 candidate_index <- which(candidate_rows$candidate_id == candidate_id)
 if (length(candidate_index) != 1L) {

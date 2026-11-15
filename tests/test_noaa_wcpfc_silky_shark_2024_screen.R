@@ -3,7 +3,7 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 root <- "."
 candidate_id <- 'NOAA:11728'
 unit_id <- 'wcpfc_wcpo_silky_shark'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 units <- candidate_units()
@@ -80,7 +80,7 @@ stopifnot(nrow(candidate) == 1L,
   all(grepl('^[[:xdigit:]]{64}$', source_rows$sha256)),
   all(vapply(file.path(cache, required), sha256_file, character(1)) ==
     tolower(source_rows$sha256)),
-  file.exists(file.path(root, 'source_reviews', 'screening', 'noaa_wcpfc_silky_shark_2024.md')),
+  file.exists(file.path(root, 'source_reviews/noaa_wcpfc_silky_shark_2024.md')),
   !any(stocks$scientific_name == 'Carcharhinus falciformis', na.rm = TRUE),
   !any(grepl(unit_id, assessments$assessment_id, fixed = TRUE)),
   !any(grepl(unit_id, inputs$assessment_id, fixed = TRUE)),

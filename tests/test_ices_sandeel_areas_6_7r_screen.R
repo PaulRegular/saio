@@ -1,7 +1,7 @@
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source('scripts/discovery/343_screen_ices_sandeel_areas_6_7r_2023.R')
 
-register <- read.csv('discovery/candidates.csv',
+register <- read.csv('database/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv('database/stocks.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -57,7 +57,7 @@ for (i in seq_len(nrow(cases))) {
     !any(assessments$assessment_id == case$candidate_unit_id),
     !any(inputs$assessment_id == case$candidate_unit_id),
     !any(outputs$assessment_id == case$candidate_unit_id),
-    file.exists(file.path('source_reviews', 'screening',
+    file.exists(file.path('source_reviews',
       paste0(if (case$candidate_id == 'ICES:san.sa.6') 'ices_sandeel_area_6_2023' else
         'ices_sandeel_area_7r_2023', '.md')))
   )

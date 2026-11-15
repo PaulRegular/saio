@@ -2,7 +2,7 @@ candidate_id <- "MPI:LIN7WC"
 candidate_unit_id <- "mpi_ling_lin7wc"
 stock_id <- "mpi_ling_lin7wc"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
-path <- "discovery/candidates.csv"
+path <- "database/candidates.csv"
 
 candidate <- data.frame(
   candidate_id = candidate_id,

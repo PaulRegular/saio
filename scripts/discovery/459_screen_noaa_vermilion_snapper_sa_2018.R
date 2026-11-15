@@ -1,7 +1,7 @@
 root <- "."
 cache <- file.path(root, 'source_cache',
   'discovery_noaa_south_atlantic_vermilion_2026')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 
 sources <- data.frame(
   file = c(

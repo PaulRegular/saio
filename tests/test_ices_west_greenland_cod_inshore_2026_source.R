@@ -77,12 +77,12 @@ stopifnot(
 )
 
 candidate <- read.csv(
-  "discovery/candidates.csv",
+  "database/candidates.csv",
   stringsAsFactors = FALSE, check.names = FALSE
 )
 candidate <- candidate[candidate$candidate_id == "ICES:cod.21.1.isc", ]
 review <- readLines(
-  "source_reviews/screening/ices_greenland_cod_identity_2026.md"
+  "source_reviews/ices_greenland_cod_identity_2026.md"
 )
 stopifnot(
   nrow(candidate) == 1L,

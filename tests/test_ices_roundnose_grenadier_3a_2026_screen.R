@@ -6,7 +6,7 @@ source(file.path(root, 'scripts/discovery',
   '447_screen_ices_roundnose_grenadier_3a_2026.R'), local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:rng.27.3a', , drop = FALSE]
 cache <- file.path(root, 'source_cache/discovery_ices_roundnose_grenadier_3a_2026')
@@ -51,7 +51,7 @@ stopifnot(
   !any(inputs$assessment_id == 'ices_roundnose_grenadier_3a'),
   !any(outputs$assessment_id == 'ices_roundnose_grenadier_3a'),
   file.exists(file.path(root,
-    'source_reviews/screening/ices_roundnose_grenadier_3a_2026.md'))
+    'source_reviews/ices_roundnose_grenadier_3a.md'))
 )
 
 cat('ICES 2026 Division 3.a roundnose-grenadier identity, aggregate-index screen, provenance, and discovery-only checks passed.\n')

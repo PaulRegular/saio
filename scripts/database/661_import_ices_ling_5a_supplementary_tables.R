@@ -238,7 +238,7 @@ if (dry_run) {
   output_to_add <- outputs[outputs$source_reference %in% output_refs_to_add, , drop = FALSE]
 }
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- utils::read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate_row <- which(candidates$candidate_id == candidate_id)

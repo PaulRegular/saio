@@ -19,13 +19,13 @@ o <- read_assessment_rows("database/outputs.csv", id)
 a <- read_assessment_rows("database/assumptions.csv", id)
 stock <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, check.names = FALSE)
 assessment <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, check.names = FALSE)
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
 candidate <- candidate[candidate$candidate_id == "NOAA:10462", , drop = FALSE]
 inventory <- candidate_units()
 inventory <- inventory[inventory$candidate_ids == "NOAA:10462", , drop = FALSE]
 provenance <- read.csv("provenance/discovery_noaa_oregon_kelp_greenling_2015/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("source_reviews/screening/noaa_oregon_kelp_greenling_2015.md"), collapse = " ")
+review <- paste(readLines("source_reviews/noaa_kelp_greenling_oregon.md"), collapse = " ")
 
 v <- function(measure, ...) {
   x <- i[i$measure == measure, , drop = FALSE]

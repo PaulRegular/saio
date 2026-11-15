@@ -1,11 +1,10 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- register[register$candidate_id == 'NOAA:10465', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_goa_atka_mackerel_2021.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_goa_atka_mackerel.md'), warn = FALSE), collapse = ' ')
 units <- candidate_units()
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

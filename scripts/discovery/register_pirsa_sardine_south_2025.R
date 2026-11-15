@@ -3,7 +3,7 @@ candidate_unit_id <- "pirsa_southern_australia_sardine"
 review_date <- "2026-11-09"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
-register_path <- "discovery/candidates.csv"
+register_path <- "database/candidates.csv"
 
 if (!file.exists(register_path)) {
   stop("Run this script from the SAIO repository root.", call. = FALSE)

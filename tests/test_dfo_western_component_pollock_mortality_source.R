@@ -25,12 +25,11 @@ inputs <- read_assessment_inputs(file.path(root, "database", "inputs.csv"), asse
 m <- subset(inputs, type == "M" & measure == "natural_mortality_at_age")
 assessments <- read_table("assessments")
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
-candidate <- utils::read.csv(file.path(root, "discovery", "candidates.csv"),
+candidate <- utils::read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE)
 candidate <- candidate[candidate$candidate_id ==
   "DFO:Maritimes:Pollock - NAFO 4X5 (Western Component)", , drop = FALSE]
-review <- paste(readLines(file.path(root, "source_reviews", "screening",
-  "dfo_western_component_pollock_2022.md")), collapse = " ")
+review <- paste(readLines(file.path(root, "source_reviews/dfo_western_component_pollock_2022.md")), collapse = " ")
 
 stopifnot(
   nrow(assessment) == 1L,

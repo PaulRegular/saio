@@ -209,7 +209,7 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
     "NOAA still identifies SEDAR 72 as the most recent population assessment in its 2026 notice; SEDAR 105 is underway.",
     "This initial source import covers selected aggregate outputs only; no N-at-age or F-at-age arrays are available in the recovered tables."))
 
-candidates_path <- file.path(root, "discovery/candidates.csv")
+candidates_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
 candidate_row <- which(candidates$candidate_id == candidate_id)

@@ -1,11 +1,10 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 row <- register[register$candidate_id == 'NOAA:11005', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_goa_skate_complex_2023_2026.md'), warn = FALSE), collapse = '\n')
+review <- paste(readLines(file.path(root, 'source_reviews/shared/noaa_goa_skate_complex_2023_2026.md'), warn = FALSE), collapse = '\n')
 cache <- file.path(root, 'source_cache', 'discovery_noaa_goa_skates_2023_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)

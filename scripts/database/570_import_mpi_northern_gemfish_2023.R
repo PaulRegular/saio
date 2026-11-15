@@ -394,7 +394,7 @@ if (write_mode) {
     decision_reason = "Selected because the latest full quantitative assessment has tabulated catch inputs, CPUE with uncertainty, complete age-composition vectors for the three fitted fishery groups, biological assumptions, and terminal biomass outputs. Inputs and outputs remain partial where run-specific sample weights, direct age weights, and numerical annual fitted states are unavailable.",
     notes = "One biological unit spans SKI 1 and SKI 2; do not split it into separate stock records. 2025 Plenary identifies the 2023 full assessment as the most recent."
   )
-  candidates_path <- file.path(root, "discovery", "candidates.csv")
+  candidates_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   if (candidate_id %in% candidates$candidate_id) {

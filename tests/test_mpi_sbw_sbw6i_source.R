@@ -73,7 +73,7 @@ stopifnot(
   all(nzchar(outputs$source_reference))
 )
 
-candidate <- subset(read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- subset(read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE), candidate_id == "MPI:SBW6I")
 stopifnot(
   nrow(candidate) == 1L,

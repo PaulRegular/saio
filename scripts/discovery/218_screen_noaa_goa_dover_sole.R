@@ -1,5 +1,5 @@
 # Screen the NOAA Gulf of Alaska Dover sole candidate against its 2023 full assessment.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('NOAA:10021', x$candidate_id)
 if (is.na(i)) stop('Expected NOAA GOA Dover sole row is missing.', call. = FALSE)
@@ -76,7 +76,7 @@ x$notes[i] <- paste(
   'assessment with updated catches. The 2023 report identifies Stock',
   'Synthesis 3.30.21, while the pinned CIE accepted-run files identify',
   '3.30.13 in their headers; record this version discrepancy. See',
-  'source_reviews/screening/noaa_goa_dover_sole.md.'
+  'source_reviews/noaa_stocksmart_10021.md.'
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

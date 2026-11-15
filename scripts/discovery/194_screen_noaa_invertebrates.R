@@ -1,5 +1,5 @@
 # Screen explicitly identified non-finfish in the NOAA inventory snapshot.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 species <- c('Farfantepenaeus aztecus', 'Farfantepenaeus duorarum',
   'Litopenaeus setiferus', 'Enteroctopus dofleini', 'Placopecten magellanicus',

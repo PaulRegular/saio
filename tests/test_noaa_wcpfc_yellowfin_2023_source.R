@@ -99,7 +99,7 @@ source_summary <- read.csv(
 stopifnot(nrow(annual_sb) == 70L,
   isTRUE(all.equal(annual_sb$value, source_summary$sb, tolerance = 1e-12)))
 
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   check.names = FALSE)
 candidate <- candidate[candidate$candidate_id == candidate_id, ]
 stopifnot(nrow(candidate) == 1L, candidate$import_status == "partial",

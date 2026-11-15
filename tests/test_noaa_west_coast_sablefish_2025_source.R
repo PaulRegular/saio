@@ -68,7 +68,7 @@ stopifnot(
   all(is.na(M$se) & is.na(M$lwr) & is.na(M$upr))
 )
 
-candidate <- read.csv("discovery/candidates.csv",
+candidate <- read.csv("database/candidates.csv",
   stringsAsFactors = FALSE)
 candidate <- candidate[candidate$candidate_id == "NOAA:10466", ]
 stopifnot(nrow(candidate) == 1L, candidate$matched_stock_id == x$stocks$stock_id,

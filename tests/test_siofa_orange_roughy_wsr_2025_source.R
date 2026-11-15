@@ -54,7 +54,7 @@ stopifnot(
   !anyDuplicated(assumptions$setting)
 )
 
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE)
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE)
 candidate <- candidates[candidates$candidate_id == "SIOFA:ORY-2024-01:WSR", ]
 stopifnot(
   nrow(candidate) == 1L,

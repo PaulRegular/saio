@@ -63,7 +63,7 @@ rows_exist <- function(path, id) {
 
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
-candidates <- read_table("discovery/candidates.csv")
+candidates <- read_table("database/candidates.csv")
 manifest <- read_table(manifest_path)
 candidate_index <- which(candidates$candidate_id == candidate_id)
 source_paths <- file.path("source_cache", manifest$local_file)
@@ -442,6 +442,6 @@ if (!write_mode) {
   append_csv("database/assumptions.csv", assumptions)
   append_csv("database/inputs.csv", inputs)
   append_csv("database/outputs.csv", outputs)
-  replace_csv_row("discovery/candidates.csv", candidate_id, candidate)
+  replace_csv_row("database/candidates.csv", candidate_id, candidate)
   cat("Imported the partial AFMA SESSF silver warehou source record.\n")
 }

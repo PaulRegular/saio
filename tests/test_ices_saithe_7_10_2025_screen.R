@@ -4,7 +4,7 @@ source(file.path(root, 'scripts/discovery/484_screen_ices_saithe_7_10_2025.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 cache <- file.path(root, 'source_cache/discovery_ices_saithe_subareas_7_10_2025')
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:pok.27.7-10', , drop = FALSE]
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
@@ -16,7 +16,7 @@ sha256_file <- function(path) {
     value = TRUE)))
 }
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/ices_saithe_subareas_7_10_2025.md'), warn = FALSE),
+  'source_reviews/ices_saithe_subareas_7_10.md'), warn = FALSE),
   collapse = '\n')
 review <- gsub('[[:space:]]+', ' ', review)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),

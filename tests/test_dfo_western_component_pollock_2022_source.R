@@ -29,11 +29,10 @@ assumptions <- subset(read_table("assumptions"),
 inputs <- read_assessment_inputs(file.path(root, "database", "inputs.csv"), model_key)
 outputs <- subset(read_table("outputs"),
   assessment_id %in% c(model_key, "dfo_western_component_pollock_2025_hcr_update"))
-candidate <- subset(utils::read.csv(file.path(root, "discovery", "candidates.csv"),
+candidate <- subset(utils::read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE),
   candidate_id == "DFO:Maritimes:Pollock - NAFO 4X5 (Western Component)")
-review <- paste(readLines(file.path(root, "source_reviews", "screening",
-  "dfo_western_component_pollock_2022.md")), collapse = " ")
+review <- paste(readLines(file.path(root, "source_reviews/dfo_western_component_pollock_2022.md")), collapse = " ")
 
 catch <- subset(inputs, type == "catch")
 index <- subset(inputs, type == "index" & survey == "DFO summer RV survey")

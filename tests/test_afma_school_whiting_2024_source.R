@@ -30,14 +30,14 @@ stopifnot(
   all(grepl("SERAG Meeting 2, November 2024", c(ssb0$source_reference, ssb2025$source_reference)))
 )
 
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "AFMA:SESSF_Eastern_School_Whiting")
 manifest <- read.csv("provenance/afma_school_whiting_2024/sources.csv",
   stringsAsFactors = FALSE)
 minutes <- subset(manifest, grepl("serag_meeting_2_2024_minutes.pdf", local_file, fixed = TRUE))
 minutes_path <- file.path("source_cache", minutes$local_file)
-review <- paste(readLines("source_reviews/afma_school_whiting_sessf.md", warn = FALSE), collapse = " ")
+review <- paste(readLines("source_reviews/afma_sessf_eastern_school_whiting.md", warn = FALSE), collapse = " ")
 
 stopifnot(
   nrow(candidate) == 1L,

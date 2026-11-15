@@ -1,5 +1,5 @@
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- register[register$candidate_id == 'ICES:bss.27.8ab', , drop = FALSE]
 cache <- file.path(root, 'source_cache', 'dicentrarchus_labrax/ices_seabass_8ab_2026')

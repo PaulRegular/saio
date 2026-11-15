@@ -3,13 +3,12 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 root <- "."
 id <- 'NOAA:12442'
 unit_id <- 'noaa_opakapaka_mhi'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == id, , drop = FALSE]
 unit <- candidate_units()
 unit <- unit[!is.na(unit$candidate_unit_id) & unit$candidate_unit_id == unit_id, , drop = FALSE]
-review <- readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_opakapaka_mhi_2024.md'), warn = FALSE)
+review <- readLines(file.path(root, 'source_reviews/noaa_opakapaka_mhi.md'), warn = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 

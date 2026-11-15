@@ -22,7 +22,7 @@ outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, check.names = FALSE)
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
 candidate <- candidate[candidate$candidate_id == "AFMA:SESSF_GUMMY_SHARK_2023", , drop = FALSE]
 

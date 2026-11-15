@@ -1,10 +1,10 @@
-register <- read.csv('discovery/candidates.csv',
+register <- read.csv('database/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv('database/stocks.csv',
   stringsAsFactors = FALSE)
 id <- 'DFO:Pacific:Chinook Salmon - North Coast'
 row <- register[register$candidate_id == id, , drop = FALSE]
-review_path <- 'source_reviews/screening/dfo_north_coast_chinook_inventory.md'
+review_path <- 'source_reviews/dfo_pacific_chinook_salmon_north_coast.md'
 
 stopifnot(
   nrow(row) == 1L,

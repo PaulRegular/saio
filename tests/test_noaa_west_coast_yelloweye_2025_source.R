@@ -13,7 +13,7 @@ stocks <- read.csv(file.path(root, "database", "stocks.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 assessments <- read.csv(file.path(root, "database", "assessments.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
-candidate <- read.csv(file.path(root, "discovery", "candidates.csv"),
+candidate <- read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 inputs <- read_selected(file.path(root, "database", "inputs.csv"), c(
   "assessment_id", "type", "measure", "basis", "year", "age", "value",

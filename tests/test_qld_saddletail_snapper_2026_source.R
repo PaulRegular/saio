@@ -39,7 +39,7 @@ stopifnot(
   all(grepl("Table 3.2", o$source_reference, fixed = TRUE))
 )
 
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE)
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE)
 candidate <- candidate[candidate$candidate_id == "QDAF:QLD_EC_SADDLETAIL_2026", ]
 stopifnot(
   nrow(candidate) == 1L,

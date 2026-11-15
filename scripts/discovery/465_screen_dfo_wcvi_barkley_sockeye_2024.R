@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_dfo_wcvi_barkley_sockeye_2024')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'DFO:Pacific:WCVI Barkley Sockeye Salmon'
 unit_id <- 'dfo_wcvi_barkley_sockeye_smu'
 source_url <- 'https://publications.gc.ca/collections/collection_2026/mpo-dfo/fs70-7/Fs70-7-2026-022-eng.pdf'
@@ -90,7 +90,7 @@ review <- list(
     'but direct local retrieval returned an archived-page interstitial rather',
     'than the PDF, so it was not cached. No canonical inputs/outputs were added',
     'and was attempted. See',
-    'source_reviews/screening/dfo_wcvi_barkley_sockeye_2024.md.'
+    'source_reviews/dfo_wcvi_barkley_sockeye_smu.md.'
   )
 )
 for (column in names(review)) candidates[[column]][row] <- review[[column]]

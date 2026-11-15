@@ -1,5 +1,5 @@
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -38,8 +38,7 @@ stopifnot(
 cache <- file.path(root, 'source_cache',
   'discovery_ices_greater_silver_smelt_123a4_2026')
 manifest_path <- file.path(cache, 'sources.csv')
-review_path <- file.path(root, 'source_reviews', 'screening',
-  'ices_greater_silver_smelt_123a4_2026.md')
+review_path <- file.path(root, 'source_reviews/ices_greater_silver_smelt_123a4.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 stopifnot(
   grepl('SPiCT', review, fixed = TRUE),

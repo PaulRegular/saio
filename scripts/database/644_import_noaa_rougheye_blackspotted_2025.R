@@ -459,7 +459,7 @@ assessment <- blank_row(names(assessments_table), list(
   assumptions_status = "partial", inputs_status = "partial", outputs_status = "partial",
   notes = "Official 2025 assessment with data through 2024. Native files provide catch, aggregate indices, age/length compositions, and fitted N/B/C/F/M surfaces. No observed catch-at-age, age-specific index, empirical age-specific weight/maturity matrices, or age-specific uncertainty is supplied. Reported spawning output is measured in trillions of eggs, not SSB biomass. Table ii interval unit labels conflict with its figure; see source review."))
 
-candidate_path <- file.path(root, "discovery/candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, colClasses = "character", check.names = FALSE)
 ci <- which(candidates$candidate_id == candidate_id)
 if (length(ci) != 1L || candidates$eligibility[ci] != "eligible" ||

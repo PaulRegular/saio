@@ -537,7 +537,7 @@ import_noaa_blue_deacon_california_2017 <- function(root = ".", write = FALSE) {
     stringsAsFactors = FALSE, check.names = FALSE)
   assessments_db <- read.csv(file.path(root, "database/assessments.csv"), colClasses = "character",
     stringsAsFactors = FALSE, check.names = FALSE)
-  candidate_path <- file.path(root, "discovery/candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"),
     check.names = FALSE)
   candidate_row <- which(candidates$candidate_id == candidate_id)

@@ -274,7 +274,7 @@ assessment <- pacific_database_row(
   )
 )
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- utils::read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE
 )

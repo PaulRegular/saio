@@ -1,8 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-source_paths <- c(list.files("database", pattern = "[.]csv$", full.names = TRUE),
-  list.files("discovery", pattern = "[.]csv$", full.names = TRUE))
+source_paths <- list.files("database", pattern = "[.]csv$", full.names = TRUE)
 source_hashes <- tools::md5sum(source_paths)
 import_env <- new.env(parent = globalenv())
 import_env$commandArgs <- function(trailingOnly = FALSE) {
@@ -172,11 +171,10 @@ inputs <- utils::read.csv(file.path(database, "inputs.csv"), stringsAsFactors = 
   na.strings = c("", "NA"), check.names = FALSE)
 outputs <- utils::read.csv(file.path(database, "outputs.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-candidate <- utils::read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE,
+candidate <- utils::read.csv(file.path(root, "database/candidates.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- candidate_units()
-review <- paste(readLines(file.path(root, "source_reviews", "screening",
-  "noaa_acadian_redfish_2025.md"), warn = FALSE), collapse = "\n")
+review <- paste(readLines(file.path(root, "source_reviews/noaa_acadian_redfish_gom_gb.md"), warn = FALSE), collapse = "\n")
 stopifnot(
   sum(stocks$stock_id == stock_id) == 1L,
   sum(assessments$assessment_id == assessment_id) == 1L,

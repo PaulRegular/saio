@@ -463,7 +463,7 @@ for (i in seq_len(nrow(benchmark_rows))) {
 inputs <- do.call(rbind, input_rows)
 outputs <- do.call(rbind, output_rows)
 
-candidates_path <- file.path(root, "discovery/candidates.csv")
+candidates_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
 candidate_row <- which(candidates$candidate_id == candidate_id)

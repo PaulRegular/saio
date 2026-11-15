@@ -6,7 +6,7 @@ Assessment sources: linked ICES Standard Graphs source-data pages retrieved 2026
 
 ## Scope and identity
 
-This screen covers 33 ICES inventory rows that were still unreviewed in the candidate register. Each code is a separate ICES assessment unit with a distinct area description. No exact stock-code match was found in the canonical database. The provisional candidate unit IDs are stored in `discovery/candidates.csv`; these are not canonical stock records.
+This screen covers 33 ICES inventory rows that were still unreviewed in the candidate register. Each code is a separate ICES assessment unit with a distinct area description. No exact stock-code match was found in the canonical database. The provisional candidate unit IDs are stored in `database/candidates.csv`; these are not canonical stock records.
 
 The reviewed codes are:
 

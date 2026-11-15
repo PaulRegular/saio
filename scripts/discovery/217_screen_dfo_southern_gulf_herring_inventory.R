@@ -1,6 +1,6 @@
 # Screen the DFO Southern Gulf spring- and fall-spawning herring entries.
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 ids <- c(
   'DFO:Gulf:Atlantic Herring - NAFO 4T (Spring Spawner)',
@@ -122,7 +122,7 @@ x$notes[i[1L]] <- paste(
 )
 x$notes[i[2L]] <- paste(
   'Already curated as dfo_herring_4tvn_fall_2024 and a separate 2026 summary',
-  'event; do not merge their data. See source_reviews/dfo_herring_4tvn_fall.md.'
+  'event; do not merge their data. See source_reviews/ck_dfo_gsl_harengus_4t_fall.md.'
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

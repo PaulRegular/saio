@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-candidates <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- candidates[candidates$candidate_id ==
   'DFO:Gulf:Winter Flounder - NAFO 4T', , drop = FALSE]
@@ -44,8 +44,7 @@ stopifnot(
   all(file.info(paths)$size == sources$bytes),
   all(grepl('^[[:xdigit:]]{64}$', sources$sha256)),
   all(sources$retrieved_utc == '2026-10-30'),
-  file.exists(file.path(root, 'source_reviews', 'screening',
-    'dfo_sgsl_winter_flounder_4t_2017.md')),
+  file.exists(file.path(root, 'source_reviews/dfo_sgsl_winter_flounder_4t.md')),
   file.exists(file.path(root, 'scripts', 'discovery',
     '341_screen_dfo_4t_winter_flounder_2017.R')),
   any(stocks$stock_id == 'dfo_sgsl_winter_flounder_4t'),

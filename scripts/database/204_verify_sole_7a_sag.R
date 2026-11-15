@@ -1,5 +1,5 @@
 # Cross-check the working-group summary against the published assessment graph.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 i <- which(x$candidate_id == 'ICES:sol.27.7a')
 if (length(i) != 1L || x$screening_status[i] != 'in_progress' || x$eligibility[i] != 'unresolved') stop('Preserve the existing review; candidate state has changed.', call. = FALSE)

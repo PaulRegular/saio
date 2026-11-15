@@ -466,7 +466,7 @@ if (anyDuplicated(key)) stop("Duplicate assumption keys are present.", call. = F
 
 stocks_path <- file.path(database, "stocks.csv")
 assessments_path <- file.path(database, "assessments.csv")
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 stocks <- read_csv(stocks_path); assessments <- read_csv(assessments_path)
 candidate <- read_csv(candidate_path)
 ci <- which(candidate$candidate_id == candidate_id)

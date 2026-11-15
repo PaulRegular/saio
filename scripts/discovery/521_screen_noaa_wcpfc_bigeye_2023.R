@@ -5,7 +5,7 @@ cache_options <- c(file.path(root, 'source_cache', cache_name),
 cache_options <- cache_options[dir.exists(cache_options)]
 if (!length(cache_options)) stop('Pinned WCPO bigeye cache is required.', call. = FALSE)
 cache_dir <- normalizePath(cache_options[[1L]], winslash = '/')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 manifest <- read.csv(file.path(cache_dir, 'sources.csv'), stringsAsFactors = FALSE)
 
 sha256_file <- function(path) {

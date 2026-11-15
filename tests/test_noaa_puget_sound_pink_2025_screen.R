@@ -3,11 +3,10 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 source('scripts/discovery/508_screen_noaa_puget_sound_pink_2025.R')
 
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 row <- register[register$candidate_id == 'NOAA:10576', , drop = FALSE]
-review <- readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_puget_sound_pink_2025.md'), warn = FALSE)
+review <- readLines(file.path(root, 'source_reviews/noaa_puget_sound_pink_2025.md'), warn = FALSE)
 review_text <- paste(review, collapse = ' ')
 
 stopifnot(nrow(row) == 1L,

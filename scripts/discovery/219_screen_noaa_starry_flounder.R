@@ -1,5 +1,5 @@
 # Screen current NOAA starry flounder entries and reconcile the legacy broad-area row.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- c('NOAA:10025', 'NOAA:14804', 'NOAA:14805')
 rows <- match(ids, x$candidate_id)
@@ -66,7 +66,7 @@ x$notes[legacy] <- paste(
   'The 2005 Stock Synthesis assessment modeled California and Oregon-Washington separately.',
   'The 2017 DB-SRA superseded those model projections',
   'for harvest specifications. Review current entries NOAA:14804 and',
-  'NOAA:14805 together; see source_reviews/screening/noaa_starry_flounder.md.'
+  'NOAA:14805 together; see source_reviews/shared/noaa_starry_flounder.md.'
 )
 
 for (j in rows[-1L]) {
@@ -122,7 +122,7 @@ for (j in rows[-1L]) {
     'NOAA Stock SMART metadata describe a', x$inventory_assessment_year[j], 'DB-SRA',
     'using data through 2016. The 2026',
     'harvest-specification analysis cites this assessment for 2027-28. See',
-    'source_reviews/screening/noaa_starry_flounder.md.'
+    'source_reviews/shared/noaa_starry_flounder.md.'
   )
 }
 

@@ -1,14 +1,13 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:11694', , drop = FALSE]
 units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'wcpfc_wcpo_yellowfin', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_wcpfc_yellowfin_2026.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/wcpfc_wcpo_yellowfin.md'), warn = FALSE), collapse = ' ')
 
 stopifnot(
   nrow(candidate) == 1L,

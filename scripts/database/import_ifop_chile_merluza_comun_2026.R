@@ -4,7 +4,7 @@ assessment_id <- "ifop_merluza_comun_2026"
 stock_id <- "ifop_merluza_comun_up"
 candidate_id <- "IFOP:merluza_comun_UP"
 source_review_path <- file.path(
-  "source_reviews", "screening", "ifop_chile_merluza_comun_2026.md"
+  "source_reviews/ifop_chile_merluza_comun_2026.md"
 )
 report_path <- file.path(
   "source_cache", "chile_merluza_comun_2026", "ifop_2026_link_01.pdf"
@@ -312,7 +312,7 @@ manifest <- manifest[manifest$file != accdb_row$file, , drop = FALSE]
 manifest <- rbind(manifest, accdb_row)
 
 candidate_register <- read.csv(
-  file.path("discovery", "candidates.csv"),
+  file.path("database/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA")
 )
 candidate_index <- which(candidate_register$candidate_id == candidate_id)
@@ -431,7 +431,7 @@ if ("--apply" %in% commandArgs(trailingOnly = TRUE)) {
   append_table(to_rows(inputs), "inputs.csv")
   append_table(to_rows(outputs), "outputs.csv")
   update_csv_record(
-    file.path("discovery", "candidates.csv"), candidate_id,
+    file.path("database/candidates.csv"), candidate_id,
     candidate_register[candidate_index, , drop = FALSE], "candidate_id"
   )
   write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")

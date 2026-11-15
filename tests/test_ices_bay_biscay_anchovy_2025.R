@@ -3,7 +3,7 @@ candidate_id <- "ICES:ane.27.8"
 stock_id <- "ices_bay_biscay_anchovy_8"
 assessment_id <- "ices_bay_biscay_anchovy_2025"
 
-register <- read.csv(file.path(root, "discovery/candidates.csv"), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, "database/candidates.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read.csv(file.path(root, "database/stocks.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

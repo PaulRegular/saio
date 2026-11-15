@@ -1,5 +1,5 @@
 root <- "."
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 stocks_path <- file.path(root, 'database', 'stocks.csv')
 
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))

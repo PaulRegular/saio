@@ -3,7 +3,7 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 root <- '.'
 source('tests/helper_inventory.R')
 unit_id <- 'iccat_north_atlantic_swordfish'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate_ids <- c('NOAA:10953', 'DFO:Maritimes:Swordfish - North Atlantic')
 candidates <- register[match(candidate_ids, register$candidate_id), , drop = FALSE]

@@ -80,7 +80,7 @@ stopifnot(
   assumptions$value[assumptions$setting == "survey_timing"] == "unknown"
 )
 
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE)
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE)
 candidate <- candidate[candidate$candidate_id == "AFMA:SESSF_CTS_Blue_Grenadier", ]
 stopifnot(
   nrow(candidate) == 1L,

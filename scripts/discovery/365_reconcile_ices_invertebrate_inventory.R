@@ -1,5 +1,5 @@
 root <- "."
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 cache_dir <- file.path(root, 'source_cache', 'shared/ices_sid')
 cache_path <- file.path(cache_dir, 'stock_list_2026.json')
 expected_sha256 <- '913D6A3EEAB9449AE3CD0DD15661A150D36FF79B6E6A9BA78D86D46BA1035F42'

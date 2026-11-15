@@ -1,11 +1,10 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE)
 
 id <- 'NOAA:10059'
-source_review <- file.path(root, 'source_reviews', 'screening',
-  'noaa_pacific_rex_sole_2023.md')
+source_review <- file.path(root, 'source_reviews/noaa_pacific_coast_rex_sole.md')
 i <- match(id, x$candidate_id)
 if (is.na(i)) stop('Expected NOAA Pacific Coast rex sole row is missing.', call. = FALSE)
 if (any(stocks$scientific_name == 'Glyptocephalus zachirus')) {

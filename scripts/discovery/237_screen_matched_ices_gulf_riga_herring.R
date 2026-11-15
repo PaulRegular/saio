@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'ICES:her.27.28'
 i <- which(x$candidate_id == id)
@@ -49,7 +49,7 @@ x$decision_reason[i] <- paste0(
   'fixed M; the fitted object and official report/graphs verify age-specific and aggregate outputs.'
 )
 x$notes[i] <- paste0(
-  'See source_reviews/ices_herring_gulf_riga_2026.md. The ',
+  'See source_reviews/ck_ices_wgbfas_harengus_bs_28_1.md. The ',
   'acoustic index physical multiplier is not stated; source index values remain unscaled.'
 )
 

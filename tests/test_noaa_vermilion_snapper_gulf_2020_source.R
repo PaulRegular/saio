@@ -38,7 +38,7 @@ assumptions <- read_columns("database/assumptions.csv", c("assessment_id",
   "component", "setting", "value", "source_reference", "notes"))
 outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 inputs <- read_assessment_rows("database/inputs.csv", assessment_id)
-candidates <- read_columns("discovery/candidates.csv", c("candidate_id",
+candidates <- read_columns("database/candidates.csv", c("candidate_id",
   "matched_stock_id", "match_status", "eligibility", "import_status",
   "output_evidence", "notes"))
 manifest <- read.csv(
@@ -115,7 +115,7 @@ stopifnot(
 )
 
 review <- paste(readLines(
-  "source_reviews/screening/noaa_vermilion_snapper_gulf_2020.md",
+  "source_reviews/noaa_vermilion_snapper_gulf.md",
   warn = FALSE), collapse = "\n")
 stopifnot(
   grepl("Table 18 has been transcribed for 1950-2017", review, fixed = TRUE),

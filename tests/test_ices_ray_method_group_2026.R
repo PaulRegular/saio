@@ -9,7 +9,7 @@ source(file.path(root, 'scripts/discovery/493_screen_ices_ray_method_group_2026.
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-candidates <- read.csv(file.path(root, 'discovery/candidates.csv'),
+candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 units <- candidate_units()
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
@@ -29,7 +29,7 @@ unit_ids <- c('ices_sho_27_89a', 'ices_rjc_27_3a47d', 'ices_rjh_27_4bc7d',
   'ices_rjc_27_7afg', 'ices_syt_27_67')
 screened <- candidates[match(ids, candidates$candidate_id), , drop = FALSE]
 units_screened <- units[match(unit_ids, units$candidate_unit_id), , drop = FALSE]
-source_review <- file.path(root, 'source_reviews/screening/ices_ray_method_group_2026.md')
+source_review <- file.path(root, 'source_reviews/shared/ices_ray_method_group_2026.md')
 
 stopifnot(nrow(screened) == length(ids),
   identical(screened$candidate_unit_id, unit_ids),

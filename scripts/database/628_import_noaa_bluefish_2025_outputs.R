@@ -230,7 +230,7 @@ if (!write_mode) {
 } else {
   stocks <- read_csv("database/stocks.csv")
   assessments <- read_csv("database/assessments.csv")
-  candidates <- read_csv("discovery/candidates.csv")
+  candidates <- read_csv("database/candidates.csv")
   i <- which(candidates$candidate_id == candidate_id)
   if (length(i) != 1L || candidates$import_status[i] != "not_started" ||
       candidates$match_status[i] != "new" || stock_id %in% stocks$stock_id ||
@@ -251,7 +251,7 @@ if (!write_mode) {
   candidates$decision_reason[i] <- "Partial import completed from the accepted 2025 assessment. Numeric outputs and recent catch summaries are available; numeric current-run composition/index inputs and biological arrays remain unavailable."
   candidates$notes[i] <- paste(candidates$notes[i],
     "Source import preserved only published numeric rows; plotted inputs were not digitized, catch-at-age was not reconstructed, and 2022 inputs were not substituted for the 2025 run.")
-  replace_candidate_register_row("discovery/candidates.csv", i,
+  replace_candidate_register_row("database/candidates.csv", i,
     candidates[i, , drop = FALSE], candidate_id)
   cat("Imported partial NOAA Atlantic bluefish 2025 source data.\n")
 }

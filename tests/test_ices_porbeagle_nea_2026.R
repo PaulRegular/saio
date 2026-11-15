@@ -5,13 +5,12 @@ candidate_id <- 'ICES:por.27.nea'
 unit_id <- 'ices_porbeagle_nea'
 cache <- file.path(root, 'source_cache', 'discovery_ices_porbeagle_nea_2026')
 
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 units <- candidate_units()
 unit <- units[units$unit_key == paste0('candidate:', unit_id), , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'ices_porbeagle_nea_2026.md'), warn = FALSE), collapse = '\n')
+review <- paste(readLines(file.path(root, 'source_reviews/ices_porbeagle_nea.md'), warn = FALSE), collapse = '\n')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

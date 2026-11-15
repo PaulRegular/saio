@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'beringraja_rhina/noaa_pacific_coast_longnose_skate_2019')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 today <- '2026-11-01'
 
 sha256_file <- function(path) {

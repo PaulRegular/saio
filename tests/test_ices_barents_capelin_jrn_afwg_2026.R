@@ -9,11 +9,11 @@ source(file.path(root,
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:cap.27.1-2', , drop = FALSE]
 review_path <- file.path(root,
-  'source_reviews/screening/ices_barents_capelin_jrn_afwg_2026.md')
+  'source_reviews/ices_barents_capelin_jrn_afwg_2026.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 review <- gsub('[[:space:]]+', ' ', review)
 units <- candidate_units()

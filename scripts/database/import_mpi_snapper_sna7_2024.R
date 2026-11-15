@@ -642,7 +642,7 @@ if ("--apply" %in% commandArgs(trailingOnly = TRUE)) {
     stop("Assessment rows already exist; refusing to append duplicates.")
   }
   if (csv_has_record(database_path("stocks.csv"), stock_id) ||
-      csv_has_record(file.path("discovery", "candidates.csv"), "MPI:SNA7")) {
+      csv_has_record(file.path("database/candidates.csv"), "MPI:SNA7")) {
     stop("The stock or candidate already exists; inspect before importing.")
   }
 
@@ -651,7 +651,7 @@ if ("--apply" %in% commandArgs(trailingOnly = TRUE)) {
   append_table(assumption_rows, "assumptions.csv")
   append_table(input_rows, "inputs.csv")
   append_table(output_rows, "outputs.csv")
-  append_table(candidate_rows, file.path("..", "discovery", "candidates.csv"))
+  append_table(candidate_rows, file.path("..", "database/candidates.csv"))
   manifest_path <- file.path("provenance/mpi_snapper_sna7_2024/sources.csv")
   new_manifest <- do.call(rbind, lapply(manifest_rows, as.data.frame))
   if (file.exists(manifest_path)) {

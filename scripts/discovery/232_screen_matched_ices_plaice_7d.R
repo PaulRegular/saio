@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'ICES:ple.27.7d'
 i <- which(x$candidate_id == id)
@@ -55,7 +55,7 @@ x$decision_reason[i] <- paste0(
   'N/F-at-age outputs and age-specific uncertainty are unavailable.'
 )
 x$notes[i] <- paste0(
-  'See source_reviews/ices_plaice_english_channel_7d_2026.md. ',
+  'See source_reviews/ck_ices_wgnssk_platessa_ns_7d.md. ',
   'The 2026 record is distinct from the historical 2025; native SS3 ',
   'outputs are not recovered.'
 )

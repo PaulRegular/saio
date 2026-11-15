@@ -519,7 +519,7 @@ input_key <- do.call(paste, c(lapply(inputs[duplicate_keys], function(x) {
 if (anyDuplicated(input_key)) stop("Generated duplicate input rows.", call. = FALSE)
 
 update_candidate <- function() {
-  path <- "discovery/candidates.csv"
+  path <- "database/candidates.csv"
   candidates <- read.csv(path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   i <- which(candidates$candidate_id == candidate_id)

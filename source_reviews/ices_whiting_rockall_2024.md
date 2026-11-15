@@ -19,7 +19,7 @@ infer that no raw age samples exist outside the assessment materials.
 
 This is a distinct current stock unit, separate from whg.27.6a, whg.27.47d,
 whg.27.7a, and whg.27.89a. The identity and ineligibility screen is recorded
-in `discovery/candidates.csv`; no canonical stock, assessment event, or
+in `database/candidates.csv`; no canonical stock, assessment event, or
 numerical input/output records were added.
 
 ## Sources

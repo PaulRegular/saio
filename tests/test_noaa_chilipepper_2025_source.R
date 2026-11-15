@@ -23,7 +23,7 @@ outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 assessments <- read.csv("database/assessments.csv",
   colClasses = "character", check.names = FALSE)
 stocks <- read.csv("database/stocks.csv", colClasses = "character", check.names = FALSE)
-candidates <- read.csv("discovery/candidates.csv",
+candidates <- read.csv("database/candidates.csv",
   colClasses = "character", check.names = FALSE)
 inventory <- candidate_units()
 manifest <- read.csv("provenance/discovery_noaa_chilipepper_2025/sources.csv",

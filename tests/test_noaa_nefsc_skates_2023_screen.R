@@ -4,7 +4,7 @@ root <- "."
 source(file.path(root, 'scripts', 'discovery',
   '499_screen_noaa_nefsc_skates_2023.R'))
 
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 ids <- c('NOAA:11036', 'NOAA:11047', 'NOAA:11063', 'NOAA:11071',
   'NOAA:11076', 'NOAA:11080', 'NOAA:11269')
@@ -12,8 +12,7 @@ rows <- register[match(ids, register$candidate_id), , drop = FALSE]
 units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_northeast_skate_complex', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_nefsc_skate_complex_2023.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_nefsc_skate_complex_2023.md'), warn = FALSE), collapse = ' ')
 
 source_cache <- file.path(root, 'source_cache', 'discovery_noaa_nefsc_skates_2023')
 manifest <- read.csv(file.path(source_cache, 'sources.csv'), stringsAsFactors = FALSE,

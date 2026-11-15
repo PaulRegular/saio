@@ -535,7 +535,7 @@ if (write_mode) {
   if (!nrow(outputs_existing)) append_csv(outputs_new, outputs_path)
 
   source(file.path(root, "scripts", "discovery", "candidate_register_io.R"), local = TRUE)
-  candidate_path <- file.path(root, "discovery", "candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   ci <- which(candidates$candidate_id == candidate_id &

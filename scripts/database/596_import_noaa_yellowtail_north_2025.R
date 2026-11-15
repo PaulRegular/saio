@@ -428,7 +428,7 @@ if(any(!nzchar(input_data$source_reference))||any(!nzchar(output_data$source_ref
 a_key<-do.call(paste,c(lapply(assumption_data[c("assessment_id","component","fleet","survey","sex","region","season","setting")],function(x)ifelse(is.na(x),"",x)),sep="\r"))
 if(anyDuplicated(a_key))stop("Duplicate assumptions generated.",call.=FALSE)
 
-candidate_path<-file.path(root,"discovery","candidates.csv")
+candidate_path<-file.path(root,"database/candidates.csv")
 stocks_path<-file.path(database,"stocks.csv");assessments_path<-file.path(database,"assessments.csv")
 stocks<-read_csv(stocks_path);assessments<-read_csv(assessments_path)
 candidate<-read_csv(candidate_path);
@@ -469,7 +469,7 @@ cr$timing_evidence<-"Survey-index and composition observations use month 7; the 
 cr$output_evidence<-"Report.sso provides annual N, biomass, catch-at-age, F-at-age and M-at-age through 2036; published 95% intervals cover spawning output through 2025 and recruitment through 2024."
 cr$review_date<-"2026-11-07"
 cr$decision_reason<-"Partial source import of the current U.S. northern unit 2025 benchmark; source likelihood inputs and fitted outputs remain distinct."
-cr$notes<-"See source_reviews/noaa_yellowtail_rockfish_north_2025.md. Model-generated biology and mortality surfaces are outputs, not observed input series."
+cr$notes<-"See source_reviews/noaa_yellowtail_rockfish_north.md. Model-generated biology and mortality surfaces are outputs, not observed input series."
 
 
 files<-c(report_file,archive_file,"native/5.09_no_extra_SE/YTRK.North.data.ss",

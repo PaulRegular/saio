@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_ices_dogfish_2025')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 id <- 'ICES:rjm.27.3a47d'
 unit_id <- 'ices_spotted_ray_3a47d'
 file <- 'wgef_2025.pdf'

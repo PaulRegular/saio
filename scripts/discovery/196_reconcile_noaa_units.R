@@ -1,6 +1,6 @@
 # Reconcile inventory labels with previously reviewed official assessment units.
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE, na.strings = 'NA')
 map <- data.frame(candidate = c('NOAA:10014', 'NOAA:10026', 'NOAA:10031', 'NOAA:10191', 'NOAA:11050', 'NOAA:12746'),

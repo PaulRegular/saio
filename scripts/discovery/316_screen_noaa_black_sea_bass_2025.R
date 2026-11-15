@@ -1,5 +1,5 @@
 root <- "."
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 cache <- file.path(root, 'source_cache', 'discovery_noaa_black_sea_bass_2025')
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -76,7 +76,7 @@ reviews <- list(
       'proposed rule describes a further revision in progress and a pending formal status',
       'determination. The 2025 report provides N-at-age, F-at-age, and SSB tables, but',
       'does not expose complete annual age-composition matrices in machine-readable form.',
-      'See source_reviews/screening/noaa_black_sea_bass_south_atlantic_2025.md.'
+      'See source_reviews/noaa_south_atlantic_black_sea_bass.md.'
     )
   ),
   'NOAA:10311' = list(
@@ -140,7 +140,7 @@ reviews <- list(
       '2024 and was accepted. The detailed assessment report link cited by the draft points to',
       'NOAA SASINF; the final run package and its data files remain to be recovered. The model',
       'contains north/south subregions divided near Hudson Canyon; this is one Mid-Atlantic',
-      'management stock, not two inventory units. See source_reviews/screening/',
+      'management stock, not two inventory units. See source_reviews/',
       'noaa_black_sea_bass_mid_atlantic_2025.md.'
     )
   )

@@ -646,7 +646,7 @@ if (!write_mode) {
   append_csv("database/inputs.csv", inputs_to_add)
   append_csv("database/outputs.csv", outputs_to_add)
 
-  register_path <- file.path("discovery", "candidates.csv")
+  register_path <- file.path("database/candidates.csv")
   register <- read.csv(register_path, stringsAsFactors = FALSE, check.names = FALSE,
     na.strings = c("", "NA"))
   candidate_row <- which(register$candidate_id == candidate_id)

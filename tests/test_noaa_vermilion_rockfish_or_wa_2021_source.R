@@ -29,13 +29,13 @@ inputs <- read_assessment_rows("database/inputs.csv", ids)
 outputs <- read_assessment_rows("database/outputs.csv", ids)
 assumptions_all <- read_table("database/assumptions.csv")
 assumptions <- assumptions_all[assumptions_all$assessment_id %in% ids, , drop = FALSE]
-candidates <- read_table("discovery/candidates.csv")
+candidates <- read_table("database/candidates.csv")
 inventory <- candidate_units()
 manifest <- read_table("provenance/noaa_vermilion_rockfish_or_wa_2021/sources.csv")
 reviews <- paste(unlist(lapply(c(
-  "source_reviews/screening/noaa_vermilion_rockfish_or_wa_2021.md",
-  "source_reviews/screening/noaa_vermilion_rockfish_oregon_2021.md",
-  "source_reviews/screening/noaa_vermilion_rockfish_washington_2021.md"
+  "source_reviews/noaa_vermilion_rockfish_or_wa.md",
+  "source_reviews/noaa_vermilion_rockfish_oregon_2021.md",
+  "source_reviews/noaa_vermilion_rockfish_washington_2021.md"
 ), readLines, warn = FALSE)), collapse = " ")
 
 one_output <- function(id, measure, year, age = NA_integer_, sex = NA_character_) {

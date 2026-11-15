@@ -13,7 +13,7 @@ stocks <- read.csv(file.path(root, "database", "stocks.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 assessments <- read.csv(file.path(root, "database", "assessments.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
-candidate <- read.csv(file.path(root, "discovery", "candidates.csv"),
+candidate <- read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 inputs <- read_selected(file.path(root, "database", "inputs.csv"),
   c("assessment_id", "type", "measure", "basis", "year", "age", "value",
@@ -33,8 +33,7 @@ input <- inputs[inputs$assessment_id == assessment_id, , drop = FALSE]
 output <- outputs[outputs$assessment_id == assessment_id, , drop = FALSE]
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
 projected_output <- output[as.integer(output$year) > 2024L, , drop = FALSE]
-review <- paste(readLines(file.path(root, "source_reviews", "screening",
-  "noaa_west_coast_widow_rockfish.md"), warn = FALSE), collapse = "\n")
+review <- paste(readLines(file.path(root, "source_reviews/noaa_west_coast_widow.md"), warn = FALSE), collapse = "\n")
 
 catch <- input[input$type == "catch" & input$measure == "total_biomass", , drop = FALSE]
 index <- input[input$type == "index" & input$measure %in% c("total_numbers", "total_biomass"), , drop = FALSE]

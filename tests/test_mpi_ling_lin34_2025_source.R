@@ -23,7 +23,7 @@ assessments <- read_table("assessments.csv")
 assumptions <- read_assessment_rows("assumptions.csv", assessment_id)
 inputs <- read_assessment_rows("inputs.csv", assessment_id)
 outputs <- read_assessment_rows("outputs.csv", assessment_id)
-candidates <- read.csv(file.path("discovery", "candidates.csv"),
+candidates <- read.csv(file.path("database/candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 
 stock <- stocks[stocks$stock_id == "mpi_ling_lin34", , drop = FALSE]

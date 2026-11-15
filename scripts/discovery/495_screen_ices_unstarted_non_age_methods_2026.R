@@ -2,7 +2,7 @@ root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_ices_unstarted_age_audit_2026')
 sid_path <- file.path(root, 'source_cache', 'shared/ices_sid', 'stock_list_2026.json')
 sid_hash <- '913D6A3EEAB9449AE3CD0DD15661A150D36FF79B6E6A9BA78D86D46BA1035F42'
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 expected_codes <- c(
   'raj.27.3a47d', 'rjb.27.3a4', 'rjh.27.4a6', 'rjr.27.23a4', 'dab.27.3a4',
   'bsf.27.nea', 'gag.27.nea', 'jaa.27.10a2', 'usk.27.1-2', 'usk.27.12ac',

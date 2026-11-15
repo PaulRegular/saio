@@ -407,7 +407,7 @@ if (write_mode) {
   }
   append_pacific_case(stock, assessment, assumptions, inputs, outputs)
 
-  candidate_path <- file.path(root, "discovery/candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, colClasses = "character", check.names = FALSE)
   candidate_row <- which(candidates$candidate_id == candidate_id)
   if (length(candidate_row) != 1L || !candidates$import_status[candidate_row] %in% c("not_started", "partial")) {

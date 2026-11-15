@@ -7,7 +7,7 @@ assessment_id <- 'ices_ling_faroe_5b_2026'
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 report <- readLines(file.path(cache, 'WGDEEP_2026_ling_5b_section.txt'), warn = FALSE)
-candidates <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)

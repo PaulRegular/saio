@@ -9,12 +9,12 @@ source(file.path(root,
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 north <- register[register$candidate_id == 'NOAA:12194', , drop = FALSE]
 south <- register[register$candidate_id == 'NOAA:12195', , drop = FALSE]
 units <- candidate_units()
-review_path <- file.path(root, 'source_reviews/screening/noaa_lingcod_2021.md')
+review_path <- file.path(root, 'source_reviews/shared/noaa_lingcod_2021.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 review <- gsub('[[:space:]]+', ' ', review)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,

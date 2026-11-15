@@ -60,7 +60,7 @@ candidate <- data.frame(
   notes = "Internal candidate and unit identifiers only; the report does not provide a formal stock code. The east coast stock is distinct from Gulf of Carpentaria and Torres Strait Spanish mackerel units."
 )
 
-candidate_path <- file.path(root, "discovery/candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 if (candidate_id %in% candidates$candidate_id || candidate_unit_id %in% candidates$candidate_unit_id) {
   stop("Candidate identity already exists; review the register before proceeding.", call. = FALSE)

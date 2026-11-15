@@ -768,7 +768,7 @@ if (anyDuplicated(key) || any(!nzchar(input_data$source_reference)) ||
 
 stocks_path <- file.path(database, "stocks.csv")
 assessments_path <- file.path(database, "assessments.csv")
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
 candidate <- read_csv(candidate_path)

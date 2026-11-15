@@ -503,7 +503,7 @@ if (write_mode) {
 
   source(file.path(root, "scripts", "discovery", "candidate_register_io.R"),
     local = TRUE)
-  candidate_path <- file.path(root, "discovery", "candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   candidate_rows <- which(!is.na(candidates$candidate_id) &

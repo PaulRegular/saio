@@ -1,6 +1,6 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
-register <- read.csv('discovery/candidates.csv',
+register <- read.csv('database/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 stock_ids <- c(10581:10593, 10596:10600)
 rows <- match(paste0('NOAA:', stock_ids), register$candidate_id)
@@ -14,9 +14,9 @@ stopifnot(nrow(coho) == 18L, !anyNA(rows), !anyDuplicated(rows),
   all(grepl('age-3', coho$survey_age_evidence, ignore.case = TRUE)),
   all(grepl('multi-age', coho$decision_reason, ignore.case = TRUE)),
   all(grepl('2026', coho$detailed_source_url, fixed = TRUE)),
-  file.exists('source_reviews/screening/noaa_coho_2026.md'))
+  file.exists('source_reviews/shared/noaa_coho_2026.md'))
 
-review <- readLines('source_reviews/screening/noaa_coho_2026.md',
+review <- readLines('source_reviews/shared/noaa_coho_2026.md',
   warn = FALSE)
 stopifnot(any(grepl('only age-3 fish', review, fixed = TRUE)),
   any(grepl('password-protected NWIFC area', review, fixed = TRUE)),

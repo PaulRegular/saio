@@ -9,7 +9,7 @@ source(file.path(root, 'scripts/discovery',
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN, old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:reb.27.5a14', , drop = FALSE]
 review <- screen$review
@@ -27,7 +27,7 @@ units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'ices_beaked_redfish_icelandic_slope', , drop = FALSE]
 source_review <- paste(readLines(file.path(root,
-  'source_reviews/screening/ices_beaked_redfish_icelandic_slope_2026.md'),
+  'source_reviews/ices_beaked_redfish_icelandic_slope.md'),
   warn = FALSE), collapse = '\n')
 
 expected <- c(

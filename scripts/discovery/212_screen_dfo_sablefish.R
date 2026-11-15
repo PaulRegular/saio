@@ -1,5 +1,5 @@
 # Screen the current BC Sablefish unit against DFO's 2022 operating model sources.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('DFO:Pacific:Sablefish', x$candidate_id)
 if (is.na(i)) stop('Expected DFO Sablefish row is missing.', call. = FALSE)

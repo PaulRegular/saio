@@ -16,7 +16,7 @@ read_assessment_rows <- function(path, assessment_id) {
 candidate_id <- "NOAA:10390"
 stock_id <- "noaa_cobia_gulf_mexico_2020"
 assessment_id <- paste0(stock_id, "_sedar28_update")
-register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+register <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 units <- candidate_units()
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
@@ -29,7 +29,7 @@ candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 imported <- nrow(inputs) > 0L || nrow(outputs) > 0L ||
   any(stocks$stock_id == stock_id) || any(assessments$assessment_id == assessment_id)
 
-review <- paste(readLines("source_reviews/screening/noaa_gulf_cobia_2020.md",
+review <- paste(readLines("source_reviews/noaa_gulf_cobia_2020.md",
   warn = FALSE), collapse = " ")
 stopifnot(
   nrow(candidate) == 1L,

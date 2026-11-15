@@ -23,12 +23,12 @@ outputs <- read_assessment_rows("database/outputs.csv", ids)
 assumptions <- read_assessment_rows("database/assumptions.csv", ids)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, check.names = FALSE)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
 inventory <- candidate_units()
 provenance <- read.csv(
   "provenance/discovery_noaa_blue_deacon_california_2017/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("source_reviews/screening/noaa_blue_deacon_california_2017_2019.md",
+review <- paste(readLines("source_reviews/noaa_blue_deacon_california.md",
   warn = FALSE), collapse = " ")
 
 input_measure <- function(measure, assessment_id = ids[1L]) {

@@ -699,7 +699,7 @@ if (anyDuplicated(assumption_key) || any(!nzchar(input_data$source_reference)) |
 
 stocks_path <- file.path(database, "stocks.csv")
 assessments_path <- file.path(database, "assessments.csv")
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
 candidate <- read_csv(candidate_path)
@@ -771,7 +771,7 @@ candidate_row$timing_evidence <- "Survey indices use native season 7 and fleet t
 candidate_row$output_evidence <- "Imported annual N/F/M/catch-at-age and biology surfaces from the 2023 Report.sso, recent 95% intervals for spawning output/recruitment, plus selected 2025 catch-only projection outputs."
 candidate_row$review_date <- format(Sys.Date(), "%Y-%m-%d")
 candidate_row$decision_reason <- "Partial source import of the latest current-unit assessment detail (2025 applied catch-only projection) and its 2023 full-benchmark base; data and outputs remain separated by assessment event."
-candidate_row$notes <- "See source_reviews/noaa_petrale_10011.md. The source model uses catches and length/age compositions rather than direct catch-at-age or age-specific abundance-index likelihoods; modeled biology outputs are not inputs."
+candidate_row$notes <- "See source_reviews/noaa_petrale_sole_pacific_coast.md. The source model uses catches and length/age compositions rather than direct catch-at-age or age-specific abundance-index likelihoods; modeled biology outputs are not inputs."
 
 replace_csv_row <- function(path, key_column, key_value, row_index, row) {
   bytes <- readBin(path, "raw", n = file.info(path)$size)

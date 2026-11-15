@@ -1,6 +1,6 @@
 source("scripts/database/source_manifest_io.R", local = TRUE)
 
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 manifest_path <- "provenance/mpi_trevally_tre7_2026/sources.csv"
 
 candidate_id <- "MPI:TRE7"

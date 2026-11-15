@@ -4,7 +4,7 @@ source(file.path(root, 'scripts/discovery/438_screen_ices_plaice_89a_2025.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 candidate_id <- 'ICES:ple.27.89a'
-candidate <- read.csv(file.path(root, 'discovery/candidates.csv'),
+candidate <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
 cache <- file.path(root, 'source_cache/discovery_ices_plaice_89a_2025')
@@ -13,7 +13,7 @@ paths <- file.path(cache, sources$file)
 advice <- paste(readLines(paths[2L], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')
 graph <- paste(readLines(paths[3L], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/ices_plaice_89a_2025.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/ices_plaice_89a.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,

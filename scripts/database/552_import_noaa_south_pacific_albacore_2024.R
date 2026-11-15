@@ -465,7 +465,7 @@ read_table <- function(name) read.csv(file.path(root, name), stringsAsFactors = 
   na.strings = c("", "NA"), check.names = FALSE)
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
-candidates <- read_table("discovery/candidates.csv")
+candidates <- read_table("database/candidates.csv")
 candidate_row <- which(candidates$candidate_id == candidate_id)
 if (length(candidate_row) != 1L || stock_id %in% stocks$stock_id ||
     assessment_id %in% assessments$assessment_id ||
@@ -615,9 +615,9 @@ candidates$notes[candidate_row] <- paste(
   candidates$notes[candidate_row],
   "A partial canonical source import was added under wcpfc_south_pacific_albacore_2024.",
   "No synthetic catch-at-age or age-specific index was added.",
-  "See source_reviews/screening/noaa_south_pacific_albacore_2024.md."
+  "See source_reviews/wcpfc_south_pacific_albacore.md."
 )
-replace_candidate_register_row(file.path(root, "discovery", "candidates.csv"),
+replace_candidate_register_row(file.path(root, "database/candidates.csv"),
   candidate_row, candidates[candidate_row, , drop = FALSE], candidate_id)
 
 

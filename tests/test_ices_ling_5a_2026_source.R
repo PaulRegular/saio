@@ -26,7 +26,7 @@ stocks <- read.csv(file.path(root, "database", "stocks.csv"),
 assessments <- read.csv(file.path(root, "database", "assessments.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA")
 )
-candidate <- read.csv(file.path(root, "discovery", "candidates.csv"),
+candidate <- read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA")
 )
 candidate <- candidate[candidate$candidate_id == "ICES:lin.27.5a", , drop = FALSE]

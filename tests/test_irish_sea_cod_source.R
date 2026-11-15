@@ -71,7 +71,7 @@ stopifnot(
   all(grepl("95%", y$notes[!is.na(y$year) & y$year <= 2025]))
 )
 
-review <- readLines(file.path(root, "source_reviews/ices_cod_irish_sea.md"), warn = FALSE)
+review <- readLines(file.path(root, "source_reviews/ck_ices_wgcse_morhua_is7a.md"), warn = FALSE)
 stopifnot(
   any(grepl("2019 age 0", review, fixed = TRUE)),
   any(grepl("over 1968–2018", review, fixed = TRUE)),

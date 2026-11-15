@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 rows <- register[register$candidate_id %in% c('NOAA:10727', 'NOAA:10730'), , drop = FALSE]
 parent <- register[register$candidate_id == 'NOAA:11005', , drop = FALSE]
@@ -14,8 +14,7 @@ afsc <- noaa[noaa$source_region == 'AFSC', , drop = FALSE]
 cache <- file.path(root, 'source_cache', 'discovery_noaa_goa_skates_2023_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_goa_skate_component_crosswalk_2023.md'), warn = FALSE), collapse = '\n')
+review <- paste(readLines(file.path(root, 'source_reviews/shared/noaa_goa_skate_component_crosswalk_2023.md'), warn = FALSE), collapse = '\n')
 
 stopifnot(
   nrow(rows) == 2L,

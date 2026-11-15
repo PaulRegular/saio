@@ -151,7 +151,7 @@ update_assessment <- function() {
   write.csv(assessments, path, row.names = FALSE, na = "")
 }
 update_candidate <- function() {
-  path <- "discovery/candidates.csv"
+  path <- "database/candidates.csv"
   candidates <- read.csv(path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   i <- which(candidates$candidate_id == candidate_id)
@@ -182,7 +182,7 @@ if (!write_mode) {
 } else {
   assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
     check.names = FALSE)
-  candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+  candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
     check.names = FALSE)
   if (sum(assessments$assessment_id == assessment_id) != 1L ||
       sum(candidates$candidate_id == candidate_id) != 1L) {

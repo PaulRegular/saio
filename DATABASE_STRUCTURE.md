@@ -28,8 +28,8 @@ database records while keeping analysis-specific choices separate.
 
 ## Candidate register
 
-Keep discovery records in a separate version-controlled register under
-`discovery/`, outside the five canonical source tables. A row
+Keep screening and import decisions in the tracked `database/candidates.csv`
+register. The published data release contains the five canonical source tables. A row
 identifies an official candidate stock unit, its organization, scientific name,
 area, latest assessment and source links; record inventory date and coverage,
 matched stock ID or unresolved identity, evidence for each key input and output,

@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'ICES:hom.27.9a'
 i <- which(x$candidate_id == id)
@@ -53,7 +53,7 @@ x$decision_reason[i] <- paste0(
   'population outputs are unavailable. Eligibility remains unresolved for the full screening criteria.'
 )
 x$notes[i] <- paste0(
-  'See source_reviews/ices_horse_mackerel_9a.md. Do not present the ' ,
+  'See source_reviews/ck_ices_wghansa_trachurus_sp9a.md. Do not present the ' ,
   '2026 SAG summary as a detailed assessment or infer age-specific outputs from aggregate results.'
 )
 

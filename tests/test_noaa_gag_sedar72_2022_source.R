@@ -28,12 +28,12 @@ assessment <- assessments[assessments$assessment_id == assessment_id, , drop = F
 assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
 inputs <- read_assessment_rows("database/inputs.csv", assessment_id)
 outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidates[candidates$candidate_id == candidate_id, , drop = FALSE]
 manifest <- read.csv("provenance/noaa_gag_sedar72_2022/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-review <- paste(readLines("source_reviews/screening/noaa_gag_sedar72_2022.md",
+review <- paste(readLines("source_reviews/noaa_gag_sedar72_2022.md",
   warn = FALSE), collapse = "\n")
 output_key <- paste(outputs$type, outputs$measure, outputs$year, outputs$sex,
   outputs$fleet, outputs$survey, outputs$age, sep = "|")

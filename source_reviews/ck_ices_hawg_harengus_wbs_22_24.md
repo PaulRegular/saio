@@ -26,4 +26,4 @@ source data.
 - ICES Stock Assessment Graphs, assessment key 21294:
   [official source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21294).
 - Current production-run inputs, outputs, and source gaps are recorded
-  in [the existing 20–24 stock review](ices_herring_western_baltic_2026.md).
+  in [the existing 20–24 stock review](ices_herring_western_baltic.md).

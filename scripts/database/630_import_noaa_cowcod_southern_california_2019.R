@@ -390,7 +390,7 @@ if (anyDuplicated(key(inputs_new, input_key_cols)) || anyDuplicated(key(outputs_
   stop("New Cowcod records contain duplicate canonical keys.", call. = FALSE)
 }
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidate <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 ci <- match(candidate_id, candidate$candidate_id)
 if (is.na(ci) || candidate$screening_status[ci] != "screened" || candidate$eligibility[ci] != "eligible" ||
@@ -404,7 +404,7 @@ candidate$import_status[ci] <- "partial"
 candidate$notes[ci] <- paste("Official 2019 Cowcod assessment imported from the native Stock Synthesis archive and report.",
   "Inputs preserve catch totals, six survey series, length compositions, conditional age-at-length compositions, and the report's likelihood weights.",
   "Outputs preserve fitted age surfaces, spawning output on the report scale, and recruitment; direct catch-at-age and age-specific index inputs are not supplied.",
-  "See source_reviews/noaa_cowcod_southern_california_2019.md for coverage and limits.")
+  "See source_reviews/noaa_cowcod_southern_california.md for coverage and limits.")
 
 existing_rows <- function(path) {
   rg <- Sys.which("rg")

@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'DFO:Quebec:Atlantic Herring - Herring Fishing Area 15'
 i <- match(id, x$candidate_id)
@@ -68,7 +68,7 @@ review <- list(
     'a possible future unit-boundary change, but no revised stock definition is',
     'yet adopted. Cached reports and checksums are under',
     'source_cache/discovery_dfo_quebec_herring_4s_2025/. See',
-    'source_reviews/screening/dfo_quebec_herring_4s_2025.md.'
+    'source_reviews/dfo_quebec_4s_herring.md.'
   )
 )
 

@@ -8,7 +8,7 @@ source(file.path(root,
   'scripts/discovery/451_screen_ices_thornback_ray_6_2026.R'), local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv('TAM_SOURCE_DRY_RUN', old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:rjc.27.6', , drop = FALSE]
 cache <- file.path(root, 'source_cache/discovery_ices_thornback_ray_6_2026')
@@ -23,7 +23,7 @@ outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = 
   na.strings = c('', 'NA'))
 units <- candidate_units()
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/ices_thornback_ray_6_2026.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/ices_thornback_ray_6.md'), warn = FALSE), collapse = '\n')
 
 expected <- c(
   ICES_advice_2026_rjc_27_6.pdf = 'dbbc5833c3a48cc912a485c0bb930973c838c52dfd93bfdff569f5715bb5d8d5',

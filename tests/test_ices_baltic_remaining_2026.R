@@ -1,5 +1,5 @@
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -54,8 +54,7 @@ stopifnot(
     character(1L)), '%PDF-'))
 )
 
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'ices_baltic_flatfish_2026.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/ices_baltic_flatfish_2026.md'), warn = FALSE), collapse = ' ')
 stopifnot(
   grepl('update assessments were conducted', review, fixed = TRUE),
   grepl('age-read catch samples', review, fixed = TRUE),

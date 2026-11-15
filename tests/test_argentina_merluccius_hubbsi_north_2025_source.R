@@ -15,7 +15,7 @@ outputs <- read_source_table("database/outputs.csv")
 outputs <- outputs[outputs$assessment_id == assessment_id, , drop = FALSE]
 assumptions <- read_source_table("database/assumptions.csv")
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
-candidate <- read_source_table("discovery/candidates.csv")
+candidate <- read_source_table("database/candidates.csv")
 candidate <- candidate[candidate$candidate_id == "INIDEP:MERLUCCIUS_HUBBSI_NORTH41", , drop = FALSE]
 unit <- candidate_units()
 unit <- unit[!is.na(unit$candidate_unit_id) & unit$candidate_unit_id == stock_id, , drop = FALSE]

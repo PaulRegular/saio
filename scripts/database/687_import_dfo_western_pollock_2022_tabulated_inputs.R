@@ -225,7 +225,7 @@ if (!file.copy(assessment_tmp, assessments_path, overwrite = TRUE)) {
 }
 unlink(assessment_tmp)
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- utils::read.csv(candidate_path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
 candidate_row <- which(candidates$candidate_id == candidate_id)

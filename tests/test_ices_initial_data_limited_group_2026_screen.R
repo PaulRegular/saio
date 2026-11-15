@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_ices_screen_first_six_2026')
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
@@ -72,7 +72,6 @@ for (i in seq_along(codes)) {
     grepl(graph_keys[i], graph_text, fixed = TRUE))
 }
 
-review <- readLines(file.path(root, 'source_reviews', 'screening',
-  'ices_initial_data_limited_group_2026.md'), warn = FALSE)
+review <- readLines(file.path(root, 'source_reviews/shared/ices_initial_data_limited_group_2026.md'), warn = FALSE)
 stopifnot(all(vapply(codes, grepl, logical(1L), x = paste(review, collapse = '\n'), fixed = TRUE)))
 cat('ICES initial data-limited group screen: passed.\n')

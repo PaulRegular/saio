@@ -29,7 +29,7 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
 assumptions <- read_assessment_rows("assumptions")
 inputs <- read_assessment_rows("inputs")
 outputs <- read_assessment_rows("outputs")
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- candidate_units()
 

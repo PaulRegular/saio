@@ -1,5 +1,5 @@
 # Screen NOAA northern rockfish units against the latest available assessment sources.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- paste0('NOAA:', c('10416', '10417'))
 i <- match(ids, x$candidate_id)

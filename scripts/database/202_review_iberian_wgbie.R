@@ -1,5 +1,5 @@
 # Record 2026 WGBIE screening for two distinct Iberian units.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 i <- match(c('ICES:meg.27.8c9a', 'ICES:sol.27.8c9a'), x$candidate_id)
 if (anyNA(i) || any(x$match_status[i] != 'unreviewed') || any(x$screening_status[i] != 'not_started')) stop('Preserve the existing reviews; candidate state has changed.', call. = FALSE)

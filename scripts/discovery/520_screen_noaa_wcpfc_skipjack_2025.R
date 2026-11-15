@@ -1,5 +1,5 @@
 root <- "."
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 cache_dir <- file.path(root, 'source_cache', 'discovery_noaa_wcpfc_skipjack_2025')
 
 sha256_file <- function(path) {

@@ -3,11 +3,10 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 source('scripts/discovery/509_screen_noaa_far_north_chinook_2024.R')
 
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 row <- register[register$candidate_id == 'NOAA:10604', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_far_north_chinook_2024.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_far_north_chinook_2024.md'), warn = FALSE), collapse = ' ')
 stopifnot(nrow(row) == 1L,
   row$candidate_unit_id == 'noaa_chinook_10604',
   row$match_status == 'new', row$screening_status == 'screened',

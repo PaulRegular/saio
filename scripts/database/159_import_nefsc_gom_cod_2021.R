@@ -228,7 +228,7 @@ assessment$notes <- paste(
   "Historical production run for the pre-2023 combined Gulf of Maine cod unit.",
   "The 2021 M02 variant is the latest detailed accepted assessment recovered for this legacy boundary, but is not current for the four successor stock units.",
   "Maturity values are reconstructed from an official figure; MADMF age-specific indices and numeric fitted N/F surfaces remain unavailable.",
-  "See source_reviews/nefsc_gom_cod_2021.md."
+  "See source_reviews/ck_nefsc_saw_morhua_gom.md."
 )
 
 stocks <- read.csv(file.path(database, "stocks.csv"), stringsAsFactors = FALSE,
@@ -244,7 +244,7 @@ stock_rows$region <- "New England"
 stock_rows$notes <- paste(
   "Historical Charbonneau-Keith stock identity; assessed as the combined Gulf of Maine cod unit through 2019.",
   "The 2023 research track replaced this management unit with EGOM, WGOM, Georges Bank, and Southern New England stocks.",
-  "The 2021 assessment is not assigned to any successor stock. See source_reviews/nefsc_gom_cod_2021.md."
+  "The 2021 assessment is not assigned to any successor stock. See source_reviews/ck_nefsc_saw_morhua_gom.md."
 )
 
 write_rows <- function(file, x, id) {

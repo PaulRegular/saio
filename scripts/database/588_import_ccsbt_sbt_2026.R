@@ -41,7 +41,7 @@ if (!identical(actual_hashes, toupper(manifest$sha256))) {
 
 stocks <- read_table("database/stocks.csv")
 assessments <- read_table("database/assessments.csv")
-candidates <- read_table("discovery/candidates.csv")
+candidates <- read_table("database/candidates.csv")
 stopifnot(!stock_id %in% stocks$stock_id,
   !source_id %in% assessments$assessment_id,
   !candidate_id %in% candidates$candidate_id)
@@ -236,14 +236,14 @@ candidate <- data.frame(
   ),
   review_date = "2026-11-06",
   decision_reason = "A partial current-run record is supported by official scalar outputs and model-structure details. Age-input eligibility remains unresolved because the assessment confirms age-based likelihoods and indices but public run-matched numeric input arrays, biological vectors and annual age-specific output tables were not located. No older assessment was substituted.",
-  notes = "One CCSBT-wide stock unit; national fleets, sexes, and grid cells are not counted as separate cases. See source_reviews/ccsbt_sbt_2026.md. The public sbt examples are simulated, while the assessment source objects are identified as private."
+  notes = "One CCSBT-wide stock unit; national fleets, sexes, and grid cells are not counted as separate cases. See source_reviews/ccsbt_sbt.md. The public sbt examples are simulated, while the assessment source objects are identified as private."
 )
 
 append_rows("database/stocks.csv", stock)
 append_rows("database/assessments.csv", assessment)
 append_rows("database/assumptions.csv", assumptions)
 append_rows("database/outputs.csv", outputs)
-append_rows("discovery/candidates.csv", candidate)
+append_rows("database/candidates.csv", candidate)
 
 
 cat("Imported CCSBT 2026 SBT source review and partial stock-status outputs.\n")

@@ -451,7 +451,7 @@ read_assessment_rows <- function(path, id) {
 }
 
 update_candidate <- function() {
-  path <- file.path(root, "discovery/candidates.csv")
+  path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   i <- which(candidates$candidate_id == candidate_id)

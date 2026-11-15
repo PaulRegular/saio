@@ -1,11 +1,10 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- register[register$candidate_id == 'NOAA:10546', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_brown_rockfish_pacific_coast_2013.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_pacific_brown_rockfish.md'), warn = FALSE), collapse = ' ')
 units <- candidate_units()
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

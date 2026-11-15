@@ -1,5 +1,5 @@
 root <- "."
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 cache <- file.path(root, 'source_cache', 'discovery_noaa_coho_2026')
 
 stock_ids <- c(10581:10593, 10596:10600)

@@ -98,12 +98,12 @@ candidate <- data.frame(
   notes = paste(
     "SBW 6I (Campbell Island Rise) is one of four separately assessed southern blue",
     "whiting units. FAR 2026/38 reports 2025 age and length data but is not mixed into",
-    "the 2022-23 production assessment. See source_reviews/mpi_sbw_sbw6i_2024.md."
+    "the 2022-23 production assessment. See source_reviews/mpi_sbw_sbw6i.md."
   ),
   stringsAsFactors = FALSE
 )
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 if (candidate$candidate_id %in% candidates$candidate_id ||
@@ -112,7 +112,7 @@ if (candidate$candidate_id %in% candidates$candidate_id ||
     call. = FALSE)
 }
 if (!identical(names(candidate), names(candidates))) {
-  stop("Candidate columns do not match discovery/candidates.csv.", call. = FALSE)
+  stop("Candidate columns do not match database/candidates.csv.", call. = FALSE)
 }
 write.table(candidate, candidate_path, sep = ",", quote = TRUE,
   row.names = FALSE, col.names = FALSE, append = TRUE, na = "", qmethod = "double")

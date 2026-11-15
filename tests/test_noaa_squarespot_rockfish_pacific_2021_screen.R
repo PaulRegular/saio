@@ -3,7 +3,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/434_screen_noaa_squarespot_rockfish_pacific_2021.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'NOAA:10442', , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
@@ -26,7 +26,7 @@ sha256_file <- function(path) {
 model <- file.path(cache, 'model_files/Squarespot_rockfish_2021_Model_For_Devore')
 dat <- readLines(file.path(model, 'SS_LB.dat'), warn = FALSE)
 report <- readLines(file.path(model, 'Report.sso'), warn = FALSE)
-review <- paste(readLines(file.path(root, 'source_reviews/screening/noaa_squarespot_rockfish_pacific_2021.md'),
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_squarespot_rockfish_pacific_2021.md'),
   warn = FALSE), collapse = '\n')
 
 stopifnot(

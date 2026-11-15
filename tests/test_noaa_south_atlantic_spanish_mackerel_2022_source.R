@@ -10,7 +10,7 @@ assessments <- read_csv("database/assessments.csv")
 assumptions <- read_csv("database/assumptions.csv")
 inputs <- read_csv("database/inputs.csv")
 outputs <- read_csv("database/outputs.csv")
-candidates <- read_csv("discovery/candidates.csv")
+candidates <- read_csv("database/candidates.csv")
 
 s <- stocks[stocks$stock_id == stock_id, , drop = FALSE]
 a <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]

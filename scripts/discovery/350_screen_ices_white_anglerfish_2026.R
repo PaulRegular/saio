@@ -1,5 +1,5 @@
 root <- "."
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 cases <- list(
   list(
     id = 'ICES:mon.27.78abd', unit = 'ices_white_anglerfish_78abd',

@@ -470,7 +470,7 @@ if (write_mode && stock_exists) {
   stop("GUR 7 source records are already present.", call. = FALSE)
 }
 
-candidate_register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate_register <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
 candidate_row <- match(candidate_id, candidate_register$candidate_id)
 if (is.na(candidate_row) ||
@@ -497,7 +497,7 @@ if (write_mode) {
   candidate_register$match_status[candidate_row] <- "matched"
   candidate_register$import_status[candidate_row] <- "partial"
   replace_candidate_register_row(
-    "discovery/candidates.csv", candidate_row,
+    "database/candidates.csv", candidate_row,
     candidate_register[candidate_row, , drop = FALSE], candidate_id
   )
   cat("Imported partial GUR 7 source records and refreshed the discovery summaries.\n")

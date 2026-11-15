@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_ices_iberian_sole_indicators_2026')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 
 screens <- data.frame(
   candidate_id = c('ICES:oal.27.8c9a', 'ICES:sos.27.8c9a'),

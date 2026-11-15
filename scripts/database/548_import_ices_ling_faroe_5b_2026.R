@@ -456,7 +456,7 @@ if (sum(stocks_existing$stock_id == stock_id, na.rm = TRUE) == 0L &&
   }
 }
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- utils::read.csv(
   candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"),
   check.names = FALSE

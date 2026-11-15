@@ -548,7 +548,7 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
 if (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id) {
   stop("The SNA 8 canonical record already exists; inspect before reimporting.", call. = FALSE)
 }
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate_index <- which(candidates$candidate_id == candidate_id)
 if (length(candidate_index) != 1L ||
@@ -605,7 +605,7 @@ if (!write_mode) {
   candidates$output_evidence[candidate_index] <- "FAR 2024/49 Table 10 Base_Frec outputs are imported for 2023-24 SSB and F/FSB40, plus probability, target yield, and vulnerable biomass. Annual population trajectories are figures, not full numerical tables."
   candidates$decision_reason[candidate_index] <- "Partial source import completed from the latest detailed assessment and companion age-composition report. Canonical data preserve model catch histories, CPUE, survey abundance, age proportions, empirical sampled weights, assumptions, and current summary outputs; several fitted likelihood series and annual population outputs remain unimported."
   candidates$notes[candidate_index] <- "SNA 8 is one stock unit; north/south and gear-specific rows are observation dimensions. Catch proportions remain distinct from catch numbers-at-age. The 2024 model uses the full QMA catch history while most observational data are from north of Cape Egmont."
-  candidate_path <- "discovery/candidates.csv"
+  candidate_path <- "database/candidates.csv"
   candidate_lines <- readLines(candidate_path, warn = FALSE, encoding = "UTF-8")
   candidate_row <- capture.output(write.table(
     candidates[candidate_index, , drop = FALSE], file = "", sep = ",",

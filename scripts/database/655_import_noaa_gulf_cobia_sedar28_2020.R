@@ -453,7 +453,7 @@ import_noaa_gulf_cobia_sedar28 <- function(root = ".", write = FALSE) {
     }
   }
 
-  candidates_path <- file.path(root, "discovery/candidates.csv")
+  candidates_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
   candidate_row <- match(candidate_id, candidates$candidate_id)

@@ -1,5 +1,5 @@
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -10,8 +10,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors =
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:sbr.27.9', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'ices_blackspot_seabream_9_2026.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/ices_blackspot_seabream_9.md'), warn = FALSE), collapse = ' ')
 cache <- file.path(root, 'source_cache', 'discovery_ices_blackspot_seabream_9_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 files <- c('ICES_advice_2026_record_7185.html', 'ICES_stock_graphs_2026_key_23734.html',

@@ -33,7 +33,7 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
 inputs <- read_assessment_rows("database/inputs.csv", assessment_id)
 assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
 outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
 units <- candidate_units()
 manifest <- read.csv("provenance/australia_east_coast_sea_mullet_2026/sources.csv",

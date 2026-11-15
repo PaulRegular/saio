@@ -38,7 +38,7 @@ stocks <- read_columns("database/stocks.csv", c(
 assumptions <- read.csv("database/assumptions.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assumptions <- assumptions[assumptions$assessment_id == assessment_id, , drop = FALSE]
-candidates <- read_columns("discovery/candidates.csv", c(
+candidates <- read_columns("database/candidates.csv", c(
   "candidate_id", "matched_stock_id", "match_status", "eligibility", "import_status"))
 inventory <- candidate_units()
 
@@ -109,7 +109,7 @@ stopifnot(
   all(is.na(outputs$se) & is.na(outputs$lwr) & is.na(outputs$upr)),
   all(is.finite(as.numeric(inputs$value))),
   all(is.finite(as.numeric(outputs$value))),
-  file.exists("source_reviews/screening/noaa_wcpfc_bigeye_2023.md")
+  file.exists("source_reviews/wcpfc_wcpo_bigeye.md")
 )
 
 cat("WCPFC 2023 WCPO bigeye source import checks passed.\n")

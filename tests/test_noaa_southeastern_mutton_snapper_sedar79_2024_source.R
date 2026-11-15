@@ -27,7 +27,7 @@ outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 assumptions_all <- read.csv("database/assumptions.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assumptions <- assumptions_all[assumptions_all$assessment_id == assessment_id, , drop = FALSE]
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- candidate_units()
 

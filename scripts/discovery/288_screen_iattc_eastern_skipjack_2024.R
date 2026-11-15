@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('NOAA:10160', x$candidate_id)
 if (is.na(i)) stop('Expected NOAA Stock SMART 10160.', call. = FALSE)

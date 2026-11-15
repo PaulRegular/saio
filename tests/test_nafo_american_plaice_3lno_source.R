@@ -16,7 +16,7 @@ assessments <- read_small("database/assessments.csv")
 assumptions <- read_selected("database/assumptions.csv", c("assessment_id", "setting", "value"))
 inputs <- read_selected("database/inputs.csv", c("assessment_id", "type", "measure", "basis", "year", "age", "value", "unit", "survey", "season", "sampling_time", "source_type", "source_reference", "notes"))
 outputs <- read_selected("database/outputs.csv", c("assessment_id", "type", "measure", "year", "age", "value", "se", "lwr", "upr", "unit", "source_type", "source_reference", "notes"))
-candidates <- read_small("discovery/candidates.csv")
+candidates <- read_small("database/candidates.csv")
 s <- stocks[stocks$stock_id == stock_id, , drop=FALSE]
 a_hist <- assessments[assessments$assessment_id == historical_id, , drop=FALSE]
 a_mon <- assessments[assessments$assessment_id == monitoring_id, , drop=FALSE]

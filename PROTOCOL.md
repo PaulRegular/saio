@@ -74,7 +74,7 @@ At the start of source work, read both governing documents. Complete source cura
 
 ------------------------------------------------------------------------
 
-# 1. Discovering candidate assessments
+# 1. Screening candidate assessments
 
 Use official stock and assessment inventories as the starting point for new
 stock discovery. The Charbonneau–Keith catalogue is the seed already reviewed
@@ -87,7 +87,7 @@ and regional CSAS listings together. Record each inventory's retrieval date,
 coverage limits and source. Inventory membership alone does not establish an
 age-structured assessment or availability of model inputs.
 
-Maintain the separate candidate register described in DATABASE_STRUCTURE.md.
+Maintain the candidate register in `database/candidates.csv` as described in DATABASE_STRUCTURE.md.
 Reconcile official identifiers, scientific names, areas, authorities and unit
 boundaries against existing stocks, including joint assessments and splits or
 mergers. Record uncertain matches for review; never create a duplicate merely
@@ -694,7 +694,7 @@ new reviews and identify each represented assessment ID within the review.
 Keep distinct runs in separate sections of the stock review. Preserve existing
 review links when consolidating notes.
 
-Use the assessment table for routine citations and the candidate register for screening decisions. Keep detailed species-specific and shared screening evidence in `source_reviews/screening/`. Consolidate source choices and gaps for imported assessments in the stock review. The database tables remain the source of
+Use the assessment table for routine citations and the candidate register for screening decisions. Keep species-specific screening evidence and source gaps in the stock review. Use `source_reviews/shared/` for inventories and evidence spanning multiple stocks. The database tables remain the source of
 numerical values, assumptions, and completeness statuses.
 
 ## Source cache

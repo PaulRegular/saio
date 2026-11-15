@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'anoplopoma_fimbria/noaa_alaska_sablefish_2024')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 revision <- 'd080576086110b6dcfca2c37918bab3101fff44a'
 source_files <- c(
   'alaska_sablefish_2024_final_safe.pdf',
@@ -118,7 +118,7 @@ screened <- data.frame(
     source_urls[13], source_urls[14]), collapse = '; '),
   review_date = '2026-10-30',
   decision_reason = paste('Stock SMART 10956 is the single federal Alaska sablefish assessment population, distinct from the NOAA Pacific Coast unit. The latest full production assessment located is the 2024 Model 23.5 update; the 2025 SAFE chapter confirms no 2025 assessment and rolls forward the 2024 model. Direct fishery/survey age compositions, age-specific biology, public final model input/output files, and annual age-specific abundance and aggregate population outputs support source curation. Survey timing and the lack of direct catch numbers-at-age remain explicit translation limitations.'),
-  notes = paste('Screened eligible; no canonical database values imported. See source_reviews/noaa_alaska_sablefish_2024.md. Authoritative report, final input/output files, and selected tables are cached locally with provenance.'),
+  notes = paste('Screened eligible; no canonical database values imported. See source_reviews/noaa_alaska_sablefish.md. Authoritative report, final input/output files, and selected tables are cached locally with provenance.'),
   stringsAsFactors = FALSE,
   check.names = FALSE)
 

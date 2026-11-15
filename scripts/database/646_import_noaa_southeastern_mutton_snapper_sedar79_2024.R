@@ -250,7 +250,7 @@ assessment <- blank_row(names(read.csv(file.path(root,"database/assessments.csv"
   assumptions_status="partial",inputs_status="partial",outputs_status="partial",
   notes="SEDAR 79 final base model with observations through 2023. Recovered annual catches/releases, aggregate indices, model biology surfaces, apical F and population outputs. Numeric fleet-year length and conditional age-at-length arrays and age-specific abundance indices were not recovered; no catch-at-age observations are represented."
 ))
-candidate_path <- file.path(root,"discovery/candidates.csv")
+candidate_path <- file.path(root,"database/candidates.csv")
 candidates <- read.csv(candidate_path,stringsAsFactors=FALSE,na.strings=c("","NA"),
   colClasses="character",check.names=FALSE)
 ci <- which(candidates$candidate_id==candidate_id)

@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 id <- 'DFO:Pacific:Chinook salmon - Okanagan'
 i <- match(id, x$candidate_id)
@@ -80,7 +80,7 @@ x$notes[i] <- paste(
   'is limited. It is transboundary but is not identical to NOAA Stock SMART',
   '17337, Aggregate Chinook Salmon Complex. No canonical stock record was',
   'added. The 2019 RPA is historical context for this same unit, not a fallback',
-  'for the 2023 assessment. See source_reviews/screening/',
+  'for the 2023 assessment. See source_reviews/',
   'dfo_okanagan_chinook_2023.md.'
 )
 

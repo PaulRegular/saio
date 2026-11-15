@@ -409,7 +409,7 @@ assessment <- blank_row(names(assessment_table), list(
   assumptions_status = "partial", inputs_status = "partial", outputs_status = "partial",
   notes = "Official 2023 California assessment; separate north and south models use data through 2022. Native catch biomass, aggregate indices and age/length samples, plus fitted N/B/F/C-at-age surfaces, are retained by subarea. Catch-at-age is an output, not an observed input; standalone empirical weight-at-age and maturity-at-age matrices are unavailable. Spawning-output intervals are reported for 2013-2023; age-specific uncertainties are not."))
 
-candidate_path <- file.path(root, "discovery/candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, na.strings = c("", "NA"),
   stringsAsFactors = FALSE, check.names = FALSE)
 candidate_rows <- match(candidate_ids, candidates$candidate_id)

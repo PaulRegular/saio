@@ -19,7 +19,7 @@ catch_advice <- outputs[outputs$measure == "catch_advice", ]
 expected_density <- outputs[outputs$type == "index" & outputs$measure == "total_numbers", ]
 expected_density_sum <- outputs[outputs$measure == "sum_expected_cohort_density", ]
 
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 progress <- candidate_progress()
 units <- candidate_units()

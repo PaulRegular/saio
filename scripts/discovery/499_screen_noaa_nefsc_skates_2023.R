@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_noaa_nefsc_skates_2023')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 today <- '2026-11-01'
 ids <- c('NOAA:11036', 'NOAA:11047', 'NOAA:11063', 'NOAA:11071',
   'NOAA:11076', 'NOAA:11080', 'NOAA:11269')

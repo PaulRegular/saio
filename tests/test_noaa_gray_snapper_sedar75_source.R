@@ -35,7 +35,7 @@ inputs <- read_assessment_rows("database/inputs.csv", assessment_id)
 outputs <- read_assessment_rows("database/outputs.csv", assessment_id)
 assumptions <- read_columns("database/assumptions.csv", c("assessment_id",
   "component", "setting", "value", "source_reference", "notes"))
-candidates <- read_columns("discovery/candidates.csv", c("candidate_id",
+candidates <- read_columns("database/candidates.csv", c("candidate_id",
   "matched_stock_id", "match_status", "eligibility", "import_status",
   "catch_age_evidence", "output_evidence", "notes"))
 manifest <- read.csv("provenance/discovery_noaa_gray_snapper_2022/sources.csv",
@@ -151,7 +151,7 @@ stopifnot(
 )
 
 review <- paste(readLines(
-  "source_reviews/screening/noaa_gray_snapper_2022.md", warn = FALSE),
+  "source_reviews/noaa_gray_snapper_2022.md", warn = FALSE),
   collapse = "\n")
 stopifnot(
   grepl("Tables 14-19", review, fixed = TRUE),

@@ -41,7 +41,7 @@ assessments <- read_columns('database/assessments.csv', c(
 stocks <- read_columns('database/stocks.csv', c(
   'stock_id', 'authority', 'authority_stock_id', 'scientific_name',
   'common_name', 'area', 'ocean'))
-candidates <- read_columns('discovery/candidates.csv', c(
+candidates <- read_columns('database/candidates.csv', c(
   'candidate_id', 'matched_stock_id', 'match_status', 'eligibility', 'import_status'))
 inventory <- candidate_units()
 
@@ -106,7 +106,7 @@ stopifnot(
   output_count('predicted_catch') == 9125L,
   output_count('spawning_potential_biomass') == 1533L,
   all(grepl(',"native_model",', outputs, fixed = TRUE)),
-  file.exists('source_reviews/screening/noaa_wcpfc_yellowfin_2026.md')
+  file.exists('source_reviews/wcpfc_wcpo_yellowfin.md')
 )
 
 cat('WCPFC 2026 WCPO yellowfin source import checks passed.\n')

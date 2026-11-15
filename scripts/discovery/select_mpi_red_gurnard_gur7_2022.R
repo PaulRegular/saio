@@ -3,7 +3,7 @@ candidate_unit_id <- "mpi_red_gurnard_gur7"
 review_date <- "2026-11-08"
 report <- file.path("source_cache", "nz_red_gurnard_gur7_2022",
   "FAR-2022-22-Red-Gurnard-Stock-Assessment-GUR7-2022-4295.pdf")
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 if (!requireNamespace("pdftools", quietly = TRUE)) {

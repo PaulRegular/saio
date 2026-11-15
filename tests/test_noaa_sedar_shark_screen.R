@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- c('NOAA:10670', 'NOAA:10674', 'NOAA:10676', 'NOAA:10677',
   'NOAA:10687', 'NOAA:10692', 'NOAA:10967', 'NOAA:10969',
@@ -24,8 +24,7 @@ stopifnot(nrow(rows) == length(ids), !anyNA(rows$candidate_id),
   grepl('length compositions', rows$catch_age_evidence[rows$candidate_id == 'NOAA:10676'], ignore.case = TRUE),
   grepl('reject', rows$output_evidence[rows$candidate_id == 'NOAA:12131'], ignore.case = TRUE),
   grepl('status determinations only', rows$output_evidence[rows$candidate_id == 'NOAA:14141'], ignore.case = TRUE),
-  file.exists(file.path(root, 'source_reviews', 'screening',
-    'noaa_sedar_shark_inventory_2006_2018.md')))
+  file.exists(file.path(root, 'source_reviews/shared/noaa_sedar_shark_inventory_2006_2018.md')))
 
 cache <- file.path(root, 'source_cache', 'discovery_noaa_sedar_sharks_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)

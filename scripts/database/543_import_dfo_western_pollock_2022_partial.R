@@ -144,7 +144,7 @@ prepare_record_update <- function(path, key_column, key_value, updates) {
   paste0(substring(text, 1L, start - 1L), updated_record, substring(text, record_end))
 }
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidate_text <- prepare_record_update(candidate_path, "candidate_id", candidate_id,
   list(
     matched_stock_id = stock_id,

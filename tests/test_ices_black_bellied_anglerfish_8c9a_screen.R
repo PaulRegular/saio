@@ -4,7 +4,7 @@ source(file.path(root,
   'scripts/discovery/352_screen_ices_black_bellied_anglerfish_8c9a_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -43,7 +43,7 @@ stopifnot(
   !any(inputs$assessment_id == candidate$candidate_unit_id),
   !any(outputs$assessment_id == candidate$candidate_unit_id),
   file.exists(file.path(root,
-    'source_reviews/screening/ices_black_bellied_anglerfish_8c9a_2026.md'))
+    'source_reviews/ices_black_bellied_anglerfish_8c9a.md'))
 )
 
 cat('ICES southern black-bellied anglerfish source-screening checks passed.\n')

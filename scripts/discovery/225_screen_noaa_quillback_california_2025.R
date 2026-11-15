@@ -1,5 +1,5 @@
 # Screen the current NOAA California Quillback Rockfish assessment.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('NOAA:15342', x$candidate_id)
 if (is.na(i)) stop('Expected NOAA California Quillback row is missing.', call. = FALSE)

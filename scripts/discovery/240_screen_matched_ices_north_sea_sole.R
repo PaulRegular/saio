@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'ICES:sol.27.4'
 i <- which(x$candidate_id == id)
@@ -49,7 +49,7 @@ x$decision_reason[i] <- paste0(
   'Eligibility for the stated age-structured input screen therefore remains unresolved.'
 )
 x$notes[i] <- paste0(
-  'See source_reviews/ices_sole_north_sea.md. Keep the 2025 age-specific ',
+  'See source_reviews/ck_ices_wgnssk_solea_ns_4.md. Keep the 2025 age-specific ',
   'index series in its historical assessment record; do not use it to fill the 2026 assessment gap.'
 )
 

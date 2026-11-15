@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 
 review <- data.frame(
@@ -63,9 +63,9 @@ review$output_evidence <- c(
 )
 review$decision_reason <- c(
   'NOAA 10164 refers to the Atlantic mackerel assessment represented by nefsc_atlantic_mackerel. The detailed 2018 source explicitly includes combined U.S.-Canadian catch-at-age; the newer 2025 update is retained separately as summary-only. See source_reviews/nefsc_atlantic_mackerel.md.',
-  'NOAA 10508 matches the legacy combined Gulf of Maine cod record. The 2021 M02 assessment has age-specific inputs, but the 2023 research track replaced that unit with successor stock units; under the current-unit scope, this legacy record is not an eligible new case. See source_reviews/nefsc_gom_cod_2021.md.',
+  'NOAA 10508 matches the legacy combined Gulf of Maine cod record. The 2021 M02 assessment has age-specific inputs, but the 2023 research track replaced that unit with successor stock units; under the current-unit scope, this legacy record is not an eligible new case. See source_reviews/ck_nefsc_saw_morhua_gom.md.',
   'NOAA Stock SMART identifies 10509 / assessment 13596 as the 2024 operational Georges Bank cod series. Its revised 2023 boundary excludes areas 521 and 526 and matches nefsc_cod_georges_bank, not the historical wider catalogue unit. Age-specific arrays for the current run remain unavailable. See source_reviews/ck_nefsc_garmiii_morhua_gb.md.',
-  'NOAA 10519 is Gulf of Maine haddock and matches the existing 5Y stock record. The current 2026 assessment has only partial numerical records; its age-specific input arrays and fitted N/F surfaces were not recovered. See source_reviews/nefsc_haddock_gulf_of_maine.md.'
+  'NOAA 10519 is Gulf of Maine haddock and matches the existing 5Y stock record. The current 2026 assessment has only partial numerical records; its age-specific input arrays and fitted N/F surfaces were not recovered. See source_reviews/ck_nefsc_garmiii_aeglefinus_5y.md.'
 )
 review$notes <- paste0('Identity and source review: source_reviews/', review$source_review,
   '. Keep assessment units and years separate; do not transfer older-unit values to successor units.')

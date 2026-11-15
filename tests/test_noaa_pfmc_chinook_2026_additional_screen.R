@@ -10,7 +10,7 @@ stock_ids <- c(10605L, 10606L, 10607L, 10609L, 10611L, 10612L, 10613L,
   10632L, 10633L, 10634L, 11034L, 11035L, 11870L, 11872L)
 candidate_ids <- paste0('NOAA:', stock_ids)
 unit_ids <- paste0('noaa_chinook_', stock_ids)
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 rows <- match(candidate_ids, register$candidate_id)
 chinook <- register[rows, , drop = FALSE]
@@ -26,8 +26,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_west_coast_chinook_2026.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/shared/noaa_west_coast_chinook_2026.md'), warn = FALSE), collapse = ' ')
 cache <- file.path(root, 'source_cache',
   'discovery_noaa_puget_sound_chinook_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,

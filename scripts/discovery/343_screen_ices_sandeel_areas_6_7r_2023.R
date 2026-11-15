@@ -1,5 +1,5 @@
 root <- "."
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 shared_report <- file.path(root, 'source_cache', 'ices_sandeel_area_1r_2026', 'HAWG_2026.pdf')
 
 cases <- data.frame(

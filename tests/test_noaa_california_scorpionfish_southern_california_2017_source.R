@@ -100,7 +100,7 @@ stopifnot(max(abs(f_check$value_F - (f_check$value_Z - f_check$value))) < 1e-8)
 
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
 stock <- stocks[stocks$stock_id == "noaa_california_scorpionfish_southern_california", , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
 candidate <- candidates[candidates$candidate_id == "NOAA:10461", , drop = FALSE]

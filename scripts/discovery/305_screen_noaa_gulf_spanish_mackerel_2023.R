@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 
 id <- 'NOAA:10173'
@@ -76,7 +76,7 @@ review <- list(
   notes = paste(
     'The Gulf stock is bounded eastward by the Dade-Monroe County line and is distinct from',
     'NOAA:10174 South Atlantic Spanish mackerel. No canonical database values were added.',
-    'See source_reviews/screening/noaa_gulf_spanish_mackerel_2023.md.'
+    'See source_reviews/noaa_gulf_spanish_mackerel.md.'
   )
 )
 

@@ -18,7 +18,7 @@ codes <- c(
   'bli.27.123a4')
 candidate_ids <- paste0('ICES:', codes)
 unit_ids <- paste0('ices_', gsub('[^a-z0-9]+', '_', tolower(codes)))
-candidates <- read.csv(file.path(root, 'discovery/candidates.csv'),
+candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 screened <- candidates[match(candidate_ids, candidates$candidate_id), , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
@@ -29,7 +29,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
   na.strings = c('', 'NA'), check.names = FALSE)
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
-review_path <- file.path(root, 'source_reviews/screening/ices_non_age_method_group_2026.md')
+review_path <- file.path(root, 'source_reviews/shared/ices_non_age_method_group_2026.md')
 cache_path <- file.path(root, 'source_cache/discovery_ices_unstarted_age_audit_2026/sources.csv')
 manifest <- read.csv(cache_path, stringsAsFactors = FALSE, check.names = FALSE)
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')

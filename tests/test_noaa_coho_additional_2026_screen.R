@@ -7,7 +7,7 @@ source(file.path(root, 'scripts', 'discovery',
 ids <- c(11869L, 11874L, 11875L)
 candidate_ids <- paste0('NOAA:', ids)
 unit_ids <- paste0('noaa_coho_', ids)
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 rows <- match(candidate_ids, register$candidate_id)
 coho <- register[rows, , drop = FALSE]
@@ -15,8 +15,7 @@ units <- candidate_units()
 progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 pacific <- noaa[noaa$source_region == 'NWFSC / SWFSC', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_coho_2026.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/shared/noaa_coho_2026.md'), warn = FALSE), collapse = ' ')
 manifest <- read.csv(file.path(root, 'source_cache',
   'discovery_noaa_coho_2026', 'sources.csv'), stringsAsFactors = FALSE)
 cache <- file.path(root, 'source_cache', 'discovery_noaa_coho_2026')

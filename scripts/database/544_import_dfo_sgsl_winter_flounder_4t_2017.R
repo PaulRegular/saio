@@ -282,7 +282,7 @@ outputs <- rbind(main_outputs, update_outputs)
 
 append_pacific_case(stocks, assessments, assumptions, inputs, outputs)
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- utils::read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate_id <- "DFO:Gulf:Winter Flounder - NAFO 4T"

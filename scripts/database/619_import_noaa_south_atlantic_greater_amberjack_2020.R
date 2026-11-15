@@ -357,7 +357,7 @@ existing_stocks <- read.csv(file.path(root, "database", "stocks.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 existing_assessments <- read.csv(file.path(root, "database", "assessments.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
-candidates_path <- file.path(root, "discovery", "candidates.csv")
+candidates_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate_row <- which(candidates$candidate_id == candidate_id)

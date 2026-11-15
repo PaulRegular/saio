@@ -400,7 +400,7 @@ if (write_mode) {
 
   source(file.path(root, "scripts", "discovery", "candidate_register_io.R"),
     local = TRUE)
-  candidate_path <- file.path(root, "discovery", "candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   ci <- which(candidates$candidate_unit_id == stock_id &
@@ -441,7 +441,7 @@ if (write_mode) {
   )
   candidates$notes[ci] <- paste(
     "Imported the ICES assessment catch series and annual official SAM summary outputs; current MFRI regional landings are documented as a cross-check and were not substituted for the assessment series.",
-    "Age-specific input matrices and N/F-at-age outputs remain unavailable. See source_reviews/ices_greater_silver_smelt_5a14_2026.md."
+    "Age-specific input matrices and N/F-at-age outputs remain unavailable. See source_reviews/ices_greater_silver_smelt_5a14.md."
   )
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)

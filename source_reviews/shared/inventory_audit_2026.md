@@ -1,7 +1,7 @@
 # NOAA, ICES, DFO, and NAFO inventory audit
 
 The detailed three-organization tables below are a historical audit snapshot
-from 2026-11-02. The screened NAFO inventory was added on 2026-11-04. Generate current counts from the [candidate register](../../discovery/candidates.csv) using the [discovery reports](../../scripts/README.md#discovery-reports). See the [NAFO unit review](nafo_inventory_2026.md).
+from 2026-11-02. The screened NAFO inventory was added on 2026-11-04. Generate current counts from the [candidate register](../../database/candidates.csv) using the [discovery reports](../../scripts/README.md#discovery-reports). See the [NAFO unit review](nafo_inventory_2026.md).
 
 At the 2026-11-02 snapshot, the reviewed inventories contained 905 source-list
 entries: 432 NOAA Stock SMART records, 274 ICES SID entries, and 199 DFO

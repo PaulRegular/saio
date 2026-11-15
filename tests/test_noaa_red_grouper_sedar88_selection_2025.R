@@ -1,6 +1,6 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidate[candidate$candidate_id == "NOAA:10331", , drop = FALSE]
 inventory <- candidate_units()
@@ -9,7 +9,7 @@ stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-review <- paste(readLines("source_reviews/screening/noaa_red_grouper_gom_2025.md",
+review <- paste(readLines("source_reviews/noaa_red_grouper_gom.md",
   warn = FALSE), collapse = " ")
 
 stopifnot(

@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_ices_elasmobranch_group_2026')
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
@@ -57,8 +57,7 @@ for (i in seq_along(codes)) {
     grepl(paste0('id="lblYear">', graph_years[i]), graph, fixed = TRUE))
 }
 
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'ices_elasmobranch_group_2026.md'), warn = FALSE), collapse = '\n')
+review <- paste(readLines(file.path(root, 'source_reviews/shared/ices_elasmobranch_group_2026.md'), warn = FALSE), collapse = '\n')
 stopifnot(all(vapply(codes, grepl, logical(1L), x = review, fixed = TRUE)),
   grepl('2020 source data', review, fixed = TRUE), grepl('2024 source data', review, fixed = TRUE))
 cat('ICES elasmobranch group source, identity, and no-age-series checks passed.\n')

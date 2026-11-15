@@ -1,7 +1,7 @@
 root <- "."
 database <- file.path(root, "database")
 manifest_path <- file.path(root, "provenance", "noaa_vermilion_rockfish_or_wa_2021", "sources.csv")
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 stock_id <- "noaa_vermilion_rockfish_or_wa"
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 if (!requireNamespace("r4ss", quietly = TRUE)) stop("Install r4ss to parse the cached official Stock Synthesis files.", call. = FALSE)

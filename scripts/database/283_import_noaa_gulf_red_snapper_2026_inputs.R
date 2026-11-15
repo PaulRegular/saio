@@ -604,12 +604,12 @@ update_database_metadata <- function() {
       "SSC review was pending, so is_applied=FALSE. Source inputs now include aggregate indices,",
       "commercial and recreational catches, reported discard errors, and fixed M-at-age.",
       "Catch compositions, numerical age-specific maturity/weight surfaces, and age-specific N/F remain incomplete.",
-      "See source_reviews/noaa_gulf_red_snapper_2026.md."
+      "See source_reviews/noaa_gulf_red_snapper.md."
     )
   )))
   upsert_small_csv("database/assessments.csv", "assessment_id", assessment_id,
     character(), assessment_updates)
-  candidate_path <- "discovery/candidates.csv"
+  candidate_path <- "database/candidates.csv"
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
   candidate_row <- which(candidates$candidate_id == candidate_id)
@@ -646,7 +646,7 @@ update_database_metadata <- function() {
   candidates$notes[candidate_row] <- paste(
     "Official aggregate catches, fixed M, survey index series and summary outputs are imported.",
     "The final model's numerical composition arrays, age-specific biological surfaces, and age-specific N/F outputs remain unavailable.",
-    "See source_reviews/noaa_gulf_red_snapper_2026.md."
+    "See source_reviews/noaa_gulf_red_snapper.md."
   )
   replace_candidate_register_row(candidate_path, candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id)

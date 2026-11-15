@@ -89,7 +89,7 @@ stopifnot(nrow(model_bio) == 1L, abs(model_bio$value - 110047) < 1,
   nrow(report_bio) == 1L, report_bio$value == 255602)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
 units <- candidate_units()
 stock <- stocks[stocks$stock_id == "noaa_spiny_dogfish_pacific_coast", ]
 assessment <- assessments[assessments$assessment_id == assessment_id, ]

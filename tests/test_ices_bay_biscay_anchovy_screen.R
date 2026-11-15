@@ -1,5 +1,5 @@
 root <- "."
-register <- read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE)
+register <- read.csv(file.path(root, "database/candidates.csv"), stringsAsFactors = FALSE)
 provenance <- read.csv(file.path(root, "provenance/ices_ane_27_8/sources.csv"), stringsAsFactors = FALSE)
 
 candidate <- register[register$candidate_id == "ICES:ane.27.8", , drop = FALSE]

@@ -1,4 +1,4 @@
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "MPI:BCO5")
 manifest <- read.csv("provenance/mpi_blue_cod_bco5/sources.csv", stringsAsFactors = FALSE,

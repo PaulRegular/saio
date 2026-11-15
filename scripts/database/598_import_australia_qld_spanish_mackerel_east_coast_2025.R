@@ -55,7 +55,7 @@ inputs_path <- file.path(database, "inputs.csv")
 outputs_path <- file.path(database, "outputs.csv")
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
-candidates_path <- file.path(root, "discovery/candidates.csv")
+candidates_path <- file.path(root, "database/candidates.csv")
 candidates <- read_csv(candidates_path)
 ci <- which(candidates$candidate_id == candidate_id)
 if (length(ci) != 1L ||

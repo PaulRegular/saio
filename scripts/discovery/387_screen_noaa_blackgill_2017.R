@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_noaa_blackgill_rockfish_2017_2026')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10404'
 source_files <- c('blackgill_2017_update_assessment.pdf',
   'blackgill_2011_benchmark_assessment.pdf',
@@ -95,7 +95,7 @@ screened <- data.frame(
   detailed_source_url = paste(c('https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10404', source_urls), collapse = '; '),
   review_date = '2026-10-30',
   decision_reason = 'Identity is ambiguous: the NOAA inventory says Southern California, the 2017 assessment models one stock in the Conception and Monterey INPFC areas, and the 2026 FMP defines a Pacific West Coast stock. Eligibility remains unresolved because the 2017 report and 2026 stock-definition analysis differ on the run status and the public run-matched age inputs and age-specific outputs were not located.',
-  notes = 'Do not assign this row to a current Pacific West Coast unit or import it until the area crosswalk and 2017 model status are reconciled. See source_reviews/screening/noaa_blackgill_rockfish_2017.md and the local source cache.',
+  notes = 'Do not assign this row to a current Pacific West Coast unit or import it until the area crosswalk and 2017 model status are reconciled. See source_reviews/noaa_blackgill_rockfish_2017.md and the local source cache.',
   stringsAsFactors = FALSE, check.names = FALSE)
 
 needs_write <- initial_state || (current_state &&

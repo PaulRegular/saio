@@ -83,7 +83,7 @@ assumptions <- read_assessment_rows("database/assumptions.csv",assessment_id)
 stopifnot(nrow(assumptions)==10L,any(assumptions$setting=="natural_mortality"),
   any(assumptions$setting=="stock_recruitment_and_deviations"),
   any(assumptions$setting=="reported_intervals"))
-candidate <- read.csv("discovery/candidates.csv",stringsAsFactors=FALSE,
+candidate <- read.csv("database/candidates.csv",stringsAsFactors=FALSE,
   na.strings=c("","NA"),check.names=FALSE)
 candidate <- candidate[candidate$candidate_id=="NOAA:10393",]
 inventory <- candidate_units()

@@ -45,7 +45,7 @@ assessment_rows_exist <- function(path, id) {
 
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, check.names = FALSE)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
 if (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id ||
@@ -434,7 +434,7 @@ candidate <- data.frame(
   detailed_source_url = paste(report_url, summary_url, sep = "; "),
   review_date = retrieved_on,
   decision_reason = "Retain as a partial current-unit source record. Eligibility for an age-based translation is unresolved because catch-at-age and the numerical age/length composition vectors are unavailable.",
-  notes = "The AFMA report is a preliminary base-case development document; the 2026 species summary supplies the current assessment description and output values. See source_reviews/afma_bight_redfish_gab_2022.md.",
+  notes = "The AFMA report is a preliminary base-case development document; the 2026 species summary supplies the current assessment description and output values. See source_reviews/afma_gab_bight_redfish.md.",
   stringsAsFactors = FALSE,
   check.names = FALSE
 )
@@ -451,7 +451,7 @@ if (!write_mode) {
   append_csv("database/assumptions.csv", assumptions)
   append_csv("database/inputs.csv", inputs)
   append_csv("database/outputs.csv", outputs)
-  append_csv("discovery/candidates.csv", candidate)
+  append_csv("database/candidates.csv", candidate)
   dir.create("provenance/afma_bight_redfish_gab_2022", recursive = TRUE, showWarnings = FALSE)
   manifest <- data.frame(
     local_file = sub("^source_cache/", "", source_paths),

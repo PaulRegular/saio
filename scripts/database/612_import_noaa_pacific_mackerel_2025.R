@@ -543,7 +543,7 @@ if (any(existing_stocks$stock_id == stock_id, na.rm = TRUE) ||
   stop("Pacific chub mackerel stock or assessment records already exist.",
     call. = FALSE)
 
-candidates_path <- file.path(root, "discovery", "candidates.csv")
+candidates_path <- file.path(root, "database/candidates.csv")
 candidates <- read_csv(candidates_path)
 candidate_i <- which(candidates$candidate_id == candidate_id)
 if (length(candidate_i) != 1L ||

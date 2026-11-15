@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- c('NOAA:10553', 'NOAA:10554')
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
@@ -14,10 +14,8 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-bsai_review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_shortraker_bsai_2024.md'), warn = FALSE), collapse = ' ')
-goa_review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_shortraker_goa_2023.md'), warn = FALSE), collapse = ' ')
+bsai_review <- paste(readLines(file.path(root, 'source_reviews/noaa_bsai_shortraker.md'), warn = FALSE), collapse = ' ')
+goa_review <- paste(readLines(file.path(root, 'source_reviews/noaa_goa_shortraker.md'), warn = FALSE), collapse = ' ')
 manifest <- read.csv(file.path(root, 'source_cache', 'discovery_noaa_shortraker_2023_2025',
   'sources.csv'), stringsAsFactors = FALSE)
 

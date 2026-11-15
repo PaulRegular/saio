@@ -561,7 +561,7 @@ assumption_rows <- make_rows(assumption_fields, assumptions)
 
 stock_rows <- read_csv("database/stocks.csv")
 assessment_rows <- read_csv("database/assessments.csv")
-candidates_path <- "discovery/candidates.csv"
+candidates_path <- "database/candidates.csv"
 candidate_rows <- read_csv(candidates_path)
 candidate_index <- which(candidate_rows$candidate_id == candidate_id)
 if (length(candidate_index) != 1L) {

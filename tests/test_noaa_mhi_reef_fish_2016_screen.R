@@ -5,7 +5,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/373_screen_noaa_mhi_reef_fish_2016.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 progress <- candidate_progress()
 units <- candidate_units()
@@ -63,7 +63,7 @@ stopifnot(
   nrow(sources) == 2L,
   grepl('HTTP 403', sources$notes[1], fixed = TRUE),
   grepl('d5dfb6b7c1c7ef19', sources$notes[1], fixed = TRUE),
-  file.exists(file.path(root, 'source_reviews/screening/noaa_mhi_reef_fish_2016.md'))
+  file.exists(file.path(root, 'source_reviews/shared/noaa_mhi_reef_fish_2016.md'))
 )
 
 cat('NOAA Main Hawaiian Islands 2016 age-input screens passed.\n')

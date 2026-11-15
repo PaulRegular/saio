@@ -397,7 +397,7 @@ if (any(!is.finite(as.numeric(new_inputs$value))) ||
 }
 if (write_mode) {
   append_pacific_case(stock, assessment, new_assumptions, new_inputs, new_outputs)
-  candidates_path <- file.path(root, "discovery/candidates.csv")
+  candidates_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
     colClasses = "character", check.names = FALSE)
   candidate_row <- which(candidates$candidate_id == candidate_id)

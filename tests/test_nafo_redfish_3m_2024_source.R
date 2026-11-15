@@ -13,7 +13,7 @@ assessments <- read_small("database/assessments.csv")
 assumptions <- read_selected("database/assumptions.csv", c("assessment_id", "component", "setting", "value", "source_reference", "notes"))
 inputs <- read_selected("database/inputs.csv", c("assessment_id", "type", "measure", "basis", "year", "age", "value", "unit", "source_type", "source_reference", "notes"))
 outputs <- read_selected("database/outputs.csv", c("assessment_id", "type", "measure", "year", "value", "lwr", "upr", "unit", "source_type", "source_reference", "notes", "scenario"))
-candidates <- read_small("discovery/candidates.csv")
+candidates <- read_small("database/candidates.csv")
 id <- "nafo_redfish_3m_2024"
 stock_id <- "nafo_redfish_3m"
 
@@ -62,7 +62,7 @@ stopifnot(nrow(s) == 1L, s$authority == "NAFO", s$authority_stock_id == "redfish
 stopifnot(grepl("SCR 24/024 confirms the selected 2020–2022", c$notes, fixed = TRUE))
 
 manifest <- read_small("provenance/nafo_redfish_3m_2024/sources.csv")
-review <- paste(readLines("source_reviews/nafo_redfish_3m_2024.md"), collapse = "\n")
+review <- paste(readLines("source_reviews/nafo_redfish_3m.md"), collapse = "\n")
 stopifnot(nrow(manifest) == 9L, all(nchar(manifest$sha256) == 64L),
   any(manifest$cached_file == "nafo_scr26_010_blim_reference_point.pdf"),
   any(manifest$source_url == "https://www.nafo.int/Portals/0/PDFs/sc/2026/scr26-010.pdf"),

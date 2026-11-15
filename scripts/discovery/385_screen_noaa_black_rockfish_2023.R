@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'sebastes_melanops/noaa_black_rockfish_oregon_2023')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 legacy_unit_id <- 'noaa_black_rockfish_pacific_coast_2023'
 
 current_ids <- c(14407L, 14409L, 17194L, 17195L)

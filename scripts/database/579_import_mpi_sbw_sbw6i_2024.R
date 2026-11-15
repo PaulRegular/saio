@@ -386,7 +386,7 @@ for (table in c("assumptions", "inputs", "outputs")) {
   }
 }
 
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate_index <- which(candidates$candidate_id == candidate_id)
 if (length(candidate_index) != 1L ||
@@ -443,11 +443,11 @@ if (!write_mode) {
     "and complete annual biology remain unresolved, so translation eligibility stays unresolved."
   )
   candidates$notes[candidate_index] <- paste(
-    "See source_reviews/mpi_sbw_sbw6i_2024.md. The catch table's source period",
+    "See source_reviews/mpi_sbw_sbw6i.md. The catch table's source period",
     "labels are retained in observation_id; later catch-age reports are not mixed",
     "into the 2022-23 assessment."
   )
   source("scripts/discovery/candidate_register_io.R")
-  replace_candidate_register_row("discovery/candidates.csv", candidate_index,
+  replace_candidate_register_row("database/candidates.csv", candidate_index,
     candidates[candidate_index, , drop = FALSE], candidate_id)
 }

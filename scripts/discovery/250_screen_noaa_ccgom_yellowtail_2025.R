@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('NOAA:10035', x$candidate_id)
 if (is.na(i)) stop('Expected NOAA Cape Cod/Gulf of Maine yellowtail row is missing.', call. = FALSE)
@@ -66,7 +66,7 @@ x$decision_reason[i] <- paste(
   'missing age-based inputs and outputs are verified.'
 )
 x$notes[i] <- paste(
-  'Source review: source_reviews/screening/noaa_yellowtail_ccgom_2025.md.',
+  'Source review: source_reviews/noaa_stocksmart_10035.md.',
   'The local, gitignored source cache contains the 2025 support ZIP, its',
   'assessment/results PDFs, and the final September 2025 panel report; its',
   'manifest records retrieval dates and SHA-256 checksums.'

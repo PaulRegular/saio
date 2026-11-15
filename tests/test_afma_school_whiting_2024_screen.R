@@ -1,4 +1,4 @@
-register <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+register <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- register[
   register$candidate_id == "AFMA:SESSF_Eastern_School_Whiting", , drop = FALSE
@@ -55,7 +55,7 @@ stopifnot(
     assumptions$setting == "natural_mortality" & assumptions$value == "0.6 per year (pre-specified)", ]) == 1L,
   nrow(manifest) == 3L,
   all(nchar(manifest$sha256) == 64L),
-  file.exists("source_reviews/afma_school_whiting_sessf.md")
+  file.exists("source_reviews/afma_sessf_eastern_school_whiting.md")
 )
 
 cached <- file.path("source_cache", manifest$local_file)

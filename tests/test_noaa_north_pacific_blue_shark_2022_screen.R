@@ -5,7 +5,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/374_screen_noaa_north_pacific_blue_shark_2022.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 progress <- candidate_progress()
 units <- candidate_units()
@@ -64,7 +64,7 @@ stopifnot(
   all(file.exists(file.path(root, 'source_cache/discovery_noaa_north_pacific_blue_shark_2022', sources$file))),
   sources$sha256[1] == '7FE2A05C0DC52DA5AE466AE8046BB62AE839206ECBE941AAFFF2DA7431DAD0FA',
   sources$sha256[2] == '767B0605A3D9A518C80EB73673531D8AF58EF9542F18FD5DC5857FCBAF65A47E',
-  file.exists(file.path(root, 'source_reviews/screening/noaa_north_pacific_blue_shark_2022.md'))
+  file.exists(file.path(root, 'source_reviews/noaa_north_pacific_blue_shark_2022.md'))
 )
 
 cat('NOAA North Pacific blue shark 2022 age-input screen checks passed.\n')

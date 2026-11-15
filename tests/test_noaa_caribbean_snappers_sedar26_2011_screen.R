@@ -9,7 +9,7 @@ source(file.path(root,
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 silk <- register[register$candidate_id == 'NOAA:10241', , drop = FALSE]
 queen <- register[register$candidate_id == 'NOAA:10247', , drop = FALSE]
@@ -26,7 +26,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/noaa_caribbean_snappers_sedar26_2011.md'), warn = FALSE),
+  'source_reviews/shared/noaa_caribbean_snappers_sedar26_2011.md'), warn = FALSE),
   collapse = ' ')
 review <- gsub('[[:space:]]+', ' ', review)
 

@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'NOAA:11715', , drop = FALSE]
 atlantic_mako <- register[register$candidate_id == 'NOAA:10657', , drop = FALSE]
@@ -87,7 +87,6 @@ stopifnot(
     database$inputs$assessment_id, fixed = TRUE)),
   !any(grepl('noaa_north_pacific_shortfin_mako',
     database$outputs$assessment_id, fixed = TRUE)),
-  file.exists(file.path(root, 'source_reviews', 'screening',
-    'noaa_isc_shortfin_mako_2024.md'))
+  file.exists(file.path(root, 'source_reviews/noaa_north_pacific_shortfin_mako.md'))
 )
 cat('NOAA 11715 North Pacific shortfin mako screening checks passed.\n')

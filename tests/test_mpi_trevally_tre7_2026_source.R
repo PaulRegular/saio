@@ -22,7 +22,7 @@ assessment <- read_matching_rows("database/assessments.csv", assessment_id)
 assumptions <- read_matching_rows("database/assumptions.csv", assessment_id)
 inputs <- read_matching_rows("database/inputs.csv", assessment_id)
 outputs <- read_matching_rows("database/outputs.csv", assessment_id)
-candidate <- read_matching_rows("discovery/candidates.csv", "MPI:TRE7")
+candidate <- read_matching_rows("database/candidates.csv", "MPI:TRE7")
 manifest <- read.csv("provenance/mpi_trevally_tre7_2026/sources.csv",
                      stringsAsFactors = FALSE)
 review <- readLines("source_reviews/mpi_trevally_tre7.md",

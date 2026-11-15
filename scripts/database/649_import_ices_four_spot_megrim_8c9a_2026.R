@@ -2,7 +2,7 @@ root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "ices_four_spot_megrim_8c9a_2026")
 manifest_path <- file.path(root, "provenance", "ices_four_spot_megrim_8c9a_2026", "sources.csv")
-register_path <- file.path(root, "discovery", "candidates.csv")
+register_path <- file.path(root, "database/candidates.csv")
 
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 stock_id <- "ices_four_spot_megrim_8c9a"

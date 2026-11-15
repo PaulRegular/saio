@@ -84,7 +84,7 @@ stopifnot(
     grepl("No commercial age frequencies", assumptions$notes, fixed = TRUE))
 )
 
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE)
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE)
 candidate <- subset(candidate, candidate_id == "MPI:ORH7A")
 stopifnot(
   nrow(candidate) == 1L,

@@ -47,7 +47,7 @@ assessment_rows_exist <- function(path, id) {
 
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, check.names = FALSE)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 
 if (stock_id %in% stocks$stock_id ||
@@ -403,7 +403,7 @@ candidate <- data.frame(
     "recoverable source tables, but retain eligibility as unresolved because age-at-length",
     "composition vectors and age-specific biology are not publicly tabulated."
   ),
-  notes = "Source review: source_reviews/afma_deepwater_flathead_gab_2023.md. Treat the assessment as one GAB stock; the model's trawl and Danish-seine fleets are not separate stocks.",
+  notes = "Source review: source_reviews/afma_gab_deepwater_flathead.md. Treat the assessment as one GAB stock; the model's trawl and Danish-seine fleets are not separate stocks.",
   stringsAsFactors = FALSE,
   check.names = FALSE
 )
@@ -419,7 +419,7 @@ if (write_mode) {
   append_csv("database/assumptions.csv", assumptions)
   append_csv("database/inputs.csv", inputs)
   append_csv("database/outputs.csv", outputs)
-  append_csv("discovery/candidates.csv", candidate)
+  append_csv("database/candidates.csv", candidate)
   dir.create("provenance/afma_deepwater_flathead_gab_2023", recursive = TRUE, showWarnings = FALSE)
   manifest <- data.frame(
     local_file = sub("^source_cache/", "", source_paths),

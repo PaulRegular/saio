@@ -1,6 +1,6 @@
 # Reconcile the DFO Canary Rockfish inventory row to its curated assessment.
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 i <- match('DFO:Pacific:Canary Rockfish', x$candidate_id)
 if (is.na(i)) stop('Expected DFO Canary Rockfish row is missing.', call. = FALSE)

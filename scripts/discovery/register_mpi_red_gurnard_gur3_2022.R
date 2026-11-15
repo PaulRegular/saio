@@ -117,7 +117,7 @@ batch <- data.frame(
   stringsAsFactors = FALSE
 )
 
-register_path <- "discovery/candidates.csv"
+register_path <- "database/candidates.csv"
 manifest_path <- "provenance/mpi_red_gurnard_gur3_2022/sources.csv"
 source_paths <- file.path("source_cache", manifest$local_file)
 stocks <- read_table("database/stocks.csv")

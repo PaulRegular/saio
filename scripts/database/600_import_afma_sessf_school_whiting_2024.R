@@ -63,7 +63,7 @@ assessments_path <- file.path(database, "assessments.csv")
 assumptions_path <- file.path(database, "assumptions.csv")
 inputs_path <- file.path(database, "inputs.csv")
 outputs_path <- file.path(database, "outputs.csv")
-candidates_path <- file.path(root, "discovery/candidates.csv")
+candidates_path <- file.path(root, "database/candidates.csv")
 
 stocks <- read_csv(stocks_path)
 assessments <- read_csv(assessments_path)
@@ -195,7 +195,7 @@ candidate$decision_reason <- paste(
 )
 candidate$notes <- paste(
   "AFMA and NSW fisheries manage a shared eastern school whiting stock. The current partial record preserves only verified summary facts and outputs; it does not use the separate 2020 assessment to fill gaps.",
-  "See source_reviews/afma_school_whiting_sessf.md."
+  "See source_reviews/afma_sessf_eastern_school_whiting.md."
 )
 
 cat("AFMA eastern school whiting: ", nrow(assumptions), " assumptions, ",

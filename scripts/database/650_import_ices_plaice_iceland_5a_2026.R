@@ -2,7 +2,7 @@ root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "pleuronectes_platessa/ices_plaice_iceland_5a_2026")
 manifest_path <- file.path(root, "provenance", "ices_plaice_iceland_5a_2026", "sources.csv")
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 
 assessment_id <- "ices_plaice_iceland_5a_2026"
 stock_id <- "ices_plaice_iceland_5a"
@@ -397,7 +397,7 @@ register$review_date[candidate_row] <- "2026-11-12"
 register$notes[candidate_row] <- paste(
   "Partial source import completed from the current 2026 MFRI report and ICES SAG key 22531.",
   "Aggregate landings by gear and aggregate historical outputs are imported; age-specific input matrices remain unavailable as numerical data.",
-  "See source_reviews/screening/ices_plaice_iceland_2026.md."
+  "See source_reviews/ices_plaice_iceland_5a.md."
 )
 
 

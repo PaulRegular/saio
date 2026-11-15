@@ -17,7 +17,7 @@ stocks <- read.csv(file.path(root, "database", "stocks.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 assessments <- read.csv(file.path(root, "database", "assessments.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
-candidate <- read_selected(file.path(root, "discovery", "candidates.csv"),
+candidate <- read_selected(file.path(root, "database/candidates.csv"),
   c("candidate_id", "matched_stock_id", "match_status", "import_status"))
 inventory <- candidate_units()
 input <- read_selected(file.path(root, "database", "inputs.csv"), c(

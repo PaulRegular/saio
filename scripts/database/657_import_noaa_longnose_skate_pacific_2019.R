@@ -741,7 +741,7 @@ import_noaa_longnose_skate_pacific_2019 <- function(root = ".", write = FALSE) {
 
   source(file.path(root, "scripts/discovery/candidate_register_io.R"),
     local = TRUE)
-  candidate_path <- file.path(root, "discovery/candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   ci <- which(candidates$candidate_id == candidate_id)

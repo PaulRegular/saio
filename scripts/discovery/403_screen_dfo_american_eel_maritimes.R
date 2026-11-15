@@ -1,6 +1,6 @@
 # Link and screen the two Maritimes American eel fishery entries as one unit.
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 ids <- c('DFO:Maritimes:Eel (Large)', 'DFO:Maritimes:Elvers')
 i <- match(ids, x$candidate_id)

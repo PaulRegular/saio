@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_ices_witch_northsea_2026')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 report_file <- 'wgnssk_witch.pdf'
 report_path <- file.path(cache, report_file)
 report_url <- 'https://doi.org/10.17895/ices.pub.32676345.v2'

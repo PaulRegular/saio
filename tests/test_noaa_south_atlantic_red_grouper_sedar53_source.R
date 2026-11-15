@@ -14,9 +14,9 @@ assessment <- read.csv("database/assessments.csv",na.strings=c("","NA"),check.na
 inputs <- read_rows("database/inputs.csv",assessment_id)
 outputs <- read_rows("database/outputs.csv",assessment_id)
 assumptions <- read_rows("database/assumptions.csv",assessment_id)
-candidates <- read.csv("discovery/candidates.csv",na.strings=c("","NA"),check.names=FALSE)
+candidates <- read.csv("database/candidates.csv",na.strings=c("","NA"),check.names=FALSE)
 manifest <- read.csv("provenance/noaa_red_grouper_sedar53_2017/sources.csv",check.names=FALSE)
-review <- paste(readLines("source_reviews/screening/noaa_red_grouper_south_atlantic_2017.md"),collapse="\n")
+review <- paste(readLines("source_reviews/noaa_red_grouper_south_atlantic.md"),collapse="\n")
 input_value <- function(measure,year=NA_integer_,age=NA_integer_,fleet=NA_character_,survey=NA_character_,sex=NA_character_,partition=NA_character_,obs=NA_character_) {
   k<-inputs$measure==measure
   if(!is.na(year)) k<-k & inputs$year==as.character(year)

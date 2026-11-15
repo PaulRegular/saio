@@ -131,7 +131,7 @@ stopifnot(nrow(stock) == 1L, stock$charbonneau_id == "ICES-WGCSE_platessa_IS7e",
 stock$authority_stock_id <- "ple.27.7e"; stock$common_name <- "Western English Channel plaice"
 stock$area <- "ICES Division 7.e stock, including its spawning-migration catch in Division 7.d"
 stock$region <- "Western English Channel"; stock$ocean <- "Northeast Atlantic"
-stock$notes <- "Verified identity of Charbonneau-Keith ICES-WGCSE_platessa_IS7e; stable stock_id retained. Official Division 7.e is the western English Channel, despite the catalogue's IS prefix. Current production advice is an MSE-tuned chr rule, not a historical analytical model. Source review: source_reviews/ices_plaice_western_channel_7e.md."
+stock$notes <- "Verified identity of Charbonneau-Keith ICES-WGCSE_platessa_IS7e; stable stock_id retained. Official Division 7.e is the western English Channel, despite the catalogue's IS prefix. Current production advice is an MSE-tuned chr rule, not a historical analytical model. Source review: source_reviews/ck_ices_wgcse_platessa_is7e.md."
 write_rows <- function(file, x, id = assessment_id) {
   path <- file.path(database, file)
   contents <- rawToChar(readBin(path, "raw", n = file.info(path)$size)); lines <- strsplit(contents, "\n", fixed = TRUE)[[1L]]

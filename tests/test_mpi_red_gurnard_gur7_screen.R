@@ -5,7 +5,7 @@ read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
 
 candidate_id <- "MPI:GUR7"
 candidate_unit_id <- "mpi_red_gurnard_gur7"
-all_candidates <- read_table("discovery/candidates.csv")
+all_candidates <- read_table("database/candidates.csv")
 candidate <- all_candidates
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
 units <- candidate_units()

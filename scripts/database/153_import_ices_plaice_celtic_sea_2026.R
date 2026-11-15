@@ -137,7 +137,7 @@ stopifnot(nrow(stock) == 1L, stock$charbonneau_id == "ICES-WGSCE_platessa_CS7f-g
 stock$authority_stock_id <- "ple.27.7fg"; stock$common_name <- "Celtic Sea and Bristol Channel plaice"
 stock$area <- "ICES divisions 7.f and 7.g (Bristol Channel, Celtic Sea)"
 stock$region <- "Celtic Seas"; stock$ocean <- "Northeast Atlantic"
-stock$notes <- "Verified identity for Charbonneau-Keith ICES-WGSCE_platessa_CS7f-g. Stable catalogue stock_id retained. Current advice uses biomass/length indicators, not the historical age-structured model label. Source review: source_reviews/ices_plaice_celtic_sea_7fg.md."
+stock$notes <- "Verified identity for Charbonneau-Keith ICES-WGSCE_platessa_CS7f-g. Stable catalogue stock_id retained. Current advice uses biomass/length indicators, not the historical age-structured model label. Source review: source_reviews/ck_ices_wgsce_platessa_cs7f_g.md."
 
 write_rows <- function(file, x, id = assessment_id) {
   path <- file.path(database, file)

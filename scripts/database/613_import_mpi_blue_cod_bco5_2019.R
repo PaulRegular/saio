@@ -481,7 +481,7 @@ if (!write_mode) {
     ids <- if (file == "stocks.csv") stock_id else assessment_id
     if (stream_has_id(path, ids)) stop("BCO 5 is already present in ", file, ".", call. = FALSE)
   }
-  candidates <- read_csv("discovery/candidates.csv")
+  candidates <- read_csv("database/candidates.csv")
   candidate_row <- which(candidates$candidate_id == candidate_id)
   if (length(candidate_row) != 1L ||
       candidates$import_status[candidate_row] != "not_started") {
@@ -511,7 +511,7 @@ if (!write_mode) {
   append_csv("database/inputs.csv", input_rows)
   append_csv("database/assumptions.csv", assumption_rows)
   append_csv("database/outputs.csv", output_rows)
-  replace_register_row("discovery/candidates.csv", "candidate_id", candidate_id,
+  replace_register_row("database/candidates.csv", "candidate_id", candidate_id,
     list(matched_stock_id = stock_id, match_status = "matched", import_status = "partial",
       catch_age_evidence = "Imported reconstructed fleet/area catch biomass and commercial age-composition vectors from the 2019 report. The assessment did not publish direct catch numbers-at-age.",
       survey_age_evidence = "Imported Foveaux pot-survey abundance/CVs and 2010, 2014, and 2018 age-composition vectors; the index applies to Statistical Area 025.",

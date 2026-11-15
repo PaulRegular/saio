@@ -125,7 +125,7 @@ manifest <- data.frame(
   check.names = FALSE
 )
 
-register_path <- "discovery/candidates.csv"
+register_path <- "database/candidates.csv"
 manifest_path <- "provenance/inidep_merluccius_hubbsi_south_2025/sources.csv"
 register <- read.csv(register_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")

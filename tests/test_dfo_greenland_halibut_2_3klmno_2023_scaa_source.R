@@ -22,7 +22,7 @@ excluded_ssm <- ssm_survey_age$survey == "Canada Autumn 2J3K" &
   ssm_survey_age$year %in% c(2018L, 2019L, 2021L) & as.integer(ssm_survey_age$age) >= 8L
 
 register <- utils::read.csv(
-  "discovery/candidates.csv", stringsAsFactors = FALSE,
+  "database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), encoding = "UTF-8"
 )
 candidate <- register[register$candidate_id ==

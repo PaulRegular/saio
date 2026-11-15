@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'sebastes_levis/noaa_cowcod_southern_california_2019')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10443'
 unit_id <- 'noaa_cowcod_southern_california'
 

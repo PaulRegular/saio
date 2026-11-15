@@ -168,7 +168,7 @@ if (write_mode) {
       col.names = FALSE, append = TRUE, na = "", qmethod = "double")
   }
 
-  candidate_path <- file.path(root, "discovery/candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")
   candidate_row <- which(candidates$candidate_id == candidate_id)
@@ -188,7 +188,7 @@ if (write_mode) {
       candidates[candidate_row, , drop = FALSE], candidate_id)
   }
 
-  review_path <- file.path(root, "source_reviews/screening/noaa_gag_sedar72_2022.md")
+  review_path <- file.path(root, "source_reviews/noaa_gag_sedar72_2022.md")
   review <- readLines(review_path, warn = FALSE, encoding = "UTF-8")
   marker <- "Remaining gaps: numeric age-composition arrays"
   at <- which(grepl(marker, review, fixed = TRUE))

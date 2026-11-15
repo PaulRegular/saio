@@ -478,7 +478,7 @@ if (!write_mode) {
   if (!nrow(outputs_existing)) append_csv(outputs_new, outputs_path)
 
   source(file.path(root, "scripts", "discovery", "candidate_register_io.R"), local = TRUE)
-  candidate_path <- file.path(root, "discovery", "candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   ci <- match(candidate_id, candidates$candidate_id)
@@ -511,7 +511,7 @@ if (!write_mode) {
   candidates$decision_reason[ci] <- "The 2017 benchmark remains the latest full assessment located; the July 2025 SAFE continues to use it. Source curation is partial because direct fishery catch-at-age and an age-specific survey index are not supplied."
   candidates$notes[ci] <- paste(
     "Partial source import from the official 2017 model archive and assessment report.",
-    "Native compositions, source signs, sample sizes, age-error code, and index units are preserved; see source_reviews/noaa_california_scorpionfish_southern_california_2017.md.")
+    "Native compositions, source signs, sample sizes, age-error code, and index units are preserved; see source_reviews/noaa_california_scorpionfish_southern_california.md.")
   replace_candidate_register_row(candidate_path, ci, candidates[ci, , drop = FALSE], candidate_id)
 
   source(file.path(root, "scripts", "database", "002_validate_database.R"),

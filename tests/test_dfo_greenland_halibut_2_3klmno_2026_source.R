@@ -15,7 +15,7 @@ exploitable_biomass <- ssm$outputs[ssm$outputs$measure %in% "exploitable_biomass
 fbar <- ssm$outputs[ssm$outputs$measure %in% "Fbar", ]
 
 register <- utils::read.csv(
-  "discovery/candidates.csv",
+  "database/candidates.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA")
 )
 candidate <- register[register$candidate_id ==
@@ -91,7 +91,7 @@ stopifnot(
   candidate$matched_stock_id == "dfo_greenland_halibut_2_3klmno",
   candidate$match_status == "matched",
   candidate$import_status == "partial",
-  file.exists("source_reviews/screening/dfo_greenland_halibut_2_3klmno_2025.md")
+  file.exists("source_reviews/dfo_greenland_halibut_2_3klmno.md")
 )
 
 cat("DFO/NAFO Greenland halibut source values, event separation, coverage and limitations passed.\n")

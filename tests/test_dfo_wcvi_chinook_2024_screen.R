@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- '.'
-register_path <- file.path(root, 'discovery/candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 register_before <- readLines(register_path, warn = FALSE, encoding = 'UTF-8')
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/375_screen_dfo_wcvi_chinook_2024.R'))

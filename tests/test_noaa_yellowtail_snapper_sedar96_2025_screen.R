@@ -1,9 +1,8 @@
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- register[register$candidate_id == 'NOAA:11081', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_yellowtail_snapper_sedar96_2025.md'), warn = FALSE), collapse = '\n')
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_yellowtail_snapper_sedar96_2025.md'), warn = FALSE), collapse = '\n')
 
 stopifnot(
   nrow(row) == 1L,

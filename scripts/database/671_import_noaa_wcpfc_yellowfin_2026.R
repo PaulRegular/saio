@@ -229,7 +229,7 @@ fishery_dim <- function(fishery, dimension) {
   }
 }
 
-candidate_path <- file.path(root, "discovery/candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 stocks_path <- file.path(root, "database/stocks.csv")
 assessments_path <- file.path(root, "database/assessments.csv")
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
@@ -773,7 +773,7 @@ candidates$output_evidence[candidate_row] <- paste(
 )
 candidates$notes[candidate_row] <- paste(
   "NOAA Stock SMART ID 11694 maps to the WCPFC Western and Central Pacific yellowfin unit and is distinct from Eastern Pacific and Indian Ocean yellowfin.",
-  "The pinned 2026 SPC diagnostic files and source limitations are documented in source_reviews/screening/noaa_wcpfc_yellowfin_2026.md.",
+  "The pinned 2026 SPC diagnostic files and source limitations are documented in source_reviews/wcpfc_wcpo_yellowfin.md.",
   "SC22 deferred advice review to SC23; the 2026 diagnostic is the latest detailed source package located, not an adopted advice result."
 )
 replace_candidate_register_row(candidate_path, candidate_row,

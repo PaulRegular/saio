@@ -130,7 +130,7 @@ assessments_path <- file.path(root, "database/assessments.csv")
 assumptions_path <- file.path(root, "database/assumptions.csv")
 inputs_path <- file.path(root, "database/inputs.csv")
 outputs_path <- file.path(root, "database/outputs.csv")
-candidates_path <- file.path(root, "discovery/candidates.csv")
+candidates_path <- file.path(root, "database/candidates.csv")
 
 stocks_existing <- read_csv(stocks_path)
 assessments_existing <- read_csv(assessments_path)

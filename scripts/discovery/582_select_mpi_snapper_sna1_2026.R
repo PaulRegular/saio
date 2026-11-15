@@ -2,7 +2,7 @@ root <- "."
 candidate_id <- "MPI:SNA1"
 candidate_unit_id <- "mpi_snapper_sna1"
 stock_id <- "mpi_snapper_sna1"
-register_path <- file.path(root, "discovery", "candidates.csv")
+register_path <- file.path(root, "database/candidates.csv")
 
 register <- read.csv(register_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE, colClasses = "character")

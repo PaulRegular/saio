@@ -16,7 +16,7 @@ spatial split. The numerical series belong to the combined stock record.
 
 ## Sources
 
-- [Combined stock review](ices_herring_gulf_bothnia_2026.md), including the
+- [Combined stock review](ices_herring_gulf_bothnia.md), including the
   cached report, SAG export, and native input/output coverage.
 - [WGBFAS 2026 report](https://literatur.thuenen.de/digbib_extern/dn071152.pdf),
   section 4.3.

@@ -34,7 +34,7 @@ assessments <- read_columns("database/assessments.csv", c("assessment_id", "stoc
   "assessment_year", "terminal_year", "estimate_terminal_year", "is_current",
   "is_applied", "model_version", "inputs_status", "outputs_status", "assumptions_status"))
 assumptions <- read_assessment_rows("database/assumptions.csv", assessment_id)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 inventory <- candidate_units()
 manifest <- read.csv("provenance/noaa_south_atlantic_golden_tilefish_sedar89_2025/sources.csv",

@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 updates <- list(
   list(id = 'ICES:pok.27.5a', stock = 'ck_ices_nwwg_virens_fa5a',

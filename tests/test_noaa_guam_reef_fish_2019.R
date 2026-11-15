@@ -9,7 +9,7 @@ source(file.path(root, 'scripts/discovery/494_screen_noaa_guam_reef_fish_2019.R'
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-candidates <- read.csv(file.path(root, 'discovery/candidates.csv'),
+candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 units <- candidate_units()
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
@@ -26,7 +26,7 @@ ids <- paste0('NOAA:', c('15110', '15113', '15114', '15130', '15131', '15132',
 unit_ids <- paste0('noaa_guam_reef_', sub('^NOAA:', '', ids))
 screened <- candidates[match(ids, candidates$candidate_id), , drop = FALSE]
 units_screened <- units[match(unit_ids, units$candidate_unit_id), , drop = FALSE]
-source_review <- file.path(root, 'source_reviews/screening/noaa_guam_reef_fish_2019.md')
+source_review <- file.path(root, 'source_reviews/shared/noaa_guam_reef_fish_2019.md')
 
 stopifnot(nrow(screened) == length(ids),
   identical(screened$candidate_unit_id, unit_ids),

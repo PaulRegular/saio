@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_noaa_iattc_bigeye_2026')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:11685'
 unit_id <- 'iattc_eastern_pacific_bigeye'
 source_file <- 'SAC-17-03_bigeye_tuna_eastern_pacific_update_2026.pdf'

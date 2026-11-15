@@ -100,7 +100,7 @@ stock <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 stock <- stock[stock$stock_id == "noaa_gulf_gray_triggerfish", , drop = FALSE]
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]

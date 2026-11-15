@@ -1,6 +1,6 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
-register <- read.csv('discovery/candidates.csv',
+register <- read.csv('database/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 stock_ids <- c(10516L, 10517L)
 rows <- match(paste0('NOAA:', stock_ids), register$candidate_id)
@@ -21,7 +21,7 @@ stopifnot(nrow(red_hake) == 2L, !anyNA(rows), !anyDuplicated(rows),
   all(grepl('swept-area', red_hake$output_evidence, fixed = TRUE)),
   all(grepl('not estimate annual N-at-age', red_hake$decision_reason, fixed = TRUE)))
 
-review <- readLines('source_reviews/screening/noaa_red_hake_2023.md',
+review <- readLines('source_reviews/shared/noaa_red_hake_2023.md',
   warn = FALSE)
 review <- paste(review, collapse = ' ')
 stopifnot(grepl('N-at-age', review, fixed = TRUE),

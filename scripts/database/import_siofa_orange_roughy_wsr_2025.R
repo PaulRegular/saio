@@ -193,7 +193,7 @@ if (any(existing_outputs$assessment_id == source_id)) {
 }
 append_rows("database/outputs.csv", outputs)
 
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 source("scripts/discovery/candidate_register_io.R")
 candidates <- read_table(candidate_path)
 candidate_row <- match(candidate_id, candidates$candidate_id)

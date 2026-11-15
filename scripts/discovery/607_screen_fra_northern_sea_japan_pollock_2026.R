@@ -1,4 +1,4 @@
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 report_url <- "https://www.fra.go.jp/shigen/fisheries_resources/meeting/stock_assessment_meeting/2026/files/sa2026-sc01/fra-sa2026-sc01-01.pdf"
 meeting_url <- "https://www.fra.go.jp/shigen/fisheries_resources/meeting/stock_assessment_meeting/2026/sa2026-sc01.html"
 candidate_id <- "FRA:FRA-SA2026-SC01-01"

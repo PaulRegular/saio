@@ -4,7 +4,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/456_screen_ices_blue_ling_5b6712_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:bli.27.5b6712', , drop = FALSE]
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
@@ -16,7 +16,7 @@ sha256_file <- function(path) {
     value = TRUE)))
 }
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/ices_blue_ling_5b6712_2026.md'), warn = FALSE),
+  'source_reviews/ices_blue_ling_5b6712.md'), warn = FALSE),
   collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -49,7 +49,7 @@ stopifnot(
   !any(assessments$assessment_id == 'ices_blue_ling_5b6712', na.rm = TRUE),
   !any(inputs$assessment_id == 'ices_blue_ling_5b6712', na.rm = TRUE),
   !any(outputs$assessment_id == 'ices_blue_ling_5b6712', na.rm = TRUE),
-  file.exists(file.path(root, 'source_reviews/screening/ices_blue_ling_5b6712_2026.md')),
+  file.exists(file.path(root, 'source_reviews/ices_blue_ling_5b6712.md')),
   grepl('must not be interpreted as spawning-stock biomass', review, fixed = TRUE),
   grepl('does not establish that age', review, fixed = TRUE)
 )

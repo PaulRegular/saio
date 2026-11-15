@@ -1,5 +1,5 @@
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -51,8 +51,7 @@ stopifnot(
     character(1L)), '%PDF-'))
 )
 
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_west_coast_chinook_2026.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/shared/noaa_west_coast_chinook_2026.md'), warn = FALSE), collapse = ' ')
 stopifnot(
   grepl('Composition Input Data is level 4 for all 12', review, fixed = TRUE),
   grepl('Model Category is 4 (VPA) for 11 units', review, fixed = TRUE),

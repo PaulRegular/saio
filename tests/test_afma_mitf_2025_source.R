@@ -4,7 +4,7 @@ source("R/read_database.R")
 source("tests/helper_inventory.R")
 
 x <- read_assessment("afma_patagonian_toothfish_macquarie_2025")
-candidate_register <- read.csv("discovery/candidates.csv",
+candidate_register <- read.csv("database/candidates.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidate_register[
   candidate_register$candidate_id == "AFMA:MITF", , drop = FALSE

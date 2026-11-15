@@ -13,13 +13,11 @@ inputs <- subset(read_table("inputs"),
   assessment_id == "dfo_yellowtail_flounder_4t_2025")
 outputs <- subset(read_table("outputs"),
   assessment_id == "dfo_yellowtail_flounder_4t_2025")
-candidate <- subset(utils::read.csv(file.path(root, "discovery", "candidates.csv"),
+candidate <- subset(utils::read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE),
   candidate_id == "DFO:Gulf:Yellowtail Flounder - NAFO 4T")
-review <- paste(readLines(file.path(root, "source_reviews", "screening",
-  "dfo_gulf_yellowtail_flounder_2025.md")), collapse = "\n")
-source_review <- paste(readLines(file.path(root, "source_reviews",
-  "dfo_yellowtail_flounder_4t_2025.md")), collapse = " ")
+review <- paste(readLines(file.path(root, "source_reviews/dfo_yellowtail_flounder_4t.md")), collapse = "\n")
+source_review <- paste(readLines(file.path(root, "source_reviews/dfo_yellowtail_flounder_4t.md")), collapse = " ")
 
 stopifnot(
   nrow(stock) == 1L,

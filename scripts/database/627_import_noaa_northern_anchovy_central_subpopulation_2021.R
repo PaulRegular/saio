@@ -601,7 +601,7 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
   notes = "The 2021 central-subpopulation benchmark was adopted in June 2022. The assessment fits data through 2021; Tables 11-13 include model state estimates through calendar 2023, with model year 2022 identified as projection. Native catches, indices, compositions, weights, maturity and age-error vectors are imported. Direct catch-at-age, a numeric age-specific survey index, exact survey fractions, and numeric F-at-age outputs remain unavailable.")
 
 assumptions <- do.call(rbind, assumption_rows)
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read_csv(candidate_path)
 candidate_row <- which(candidates$candidate_id == candidate_id)
 stocks_existing <- read_csv(file.path(root, "database", "stocks.csv"))

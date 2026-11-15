@@ -418,7 +418,7 @@ stock$ocean <- "Northeast Atlantic"
 stock$notes <- paste(
   "Verified ICES stock her.27.6a7bc; the Charbonneau-Keith stock_id and identifier are retained.",
   "The combined 6.a North and 6.a South/7.b-c unit was assessed together through 2020; successor units were assessed separately after the 2022 benchmark.",
-  "Source review: source_reviews/ices_herring_west_scotland_ireland.md."
+  "Source review: source_reviews/ck_ices_hawg_harengus_cs_6a_7b_7c.md."
 )
 
 write_stock_row <- function(path, row, id) {

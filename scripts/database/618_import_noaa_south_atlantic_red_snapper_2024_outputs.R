@@ -199,7 +199,7 @@ write_table_rows <- function(path, rows) {
     col.names = FALSE, append = TRUE, na = "", qmethod = "double")
 }
 update_candidate <- function() {
-  path <- "discovery/candidates.csv"
+  path <- "database/candidates.csv"
   candidates <- read.csv(path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   i <- which(candidates$candidate_id == candidate_id)

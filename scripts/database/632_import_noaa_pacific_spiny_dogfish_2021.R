@@ -460,7 +460,7 @@ key <- function(x, cols) do.call(paste, c(lapply(x[cols], function(z) {
 if (anyDuplicated(key(inputs_new, input_key_cols)) || anyDuplicated(key(outputs_new, output_key_cols))) {
   stop("Dogfish records contain duplicate canonical keys.", call. = FALSE)
 }
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 ci <- match(candidate_id, candidates$candidate_id)
 if (is.na(ci) || candidates$candidate_unit_id[ci] != candidate_unit_id ||

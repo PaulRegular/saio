@@ -1,5 +1,5 @@
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -10,8 +10,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors =
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:pol.27.3a4', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'ices_pollack_3a4_2024.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/ices_pollack_3a4.md'), warn = FALSE), collapse = ' ')
 cache <- file.path(root, 'source_cache', 'discovery_ices_pollack_3a4_2024')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 files <- c('ICES_stock_graphs_2024_key_19286.html',

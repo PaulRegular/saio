@@ -67,7 +67,7 @@ stopifnot(
   all(nzchar(outputs$source_reference)),
   any(grepl("observed catch-numbers-at-age", assumptions$notes, fixed = TRUE)),
   file.exists("provenance/noaa_cabezon_oregon_2019/sources.csv"),
-  file.exists("source_reviews/screening/noaa_cabezon_2019.md")
+  file.exists("source_reviews/noaa_cabezon_2019.md")
 )
 
 cat("NOAA Oregon cabezon 2019 native source extraction and output checks passed.\n")

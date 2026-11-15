@@ -1,5 +1,5 @@
 # Reconcile and screen the DFO Strait of Georgia herring inventory entry.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('DFO:Pacific:Pacific Herring - Strait of Georgia', x$candidate_id)
 if (is.na(i)) stop('Expected DFO Strait of Georgia herring row is missing.', call. = FALSE)

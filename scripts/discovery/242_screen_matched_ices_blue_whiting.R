@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 id <- 'ICES:whb.27.1-91214'
 i <- which(x$candidate_id == id)
@@ -49,7 +49,7 @@ x$decision_reason[i] <- paste0(
   'a positive-definite Hessian; age-specific reported errors remain conditional.'
 )
 x$notes[i] <- paste0(
-  'See source_reviews/ices_bluewhiting_northeast_atlantic_2026.md. ' ,
+  'See source_reviews/ices_bluewhiting_northeast_atlantic.md. ' ,
   'Survey input is in millions while catch is in thousands; preserve these distinct source units. ' ,
   'The advice-year recruitment adjustment is not substituted for fitted recruitment.'
 )

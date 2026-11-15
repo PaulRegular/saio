@@ -94,7 +94,7 @@ candidate <- data.frame(
   stringsAsFactors = FALSE
 )
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 if (candidate$candidate_id %in% candidates$candidate_id) {

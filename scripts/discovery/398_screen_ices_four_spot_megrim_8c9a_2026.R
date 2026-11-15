@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'lepidorhombus_boscii/ices_four_spot_megrim_8c9a_2026')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:ldb.27.8c9a'
 unit_id <- 'ices_four_spot_megrim_8c9a'
 

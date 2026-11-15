@@ -2,7 +2,7 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 source('scripts/discovery/468_screen_ices_pelagic_redfish_2026.R')
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 ids <- c('ICES:reb.2127.dp', 'ICES:reb.2127.sp')
 rows <- register[match(ids, register$candidate_id), ]

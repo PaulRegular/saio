@@ -435,7 +435,7 @@ if (write_mode) {
   append_rows("database/outputs.csv", outputs)
 
   source("scripts/discovery/candidate_register_io.R")
-  candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+  candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
   candidate_row <- match(candidate_id, candidates$candidate_id)
   if (is.na(candidate_row) || candidates$import_status[candidate_row] != "not_started") {
@@ -445,7 +445,7 @@ if (write_mode) {
   candidates$match_status[candidate_row] <- "matched"
   candidates$import_status[candidate_row] <- "partial"
   replace_candidate_register_row(
-    "discovery/candidates.csv", candidate_row,
+    "database/candidates.csv", candidate_row,
     candidates[candidate_row, , drop = FALSE], candidate_id
   )
 

@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- c('NOAA:11082', 'DFO:Pacific:Pacific Halibut')
 i <- match(ids, x$candidate_id)

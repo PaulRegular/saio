@@ -4,7 +4,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/358_screen_ices_cod_kattegat_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:cod.27.21', , drop = FALSE]
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
@@ -42,7 +42,7 @@ stopifnot(
   !any(assessments$assessment_id == 'ices_cod_kattegat_21', na.rm = TRUE),
   !any(inputs$assessment_id == 'ices_cod_kattegat_21', na.rm = TRUE),
   !any(outputs$assessment_id == 'ices_cod_kattegat_21', na.rm = TRUE),
-  file.exists(file.path(root, 'source_reviews/screening/ices_cod_kattegat_2026.md'))
+  file.exists(file.path(root, 'source_reviews/ices_cod_kattegat_2026.md'))
 )
 
 cat('ICES Kattegat cod screening checks passed.\n')

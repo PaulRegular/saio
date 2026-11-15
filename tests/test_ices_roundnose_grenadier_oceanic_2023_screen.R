@@ -6,7 +6,7 @@ source(file.path(root, 'scripts/discovery',
   '446_screen_ices_roundnose_grenadier_oceanic_2023.R'), local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:rng.27.5a10b12ac14b', , drop = FALSE]
 manifest <- read.csv(file.path(root,

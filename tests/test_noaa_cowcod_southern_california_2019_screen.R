@@ -3,7 +3,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/433_screen_noaa_cowcod_southern_california_2019.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'NOAA:10443', , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
@@ -26,8 +26,7 @@ sha256_file <- function(path) {
 model <- file.path(cache, 'model_files')
 dat <- readLines(file.path(model, 'cowcod2019.dat'), warn = FALSE)
 report <- readLines(file.path(model, 'Report.sso'), warn = FALSE)
-review <- paste(readLines(file.path(root, 'source_reviews',
-  'noaa_cowcod_southern_california_2019.md'), warn = FALSE), collapse = '\n')
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_cowcod_southern_california.md'), warn = FALSE), collapse = '\n')
 signatures <- vapply(paths, function(path) rawToChar(readBin(path, 'raw', n = 2L)), character(1L))
 
 stopifnot(

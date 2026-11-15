@@ -801,7 +801,7 @@ if (!write_mode) {
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
   assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE,
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
-  candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+  candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
     colClasses = "character", na.strings = c("", "NA"), check.names = FALSE)
   if (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id ||
     rows_exist("database/inputs.csv", assessment_id) ||
@@ -852,7 +852,7 @@ if (!write_mode) {
     "Input observations and fixed biology are imported from the report appendix.",
     "Source review records the rounded derived SSB and remaining numerical output gaps."
   )
-  replace_csv_row("discovery/candidates.csv", candidate_id, candidates[candidate_index, ])
+  replace_csv_row("database/candidates.csv", candidate_id, candidates[candidate_index, ])
   cat("Imported New Zealand bluenose 2021 source data:", nrow(input_rows), "inputs,",
     nrow(assumption_rows), "assumptions, and", nrow(output_rows), "outputs.\n")
 }

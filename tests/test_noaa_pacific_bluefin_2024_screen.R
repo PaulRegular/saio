@@ -5,7 +5,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/369_screen_noaa_pacific_bluefin_2024.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -44,7 +44,7 @@ stopifnot(
   !any(inputs$assessment_id == 'noaa_isc_pacific_bluefin'),
   !any(outputs$assessment_id == 'noaa_isc_pacific_bluefin'),
   file.exists(file.path(root,
-    'source_reviews/screening/noaa_pacific_bluefin_2024.md'))
+    'source_reviews/noaa_pacific_bluefin_2024.md'))
 )
 
 cat('NOAA Pacific bluefin 2024 assessment identity and age-input screen checks passed.\n')

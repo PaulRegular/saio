@@ -4,7 +4,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/361_screen_ices_blue_ling_5a14_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:bli.27.5a14', , drop = FALSE]
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
@@ -45,7 +45,7 @@ stopifnot(
   !any(assessments$assessment_id == 'ices_blue_ling_5a14', na.rm = TRUE),
   !any(inputs$assessment_id == 'ices_blue_ling_5a14', na.rm = TRUE),
   !any(outputs$assessment_id == 'ices_blue_ling_5a14', na.rm = TRUE),
-  file.exists(file.path(root, 'source_reviews/screening/ices_blue_ling_5a14_2026.md'))
+  file.exists(file.path(root, 'source_reviews/ices_blue_ling_5a14.md'))
 )
 
 cat('ICES blue ling screening checks passed.\n')

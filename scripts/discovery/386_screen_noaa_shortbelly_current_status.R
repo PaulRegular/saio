@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_noaa_shortbelly_status_2026')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10398'
 unit_id <- 'noaa_shortbelly_rockfish_pacific_coast'
 source_files <- c('shortbelly_2007_assessment.pdf',
@@ -97,7 +97,7 @@ screened <- data.frame(
     source_urls), collapse = '; '),
   review_date = '2026-10-30',
   decision_reason = 'Ineligible under the current-assessment scope: the 2026 FMP lists Shortbelly rockfish as an ecosystem component species, while the inventory points only to an archived 2007 model. This does not imply that the archived model lacks age-structured data.',
-  notes = 'Do not substitute the 2007 model for a current production assessment or import it as current data. See source_reviews/screening/noaa_shortbelly_rockfish_current_status.md and the local source cache.',
+  notes = 'Do not substitute the 2007 model for a current production assessment or import it as current data. See source_reviews/noaa_shortbelly_rockfish_pacific_coast.md and the local source cache.',
   stringsAsFactors = FALSE, check.names = FALSE)
 
 if (current_state &&

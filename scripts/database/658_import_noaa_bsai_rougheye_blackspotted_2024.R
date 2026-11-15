@@ -706,7 +706,7 @@ import_noaa_bsai_rougheye_blackspotted_2024 <- function(root = ".", write = FALS
 
   source(file.path(root, "scripts/discovery/candidate_register_io.R"),
     local = TRUE)
-  candidate_path <- file.path(root, "discovery/candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   ci <- which(candidates$candidate_id == candidate_id)

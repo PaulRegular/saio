@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_noaa_vermilion_rockfish_washington_2021')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:15339'
 unit_id <- 'noaa_vermilion_rockfish_or_wa'
 files <- c('washington_vermilion_assessment_2021.pdf',

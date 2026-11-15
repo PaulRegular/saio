@@ -510,7 +510,7 @@ import_ices_wgnas_2026 <- function(root = ".", write = FALSE) {
 
   source(file.path(root, "scripts", "discovery", "candidate_register_io.R"),
     local = TRUE)
-  candidate_path <- file.path(root, "discovery", "candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   for (complex in names(stock_ids)) {
@@ -565,7 +565,7 @@ import_ices_wgnas_2026 <- function(root = ".", write = FALSE) {
       candidates[row, , drop = FALSE], candidate_id)
   }
 
-  discovery_review <- file.path(root, "source_reviews", "screening", "ices_final_five_2026.md")
+  discovery_review <- file.path(root, "source_reviews/shared/ices_final_five_2026.md")
   review_lines <- readLines(discovery_review, warn = FALSE, encoding = "UTF-8")
   old <- grep("^sal[.]nac[.]all and sal[.]neac[.]all are eligible", review_lines)
   if (length(old) == 1L) {

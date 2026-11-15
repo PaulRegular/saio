@@ -470,7 +470,7 @@ stocks_existing <- read.csv(file.path(root, "database/stocks.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA"))
 assessments_existing <- read.csv(file.path(root, "database/assessments.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA"))
-candidates_path <- file.path(root, "discovery/candidates.csv")
+candidates_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"), colClasses = "character")
 candidate_row <- which(candidates$candidate_id == candidate_id)
@@ -506,7 +506,7 @@ if (write_mode) {
   candidate$detailed_source_url <- paste(report_url, model_reference, sep = "; ")
   candidate$review_date <- "2026-11-07"
   candidate$decision_reason <- paste("Partially imported from the finalized 2024 production update pinned to revision", revision, "with source forms and species distinctions preserved.")
-  candidate$notes <- paste("NOAA Stock SMART ID 10015; one BSAI complex. Earlier bafa7658 snapshot is superseded by the final October 2024 Model 18.2c files. See source_reviews/screening/noaa_flathead_bsai.md and provenance/noaa_flatfish_screening_20261029/sources.csv.")
+  candidate$notes <- paste("NOAA Stock SMART ID 10015; one BSAI complex. Earlier bafa7658 snapshot is superseded by the final October 2024 Model 18.2c files. See source_reviews/noaa_flathead_sole_bsai.md and provenance/noaa_flatfish_screening_20261029/sources.csv.")
   replace_candidate_register_row(candidates_path, candidate_row, candidate, candidate_id)
   cat("Imported the verified source record and marked it partial.\n")
 }

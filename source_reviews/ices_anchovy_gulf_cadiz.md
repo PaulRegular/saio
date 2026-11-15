@@ -12,7 +12,7 @@ It is not a global synonym between the two species.
 The 2024 benchmark split Division 9.a into western `ane.27.9aW` and southern
 `ane.27.9aS` stocks. The new stock `ices_anchovy_gulf_cadiz` represents the
 southern stock only; it does not inherit the historical combined Master ID.
-The western successor is recorded separately; see [its source review](ices_anchovy_west_iberia_2026.md).
+The western successor is recorded separately; see [its source review](ices_anchovy_west_iberia.md).
 
 `ices_anchovy_gulf_cadiz_2025` is the November 2025 production SS3 assessment,
 1989–2025. The June 2026 WGHANSA report assesses western anchovy, not this

@@ -212,7 +212,7 @@ import_noaa_oregon_kelp_greenling_2015 <- function(root = ".", write = FALSE) {
     model_version="3.24u",is_current=TRUE,is_applied=TRUE,assessment_url=report,data_url=report,model_url=report,
     assumptions_status="partial",inputs_status="partial",outputs_status="partial",
     notes="Latest full Oregon assessment located. Report appendices reproduce model inputs; aggregate outputs imported, while numeric fitted N-at-age, F-at-age and M-at-age are unavailable."))
-  cp<-file.path(root,"discovery/candidates.csv")
+  cp<-file.path(root,"database/candidates.csv")
   cand<-read.csv(cp,colClasses="character",check.names=FALSE)
   cr<-match(candidate_id,cand$candidate_id)
   if(is.na(cr)||cand$eligibility[cr]!="eligible"||cand$import_status[cr]!="not_started")stop("Candidate status changed.")
@@ -226,7 +226,7 @@ import_noaa_oregon_kelp_greenling_2015 <- function(root = ".", write = FALSE) {
   cand$mortality_evidence[cr]<-"Fixed age-invariant M scalars imported: female 0.360 and male 0.318 per year."
   cand$timing_evidence[cr]<-"Annual model; all fleets and indices timed at 0.5."
   cand$output_evidence[cr]<-"Table 15 aggregate outputs and recent Table E2/E3 intervals imported; fitted age surfaces unavailable."
-  cand$review_date[cr]<-as.character(Sys.Date()); cand$import_status[cr]<-"partial"; cand$decision_reason[cr]<-"Partial source import from the latest detailed Oregon assessment; native catches, CPUE, compositions, fixed biology and aggregate outputs recovered. Fitted age surfaces remain unavailable."; cand$notes[cr]<-"NOAA Stock SMART 10462; 2015 Oregon benchmark remains latest full fit cited by current management documents. See source_reviews/screening/noaa_oregon_kelp_greenling_2015.md."
+  cand$review_date[cr]<-as.character(Sys.Date()); cand$import_status[cr]<-"partial"; cand$decision_reason[cr]<-"Partial source import from the latest detailed Oregon assessment; native catches, CPUE, compositions, fixed biology and aggregate outputs recovered. Fitted age surfaces remain unavailable."; cand$notes[cr]<-"NOAA Stock SMART 10462; 2015 Oregon benchmark remains latest full fit cited by current management documents. See source_reviews/noaa_kelp_greenling_oregon.md."
       if(write) {
     for(nm in c("stocks","assessments","assumptions","inputs","outputs"))
       write.table(get(switch(nm,stocks="stock",assessments="ar",assumptions="assumptions",inputs="inputs",outputs="outputs")),

@@ -6,7 +6,7 @@ Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-candidates <- read.csv(file.path(root, 'discovery/candidates.csv'),
+candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

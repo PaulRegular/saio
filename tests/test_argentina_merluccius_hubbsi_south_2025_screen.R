@@ -7,7 +7,7 @@ read_source_table <- function(path) {
 
 candidate_id <- "INIDEP:MERLUCCIUS_HUBBSI_SUR41"
 candidate_unit_id <- "argentina_merluccius_hubbsi_south_41s"
-candidate <- read_source_table("discovery/candidates.csv")
+candidate <- read_source_table("database/candidates.csv")
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
 unit <- candidate_units()
 unit <- unit[!is.na(unit$candidate_unit_id) &
@@ -17,7 +17,7 @@ progress <- progress[progress$organization == "INIDEP", , drop = FALSE]
 manifest <- read_source_table(
   "provenance/inidep_merluccius_hubbsi_south_2025/sources.csv")
 review <- paste(readLines(
-  "source_reviews/argentina_merluccius_hubbsi_south_2025.md", warn = FALSE),
+  "source_reviews/inidep_merluccius_hubbsi_south.md", warn = FALSE),
   collapse = "\n")
 
 stopifnot(

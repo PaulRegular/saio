@@ -387,7 +387,7 @@ for (table in c("assumptions", "inputs", "outputs")) validate_database_id(file.p
 
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, check.names = FALSE)
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, check.names = FALSE)
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
 if (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id || candidate_id %in% candidates$candidate_id) {
   stop("The ORH 7A record already exists; inspect the current state before reimporting.", call. = FALSE)
 }
@@ -411,7 +411,7 @@ if (!write_mode) {
   append_rows("database/assumptions.csv", new_assumptions)
   append_rows("database/inputs.csv", new_inputs)
   append_rows("database/outputs.csv", new_outputs)
-  append_rows("discovery/candidates.csv", candidate_row)
+  append_rows("database/candidates.csv", candidate_row)
   write_source_manifest(manifest, "provenance/mpi_orh7a_2024/sources.csv",
     row.names = FALSE, na = "")
   cat("ORH 7A source records and source manifest appended.\n")

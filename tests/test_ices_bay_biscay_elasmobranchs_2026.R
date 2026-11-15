@@ -1,5 +1,5 @@
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -56,8 +56,7 @@ stopifnot(
 
 cache <- file.path(root, 'source_cache', 'discovery_ices_bay_biscay_elasmobranchs_2026')
 manifest_path <- file.path(cache, 'sources.csv')
-review_path <- file.path(root, 'source_reviews', 'screening',
-  'ices_bay_biscay_elasmobranchs_2026.md')
+review_path <- file.path(root, 'source_reviews/shared/ices_bay_biscay_elasmobranchs_2026.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 stopifnot(
   grepl('does not establish that no biological age samples exist', review, fixed = TRUE),

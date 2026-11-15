@@ -1,6 +1,6 @@
 root <- '.'
 cache <- file.path(root, 'source_cache/discovery_ices_spurdog_nea_2026')
-candidate_path <- file.path(root, 'discovery/candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 before <- readLines(candidate_path, warn = FALSE)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/457_screen_ices_spurdog_nea_2026.R'))
@@ -19,7 +19,7 @@ sha256_file <- function(path) {
     output, value = TRUE)))
 }
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/ices_spurdog_nea_2026.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/ices_spurdog_nea.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'),
@@ -50,7 +50,7 @@ stopifnot(
   !any(assessments$assessment_id == 'ices_spurdog_nea', na.rm = TRUE),
   !any(inputs$assessment_id == 'ices_spurdog_nea', na.rm = TRUE),
   !any(outputs$assessment_id == 'ices_spurdog_nea', na.rm = TRUE),
-  file.exists(file.path(root, 'source_reviews/screening/ices_spurdog_nea_2026.md')),
+  file.exists(file.path(root, 'source_reviews/ices_spurdog_nea.md')),
   grepl('not the NOAA/DFO Northwest Atlantic', review, fixed = TRUE),
   grepl('unresolved age-input eligibility', review, fixed = TRUE),
   grepl('assessment was not updated', review, fixed = TRUE)

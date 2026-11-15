@@ -149,7 +149,7 @@ candidate_ids <- c("NOAA:14410", "NOAA:14430", "NOAA:14429")
 areas <- c("Northern", "Central", "Southern")
 assessment_ids <- paste0(stock_ids, "_2015")
 table_numbers <- 43:45
-candidates_path <- file.path(root, "discovery/candidates.csv")
+candidates_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 stocks_existing <- read.csv(file.path(root, "database/stocks.csv"), stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 assessments_existing <- read.csv(file.path(root, "database/assessments.csv"), stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)

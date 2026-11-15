@@ -1,5 +1,5 @@
 # Screen NOAA Dover sole against the 2021 full assessment and its native model files.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('NOAA:10022', x$candidate_id)
 if (is.na(i)) stop('Expected NOAA Dover sole row is missing.', call. = FALSE)

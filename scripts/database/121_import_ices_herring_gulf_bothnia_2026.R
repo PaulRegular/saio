@@ -442,7 +442,7 @@ assessment_row <- data.frame(
     "The 2026 forecast row is excluded from historical inputs and outputs.",
     "Catch biomass and age compositions, annual catch weights and maturity, benchmark-fixed M, and the acoustic index are recorded with source transformations.",
     "A 1990-2006 aggregate trapnet index for ages 3-9 is approximately digitized from the 2021 benchmark Figure 6; its exact identity with the 2026 production input array, digitization error, and likelihood weights are unresolved. Composition likelihood weights, the source fitted model object, and age-specific N/F/M outputs were not recovered.",
-    "See source_reviews/ices_herring_gulf_bothnia_2026.md."
+    "See source_reviews/ices_herring_gulf_bothnia.md."
   ), stringsAsFactors = FALSE
 )
 

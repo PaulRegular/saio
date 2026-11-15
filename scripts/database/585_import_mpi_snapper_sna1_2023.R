@@ -459,7 +459,7 @@ if (!write_data) {
   append_csv(file.path(root, "database", "assumptions.csv"), assumptions)
   append_csv(file.path(root, "database", "inputs.csv"), inputs)
   append_csv(file.path(root, "database", "outputs.csv"), outputs)
-  candidate_path <- file.path(root, "discovery", "candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   candidates <- candidates[!is.na(candidates$candidate_id) & nzchar(candidates$candidate_id), , drop = FALSE]

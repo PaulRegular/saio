@@ -4,11 +4,10 @@ root <- '.'
 candidate_id <- 'NOAA:10559'
 unit_id <- 'noaa_goa_dusky'
 cache <- file.path(root, 'source_cache', 'discovery_noaa_dusky_rockfish_2024')
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 row <- register[register$candidate_id == candidate_id, , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_dusky_rockfish_goa_2024.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_dusky_rockfish_goa_2024.md'), warn = FALSE), collapse = ' ')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 units <- candidate_units()
 unit <- units[units$unit_key == paste0('candidate:', unit_id), , drop = FALSE]

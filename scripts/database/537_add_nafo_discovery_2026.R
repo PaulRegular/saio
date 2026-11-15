@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, "discovery", "candidates.csv")
+path <- file.path(root, "database/candidates.csv")
 register_lines <- readLines(path, encoding = "UTF-8", warn = FALSE)
 register <- read.csv(path, stringsAsFactors = FALSE, na.strings = c("", "NA"),
   check.names = FALSE)

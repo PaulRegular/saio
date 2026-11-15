@@ -1,6 +1,6 @@
 # Screen the NOAA Gulf of Alaska Pacific ocean perch candidate against its
 # current assessment report and pinned model files.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('NOAA:11056', x$candidate_id)
 if (is.na(i)) stop('Expected NOAA GOA Pacific ocean perch row is missing.', call. = FALSE)

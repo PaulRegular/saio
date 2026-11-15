@@ -24,7 +24,7 @@ assessments <- read_columns("database/assessments.csv", c("assessment_id", "stoc
   "model_version", "inputs_status", "outputs_status", "assumptions_status"))
 stocks <- read_columns("database/stocks.csv", c("stock_id", "authority_stock_id",
   "scientific_name", "common_name", "area", "ocean"))
-candidates <- read_columns("discovery/candidates.csv", c("candidate_id", "matched_stock_id",
+candidates <- read_columns("database/candidates.csv", c("candidate_id", "matched_stock_id",
   "match_status", "import_status"))
 
 inputs <- inputs[inputs$assessment_id == assessment_id, , drop = FALSE]
@@ -145,7 +145,7 @@ key <- do.call(paste, c(lapply(outputs[output_keys], function(x)
   ifelse(is.na(x), "", as.character(x))), sep = "\r"))
 stopifnot(!anyDuplicated(key))
 
-review <- paste(readLines("source_reviews/screening/noaa_flathead_bsai.md", warn = FALSE),
+review <- paste(readLines("source_reviews/noaa_flathead_sole_bsai.md", warn = FALSE),
   collapse = "\n")
 stopifnot(
   grepl("bafa7658d31e0b99fe11d626a58e1c01807c69ee` is an earlier, superseded snapshot",

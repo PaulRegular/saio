@@ -531,7 +531,7 @@ if (nrow(inputs) < 2000L || nrow(outputs) < 5000L ||
   stop("NOAA GOA POP additions failed size or uniqueness checks.", call. = FALSE)
 }
 
-register_path <- file.path(root, "discovery", "candidates.csv")
+register_path <- file.path(root, "database/candidates.csv")
 register <- utils::read.csv(register_path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
 candidate_row <- match("NOAA:11056", register$candidate_id)

@@ -11,7 +11,7 @@ canonical_before <- lapply(canonical_paths, read_table)
 source(file.path(root, 'scripts', 'discovery',
   '531_screen_noaa_seak_coho_indicators_2024.R'))
 
-register <- read_table('discovery/candidates.csv')
+register <- read_table('database/candidates.csv')
 ids <- c('NOAA:10959', 'NOAA:10960', 'NOAA:10961')
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
 expected_units <- c('noaa_coho_berners_river',
@@ -43,8 +43,7 @@ stopifnot(nrow(rows) == 3L, !anyNA(rows$candidate_id),
   all(file.info(file.path(cache, manifest$file))$size == expected_sizes),
   identical(rawToChar(readBin(file.path(cache, expected_files[1]), 'raw', n = 5L)), '%PDF-'),
   identical(rawToChar(readBin(file.path(cache, expected_files[2]), 'raw', n = 5L)), '%PDF-'),
-  file.exists(file.path(root, 'source_reviews', 'screening',
-    'noaa_southeast_alaska_coho_2024.md')),
+  file.exists(file.path(root, 'source_reviews/shared/noaa_southeast_alaska_coho_2024.md')),
   !anyDuplicated(rows$candidate_unit_id))
 
 progress <- candidate_progress()

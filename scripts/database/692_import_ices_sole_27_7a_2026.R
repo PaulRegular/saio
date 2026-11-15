@@ -313,7 +313,7 @@ if (write_mode) {
   append_csv(outputs_new, file.path(database, "outputs.csv"))
 
   source(file.path(root, "scripts/discovery/candidate_register_io.R"), local = TRUE)
-  candidates_path <- file.path(root, "discovery/candidates.csv")
+  candidates_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidates_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
   ci <- which(candidates$candidate_id == candidate_id)
   if (length(ci) != 1L || candidates$screening_status[ci] != "screened") {

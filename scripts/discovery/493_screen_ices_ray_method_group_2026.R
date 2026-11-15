@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_ices_ray_method_group_2026')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 sid_path <- file.path(root, 'source_cache', 'shared/ices_sid', 'stock_list_2026.json')
 sid_url <- 'https://sid.ices.dk/services/year/2026'
 sid_hash <- '913D6A3EEAB9449AE3CD0DD15661A150D36FF79B6E6A9BA78D86D46BA1035F42'
@@ -179,7 +179,7 @@ for (i in seq_len(nrow(expected))) {
     'samples are absent from other research.')
   source_note <- paste0('Distinct ICES stock code and assessment area reviewed against the ',
     'official 2026 Stock Information Database and the linked current Standard Graphs ',
-    'source. See source_reviews/screening/ices_ray_method_group_2026.md. No canonical ',
+    'source. See source_reviews/shared/ices_ray_method_group_2026.md. No canonical ',
     'stock, assessment, input, or output record was added.')
   review <- list(
     candidate_unit_id = expected$candidate_unit_id[i],

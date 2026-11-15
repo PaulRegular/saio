@@ -303,7 +303,7 @@ if (write_mode) {
 
   source(file.path(root, "scripts", "discovery", "candidate_register_io.R"),
     local = TRUE)
-  candidate_path <- file.path(root, "discovery", "candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   candidate_rows <- which(!is.na(candidates$candidate_id) &
@@ -342,7 +342,7 @@ if (write_mode) {
   candidates$review_date[ci] <- "2026-11-11"
   candidates$notes[ci] <- paste(
     "Imported Table 1 assessment catch, SSB, age-6 fishing mortality and age-1 recruitment values for 2014-2023.",
-    "The NOAA support archive contains graphics and diagnostics, not a native WHAM fit object or numeric input arrays; see source_reviews/noaa_golden_tilefish_mid_atlantic_2024.md."
+    "The NOAA support archive contains graphics and diagnostics, not a native WHAM fit object or numeric input arrays; see source_reviews/noaa_golden_tilefish_mid_atlantic.md."
   )
   replace_candidate_register_row(candidate_path, ci,
     candidates[ci, , drop = FALSE], candidate_id)

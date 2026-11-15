@@ -3,7 +3,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/437_screen_ices_dogfish_67a_ce_j_2025.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:syc.27.67a-ce-j', , drop = FALSE]
 cache <- file.path(root, 'source_cache/discovery_ices_dogfish_2025')
@@ -11,7 +11,7 @@ sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)
 graph <- paste(readLines(paths[2L], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/ices_dogfish_67a_ce_j_2025.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/ices_dogfish_67a_ce_j_2025.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 

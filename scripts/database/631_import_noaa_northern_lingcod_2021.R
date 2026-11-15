@@ -433,7 +433,7 @@ input_key_cols <- c("assessment_id", "type", "measure", "basis", "fleet", "surve
 if (anyDuplicated(key(inputs_new, input_key_cols)) || anyDuplicated(key(outputs_new, output_key_cols))) {
   stop("Lingcod source records contain duplicate canonical keys.", call. = FALSE)
 }
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 ci <- match(candidate_id, candidates$candidate_id)
 if (is.na(ci) || candidates$candidate_unit_id[ci] != "noaa_lingcod_north_pacific_coast_2021" ||
@@ -448,7 +448,7 @@ candidates$import_status[ci] <- "partial"
 candidates$notes[ci] <- paste("Official 2021 northern U.S. Coast lingcod assessment imported from its native Stock Synthesis archive and report.",
   "Inputs retain catch, CPUE, length compositions, and conditional age-at-length data on native model scales; age-at-length is not represented as catch-at-age.",
   "Outputs include N/F/M, model-generated biological surfaces, SSB, recruitment, and derived total abundance; age-specific uncertainty and direct catch-at-age/survey-at-age inputs are unavailable.",
-  "See source_reviews/noaa_lingcod_northern_pacific_coast_2021.md.")
+  "See source_reviews/noaa_lingcod_northern_pacific_coast.md.")
 tmp_unit <- tempfile(fileext = ".csv")
 unlink(tmp_unit)
 existing_rows <- function(path) {

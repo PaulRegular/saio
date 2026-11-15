@@ -15,7 +15,7 @@ stocks <- read.csv(file.path(root, "database", "stocks.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 assessments <- read.csv(file.path(root, "database", "assessments.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
-candidates <- read.csv(file.path(root, "discovery", "candidates.csv"),
+candidates <- read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, na.strings = c("", "NA"))
 inputs <- read_selected(file.path(root, "database", "inputs.csv"), c(
   "assessment_id", "type", "measure", "basis", "year", "year_basis", "age",
@@ -146,7 +146,7 @@ stopifnot(
   any(a$setting == "survey_timing_beta" & grepl("0.58", a$value, fixed = TRUE)),
   any(a$setting == "M_prior_cv" & grepl("0.15", a$value, fixed = TRUE)),
   grepl("2018", assessment$notes, fixed = TRUE),
-  file.exists(file.path(root, "source_reviews", "nafo_cod_3m_2026.md"))
+  file.exists(file.path(root, "source_reviews/nafo_cod_3m.md"))
 )
 
 manifest <- read.csv(file.path(root, "provenance/nafo_cod_3m_2026/sources.csv"),

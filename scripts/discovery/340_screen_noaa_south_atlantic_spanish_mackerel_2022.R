@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'noaa_south_atlantic_spanish_mackerel_2022')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 source_manifest_path <- file.path(root, 'provenance/noaa_south_atlantic_spanish_mackerel_2022/sources.csv')
 sources <- read.csv(source_manifest_path, stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)

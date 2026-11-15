@@ -1,6 +1,6 @@
 source("scripts/database/source_manifest_io.R", local = TRUE)
 
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 manifest_path <- "provenance/mpi_kahawai_kah1_2021/sources.csv"
 source_pdf <- "source_cache/mpi_kahawai_kah1_2021/FAR2022-54.pdf"
 

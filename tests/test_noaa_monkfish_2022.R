@@ -1,5 +1,5 @@
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -30,6 +30,6 @@ stopifnot(
   !any(c('NOAA:10500','NOAA:10501',
     'noaa_monkfish_north_10500','noaa_monkfish_south_10501') %in%
     c(assessments$assessment_id, inputs$assessment_id, outputs$assessment_id)),
-  file.exists(file.path(root, 'source_reviews', 'screening', 'noaa_monkfish_2022.md'))
+  file.exists(file.path(root, 'source_reviews/noaa_monkfish_2022.md'))
 )
 cat('NOAA monkfish identity, source evidence, eligibility, and no-import checks passed.\n')

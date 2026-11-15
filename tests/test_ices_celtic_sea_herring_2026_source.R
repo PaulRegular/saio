@@ -1,8 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-source_paths <- c(list.files("database", pattern = "[.]csv$", full.names = TRUE),
-  list.files("discovery", pattern = "[.]csv$", full.names = TRUE))
+source_paths <- list.files("database", pattern = "[.]csv$", full.names = TRUE)
 source_hashes <- tools::md5sum(source_paths)
 import_env <- new.env(parent = globalenv())
 import_env$commandArgs <- function(trailingOnly = FALSE) {
@@ -134,11 +133,11 @@ stocks <- utils::read.csv(file.path(database, "stocks.csv"), stringsAsFactors = 
   na.strings = c("", "NA"), check.names = FALSE)
 assessments <- utils::read.csv(file.path(database, "assessments.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
-candidates <- utils::read.csv(file.path(root, "discovery", "candidates.csv"), stringsAsFactors = FALSE,
+candidates <- utils::read.csv(file.path(root, "database/candidates.csv"), stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate_note <- candidates$notes[candidates$candidate_id == "ICES:her.27.irls"]
 inventory <- candidate_units()
-review <- paste(readLines(file.path(root, "source_reviews", "screening", "ices_celtic_herring_2026.md"),
+review <- paste(readLines(file.path(root, "source_reviews/ices_celtic_herring_2026.md"),
   warn = FALSE), collapse = "\n")
 stopifnot(
   sum(stocks$stock_id == stock_id, na.rm = TRUE) == 1L,

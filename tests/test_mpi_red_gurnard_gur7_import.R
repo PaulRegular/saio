@@ -11,7 +11,7 @@ outputs_all <- read_table("database/outputs.csv")
 outputs <- outputs_all[outputs_all$assessment_id == assessment_id, , drop = FALSE]
 assessments <- read_table("database/assessments.csv")
 assessment <- assessments[assessments$assessment_id == assessment_id, , drop = FALSE]
-candidates <- read_table("discovery/candidates.csv")
+candidates <- read_table("database/candidates.csv")
 candidate <- candidates[candidates$candidate_id == "MPI:GUR7", , drop = FALSE]
 manifest <- read_table("provenance/mpi_red_gurnard_gur7_2022/sources.csv")
 

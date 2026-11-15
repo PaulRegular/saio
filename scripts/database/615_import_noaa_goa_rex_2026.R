@@ -416,7 +416,7 @@ if (!write_mode) {
         stream_has_id, logical(1L), id = assessment_id))) {
     stop("NOAA GOA rex sole rows are already present in the canonical database.", call. = FALSE)
   }
-  candidates <- read_csv("discovery/candidates.csv")
+  candidates <- read_csv("database/candidates.csv")
   candidate_rows <- which(candidates$candidate_id %in% candidate_ids)
   if (length(candidate_rows) != 3L ||
       any(candidates$import_status[candidate_rows] != "not_started")) {
@@ -439,7 +439,7 @@ if (!write_mode) {
   append_csv("database/assumptions.csv", assumption_rows)
   append_csv("database/inputs.csv", input_rows)
   append_csv("database/outputs.csv", output_rows)
-  replace_register_rows("discovery/candidates.csv", "candidate_id", candidate_ids,
+  replace_register_rows("database/candidates.csv", "candidate_id", candidate_ids,
     list(matched_stock_id = stock_id, match_status = "matched", import_status = "partial",
       review_date = "2026-11-09",
       catch_age_evidence = "The 2026 report's Table 9 catch series (1982-2026) is imported in tonnes. The 2026 value is partial; Table 9 says August 22 while Table 7 and narrative text say August 29. The report-linked Appendix E age-composition tables are labelled draft and were not imported.",

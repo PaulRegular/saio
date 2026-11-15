@@ -324,7 +324,7 @@ new_assessment <- blank_row(names(assessments), list(
   data_url = "https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2024&species_id=7&stock_id=6&review_type_id=3&info_type_id=3&map_type_type_id=&map_type_id=&filename=2024_POK_UNIT_MOD_BaseASAPInput.dat",
   model_url = "https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2024&species_id=7&stock_id=6&review_type_id=3&info_type_id=3&map_type_type_id=&map_type_id=&filename=2024_POK_UNIT_MOD_BaseASAPOutput.rep",
   assumptions_status = "partial", inputs_status = "complete", outputs_status = "partial",
-  notes = "Final 2024 management-track ASAP base model; the peer-review panel accepted this assessment as technically sufficient and best scientific information available. It updates the 2022 Management Track model with data through 2023. A detailed supporting working paper is marked draft and is used only for detail/cross-check. The 2026 SASI item is a projection update only and is not a later age-structured assessment. Inputs retain the full native annual data and fixed biology; some estimation controls remain summarized rather than transcribed. The official output file has point estimates but no full time-age uncertainty surfaces. See source_reviews/nefsc_atlantic_pollock_5yz.md."))
+  notes = "Final 2024 management-track ASAP base model; the peer-review panel accepted this assessment as technically sufficient and best scientific information available. It updates the 2022 Management Track model with data through 2023. A detailed supporting working paper is marked draft and is used only for detail/cross-check. The 2026 SASI item is a projection update only and is not a later age-structured assessment. Inputs retain the full native annual data and fixed biology; some estimation controls remain summarized rather than transcribed. The official output file has point estimates but no full time-age uncertainty surfaces. See source_reviews/ck_nefsc_virens_5yz.md."))
 
 assumption_values <- list(
   list(component = "population", setting = "modeled_years", value = "1970-2023", source_reference = paste(input_ref, "Number of Years; First Year"), notes = "54 historical years; no projection years are included in the fit."),
@@ -409,7 +409,7 @@ if (!dry_run) {
   stock$common_name <- "Atlantic pollock"
   stock$notes <- paste(
     "Charbonneau-Keith identity retained (NEFSC_ virens_5YZ; Master revision 7e4daca3cbfc14ce7fa0b28ed824eebe7113249b).",
-    "Official NOAA assessment area 5YZ and common name Atlantic pollock verified against the 2024 assessment. See source_reviews/nefsc_atlantic_pollock_5yz.md."
+    "Official NOAA assessment area 5YZ and common name Atlantic pollock verified against the 2024 assessment. See source_reviews/ck_nefsc_virens_5yz.md."
   )
   stocks[stocks$stock_id == stock_id, ] <- stock
   temp_stock <- tempfile(tmpdir = database, fileext = ".csv")

@@ -9,7 +9,7 @@ source(file.path(root, 'scripts/discovery/481_screen_noaa_wreckfish_2014.R'),
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:10369', , drop = FALSE]
 units <- candidate_units()
@@ -24,7 +24,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/noaa_wreckfish_south_atlantic_2014.md'), warn = FALSE),
+  'source_reviews/noaa_wreckfish_south_atlantic_2014.md'), warn = FALSE),
   collapse = ' ')
 
 stopifnot(nrow(candidate) == 1L,

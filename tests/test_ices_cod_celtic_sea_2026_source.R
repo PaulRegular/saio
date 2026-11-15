@@ -106,7 +106,7 @@ stopifnot(
   !anyDuplicated(paste(outputs$measure, outputs$year, outputs$age, outputs$survey))
 )
 
-review <- readLines("source_reviews/ices_cod_celtic_sea_2026.md", warn = FALSE)
+review <- readLines("source_reviews/ck_ices_wgcse_morhua_cs7e_k.md", warn = FALSE)
 review_text <- gsub("\\s+", " ", paste(review, collapse = " "))
 stopifnot(
   grepl("returned HTTP 401", review_text, fixed = TRUE),

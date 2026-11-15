@@ -4,7 +4,7 @@ source('scripts/discovery/465_screen_dfo_wcvi_barkley_sockeye_2024.R')
 source('scripts/discovery/195_summarize_discovery.R')
 source('scripts/discovery/196_summarize_inventory_units.R')
 root <- "."
-candidate <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+candidate <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- candidate[candidate$candidate_id == 'DFO:Pacific:WCVI Barkley Sockeye Salmon', , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE)
@@ -24,7 +24,7 @@ stopifnot(
   grepl('does not report an age-specific marine abundance', row$survey_age_evidence, fixed = TRUE),
   grepl('does not establish the complete', row$decision_reason, fixed = TRUE),
   grepl('archived-page interstitial', row$notes, fixed = TRUE),
-  file.exists(file.path(root, 'source_reviews', 'screening', 'dfo_wcvi_barkley_sockeye_2024.md')),
+  file.exists(file.path(root, 'source_reviews/dfo_wcvi_barkley_sockeye_smu.md')),
   !any(stocks$scientific_name == 'Oncorhynchus nerka', na.rm = TRUE),
   !any(assessments$assessment_id == 'dfo_wcvi_barkley_sockeye_smu', na.rm = TRUE),
   !any(inputs$assessment_id == 'dfo_wcvi_barkley_sockeye_smu', na.rm = TRUE),

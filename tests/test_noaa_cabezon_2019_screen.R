@@ -9,7 +9,7 @@ source(file.path(root,
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 lookup <- function(candidate_id) {
   row <- register[register$candidate_id == candidate_id, , drop = FALSE]
@@ -79,7 +79,7 @@ stopifnot(
   any(ors_outputs$measure == 'SSB' & ors_outputs$year == 2019L &
     ors_outputs$scenario == 'assessment forecast' & ors_outputs$value == 177 &
     ors_outputs$lwr == 128 & ors_outputs$upr == 226),
-  file.exists('source_reviews/screening/noaa_cabezon_2019.md'),
+  file.exists('source_reviews/noaa_cabezon_2019.md'),
   !any(assessments$stock_id %in% c('noaa_cabezon_washington_2019',
     'noaa_cabezon_northern_california_2019',
     'noaa_cabezon_southern_california_2019')),

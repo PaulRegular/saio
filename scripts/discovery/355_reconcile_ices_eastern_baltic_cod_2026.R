@@ -4,7 +4,7 @@ candidate_id <- 'ICES:cod.27.24-32'
 cache <- file.path(root, 'source_cache',
   'gadus_morhua/ck_ices_wgbfas_morhua_bs_25_32', 'assessment_2026')
 stocks_path <- file.path(root, 'database', 'stocks.csv')
-candidates_path <- file.path(root, 'discovery', 'candidates.csv')
+candidates_path <- file.path(root, 'database/candidates.csv')
 stocks <- read.csv(stocks_path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidates <- read.csv(candidates_path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'),

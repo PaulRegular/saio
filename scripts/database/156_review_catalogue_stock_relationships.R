@@ -81,7 +81,7 @@ ck_review_stock_relationships <- function(stocks) {
     at <- match(parent_id, stocks$stock_id)
     note <- paste0("Related historical/component catalogue rows: ",
       paste(links$stock_id, collapse = ", "),
-      ". These retain their original identifiers and are not additional current assessment cases; see source_reviews/charbonneau_keith_master_catalogue.md.")
+      ". These retain their original identifiers and are not additional current assessment cases; see source_reviews/shared/charbonneau_keith_master_catalogue.md.")
     if (is.na(stocks$notes[at])) stocks$notes[at] <- ""
     if (!grepl(note, stocks$notes[at], fixed = TRUE)) stocks$notes[at] <- trimws(paste(stocks$notes[at], note))
   }

@@ -168,7 +168,7 @@ if (nrow(outputs) != expected_rows || any(!is.finite(outputs$value)) ||
 
 assessments <- utils::read.csv("database/assessments.csv", stringsAsFactors = FALSE, check.names = FALSE)
 assessment_row <- which(assessments$assessment_id == assessment_id)
-candidates_path <- "discovery/candidates.csv"
+candidates_path <- "database/candidates.csv"
 candidates <- utils::read.csv(candidates_path, stringsAsFactors = FALSE, check.names = FALSE)
 candidate_row <- which(candidates$candidate_id == candidate_id)
 if (length(assessment_row) != 1L || length(candidate_row) != 1L ||

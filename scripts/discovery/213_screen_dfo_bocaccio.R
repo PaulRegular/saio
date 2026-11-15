@@ -1,5 +1,5 @@
 # Record the DFO BC coastwide Bocaccio source screen in the candidate register.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('DFO:Pacific:Bocaccio Rockfish', x$candidate_id)
 if (is.na(i)) stop('Expected DFO Bocaccio row is missing.', call. = FALSE)

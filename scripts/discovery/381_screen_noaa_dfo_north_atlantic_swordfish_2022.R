@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_swordfish_north_atlantic_2022')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 candidate_ids <- c('NOAA:10953', 'DFO:Maritimes:Swordfish - North Atlantic')
 unit_id <- 'iccat_north_atlantic_swordfish'
 

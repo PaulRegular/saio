@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_noaa_puget_sound_chinook_2026')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 
 source_files <- data.frame(
   file = c('Preseason_Report_I_2026.pdf', 'Review_of_2025.pdf',

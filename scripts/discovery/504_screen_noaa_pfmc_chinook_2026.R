@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_noaa_puget_sound_chinook_2026')
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 stock_ids <- c(10605L, 10606L, 10607L, 10609L, 10611L, 10612L, 10613L,
   10614L, 10615L, 10616L, 10617L, 10618L, 10620L, 10621L, 10622L,
   10623L, 10624L, 10626L, 10627L, 10628L, 10629L, 10630L, 10631L,

@@ -1,5 +1,5 @@
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -26,6 +26,6 @@ stopifnot(
   !any(stocks$scientific_name == 'Zoarces americanus'),
   !any(c('NOAA:10525', 'noaa_ocean_pout_10525') %in% c(assessments$assessment_id,
     inputs$assessment_id, outputs$assessment_id)),
-  file.exists(file.path(root, 'source_reviews', 'screening', 'noaa_ocean_pout_2022.md'))
+  file.exists(file.path(root, 'source_reviews/noaa_ocean_pout_2022.md'))
 )
 cat('NOAA ocean-pout identity, index-method exclusion, provenance, and no-import checks passed.\n')

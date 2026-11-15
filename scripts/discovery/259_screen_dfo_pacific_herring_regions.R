@@ -1,4 +1,4 @@
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path('database', 'stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -109,7 +109,7 @@ reviews <- lapply(names(areas), function(id) {
       'Detailed 2025 SCA inputs/outputs and the 2024/066 framework were reviewed online.',
       'The local source cache has the 2025/005 report and current official source datasets;',
       'the 2026/014, 2026/006 and 2024/066 PDF URLs currently redirect shell downloads to',
-      'the Government Publications archive notice. See source_reviews/dfo_pacific_herring_areas_discovery.md.'
+      'the Government Publications archive notice. See source_reviews/shared/dfo_pacific_herring_areas.md.'
     )
   )
 })

@@ -14,7 +14,7 @@ m_values <- outputs[outputs$measure == "natural_mortality_at_age", ]
 f_values <- outputs[outputs$measure == "fishing_mortality_at_age", ]
 
 register <- utils::read.csv(
-  "discovery/candidates.csv",
+  "database/candidates.csv",
   stringsAsFactors = FALSE, na.strings = c("", "NA")
 )
 candidate <- register[register$candidate_id == "DFO:Gulf:White Hake - NAFO 4T", ]

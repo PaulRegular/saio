@@ -13,7 +13,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors =
   na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
-candidates <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 units <- candidate_units()
 
@@ -116,8 +116,7 @@ stopifnot(
   all(grepl('^[[:xdigit:]]{64}$', manifest$sha256)),
   file.exists(file.path(root, 'scripts', 'database',
     '544_import_dfo_sgsl_winter_flounder_4t_2017.R')),
-  file.exists(file.path(root, 'source_reviews', 'screening',
-    'dfo_sgsl_winter_flounder_4t_2017.md'))
+  file.exists(file.path(root, 'source_reviews/dfo_sgsl_winter_flounder_4t.md'))
 )
 
 cat('DFO NAFO 4T winter flounder source checks passed.\n')

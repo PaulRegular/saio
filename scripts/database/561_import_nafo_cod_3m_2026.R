@@ -488,7 +488,7 @@ assessment_new <- data.frame(
 
 source_reviews <- file.path(root, "source_reviews")
 manifest_path <- file.path(root, "provenance/nafo_cod_3m_2026/sources.csv")
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
 
 read_csv <- function(path) read.csv(path, stringsAsFactors = FALSE,

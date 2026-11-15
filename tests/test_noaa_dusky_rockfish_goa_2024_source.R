@@ -78,7 +78,7 @@ read_assessment_rows <- function(table) {
 db_inputs <- read_assessment_rows("inputs")
 db_outputs <- read_assessment_rows("outputs")
 db_assessments <- read_assessment_rows("assessments")
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")
 candidate <- candidate[candidate$candidate_id == "NOAA:10559", , drop = FALSE]
 stock <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,

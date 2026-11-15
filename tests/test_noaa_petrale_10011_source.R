@@ -124,7 +124,7 @@ stopifnot(nrow(a) == 9L,
   any(a$setting == "survey_indices_and_timing"),
   any(a$setting == "projection_basis"))
 
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- candidate[candidate$candidate_id == "NOAA:10011", ]
 inventory <- candidate_units()

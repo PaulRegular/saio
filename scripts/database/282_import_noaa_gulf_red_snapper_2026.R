@@ -458,7 +458,7 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
   notes = paste("Latest detailed run located for NOAA:10230; final report released in October 2026.",
     "The final report states SSC review was pending, so the assessment is not marked applied for advice.",
     "Area-specific summary outputs from Tables 20-22 and exploitation rates from Tables 12-19 have been imported; age-specific N/F and numeric",
-    "inputs remain incomplete. See source_reviews/noaa_gulf_red_snapper_2026.md."))
+    "inputs remain incomplete. See source_reviews/noaa_gulf_red_snapper.md."))
 
 inputs <- index_inputs
 if (anyDuplicated(input_key(inputs))) {
@@ -537,7 +537,7 @@ if (!write_mode) {
         row.names = FALSE, col.names = FALSE, append = TRUE, na = "")
     }
   }
-  candidate_path <- file.path(root, "discovery/candidates.csv")
+  candidate_path <- file.path(root, "database/candidates.csv")
   candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
     na.strings = c("", "NA"), check.names = FALSE)
   candidate_row <- which(candidates$candidate_id == candidate_id)

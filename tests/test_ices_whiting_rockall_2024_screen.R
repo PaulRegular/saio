@@ -5,7 +5,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/discovery/367_screen_ices_whiting_rockall_2024.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database/stocks.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -40,7 +40,7 @@ stopifnot(
   !any(assessments$stock_id == 'ices_whiting_rockall_6b'),
   !any(inputs$assessment_id == 'ices_whiting_rockall_6b'),
   !any(outputs$assessment_id == 'ices_whiting_rockall_6b'),
-  file.exists(file.path(root, 'source_reviews/screening/ices_whiting_rockall_2024.md'))
+  file.exists(file.path(root, 'source_reviews/ices_whiting_rockall_2024.md'))
 )
 
 cat('ICES Rockall whiting 2024 current-method and age-input screen checks passed.\n')

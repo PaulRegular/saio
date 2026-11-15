@@ -15,7 +15,7 @@ outputs <- read.csv(file.path(database, 'outputs.csv'), stringsAsFactors = FALSE
   na.strings = c('', 'NA'), check.names = FALSE)
 assumptions <- read.csv(file.path(database, 'assumptions.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
-candidate <- read.csv(file.path(root, 'discovery/candidates.csv'), stringsAsFactors = FALSE,
+candidate <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 inventory <- candidate_units()
 source_review <- paste(readLines(file.path(root,

@@ -316,7 +316,7 @@ assessment_notes <- paste(
 )
 assessment_table$notes[assessment_row] <- assessment_notes
 
-candidates <- read_table("discovery/candidates.csv")
+candidates <- read_table("database/candidates.csv")
 candidate_row <- which(candidates$candidate_id == candidate_id)
 if (length(candidate_row) != 1L) stop("Expected exactly one AFMA candidate row.", call. = FALSE)
 candidates$mortality_evidence[candidate_row] <- paste(
@@ -348,7 +348,7 @@ if (write_mode) {
   }
   replace_csv_record("database/assessments.csv", "assessment_id",
     assessment_id, assessment_table[assessment_row, , drop = FALSE])
-  replace_csv_record("discovery/candidates.csv", "candidate_id",
+  replace_csv_record("database/candidates.csv", "candidate_id",
     candidate_id, candidates[candidate_row, , drop = FALSE])
   cat("Updated AFMA Blue Grenadier 2025 outputs and source notes.\n")
 } else {

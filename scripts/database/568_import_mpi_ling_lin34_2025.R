@@ -532,7 +532,7 @@ if (write_mode) {
   append_csv(outputs, file.path(db, "outputs.csv"))
   append_csv(inputs, file.path(db, "inputs.csv"))
   write_source_manifest(manifest, manifest_path, row.names = FALSE, na = "")
-  replace_register_row(file.path(root, "discovery", "candidates.csv"), "candidate_id", candidate_id, list(
+  replace_register_row(file.path(root, "database/candidates.csv"), "candidate_id", candidate_id, list(
     matched_stock_id = stock_id,
     import_status = "partial",
     catch_age_evidence = "Imported the native fishery catch-biomass series and separate sexed/combined-sex composition observations. The model does not use direct catch numbers-at-age; no reconstructed numbers were added to the canonical inputs.",

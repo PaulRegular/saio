@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_ices_sandeel_area_5r_2025')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 
 sources <- data.frame(
   file = c('HAWG_2025.pdf', 'ICES_Advice_3828.html', 'SAG_19319.html'),

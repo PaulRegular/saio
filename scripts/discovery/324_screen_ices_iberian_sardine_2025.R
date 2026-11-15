@@ -1,7 +1,7 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'ices_iberian_sardine_2025')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
-source_review_path <- file.path(root, 'source_reviews', 'screening', 'ices_iberian_sardine_2025.md')
+candidate_path <- file.path(root, 'database/candidates.csv')
+source_review_path <- file.path(root, 'source_reviews/ices_iberian_sardine_2025.md')
 manifest_path <- file.path(cache, 'manifest.csv')
 candidate_id <- 'ICES:pil.27.8c9a'
 candidate_unit_id <- 'ices_iberian_sardine_8c9a'

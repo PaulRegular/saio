@@ -564,7 +564,7 @@ if (!all(source_map$file %in% source_manifest_ids)) {
 }
 append_pacific_case(stock, assessment, assumptions, inputs, outputs)
 source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- utils::read.csv(
   candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE

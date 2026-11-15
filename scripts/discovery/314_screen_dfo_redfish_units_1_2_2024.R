@@ -1,5 +1,5 @@
 root <- "."
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 stocks_path <- file.path(root, 'database', 'stocks.csv')
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 stocks <- read.csv(stocks_path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
@@ -71,7 +71,7 @@ common <- list(
     'The detailed current record is the 2024 stock-status assessment, published as Research Document',
     '2026/037; the 2025 indicator update is Science Response 2026/009. The 2025 update could not',
     'report Unit 2 status because there was no 2025 Unit 2 survey. Source review:',
-    'source_reviews/screening/dfo_redfish_units_1_2_2024.md. Cached advisory PDFs and SHA-256',
+    'source_reviews/shared/dfo_redfish_units_1_2_2024.md. Cached advisory PDFs and SHA-256',
     'values are in the ignored local source cache; current detailed PDFs redirected to an archived page.'
   )
 )

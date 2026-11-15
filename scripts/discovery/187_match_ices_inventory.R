@@ -1,6 +1,6 @@
 # Match reviewed ICES stock codes to existing stock units; this does not screen data.
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 candidates <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE, na.strings = 'NA')
 code <- tolower(trimws(stocks$authority_stock_id))

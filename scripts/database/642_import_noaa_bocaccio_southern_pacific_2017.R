@@ -375,7 +375,7 @@ assessment <- pacific_database_row("assessments", assessment_id = assessment_id,
   assumptions_status = "partial", inputs_status = "partial", outputs_status = "partial",
   notes = paste("Latest detailed fitted assessment for the current NOAA Southern Pacific Coast unit. The 2017 update uses data through 2016 and carries forward age information from 2015. Native catch, aggregate indices, length frequencies, conditional age-at-length frequencies, age-error definitions and assumptions are imported. The report supplies aggregate trajectories and recent intervals, but the archive has no fitted Report.sso or parameter file and published numerical N-at-age and F-at-age were not found. The 2025 catch-only projection is kept separate.", projection_url))
 
-candidate_path <- file.path(root, "discovery/candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, colClasses = "character", check.names = FALSE)
 ci <- which(candidates$candidate_id == candidate_id)
 if (length(ci) != 1L ||

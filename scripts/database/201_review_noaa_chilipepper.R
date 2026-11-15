@@ -1,5 +1,5 @@
 # Record the 2025 coastwide chilipepper assessment and the older inventory label.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = 'NA')
 i <- match(c('NOAA:17357', 'NOAA:10395'), x$candidate_id)
 if (anyNA(i) || any(x$match_status[i] != 'unreviewed') || any(x$screening_status[i] != 'not_started')) stop('Preserve the existing reviews; candidate state has changed.', call. = FALSE)

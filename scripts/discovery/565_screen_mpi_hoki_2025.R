@@ -1,7 +1,7 @@
 source("scripts/database/source_manifest_io.R", local = TRUE)
 
 root <- "."
-register_path <- file.path(root, "discovery", "candidates.csv")
+register_path <- file.path(root, "database/candidates.csv")
 candidate_id <- "MPI:HOK1"
 candidate_unit_id <- "nz_hoki_hok1"
 

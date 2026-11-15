@@ -1,6 +1,8 @@
-# Eastern Georges Bank Atlantic cod
+# Eastern Georges Bank Atlantic cod (ck_nefsc_trac_cert_morhua_gb)
 
-## Identity and selected records
+## Eastern Georges Bank Atlantic cod
+
+### Identity and selected records
 
 `ck_nefsc_trac_cert_morhua_gb` retains Charbonneau-Keith identifier
 `NEFSC-TRAC-CERT_morhua_GB`. The catalogue's source label, `GB 5Ze Gadus
@@ -26,7 +28,7 @@ that preference does not make its numerical outputs the selected DFO EGB run.
 The framework year follows the approval year stated in the annual advice,
 not the research documents' 2026 publication year.
 
-## Inputs and assumptions recovered
+### Inputs and assumptions recovered
 
 The framework is a sex-combined WHAM model for 1978-2023, ages 1-9+, with age 1
 recruitment. Three separate fleet total-catch inputs are recovered from
@@ -90,7 +92,7 @@ estimated M surface. The exact native M array, full biological surfaces,
 spawning fraction, native model configuration, numerical process parameters
 and exact bias-adjustment settings remain unrecovered.
 
-## Outputs and later updates
+### Outputs and later updates
 
 Table 4 supplies three aggregate survey q coefficients for selected EGB
 Run 1: 0.434 (DFO winter), 0.223 (NMFS spring), and 0.109 (NMFS fall). These
@@ -135,7 +137,7 @@ DFO vessel/gear change. The 2026 assessment excludes the 2025 NMFS fall survey
 point after reviewing its timing and coverage. Earlier framework inputs must
 not silently stand in for those revised observation arrays.
 
-## Validation and source coverage
+### Validation and source coverage
 
 The importer is `scripts/database/147_import_dfo_eastern_georges_bank_cod.R`.
 It verifies cached source hashes and table dimensions, preserves original
@@ -148,7 +150,7 @@ unavailable age observations.
 
 There are 1,440 recovered inputs (1,410 for the framework, including 414 approximate M points), 22 assumptions and ten outputs across the three events. All completeness statuses remain **partial**.
 
-## Sources and cache
+### Sources and cache
 
 - [Data-input review, Research Document 2026/032](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41331539.pdf), especially pp. 9-11, Table 6 and Table 10.
 - [Modelling review, Research Document 2026/039](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41331783.pdf), especially pp. 3, 5-10 and Tables 1, 3-4.
@@ -161,3 +163,71 @@ with URLs, retrieval dates, sizes and SHA256 checksums in `manifest.csv`.
 The earlier `_2025` cache contains HTML landing pages bearing PDF suffixes;
 those are not PDFs and are excluded from extraction. A landing page response
 must not be mistaken for missing or verified assessment data.
+
+## DFO Eastern Georges Bank Atlantic cod (5Zjm)
+
+### Identity and current assessment
+
+DFO's Groundfish 4VWX5 management plan identifies Eastern Georges Bank cod as
+a transboundary stock in NAFO Division 5Zjm. This is the same management unit
+represented by the existing canonical record
+`ck_nefsc_trac_cert_morhua_gb`, whose stored authority identifier is the
+Charbonneau–Keith-era label `5Zejm (Eastern Georges Bank)` and whose assessment
+area includes the corresponding Canadian 5Zejm and US statistical areas 551,
+552, 561 and 562. The DFO plan separately identifies 4X5Y cod, supporting the
+boundary distinction. The 5Zjm inventory row is therefore a verified alias of
+the existing Eastern Georges Bank stock, not a new stock unit.
+
+DFO's latest advice is the 2026 assessment to 2025 (Science Advisory Report
+2026/046). Its age-specific inputs and fitted surfaces are not publicly
+tabulated. The latest detailed selected assessment is the EGB Run 1 WHAM
+framework approved in 2025 and published in 2026 (Research Documents 2026/032,
+2026/039 and 2026/073), fitted through 2023. The 2025 and 2026 annual summary
+records are retained separately in the canonical database.
+
+### Age-input and output screen
+
+The selected EGB framework includes annual fleet totals, Canadian CATCH
+weight-at-age, aggregate DFO winter and NMFS spring/fall survey biomass
+indices, and approximate figure-readings of its age-varying fixed Lorenzen M.
+However, the selected model's NTS catch-at-age and survey age-composition
+observations are not numerically recoverable from the reviewed reports. The
+data report's figures show bubble plots without numeric labels or a scale; its
+Part 1 CATCH numbers-at-age table is not the selected model input and is not
+substituted. Survey seasons are described, but exact configured timing and
+annual CV arrays are unavailable. Complete model biology, including the
+selected maturity inputs, is also unresolved.
+
+The newest 2026/046 summary reports 2025 SSB, LRP status and fully selected F,
+but not annual N/F/M-at-age, recruitment or age-specific uncertainty. Earlier
+2025/039 aggregate results are stored under their own assessment event. The
+assessment is therefore screened, but its eligibility as a new age-input
+candidate remains unresolved because current-run age observations and key
+biological/timing specifications are unavailable. Its existing canonical
+assessment record is partial; no duplicate stock or assessment is created.
+
+The official DFO management-plan page used to confirm the 5Zjm-to-Eastern
+Georges Bank identity is cached under
+`source_cache/discovery_dfo_cod_5zjm/`; `sources.csv` records its URL, retrieval
+date, byte size and SHA-256. Detailed assessment sources, their provenance and
+remaining gaps are documented in
+`source_reviews/ck_nefsc_trac_cert_morhua_gb.md` and its cache manifest.
+
+## NOAA Eastern Georges Bank Atlantic cod (Stock SMART 12805)
+
+### Identity and assessment scope
+
+The NOAA inventory's Eastern Georges Bank entry is the transboundary NAFO 5Zjm / 5Zejm stock already represented by `ck_nefsc_trac_cert_morhua_gb`. NOAA's 2023 TRAC Status Report 2023/03 says that no assessment model was available and describes status using survey indicators; it is not a separate age-structured fitted assessment to add to the database. DFO's 2025-selected WHAM framework is the latest detailed fitted assessment in the current-unit record, with newer annual summary advice retained separately. The NOAA row is therefore a matched alias, not a new stock.
+
+The NOAA Stock SMART label and the DFO NAFO label refer to the same eastern Georges Bank transboundary unit. This unit is not the domestic NOAA Georges Bank WHAM assessment represented by `nefsc_cod_georges_bank`.
+
+### Input and output screen
+
+The 2023 TRAC report includes age observations and survey-derived mortality indicators but no fitted fishery catch-at-age likelihood, age-specific abundance-index likelihood, or fitted N/F/M-at-age outputs. Its empirical mortality calculations are not a model natural-mortality input. The later DFO EGB source review records the latest detailed model and its remaining numerical input/output gaps; the NOAA inventory row does not add a separate assessment event.
+
+The NOAA report is linked below. Direct local download from the NOAA institutional repository returned HTTP 403 in this session. The current-unit DFO management-plan file is cached under `source_cache/discovery_dfo_cod_5zjm/`. The newer DFO framework record and its remaining gaps are summarized in `dfo_cod_5zjm_identity.md`.
+
+### Sources
+
+- [NOAA 2023 Eastern Georges Bank Cod TRAC Status Report](https://repository.library.noaa.gov/view/noaa/55817/noaa_55817_DS1.pdf)
+- DFO's identity crosswalk and current assessment gaps: `dfo_cod_5zjm_identity.md` and `ck_nefsc_trac_cert_morhua_gb`.

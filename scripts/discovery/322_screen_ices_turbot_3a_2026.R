@@ -1,7 +1,7 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'ices_turbot_3a_2026')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
-source_review_path <- file.path(root, 'source_reviews', 'screening', 'ices_turbot_3a_2026.md')
+candidate_path <- file.path(root, 'database/candidates.csv')
+source_review_path <- file.path(root, 'source_reviews/ices_turbot_3a.md')
 manifest_path <- file.path(cache, 'manifest.csv')
 candidate_id <- 'ICES:tur.27.3a'
 candidate_unit_id <- 'ices_turbot_3a'

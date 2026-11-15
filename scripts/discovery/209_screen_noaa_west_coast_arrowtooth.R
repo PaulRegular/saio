@@ -1,6 +1,6 @@
 # Screen NOAA's US West Coast arrowtooth flounder inventory row against the
 # 2017 detailed assessment and the later catch-only projection advice.
-path <- file.path('discovery', 'candidates.csv')
+path <- file.path('database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 i <- match('NOAA:10005', x$candidate_id)
 if (is.na(i)) stop('Expected NOAA Pacific Coast arrowtooth row is missing.', call. = FALSE)

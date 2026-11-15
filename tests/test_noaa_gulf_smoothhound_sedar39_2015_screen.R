@@ -11,7 +11,7 @@ canonical_before <- tools::md5sum(file.path(root, canonical_paths))
 source(file.path(root, 'scripts', 'discovery',
   '533_screen_noaa_gulf_smoothhound_sedar39_2015.R'))
 
-register <- read_table('discovery/candidates.csv')
+register <- read_table('database/candidates.csv')
 row <- register[register$candidate_id == 'NOAA:14230', , drop = FALSE]
 cache <- file.path(root, 'source_cache', 'discovery_noaa_smoothhound_2026')
 file <- 'sedar39_gulf_smoothhound_2015.pdf'
@@ -35,8 +35,7 @@ stopifnot(nrow(row) == 1L, row$official_stock_id == '14230',
   nzchar(source_row$source_url), nzchar(source_row$pinned_revision),
   file.exists(file.path(cache, file)),
   file.info(file.path(cache, file))$size == expected_size,
-  file.exists(file.path(root, 'source_reviews', 'screening',
-    'noaa_gulf_smoothhound_sedar39_2015.md')))
+  file.exists(file.path(root, 'source_reviews/noaa_gulf_smoothhound_sedar39_2015.md')))
 
 signature <- readBin(file.path(cache, file), 'raw', n = 5L)
 stopifnot(identical(rawToChar(signature), '%PDF-'))

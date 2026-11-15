@@ -35,11 +35,10 @@ if (!file.exists(source_file)) {
 }
 source_table <- utils::read.csv(source_file, check.names = FALSE,
   na.strings = c("", "NA"))
-candidate <- subset(utils::read.csv(file.path(root, "discovery", "candidates.csv"),
+candidate <- subset(utils::read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE),
   candidate_id == "DFO:Maritimes:Pollock - NAFO 4X5 (Western Component)")
-review <- paste(readLines(file.path(root, "source_reviews", "screening",
-  "dfo_western_component_pollock_2022.md")), collapse = " ")
+review <- paste(readLines(file.path(root, "source_reviews/dfo_western_component_pollock_2022.md")), collapse = " ")
 
 stopifnot(
   nrow(assessment) == 1L,

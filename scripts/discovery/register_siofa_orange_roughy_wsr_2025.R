@@ -1,6 +1,6 @@
 source("scripts/database/source_manifest_io.R", local = TRUE)
 
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 candidate_id <- "SIOFA:ORY-2024-01:WSR"
 
 if (!file.exists(candidate_path)) {

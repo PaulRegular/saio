@@ -9,7 +9,7 @@ source(file.path(root,
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 units <- candidate_units()
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
@@ -23,10 +23,10 @@ outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = 
 oregon <- register[register$candidate_id == 'NOAA:15340', , drop = FALSE]
 washington <- register[register$candidate_id == 'NOAA:15341', , drop = FALSE]
 or_review <- paste(readLines(file.path(root,
-  'source_reviews/screening/noaa_quillback_rockfish_oregon_2021.md'), warn = FALSE),
+  'source_reviews/noaa_quillback_rockfish_oregon.md'), warn = FALSE),
   collapse = ' ')
 wa_review <- paste(readLines(file.path(root,
-  'source_reviews/screening/noaa_quillback_rockfish_washington_2021.md'), warn = FALSE),
+  'source_reviews/noaa_quillback_rockfish_washington.md'), warn = FALSE),
   collapse = ' ')
 
 stopifnot(nrow(oregon) == 1L, nrow(washington) == 1L,

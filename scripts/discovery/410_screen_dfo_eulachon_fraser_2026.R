@@ -1,5 +1,5 @@
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 id <- 'DFO:Pacific:Eulachon - Fraser River'
 i <- match(id, x$candidate_id)
@@ -87,7 +87,7 @@ x$notes[i] <- paste(
   'This is the Fraser River Designatable Unit, not all Canadian Eulachon units.',
   'The historic 2012 RPA age-structured model is retained as context; current',
   'management uses aggregate indicators. No canonical stock or assessment data',
-  'were added. See source_reviews/screening/dfo_eulachon_fraser_2026.md.'
+  'were added. See source_reviews/dfo_eulachon_fraser_du.md.'
 )
 
 source(file.path(root, 'scripts', 'discovery', 'candidate_register_io.R'))

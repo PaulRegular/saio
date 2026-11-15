@@ -1,7 +1,7 @@
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source('scripts/discovery/342_screen_ices_sandeel_area_5r_2025.R')
 
-register <- read.csv('discovery/candidates.csv',
+register <- read.csv('database/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:san.sa.5r', , drop = FALSE]
 cache <- 'source_cache/discovery_ices_sandeel_area_5r_2025'
@@ -43,7 +43,7 @@ stopifnot(
   !any(assessments$assessment_id == candidate$candidate_unit_id),
   !any(inputs$assessment_id == candidate$candidate_unit_id),
   !any(outputs$assessment_id == candidate$candidate_unit_id),
-  file.exists('source_reviews/screening/ices_sandeel_area_5r_2025.md')
+  file.exists('source_reviews/ices_sandeel_area_5r.md')
 )
 
 cat('ICES sandeel Area 5r screening checks passed.\n')

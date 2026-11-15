@@ -68,7 +68,7 @@ stopifnot(nrow(spawn_2025) == 1L, abs(spawn_2025$value - 42.2558) < 1e-4,
 
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
 assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE, na.strings = c("", "NA"))
 stock <- stocks[stocks$stock_id == "noaa_quillback_rockfish_california", ]
 assessment <- assessments[assessments$assessment_id == assessment_id, ]
 candidate <- candidates[candidates$candidate_id == "NOAA:15342", ]

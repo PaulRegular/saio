@@ -66,7 +66,7 @@ stopifnot(
   any(grepl("0.10 per year, fixed for both sexes", western$assumptions$value, fixed = TRUE))
 )
 
-candidate <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE,
+candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate <- subset(candidate, candidate_id == "MPI:TAR:WESTERN")
 sources <- read.csv("provenance/mpi_tarakihi_western_2026/sources.csv",

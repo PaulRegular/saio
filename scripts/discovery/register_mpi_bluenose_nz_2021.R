@@ -116,7 +116,7 @@ manifest <- data.frame(
   stringsAsFactors = FALSE
 )
 
-register_path <- "discovery/candidates.csv"
+register_path <- "database/candidates.csv"
 manifest_path <- "provenance/mpi_bluenose_nz_2021/sources.csv"
 source_paths <- file.path("source_cache", manifest$local_file)
 

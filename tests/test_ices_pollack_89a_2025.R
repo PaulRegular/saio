@@ -4,7 +4,7 @@ root <- '.'
 candidate_id <- 'ICES:pol.27.89a'
 unit_id <- 'ices_pollack_89a'
 
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]
 units <- candidate_units()
@@ -17,8 +17,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-review <- paste(readLines(file.path(root, 'source_reviews', 'screening',
-  'ices_pollack_89a_2025.md'), warn = FALSE), collapse = '\n')
+review <- paste(readLines(file.path(root, 'source_reviews/ices_pollack_89a.md'), warn = FALSE), collapse = '\n')
 
 stopifnot(
   nrow(candidate) == 1L,

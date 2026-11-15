@@ -1,5 +1,5 @@
 root <- "."
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),

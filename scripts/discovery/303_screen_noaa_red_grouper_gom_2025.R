@@ -4,7 +4,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 source("scripts/discovery/candidate_register_io.R")
 
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), colClasses = "character", check.names = FALSE)
 stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE,

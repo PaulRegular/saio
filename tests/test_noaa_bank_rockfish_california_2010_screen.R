@@ -9,14 +9,13 @@ source(file.path(root, 'scripts/discovery/483_screen_noaa_bank_rockfish_californ
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
   Sys.setenv(TAM_SOURCE_DRY_RUN = old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:10448', , drop = FALSE]
 units <- candidate_units()
 unit <- units[!is.na(units$candidate_unit_id) &
   units$candidate_unit_id == 'noaa_bank_rockfish_california', , drop = FALSE]
-review <- paste(readLines(file.path(root, 'source_reviews/screening',
-  'noaa_bank_rockfish_california_2010.md'), warn = FALSE), collapse = ' ')
+review <- paste(readLines(file.path(root, 'source_reviews/noaa_bank_rockfish_california.md'), warn = FALSE), collapse = ' ')
 stocksmart_env <- new.env(parent = emptyenv())
 load(file.path(root, 'source_cache/shared/noaa_stocksmart',
   'stock_assessment_summary.rda'), envir = stocksmart_env)

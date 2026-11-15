@@ -2,7 +2,7 @@ source("scripts/database/source_manifest_io.R", local = TRUE)
 
 root <- "."
 cache <- file.path(root, 'source_cache', 'epinephelus_niveatus/noaa_snowy_grouper_south_atlantic_sedar36u_2021')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 manifest_path <- file.path(root, 'provenance/noaa_snowy_grouper_sedar36u_2021/sources.csv')
 
 files <- c(

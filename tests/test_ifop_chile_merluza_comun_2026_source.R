@@ -32,7 +32,7 @@ assumptions <- all_assumptions[
 ]
 inputs <- read_assessment_rows(file.path(root, "database/inputs.csv"), assessment_id)
 outputs <- read_assessment_rows(file.path(root, "database/outputs.csv"), assessment_id)
-candidate <- read.csv(file.path(root, "discovery/candidates.csv"),
+candidate <- read.csv(file.path(root, "database/candidates.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, na.strings = c("", "NA"))
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
 manifest <- read.csv(file.path(root, "provenance/ifop_merluza_comun_2026/sources.csv"),
@@ -85,8 +85,7 @@ stopifnot(
   any(grepl("preliminary observations", manifest$notes, fixed = TRUE))
 )
 
-review <- paste(readLines(file.path(root, "source_reviews/screening",
-  "ifop_chile_merluza_comun_2026.md"), warn = FALSE), collapse = " ")
+review <- paste(readLines(file.path(root, "source_reviews/ifop_chile_merluza_comun_2026.md"), warn = FALSE), collapse = " ")
 stopifnot(
   grepl("Table 17 reports estimated abundance by age and sex", review, fixed = TRUE),
   grepl("619 age-read fish", review, fixed = TRUE),

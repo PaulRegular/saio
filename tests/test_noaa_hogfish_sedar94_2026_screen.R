@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- c('NOAA:12808', 'NOAA:12809', 'NOAA:12810')
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
@@ -51,8 +51,7 @@ stopifnot(
 units <- candidate_units()
 stopifnot(nrow(units) == 736L, sum(units$inventory_entries) == 775L)
 
-review_path <- file.path(root, 'source_reviews', 'screening',
-  'noaa_hogfish_sedar94_2026.md')
+review_path <- file.path(root, 'source_reviews/noaa_hogfish_sedar94_2026.md')
 stopifnot(file.exists(review_path))
 manifest <- read.csv(file.path(root, 'source_cache',
   'discovery_noaa_hogfish_sedar94_2026', 'sources.csv'),

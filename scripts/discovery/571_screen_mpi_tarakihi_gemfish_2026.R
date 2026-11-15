@@ -103,7 +103,7 @@ candidate <- data.frame(
   stringsAsFactors = FALSE
 )
 
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE, na.strings = c("", "NA"), check.names = FALSE)
 if (any(candidate$candidate_id %in% candidates$candidate_id) || anyDuplicated(candidate$candidate_id)) {
   stop("A screened candidate ID already exists; review identity before appending.", call. = FALSE)

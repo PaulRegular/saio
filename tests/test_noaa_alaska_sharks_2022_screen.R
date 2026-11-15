@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 ids <- c('NOAA:10696', 'NOAA:11403', 'NOAA:10700', 'NOAA:11450')
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
@@ -25,8 +25,7 @@ units <- candidate_units()
 stopifnot(all(vapply(rows$candidate_unit_id, function(id)
   sum(units$candidate_unit_id == id) == 1L, logical(1L))))
 
-review <- file.path(root, 'source_reviews', 'screening',
-  'noaa_alaska_sharks_2022.md')
+review <- file.path(root, 'source_reviews/shared/noaa_alaska_sharks_2022.md')
 stopifnot(file.exists(review),
   grepl('2026 groundfish SAFE chapter list',
     paste(readLines(review, warn = FALSE), collapse = ' '), fixed = TRUE),

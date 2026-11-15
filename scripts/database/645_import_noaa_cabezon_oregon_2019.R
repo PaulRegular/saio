@@ -502,7 +502,7 @@ assessment <- blank_row(names(assessments_table), list(
   assumptions_status = "partial", inputs_status = "partial", outputs_status = "partial",
   notes = "Latest detailed Oregon cabezon assessment located, with observed data through 2018. Native inputs provide catches, aggregate indices, and length/age compositions; fitted surfaces provide age-specific N, biomass, F, M, catch, and weight. Observed catch-at-age, age-specific abundance indices, empirical weight/maturity-at-age vectors, and age-specific uncertainty are not supplied. The assessment-year 2019 SSB point and interval are separately marked as a forecast."))
 
-candidate_path <- file.path(root, "discovery/candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 candidates <- read.csv(candidate_path, colClasses = "character", check.names = FALSE)
 ci <- which(candidates$candidate_id == candidate_id)
 if (length(ci) != 1L || candidates$eligibility[ci] != "eligible" ||

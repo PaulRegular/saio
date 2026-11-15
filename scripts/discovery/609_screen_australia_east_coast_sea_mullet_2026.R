@@ -82,7 +82,7 @@ candidate <- data.frame(
   check.names = FALSE
 )
 
-candidate_path <- file.path(root, "discovery/candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 stocks <- read_csv(file.path(root, "database/stocks.csv"))
 candidates <- read_csv(candidate_path)
 

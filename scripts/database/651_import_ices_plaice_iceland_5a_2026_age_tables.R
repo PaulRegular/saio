@@ -348,7 +348,7 @@ if (!any(assumptions$assessment_id == assessment_id & assumptions$setting == "su
 }
 
 source(file.path(root, "scripts", "discovery", "candidate_register_io.R"))
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 register <- read.csv(candidate_path, stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE, na.strings = c("", "NA"))
 candidate_row <- which(register$candidate_id == candidate_id)
@@ -376,7 +376,7 @@ register$output_evidence[candidate_row] <- paste(
 register$notes[candidate_row] <- paste(
   "Partial source import includes the MFRI supplementary age tables and ICES SAG aggregate outputs.",
   "Inputs remain partial because 1979 catch-at-age is not tabulated, the spawning-stock weight table is empty, and the survey index multiplier is unstated.",
-  "See source_reviews/screening/ices_plaice_iceland_2026.md.")
+  "See source_reviews/ices_plaice_iceland_5a.md.")
 
 
 append_rows <- function(path, rows) {

@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'discovery_ices_black_bellied_anglerfish_8c9a_2026')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 id <- 'ICES:ank.27.8c9a'
 unit_id <- 'ices_black_bellied_anglerfish_8c9a'
 files <- c('ICES_Advice_7174.html', 'ICES_StockGraphs_23769.html',

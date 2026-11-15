@@ -1,5 +1,5 @@
 root <- "."
-register_path <- file.path(root, 'discovery', 'candidates.csv')
+register_path <- file.path(root, 'database/candidates.csv')
 cache <- file.path(root, 'source_cache', 'discovery_noaa_atlantic_salmon_2025')
 report_sha512 <- 'b8a424127e22f4f61da6e491b7290ac4fba92b14cca1d511b38c489f14cc9df0a2df5ecea581a1d608062cc7ff9e3da4c25a6343e3be60630e672459d69652fa'
 database_sha256 <- 'a372d61fde09ec43c428d31ffcd2fdaca614b66609e4242a9f81dd29b68552be'

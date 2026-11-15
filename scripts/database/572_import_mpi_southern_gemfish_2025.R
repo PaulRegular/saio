@@ -318,7 +318,7 @@ assessment <- data.frame(
   stringsAsFactors = FALSE
 )
 
-candidate_path <- "discovery/candidates.csv"
+candidate_path <- "database/candidates.csv"
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)
 candidate_row <- which(candidates$candidate_id == candidate_id)

@@ -1,6 +1,6 @@
 root <- "."
 cache <- file.path(root, 'source_cache', 'mycteroperca_microlepis/noaa_gag_south_atlantic_sedar71_2021')
-candidate_path <- file.path(root, 'discovery', 'candidates.csv')
+candidate_path <- file.path(root, 'database/candidates.csv')
 manifest_path <- file.path(cache, 'manifest.csv')
 
 files <- c(

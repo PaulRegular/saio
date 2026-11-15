@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- "."
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ids <- paste0('NOAA:', c(10689, 10989, 11402, 11444, 11712, 11714,
   11724, 11763, 14821, 14822, 15052, 15310, 15335, 15351, 15439,
@@ -41,5 +41,4 @@ stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
   stringsAsFactors = FALSE)
 stopifnot(!any(stocks$authority == 'NOAA' &
   stocks$authority_stock_id %in% rows$official_stock_id))
-stopifnot(file.exists(file.path(root, 'source_reviews', 'screening',
-  'noaa_remaining_unscreened_2026.md')))
+stopifnot(file.exists(file.path(root, 'source_reviews/shared/noaa_remaining_unscreened_2026.md')))

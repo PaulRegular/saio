@@ -2,7 +2,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source('scripts/discovery/344_screen_ices_capelin_2a514_2026.R')
 
 root <- '.'
-candidate <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+candidate <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- candidate[candidate$candidate_id == 'ICES:cap.27.2a514', , drop = FALSE]
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
@@ -44,7 +44,6 @@ stopifnot(
   !any(assessments$assessment_id == 'ices_capelin_iegjm'),
   !any(inputs$assessment_id == 'ices_capelin_iegjm'),
   !any(outputs$assessment_id == 'ices_capelin_iegjm'),
-  file.exists(file.path(root, 'source_reviews', 'screening',
-    'ices_capelin_2a514_2026.md'))
+  file.exists(file.path(root, 'source_reviews/ices_capelin_2a514_2026.md'))
 )
 cat('ICES IEGJM capelin source-screening checks passed.\n')

@@ -518,7 +518,7 @@ assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE, ch
 if (stock_id %in% stocks$stock_id || assessment_id %in% assessments$assessment_id) {
   stop("The TRE 7 canonical record already exists; inspect the current state before reimporting.", call. = FALSE)
 }
-candidates <- read.csv("discovery/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
+candidates <- read.csv("database/candidates.csv", stringsAsFactors = FALSE, check.names = FALSE)
 candidate_index <- which(candidates$candidate_id == candidate_id)
 if (length(candidate_index) != 1L || candidates$import_status[candidate_index] != "not_started") {
   stop("Expected one not-started TRE 7 candidate row before importing.", call. = FALSE)
@@ -558,7 +558,7 @@ if (!write_mode) {
   candidates$output_evidence[candidate_index] <- "Tables 7-9 of FAR 2026/34 provide MCMC median and 95% intervals for SB0, SB2025, SB40, status ratios, F reference metrics, and 2030 forecast status. Annual SSB and recruitment are figures only; numerical N/F-at-age surfaces are not tabulated."
   candidates$decision_reason[candidate_index] <- "Partial source import completed from the latest detailed production assessment and recent age-composition report. Numerical source coverage is strong for catches, CPUE, Kaharoa indices, biology, and summary outputs, but older fitted compositions, exact KMNTB aggregation, annual ESS, survey length compositions, and annual numerical population surfaces remain unresolved."
   candidates$notes[candidate_index] <- "The official TRE 7 stock covers the full management area, but the 2026 Base model covers northern NMB/KMNTB only; STB inputs are identified as TwoRegion sensitivity data. Source-area recent compositions are preserved separately; no composition aggregation, catch-at-age reconstruction, or age-specific population output was invented."
-  candidate_path <- "discovery/candidates.csv"
+  candidate_path <- "database/candidates.csv"
   candidate_lines <- readLines(candidate_path, warn = FALSE, encoding = "UTF-8")
   candidate_row <- capture.output(write.table(
     candidates[candidate_index, , drop = FALSE], file = "", sep = ",",

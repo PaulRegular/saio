@@ -4,7 +4,7 @@ source(file.path(root, 'scripts/discovery/442_screen_ices_spotted_ray_3a47d_2025
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 candidate_id <- 'ICES:rjm.27.3a47d'
-candidates <- read.csv(file.path(root, 'discovery/candidates.csv'),
+candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- candidates[candidates$candidate_id == candidate_id, , drop = FALSE]
 cache <- file.path(root, 'source_cache/discovery_ices_dogfish_2025')
@@ -12,7 +12,7 @@ sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 source <- sources[sources$file == 'wgef_2025.pdf', , drop = FALSE]
 path <- file.path(cache, 'wgef_2025.pdf')
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/ices_spotted_ray_3a47d_2025.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/ices_spotted_ray_3a47d.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,

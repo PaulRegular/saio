@@ -3,7 +3,7 @@ source("scripts/discovery/candidate_reports.R", local = TRUE)
 root <- "."
 read_table <- function(path) read.csv(path, stringsAsFactors = FALSE,
   check.names = FALSE, na.strings = c("", "NA"))
-register <- read_table("discovery/candidates.csv")
+register <- read_table("database/candidates.csv")
 candidate <- register[register$candidate_id == "NOAA:15338", , drop = FALSE]
 unit <- candidate_units()
 unit <- unit[unit$unit_key == "candidate:noaa_vermilion_rockfish_or_wa", , drop = FALSE]
@@ -11,7 +11,7 @@ stocks <- read_table("database/stocks.csv")
 stock <- stocks[stocks$stock_id == "noaa_vermilion_rockfish_or_wa", , drop = FALSE]
 assessments <- read_table("database/assessments.csv")
 assessments <- assessments[assessments$stock_id == "noaa_vermilion_rockfish_or_wa", , drop = FALSE]
-review <- paste(readLines("source_reviews/screening/noaa_vermilion_rockfish_oregon_2021.md",
+review <- paste(readLines("source_reviews/noaa_vermilion_rockfish_oregon_2021.md",
   warn = FALSE), collapse = " ")
 
 stopifnot(

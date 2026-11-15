@@ -9,3 +9,4 @@ results/
 
 # Local tables restored from a SAIO data release
 /database/*.csv
+!/database/candidates.csv

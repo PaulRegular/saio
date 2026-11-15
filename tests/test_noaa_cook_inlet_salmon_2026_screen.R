@@ -1,7 +1,7 @@
 source("scripts/discovery/candidate_reports.R", local = TRUE)
 
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'),
+register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 ids <- 17337:17341
 rows <- register[match(paste0('NOAA:', ids), register$candidate_id), , drop = FALSE]
@@ -17,8 +17,7 @@ stopifnot(nrow(rows) == length(ids), !anyNA(rows$candidate_id),
   all(grepl('CookInletSalmon.pdf', rows$detailed_source_url, fixed = TRUE)),
   all(nzchar(rows$decision_reason)))
 
-review <- readLines(file.path(root, 'source_reviews', 'screening',
-  'noaa_cook_inlet_salmon_2026.md'), warn = FALSE)
+review <- readLines(file.path(root, 'source_reviews/shared/noaa_cook_inlet_salmon_2026.md'), warn = FALSE)
 stopifnot(any(grepl('one-year metadata difference', review, fixed = TRUE)),
   any(grepl('2023 (ages 3–6', review, fixed = TRUE)),
   any(grepl('Stock SMART labels its 2026', review, fixed = TRUE)),

@@ -2,7 +2,7 @@ root <- "."
 database <- file.path(root, "database")
 cache <- file.path(root, "source_cache", "noaa_black_rockfish_california_2023")
 model_root <- file.path(cache, "model_files")
-candidate_path <- file.path(root, "discovery", "candidates.csv")
+candidate_path <- file.path(root, "database/candidates.csv")
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 
 candidate_ids <- c("NOAA:17194", "NOAA:17195")

@@ -510,7 +510,7 @@ if (!write_mode) {
         stream_has_id, logical(1L), id = assessment_id))) {
     stop("NOAA Butterfish rows are already present in the canonical database.", call. = FALSE)
   }
-  candidates <- read_csv("discovery/candidates.csv")
+  candidates <- read_csv("database/candidates.csv")
   candidate_row <- which(candidates$candidate_id == candidate_id)
   if (length(candidate_row) != 1L ||
       candidates$import_status[candidate_row] != "not_started") {
@@ -534,7 +534,7 @@ if (!write_mode) {
   append_csv("database/assumptions.csv", assumption_rows)
   append_csv("database/inputs.csv", input_rows)
   append_csv("database/outputs.csv", output_rows)
-  replace_register_row("discovery/candidates.csv", "candidate_id", candidate_id,
+  replace_register_row("database/candidates.csv", "candidate_id", candidate_id,
     list(matched_stock_id = stock_id, match_status = "matched", import_status = "partial",
       catch_age_evidence = "Imported 1989-2023 total-catch biomass, the reported total-catch weight proportions by age, and catch weights at age. The support archive does not give raw catch-at-age numbers or likelihood weights; no conversion was placed in the canonical database.",
       survey_age_evidence = "Imported aggregate index totals/CVs and age-specific mean numbers per tow for the five survey series listed in the 2024 model. The young-of-the-year index is included in the model but its numerical time series was not recovered.",

@@ -2,7 +2,7 @@
 # This is a discovery snapshot; source availability and identities need review.
 root <- "."
 cache <- file.path(root, 'source_cache')
-out <- file.path(root, 'discovery', 'candidates.csv')
+out <- file.path(root, 'database/candidates.csv')
 if (file.exists(out)) stop('Candidate register already exists; preserve reviewed rows.', call. = FALSE)
 if (!requireNamespace('jsonlite', quietly = TRUE) || !requireNamespace('xml2', quietly = TRUE)) {
   stop('Install jsonlite and xml2 to build the inventory.', call. = FALSE)

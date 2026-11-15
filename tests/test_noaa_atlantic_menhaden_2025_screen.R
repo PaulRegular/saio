@@ -5,13 +5,13 @@ Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
 id <- 'NOAA:11089'
 unit_id <- 'noaa_atlantic_menhaden'
-candidates <- read.csv(file.path(root, 'discovery/candidates.csv'),
+candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- candidates[candidates$candidate_id == id, , drop = FALSE]
 cache <- file.path(root, 'source_cache/discovery_noaa_atlantic_menhaden_2025')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/noaa_atlantic_menhaden_2025.md'), warn = FALSE), collapse = '\n')
+  'source_reviews/noaa_atlantic_menhaden.md'), warn = FALSE), collapse = '\n')
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,

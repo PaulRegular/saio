@@ -1,6 +1,6 @@
 # Screen the three DFO inventory entries against the coastwide POP assessment.
 root <- "."
-path <- file.path(root, 'discovery', 'candidates.csv')
+path <- file.path(root, 'database/candidates.csv')
 x <- read.csv(path, stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 ids <- c(
   'DFO:Pacific:Pacific Ocean Perch - PMFC 3CD-WCVI',

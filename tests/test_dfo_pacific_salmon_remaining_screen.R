@@ -1,5 +1,5 @@
 root <- '.'
-register <- read.csv(file.path(root, 'discovery', 'candidates.csv'), stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE)
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsAsFactors = FALSE)
 inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors = FALSE)
@@ -75,7 +75,7 @@ stopifnot(
 
 cache <- file.path(root, 'source_cache', 'discovery_dfo_pacific_salmon_2026')
 manifest_path <- file.path(cache, 'sources.csv')
-review_path <- file.path(root, 'source_reviews', 'screening', 'dfo_pacific_salmon_remaining_2026.md')
+review_path <- file.path(root, 'source_reviews/shared/dfo_pacific_salmon_remaining_2026.md')
 review <- paste(readLines(review_path, warn = FALSE), collapse = ' ')
 if (file.exists(manifest_path)) {
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE)

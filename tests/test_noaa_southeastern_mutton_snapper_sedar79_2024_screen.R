@@ -9,7 +9,7 @@ source(file.path(root,
   local = screen)
 if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv('TAM_SOURCE_DRY_RUN', old_dry_run)
 
-register <- read.csv(file.path(root, 'discovery/candidates.csv'), stringsAsFactors = FALSE,
+register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:11342', , drop = FALSE]
 cache <- file.path(root, 'source_cache/discovery_noaa_mutton_snapper_sedar79_2024')
@@ -24,7 +24,7 @@ outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = 
   na.strings = c('', 'NA'))
 units <- candidate_units()
 review <- paste(readLines(file.path(root,
-  'source_reviews/screening/noaa_southeastern_mutton_snapper_sedar79_2024.md'), warn = FALSE),
+  'source_reviews/noaa_southeastern_mutton_snapper_sedar79_2024.md'), warn = FALSE),
   collapse = '\n')
 
 expected <- c(
