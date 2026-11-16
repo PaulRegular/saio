@@ -34,19 +34,27 @@ stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors =
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
-inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
-outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
 row <- match(id, candidates$candidate_id)
 if (is.na(row) || sum(candidates$candidate_id == id, na.rm = TRUE) != 1L ||
     candidates$official_stock_id[row] != '11089' ||
     candidates$scientific_name[row] != 'Brevoortia tyrannus' ||
-    candidates$inventory_assessment_year[row] != 2022L ||
-    any(candidates$candidate_unit_id[-row] == unit_id, na.rm = TRUE) ||
+    candidates$inventory_assessment_year[row] != 2022L)
+  stop('NOAA Atlantic menhaden identity conflicts with the register or canonical database.', call. = FALSE)
+
+assessment_id <- paste0(unit_id, '_2025')
+already_imported <- isTRUE(candidates$candidate_unit_id[row] == unit_id &&
+  candidates$matched_stock_id[row] == unit_id &&
+  candidates$match_status[row] == 'matched' &&
+  candidates$screening_status[row] == 'screened' &&
+  candidates$eligibility[row] == 'unresolved' &&
+  candidates$import_status[row] %in% c('partial', 'imported') &&
+  sum(stocks$stock_id == unit_id, na.rm = TRUE) == 1L &&
+  sum(assessments$assessment_id == assessment_id & assessments$stock_id == unit_id,
+    na.rm = TRUE) == 1L)
+
+if (!already_imported && (any(candidates$candidate_unit_id[-row] == unit_id, na.rm = TRUE) ||
     any(tolower(stocks$authority_stock_id) == '11089', na.rm = TRUE) ||
-    any(stocks$stock_id == unit_id) ||
-    any(unit_id %in% c(assessments$stock_id, inputs$assessment_id, outputs$assessment_id), na.rm = TRUE))
+    any(stocks$stock_id == unit_id) || any(assessments$stock_id == unit_id)))
   stop('NOAA Atlantic menhaden identity conflicts with the register or canonical database.', call. = FALSE)
 
 review <- list(
@@ -63,7 +71,7 @@ review <- list(
   detailed_source_url = 'https://asmfc.org/wp-content/uploads/2025/11/2025AtlMenhadenSingleSpeciesAssmtUpdate_October2025.pdf',
   review_date = '2026-10-30',
   decision_reason = 'The current 2025 single-species update is age-structured and publishes catch-at-age proportions, landings, aggregate abundance indices, biological methods, and population summaries. Eligibility remains unresolved because updated age-specific biological arrays for 2018-2023, exact survey timing fractions, and numerical age-specific official outputs were not verified. Do not substitute the separate SEDAR 102 ERP model or older benchmark values for the current run.',
-  notes = 'NOAA Stock SMART 11089 lists a 2022 assessment year, but the latest detailed production run located is the ASMFC 2025 single-species BAM update with terminal year 2023; the concurrently published SEDAR 102 ERP benchmark is a separate model. SEDAR 69 RD03 documents a 2020 sensitivity converting survey length compositions to age. No canonical assessment data were added. Three official source PDFs and provenance are cached in source_cache/noaa_atlantic_menhaden/noaa_atlantic_menhaden_2025/sources.csv.'
+  notes = 'NOAA Stock SMART 11089 lists a 2022 assessment year, but the latest detailed production run located is the ASMFC 2025 single-species BAM update with terminal year 2023; the concurrently published SEDAR 102 ERP benchmark is a separate model. SEDAR 69 RD03 documents a 2020 sensitivity converting survey length compositions to age. At screening, no canonical assessment data had yet been added; the later partial import and remaining gaps are documented in source_reviews/noaa_atlantic_menhaden.md. Three official source PDFs and provenance are cached in source_cache/noaa_atlantic_menhaden/noaa_atlantic_menhaden_2025/sources.csv.'
 )
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&
@@ -74,12 +82,16 @@ current <- lapply(names(review), function(column) as.character(candidates[[colum
 names(current) <- names(review)
 same_review <- all(vapply(names(review), function(column)
   identical(current[[column]], as.character(review[[column]])), logical(1L)))
-if (!is_unreviewed && !same_review)
+if (!already_imported && !is_unreviewed && !same_review)
   stop('NOAA Atlantic menhaden candidate already has a conflicting review.', call. = FALSE)
-if (!identical(Sys.getenv('TAM_SOURCE_DRY_RUN'), '1') && (is_unreviewed || !same_review)) {
+if (!already_imported && !identical(Sys.getenv('TAM_SOURCE_DRY_RUN'), '1') && (is_unreviewed || !same_review)) {
   for (column in names(review)) candidates[[column]][row] <- review[[column]]
   source(file.path(root, 'scripts/shared/candidate_register_io.R'))
   replace_candidate_register_row(candidate_path, row, candidates[row, , drop = FALSE], id)
 }
 
-cat('Screened NOAA Atlantic menhaden; source eligibility remains unresolved for the current run.\n')
+if (already_imported) {
+  cat('NOAA Atlantic menhaden source screen recognized the existing partial import; no changes made.\n')
+} else {
+  cat('Screened NOAA Atlantic menhaden; source eligibility remains unresolved for the current run.\n')
+}

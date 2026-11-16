@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache/noaa_yellowtail_snapper_sedar96_2025/source_material')
+cache <- file.path(root, 'source_cache/noaa_yellowtail_snapper_11081/noaa_yellowtail_snapper_11081_2025/source_material')
 
 stock_id <- 11081L
 assessment_id <- 14156L
@@ -51,22 +51,30 @@ stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors =
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
-inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
-outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
 
 row <- match(candidate_id, register$candidate_id)
 if (is.na(row) || register$scientific_name[row] != 'Ocyurus chrysurus' ||
     register$assessment_area[row] != 'Southern Atlantic Coast / Gulf of Mexico' ||
     register$inventory_assessment_year[row] != 2025)
   stop('The NOAA yellowtail snapper inventory identity changed.', call. = FALSE)
-if (any(stocks$scientific_name == 'Ocyurus chrysurus', na.rm = TRUE) ||
+
+canonical_assessment_id <- 'noaa_yellowtail_snapper_11081_2025'
+already_imported <- isTRUE(register$candidate_unit_id[row] == unit_id &&
+  register$matched_stock_id[row] == unit_id && register$match_status[row] == 'matched' &&
+  register$screening_status[row] == 'screened' && register$eligibility[row] == 'unresolved' &&
+  register$import_status[row] %in% c('partial', 'imported') &&
+  sum(stocks$stock_id == unit_id, na.rm = TRUE) == 1L &&
+  sum(assessments$assessment_id == canonical_assessment_id &
+    assessments$stock_id == unit_id, na.rm = TRUE) == 1L)
+
+if (!already_imported && (any(stocks$scientific_name == 'Ocyurus chrysurus', na.rm = TRUE) ||
     any(register$candidate_id[-row] == candidate_id) ||
-    any(unit_id %in% c(register$candidate_unit_id[-row], assessments$assessment_id,
-      inputs$assessment_id, outputs$assessment_id), na.rm = TRUE))
+    any(unit_id %in% c(register$candidate_unit_id[-row], assessments$stock_id), na.rm = TRUE)))
   stop('The yellowtail snapper candidate overlaps another stock or record.', call. = FALSE)
 
+if (already_imported) {
+  cat('NOAA yellowtail snapper screening recognized the existing partial import; no changes made.\n')
+} else {
 initial <- register$match_status[row] == 'unreviewed' &&
   register$screening_status[row] == 'not_started' && register$eligibility[row] == 'unresolved' &&
   (is.na(register$candidate_unit_id[row]) || !nzchar(register$candidate_unit_id[row]))
@@ -103,10 +111,14 @@ register$review_date[row] <- '2026-10-30'
 register$decision_reason[row] <- paste0(
   'The latest official assessment found is the fully accepted 2025 SEDAR 96 operational assessment (data through 2023), which is genuinely age-structured and has age-based catch compositions, fixed biological assumptions, and age-specific population outputs. Eligibility remains unresolved for the age-disaggregated comparison: the public bundle does not contain model-ready annual age vectors, the fishery-independent indices have length rather than index-specific age compositions, and the numerical N-at-age surface is not published as a table or native output file. Do not construct age-specific survey observations or population outputs from unrelated compositions or figures without recovering and documenting the underlying data.')
 register$notes[row] <- paste0(
-  'NOAA Stock SMART ID 11081 is the single Southeastern U.S. Yellowtail Snapper management stock shared by South Atlantic and Gulf councils; SEDAR 96 models one Florida population area and ages 0-20. The 2025 SAR and SEDAR96-WP-07 are cached locally under source_cache/noaa_yellowtail_snapper_sedar96_2025/source_material/sources.csv. No canonical stock, assessment, input, or output records were added.')
+  'NOAA Stock SMART ID 11081 is the single Southeastern U.S. Yellowtail Snapper management stock shared by South Atlantic and Gulf councils; SEDAR 96 models one Florida population area and ages 0-20. At screening, no canonical records had yet been added. The subsequent partial import and remaining source gaps are documented in source_reviews/noaa_yellowtail_snapper_11081.md.')
 
 source(file.path(root, 'scripts/shared/candidate_register_io.R'))
 if (!identical(Sys.getenv('TAM_SOURCE_DRY_RUN'), '1'))
   replace_candidate_register_row(register_path, row, register[row, , drop = FALSE], candidate_id)
 
 cat('Screened NOAA Southeastern U.S. yellowtail snapper (Stock SMART 11081; SEDAR 96, 2025); source availability leaves age-disaggregated eligibility unresolved. No canonical numerical records were added.\n')
+}
+
+
+

@@ -16,10 +16,6 @@ stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FA
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database/assessments.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
-inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
-outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
-  na.strings = c('', 'NA'))
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),
@@ -30,14 +26,15 @@ sha256_file <- function(path) {
 stopifnot(
   nrow(candidate) == 1L,
   candidate$candidate_unit_id == unit_id,
-  candidate$match_status == 'new',
+  candidate$matched_stock_id == unit_id,
+  candidate$match_status == 'matched',
   candidate$screening_status == 'screened',
   candidate$eligibility == 'unresolved',
-  candidate$import_status == 'not_started',
+  candidate$import_status == 'partial',
   grepl('Tables A2-A5', candidate$catch_age_evidence, fixed = TRUE),
   grepl('not observed survey numbers-at-age', candidate$survey_age_evidence, fixed = TRUE),
-  grepl('2018-2023', candidate$decision_reason, fixed = TRUE),
-  grepl('age-1+ biomass', candidate$output_evidence, fixed = TRUE),
+  grepl('catch numbers-at-age cannot be reconstructed', candidate$decision_reason, fixed = TRUE),
+  grepl('Table 4 supplies 2023 full F', candidate$output_evidence, fixed = TRUE),
   nrow(sources) == 3L,
   all(vapply(seq_len(nrow(sources)), function(i) {
     path <- file.path(cache, sources$file[i])
@@ -45,11 +42,11 @@ stopifnot(
       identical(toupper(sources$sha256[i]), sha256_file(path)) &&
       identical(rawToChar(readBin(path, 'raw', n = 4L)), '%PDF')
   }, logical(1L))),
-  grepl('not count it as eligible', review, fixed = TRUE),
-  !any(stocks$stock_id == unit_id),
-  !any(unit_id %in% assessments$stock_id, na.rm = TRUE),
-  !any(unit_id %in% inputs$assessment_id, na.rm = TRUE),
-  !any(unit_id %in% outputs$assessment_id, na.rm = TRUE)
+  grepl('eligibility for an age-disaggregated comparison remains unresolved',
+    review, fixed = TRUE),
+  sum(stocks$stock_id == unit_id, na.rm = TRUE) == 1L,
+  sum(assessments$assessment_id == paste0(unit_id, '_2025') & assessments$stock_id == unit_id,
+    na.rm = TRUE) == 1L
 )
 
-cat('NOAA Atlantic menhaden 2025 source-screening checks passed.\n')
+cat('NOAA Atlantic menhaden source-screening and partial import checks passed.\n')
