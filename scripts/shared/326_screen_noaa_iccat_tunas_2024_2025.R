@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'noaa_iccat_tunas_2024_2025')
+cache <- file.path(root, 'source_cache/shared/noaa_iccat_tunas_2024_2025')
 candidate_path <- file.path(root, 'database/candidates.csv')
 review_path <- file.path(root, 'source_reviews/shared/noaa_iccat_atlantic_tunas_2024_2025.md')
 manifest_path <- file.path(cache, 'manifest.csv')
@@ -128,7 +128,7 @@ reviews <- list(
       'NOAA Stock SMART row 10166 is crosswalked to the single Atlantic-wide ICCAT',
       'yellowfin stock, not treated as a separate U.S. assessment unit. The ICCAT assessment',
       'page lists 2024 as the latest assessment. Source files are cached under',
-      'source_cache/noaa_iccat_tunas_2024_2025/; no canonical numerical data were added.')),
+      'source_cache/shared/noaa_iccat_tunas_2024_2025/; no canonical numerical data were added.')),
   list(candidate_unit_id = candidate_units[2], match_status = 'new',
     screening_status = 'screened', eligibility = 'unresolved', import_status = 'not_started',
     catch_age_evidence = paste(
@@ -175,7 +175,7 @@ reviews <- list(
       'not a separate NOAA assessment unit. The 2025 report identifies run 9 as the final',
       'Stock Synthesis reference case and confirms the report results remain preliminary',
       'until SCRS/Commission adoption. Source files are cached under',
-      'source_cache/noaa_iccat_tunas_2024_2025/; no canonical numerical data were added.'))
+      'source_cache/shared/noaa_iccat_tunas_2024_2025/; no canonical numerical data were added.'))
 )
 
 replace_csv_row <- function(path, row_index, data) {
@@ -223,7 +223,7 @@ source_review <- c(
   '- [2024 Atlantic yellowfin data-preparation report](https://www.iccat.int/Documents/Meetings/Docs/2024/Reports/2024_YFT_DP_ENG.pdf).',
   '- [2025 Atlantic bigeye assessment report](https://www.iccat.int/Documents/Meetings/Docs/2025/Reports/2025_BET_SA_ENG.pdf).',
   '- [2025 Atlantic bigeye data-preparation report](https://www.iccat.int/Documents/Meetings/Docs/2025/Reports/2025_BET_DP_ENG.pdf).', '',
-  'All four PDFs are cached in `source_cache/noaa_iccat_tunas_2024_2025/`. The ignored local `manifest.csv` records each source URL, report revision, retrieval time, byte size, and SHA-256 checksum. No canonical stock, assessment, input, or output records were added.'
+  'All four PDFs are cached in `source_cache/shared/noaa_iccat_tunas_2024_2025/`. The ignored local `manifest.csv` records each source URL, report revision, retrieval time, byte size, and SHA-256 checksum. No canonical stock, assessment, input, or output records were added.'
 )
 writeLines(source_review, review_path, useBytes = TRUE)
 cat('Screened NOAA Stock SMART Atlantic yellowfin and bigeye inventory rows against the latest ICCAT reports.\n')

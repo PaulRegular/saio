@@ -1,5 +1,5 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-pdf_file <- file.path(root, "source_cache", "solea_solea/ck_ices_wgbfas_solea_ns_iiia_22_24", "assessment_2026", "WGBFAS_2026_Sole_20-24.pdf")
+pdf_file <- file.path(root, "source_cache/ck_ices_wgbfas_solea_ns_iiia_22_24/ices_sole_20_24_2026_summary", "WGBFAS_2026_Sole_20-24.pdf")
 pdf_pages <- pdftools::pdf_text(pdf_file)
 page_lines <- lapply(pdf_pages, function(page) trimws(strsplit(gsub("\\u00a0", " ", page), "\\n")[[1L]]))
 year_pattern <- "^(19|20)[0-9]{2}$"

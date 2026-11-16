@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/sparisoma_chrysopterum/noaa_redtail_parrotfish_2012')
+cache <- file.path(root, 'source_cache/noaa_caribbean_redtail_parrotfish_sedar26/noaa_redtail_parrotfish_2012')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10144'
 unit_id <- 'noaa_redtail_parrotfish_caribbean'
@@ -97,7 +97,7 @@ review <- list(
     'regional components for Puerto Rico, St. Thomas/St. John, and St. Croix; these are not counted',
     'as additional candidate units. The detailed report, CIE review, project pages, retrieval date,',
     'file sizes, and SHA-256 checksums are recorded under source_cache/',
-    'sparisoma_chrysopterum/noaa_redtail_parrotfish_2012/. No canonical numerical records',
+    'noaa_caribbean_redtail_parrotfish_sedar26/noaa_redtail_parrotfish_2012/. No canonical numerical records',
     'were added.'))
 
 initial <- register$match_status[row] == 'unreviewed' &&

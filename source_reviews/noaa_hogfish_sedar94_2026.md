@@ -26,7 +26,7 @@ No canonical stock, assessment, input, assumption, or output rows were added by 
 
 ## Sources and local cache
 
-Retrieved 2026-11-02. The final report is cached in source_cache/noaa_hogfish_sedar94/; DW-11, DW-19, and DW-22 are cached in source_cache/lachnolaimus_maximus/noaa_hogfish_sedar94_2026/. SHA-256 checksums and source URLs are recorded in the local sources.csv manifest.
+Retrieved 2026-11-02. The final report is cached in source_cache/noaa_hogfish_sedar94/source_material/; DW-11, DW-19, and DW-22 are cached in source_cache/noaa_hogfish_sedar94_2026/source_material/. SHA-256 checksums and source URLs are recorded in the local sources.csv manifest.
 
 - [SEDAR 94 project page and official stock-unit scope](https://sedarweb.org/assessments/sedar-94-florida-hogfish/)
 - [SEDAR 94 final assessment report](https://sedarweb.org/documents/sedar-94-florida-hogfish-west-florida-shelf-stock-east-florida-florida-keys-stock-final-stock-assessment-report/)

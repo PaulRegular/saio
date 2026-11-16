@@ -80,8 +80,8 @@ stopifnot(
   grepl('age-disaggregated curation', review, fixed = TRUE)
 )
 
-cache_options <- c(file.path(root, 'source_cache', 'brosme_brosme/ices_tusk_5a14_2026'),
-  file.path(root, 'source_cache/brosme_brosme/ices_tusk_5a14_2026'))
+cache_options <- c(file.path(root, 'source_cache/ices_tusk_5a14/ices_tusk_5a14_2026'),
+  file.path(root, 'source_cache/ices_tusk_5a14/ices_tusk_5a14_2026'))
 cache <- cache_options[dir.exists(cache_options)][1L]
 manifest <- read.csv(file.path(root, 'provenance', assessment_id, 'sources.csv'),
   stringsAsFactors = FALSE)

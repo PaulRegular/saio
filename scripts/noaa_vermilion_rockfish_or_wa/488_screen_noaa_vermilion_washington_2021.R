@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/sebastes_miniatus/noaa_vermilion_rockfish_washington_2021')
+cache <- file.path(root, 'source_cache/noaa_vermilion_rockfish_or_wa/noaa_vermilion_rockfish_washington_2021')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:15339'
 unit_id <- 'noaa_vermilion_rockfish_or_wa'
@@ -138,7 +138,7 @@ review <- list(
     'as separate current stock units. Council and NMFS material identifies 2021 as the latest benchmark through ' ,
     'the reviewed 2026 recommendations. This is an inventory screen only.' ,
     'translation were added. Washington sources and provenance are cached in ' ,
-    'source_cache/sebastes_miniatus/noaa_vermilion_rockfish_washington_2021/sources.csv.'))
+    'source_cache/noaa_vermilion_rockfish_or_wa/noaa_vermilion_rockfish_washington_2021/sources.csv.'))
 
 initial <- register$match_status[row] == 'unreviewed' && register$screening_status[row] == 'not_started' &&
   register$eligibility[row] == 'unresolved' &&

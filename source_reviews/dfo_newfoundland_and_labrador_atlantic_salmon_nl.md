@@ -39,7 +39,7 @@ Sources:
 - [DFO Research Document 2024/075](https://publications.gc.ca/collections/collection_2024/mpo-dfo/fs70-5/Fs70-5-2024-075-eng.pdf), detailed assessment of 2022 returns.
 
 The 2025/025 PDF is cached locally with provenance and SHA-256 in the ignored
-`source_cache/salmo_salar/dfo_atlantic_salmon_2025/sources.csv`. The direct
+`source_cache/dfo_atlantic_salmon_2025/source_material/sources.csv`. The direct
 2026/021 download redirected to the Government of Canada archived-information
 page during local caching; the official publication page and report text were
 reviewed, and the failed HTML response was not retained as a PDF.

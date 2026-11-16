@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/kajikia_albida/noaa_iccat_white_marlin_2025')
+cache <- file.path(root, 'source_cache/noaa_iccat_white_marlin_2025/source_material')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10955'
 unit_id <- 'iccat_atlantic_white_marlin'
@@ -149,7 +149,7 @@ review <- list(
     'assessment listing identifies JABBA as the model used for advice.',
     'No canonical database values were added was',
     'attempted. Official reports are cached under',
-    'source_cache/kajikia_albida/noaa_iccat_white_marlin_2025/.'
+    'source_cache/noaa_iccat_white_marlin_2025/source_material/.'
   )
 )
 

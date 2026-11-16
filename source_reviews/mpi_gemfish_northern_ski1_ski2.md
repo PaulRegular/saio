@@ -14,7 +14,7 @@ The assessment report identifies Stock Synthesis 3.30.17. The assessment year an
 - Middleton, Robertson, Horn, and Langley. 2024. *Age composition of northern gemfish in 2012, 2014, and 2022*. Fisheries New Zealand FAR 2024/44. [PDF](https://fs.fish.govt.nz/Doc/25772/FAR-2024-44-Age-composition-northern-gemfish-2012-2014-2022.pdf.ashx).
 - Fisheries Assessment Plenary, May 2025, Volume 1. [PDF](https://fs.fish.govt.nz/Doc/26039/gemfish-ski-fisheries-assessment-plenary-may-2025-volume-1.pdf.ashx).
 
-The three PDFs are cached under `source_cache/rexea_solandri/mpi_gemfish_ski1_ski2_2023/`. Their retrieval URLs, retrieval date, and SHA-256 checksums are recorded in `provenance/mpi_gemfish_ski1_ski2_2023/sources.csv`.
+The three PDFs are cached under `source_cache/mpi_gemfish_northern_ski1_ski2/mpi_gemfish_ski1_ski2_2023/`. Their retrieval URLs, retrieval date, and SHA-256 checksums are recorded in `provenance/mpi_gemfish_ski1_ski2_2023/sources.csv`.
 
 ## Inputs recovered
 

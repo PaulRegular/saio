@@ -6,7 +6,7 @@ Charbonneau–Keith Master `unique_ID` `AFSC_macrocephalus_AL to (AI)`; the prio
 The December 2024
 SSC selected age-structured Tier 3 Model 24.1. The historical catalogue's Tier 5
 label is not a reason to exclude this case. The final November 15 SAFE report
-is cached in `source_cache/gadus_macrocephalus/afsc_cod_ai/`, along with the public native files
+is cached in `source_cache/afsc_cod_ai/afsc_cod_ai_2024/`, along with the public native files
 and report source at revision `bc170ea3acb7cea2f9c743653cd9648092b9ec25`.
 
 The public `M24_1` fit is dated **September 26**, and does not reproduce final
@@ -63,7 +63,7 @@ native output. Preserve the printed values and limits.
 
 ## Follow-up source check
 
-The local ignored cache was refreshed on 2026-10-19 with the final 2024 SAFE PDF, the public `M24_1` directory and the repository's `AIPcod2024Nov.Rmd` and `M24_1_data.R` scripts; URLs, pinned revision, retrieval date and SHA-256 checksums are in `source_cache/gadus_macrocephalus/afsc_cod_ai/accessible_sources_manifest.csv`. The public `Report.sso` records a September 26, 2024 fit (including L1 = 14.1037 and replacement M = 0.571771), consistent with the earlier preliminary-run diagnosis. The November R Markdown source points to author-local CSV inputs and `November2024/M24_1_data/run`; that final run directory and its model files are absent from the public repository tree. The cache therefore makes the version mismatch reproducible but does not recover the final November production inputs or outputs.
+The local ignored cache was refreshed on 2026-10-19 with the final 2024 SAFE PDF, the public `M24_1` directory and the repository's `AIPcod2024Nov.Rmd` and `M24_1_data.R` scripts; URLs, pinned revision, retrieval date and SHA-256 checksums are in `source_cache/afsc_cod_ai/afsc_cod_ai_2024/accessible_sources_manifest.csv`. The public `Report.sso` records a September 26, 2024 fit (including L1 = 14.1037 and replacement M = 0.571771), consistent with the earlier preliminary-run diagnosis. The November R Markdown source points to author-local CSV inputs and `November2024/M24_1_data/run`; that final run directory and its model files are absent from the public repository tree. The cache therefore makes the version mismatch reproducible but does not recover the final November production inputs or outputs.
 
 On 2026-10-20, the public [`AI_PCOD` repository](https://github.com/afsc-assessments/AI_PCOD) was checked again. Branch searches surfaced `main` and `devmk`; requests for the README and candidate 2024 run files on `devmk` returned 404. On `main`, alongside the September 2024 `M24_1` run, the repository contains an [`M24_1_2025` data file](https://github.com/afsc-assessments/AI_PCOD/blob/bc170ea3acb7cea2f9c743653cd9648092b9ec25/M24_1_2025/data_echo.ss_new) written in August 2025 and spanning 1991–2024. The repository README identifies Model 24.1 as the 2024 base, while the public tree does not provide an `M24_1_2025/Report.sso`. This later input snapshot does not identify itself as the missing November 2024 production run, so it is not mixed with final report outputs. NOAA continues to list the 2024 assessment as the latest AI Pacific cod assessment in its [2024 groundfish assessment collection](https://www.fisheries.noaa.gov/alaska/population-assessments/2024-north-pacific-groundfish-stock-assessments).
 

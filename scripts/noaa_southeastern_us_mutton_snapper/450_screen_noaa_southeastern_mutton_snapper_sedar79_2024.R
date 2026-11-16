@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/lutjanus_analis/noaa_southeastern_us_mutton_snapper_sedar79_2024')
+cache <- file.path(root, 'source_cache/noaa_southeastern_us_mutton_snapper/noaa_southeastern_us_mutton_snapper_sedar79_2024')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:11342'
 unit_id <- 'noaa_southeastern_us_mutton_snapper'
@@ -95,7 +95,7 @@ review <- list(
     'The report provides age-at-length observations, annual catches, biology, aggregate abundance indices, and comparable annual population outputs. The assessment does not fit direct catch-at-age observations, and reproducing age-specific inputs requires digitizing the published fleet/year CAAL and length-composition figures; this limitation is material but source-supported.'),
   notes = paste('The assessment treats Gulf of Mexico and South Atlantic council areas as one closed Southeastern U.S. population; the Caribbean is a separate management stock boundary.',
     'The full final report includes the 2023 terminal year, supporting life-history reports, annual summary outputs, and CAAL figures. A complete run-matched Stock Synthesis data/control archive or exact numeric CAAL matrices were not found during this screen.',
-    'Cached documents are under source_cache/lutjanus_analis/noaa_southeastern_us_mutton_snapper_sedar79_2024, with retrieval dates and SHA-256 checksums in sources.csv. No canonical stock, assessment, input, or output records were added; import_status remains not_started.')
+    'Cached documents are under source_cache/noaa_southeastern_us_mutton_snapper/noaa_southeastern_us_mutton_snapper_sedar79_2024, with retrieval dates and SHA-256 checksums in sources.csv. No canonical stock, assessment, input, or output records were added; import_status remains not_started.')
 )
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&

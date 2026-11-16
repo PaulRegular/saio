@@ -74,7 +74,7 @@ review <- list(
     'Purse-seine compositions use 1-cm size bins (20-100+ cm); longline uses',
     '5-cm bins (40-100+ cm). Detailed native run files are linked by IATTC',
     'but were not cached because of the redistribution notice. The report PDF',
-    'is cached in source_cache/katsuwonus_pelamis/iattc_eastern_skipjack_2024/.'
+    'is cached in source_cache/iattc_eastern_pacific_skipjack/iattc_eastern_skipjack_2024/.'
   )
 )
 

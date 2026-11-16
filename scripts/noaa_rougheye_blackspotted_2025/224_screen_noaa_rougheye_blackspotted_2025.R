@@ -77,7 +77,7 @@ x$notes[i] <- paste(
   'through 2024, two sexes, 140 population ages, and one area. The report and',
   'native bundle identify Stock Synthesis 3.30.23.2. Cached sources and',
   'checksums are listed in',
-  'source_cache/noaa_rougheye_2025/sources.csv.'
+  'source_cache/noaa_uswc_rougheye_blackspotted/noaa_uswc_rougheye_blackspotted_2025/sources.csv.'
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

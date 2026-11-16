@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'noaa_windowpane_2023')
+cache <- file.path(root, 'source_cache/shared/noaa_windowpane_2023')
 candidate_path <- file.path(root, 'database/candidates.csv')
 review_path <- file.path(root, 'source_reviews/shared/noaa_windowpane_2023.md')
 manifest_path <- file.path(cache, 'manifest.csv')
@@ -148,7 +148,7 @@ source_review <- c(
   '- [NOAA NEFSC Fall 2023 Management Track Assessments Report](https://doi.org/10.25923/1p81-jn30), including the September peer-review panel report and review-level listing.',
   '- [NOAA 2023 September Management Track Peer Review Panel Report](https://www.fisheries.noaa.gov/s3/2023-10/2023-September-Management-Track-Peer-Review-Panel-Report-good.pdf); direct public download returned HTTP 403 during retrieval.',
   '- [NOAA NEFSC Reference Document 22-06](https://repository.library.noaa.gov/view/noaa/39402), 2019 operational review context for the northern AIM model.', '',
-  'Both per-stock assessment PDFs are cached in `source_cache/noaa_windowpane_2023/`; the local manifest records source URLs, assessment revision, retrieval time, bytes, and SHA-256 checksums. The peer-review PDF was not cached because the public download endpoint returned HTTP 403.'
+  'Both per-stock assessment PDFs are cached in `source_cache/shared/noaa_windowpane_2023/`; the local manifest records source URLs, assessment revision, retrieval time, bytes, and SHA-256 checksums. The peer-review PDF was not cached because the public download endpoint returned HTTP 403.'
 )
 writeLines(source_review, review_path, useBytes = TRUE)
 cat('Screened both current NOAA Windowpane units as ineligible for age-disaggregated assessment inputs.\n')

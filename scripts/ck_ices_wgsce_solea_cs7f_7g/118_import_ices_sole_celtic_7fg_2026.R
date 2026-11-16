@@ -2,7 +2,7 @@ assessment_id <- "ices_sole_celtic_7fg_2026"
 stock_id <- "ck_ices_wgsce_solea_cs7f_7g"
 report_ref <- "https://doi.org/10.17895/ices.pub.32625759"
 database <- file.path("database")
-pdf_file <- file.path("source_cache", "solea_solea/ices_sole_celtic_7fg_2026",
+pdf_file <- file.path("source_cache/ck_ices_wgsce_solea_cs7f_7g/ices_sole_celtic_7fg_2026",
   "22 - Sole in 7fg.pdf"
 )
 

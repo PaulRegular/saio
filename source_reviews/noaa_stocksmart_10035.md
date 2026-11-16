@@ -53,5 +53,5 @@ substitute 2024 research-track inputs for this 2025 production run.
 - [2025 draft assessment report](https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&fileId=10438)
 - NOAA's final peer-review report identifies the accepted 2025 run; the linked
   ZIP and report are cached locally under the gitignored
-  `source_cache/noaa_yellowtail_ccgom_2025/` directory. Its `sources.csv`
+  `source_cache/noaa_yellowtail_ccgom_2025/source_material/` directory. Its `sources.csv`
   manifest records URLs, retrieval date and SHA-256 checksums.

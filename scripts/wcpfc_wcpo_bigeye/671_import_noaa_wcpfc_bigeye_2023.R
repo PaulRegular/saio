@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "wcpfc_wcpo_bigeye"
 assessment_id <- "wcpfc_wcpo_bigeye_2023"
 candidate_id <- "NOAA:11684"
-cache_name <- "thunnus_obesus/noaa_wcpfc_bigeye_2026"
+cache_name <- "wcpfc_wcpo_bigeye/noaa_wcpfc_bigeye_2026"
 revision <- "81fc412ad1f36416f78f84ef6bd2d5dff68d14c8"
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")
 

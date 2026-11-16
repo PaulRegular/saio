@@ -2,7 +2,7 @@ root <- "."
 assessment_id <- "nafo_cod_3no_2021"
 stock_id <- "nafo_cod_3no"
 dry_run <- identical(Sys.getenv("SAIO_NAFO_IMPORT_DRY_RUN"), "1")
-cache_dir <- file.path(root, "source_cache/gadus_morhua", assessment_id)
+cache_dir <- file.path(root, "source_cache/nafo_cod_3no/nafo_cod_3no_2021")
 report_path <- file.path(cache_dir, "nafo_scr21_031_cod3no_2021.pdf")
 
 required_packages <- c("pdftools", "png", "tesseract")

@@ -1,7 +1,7 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
 db_dir <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "scophthalmus_maximus/ices_turbot_north_sea_2025_benchmark", "tur4_m9", "run")
+cache <- file.path(base, "source_cache/ck_ices_wgnssk_maximus_ns_4/ices_turbot_north_sea_2025_benchmark", "tur4_m9", "run")
 assessment_id <- "ices_turbot_north_sea_2025_benchmark"
 
 user_library <- Sys.glob(file.path(Sys.getenv("USERPROFILE"), "AppData", "Local", "R", "win-library", "*"))

@@ -71,7 +71,7 @@ review <- list(
   ),
   notes = paste(
     'The 2024 benchmark source and 2026 advice/SAG output pages are cached under',
-    'source_cache/trachurus_trachurus/ices_north_sea_horse_mackerel_2026/ with source URLs,',
+    'source_cache/ices_north_sea_horse_mackerel/ices_north_sea_horse_mackerel_2026/ with source URLs,',
     'retrieval dates and SHA-256 checksums. No canonical data were imported.'
   )
 )

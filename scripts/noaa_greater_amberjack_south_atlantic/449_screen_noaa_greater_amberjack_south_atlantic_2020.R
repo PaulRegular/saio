@@ -1,6 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache',
-  'seriola_dumerili/noaa_greater_amberjack_south_atlantic_sedar59_2020')
+cache <- file.path(root, 'source_cache/noaa_greater_amberjack_south_atlantic/noaa_greater_amberjack_south_atlantic_sedar59_2020')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10208'
 unit_id <- 'noaa_greater_amberjack_south_atlantic'
@@ -110,7 +109,7 @@ review <- list(
     'The source quantities support curation as an eligible age-structured case, with these limitations retained for extraction and any later model specification.'),
   notes = paste('NOAA Stock SMART 10208 is the South Atlantic management unit and is distinct from Gulf of Mexico Stock SMART 10207.',
     'The SEDAR 59 final SAR reports a 1980-2017 assessment period; NOAA current resource information still cites the 2020 assessment.',
-    'The SEDAR project page and final report, commercial and recreational age-composition working papers, and three index working papers are cached locally with retrieval dates and SHA-256 checksums under source_cache/seriola_dumerili/noaa_greater_amberjack_south_atlantic_sedar59_2020.',
+    'The SEDAR project page and final report, commercial and recreational age-composition working papers, and three index working papers are cached locally with retrieval dates and SHA-256 checksums under source_cache/noaa_greater_amberjack_south_atlantic/noaa_greater_amberjack_south_atlantic_sedar59_2020.',
     'No canonical database stock, assessment, input or output records were added. Eligibility indicates source-curation suitability; numeric recreational age proportions and exact index timing remain extraction limitations.')
 )
 

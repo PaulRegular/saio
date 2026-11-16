@@ -10,7 +10,7 @@ if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else
 register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 red_hind <- register[register$candidate_id == 'NOAA:10327', , drop = FALSE]
-cache <- file.path(root, 'source_cache/epinephelus_guttatus/noaa_red_hind_sedar35_2014')
+cache <- file.path(root, 'source_cache/noaa_caribbean_red_hind/noaa_red_hind_sedar35_2014')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 review <- paste(readLines(file.path(root,
   'source_reviews/noaa_caribbean_red_hind_sedar35.md'), warn = FALSE), collapse = ' ')

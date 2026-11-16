@@ -10,7 +10,8 @@ review use the organization-prefixed candidate key.
 For example, the Northern Gulf cod stock has [these scripts](dfo_cod_3pn4rs/)
 and a [source review](../source_reviews/dfo_cod_3pn4rs.md). The review and
 assessment table identify the official run, and the assessment ID identifies
-its source manifest.
+its source manifest. The local cache uses the same stock ID as the
+script folder, followed by the assessment ID.
 
 [Shared scripts](shared/) handle inventories, multi-stock sources and helpers.
 The two commands at this level restore and check the five published tables.

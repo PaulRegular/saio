@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'sebastes_fasciatus/noaa_acadian_redfish_gom_gb_2025')
+cache <- file.path(root, 'source_cache/noaa_acadian_redfish_gom_gb/noaa_acadian_redfish_gom_gb_2025')
 candidate_path <- file.path(root, 'database/candidates.csv')
 
 base_url <- paste0(
@@ -198,7 +198,7 @@ review <- list(
     'scientific name does not make those assessment boundaries identical.',
     'The figure bundle includes projections through 2028; only 1963-2024 are',
     'fitted historical years. Source files and SHA-256 values are cached in the',
-    'gitignored source_cache/sebastes_fasciatus/noaa_acadian_redfish_gom_gb_2025 folder.')
+    'gitignored source_cache/noaa_acadian_redfish_gom_gb/noaa_acadian_redfish_gom_gb_2025 folder.')
 )
 
 for (column in names(review)) candidates[[column]][i] <- review[[column]]

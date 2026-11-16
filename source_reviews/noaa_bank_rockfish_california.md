@@ -58,6 +58,6 @@ visible; do not substitute inaccessible historical details for the documented
 - [Bank Rockfish 2000 assessment](http://www.pcouncil.org/wp-content/uploads/Bank_Rockfish_2000_Assessment.pdf) — cited by NOAA/PFMC sources but unavailable at that URL on 2026-10-31.
 
 The three retrieved PDFs are cached locally under
-`source_cache/sebastes_rufus/noaa_bank_rockfish_california/`; `sources.csv` records
+`source_cache/noaa_bank_rockfish_california/source_material/`; `sources.csv` records
 their revisions, retrieval date, byte counts and SHA-256 checksums. The source
 cache is gitignored.

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache/gadus_chalcogrammus/afsc_pollock_ebs_2024")
+cache <- file.path(root, "source_cache/afsc_pollock_ebs/afsc_pollock_ebs_2024")
 d <- trimws(readLines(file.path(cache, "pm_24.dat"), warn = FALSE))
 read_block <- function(label, n) {
   i <- which(d == paste0("#", label))

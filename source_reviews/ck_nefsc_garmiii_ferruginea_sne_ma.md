@@ -105,7 +105,7 @@ seasons are retained and `sampling_time` stays blank.
 
 ## Source cache and validation
 
-Sources remain under `source_cache/limanda_ferruginea/ck_nefsc_garmiii_ferruginea_sne_ma/`.
+Sources remain under `source_cache/ck_nefsc_garmiii_ferruginea_sne_ma/supporting_sources/`.
 Manifests retain SASI URLs, retrieval dates, checksums, represented run and
 verification date. The 2024 and 2025 peer-review reports, SNEMA TOR
 presentation and Framework 72 PDFs are cached locally. The importer pins PDF

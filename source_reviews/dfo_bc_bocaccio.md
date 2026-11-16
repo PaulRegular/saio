@@ -89,7 +89,7 @@ Awatea input files or other-fishery age data become public.
 ## Sources and local cache
 
 The source documents and checksums are recorded in the gitignored local
-manifest at `source_cache/dfo_bc_bocaccio_20261029/sources.csv`.
+manifest at `source_cache/dfo_bc_bocaccio/dfo_bc_bocaccio_20261029/sources.csv`.
 
 - [2024 Bocaccio update, Science Response 2024/033](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41260284.pdf)
 - [2021 Bocaccio update, Science Response 2022/001](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41041835.pdf)

@@ -90,7 +90,7 @@ review <- list(
     'the latest assessment year. Use the IPHC 2025 assessment through its 31 October',
     '2025 data cutoff; do not substitute post-run updates without checking them against',
     'the pinned run. The latest assessment and public source files are cached under',
-    'source_cache/hippoglossus_stenolepis/iphc_pacific_halibut/ with retrieval dates, table/document',
+    'source_cache/iphc_pacific_halibut/supporting_sources/ with retrieval dates, table/document',
     'identifiers, and SHA-256 hashes.'
   )
 )

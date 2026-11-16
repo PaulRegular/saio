@@ -21,7 +21,7 @@ the production-assessment evidence reviewed.
 
 ## Sources
 
-- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 23, pages 670–674. The PDF is cached under `source_cache/ices_dogfish_2025/`; its source manifest records retrieval date, revision, size and checksum.
+- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 23, pages 670–674. The PDF is cached under `source_cache/shared/ices_dogfish_2025/`; its source manifest records retrieval date, revision, size and checksum.
 
 The screen distinguishes a conservation advice update from an analytical
 assessment; no age-structured production model was found.

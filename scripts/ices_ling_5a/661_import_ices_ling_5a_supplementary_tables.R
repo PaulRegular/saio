@@ -1,7 +1,7 @@
 root <- "."
 .libPaths(c(file.path(root, "source_cache", "r-library"), .libPaths()))
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "molva_molva/ices_ling_5a_2026")
+cache <- file.path(root, "source_cache/ices_ling_5a/ices_ling_5a_2026")
 assessment_id <- "ices_ling_5a_2026"
 candidate_id <- "ICES:lin.27.5a"
 unit_id <- "ices_ling_5a"

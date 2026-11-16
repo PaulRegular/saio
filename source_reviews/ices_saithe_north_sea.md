@@ -12,7 +12,7 @@ The [2024 WKBGAD benchmark](https://doi.org/10.17895/ices.pub.25002470)
 documents the model framework and revisions to biological inputs.
 
 The full WGNSSK 2026 PDF is cached locally at
-`source_cache/pollachius_virens/ices_saithe_north_sea_2026/WGNSSK_2026.pdf`.
+`source_cache/ices_saithe_north_sea/ices_saithe_north_sea_2026/WGNSSK_2026.pdf`.
 Its SHA-256 is
 `9d33846cf100dd8544ba30dbeffc7435a857a71854d318dbc7b383d668b03857`.
 The cache is gitignored. Numerical values imported into the canonical database

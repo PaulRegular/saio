@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/pleurogrammus_monopterygius/noaa_goa_atka_2021_2025')
+cache <- file.path(root, 'source_cache/noaa_goa_atka_mackerel/noaa_goa_atka_2021_2025')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10465'
 candidate_unit_id <- 'noaa_goa_atka_mackerel'

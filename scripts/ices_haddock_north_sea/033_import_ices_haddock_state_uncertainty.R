@@ -1,6 +1,6 @@
 assessment_id <- "ices_haddock_north_sea_2026"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-cache <- file.path(root, "source_cache/melanogrammus_aeglefinus", assessment_id)
+cache <- file.path(root, "source_cache/ices_haddock_north_sea/ices_haddock_north_sea_2026")
 output_file <- file.path(root, "database/outputs.csv")
 model_url <- paste0(
   "https://stockassessment.org/datadisk/stockassessment/userdirs/user3/",

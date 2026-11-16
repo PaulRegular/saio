@@ -2,7 +2,7 @@ assessment_id <- "ices_whiting_west_scotland_2025"
 stock_id <- "ck_ices_wgsce_merlangus_cs27_6a"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
-cache <- file.path(base, "source_cache", "merlangius_merlangus/ices_whiting_west_scotland_2025")
+cache <- file.path(base, "source_cache/ck_ices_wgsce_merlangus_cs27_6a/ices_whiting_west_scotland_2025")
 model_dir <- file.path(cache, "model")
 model_url <- paste0(
   "https://stockassessment.org/datadisk/stockassessment/userdirs/user3/",

@@ -35,7 +35,7 @@ The record retains source units and fleet/survey identities. No commercial whole
 
 ## Source files and provenance
 
-The revised report and two SEDAR 36 Update working papers are cached locally in the ignored directory source_cache/epinephelus_niveatus/noaa_snowy_grouper_south_atlantic_sedar36u_2021/. Their source URLs, revisions, retrieval timestamps, byte sizes and SHA-256 checksums are recorded in provenance/noaa_snowy_grouper_south_atlantic_sedar36u_2021/sources.csv.
+The revised report and two SEDAR 36 Update working papers are cached locally in the ignored directory source_cache/noaa_snowy_grouper_south_atlantic/noaa_snowy_grouper_south_atlantic_sedar36u_2021/. Their source URLs, revisions, retrieval timestamps, byte sizes and SHA-256 checksums are recorded in provenance/noaa_snowy_grouper_south_atlantic_sedar36u_2021/sources.csv.
 
 - [SEDAR 36 Update assessment page](https://sedarweb.org/assessments/sedar-36-update-south-atlantic-snowy-grouper/)
 - [Revised SEDAR 36 Update assessment report (January 2021)](https://sedarweb.org/documents/2020-update-sedar-36-update-assessment-report-south-atlantic-snowy-grouper-revised-january-2021-2/)

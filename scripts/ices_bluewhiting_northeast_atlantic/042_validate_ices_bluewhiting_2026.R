@@ -11,7 +11,7 @@ database <- lapply(
   }
 )
 names(database) <- c("stocks", "assessments", "assumptions", "inputs", "outputs")
-sam <- readRDS(file.path(root, "source_cache/micromesistius_poutassou", assessment_id, "BW-2026.rds"))
+sam <- readRDS(file.path(root, "source_cache/ices_bluewhiting_northeast_atlantic/ices_bluewhiting_northeast_atlantic_2026", "BW-2026.rds"))
 years <- as.integer(sam$data$years)
 ages <- seq.int(sam$data$minAgePerFleet[[1L]], sam$data$maxAgePerFleet[[1L]])
 

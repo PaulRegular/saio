@@ -51,7 +51,7 @@ information remain useful source evidence outside that set.
 ## Source files and provenance
 
 Four official PDFs are cached in the ignored local directory
-`source_cache/caulolatilus_microps/noaa_blueline_tilefish_sedar92_2025/`.
+`source_cache/noaa_blueline_tilefish_sedar92_2025/source_material/`.
 Their source URLs, cited revisions, retrieval timestamps, byte sizes, and
 SHA-256 digests are recorded in `manifest.csv`.
 

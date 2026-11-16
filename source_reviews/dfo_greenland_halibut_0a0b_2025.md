@@ -74,6 +74,6 @@ broader database scope.
 - NAFO, [2025 advice for Greenland halibut in Subarea 0+1 offshore](https://www.nafo.int/Portals/0/PDFs/Advice/2025/ghl01off.pdf).
 
 The four PDFs are cached under
-`source_cache/reinhardtius_hippoglossoides/dfo_greenland_halibut_0a0b_2025/`; `sources.csv`
+`source_cache/dfo_greenland_halibut_0a0b_2025/source_material/`; `sources.csv`
 records retrieval dates, URLs and SHA-256 checksums. No canonical assessment,
 input or output records were added.

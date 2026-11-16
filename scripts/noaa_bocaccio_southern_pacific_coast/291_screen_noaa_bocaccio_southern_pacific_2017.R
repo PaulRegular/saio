@@ -74,7 +74,7 @@ review <- list(
     'bocaccio or treat the proposed coastwide boundary as implemented. The',
     '2025 catch-only projection updates catch through 2024 and projections',
     'through 2036 but contains no new fitted age data. Sources are cached in',
-    'source_cache/sebastes_paucispinis/noaa_bocaccio_southern_pacific_2017/.'
+    'source_cache/noaa_bocaccio_southern_pacific_coast/noaa_bocaccio_southern_pacific_2017/.'
   )
 )
 

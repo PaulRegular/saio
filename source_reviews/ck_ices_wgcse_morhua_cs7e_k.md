@@ -15,7 +15,7 @@ Hessian.
 - [Official fitted SAM object](https://stockassessment.org/datadisk/stockassessment/userdirs/user3/Cod_CS_WG2026/run/model.RData).
 
 The two reports and native SAM object are cached under
-`source_cache/gadus_morhua/ck_ices_wgcse_morhua_cs7e_k/assessment_2026/`.
+`source_cache/ck_ices_wgcse_morhua_cs7e_k/ices_cod_celtic_sea_2026/`.
 The ignored `source_manifest.csv` records each file's URL, retrieval date and
 SHA-256 checksum. The 2020 cod stock-annex PDF was requested from the ICES
 publication archive but returned HTTP 401; no replacement copy was recovered.

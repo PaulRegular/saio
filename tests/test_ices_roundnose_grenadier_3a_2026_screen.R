@@ -8,7 +8,7 @@ if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv(TAM_S
 register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:rng.27.3a', , drop = FALSE]
-cache <- file.path(root, 'source_cache/coryphaenoides_rupestris/ices_roundnose_grenadier_3a_2026')
+cache <- file.path(root, 'source_cache/ices_roundnose_grenadier_3a/ices_roundnose_grenadier_3a_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 advice <- paste(readLines(file.path(cache, 'ICES_2026_advice.html'), warn = FALSE), collapse = ' ')
 source_data <- paste(readLines(file.path(cache, 'SAG_2026_source_data.html'), warn = FALSE), collapse = ' ')

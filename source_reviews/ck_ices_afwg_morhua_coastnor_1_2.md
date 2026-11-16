@@ -60,7 +60,7 @@ checking.
 ## Sources and cache
 
 The report PDF and the 2020 SAG XML are cached locally in the gitignored
-`source_cache/gadus_morhua/ck_ices_afwg_morhua_coastnor_1_2/assessment_2020/`, with source
+`source_cache/ck_ices_afwg_morhua_coastnor_1_2/ices_cod_norwegian_coastal_combined_2020/`, with source
 URLs, retrieval date and SHA-256 checksums in `manifest.csv`. The R importer
 also verifies the checksum of its layout-preserving text extraction from the
 PDF. An earlier 2018 SAG XML remains in its separate cache directory.

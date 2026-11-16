@@ -51,7 +51,7 @@ review <- list(
   ),
   notes = paste(
     'The 2026 ICES advice and SAG source pages are cached under',
-    'source_cache/merlangius_merlangus/ices_whiting_3a_2026/ with retrieval dates and',
+    'source_cache/ices_whiting_3a/ices_whiting_3a_2026/ with retrieval dates and',
     'SHA-256 checksums. No canonical numerical data were imported.'
   )
 )

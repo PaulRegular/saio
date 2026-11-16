@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "dicentrarchus_labrax/ices_seabass_8ab_2026")
+cache <- file.path(root, "source_cache/ices_seabass_8ab/ices_seabass_8ab_2026")
 register_path <- file.path(root, "database/candidates.csv")
 
 dry_run <- identical(Sys.getenv("TAM_SOURCE_DRY_RUN"), "1")

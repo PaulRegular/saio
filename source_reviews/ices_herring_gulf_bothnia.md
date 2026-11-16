@@ -20,7 +20,7 @@ they are not treated as this current combined assessment.
 The 2026 report PDF, extracted text, SAG XML, acoustic table transcription,
 source-page images, and tidy transcriptions of catch-at-age, catch weights,
 and maturity are in the gitignored
-`source_cache/clupea_harengus/ices_herring_gulf_bothnia_2026/`.
+`source_cache/ices_herring_gulf_bothnia/ices_herring_gulf_bothnia_2026/`.
 `manifest.csv` records each cached file's URL, checksum, and verification
 date. The WKCLuB PDF was recovered from the [ICES publisher's attachment](https://ndownloader.figshare.com/files/33482687)
 on 2026-10-26 by resolving the benchmark DOI to its publisher record. The

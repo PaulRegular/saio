@@ -8,7 +8,7 @@ The selected native run is `cod.27.6a_2022`, not the similarly named sensitivity
 
 ## Recovered sources and inputs
 
-Authoritative files are cached under `source_cache/gadus_morhua/ices_cod_west_scotland_2022/`, with URLs, retrieval times, byte counts and SHA-256 checksums in `manifest.csv`. They include the fitted object, original data object, individual data files, configuration, data-preparation script, 2022 advice, detailed WGCSE chapter, WKDEM 2020 framework and 2023 boundary benchmark. Model implementation checks use the source revision saved with the fitted object, `ec2c2a0c6dde`.
+Authoritative files are cached under `source_cache/ck_ices_wgcse_morhua_ns6a/ices_cod_west_scotland_2022/`, with URLs, retrieval times, byte counts and SHA-256 checksums in `manifest.csv`. They include the fitted object, original data object, individual data files, configuration, data-preparation script, 2022 advice, detailed WGCSE chapter, WKDEM 2020 framework and 2023 boundary benchmark. Model implementation checks use the source revision saved with the fitted object, `ec2c2a0c6dde`.
 
 The database records the native residual catch in thousand fish, including landings and discards. Missing catch at ages 1 and 2 in 2021 is preserved: WGCSE excluded those values because COVID-related disruption made the discard samples unreliable. No fitted catch-scaling factors are applied to observations.
 

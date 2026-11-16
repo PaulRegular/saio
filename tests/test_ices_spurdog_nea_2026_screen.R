@@ -1,5 +1,5 @@
 root <- '.'
-cache <- file.path(root, 'source_cache/squalus_acanthias/ices_spurdog_nea_2026')
+cache <- file.path(root, 'source_cache/ices_spurdog_nea/ices_spurdog_nea_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 before <- readLines(candidate_path, warn = FALSE)
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')

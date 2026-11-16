@@ -5,8 +5,8 @@ candidate_id <- "ICES:usk.27.5a14"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 
 cache_options <- c(
-  file.path(root, "source_cache", "brosme_brosme/ices_tusk_5a14_2026"),
-  file.path(root, "source_cache/brosme_brosme/ices_tusk_5a14_2026")
+  file.path(root, "source_cache/ices_tusk_5a14/ices_tusk_5a14_2026"),
+  file.path(root, "source_cache/ices_tusk_5a14/ices_tusk_5a14_2026")
 )
 cache <- cache_options[dir.exists(cache_options)][1L]
 if (is.na(cache)) stop("Could not find the ignored ICES tusk source cache.", call. = FALSE)

@@ -22,4 +22,4 @@ The assessment report shows derived age-specific exploitation estimates for 2017
 - [2025 Atlantic bigeye assessment report](https://www.iccat.int/Documents/Meetings/Docs/2025/Reports/2025_BET_SA_ENG.pdf).
 - [2025 Atlantic bigeye data-preparation report](https://www.iccat.int/Documents/Meetings/Docs/2025/Reports/2025_BET_DP_ENG.pdf).
 
-All four PDFs are cached in `source_cache/noaa_iccat_tunas_2024_2025/`. The ignored local `manifest.csv` records each source URL, report revision, retrieval time, byte size, and SHA-256 checksum. No canonical stock, assessment, input, or output records were added.
+All four PDFs are cached in `source_cache/shared/noaa_iccat_tunas_2024_2025/`. The ignored local `manifest.csv` records each source URL, report revision, retrieval time, byte size, and SHA-256 checksum. No canonical stock, assessment, input, or output records were added.

@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache/ammodytes_dubius/ck_ices_hawg_dubius_ns/2026_san.sa.3r")
+cache <- file.path(base, "source_cache/ck_ices_hawg_dubius_ns/supporting_sources/2026_san.sa.3r")
 assessment_id <- "ices_sandeel_area_3r_2026"
 stock_id <- "ices_sandeel_area_3r"
 catalogue_id <- "ck_ices_hawg_dubius_ns"
@@ -15,9 +15,9 @@ verify <- function(file, expected) {
     serialize = FALSE, algo = "sha256") != expected) cli::cli_abort("Cache and verify {file} before importing this assessment.")
   path
 }
-pages <- pdftools::pdf_text(verify("../../../ices_sandeel_area_1r_2026/HAWG_2026.pdf", "50c5b7c68fbdb8951c9f9d7055016d1f2158181fd2a13a34b427cdedb45b8f45"))
+pages <- pdftools::pdf_text(verify("../../../ices_sandeel_area_1r/ices_sandeel_area_1r_2026/HAWG_2026.pdf", "50c5b7c68fbdb8951c9f9d7055016d1f2158181fd2a13a34b427cdedb45b8f45"))
 settings <- readLines(verify("data.R", "2dffa76e4082396177dae4a3b068989183a75620d6ad3128952c2838a5979848"))
-software <- readLines(verify("../../../ices_sandeel_area_1r_2026/get_tmb_parameters.R", "1dcd5b4699418b755fc163a2647e1d576f31496ecfa13a95f7959ced47b09205"))
+software <- readLines(verify("../../../ices_sandeel_area_1r/ices_sandeel_area_1r_2026/get_tmb_parameters.R", "1dcd5b4699418b755fc163a2647e1d576f31496ecfa13a95f7959ced47b09205"))
 sag_path <- verify("SAG_21282.html", "43437d9e17938846a28fe4fd37611947a3202720fa9c83b7acf8ce5939e2ea37")
 stopifnot(any(grepl("startYear = 1987", settings, fixed = TRUE)),
   any(grepl("CminageSeason = c(1,1)", settings, fixed = TRUE)),

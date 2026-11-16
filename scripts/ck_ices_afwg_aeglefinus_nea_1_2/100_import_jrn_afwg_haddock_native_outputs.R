@@ -2,7 +2,7 @@ assessment_id <- "jrn_afwg_haddock_northeast_arctic_2026"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
 cache <- file.path(
-  base, "source_cache", "melanogrammus_aeglefinus/ck_ices_afwg_aeglefinus_nea_1_2", "assessment_2026"
+  base, "source_cache/ck_ices_afwg_aeglefinus_nea_1_2/jrn_afwg_haddock_northeast_arctic_2026"
 )
 model_url <- paste0(
   "https://www.stockassessment.org/datadisk/stockassessment/userdirs/user3/",

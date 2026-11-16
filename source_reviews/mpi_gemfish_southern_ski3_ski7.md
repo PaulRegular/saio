@@ -47,4 +47,4 @@ No annual N-at-age, F-at-age, M-at-age, recruitment series, absolute annual SSB 
 - Devine et al. (2024), FAR 2024/01, catch-at-age for 2021–22: [PDF](https://webstatic.niwa.co.nz/library/FAR2024-01.pdf).
 - Devine et al. (2025), FAR 2025/05, catch-at-age for 2022–23: [PDF](https://fs.fish.govt.nz/Doc/25855/FAR-2025-05-Catch-at-age-for-BAR5-and-SKI3-and-SKI7-for-the-2022-23-fishing-year.pdf.ashx).
 
-The four PDFs are cached under `source_cache/rexea_solandri/mpi_gemfish_ski3_ski7_2025/`. Retrieval dates and SHA-256 checksums are listed in `provenance/mpi_gemfish_ski3_ski7_2025/sources.csv`.
+The four PDFs are cached under `source_cache/mpi_gemfish_southern_ski3_ski7/mpi_gemfish_ski3_ski7_2025/`. Retrieval dates and SHA-256 checksums are listed in `provenance/mpi_gemfish_ski3_ski7_2025/sources.csv`.

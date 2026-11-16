@@ -1,5 +1,5 @@
 root <- '.'
-cache <- file.path(root, 'source_cache/gadus_morhua/ices_cod_kattegat_2026')
+cache <- file.path(root, 'source_cache/ices_cod_kattegat_2026/source_material')
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/ices_cod_kattegat_2026/358_screen_ices_cod_kattegat_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')

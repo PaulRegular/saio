@@ -21,7 +21,7 @@ updates <- list(
   detailed_source_url = paste('https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41119423.pdf', 'https://waves-vagues.dfo-mpo.gc.ca/Library/40597829.pdf', 'https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/survey-sondage/index-en.html', 'https://www.dfo-mpo.gc.ca/about-notre-sujet/publications/work-plan-travail/2026-2027/wp-pt-eng.html', sep = '; '),
   review_date = '2026-10-29',
   decision_reason = 'The latest public status update is an index-based report for 2022, not an age-structured production assessment. It uses catch-at-size, aggregate survey biomass and abundance-at-length, and a length-based mature biomass proxy. The report also states that Acadian and Deepwater redfish are not separated in commercial or survey catches.',
-  notes = 'Provisional new current DFO management unit: Redfish Unit 3, including NAFO Division 4X and DFO statistical areas 4Wdehkl. The DFO 2024 Sustainability Survey labels it Acadian Redfish Unit 3, while the 2022 status update reports that Acadian and Deepwater redfish are not separated in survey or commercial catches. Sources are cached under source_cache/dfo_unit3_redfish_2022/.'
+  notes = 'Provisional new current DFO management unit: Redfish Unit 3, including NAFO Division 4X and DFO statistical areas 4Wdehkl. The DFO 2024 Sustainability Survey labels it Acadian Redfish Unit 3, while the 2022 status update reports that Acadian and Deepwater redfish are not separated in survey or commercial catches. Sources are cached under source_cache/dfo_unit3_redfish_2022/source_material/.'
 )
 
 for (column in names(updates)) x[[column]][i] <- updates[[column]]

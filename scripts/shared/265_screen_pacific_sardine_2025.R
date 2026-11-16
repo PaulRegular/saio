@@ -120,7 +120,7 @@ dfo_review <- list(
     'The 2024-2029 IFMP summary says the fishery has not harvested Pacific sardine in BC since',
     '2012 and has been formally closed since 2015. The DFO row and NOAA:10573 are one',
     'transboundary northern-subpopulation unit. See ignored source_cache/',
-    'sardinops_sagax/noaa_dfo_pacific_sardine_2025/sources.csv.'
+    'shared/noaa_dfo_pacific_sardine_2025/sources.csv.'
   )
 )
 

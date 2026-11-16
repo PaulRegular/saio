@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/mallotus_villosus/ices_barents_capelin_2026')
+cache <- file.path(root, 'source_cache/ices_barents_capelin_jrn_afwg_2026/ices_barents_capelin_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 archive <- file.path(cache,
   'bifrost-4d4a30aa35db71e0bc3a9ad819ac3a89ad7b189f')

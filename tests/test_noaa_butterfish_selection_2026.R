@@ -13,8 +13,8 @@ manifest <- read.csv("provenance/noaa_butterfish_gom_cape_hatteras_2024/sources.
 review <- paste(readLines("source_reviews/noaa_butterfish_2024.md", warn = FALSE),
   collapse = " ")
 
-cache_options <- c("source_cache/peprilus_triacanthus/noaa_butterfish_gom_cape_hatteras_2024",
-  file.path("source_cache/peprilus_triacanthus/noaa_butterfish_gom_cape_hatteras_2024"))
+cache_options <- c("source_cache/noaa_butterfish_gom_cape_hatteras/noaa_butterfish_gom_cape_hatteras_2024",
+  file.path("source_cache/noaa_butterfish_gom_cape_hatteras/noaa_butterfish_gom_cape_hatteras_2024"))
 cache_root <- cache_options[dir.exists(cache_options)][1L]
 source_paths <- file.path(cache_root, manifest$file)
 cache_available <- all(file.exists(source_paths))

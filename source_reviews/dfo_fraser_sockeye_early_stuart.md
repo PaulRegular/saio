@@ -71,7 +71,7 @@ No canonical stock, assessment, input or output records were added.
 The ignored local cache contains the PSC detailed CSV and documentation, the
 DFO 2025/021 advisory, and the 2026/2027 IFMP summary. Their URLs, retrieval
 date, file sizes and SHA-256 checksums are in
-source_cache/oncorhynchus_nerka/dfo_fraser_sockeye/sources.csv. The 2026 Outlook was
+source_cache/shared/dfo_fraser_sockeye/sources.csv. The 2026 Outlook was
 reviewed online to confirm the current Fraser Early Stuart management label,
 but its direct local download returned a Government of Canada HTML page rather
 than the PDF; that response was discarded and is not represented as a cached

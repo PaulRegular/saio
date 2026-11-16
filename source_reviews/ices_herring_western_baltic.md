@@ -49,10 +49,10 @@ For 2025, the official assessment reports:
 
 ## Source references
 
-- ICES HAWG 2026, *Report of the Herring Assessment Working Group*, Section 3.6, pp. 173–174 and Tables 3.6.4–3.6.13, pp. 247–256: [cached report](../source_cache/clupea_harengus/ices_herring_western_baltic_2026/HAWG_2026_Full_Report.pdf).
+- ICES HAWG 2026, *Report of the Herring Assessment Working Group*, Section 3.6, pp. 173–174 and Tables 3.6.4–3.6.13, pp. 247–256: [cached report](../source_cache/ices_herring_western_baltic/ices_herring_western_baltic_2026/HAWG_2026_Full_Report.pdf).
 - ICES Benchmark Workshop on Selected Herring and Sprat Stocks (WKBHERSPRAT), 2025, DOI [10.17895/ices.pub.31538287](https://doi.org/10.17895/ices.pub.31538287).
-- Official native SAM object `WBSS_HAWG_2026/run/model.RData`, cached at [model.RData](../source_cache/clupea_harengus/ices_herring_western_baltic_2026/model.RData).
-- ICES Stock Assessment Graphs, source-data key 21294: [official source page](https://sg.ices.dk/ViewSourceData.aspx?key=21294), cached at [HTML copy](../source_cache/clupea_harengus/ices_herring_western_baltic_2026/ICES_Stock_Assessment_Graphs_key_21294.html).
+- Official native SAM object `WBSS_HAWG_2026/run/model.RData`, cached at [model.RData](../source_cache/ices_herring_western_baltic/ices_herring_western_baltic_2026/model.RData).
+- ICES Stock Assessment Graphs, source-data key 21294: [official source page](https://sg.ices.dk/ViewSourceData.aspx?key=21294), cached at [HTML copy](../source_cache/ices_herring_western_baltic/ices_herring_western_baltic_2026/ICES_Stock_Assessment_Graphs_key_21294.html).
 
 ## Remaining limitations
 

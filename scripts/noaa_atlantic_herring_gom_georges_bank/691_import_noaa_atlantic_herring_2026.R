@@ -11,7 +11,7 @@ run_report <- paste0(zip_url, "#archive/Atlantic_Herring_MT2026.pdf")
 parameter_report <- paste0(zip_url, "#archive/wham_par_tables.pdf")
 fixed_source <- paste0(zip_url, "#archive/FixedCAA_Proportions_Table.csv")
 mobile_source <- paste0(zip_url, "#archive/MobileCAA_Proportions_Table.csv")
-cache <- file.path(root, "source_cache/clupea_harengus/noaa_atlantic_herring_gom_georges_bank_2026")
+cache <- file.path(root, "source_cache/noaa_atlantic_herring_gom_georges_bank/noaa_atlantic_herring_gom_georges_bank_2026")
 provenance <- file.path(root, "provenance", assessment_id, "sources.csv")
 manifest <- read.csv(provenance, stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE)

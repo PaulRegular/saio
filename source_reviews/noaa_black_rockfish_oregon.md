@@ -75,7 +75,7 @@ if a later is attempted.
 ## Sources and local cache
 
 The official report and model-file archive are cached under
-`source_cache/sebastes_melanops/noaa_black_rockfish_oregon_2023/`. The ignored
+`source_cache/noaa_black_rockfish_oregon/noaa_black_rockfish_oregon_2023/`. The ignored
 `sources.csv` manifest records retrieval dates, URLs, file sizes, SHA-256
 checksums, and the revision/archive identity.
 

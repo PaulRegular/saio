@@ -1,7 +1,7 @@
 base <- "."
 database <- file.path(base, "database")
 stock_id <- "ck_nefsc_garmiii_ferruginea_sne_ma"
-cache <- file.path(base, "source_cache/limanda_ferruginea", stock_id)
+cache <- file.path(base, "source_cache/ck_nefsc_garmiii_ferruginea_sne_ma/supporting_sources")
 framework_id <- "nefsc_yellowtail_snema_2024_framework"
 update_id <- "nefsc_yellowtail_snema_2025"
 source_url <- "https://apps-nefsc.fisheries.noaa.gov/saw/sasi.php?year=2024&species_id=13&stock_id=11&review_type_id=5"

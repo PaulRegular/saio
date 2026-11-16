@@ -4,7 +4,7 @@
 
 NOAA Stock SMART identifies stock 10393 as Yellowtail rockfish (*Sebastes flavidus*) in the Northern Pacific Coast region. The 2025 PFMC benchmark covers the U.S. portion north of 40°10′ N and is a separate management unit from the Canadian coastwide stock. The detailed assessment report and official Stock Synthesis archive identify a single-area, two-sex model with data through 2024. The native files identify Stock Synthesis 3.30.23.1. The report's `Report.sso` includes fitted historical output and forecasts through 2036.
 
-Sources are cached locally under `source_cache/sebastes_flavidus/noaa_yellowtail_rockfish_north_2025/`. The report and model archive URLs, retrieval dates and checksums are recorded in `sources.csv`; checksums for the extracted files used in the import are recorded in `provenance/noaa_yellowtail_rockfish_north_2025/sources.csv`.
+Sources are cached locally under `source_cache/noaa_yellowtail_rockfish_north/noaa_yellowtail_rockfish_north_2025/`. The report and model archive URLs, retrieval dates and checksums are recorded in `sources.csv`; checksums for the extracted files used in the import are recorded in `provenance/noaa_yellowtail_rockfish_north_2025/sources.csv`.
 
 ## Native inputs
 

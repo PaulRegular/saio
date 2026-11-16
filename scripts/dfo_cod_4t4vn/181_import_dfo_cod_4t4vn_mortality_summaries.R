@@ -1,5 +1,5 @@
 assessment_id <- "dfo_cod_4t4vn_2024"
-cache <- "source_cache/gadus_morhua/dfo_cod_4t4vn"
+cache <- "source_cache/dfo_cod_4t4vn/dfo_cod_4t4vn_2024"
 database <- "database"
 source_file <- "dfo_4tvn_cod_rebuilding_plan_2024.html"
 source_url <- paste0(

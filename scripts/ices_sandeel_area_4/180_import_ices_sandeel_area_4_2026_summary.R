@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache/ammodytes_dubius/ck_ices_hawg_dubius_ns/2026_san.sa.4")
+cache <- file.path(base, "source_cache/ck_ices_hawg_dubius_ns/supporting_sources/2026_san.sa.4")
 assessment_id <- "ices_sandeel_area_4_2026_summary"
 xml_url <- "https://sag.ices.dk/SAG_API/StockXmlDownload/21271"
 source_url <- "https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21271"

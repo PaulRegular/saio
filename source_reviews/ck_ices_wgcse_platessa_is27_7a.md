@@ -10,7 +10,7 @@ The database record represents the 2026 ICES assessment applied for advice, fitt
 - [SAM fitted-object archive](https://stockassessment.org/datadisk/stockassessment/userdirs/user3/Ple.7a_26)
 - [Pinned 2026 TAF repository revision](https://github.com/ices-advice/2026_ple.27.7a/tree/20246f16b79a4f4618faed4d8140aa4176a9819c)
 
-The source files, retrieval dates, URLs, and checksums are listed in the ignored local manifest at `source_cache/pleuronectes_platessa/ices_plaice_irish_sea_7a_2026/manifest.csv`. The fitted object is the authoritative source for the values actually used in the fit. The package version is not pinned in the public lock file, so the SAM fit is recorded by its archived object and run identifier rather than an asserted package version.
+The source files, retrieval dates, URLs, and checksums are listed in the ignored local manifest at `source_cache/ck_ices_wgcse_platessa_is27_7a/ices_plaice_irish_sea_7a_2026/manifest.csv`. The fitted object is the authoritative source for the values actually used in the fit. The package version is not pinned in the public lock file, so the SAM fit is recorded by its archived object and run identifier rather than an asserted package version.
 
 ## Inputs and model assumptions
 
@@ -32,4 +32,4 @@ The fit also supplies 659 fitted catch and survey predictions aligned to `fit$da
 
 The ICES 2026 inventory entry ple.27.7a matches the existing canonical Irish Sea plaice stock and is screened eligible. The assessment satisfies the age-structured source-readiness screen: it has fitted catch numbers-at-age, an age-specific UK BTS Q3 index, run-matched weight and fixed biological/mortality inputs, explicit survey timing, and fitted population/mortality outputs. The aggregate NIGFS Q1/Q4 indices are documented separately and do not need invented age allocations because the official fit also has an age-specific survey index. The candidate-register review date is 2026-10-29; the source review does not alter the canonical assessment data.
 
-The 2021 stock annex is cached at source_cache/pleuronectes_platessa/ices_plaice_irish_sea_7a_2026/ple_27_7a_stock_annex_2021.pdf; the local manifest records its Figshare URL, DOI revision, retrieval date and SHA-256.
+The 2021 stock annex is cached at source_cache/ck_ices_wgcse_platessa_is27_7a/ices_plaice_irish_sea_7a_2026/ple_27_7a_stock_annex_2021.pdf; the local manifest records its Figshare URL, DOI revision, retrieval date and SHA-256.

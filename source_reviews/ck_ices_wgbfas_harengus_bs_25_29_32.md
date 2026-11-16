@@ -22,7 +22,7 @@ benchmark established the SS3 framework.
 | [ICES Standard Graph source data](https://sg.ices.dk/ViewSourceData.aspx?key=23758) | Current published summary data, including 2000–2025 | `d8613186c7b8d8a27d7a0236f6b3ab175eae93d760a7b6e1821f020a0a1923bb` |
 
 All source files and a retrieval manifest are cached locally in the gitignored
-`source_cache/clupea_harengus/ck_ices_wgbfas_harengus_bs_25_29_32/`.
+`source_cache/ck_ices_wgbfas_harengus_bs_25_29_32/supporting_sources/`.
 The manifest records retrieval date, URL, assessment and checksum. The 2025
 WGBFAS report and 2026 annexes were also retained there for revision context.
 

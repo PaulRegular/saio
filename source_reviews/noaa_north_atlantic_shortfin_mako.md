@@ -24,4 +24,4 @@ Keep the candidate screened but eligibility unresolved. The assessment is curren
 - ICCAT, [Report of the 2026 North Atlantic Shortfin Mako Stock Assessment Meeting](https://www.iccat.int/Documents/CVSP/CV083_2026/n_7/CV08307009.pdf), SCRS/2026/009.
 - Fernández et al., [Preliminary 2026 Stock Synthesis model runs and final agreed run for North Atlantic shortfin mako](https://www.iccat.int/Documents/CVSP/CV083_2026/n_7/CV08307143.pdf), SCRS/2026/143.
 
-The two 2026 ICCAT PDFs, retrieval dates, source URLs, revisions, and SHA-256 checksums are recorded in the gitignored source cache at `source_cache/isurus_oxyrinchus/noaa_shortfin_mako_north_atlantic_2026/sources.csv`.
+The two 2026 ICCAT PDFs, retrieval dates, source URLs, revisions, and SHA-256 checksums are recorded in the gitignored source cache at `source_cache/noaa_north_atlantic_shortfin_mako/noaa_shortfin_mako_north_atlantic_2026/sources.csv`.

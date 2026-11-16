@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/molva_dypterygia/ices_blue_ling_2026')
+cache <- file.path(root, 'source_cache/ices_blue_ling_5a14/ices_blue_ling_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:bli.27.5a14'
 unit_id <- 'ices_blue_ling_5a14'
@@ -123,7 +123,7 @@ review <- list(
     'fixed M = 0.15, and length-based maturity. Official ICES advice record 7206 recommends',
     '1,898 tonnes for the 2026/2027 fishing year. Source files, URLs, revisions, retrieval',
     'dates, and SHA-256 values are recorded in',
-    'source_cache/molva_dypterygia/ices_blue_ling_2026/sources.csv. No canonical numerical records',
+    'source_cache/ices_blue_ling_5a14/ices_blue_ling_2026/sources.csv. No canonical numerical records',
     'were added.')
 )
 

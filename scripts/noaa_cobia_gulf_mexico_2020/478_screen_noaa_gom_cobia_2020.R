@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'rachycentron_canadum/noaa_cobia_gulf_mexico_2020_sedar28_update')
+cache <- file.path(root, 'source_cache/noaa_cobia_gulf_mexico_2020/noaa_cobia_gulf_mexico_2020_sedar28_update')
 register_path <- file.path(root, 'database/candidates.csv')
 
 sha256_file <- function(path) {

@@ -13,7 +13,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-cache <- file.path(root, 'source_cache/mallotus_villosus/ices_capelin_2a514_2026')
+cache <- file.path(root, 'source_cache/ices_capelin_2a514_2026/source_material')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)
 

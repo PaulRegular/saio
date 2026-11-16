@@ -1,7 +1,7 @@
 root <- "."
 stock_id <- "wcpfc_wcpo_yellowfin"
 assessment_id <- "wcpfc_wcpo_yellowfin_2023"
-cache_name <- "thunnus_albacares/wcpfc_wcpo_yellowfin_2023"
+cache_name <- "wcpfc_wcpo_yellowfin/wcpfc_wcpo_yellowfin_2023"
 diagnostic_revision <- "54274c0edac84e65fdbd8ef5996038e6a8714641"
 grid_revision <- "6b28f0bf4975895beae4df861124b30286ff6fa0"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)

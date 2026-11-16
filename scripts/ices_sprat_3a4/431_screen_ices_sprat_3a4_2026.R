@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/sprattus_sprattus/ices_sprat_3a4_2026')
+cache <- file.path(root, 'source_cache/ices_sprat_3a4/ices_sprat_3a4_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:spr.27.3a4'
 unit_id <- 'ices_sprat_3a4'
@@ -18,7 +18,7 @@ manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 expected_files <- c('ICES_advice_2026_4079.html',
   'ICES_source_data_2026_key_21311.html', 'ICES_charts_2026_key_21311.html',
   'TAF_data.R', 'TAF_DATA.bib', 'TAF_published_tree.json',
-  'TAF_published_commit.json', '../ices_sprat_7de_2026/HAWG_2026.pdf')
+  'TAF_published_commit.json', '../../ices_sprat_7de_2026/source_material/HAWG_2026.pdf')
 manifest_rows <- match(expected_files, manifest$file)
 if (nrow(manifest) != length(expected_files) || anyNA(manifest_rows) ||
     anyDuplicated(manifest$file) || any(manifest$retrieved_on[manifest_rows] != '2026-10-30'))

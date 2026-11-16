@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'anoplopoma_fimbria/noaa_alaska_sablefish_2024')
+cache <- file.path(root, 'source_cache/noaa_alaska_sablefish/noaa_alaska_sablefish_2024')
 register_path <- file.path(root, 'database/candidates.csv')
 revision <- 'd080576086110b6dcfca2c37918bab3101fff44a'
 source_files <- c(

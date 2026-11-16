@@ -24,7 +24,7 @@ Identity is **new** and source screening is **complete**. Eligibility for source
 
 ## Source cache
 
-Files were retrieved on 2026-10-29 and are stored in the ignored local directory `source_cache/scomberomorus_maculatus/noaa_spanish_mackerel_sedar81/`.
+Files were retrieved on 2026-10-29 and are stored in the ignored local directory `source_cache/noaa_spanish_mackerel_sedar81/source_material/`.
 
 | Cached source | Use | Source URL | SHA-256 |
 |---|---|---|---|

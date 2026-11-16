@@ -65,8 +65,8 @@ if (!length(existing)) {
   stop("Existing Hoki candidate does not match the reviewed stock unit.", call. = FALSE)
 }
 
-assessment_pdf <- file.path(root, "source_cache", "macruronus_novaezelandiae/mpi_hoki_hok1_2025", "FAR-2026-04-Assessment-of-hoki-in-2025.pdf")
-input_pdf <- file.path(root, "source_cache", "macruronus_novaezelandiae/mpi_hoki_hok1_2025", "FAR-2025-42-Hoki-input-data.pdf")
+assessment_pdf <- file.path(root, "source_cache/mpi_hoki_hok1/mpi_hoki_hok1_2025", "FAR-2026-04-Assessment-of-hoki-in-2025.pdf")
+input_pdf <- file.path(root, "source_cache/mpi_hoki_hok1/mpi_hoki_hok1_2025", "FAR-2025-42-Hoki-input-data.pdf")
 manifest <- data.frame(
   local_file = basename(c(assessment_pdf, input_pdf)),
   source_url = c(

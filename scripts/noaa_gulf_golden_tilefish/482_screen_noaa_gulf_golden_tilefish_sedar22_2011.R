@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'lopholatilus_chamaeleonticeps/noaa_gulf_golden_tilefish_2011')
+cache <- file.path(root, 'source_cache/noaa_gulf_golden_tilefish/noaa_gulf_golden_tilefish_2011')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10383'
 candidate_unit_id <- 'noaa_gulf_golden_tilefish'

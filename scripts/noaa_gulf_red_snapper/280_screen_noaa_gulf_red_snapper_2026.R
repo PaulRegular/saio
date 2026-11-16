@@ -74,7 +74,7 @@ review <- list(
     'these are model areas, not separate candidate stocks. This unit is distinct',
     'from NOAA:10231, Red snapper - Southern Atlantic Coast. The final SEDAR 98',
     'report and supporting age-data papers are cached under',
-    'source_cache/lutjanus_campechanus/noaa_gulf_red_snapper_2026/ with retrieval dates and',
+    'source_cache/noaa_gulf_red_snapper/noaa_gulf_red_snapper_2026/ with retrieval dates and',
     'SHA-256 checksums. No canonical numerical records were imported.'
   )
 )

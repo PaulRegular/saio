@@ -32,4 +32,4 @@ Reference biomass is specifically for ages 4+ and is not SSB. The 2026 populatio
 - [ICES SAG source data, stock key 22624](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22624)
 - [ICES SAG XML source data](https://sag.ices.dk/SAG_API/StockXmlDownload/22624)
 
-Cached source files are in the gitignored `source_cache/pollachius_virens/ices_saithe_iceland_2026/` directory. Its manifest records retrieval URLs, timestamps, sizes, and SHA-256 hashes. Values were imported by `scripts/ck_ices_nwwg_virens_fa5a/129_import_ices_saithe_iceland_2026.R`.
+Cached source files are in the gitignored `source_cache/ck_ices_nwwg_virens_fa5a/ices_saithe_iceland_2026/` directory. Its manifest records retrieval URLs, timestamps, sizes, and SHA-256 hashes. Values were imported by `scripts/ck_ices_nwwg_virens_fa5a/129_import_ices_saithe_iceland_2026.R`.

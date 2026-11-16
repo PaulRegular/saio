@@ -3,7 +3,7 @@ source("scripts/shared/candidate_reports.R", local = TRUE)
 root <- '.'
 candidate_id <- 'ICES:rjh.27.7e'
 unit_id <- 'ices_blonde_ray_7e'
-cache <- file.path(root, 'source_cache/raja_brachyura/ices_blonde_ray_7e_2024')
+cache <- file.path(root, 'source_cache/ices_blonde_ray_7e/ices_blonde_ray_7e_2024')
 register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == candidate_id, , drop = FALSE]

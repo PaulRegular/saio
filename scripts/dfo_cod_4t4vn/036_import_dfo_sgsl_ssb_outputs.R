@@ -1,5 +1,5 @@
 assessment_id <- "dfo_cod_4t4vn_2024"
-cache <- "source_cache/gadus_morhua/dfo_cod_4t4vn"
+cache <- "source_cache/dfo_cod_4t4vn/dfo_cod_4t4vn_2024"
 database <- "database"
 data_file <- "NAFO-4T4VN-Atlantic-Cod-spawning-stock-biomass-estimates-1950-2023.csv"
 dict_file <- "Atlantic-Cod-biomass-estimates-data-dictionary.csv"

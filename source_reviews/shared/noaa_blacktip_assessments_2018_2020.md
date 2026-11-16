@@ -18,6 +18,6 @@ This decision does not claim that no age, weight, maturity, or mortality biology
 - NOAA Stock SMART snapshot, pinned revision `664c4237e26520b260a090e1821a2cee5d1cdf07`, retrieved 2026-10-28; candidate rows 11026 and 11027.
 - [SEDAR 65 HMS Atlantic Blacktip Shark final assessment](https://sedarweb.org/documents/sedar-65-hms-atlantic-blacktip-shark-final-stock-assessment-report/), including Sections II and III and Appendix 1 on length frequencies. The model configuration identifies catch, CPUE, length compositions and life history; age-specific natural mortality is fixed from life-history methods.
 - [SEDAR 29 Gulf of Mexico Blacktip Shark 2018 update](https://sedarweb.org/documents/2018-update-sedar-29-hms-gulf-of-mexico-blacktip-shark/) and [September 2018 addendum](https://sedarweb.org/documents/addendum-to-2018-update-to-sedar-29-hms-gulf-of-mexico-blacktip-shark/). The update states age-composition data were unavailable and length compositions were not directly input to the model; the addendum documents reruns using revised MRIP recreational catch estimates.
-- Detailed PDFs and retrieval metadata are stored locally under `source_cache/carcharhinus_limbatus/noaa_blacktip_2026/` (gitignored).
+- Detailed PDFs and retrieval metadata are stored locally under `source_cache/shared/noaa_blacktip_2026/` (gitignored).
 
 **Review date:** 2026-11-02

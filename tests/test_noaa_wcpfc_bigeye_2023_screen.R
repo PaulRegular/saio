@@ -10,7 +10,7 @@ unit <- units[!is.na(units$candidate_unit_id) &
 progress <- candidate_progress()
 noaa <- progress[progress$organization == 'NOAA', , drop = FALSE]
 
-cache <- file.path(root, 'source_cache/thunnus_obesus/noaa_wcpfc_bigeye_2026')
+cache <- file.path(root, 'source_cache/wcpfc_wcpo_bigeye/noaa_wcpfc_bigeye_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 required <- c('SC19-SA-WP-05_BET_2023_Rev02.pdf', 'SC19_Outcomes_2023.pdf',
   'SPC__README.md', 'SPC__TAF__data.R', 'SPC_MFCL__bet.age_length',

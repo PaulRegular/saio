@@ -14,7 +14,7 @@ The 2025 age-structured assessment is the current detailed record under the data
 - [WKIrish2 2016 data-evaluation report](https://doi.org/10.17895/ices.pub.8712), including age-specific Lorenzen estimates in Table 6.2.3.
 - [2026 ICES category-5 advice](https://asd.ices.dk/viewAdvice/6126), recorded separately as 586 tonnes in each of 2027 and 2028.
 
-Source PDFs, the SAG XML and extracted text are cached under `source_cache/melanogrammus_aeglefinus/ck_ices_wgcse_aeglefinus_cs7a/`. The cache is local and gitignored. Its manifest records the source URL, checksum and retrieval date.
+Source PDFs, the SAG XML and extracted text are cached under `source_cache/ck_ices_wgcse_aeglefinus_cs7a/supporting_sources/`. The cache is local and gitignored. Its manifest records the source URL, checksum and retrieval date.
 
 ## Inputs and assumptions
 

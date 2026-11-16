@@ -2,7 +2,7 @@ root <- "."
 register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 row <- register[register$candidate_id == 'ICES:bss.27.8ab', , drop = FALSE]
-cache <- file.path(root, 'source_cache', 'dicentrarchus_labrax/ices_seabass_8ab_2026')
+cache <- file.path(root, 'source_cache/ices_seabass_8ab/ices_seabass_8ab_2026')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)
 xml <- paste(readLines(file.path(cache, 'ICES_StockAssessment_22538.xml'), warn = FALSE),

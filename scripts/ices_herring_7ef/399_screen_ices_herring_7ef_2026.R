@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/clupea_harengus/ices_herring_7ef_2026')
+cache <- file.path(root, 'source_cache/ices_herring_7ef/ices_herring_7ef_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:her.27.7ef'
 unit_id <- 'ices_herring_7ef'
@@ -7,7 +7,7 @@ source_manifest <- file.path(cache, 'sources.csv')
 report_excerpt <- file.path(cache, 'HAWG_2026_pages_414_419.txt')
 
 manifest <- read.csv(source_manifest, stringsAsFactors = FALSE)
-report_row <- match('source_cache/clupea_harengus/ck_ices_hawg_harengus_cs6_a_s_7b_c/HAWG_2026_full_report.pdf', manifest$file)
+report_row <- match('source_cache/ck_ices_hawg_harengus_cs6_a_s_7b_c/supporting_sources/HAWG_2026_full_report.pdf', manifest$file)
 if (is.na(report_row)) stop('Source manifest is missing the current HAWG report.', call. = FALSE)
 report_path <- file.path(root, manifest$file[report_row])
 sha256_file <- function(path) {
@@ -75,7 +75,7 @@ review <- data.frame(
   detailed_source_url = 'https://doi.org/10.17895/ices.pub.31424315',
   review_date = '2026-10-30',
   decision_reason = 'The latest 2026 HAWG report says there is no assessment for this unit and that advice follows the landings-only Category 5 method. It explicitly reports no catch numbers, catch weights, mean weight-at-age, maturity-at-age, or natural mortality-at-age. The available advice and evidence do not support an age-disaggregated assessment record, so the unit is ineligible for the age-structured set.',
-  notes = 'The ICES 2026 stock list originally recorded assessment year 2025; the 2026 HAWG report is the latest detailed source and describes the first advice for this unit. The report is cached once as a shared HAWG source at source_cache/clupea_harengus/ck_ices_hawg_harengus_cs6_a_s_7b_c/HAWG_2026_full_report.pdf; the candidate-specific cache manifest records its path, URL, retrieval date, revision, size, and checksum, and a local excerpt covers pages 414–419. No canonical assessment data were added.',
+  notes = 'The ICES 2026 stock list originally recorded assessment year 2025; the 2026 HAWG report is the latest detailed source and describes the first advice for this unit. The report is cached once as a shared HAWG source at source_cache/ck_ices_hawg_harengus_cs6_a_s_7b_c/supporting_sources/HAWG_2026_full_report.pdf; the candidate-specific cache manifest records its path, URL, retrieval date, revision, size, and checksum, and a local excerpt covers pages 414–419. No canonical assessment data were added.',
   stringsAsFactors = FALSE,
   check.names = FALSE
 )

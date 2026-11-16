@@ -1,7 +1,7 @@
 assessment_id <- "ices_norway_pout_north_sea_2026_benchmark"
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache/trisopterus_esmarkii", assessment_id, "native")
+cache <- file.path(root, "source_cache/ices_norway_pout_north_sea/ices_norway_pout_north_sea_2026_benchmark", "native")
 model_url <- paste0(
   "https://stockassessment.org/datadisk/stockassessment/userdirs/user3/",
   "NP_Sep2025_bench_final_Mfor/run/sum.RData"

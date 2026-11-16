@@ -94,7 +94,7 @@ stopifnot(
   candidate$import_status == "partial",
   nrow(manifest) == 5L,
   !anyDuplicated(manifest$file),
-  all(grepl("^source_cache/mycteroperca_microlepis/noaa_gag_south_atlantic_sedar71_2021/", manifest$file)),
+  all(grepl("^source_cache/noaa_gag_south_atlantic/noaa_gag_south_atlantic_sedar71_2021/", manifest$file)),
   all(manifest$retrieved_utc == "2026-10-30T04:20:35Z"),
   all(grepl("^[[:xdigit:]]{64}$", manifest$sha256)),
   all(file.exists(file.path(".", manifest$file))),

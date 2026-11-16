@@ -1,5 +1,5 @@
 base <- "."; db <- file.path(base, "database")
-cache <- file.path(base, "source_cache/gadus_morhua/ck_ices_wgbfas_morhua_bs_25_32/assessment_2026")
+cache <- file.path(base, "source_cache/ck_ices_wgbfas_morhua_bs_25_32/ices_cod_eastern_baltic_2026")
 id <- "ices_cod_eastern_baltic_2026"; stock_id <- "ck_ices_wgbfas_morhua_bs_25_32"
 sag <- "https://sag.ices.dk/SAG_API/StockXmlDownload/22502"; report <- "https://doi.org/10.17895/ices.pub.32455056"
 verify <- function(file, hash) {

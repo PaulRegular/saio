@@ -121,7 +121,7 @@ for (id in names(component_reviews)) {
     notes = paste(component$notes,
       'See source_reviews/shared/dfo_4vwx_herring_component_crosswalk_2025.md',
       'and source_reviews/ck_dfo_mar_harengus_4vwx.md. Sources are already cached',
-      'with checksums under source_cache/clupea_harengus/ck_dfo_mar_harengus_4vwx/.'
+      'with checksums under source_cache/ck_dfo_mar_harengus_4vwx/supporting_sources/.'
     )
   )
   if (x$screening_status[i] != 'not_started' || x$match_status[i] != 'unreviewed') {
@@ -185,7 +185,7 @@ juvenile_review <- list(
     'the fishery is not indicative of abundance. See source_reviews/',
     'dfo_4vwx_herring_component_crosswalk_2025.md and source_reviews/',
     'ck_dfo_mar_harengus_4vwx.md. Source PDFs and checksums are cached under',
-    'source_cache/clupea_harengus/ck_dfo_mar_harengus_4vwx/.'
+    'source_cache/ck_dfo_mar_harengus_4vwx/supporting_sources/.'
   )
 )
 for (column in names(juvenile_review)) x[[column]][i] <- juvenile_review[[column]]

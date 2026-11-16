@@ -30,5 +30,5 @@ exist elsewhere. No canonical numerical records were imported.
 - [NAFO stock advice and assessment document index](https://www.nafo.int/Science/Stocks-Advice)
 
 The 2025 assessment is cached under
-`source_cache/dfo_redfish_3o_2025/`, with retrieval date and
+`source_cache/dfo_redfish_3o_2025/source_material/`, with retrieval date and
 SHA-256 checksum in `sources.csv`.

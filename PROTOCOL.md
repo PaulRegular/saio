@@ -710,11 +710,14 @@ This directory must remain gitignored.
 
 Useful cached artifacts include assessment/framework PDFs, native input/output files, fitted objects, supplementary CSVs, and configuration files.
 
-Group cached source files by scientific name and run, for example
-`source_cache/solea_solea/ices_sol_27_7a_2026/`. Use the candidate key for
-a screened unit with no assessment record. Keep inventories and files shared
-by multiple assessments under `source_cache/shared/`. Update importers and
-source references together when moving an existing cache.
+Group cached files under `source_cache/<stock_id>/<assessment_id>/`.
+Use the same stock ID as the script folder, for example
+`source_cache/dfo_cod_3pn4rs/dfo_cod_3pn4rs_2025/`. Use the candidate key
+and a source collection label when an assessment ID has yet to be recorded.
+Keep reports and inventories used by multiple stocks under
+`source_cache/shared/<collection>/`. If more than one source collection
+supports a run, keep the collections in named subfolders. Update importers,
+manifests and source reviews together when moving a cache.
 
 Record the exact files used for import or verification in `sources.csv` under
 `provenance/<assessment_id>/` or the corresponding candidate or shared

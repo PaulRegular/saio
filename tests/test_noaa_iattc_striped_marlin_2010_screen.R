@@ -15,7 +15,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-manifest <- read.csv(file.path(root, 'source_cache/kajikia_audax/noaa_iattc_striped_marlin_2010', 'sources.csv'),
+manifest <- read.csv(file.path(root, 'source_cache/noaa_iattc_striped_marlin_2010/source_material', 'sources.csv'),
   stringsAsFactors = FALSE)
 progress <- candidate_progress()
 units <- candidate_units()
@@ -31,7 +31,7 @@ stopifnot(nrow(row) == 1L,
   grepl('annual spawning biomass and recruitment', row$output_evidence, fixed = TRUE),
   grepl('No-11-2011_Status-of-the-tuna-and-billfish-stocks-in-2009.pdf',
     row$detailed_source_url, fixed = TRUE),
-  all(file.exists(file.path(root, 'source_cache/kajikia_audax/noaa_iattc_striped_marlin_2010', manifest$file))),
+  all(file.exists(file.path(root, 'source_cache/noaa_iattc_striped_marlin_2010/source_material', manifest$file))),
   !any(stocks$authority_stock_id == '11073', na.rm = TRUE),
   !any(stocks$scientific_name == 'Kajikia audax', na.rm = TRUE),
   !any(assessments$assessment_id == 'iattc_northeast_pacific_striped_marlin', na.rm = TRUE),

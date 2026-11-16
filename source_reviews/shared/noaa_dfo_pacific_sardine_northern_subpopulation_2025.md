@@ -25,4 +25,4 @@ The current DFO material supplies management context and cites the shared NOAA b
 - NOAA Technical Memorandum NMFS-SWFSC-698, [2024 benchmark assessment](https://doi.org/10.25923/jyw3-ys65).
 - DFO, [2022 harvest advice for Pacific sardine in British Columbia](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41074506.pdf).
 - DFO, [2024-2029 Pacific Sardine IFMP summary](https://www.pac.dfo-mpo.gc.ca/fm-gp/mplans/sardine-ifmp-pgip-sm-eng.html).
-- Local copies and SHA-256 checksums are in the ignored `source_cache/sardinops_sagax/noaa_dfo_pacific_sardine_2025/` directory.
+- Local copies and SHA-256 checksums are in the ignored `source_cache/shared/noaa_dfo_pacific_sardine_2025/` directory.

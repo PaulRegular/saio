@@ -10,8 +10,8 @@ if (!requireNamespace("pdftools", quietly = TRUE)) {
 }
 
 cache_candidates <- c(
-  file.path(root, "source_cache", "hippoglossus_stenolepis/iphc_pacific_halibut"),
-  file.path(root, "source_cache/hippoglossus_stenolepis/iphc_pacific_halibut")
+  file.path(root, "source_cache/iphc_pacific_halibut/supporting_sources"),
+  file.path(root, "source_cache/iphc_pacific_halibut/supporting_sources")
 )
 cache <- cache_candidates[dir.exists(cache_candidates)][1L]
 if (is.na(cache)) stop("The gitignored IPHC source cache is missing.", call. = FALSE)

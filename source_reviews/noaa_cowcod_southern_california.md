@@ -6,7 +6,7 @@ SAIO stock `noaa_cowcod_southern_california`. Assessment `noaa_cowcod_southern_c
 
 The 2019 assessment covers Cowcod (*Sebastes levis*) in the Southern California Bight, south of Point Conception. The assessment report and native Stock Synthesis archive are the latest detailed run located for this current unit. The model is Stock Synthesis 3.30.13.09, uses data through 2018, and reports a 2019 terminal-year estimate. The report's separate northern-area sustainable-yield appendix is not part of this stock assessment.
 
-Sources cached locally under the ignored `source_cache/sebastes_levis/noaa_cowcod_southern_california_2019/` directory:
+Sources cached locally under the ignored `source_cache/noaa_cowcod_southern_california/noaa_cowcod_southern_california_2019/` directory:
 
 - [2019 assessment report](https://www.pcouncil.org/documents/2019/10/status-of-cowcod-sebastes-levis-in-2019-october-24-2019.pdf)
 - [2019 Stock Synthesis model files](https://www.pcouncil.org/documents/cowcod-2019-ss-model-files-zip-file/)

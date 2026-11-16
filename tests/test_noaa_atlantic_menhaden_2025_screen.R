@@ -8,7 +8,7 @@ unit_id <- 'noaa_atlantic_menhaden'
 candidates <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- candidates[candidates$candidate_id == id, , drop = FALSE]
-cache <- file.path(root, 'source_cache/brevoortia_tyrannus/noaa_atlantic_menhaden_2025')
+cache <- file.path(root, 'source_cache/noaa_atlantic_menhaden/noaa_atlantic_menhaden_2025')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 review <- paste(readLines(file.path(root,
   'source_reviews/noaa_atlantic_menhaden.md'), warn = FALSE), collapse = '\n')

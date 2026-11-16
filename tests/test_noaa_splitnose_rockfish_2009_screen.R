@@ -18,7 +18,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors =
   na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
-cache <- file.path(root, 'source_cache/sebastes_diploproa/noaa_splitnose_rockfish_2009')
+cache <- file.path(root, 'source_cache/noaa_pacific_splitnose_rockfish_coastwide/noaa_splitnose_rockfish_2009')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 paths <- file.path(cache, sources$file)

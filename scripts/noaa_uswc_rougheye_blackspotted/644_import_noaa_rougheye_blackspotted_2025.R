@@ -1,5 +1,5 @@
 root <- "."
-source_cache <- file.path(root, "source_cache/noaa_rougheye_2025")
+source_cache <- file.path(root, "source_cache/noaa_uswc_rougheye_blackspotted/noaa_uswc_rougheye_blackspotted_2025")
 model_dir <- file.path(source_cache, "model_files")
 assessment_id <- "noaa_uswc_rougheye_blackspotted_2025"
 stock_id <- "noaa_uswc_rougheye_blackspotted"
@@ -17,13 +17,13 @@ manifest_path <- file.path(root, "provenance/noaa_uswc_rougheye_blackspotted_202
 manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
   check.names = FALSE, colClasses = "character")
 files <- c(
-  "noaa_rougheye_2025/assessment_2025.pdf" = file.path(source_cache, "assessment_2025.pdf"),
-  "noaa_rougheye_2025/model_files_2025.zip" = file.path(source_cache, "model_files_2025.zip"),
-  "noaa_rougheye_2025/model_files/2025_rougheye_data.ss" = file.path(model_dir, "2025_rougheye_data.ss"),
-  "noaa_rougheye_2025/model_files/2025_rougheye_control.ss" = file.path(model_dir, "2025_rougheye_control.ss"),
-  "noaa_rougheye_2025/model_files/starter.ss" = file.path(model_dir, "starter.ss"),
-  "noaa_rougheye_2025/model_files/forecast.ss" = file.path(model_dir, "forecast.ss"),
-  "noaa_rougheye_2025/model_files/Report.sso" = file.path(model_dir, "Report.sso")
+  "noaa_uswc_rougheye_blackspotted/noaa_uswc_rougheye_blackspotted_2025/assessment_2025.pdf" = file.path(source_cache, "assessment_2025.pdf"),
+  "noaa_uswc_rougheye_blackspotted/noaa_uswc_rougheye_blackspotted_2025/model_files_2025.zip" = file.path(source_cache, "model_files_2025.zip"),
+  "noaa_uswc_rougheye_blackspotted/noaa_uswc_rougheye_blackspotted_2025/model_files/2025_rougheye_data.ss" = file.path(model_dir, "2025_rougheye_data.ss"),
+  "noaa_uswc_rougheye_blackspotted/noaa_uswc_rougheye_blackspotted_2025/model_files/2025_rougheye_control.ss" = file.path(model_dir, "2025_rougheye_control.ss"),
+  "noaa_uswc_rougheye_blackspotted/noaa_uswc_rougheye_blackspotted_2025/model_files/starter.ss" = file.path(model_dir, "starter.ss"),
+  "noaa_uswc_rougheye_blackspotted/noaa_uswc_rougheye_blackspotted_2025/model_files/forecast.ss" = file.path(model_dir, "forecast.ss"),
+  "noaa_uswc_rougheye_blackspotted/noaa_uswc_rougheye_blackspotted_2025/model_files/Report.sso" = file.path(model_dir, "Report.sso")
 )
 sha256_file <- function(path) unname(tools::sha256sum(path))
 if (!all(c("local_file", "source_url", "retrieved_on", "sha256", "bytes") %in% names(manifest)) ||
@@ -314,7 +314,7 @@ add_output(type = "biomass", measure = "total_biomass", region = region,
   source_reference = "Report.sso, TIME_SERIES Bio_all",
   notes = "Native total biomass of all ages and sexes; it is not spawning output or SSB.")
 
-report_text <- paste(pdftools::pdf_text(verify_source("noaa_rougheye_2025/assessment_2025.pdf")), collapse = "\n")
+report_text <- paste(pdftools::pdf_text(verify_source("noaa_uswc_rougheye_blackspotted/noaa_uswc_rougheye_blackspotted_2025/assessment_2025.pdf")), collapse = "\n")
 report_lines <- gsub("\u00ad", "", trimws(unlist(strsplit(report_text, "\n"))), fixed = TRUE)
 read_report_table <- function(table_number, columns, next_table = NULL) {
   marker <- grep(paste0("^Table ", table_number, ":"), report_lines, ignore.case = TRUE)[1L]

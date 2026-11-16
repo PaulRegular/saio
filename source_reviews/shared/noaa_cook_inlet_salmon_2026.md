@@ -15,7 +15,7 @@ Supporting sources are the [ADF&G 2023 Upper Cook Inlet escapement-goal
 review (FMS 24-01)](https://www.adfg.alaska.gov/FedAidPDFs/FMS24-01.pdf) and
 the [ADF&G 2023 commercial fisheries annual report (FMR 25-05)](https://www.adfg.alaska.gov/FedAidPDFs/FMR25-05.pdf).
 The PDFs, retrieval dates, URLs, and SHA-256 checksums are in the ignored
-`source_cache/noaa_cook_inlet_salmon_2026/` directory.
+`source_cache/shared/noaa_cook_inlet_salmon_2026/` directory.
 
 ## Evidence and limits
 

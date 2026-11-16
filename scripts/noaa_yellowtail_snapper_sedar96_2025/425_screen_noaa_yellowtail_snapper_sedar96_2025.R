@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache/ocyurus_chrysurus/noaa_yellowtail_snapper_sedar96_2025')
+cache <- file.path(root, 'source_cache/noaa_yellowtail_snapper_sedar96_2025/source_material')
 
 stock_id <- 11081L
 assessment_id <- 14156L
@@ -103,7 +103,7 @@ register$review_date[row] <- '2026-10-30'
 register$decision_reason[row] <- paste0(
   'The latest official assessment found is the fully accepted 2025 SEDAR 96 operational assessment (data through 2023), which is genuinely age-structured and has age-based catch compositions, fixed biological assumptions, and age-specific population outputs. Eligibility remains unresolved for the age-disaggregated comparison: the public bundle does not contain model-ready annual age vectors, the fishery-independent indices have length rather than index-specific age compositions, and the numerical N-at-age surface is not published as a table or native output file. Do not construct age-specific survey observations or population outputs from unrelated compositions or figures without recovering and documenting the underlying data.')
 register$notes[row] <- paste0(
-  'NOAA Stock SMART ID 11081 is the single Southeastern U.S. Yellowtail Snapper management stock shared by South Atlantic and Gulf councils; SEDAR 96 models one Florida population area and ages 0-20. The 2025 SAR and SEDAR96-WP-07 are cached locally under source_cache/ocyurus_chrysurus/noaa_yellowtail_snapper_sedar96_2025/sources.csv. No canonical stock, assessment, input, or output records were added.')
+  'NOAA Stock SMART ID 11081 is the single Southeastern U.S. Yellowtail Snapper management stock shared by South Atlantic and Gulf councils; SEDAR 96 models one Florida population area and ages 0-20. The 2025 SAR and SEDAR96-WP-07 are cached locally under source_cache/noaa_yellowtail_snapper_sedar96_2025/source_material/sources.csv. No canonical stock, assessment, input, or output records were added.')
 
 source(file.path(root, 'scripts/shared/candidate_register_io.R'))
 if (!identical(Sys.getenv('TAM_SOURCE_DRY_RUN'), '1'))

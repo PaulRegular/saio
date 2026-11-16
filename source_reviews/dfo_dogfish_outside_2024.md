@@ -22,4 +22,4 @@ This is an evidence-based exclusion from the current age-input screen, not a cla
 
 - [DFO Research Document 2025/055](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41320104.pdf), detailed 2024 assessment, published February 2026.
 - [DFO Science Advisory Report 2025/032](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41297726.pdf), advice from the October 2024 peer review, published July 2025.
-- The two official PDFs and a text extraction of the detailed report are cached under the gitignored source_cache/squalus_suckleyi/dfo_dogfish_outside/; sources.csv records retrieval dates, URLs and checksums.
+- The two official PDFs and a text extraction of the detailed report are cached under the gitignored source_cache/dfo_dogfish_outside_bc/dfo_dogfish_outside/; sources.csv records retrieval dates, URLs and checksums.

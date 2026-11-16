@@ -1,7 +1,7 @@
 base <- "."; db <- file.path(base, "database")
 id <- "nefsc_yellowtail_georges_bank_2025"
 url <- "https://raw.githubusercontent.com/NOAA-EDAB/stocksmart/664c4237e26520b260a090e1821a2cee5d1cdf07/data/stock_assessment_data.rda"
-file <- file.path(base,"source_cache/limanda_ferruginea/ck_dfo_nefsc_ferruginea_gb/stock_assessment_data_664c4237.rda")
+file <- file.path(base,"source_cache/ck_dfo_nefsc_ferruginea_gb/nefsc_yellowtail_georges_bank_2025/stock_assessment_data_664c4237.rda")
 stopifnot(digest::digest(readBin(file,"raw",n=file.info(file)$size),algo="sha256",serialize=FALSE)=="141db3599cbf37af3e019bd53d2323d829a719b273e8ab0226b73f6ad18620b0")
 e <- new.env(parent=emptyenv()); load(file,envir=e)
 x <- e$stock_assessment_data; x <- x[x$stock_name=="Yellowtail flounder - Georges Bank" & x$assessment_year==2025,]

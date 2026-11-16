@@ -14,7 +14,7 @@ assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsA
 inputs <- read.csv(file.path(root, 'database', 'inputs.csv'), stringsAsFactors = FALSE)
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors = FALSE)
 review_path <- file.path(root, 'source_reviews/shared/dfo_fraser_sockeye_other_groups.md')
-cache <- file.path(root, 'source_cache/oncorhynchus_nerka/dfo_fraser_sockeye')
+cache <- file.path(root, 'source_cache/shared/dfo_fraser_sockeye')
 production <- read.csv(file.path(cache, 'stock-recruit-data_detailed-format.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)

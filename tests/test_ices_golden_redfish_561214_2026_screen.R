@@ -19,7 +19,7 @@ autumn_index <- result$tables$autumn_index
 stock_numbers <- result$tables$stock_numbers
 fishing_mortality <- result$tables$fishing_mortality
 manifest <- result$manifest
-cache <- file.path(root, 'source_cache', 'sebastes_norvegicus/ices_golden_redfish_561214_2026')
+cache <- file.path(root, 'source_cache/ices_golden_redfish_561214/ices_golden_redfish_561214_2026')
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 assessments <- read.csv(file.path(root, 'database', 'assessments.csv'), stringsAsFactors = FALSE,

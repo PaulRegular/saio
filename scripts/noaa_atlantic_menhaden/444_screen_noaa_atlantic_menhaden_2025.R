@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/brevoortia_tyrannus/noaa_atlantic_menhaden_2025')
+cache <- file.path(root, 'source_cache/noaa_atlantic_menhaden/noaa_atlantic_menhaden_2025')
 candidate_path <- file.path(root, 'database/candidates.csv')
 id <- 'NOAA:11089'
 unit_id <- 'noaa_atlantic_menhaden'
@@ -63,7 +63,7 @@ review <- list(
   detailed_source_url = 'https://asmfc.org/wp-content/uploads/2025/11/2025AtlMenhadenSingleSpeciesAssmtUpdate_October2025.pdf',
   review_date = '2026-10-30',
   decision_reason = 'The current 2025 single-species update is age-structured and publishes catch-at-age proportions, landings, aggregate abundance indices, biological methods, and population summaries. Eligibility remains unresolved because updated age-specific biological arrays for 2018-2023, exact survey timing fractions, and numerical age-specific official outputs were not verified. Do not substitute the separate SEDAR 102 ERP model or older benchmark values for the current run.',
-  notes = 'NOAA Stock SMART 11089 lists a 2022 assessment year, but the latest detailed production run located is the ASMFC 2025 single-species BAM update with terminal year 2023; the concurrently published SEDAR 102 ERP benchmark is a separate model. SEDAR 69 RD03 documents a 2020 sensitivity converting survey length compositions to age. No canonical assessment data were added. Three official source PDFs and provenance are cached in source_cache/brevoortia_tyrannus/noaa_atlantic_menhaden_2025/sources.csv.'
+  notes = 'NOAA Stock SMART 11089 lists a 2022 assessment year, but the latest detailed production run located is the ASMFC 2025 single-species BAM update with terminal year 2023; the concurrently published SEDAR 102 ERP benchmark is a separate model. SEDAR 69 RD03 documents a 2020 sensitivity converting survey length compositions to age. No canonical assessment data were added. Three official source PDFs and provenance are cached in source_cache/noaa_atlantic_menhaden/noaa_atlantic_menhaden_2025/sources.csv.'
 )
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&

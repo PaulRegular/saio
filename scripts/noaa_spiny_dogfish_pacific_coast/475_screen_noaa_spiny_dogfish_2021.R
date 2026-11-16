@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/squalus_suckleyi/noaa_spiny_dogfish_pacific_coast_2021')
+cache <- file.path(root, 'source_cache/noaa_spiny_dogfish_pacific_coast/noaa_spiny_dogfish_pacific_coast_2021')
 register_path <- file.path(root, 'database/candidates.csv')
 
 sha256_file <- function(path) {

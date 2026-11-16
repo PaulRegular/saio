@@ -30,4 +30,4 @@ The South Atlantic unit also remains eligibility-unresolved pending recovery of 
 - [South Atlantic age-composition working paper, SEDAR68OA-WP-05](https://sedarweb.org/documents/sedar68oa-wp05south-atlantic-u-s-scamp-mycteroperca-phenax-age-and-length-composition-from-the-recreational-fisheries/).
 - [South Atlantic SSC meeting output, July 2023](https://sedarweb.org/documents/sedar-68oa-south-atlantic-scamp-july-2023-ssc-meeting-output/).
 
-All eight PDFs are cached locally under the ignored `source_cache/mycteroperca_phenax/noaa_scamp_sedar68oa/` directory. Its `manifest.csv` records source URLs, document revisions, retrieval time, byte size and SHA-256 checksums. These are discovery records only; no canonical stock, assessment, input or output data were added.
+All eight PDFs are cached locally under the ignored `source_cache/noaa_scamp_sedar68oa_2022/noaa_scamp_sedar68oa/` directory. Its `manifest.csv` records source URLs, document revisions, retrieval time, byte size and SHA-256 checksums. These are discovery records only; no canonical stock, assessment, input or output data were added.

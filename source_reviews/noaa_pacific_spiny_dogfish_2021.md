@@ -13,7 +13,7 @@ The latest full production assessment identified is the 2021 PFMC assessment,
 with data through 2020. NOAA's later catch-based status updates do not replace
 that assessment. The assessment report, accepted model archive, supplementary
 tables, STAR panel report and NOAA status page are cached locally under
-`source_cache/squalus_suckleyi/noaa_spiny_dogfish_pacific_coast_2021/`; `sources.csv` records their
+`source_cache/noaa_spiny_dogfish_pacific_coast/noaa_spiny_dogfish_pacific_coast_2021/`; `sources.csv` records their
 URLs, retrieval date, revisions, sizes and checksums.
 
 ## Inputs and outputs

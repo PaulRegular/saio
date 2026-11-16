@@ -6,7 +6,7 @@ The assessment is the U.S. West Coast coastwide unit of Pacific spiny dogfish (*
 
 The PFMC’s official groundfish assessment listing identifies the 2021 assessment, model files, supplementary tables and STAR panel report as the latest detailed production package found for this unit. The model uses data through 2020 and reports a 2021 one-year forecast. The selected archived run is the decision-table “middle state of nature,” with WCGBTS catchability fixed at 0.43. The report’s main base model estimates a different WCGBTS catchability (0.586); those alternatives are not mixed here. The archived run reproduces the report’s 2021 spawning output and recruitment point estimates.
 
-The files are cached locally under the ignored source_cache/squalus_suckleyi/noaa_spiny_dogfish_pacific_coast_2021/ folder. URLs, retrieval dates, sizes and SHA-256 checksums are recorded in provenance/noaa_spiny_dogfish_pacific_coast_2021/sources.csv.
+The files are cached locally under the ignored source_cache/noaa_spiny_dogfish_pacific_coast/noaa_spiny_dogfish_pacific_coast_2021/ folder. URLs, retrieval dates, sizes and SHA-256 checksums are recorded in provenance/noaa_spiny_dogfish_pacific_coast_2021/sources.csv.
 
 - [2021 assessment report](https://www.pcouncil.org/documents/2022/01/status-of-the-pacific-spiny-dogfish-shark-resource-off-the-continental-u-s-pacific-coast-in-2021-october-19-2021.pdf/)
 - [Official model archive](https://www.pcouncil.org/documents/spiny-dogfish-2021-model-files-zip-file/)

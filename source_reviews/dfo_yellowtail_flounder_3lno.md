@@ -30,4 +30,4 @@ The 2025 assessment uses modified Campelen survey units, and its table of model 
 - [NAFO Yellowtail Flounder in Divisions 3LNO Advice, June 2025 for 2026-2027](https://www.nafo.int/Portals/0/PDFs/Advice/2025/yel3lno.pdf)
 - [NAFO species and management-area description](https://www.nafo.int/Science/Science-Advice/Species)
 
-The two PDFs and their retrieval URLs, retrieval date and SHA-256 checksums are recorded in the gitignored local cache `source_cache/dfo_yellowtail_3lno_2025/sources.csv`.
+The two PDFs and their retrieval URLs, retrieval date and SHA-256 checksums are recorded in the gitignored local cache `source_cache/dfo_yellowtail_flounder_3lno/dfo_yellowtail_3lno_2025/sources.csv`.

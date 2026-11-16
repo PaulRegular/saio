@@ -30,4 +30,4 @@ The DFO inventory row is retained as a discovery entry, while the 2024 detailed 
 - [NAFO witch flounder in Divisions 3NO advice, June 2026 for 2027-2028](https://www.nafo.int/Portals/0/PDFs/Advice/2026/wf3no.pdf)
 - [NAFO species and management-area description](https://www.nafo.int/Science/Science-Advice/Species)
 
-The detailed report and current advice PDFs, with retrieval URLs, retrieval date and SHA-256 checksums, are in the gitignored local cache `source_cache/glyptocephalus_cynoglossus/dfo_witch_flounder_3no_2026/sources.csv`.
+The detailed report and current advice PDFs, with retrieval URLs, retrieval date and SHA-256 checksums, are in the gitignored local cache `source_cache/dfo_witch_flounder_3no/dfo_witch_flounder_3no_2026/sources.csv`.

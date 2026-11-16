@@ -56,7 +56,7 @@ analyses.
 - [DFO Atlantic halibut stock profile](https://www.dfo-mpo.gc.ca/species-especes/profiles-profils/atl-halibut-fletan-atl-eng.html)
 
 The report and SSC source files are cached under
-`source_cache/hippoglossus_hippoglossus/noaa_atlantic_halibut_2024/`. The retrieved report is
+`source_cache/noaa_atlantic_halibut_2024/source_material/`. The retrieved report is
 labelled a draft working paper for peer review; it is the detailed 2024 report
 linked from the official meeting materials. No source model object or
 age-structured input archive was identified because the reported method is

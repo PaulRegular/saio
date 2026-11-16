@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "noaa_lingcod_northern_pacific_coast"
 assessment_id <- "noaa_lingcod_northern_pacific_coast_2021"
 candidate_id <- "NOAA:12194"
-cache <- file.path(root, "source_cache/ophiodon_elongatus/noaa_lingcod_northern_pacific_coast_2021")
+cache <- file.path(root, "source_cache/noaa_lingcod_northern_pacific_coast/noaa_lingcod_northern_pacific_coast_2021")
 manifest_path <- file.path(root, "provenance", assessment_id, "sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 .libPaths(c(file.path(root, "source_cache", "r-lib"), .libPaths()))

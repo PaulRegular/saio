@@ -60,7 +60,7 @@ this database import.
 ## Sources and local cache
 
 The report and native archive were retrieved on 2026-10-29 and are cached in
-the ignored `source_cache/sebastes_ruberrimus/noaa_west_coast_yelloweye_2025/` directory. Their
+the ignored `source_cache/noaa_west_coast_yelloweye/noaa_west_coast_yelloweye_2025/` directory. Their
 URLs, retrieval dates, sizes, and SHA-256 checksums are recorded in its
 `sources.csv` manifest. The imported source files are pinned to repository
 revision `9356e8267c23a1a5d33bb76f261fcd5622db062c`.

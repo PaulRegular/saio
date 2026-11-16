@@ -1,7 +1,7 @@
 assessment_id <- "ices_bluewhiting_northeast_atlantic_2026"
 stock_id <- "ices_bluewhiting_northeast_atlantic"
 root <- "."
-source_dir <- file.path(root, "source_cache/micromesistius_poutassou", assessment_id)
+source_dir <- file.path(root, "source_cache/ices_bluewhiting_northeast_atlantic/ices_bluewhiting_northeast_atlantic_2026")
 model_file <- file.path(source_dir, "BW-2026.rds")
 
 if (!file.exists(model_file)) stop("The cached BW-2026 model object is missing.")

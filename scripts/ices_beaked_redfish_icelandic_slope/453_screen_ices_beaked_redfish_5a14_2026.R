@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/sebastes_mentella/ices_beaked_redfish_5a14_2026')
+cache <- file.path(root, 'source_cache/ices_beaked_redfish_icelandic_slope/ices_beaked_redfish_5a14_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:reb.27.5a14'
 unit_id <- 'ices_beaked_redfish_icelandic_slope'
@@ -121,7 +121,7 @@ review <- list(
     'https://data.hafro.is/assmt/readme.html'),
   review_date = '2026-10-31',
   decision_reason = paste('The 2026 Icelandic slope unit is a distinct active Category 1 Gadget assessment. Its official report confirms age-length observations, but the reviewed current public materials do not provide the numerical annual age-length observations and supporting expansion data needed to verify catch-at-age or age-specific abundance inputs. Weight-at-age and exact survey timing are also unresolved. Keep eligibility unresolved as a source gap; do not call it ineligible based only on the Gadget model label.'),
-  notes = paste('This ICES unit is distinct from the existing Sebastes mentella record for Subareas 1 and 2 (reb.27.1-2). Current source review covered the 2026 MFRI technical report, ICES advice record 7218, Standard Graphs and SAG records for assessment key 22659, and the Hafro assessment-data catalogue. The 2026 report includes model-fit figures and annual output trends but not a complete numeric model-ready age input set. Cached source files and checksums are under source_cache/sebastes_mentella/ices_beaked_redfish_5a14_2026. No canonical records were added.')
+  notes = paste('This ICES unit is distinct from the existing Sebastes mentella record for Subareas 1 and 2 (reb.27.1-2). Current source review covered the 2026 MFRI technical report, ICES advice record 7218, Standard Graphs and SAG records for assessment key 22659, and the Hafro assessment-data catalogue. The 2026 report includes model-fit figures and annual output trends but not a complete numeric model-ready age input set. Cached source files and checksums are under source_cache/ices_beaked_redfish_icelandic_slope/ices_beaked_redfish_5a14_2026. No canonical records were added.')
 )
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&

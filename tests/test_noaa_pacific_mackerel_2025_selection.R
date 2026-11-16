@@ -1,6 +1,6 @@
 candidate_id <- "NOAA:10163"
 stock_id <- "noaa_pacific_mackerel_pacific_coast"
-cache <- "source_cache/scomber_japonicus/noaa_pacific_mackerel_2025"
+cache <- "source_cache/noaa_pacific_mackerel_pacific_coast/noaa_pacific_mackerel_2025"
 
 candidate <- read.csv("database/candidates.csv", stringsAsFactors = FALSE,
   na.strings = c("", "NA"), check.names = FALSE)

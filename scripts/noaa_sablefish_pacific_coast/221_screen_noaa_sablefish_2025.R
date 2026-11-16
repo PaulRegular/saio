@@ -75,7 +75,7 @@ x$notes[i] <- paste(
   'Report.sso and echoed input identify 3.30.23.1; retain this run-version',
   'discrepancy for source review. Cached report and native model archive,',
   'retrieval details, and checksums are in',
-  'source_cache/anoplopoma_fimbria/noaa_sablefish_pacific_coast_2025/sources.csv.'
+  'source_cache/noaa_sablefish_pacific_coast/noaa_sablefish_pacific_coast_2025/sources.csv.'
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

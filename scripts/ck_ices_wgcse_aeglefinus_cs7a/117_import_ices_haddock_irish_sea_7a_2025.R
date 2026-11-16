@@ -3,8 +3,8 @@ advice_id <- "ices_haddock_irish_sea_7a_2026_summary"
 stock_id <- "ck_ices_wgcse_aeglefinus_cs7a"
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache/melanogrammus_aeglefinus", stock_id)
-assessment_cache <- file.path(cache, "assessment_2025")
+cache <- file.path(root, "source_cache/ck_ices_wgcse_aeglefinus_cs7a/supporting_sources")
+assessment_cache <- file.path(root, "source_cache", stock_id, assessment_id)
 framework_cache <- file.path(cache, "framework")
 report_ref <- "https://doi.org/10.17895/ices.pub.32625759"
 framework_ref <- "https://doi.org/10.17895/ices.pub.8713"

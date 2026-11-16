@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'sebastes_rufus/noaa_bank_rockfish_california')
+cache <- file.path(root, 'source_cache/noaa_bank_rockfish_california/source_material')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10448'
 candidate_unit_id <- 'noaa_bank_rockfish_california'

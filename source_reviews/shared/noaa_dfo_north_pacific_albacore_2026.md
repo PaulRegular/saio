@@ -28,4 +28,4 @@ If the underlying composition data become public, revisit age-specific source el
 - [DFO Pacific Tuna 2025-26 IFMP summary](https://www.pac.dfo-mpo.gc.ca/fm-gp/mplans/tuna-thon-ifmp-pgip-sm-eng.html)
 - [IATTC 2026 assessment executive summary](https://www.iattc.org/GetAttachment/a10c525a-36ad-451b-b0fc-f52c532b0281/SAC-17-INF-I_ISC_ALBWG_2026_NPALB_StockAssessment_Executive_Summary_IATTC_SAC_DRAFT-EN.pdf)
 
-The 2026 ISC Annex PDF and checksum manifest are cached under `source_cache/thunnus_alalunga/isc_north_pacific_albacore/`.
+The 2026 ISC Annex PDF and checksum manifest are cached under `source_cache/shared/isc_north_pacific_albacore/`.

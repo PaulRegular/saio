@@ -9,7 +9,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
 source(file.path(root, "scripts/shared/pacific_tables.R"))
 source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
-source_dir <- file.path(root, "source_cache/rhomboplites_aurorubens/noaa_vermilion_snapper_gulf_sedar67_2020")
+source_dir <- file.path(root, "source_cache/noaa_vermilion_snapper_gulf/noaa_vermilion_snapper_gulf_sedar67_2020")
 manifest <- read.csv(file.path(root,
   "provenance/noaa_vermilion_snapper_gulf_sedar67_2020/sources.csv"),
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")

@@ -23,4 +23,4 @@ Treat NOAA:10465 as one distinct GOA unit and screen it as ineligible for the ag
 - [2025 GOA SAFE Atka mackerel catch report](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=17.+Atka+Mackerel.pdf&p=6850873f-c705-4da7-924a-217c0c38b663.pdf)
 - [December 2025 NPFMC SSC report](https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=SSC+Report+Dec+2025_FINAL.pdf&p=baa66237-f488-4187-8214-2a91fac7a6a1.pdf)
 
-The three PDFs are cached in `source_cache/pleurogrammus_monopterygius/noaa_goa_atka_2021_2025/`. Its `sources.csv` manifest records source URLs, revisions, retrieval date, sizes, and SHA-256 checksums.
+The three PDFs are cached in `source_cache/noaa_goa_atka_mackerel/noaa_goa_atka_2021_2025/`. Its `sources.csv` manifest records source URLs, revisions, retrieval date, sizes, and SHA-256 checksums.

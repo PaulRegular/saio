@@ -27,7 +27,7 @@ number as total run size. This value was not imported into the canonical
 database.
 
 The 2024 SAFE, 2025 Preseason Report I, and PFMC historical Appendix B workbook
-are cached in `source_cache/oncorhynchus_gorbuscha/noaa_puget_sound_pink_2025/`, with URLs, retrieval
+are cached in `source_cache/noaa_puget_sound_pink_2025/source_material/`, with URLs, retrieval
 date, file sizes, and SHA-256 checksums in its local `sources.csv`. The NOAA
 Stock SMART snapshot and data dictionary are already cached with the discovery
 sources.

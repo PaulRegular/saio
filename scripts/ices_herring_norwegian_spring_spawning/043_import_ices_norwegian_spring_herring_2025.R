@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache", "clupea_harengus/ices_herring_norwegian_spring_2026")
+cache <- file.path(root, "source_cache/ices_herring_norwegian_spring_spawning/ices_herring_norwegian_spring_2026")
 database <- file.path(root, "database")
 assessment_id <- "ices_herring_norwegian_spring_2025"
 summary_id <- "ices_herring_norwegian_spring_2026"

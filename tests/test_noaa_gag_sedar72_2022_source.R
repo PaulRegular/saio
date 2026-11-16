@@ -184,7 +184,7 @@ stopifnot(
   candidate$import_status == "partial",
   nrow(manifest) == 5L,
   !anyDuplicated(manifest$file),
-  all(grepl("^source_cache/mycteroperca_microlepis/noaa_gag_gulf_sedar72_srfs_2022/", manifest$file)),
+  all(grepl("^source_cache/noaa_gag_gulf/noaa_gag_gulf_sedar72_srfs_2022/", manifest$file)),
   all(manifest$retrieved_utc == "2026-11-10"),
   all(grepl("^[[:xdigit:]]{64}$", manifest$sha256)),
   grepl("Tables 6–9", review, fixed = TRUE),

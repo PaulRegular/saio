@@ -1,7 +1,7 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "solea_solea/ices_sole_north_sea_2025")
+cache <- file.path(base, "source_cache/ck_ices_wgnssk_solea_ns_4/ices_sole_north_sea_2025")
 pdf_file <- file.path(cache, "WGNSSK_2026.pdf")
 assessment_id <- "ices_sole_north_sea_2026_summary"
 stock_id <- "ck_ices_wgnssk_solea_ns_4"

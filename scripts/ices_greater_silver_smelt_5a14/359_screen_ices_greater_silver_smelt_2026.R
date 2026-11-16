@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/argentina_silus/ices_greater_silver_smelt_2026')
+cache <- file.path(root, 'source_cache/ices_greater_silver_smelt_5a14/ices_greater_silver_smelt_5a14_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:aru.27.5a14'
 unit_id <- 'ices_greater_silver_smelt_5a14'
@@ -141,7 +141,7 @@ review <- list(
     'and Standard Graphs pages confirm assessment year 2026, stock code aru.27.5a14,',
     'recruitment age 5, and F ages 6-14. The SAG XML endpoint returned HTTP 503 during',
     'retrieval; the official graph, source-data, and advice pages are cached instead. Source',
-    'files and hashes are recorded in source_cache/argentina_silus/ices_greater_silver_smelt_2026/.',
+    'files and hashes are recorded in source_cache/ices_greater_silver_smelt_5a14/ices_greater_silver_smelt_5a14_2026/.',
     'No canonical numerical records were added.')
 )
 

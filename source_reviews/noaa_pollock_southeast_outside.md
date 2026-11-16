@@ -23,4 +23,4 @@ No assessment or numeric series has been imported.
 - [2025 GOA harvest-specification meeting materials](https://meetings.npfmc.org/Meeting/Details/3108)
 - [NOAA Alaska pollock management units](https://www.fisheries.noaa.gov/species/alaska-pollock/management)
 
-The accepted 2024 chapter and associated draft are cached under the ignored `source_cache/gadus_chalcogrammus/noaa_pollock_age_units/`. `sources.csv` records source URLs, retrieval dates and SHA-256 checksums.
+The accepted 2024 chapter and associated draft are cached under the ignored `source_cache/shared/noaa_pollock_age_units/`. `sources.csv` records source URLs, retrieval dates and SHA-256 checksums.

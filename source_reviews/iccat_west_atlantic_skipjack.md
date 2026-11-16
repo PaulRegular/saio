@@ -73,5 +73,5 @@ canonical database. Import status remains `not_started`.
 - [ICCAT 2024–2025 Skipjack executive summary](https://www.iccat.int/Documents/SCRS/ExecSum/SKJ_ENG.pdf)
 
 The reviewed files were downloaded into the gitignored
-`source_cache/katsuwonus_pelamis/iccat_western_skipjack_2022/`; `sources.csv` records the
+`source_cache/iccat_west_atlantic_skipjack/iccat_western_skipjack_2022/`; `sources.csv` records the
 retrieval date, source URL and SHA-256 checksum for each cached file.

@@ -47,7 +47,7 @@ add_output <- function(id, type, measure, value, unit, year = NA_integer_,
   )
 
 # Detailed 2021 full assessment
-pdf_path <- file.path(root, "source_cache", "hippoglossoides_platessoides/nafo_american_plaice_3lno_2021", "nafo_scr21_035_american_plaice_3lno.pdf")
+pdf_path <- file.path(root, "source_cache/nafo_american_plaice_3lno/nafo_american_plaice_3lno_2021", "nafo_scr21_035_american_plaice_3lno.pdf")
 if (!requireNamespace("pdftools", quietly = TRUE) || !file.exists(pdf_path)) stop("Install pdftools and cache SCR 21/035 before importing.", call. = FALSE)
 pages <- pdftools::pdf_text(pdf_path)
 table_lines <- unlist(strsplit(paste(pages[33:39], collapse = "\n"), "\n", fixed = TRUE), use.names = FALSE)

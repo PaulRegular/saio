@@ -61,4 +61,4 @@ output records were added was attempted.
 - Schirripa, [SCRS/2022/124, post-decisional North Atlantic Stock Synthesis model](https://www.iccat.int/Documents/CVSP/CV079_2022/n_2/CV079020715.pdf).
 - ICCAT, [2025 SCRS report](https://www.iccat.int/Documents/Meetings/Docs/2025/Reports/2025_SCRS_ENG.pdf), stating that North and South Atlantic status was assessed in 2022 using data through 2020.
 - ICCAT, [2026 Swordfish Stock Assessment Meeting report](https://www.iccat.int/Documents/CVSP/CV083_2026/n_2/CV08302012.pdf), describing 2026 assessments for the Mediterranean and South Atlantic and separate North Atlantic MSE work.
-- Ignored local cache: `source_cache/xiphias_gladius/iccat_north_atlantic_swordfish_2022/`. Its `sources.csv` records URLs, revision descriptions, retrieval date, file sizes, and SHA-256 checksums.
+- Ignored local cache: `source_cache/shared/iccat_north_atlantic_swordfish_2022/`. Its `sources.csv` records URLs, revision descriptions, retrieval date, file sizes, and SHA-256 checksums.

@@ -50,4 +50,4 @@ or model inputs become public. No numerical data were imported.
 - [ICES Stock Information Database](https://sid.ices.dk/Default.aspx)
 
 The report, advice page, source data page and checksum manifest are cached
-locally under `source_cache/trachurus_trachurus/ices_north_sea_horse_mackerel_2026/`.
+locally under `source_cache/ices_north_sea_horse_mackerel/ices_north_sea_horse_mackerel_2026/`.

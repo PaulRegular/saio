@@ -88,7 +88,7 @@ Sources:
 
 The 2023, 2024, 2025, and 2026 reports or machine-readable files reviewed for
 this stock are cached locally under the gitignored
-`source_cache/gadus_morhua/ck_ices_wgbfas_morhua_bs_25_32/`
+`source_cache/ck_ices_wgbfas_morhua_bs_25_32/supporting_sources/`
 directory. Per-assessment manifests record source URLs and checksums.
 
 ## Related catalogue entry

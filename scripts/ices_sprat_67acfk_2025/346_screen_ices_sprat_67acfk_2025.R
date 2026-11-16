@@ -1,13 +1,13 @@
 root <- "."
-cache <- file.path(root, 'source_cache/sprattus_sprattus/ices_sprat_67acfk_2025')
+cache <- file.path(root, 'source_cache/ices_sprat_67acfk_2025/source_material')
 candidate_path <- file.path(root, 'database/candidates.csv')
 id <- 'ICES:spr.27.67a-cf-k'
 unit_id <- 'ices_sprat_celtic_seas'
 files <- c(
   'ICES_Advice_3838.html',
   'ICES_SAG_source_19352.html',
-  '../../ices_sandeel_area_5r_2025/HAWG_2025.pdf',
-  '../ices_sprat_7de_2026/HAWG_2026.pdf'
+  '../../ices_sandeel_area_5r/ices_sandeel_area_5r_2025/HAWG_2025.pdf',
+  '../../ices_sprat_7de_2026/source_material/HAWG_2026.pdf'
 )
 paths <- file.path(cache, files)
 urls <- c(

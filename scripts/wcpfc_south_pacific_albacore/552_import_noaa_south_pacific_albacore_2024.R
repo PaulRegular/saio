@@ -4,7 +4,7 @@ assessment_id <- "wcpfc_south_pacific_albacore_2024"
 candidate_id <- "NOAA:11688"
 revision <- "e9640087a9831dece824062a338c21bf81414044"
 
-cache_name <- "thunnus_alalunga/wcpfc_south_pacific_albacore_2024"
+cache_name <- "wcpfc_south_pacific_albacore/wcpfc_south_pacific_albacore_2024"
 cache_options <- c(file.path(root, "source_cache", cache_name))
 cache_options <- cache_options[dir.exists(cache_options)]
 if (!length(cache_options)) stop("Pinned South Pacific albacore cache is required.", call. = FALSE)

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache/gadus_chalcogrammus/afsc_pollock_ebs_2024")
+cache <- file.path(root, "source_cache/afsc_pollock_ebs/afsc_pollock_ebs_2024")
 m <- as.matrix(read.table(file.path(cache, "cov_2024.dat")))
 d <- trimws(readLines(file.path(cache, "pm_24.dat"), warn = FALSE))
 i <- which(d == "#yrs_bts_data")

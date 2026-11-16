@@ -138,7 +138,7 @@ stopifnot(
   inventory_row$import_status == "partial",
   nrow(manifest) == 3L,
   !anyDuplicated(manifest$file),
-  all(grepl("^source_cache/epinephelus_niveatus/noaa_snowy_grouper_south_atlantic_sedar36u_2021/", manifest$file)),
+  all(grepl("^source_cache/noaa_snowy_grouper_south_atlantic/noaa_snowy_grouper_south_atlantic_sedar36u_2021/", manifest$file)),
   all(grepl("^2026-11-10T", manifest$retrieved_utc)),
   all(grepl("^[[:xdigit:]]{64}$", manifest$sha256)),
   all(file.exists(manifest$file)),

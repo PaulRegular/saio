@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache", "gadus_morhua/dfo_cod_2j3kl_2025")
+cache <- file.path(root, "source_cache/dfo_cod_2j3kl/dfo_cod_2j3kl_2025")
 pdf <- file.path(cache, "Fs70-5-2026-026-eng.pdf")
 text_file <- sub("\\.pdf$", ".txt", pdf)
 

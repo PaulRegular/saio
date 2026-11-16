@@ -71,7 +71,7 @@ x$notes[i] <- paste(
   'identifies Stock Synthesis 3.30.23.1. natage.csv matches fitted',
   'beginning-year N-at-age, not length-at-age. Of 253 agecomp rows, 128 are',
   'active and 125 have negative-year exclusion flags. Source files and',
-  'checksums are in source_cache/sebastes_maliger/noaa_quillback_california_2025/sources.csv.'
+  'checksums are in source_cache/noaa_quillback_rockfish_california/noaa_quillback_california_2025/sources.csv.'
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

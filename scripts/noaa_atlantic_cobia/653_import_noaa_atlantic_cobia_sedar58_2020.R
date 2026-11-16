@@ -9,7 +9,7 @@ write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 test_mode <- identical(Sys.getenv("TAM_SOURCE_TEST_MODE"), "1")
 if (write_mode && test_mode) stop("Source test mode cannot write.", call. = FALSE)
 
-cache_name <- "rachycentron_canadum/noaa_sedar_current_assessments_2026"
+cache_name <- "noaa_atlantic_cobia/noaa_sedar_current_assessments_2026"
 cache <- file.path(root, "source_cache", cache_name)
 pdf_name <- "sedar58_atlantic_cobia_2020.pdf"
 pdf_path <- file.path(cache, pdf_name)

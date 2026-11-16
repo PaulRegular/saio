@@ -89,7 +89,7 @@ separate from Washington.
 - [NOAA Stock SMART record 15339](https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=15339)
 
 Washington sources are cached locally in the gitignored directory
-`source_cache/sebastes_miniatus/noaa_vermilion_rockfish_washington_2021/`; the
+`source_cache/noaa_vermilion_rockfish_or_wa/noaa_vermilion_rockfish_washington_2021/`; the
 `sources.csv` manifest records URLs, retrieval date, revisions, file sizes, and
 SHA-256 checksums. Oregon component files and the shared STAR review are cached
-in `source_cache/sebastes_miniatus/noaa_oregon_vermilion_2021/`.
+in `source_cache/noaa_vermilion_rockfish_or_wa/noaa_oregon_vermilion_2021/`.

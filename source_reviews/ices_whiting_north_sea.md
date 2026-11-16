@@ -6,7 +6,7 @@ The represented assessment is the official 2026 SAM assessment for whiting (*Mer
 
 No Charbonneau–Keith identifier was confirmed in the curated catalogue; the stock is linked by its ICES code.
 
-The official `NSwhiting_2026n` model and data objects, native input files, and report are cached under `source_cache/merlangius_merlangus/ices_whiting_north_sea_2026/`. The cache is gitignored.
+The official `NSwhiting_2026n` model and data objects, native input files, and report are cached under `source_cache/ices_whiting_north_sea/ices_whiting_north_sea_2026/`. The cache is gitignored.
 
 The report SHA-256 is `9d33846cf100dd8544ba30dbeffc7435a857a71854d318dbc7b383d668b03857`. The model object SHA-256 is `6bd2d93ad87b6cbbE6f479346d478796183a24befb6c2d87da97216b4ef5f6b8`, and the native data object SHA-256 is `689003079c3fede21befdf735d0af68b20a26e631d9ed9214ba06994e1b3914c`.
 

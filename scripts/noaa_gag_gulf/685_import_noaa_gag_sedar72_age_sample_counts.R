@@ -30,7 +30,7 @@ sha256_file <- function(path) {
 }
 
 pdf_path <- file.path(root, source_row$file)
-text_path <- file.path(root, "source_cache/mycteroperca_microlepis/noaa_gag_gulf_sedar72_srfs_2022/text",
+text_path <- file.path(root, "source_cache/noaa_gag_gulf/noaa_gag_gulf_sedar72_srfs_2022/text",
   sub("\\.pdf$", ".txt", source_name, ignore.case = TRUE))
 if (!file.exists(pdf_path) || as.character(file.info(pdf_path)$size) != source_row$bytes ||
     !identical(sha256_file(pdf_path), tolower(source_row$sha256))) {

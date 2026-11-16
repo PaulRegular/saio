@@ -12,16 +12,16 @@ specs <- list(
     archive="oregon_vermilion_model_files_2021.zip",
     report_url="https://www.pcouncil.org/documents/2021/10/status-of-vermilion-rockfish-sebastes-miniatus-along-the-us-west-oregon-coast-in-2021.pdf/",
     archive_url="https://www.pcouncil.org/documents/vermillion-rockfish-2021-model-files-or-zip-file/",
-    cache=file.path(root,"source_cache/sebastes_miniatus/noaa_oregon_vermilion_2021"),
-    model=file.path(root,"source_cache/sebastes_miniatus/noaa_oregon_vermilion_2021","Vermilion_OR_2021_Model_For_DeVore"),
+    cache=file.path(root,"source_cache/noaa_vermilion_rockfish_or_wa/noaa_oregon_vermilion_2021"),
+    model=file.path(root,"source_cache/noaa_vermilion_rockfish_or_wa/noaa_oregon_vermilion_2021","Vermilion_OR_2021_Model_For_DeVore"),
     start=1892L,end=2020L,catch_n=258L,cpue_n=20L,len_n=72L,age_n=661L,spawn21=21.35,recruit21=15.77),
   list(code="washington", candidate_id="NOAA:15339", assessment_id=paste0(stock_id,"_2021_washington"),
     region="Washington", report="washington_vermilion_assessment_2021.pdf",
     archive="washington_vermilion_model_files_2021.zip",
     report_url="https://www.pcouncil.org/documents/2021/10/status-of-vermilion-rockfish-sebastes-miniatus-along-the-us-west-washington-state-coast-in-2021.pdf/",
     archive_url="https://www.pcouncil.org/documents/vermillion-rockfish-2021-model-files-wa-zip-file/",
-    cache=file.path(root,"source_cache/sebastes_miniatus/noaa_vermilion_rockfish_washington_2021"),
-    model=file.path(root,"source_cache/sebastes_miniatus/noaa_vermilion_rockfish_washington_2021","model_files","Vermilion_WA_2021_Model_For_DeVore"),
+    cache=file.path(root,"source_cache/noaa_vermilion_rockfish_or_wa/noaa_vermilion_rockfish_washington_2021"),
+    model=file.path(root,"source_cache/noaa_vermilion_rockfish_or_wa/noaa_vermilion_rockfish_washington_2021","model_files","Vermilion_WA_2021_Model_For_DeVore"),
     start=1949L,end=2020L,catch_n=72L,cpue_n=0L,len_n=24L,age_n=324L,spawn21=1.55,recruit21=2.33)
 )
 

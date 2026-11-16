@@ -16,7 +16,7 @@ outputs <- read.csv(file.path(root, 'database/outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:ank.27.78abd', , drop = FALSE]
 cache <- file.path(root,
-  'source_cache/lophius_budegassa/ices_black_bellied_anglerfish_78abd_2026')
+  'source_cache/ices_black_bellied_anglerfish_78abd/ices_black_bellied_anglerfish_78abd_2026')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)
 sha256_file <- function(path) {

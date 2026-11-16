@@ -31,4 +31,4 @@ numerical records were added.
 - [ICES Standard Graphs source data, key 19633](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=19633).
 
 The ignored local cache stores these sources with retrieval dates, revisions,
-byte sizes and checksums in `source_cache/pleuronectes_platessa/ices_plaice_89a_2025/sources.csv`.
+byte sizes and checksums in `source_cache/ices_plaice_89a/ices_plaice_89a_2025/sources.csv`.

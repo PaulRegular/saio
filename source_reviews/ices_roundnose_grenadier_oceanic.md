@@ -38,4 +38,4 @@ added.
 
 - ICES, [2023 advice for roundnose grenadier in the Oceanic Northeast Atlantic](https://asd.ices.dk/viewAdvice/3416), assessment key 18182; [advice sheet DOI](https://doi.org/10.17895/ices.advice.21828432).
 - ICES, [2023 grant agreement](https://www.ices.dk/about-ICES/Documents/Cooperation%20agreements/EU/2023_Grant_DGMARE-ICES_web.pdf), which defines category 5 as landings-only stocks.
-- The gitignored `source_cache/coryphaenoides_rupestris/ices_roundnose_grenadier_oceanic_2023/sources.csv` records the cached advice-page URL, retrieval date, file size, and SHA-256 checksum.
+- The gitignored `source_cache/ices_roundnose_grenadier_oceanic/ices_roundnose_grenadier_oceanic_2023/sources.csv` records the cached advice-page URL, retrieval date, file size, and SHA-256 checksum.

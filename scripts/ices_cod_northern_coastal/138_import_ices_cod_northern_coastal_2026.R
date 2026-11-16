@@ -10,8 +10,7 @@ root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
 database_dir <- file.path(base, "database")
 report_file <- file.path(
-  base, "source_cache", "gadus_morhua/ck_ices_afwg_morhua_coastnor_1_2",
-  "assessment_2026", "AFWG 2026 Report.pdf"
+  base, "source_cache/ck_ices_afwg_morhua_coastnor_1_2/assessment_2026", "AFWG 2026 Report.pdf"
 )
 if (!file.exists(report_file)) {
   stop("Cache the AFWG 2026 report before running this importer.", call. = FALSE)

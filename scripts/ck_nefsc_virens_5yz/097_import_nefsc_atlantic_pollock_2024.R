@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "pollachius_virens/nefsc_pollock_5yz_2024")
+cache <- file.path(root, "source_cache/ck_nefsc_virens_5yz/nefsc_pollock_5yz_2024")
 stock_id <- "ck_nefsc_virens_5yz"
 assessment_id <- "nefsc_pollock_5yz_2024"
 input_file <- file.path(cache, "2024_POK_UNIT_MOD_BaseASAPInput.dat")

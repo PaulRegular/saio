@@ -55,6 +55,6 @@ historical assessment data. The combined Baltic stocks retain blank Master
 IDs because neither is a one-to-one match to a single historical component.
 Original authoritative PDFs are cached with retrieval details and checksums
 under the corresponding current assessment directories; the plaice benchmark
-is also cached under `source_cache/pleuronectes_platessa/ck_ices_wgcse_platessa_is7e/`.
+is also cached under `source_cache/ck_ices_wgcse_platessa_is7e/ices_plaice_western_channel_7e_2025/`.
 
 Reviewed relationships prevent counting empty component rows as ten additional distinct current assessments. They establish stock identity only, not source completeness or downstream model readiness. Each primary source review retains its own gaps.

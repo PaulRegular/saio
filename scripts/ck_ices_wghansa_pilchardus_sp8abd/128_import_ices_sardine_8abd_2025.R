@@ -1,6 +1,6 @@
 root <- "."
 database_dir <- file.path(root, "database")
-cache_dir <- file.path(root, "source_cache", "sardina_pilchardus/ices_sardine_bay_biscay_8abd_2025_summary")
+cache_dir <- file.path(root, "source_cache/ck_ices_wghansa_pilchardus_sp8abd/ices_sardine_bay_biscay_8abd_2025_summary")
 assessment_id <- "ices_sardine_bay_biscay_8abd_2025_summary"
 stock_id <- "ck_ices_wghansa_pilchardus_sp8abd"
 report_url <- "https://ices-library.figshare.com/articles/report/Working_Group_on_Southern_Horse_Mackerel_Anchovy_and_Sardine_WGHANSA_/29335520"

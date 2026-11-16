@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/gadus_morhua/ices_cod_kattegat_2026')
+cache <- file.path(root, 'source_cache/ices_cod_kattegat_2026/source_material')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:cod.27.21'
 unit_id <- 'ices_cod_kattegat_21'
@@ -39,8 +39,7 @@ if (anyNA(source_rows) || !identical(sources$url[source_rows], urls) ||
     !identical(as.numeric(sources$bytes[source_rows]), as.numeric(file.info(paths)$size)))
   stop('Cached ICES files differ from the reviewed source manifest.', call. = FALSE)
 
-report_dir <- file.path(root, 'source_cache', 'gadus_morhua/ck_ices_wgbfas_morhua_bs_25_32',
-  'assessment_2026')
+report_dir <- file.path(root, 'source_cache/ck_ices_wgbfas_morhua_bs_25_32/ices_cod_eastern_baltic_2026')
 report_pdf <- file.path(report_dir, 'WGBFAS_2026.pdf')
 report_text_path <- file.path(report_dir, 'WGBFAS_2026.txt')
 report_manifest <- read.csv(file.path(report_dir, 'manifest.csv'), stringsAsFactors = FALSE)
@@ -136,8 +135,8 @@ review <- list(
     'and 2028. The WGBFAS 2026 report section 2.2 was not included in the full report;',
     'its audit appendix describes the assessment as age-based SAM for trend indication.',
     'The ICES Standard Graphs and source-data pages and XML are cached under',
-    'source_cache/gadus_morhua/ices_cod_kattegat_2026/. The shared WGBFAS report PDF and its',
-    'checksum are in source_cache/gadus_morhua/ck_ices_wgbfas_morhua_bs_25_32/assessment_2026/.',
+    'source_cache/ices_cod_kattegat_2026/source_material/. The shared WGBFAS report PDF and its',
+    'checksum are in source_cache/ck_ices_wgbfas_morhua_bs_25_32/ices_cod_eastern_baltic_2026/.',
     'No canonical numerical data were added.')
 )
 

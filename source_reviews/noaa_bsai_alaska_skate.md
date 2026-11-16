@@ -69,7 +69,7 @@ age-composition observations. No canonical stock, assessment, input or output
 records were added was attempted.
 
 The reviewed source files are cached locally in the gitignored directory
-`source_cache/bathyraja_parmifera/noaa_bsai_alaska_skate_2026/`; `sources.csv` records
+`source_cache/noaa_bsai_alaska_skate/noaa_bsai_alaska_skate_2026/`; `sources.csv` records
 the URLs, retrieval date, pinned AFSC revision where available, sizes and
 SHA-256 checksums.
 

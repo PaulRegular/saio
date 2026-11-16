@@ -15,7 +15,7 @@ The official population model includes ages 2+.
 - [2026 advice for 2027](https://www.hi.no/en/hi/nettrapporter/imr-vniro-en-2026-3): current advice basis.
 
 The report HTML, assessment PDF and complete framework PDF are cached under
-`source_cache/sebastes_mentella/jrn_redfish_beaked_2026/`, with URLs, retrieval dates
+`source_cache/ck_ices_afwg_mentella_deep_1_2/jrn_redfish_beaked_2026/`, with URLs, retrieval dates
 and SHA-256 checksums in `manifest.txt`. The importer pins the HTML checksum.
 The official framework's Figshare record has one PDF attachment; a public
 native production configuration or fitted object has not been recovered.

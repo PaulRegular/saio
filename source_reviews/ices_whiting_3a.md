@@ -33,5 +33,5 @@ elsewhere. No canonical numerical records were imported.
 - [ICES Stock Information Database](https://sid.ices.dk/Default.aspx)
 
 The 2026 advice and SAG pages are cached under
-`source_cache/merlangius_merlangus/ices_whiting_3a_2026/`, with retrieval dates and
+`source_cache/ices_whiting_3a/ices_whiting_3a_2026/`, with retrieval dates and
 SHA-256 checksums in `sources.csv`.

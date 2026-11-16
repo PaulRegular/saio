@@ -4,7 +4,7 @@ source('scripts/ices_sandeel_area_5r/342_screen_ices_sandeel_area_5r_2025.R')
 register <- read.csv('database/candidates.csv',
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:san.sa.5r', , drop = FALSE]
-cache <- 'source_cache/ices_sandeel_area_5r_2025'
+cache <- 'source_cache/ices_sandeel_area_5r/ices_sandeel_area_5r_2025'
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)
 sha <- vapply(paths, function(path) {

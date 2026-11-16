@@ -32,7 +32,7 @@ or output rows were added.
 ## Sources and cached files
 
 The advice and graph are cached under the gitignored
-`source_cache/sprattus_sprattus/ices_sprat_67acfk_2025/`
+`source_cache/ices_sprat_67acfk_2025/source_material/`
 folder. The full 2025 and 2026 HAWG reports are shared from existing gitignored
 source-cache folders. Each source manifest records its URL, retrieval date,
 revision and SHA-256.

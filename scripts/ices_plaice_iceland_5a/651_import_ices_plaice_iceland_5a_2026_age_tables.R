@@ -10,7 +10,7 @@ if (!isTRUE(l10n_info()[["UTF-8"]])) {
 
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "pleuronectes_platessa/ices_plaice_iceland_5a_2026")
+cache <- file.path(root, "source_cache/ices_plaice_iceland_5a/ices_plaice_iceland_5a_2026")
 manifest_path <- file.path(root, "provenance", "ices_plaice_iceland_5a_2026", "sources.csv")
 assessment_id <- "ices_plaice_iceland_5a_2026"
 stock_id <- "ices_plaice_iceland_5a"

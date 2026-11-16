@@ -6,9 +6,9 @@ stock_id <- "mpi_gemfish_northern_ski1_ski2"
 assessment_id <- "mpi_gemfish_ski1_ski2_2023"
 candidate_id <- "MPI:SKI1+SKI2"
 source_files <- c(
-  "source_cache/rexea_solandri/mpi_gemfish_ski1_ski2_2023/FAR-2024-45-northern-gemfish-SKI1-SKI2-assessment.pdf",
-  "source_cache/rexea_solandri/mpi_gemfish_ski1_ski2_2023/FAR-2024-44-northern-gemfish-age-composition.pdf",
-  "source_cache/rexea_solandri/mpi_gemfish_ski1_ski2_2023/GEMFISH-Plenary-2025-volume-1.pdf"
+  "source_cache/mpi_gemfish_northern_ski1_ski2/mpi_gemfish_ski1_ski2_2023/FAR-2024-45-northern-gemfish-SKI1-SKI2-assessment.pdf",
+  "source_cache/mpi_gemfish_northern_ski1_ski2/mpi_gemfish_ski1_ski2_2023/FAR-2024-44-northern-gemfish-age-composition.pdf",
+  "source_cache/mpi_gemfish_northern_ski1_ski2/mpi_gemfish_ski1_ski2_2023/GEMFISH-Plenary-2025-volume-1.pdf"
 )
 source_urls <- c(
   "https://fs.fish.govt.nz/Doc/25773/FAR-2024-45-2023-stock-assessment-gemfish-SKI1-SKI2.pdf.ashx",

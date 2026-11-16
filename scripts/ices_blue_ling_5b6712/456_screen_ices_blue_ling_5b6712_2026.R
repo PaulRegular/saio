@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/molva_dypterygia/ices_blue_ling_5b6712_2026')
+cache <- file.path(root, 'source_cache/ices_blue_ling_5b6712/ices_blue_ling_5b6712_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:bli.27.5b6712'
 unit_id <- 'ices_blue_ling_5b6712'
@@ -157,7 +157,7 @@ review <- list(
     'key 22623. The data reviewed do not establish that age',
     'samples are absent from national source systems. Cached source URLs, revisions,',
     'retrieval dates, sizes and SHA-256 checksums are in',
-    'source_cache/molva_dypterygia/ices_blue_ling_5b6712_2026/sources.csv. No canonical',
+    'source_cache/ices_blue_ling_5b6712/ices_blue_ling_5b6712_2026/sources.csv. No canonical',
     'assessment, input or output records were added was',
     'attempted.')
 )

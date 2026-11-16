@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache/clupea_harengus/ck_ices_hawg_harengus_cs_6a_n")
+cache <- file.path(base, "source_cache/ck_ices_hawg_harengus_cs_6a_n/supporting_sources")
 stock_id <- "ck_ices_hawg_harengus_cs_6a_n"
 report_2025 <- "https://doi.org/10.17895/ices.pub.28389008.v5"
 report_2026 <- "https://doi.org/10.17895/ices.pub.31424315"
@@ -10,8 +10,8 @@ verify <- function(file, sha) {
     cli::cli_abort("Cached source {file} is missing or differs from its pinned checksum.")
   path
 }
-verify("../../ammodytes_dubius/ck_ices_hawg_dubius_ns/2025_san.sa.4/HAWG_2025.pdf", "06967082a29ef54ffb33ce7d2e8f89a4695dd6d1ca70f3e78510c03c6c813097")
-verify("../ck_ices_hawg_harengus_cs6_a_s_7b_c/HAWG_2026_full_report.pdf", "0af113dedfea05c1dabc75402ebd5846d4a6ea931e121ca9e9702b0811c9832e")
+verify("../../ck_ices_hawg_dubius_ns/supporting_sources/2025_san.sa.4/HAWG_2025.pdf", "06967082a29ef54ffb33ce7d2e8f89a4695dd6d1ca70f3e78510c03c6c813097")
+verify("../../ck_ices_hawg_harengus_cs6_a_s_7b_c/supporting_sources/HAWG_2026_full_report.pdf", "0af113dedfea05c1dabc75402ebd5846d4a6ea931e121ca9e9702b0811c9832e")
 paths <- list(
   `2025` = list(
     report = verify("HAWG_2025_pages_347_370.txt", "2de6bd9016778d1fee45081af6de45564aaa31926fdfe372d913bec5a4df1c81"),
@@ -19,7 +19,7 @@ paths <- list(
     advice = verify("ICES_advice_6aN_2025.pdf", "db7cc2c149f9d40e6239dbb7d070f90869ee3ce44f6a5ef6906d1dff28c904ef")
   ),
   `2026` = list(
-    report = verify("../ck_ices_hawg_harengus_cs6_a_s_7b_c/HAWG_2026_full_report.txt", "7b2b8995006e738e6868b25c086e255f387bdf060189543ee6a05593cac3c9a3"),
+    report = verify("../../ck_ices_hawg_harengus_cs6_a_s_7b_c/supporting_sources/HAWG_2026_full_report.txt", "7b2b8995006e738e6868b25c086e255f387bdf060189543ee6a05593cac3c9a3"),
     xml = verify("SAG_21308_2026.xml", "c7f395bd956061adaf54d8aa9fe2b0a64751b4adfcc559ad2e03597e6adc2b59"),
     advice = verify("ICES_advice_6aN_2026.pdf", "4018d15d446a0d27aeb077594cc1f9b4a9b615c388e8073cb2339625351db7d8")
   )

@@ -6,7 +6,7 @@ retrieved_on <- "2026-11-05"
 source_files <- c(
   eastern = file.path(root, "source_cache/mpi_tarakihi_eastern_2026/FAR-2026-44-eastern-tarakihi-2026.pdf"),
   western = file.path(root, "source_cache/mpi_tarakihi_western_2026/FAR-2026-23-western-tarakihi-2026.pdf"),
-  southern_gemfish = file.path(root, "source_cache/rexea_solandri/mpi_gemfish_ski3_ski7_2025/FAR-2026-39-gemfish-SKI3-SKI7-2025-assessment.pdf")
+  southern_gemfish = file.path(root, "source_cache/mpi_gemfish_southern_ski3_ski7/mpi_gemfish_ski3_ski7_2025/FAR-2026-39-gemfish-SKI3-SKI7-2025-assessment.pdf")
 )
 source_urls <- c(
   "https://fs.fish.govt.nz/Doc/26277/FAR-2026-44-Stock-assessment-of-eastern-tarakihi-for-2026.pdf.ashx",

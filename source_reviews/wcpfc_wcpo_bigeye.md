@@ -28,7 +28,7 @@ The canonical assessment is marked partial because model-specific likelihood set
 
 ## Sources and cache
 
-The gitignored local cache is `source_cache/thunnus_obesus/noaa_wcpfc_bigeye_2026/`. `sources.csv` records retrieval dates, URLs, byte counts, SHA-256 hashes, and the SPC repository revision. The pinned SPC diagnostic repository is `81fc412ad1f36416f78f84ef6bd2d5dff68d14c8`.
+The gitignored local cache is `source_cache/wcpfc_wcpo_bigeye/noaa_wcpfc_bigeye_2026/`. `sources.csv` records retrieval dates, URLs, byte counts, SHA-256 hashes, and the SPC repository revision. The pinned SPC diagnostic repository is `81fc412ad1f36416f78f84ef6bd2d5dff68d14c8`.
 
 - [2023 WCPFC assessment report](https://meetings.wcpfc.int/node/19353) and [SC19 outcomes](https://meetings.wcpfc.int/system/files/2024-07/SC19%20Outcomes%20Document%20%2828Nov2923%29-Att%201%2C7%20fixed_0.pdf)
 - [SPC 2023 diagnostic model and TAF data](https://github.com/PacificCommunity/ofp-sam-bet-2023-diagnostic/tree/81fc412ad1f36416f78f84ef6bd2d5dff68d14c8)

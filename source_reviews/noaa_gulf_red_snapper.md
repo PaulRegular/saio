@@ -10,7 +10,7 @@ SEDAR 98 models West, Central and East areas within one Gulf management unit. Th
 
 ## Sources reviewed
 
-The final report and supporting data papers are cached locally in source_cache/lutjanus_campechanus/noaa_gulf_red_snapper_2026/. The tracked provenance manifest records retrieval dates, source URLs and SHA-256 checksums. The PDFs are authoritative; locally generated text extracts support table transcription.
+The final report and supporting data papers are cached locally in source_cache/noaa_gulf_red_snapper/noaa_gulf_red_snapper_2026/. The tracked provenance manifest records retrieval dates, source URLs and SHA-256 checksums. The PDFs are authoritative; locally generated text extracts support table transcription.
 
 Sources reviewed include the final Stock Assessment Report and data papers DW-02, DW-03, DW-05, DW-06, DW-07, DW-09, DW-13, DW-16, DW-17, DW-19, DW-24 and DW-26. DW-13 contains smooth age-length keys and age-sample summaries, but not the numerical final-model composition arrays. No run-matched native Stock Synthesis input/output package was located.
 

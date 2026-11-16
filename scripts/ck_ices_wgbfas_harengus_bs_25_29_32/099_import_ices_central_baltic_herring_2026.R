@@ -1,7 +1,7 @@
 assessment_id <- "ices_herring_central_baltic_2026"
 stock_id <- "ck_ices_wgbfas_harengus_bs_25_29_32"
 root <- "."
-cache <- file.path(root, "source_cache/clupea_harengus", stock_id)
+cache <- file.path(root, "source_cache/ck_ices_wgbfas_harengus_bs_25_29_32/supporting_sources")
 database <- file.path(root, "database")
 report_file <- file.path(cache, "wgbfas_2026_herring_section.pdf")
 

@@ -10,8 +10,8 @@ source(file.path(root, "scripts/shared/pacific_tables.R"))
 source(file.path(root, "scripts/shared/candidate_register_io.R"))
 
 cache_options <- c(
-  file.path("source_cache", "seriola_dumerili/noaa_greater_amberjack_south_atlantic_sedar59_2020"),
-  file.path("source_cache/seriola_dumerili/noaa_greater_amberjack_south_atlantic_sedar59_2020")
+  file.path("source_cache/noaa_greater_amberjack_south_atlantic/noaa_greater_amberjack_south_atlantic_sedar59_2020"),
+  file.path("source_cache/noaa_greater_amberjack_south_atlantic/noaa_greater_amberjack_south_atlantic_sedar59_2020")
 )
 source_dir <- cache_options[
   vapply(cache_options, function(path) file.exists(file.path(path, "sources.csv")), logical(1))

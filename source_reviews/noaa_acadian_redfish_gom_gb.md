@@ -19,7 +19,7 @@ model code and fitted report tables for the 2025 run.
 Source links: [2025 assessment report](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2025&species_id=1&stock_id=6&review_type_id=3&info_type_id=-1&map_type_id=&filename=2025_RED_UNIT_RPT_2025_09_17_121440.522737.pdf), [Run 5 input](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2025&species_id=1&stock_id=6&review_type_id=3&info_type_id=3&map_type_id=&filename=2025_RED_UNIT_MOD_BaseWHAMInput.DAT), [Run 5 model code](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2025&species_id=1&stock_id=6&review_type_id=3&info_type_id=3&map_type_id=&filename=2025_RED_UNIT_MOD_BaseWHAMCode.R), [fitted figures and tables](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2025&species_id=1&stock_id=6&review_type_id=3&info_type_id=1&map_type_id=&filename=2025_RED_UNIT_FIG_FiguresTables.zip), [peer-review panel report](https://www.fisheries.noaa.gov/s3/2025-11/September-2025-Management-Track-Peer-Review-Panel-Report_Final-508.pdf).
 
 The source ZIP and standalone files are cached under the gitignored
-`source_cache/sebastes_fasciatus/noaa_acadian_redfish_gom_gb_2025/` folder. Its `sources.csv`
+`source_cache/noaa_acadian_redfish_gom_gb/noaa_acadian_redfish_gom_gb_2025/` folder. Its `sources.csv`
 records retrieval date, source URL, revision, file size, and SHA-256. The HTML
 table used below is also checksummed as an extracted member of the official
 figures-and-tables ZIP. The cache includes the 2023 assessment and 2024

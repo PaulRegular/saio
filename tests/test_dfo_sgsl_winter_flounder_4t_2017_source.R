@@ -40,7 +40,7 @@ weight <- x[x$type == 'weight' & x$measure == 'weight_at_age', , drop = FALSE]
 sum_by_year <- function(data) tapply(data$value, data$year, sum)
 catch_sums <- sum_by_year(catch_composition)
 survey_sums <- sum_by_year(survey_composition)
-source_cache <- file.path(root, 'source_cache/pseudopleuronectes_americanus/dfo_4t_winter_flounder_2019')
+source_cache <- file.path(root, 'source_cache/dfo_sgsl_winter_flounder_4t/dfo_4t_winter_flounder_2019')
 manifest <- read.csv(file.path(source_cache, 'sources.csv'), stringsAsFactors = FALSE)
 source_paths <- file.path(source_cache, manifest$file)
 

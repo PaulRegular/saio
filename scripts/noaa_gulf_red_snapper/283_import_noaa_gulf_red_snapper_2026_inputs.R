@@ -1,7 +1,7 @@
 root <- "."
 assessment_id <- "noaa_gulf_red_snapper_2026"
 candidate_id <- "NOAA:10230"
-source_dir <- "source_cache/lutjanus_campechanus/noaa_gulf_red_snapper_2026"
+source_dir <- "source_cache/noaa_gulf_red_snapper/noaa_gulf_red_snapper_2026"
 manifest <- read.csv("provenance/noaa_gulf_red_snapper_2026/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||

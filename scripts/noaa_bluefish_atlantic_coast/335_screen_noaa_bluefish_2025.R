@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'pomatomus_saltatrix/noaa_bluefish_atlantic_2025')
+cache <- file.path(root, 'source_cache/noaa_bluefish_atlantic_coast/noaa_bluefish_atlantic_2025')
 candidate_path <- file.path(root, 'database/candidates.csv')
 
 base_url <- paste0(

@@ -1,5 +1,5 @@
 root <- '.'
-cache <- file.path(root, 'source_cache/bathyraja_parmifera/noaa_bsai_alaska_skate_2026')
+cache <- file.path(root, 'source_cache/noaa_bsai_alaska_skate/noaa_bsai_alaska_skate_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 screen_path <- file.path(root, 'scripts/noaa_bsai_alaska_skate/458_screen_noaa_bsai_alaska_skate_2026.R')
 before <- readLines(candidate_path, warn = FALSE)

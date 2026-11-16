@@ -26,7 +26,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 review <- paste(readLines(file.path(root, 'source_reviews/shared/noaa_west_coast_chinook_2026.md'), warn = FALSE), collapse = ' ')
-cache <- file.path(root, 'source_cache/oncorhynchus_tshawytscha/noaa_puget_sound_chinook_2026')
+cache <- file.path(root, 'source_cache/shared/noaa_puget_sound_chinook_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 

@@ -30,7 +30,7 @@ This is a discovery screen only. No stock, assessment, input or output records w
 
 ## Sources and cache
 
-The local source cache is source_cache/carcharhinus_falciformis/noaa_wcpfc_silky_shark_2024/. Its sources.csv records retrieval dates, URLs, revisions, file sizes and SHA-256 checksums.
+The local source cache is source_cache/noaa_wcpfc_silky_shark_2024/source_material/. Its sources.csv records retrieval dates, URLs, revisions, file sizes and SHA-256 checksums.
 
 - [2024 WCPFC silky shark assessment, SC20-SA-WP-04 Rev.02](https://meetings.wcpfc.int/node/23088)
 - [WCPFC21-2024-27 Rev.02, status of fisheries and stocks](https://meetings.wcpfc.int/file/16838/download)

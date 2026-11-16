@@ -6,7 +6,7 @@ from pathlib import Path
 from collections import defaultdict
 
 root = Path(sys.argv[1])
-cache = root / 'source_cache/gadus_macrocephalus/afsc_cod_goa_2026'
+cache = root / 'source_cache/afsc_cod_goa/afsc_cod_goa_2026'
 assessment = 'afsc_cod_goa_2026'
 stock_id = 'afsc_cod_goa'
 report = 'https://meetings.npfmc.org/CommentReview/DownloadFile?fileName=C1+GOA+Pcod+Assessment.pdf&p=f00593eb-12f5-458c-842e-a5cdd45306bb.pdf'

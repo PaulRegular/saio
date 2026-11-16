@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/caulolatilus_microps/noaa_blueline_tilefish_sedar92_2025')
+cache <- file.path(root, 'source_cache/noaa_blueline_tilefish_sedar92_2025/source_material')
 candidate_path <- file.path(root, 'database/candidates.csv')
 manifest_path <- file.path(cache, 'manifest.csv')
 

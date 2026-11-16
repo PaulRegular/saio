@@ -10,7 +10,7 @@ The official 2026 assessment to 2025 is recorded separately. DFO Science Advisor
 
 DFO Research Document 2022/068 provides the most recent detailed SCA methods description used in this review. Its equations and parameter settings are retained as methodological context, but are not assumed to be independently verified for every component of the 2024 assessment.
 
-Source material is cached under `source_cache/clupea_harengus/dfo_sgsl_herring_spring_2023/`, including the 2024 supporting document, 2022 methods report, 2026 Science Advisory Report, acoustic biomass CSV and dictionary, historical acoustic unit documentation, and file manifest.
+Source material is cached under `source_cache/dfo_herring_4tvn_spring/dfo_sgsl_herring_spring_2023/`, including the 2024 supporting document, 2022 methods report, 2026 Science Advisory Report, acoustic biomass CSV and dictionary, historical acoustic unit documentation, and file manifest.
 
 ## Inputs and assumptions recovered
 
@@ -159,7 +159,7 @@ January 1 mature biomass is distinct from the official assessment's April 1 SSB.
 - [DFO Research Document 2016/060, Table 16: acoustic units](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/365860.pdf)
 - [DFO Science Advisory Report 2026/028](https://publications.gc.ca/collections/collection_2026/mpo-dfo/fs70-6/Fs70-6-2026-028-eng.pdf)
 
-The relevant source documents, cached numerical files and manifest are retained under `source_cache/clupea_harengus/dfo_sgsl_herring_spring_2023/`.
+The relevant source documents, cached numerical files and manifest are retained under `source_cache/dfo_herring_4tvn_spring/dfo_sgsl_herring_spring_2023/`.
 
 The stock does not yet have a verified Charbonneau identifier in the local crosswalk, so no identifier is assigned.
 

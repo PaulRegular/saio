@@ -1,5 +1,5 @@
 root <- "."
-source_dir <- file.path(root, "source_cache", "sebastes_goodei/noaa_chilipepper_2025")
+source_dir <- file.path(root, "source_cache/noaa_chilipepper_pacific_coast/noaa_chilipepper_2025")
 model_dir <- file.path(source_dir, "model_input", "PFMC Shared")
 assessment_id <- "noaa_chilipepper_2025"
 stock_id <- "noaa_chilipepper_pacific_coast"

@@ -14,7 +14,7 @@ The primary 2010 PFMC/NOAA report says grenadiers were managed in the "other fis
 
 Screening result: **new current stock unit; ineligible for the age-disaggregated source set on reviewed evidence**. This reflects the form and unit of the available production assessment, not a claim that no Pacific grenadier age samples exist for other purposes. No canonical stock, assessment, input, or output records were added.
 
-The 2010 NOAA technical memorandum and 2024 Groundfish SAFE (published in 2025) are cached in the gitignored `source_cache/coryphaenoides_acrolepis/noaa_pacific_grenadier_2010/`; file sizes and SHA-256 checksums are recorded in `sources.csv`. The pinned NOAA Stock SMART snapshot is cached separately in `source_cache/shared/noaa_stocksmart/`.
+The 2010 NOAA technical memorandum and 2024 Groundfish SAFE (published in 2025) are cached in the gitignored `source_cache/noaa_pacific_coast_pacific_grenadier/noaa_pacific_grenadier_2010/`; file sizes and SHA-256 checksums are recorded in `sources.csv`. The pinned NOAA Stock SMART snapshot is cached separately in `source_cache/shared/noaa_stocksmart/`.
 
 ## Sources
 

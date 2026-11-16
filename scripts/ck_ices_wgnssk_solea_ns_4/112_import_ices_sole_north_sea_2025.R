@@ -4,7 +4,7 @@ stock_id <- "ck_ices_wgnssk_solea_ns_4"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "solea_solea/ices_sole_north_sea_2025")
+cache <- file.path(base, "source_cache/ck_ices_wgnssk_solea_ns_4/ices_sole_north_sea_2025")
 report_file <- file.path(cache, "wgnssk_2025_sole_4.txt")
 report_url <- "https://doi.org/10.17895/ices.pub.29085995.v4"
 framework_url <- "https://doi.org/10.17895/ices.pub.25471987.v1"

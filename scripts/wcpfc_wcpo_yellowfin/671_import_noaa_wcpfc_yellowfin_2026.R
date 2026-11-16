@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "wcpfc_wcpo_yellowfin"
 assessment_id <- "wcpfc_wcpo_yellowfin_2026"
 candidate_id <- "NOAA:11694"
-cache_name <- "thunnus_albacares/wcpfc_wcpo_yellowfin_2026"
+cache_name <- "wcpfc_wcpo_yellowfin/wcpfc_wcpo_yellowfin_2026"
 revision <- "b00a02f3537ef54520b219488f899188ea6eff3f"
 dry_run <- identical(Sys.getenv("SAIO_SOURCE_DRY_RUN"), "1")
 

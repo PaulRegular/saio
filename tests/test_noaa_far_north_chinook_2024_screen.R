@@ -25,7 +25,7 @@ stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
   unit$match_status == 'new', unit$eligibility == 'ineligible',
   unit$screening_status == 'screened')
 
-cache <- file.path(root, 'source_cache/oncorhynchus_tshawytscha/noaa_far_north_chinook_2024')
+cache <- file.path(root, 'source_cache/noaa_far_north_chinook_2024/source_material')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 files <- c('Status_Salmon_Stocks_FMP_2024.pdf',

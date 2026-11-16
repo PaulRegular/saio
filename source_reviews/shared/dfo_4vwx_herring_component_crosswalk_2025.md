@@ -3,7 +3,7 @@
 Reviewed 2026-10-29 against the latest 4VWX update, the 2022 assessment, the
 2018 evaluation and the public framework-input reports. Source files and a
 pinned operating-model archive are already cached under
-`source_cache/clupea_harengus/ck_dfo_mar_harengus_4vwx/`; their URLs and checksums are listed in
+`source_cache/ck_dfo_mar_harengus_4vwx/supporting_sources/`; their URLs and checksums are listed in
 that folder's `accessible_sources_manifest.csv`.
 
 ## Identity

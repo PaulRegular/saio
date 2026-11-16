@@ -81,7 +81,7 @@ files before import.
 ## Sources and cache
 
 The local, gitignored source cache is
-`source_cache/anoplopoma_fimbria/dfo_bc_sablefish_20261029/`; its
+`source_cache/dfo_sablefish/dfo_bc_sablefish_20261029/`; its
 `sources.csv` records URLs, retrieval date, file sizes, and SHA-256 checksums.
 It contains the 2022 Science Advisory Report, the 2024/072 research document,
 the 2025/018 management-procedure science response, the 2025/013 age-sampling

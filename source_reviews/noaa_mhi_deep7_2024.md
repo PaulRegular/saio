@@ -65,7 +65,7 @@ identity or counted as a new Deep 7 component record.
 - [WPSAR panel chair report](https://www.fisheries.noaa.gov/s3/2024-07/Benchmark-Stock-Assessment-for-the-Main-Hawaiian-Islands-Deep-7-Bottomfish-Complex-in-2024-Chair-Report-508.pdf).
 
 The landing page and panel report are cached in the ignored local directory
-`source_cache/pristipomoides_filamentosus/noaa_mhi_deep7_2024/`; the manifest records their URLs,
+`source_cache/noaa_mhi_deep7_2024/source_material/`; the manifest records their URLs,
 retrieval date and SHA-256 checksums. The primary technical memorandum is
 publicly available online and was reviewed there, but the local download
 endpoint returned HTTP 403. The rejected error response was removed and the

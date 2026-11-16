@@ -1,6 +1,6 @@
 root <- "."
 db <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "hippoglossoides_platessoides/nefsc_american_plaice_5yz_2022_run29f4")
+cache <- file.path(root, "source_cache/ck_nefsc_platessoides_5yz/nefsc_american_plaice_5yz_2022_run29f4")
 model_dir <- file.path(cache, "2022", "research_track")
 assessment_id <- "nefsc_american_plaice_5yz_2022_run29f4"
 summary_2024_id <- "nefsc_american_plaice_5yz_2024_mt"

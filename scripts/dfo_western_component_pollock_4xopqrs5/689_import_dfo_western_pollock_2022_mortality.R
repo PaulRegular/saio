@@ -8,8 +8,8 @@ candidate_id <- "DFO:Maritimes:Pollock - NAFO 4X5 (Western Component)"
 source_url <- "https://publications.gc.ca/collections/collection_2026/mpo-dfo/fs70-5/Fs70-5-2026-029-eng.pdf"
 source_file_name <- "dfo_western_pollock_2026_029_table12_mortality_m4b.csv"
 cache_options <- c(
-  file.path(root, "source_cache", "pollachius_virens/dfo_western_component_pollock_2022_j_m4b"),
-  file.path("source_cache/pollachius_virens/dfo_western_component_pollock_2022_j_m4b")
+  file.path(root, "source_cache/dfo_western_component_pollock_4xopqrs5/dfo_western_component_pollock_2022_j_m4b"),
+  file.path("source_cache/dfo_western_component_pollock_4xopqrs5/dfo_western_component_pollock_2022_j_m4b")
 )
 cache_dirs <- cache_options[dir.exists(cache_options)]
 cache_dir <- cache_dirs[vapply(cache_dirs, function(path) {

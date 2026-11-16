@@ -71,7 +71,7 @@ x$notes[i] <- paste(
   'areas (California; Oregon/Washington). The report and native bundle both',
   'identify Stock Synthesis 3.30.23.2. Report, native bundle, retrieval',
   'details and checksums are recorded in',
-  'source_cache/sebastes_ruberrimus/noaa_west_coast_yelloweye_2025/sources.csv.'
+  'source_cache/noaa_west_coast_yelloweye/noaa_west_coast_yelloweye_2025/sources.csv.'
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

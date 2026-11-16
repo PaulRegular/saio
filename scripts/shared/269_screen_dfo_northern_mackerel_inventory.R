@@ -55,7 +55,7 @@ review <- list(
   notes = paste(
     'See source_reviews/ck_dfo_qc_scombrus_4t.md. The source fit and inputs are',
     'already imported under ck_dfo_qc_scombrus_4t; cached source manifest is under',
-    'source_cache/scomber_scombrus/dfo_northern_mackerel_2025/. NOAA:10164 is a different, broader',
+    'source_cache/ck_dfo_qc_scombrus_4t/dfo_northern_mackerel_2025/. NOAA:10164 is a different, broader',
     'assessment unit and remains linked to nefsc_atlantic_mackerel.'
   )
 )

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/ices_sandeel_area_5r_2025')
+cache <- file.path(root, 'source_cache/ices_sandeel_area_5r/ices_sandeel_area_5r_2025')
 candidate_path <- file.path(root, 'database/candidates.csv')
 
 sources <- data.frame(

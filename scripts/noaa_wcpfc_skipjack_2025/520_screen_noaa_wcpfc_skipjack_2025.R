@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache_dir <- file.path(root, 'source_cache/katsuwonus_pelamis/noaa_wcpfc_skipjack_2025')
+cache_dir <- file.path(root, 'source_cache/noaa_wcpfc_skipjack_2025/source_material')
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),
@@ -113,7 +113,7 @@ review <- list(
     sep = '; '),
   review_date = '2026-11-02',
   decision_reason = paste('The 2025 assessment is the latest accepted production run and has public fitted outputs, but its observation likelihoods are catch, length frequency, aggregate CPUE, and tagging. It does not use observed age compositions or an age-specific abundance index. screen this unit as ineligible.'),
-  notes = paste('NOAA Stock SMART ID 11691 identifies the Western and Central Pacific skipjack management unit assessed by SPC for WCPFC. The NOAA inventory snapshot still lists the 2022 assessment through 2021; WCPFC accepted the 2025 assessment through 2024 as the latest run. Its 2025 diagnostic TAF archive is pinned to commit f33de3a9d6f3acb02a0717340c1cc325f89f2eb6 and cached with the official assessment report, background data-input report, acceptance record, and SHA-256 manifest in source_cache/katsuwonus_pelamis/noaa_wcpfc_skipjack_2025. The raw TAF CPUE file has one anomalous year/season row noted above. No canonical stock or numerical assessment records were added.')
+  notes = paste('NOAA Stock SMART ID 11691 identifies the Western and Central Pacific skipjack management unit assessed by SPC for WCPFC. The NOAA inventory snapshot still lists the 2022 assessment through 2021; WCPFC accepted the 2025 assessment through 2024 as the latest run. Its 2025 diagnostic TAF archive is pinned to commit f33de3a9d6f3acb02a0717340c1cc325f89f2eb6 and cached with the official assessment report, background data-input report, acceptance record, and SHA-256 manifest in source_cache/noaa_wcpfc_skipjack_2025/source_material. The raw TAF CPUE file has one anomalous year/season row noted above. No canonical stock or numerical assessment records were added.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

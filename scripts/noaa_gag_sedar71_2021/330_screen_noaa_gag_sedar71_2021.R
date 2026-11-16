@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'mycteroperca_microlepis/noaa_gag_south_atlantic_sedar71_2021')
+cache <- file.path(root, 'source_cache/noaa_gag_south_atlantic/noaa_gag_south_atlantic_sedar71_2021')
 candidate_path <- file.path(root, 'database/candidates.csv')
 manifest_path <- file.path(cache, 'manifest.csv')
 
@@ -162,7 +162,7 @@ review <- data.frame(
     'distinct from Gulf Gag Grouper (Stock SMART row 10348; candidate unit',
     'noaa_gag_gulf). The 2021 SEDAR report is a production operational assessment;',
     'SEDAR 106 is a delayed, in-progress successor. Sources are cached under the',
-    'ignored source_cache/mycteroperca_microlepis/noaa_gag_south_atlantic_sedar71_2021/ directory with URL and checksum',
+    'ignored source_cache/noaa_gag_south_atlantic/noaa_gag_south_atlantic_sedar71_2021/ directory with URL and checksum',
     'provenance.'),
   stringsAsFactors = FALSE
 )

@@ -55,7 +55,7 @@ stopifnot(
   file.exists(script_path)
 )
 
-cache <- file.path(root, 'source_cache/rhomboplites_aurorubens/noaa_south_atlantic_vermilion_2026')
+cache <- file.path(root, 'source_cache/noaa_vermilion_snapper_south_atlantic/noaa_south_atlantic_vermilion_2026')
 manifest_path <- file.path(cache, 'sources.csv')
 if (file.exists(manifest_path)) {
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE)

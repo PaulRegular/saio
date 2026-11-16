@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, "source_cache", "pomatomus_saltatrix/noaa_bluefish_atlantic_2025")
+cache <- file.path(root, "source_cache/noaa_bluefish_atlantic_coast/noaa_bluefish_atlantic_2025")
 manifest_path <- file.path(root, "provenance/noaa_bluefish_atlantic_2025/sources.csv")
 stock_id <- "noaa_bluefish_atlantic_coast"
 assessment_id <- "noaa_bluefish_atlantic_2025"

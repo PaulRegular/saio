@@ -19,7 +19,7 @@ commercial and survey length compositions. Age structure in a model is not the s
 as observed numbers-at-age in the likelihood.
 
 The 2020 report is cached locally at
-`source_cache/arctica_islandica/noaa_ocean_quahog_2020/OceanQuahogUpdateMT2020.pdf`. Its source URL,
+`source_cache/noaa_ocean_quahog_2020/source_material/OceanQuahogUpdateMT2020.pdf`. Its source URL,
 retrieval date, and SHA-256 checksum are recorded in the adjacent `sources.csv`.
 
 ## Inputs and outputs reviewed

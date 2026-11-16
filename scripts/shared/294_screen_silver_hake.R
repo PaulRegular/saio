@@ -72,7 +72,7 @@ review <- list(
       'does not make them likelihood inputs to the current empirical model.',
       'NOAA repository PDFs were readable in the official online viewer but',
       'direct local downloads returned HTTP 403; no incomplete files were',
-      'retained in source_cache/merluccius_bilinearis/noaa_dfo_silver_hake/.'
+      'retained in source_cache/shared/noaa_dfo_silver_hake/.'
     )
   ),
   'NOAA:10522' = list(
@@ -147,7 +147,7 @@ review <- list(
       'likelihood inputs to the current empirical model. NOAA repository',
       'PDFs were readable in the official online viewer but direct local',
       'downloads returned HTTP 403; no incomplete files were retained in',
-      'source_cache/merluccius_bilinearis/noaa_dfo_silver_hake/.'
+      'source_cache/shared/noaa_dfo_silver_hake/.'
     )
   ),
   'DFO:Maritimes:Silver Hake - NAFO 4VWX' = list(

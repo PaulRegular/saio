@@ -49,7 +49,7 @@ Published biology includes age-12 stock weight and maturity. No abundance-by-sin
 ### Source files cached locally
 
 The authoritative report and derived table extracts are in the gitignored
-`source_cache/clupea_harengus/ices_herring_norwegian_spring_2026/`
+`source_cache/ices_herring_norwegian_spring_spawning/ices_herring_norwegian_spring_2026/`
 folder:
 
 | File | Source or use |
@@ -113,7 +113,7 @@ its exact process, q-sharing, and uncertainty settings were not recovered.
 ### Source files cached locally
 
 The following files are in the gitignored
-`source_cache/clupea_harengus/ices_herring_norwegian_spring_2026/`
+`source_cache/ices_herring_norwegian_spring_spawning/ices_herring_norwegian_spring_2026/`
 folder for reference:
 
 | File | Source or use |

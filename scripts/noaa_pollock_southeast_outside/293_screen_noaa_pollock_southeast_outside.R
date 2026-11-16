@@ -71,7 +71,7 @@ review <- list(
     '2023; the SAFE report is the detailed source used for 2025-2026',
     'specifications. Later harvest-specification material links back to the',
     '2024 SAFE. Source PDFs and SHA-256 hashes are in the ignored',
-    'source_cache/gadus_chalcogrammus/noaa_pollock_age_units/.'
+    'source_cache/shared/noaa_pollock_age_units/.'
   )
 )
 

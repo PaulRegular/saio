@@ -36,7 +36,7 @@ input or output record was created.
 - [DFO Science Advisory Report 2019/054](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40872415.pdf), 2018 assessment advice.
 
 The 2019, 2022 and 2024 PDFs are cached in
-`source_cache/anguilla_rostrata/dfo_american_eel_maritimes_2026/`; `sources.csv`
+`source_cache/dfo_american_eel_maritimes/dfo_american_eel_maritimes_2026/`; `sources.csv`
 records their URLs, retrieval date, byte sizes and SHA-256 checksums. The
 official 2026 catalogue links to the report, and its text was reviewed online,
 but the current publications site returned an archived-information HTML page

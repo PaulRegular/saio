@@ -75,4 +75,4 @@ gitignored local cache.
 
 The source files, revisions, retrieval date, sizes, and SHA-256 hashes are
 recorded in the gitignored local cache at
-`source_cache/brosme_brosme/ices_tusk_5a14_2026/sources.csv`.
+`source_cache/ices_tusk_5a14/ices_tusk_5a14_2026/sources.csv`.

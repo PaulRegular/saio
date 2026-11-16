@@ -2,7 +2,7 @@ import_noaa_longnose_skate_pacific_2019 <- function(root = ".", write = FALSE) {
   assessment_id <- "noaa_pacific_coast_longnose_skate_2019"
   stock_id <- "noaa_pacific_coast_longnose_skate"
   candidate_id <- "NOAA:10731"
-  cache <- file.path(root, "source_cache/beringraja_rhina/noaa_pacific_coast_longnose_skate_2019")
+  cache <- file.path(root, "source_cache/noaa_pacific_coast_longnose_skate/noaa_pacific_coast_longnose_skate_2019")
   manifest_path <- file.path(cache, "sources.csv")
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE,
     check.names = FALSE)

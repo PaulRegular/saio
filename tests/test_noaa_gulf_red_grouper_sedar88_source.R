@@ -77,8 +77,8 @@ review <- paste(readLines("source_reviews/noaa_red_grouper_gom.md",
   warn = FALSE), collapse = " ")
 manifest <- read.csv("provenance/noaa_red_grouper_gom_2025/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
-cache_options <- c("source_cache/epinephelus_morio/noaa_red_grouper_gom_2025",
-  file.path("source_cache/epinephelus_morio/noaa_red_grouper_gom_2025"))
+cache_options <- c("source_cache/noaa_red_grouper_gom/noaa_red_grouper_gom_sedar88_2025",
+  file.path("source_cache/noaa_red_grouper_gom/noaa_red_grouper_gom_sedar88_2025"))
 cache <- cache_options[dir.exists(cache_options)][1L]
 source_row <- manifest[manifest$file == "sedar_88_red_grouper_final_updated_2025.pdf", , drop = FALSE]
 

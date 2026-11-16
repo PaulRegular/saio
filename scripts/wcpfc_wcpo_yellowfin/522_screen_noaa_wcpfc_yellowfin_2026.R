@@ -1,5 +1,5 @@
 root <- "."
-cache_dir <- file.path(root, 'source_cache/thunnus_albacares/wcpfc_wcpo_yellowfin_2026')
+cache_dir <- file.path(root, 'source_cache/wcpfc_wcpo_yellowfin/wcpfc_wcpo_yellowfin_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 manifest <- read.csv(file.path(cache_dir, 'sources.csv'), stringsAsFactors = FALSE)
 
@@ -110,7 +110,7 @@ review <- list(
   detailed_source_url = paste('https://meetings.wcpfc.int/node/32678', 'https://meetings.wcpfc.int/file/22577/download', 'https://meetings.wcpfc.int/file/21826/download', 'https://github.com/PacificCommunity/ofp-sam-yft-2026-diagnostic/tree/b00a02f3537ef54520b219488f899188ea6eff3f', 'https://www.wcpfc.int/node/244', 'https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=11694', sep = '; '),
   review_date = '2026-11-02',
   decision_reason = paste('Eligible for source curation from the latest detailed production assessment located, the 2026 WCPFC report and pinned SPC TAF/MFCL files. The report states that SC22 did not review this assessment for management advice and deferred review to SC23; therefore the latest accepted advice basis remains NOAA Stock SMART assessment 13365 (2023, data through 2021). Public age-at-length and length-composition data support an approximate age-composition reconstruction where sampled strata overlap, but that reconstruction is not the MFCL likelihood.'),
-  notes = paste('NOAA Stock SMART ID 11694 maps to the WCPFC Western and Central Pacific yellowfin unit and is distinct from Eastern Pacific and Indian Ocean yellowfin. No matching canonical Thunnus albacares stock record exists. The 2026 SPC diagnostic repository is pinned to commit b00a02f3537ef54520b219488f899188ea6eff3f; report, supporting input paper, MFCL and TAF inputs/outputs are cached with hashes in source_cache/thunnus_albacares/wcpfc_wcpo_yellowfin_2026/sources.csv. The 2026 run is detailed but awaiting SC23 advice review; the 2023 run remains the latest accepted advice basis. This is a discovery screen only; no canonical assessment data were added.')
+  notes = paste('NOAA Stock SMART ID 11694 maps to the WCPFC Western and Central Pacific yellowfin unit and is distinct from Eastern Pacific and Indian Ocean yellowfin. No matching canonical Thunnus albacares stock record exists. The 2026 SPC diagnostic repository is pinned to commit b00a02f3537ef54520b219488f899188ea6eff3f; report, supporting input paper, MFCL and TAF inputs/outputs are cached with hashes in source_cache/wcpfc_wcpo_yellowfin/wcpfc_wcpo_yellowfin_2026/sources.csv. The 2026 run is detailed but awaiting SC23 advice review; the 2023 run remains the latest accepted advice basis. This is a discovery screen only; no canonical assessment data were added.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

@@ -1,6 +1,6 @@
 base <- "."
 db <- file.path(base, "database")
-cache <- file.path(base, "source_cache/dicentrarchus_labrax/ck_ices_wgsce_labrax_is6a_7b_7j")
+cache <- file.path(base, "source_cache/ck_ices_wgsce_labrax_is6a_7b_7j/ices_seabass_6a_7bj_2026")
 stock_id <- "ck_ices_wgsce_labrax_is6a_7b_7j"
 id <- "ices_seabass_6a_7bj_2026"
 sag_url <- "https://sag.ices.dk/SAG_API/StockXmlDownload/22635"

@@ -19,7 +19,7 @@ inputs <- read.csv(file.path(root, 'database/inputs.csv'), stringsAsFactors = FA
   na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database/outputs.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
-cache <- file.path(root, 'source_cache/oncorhynchus_tshawytscha/dfo_wcvi_chinook_2024')
+cache <- file.path(root, 'source_cache/dfo_wcvi_chinook_2024/source_material')
 row <- register[register$candidate_id ==
   'DFO:Pacific:Chinook Salmon - West Coast of Vancouver Island', , drop = FALSE]
 dfo <- progress[progress$organization == 'DFO', , drop = FALSE]

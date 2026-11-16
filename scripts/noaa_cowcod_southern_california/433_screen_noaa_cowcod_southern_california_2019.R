@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'sebastes_levis/noaa_cowcod_southern_california_2019')
+cache <- file.path(root, 'source_cache/noaa_cowcod_southern_california/noaa_cowcod_southern_california_2019')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10443'
 unit_id <- 'noaa_cowcod_southern_california'
@@ -122,7 +122,7 @@ review <- list(
     'from any stock north of the boundary or in Mexican waters. The model is one-sex with a 60+ accumulator age,',
     'deterministic recruitment, and a 2018 terminal data year; 2019 output is the assessment estimate. No canonical',
     'records were added. Cached reports and the native model archive are listed in',
-    'source_cache/sebastes_levis/noaa_cowcod_southern_california_2019/sources.csv.'))
+    'source_cache/noaa_cowcod_southern_california/noaa_cowcod_southern_california_2019/sources.csv.'))
 
 initial <- register$match_status[row] == 'unreviewed' &&
   register$screening_status[row] == 'not_started' && register$eligibility[row] == 'unresolved' &&

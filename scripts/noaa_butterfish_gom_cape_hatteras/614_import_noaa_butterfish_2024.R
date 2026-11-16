@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "noaa_butterfish_gom_cape_hatteras"
 assessment_id <- "noaa_butterfish_gom_cape_hatteras_2024"
 candidate_id <- "NOAA:10187"
-cache <- "source_cache/peprilus_triacanthus/noaa_butterfish_gom_cape_hatteras_2024"
+cache <- "source_cache/noaa_butterfish_gom_cape_hatteras/noaa_butterfish_gom_cape_hatteras_2024"
 manifest_path <- "provenance/noaa_butterfish_gom_cape_hatteras_2024/sources.csv"
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 

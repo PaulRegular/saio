@@ -7,7 +7,7 @@ model_url <- paste0(
   "NP_Sep2025_bench_final_Mfor/run/sum.RData"
 )
 model_path <- file.path(
-  base, "source_cache/trisopterus_esmarkii", assessment_id, "native", "sum.RData"
+  base, "source_cache/ices_norway_pout_north_sea/ices_norway_pout_north_sea_2026_benchmark", "native", "sum.RData"
 )
 
 if (!file.exists(model_path)) {

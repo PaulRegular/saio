@@ -1,6 +1,6 @@
 root <- "."
 candidate_path <- file.path(root, 'database/candidates.csv')
-shared_report <- file.path(root, 'source_cache', 'ices_sandeel_area_1r_2026', 'HAWG_2026.pdf')
+shared_report <- file.path(root, 'source_cache/ices_sandeel_area_1r/ices_sandeel_area_1r_2026', 'HAWG_2026.pdf')
 
 cases <- data.frame(
   candidate_id = c('ICES:san.sa.6', 'ICES:san.sa.7r'),
@@ -41,8 +41,8 @@ stopifnot(file.exists(shared_report),
 reports <- list()
 for (i in seq_len(nrow(cases))) {
   case <- cases[i, ]
-  area <- if (case$candidate_id == 'ICES:san.sa.6') '6' else '7r'
-  cache <- file.path(root, 'source_cache', paste0('ices_sandeel_area_', area, '_2023'))
+  cache <- file.path(root, 'source_cache', case$candidate_unit_id,
+    paste0(case$candidate_unit_id, '_2023'))
   advice_file <- paste0('ICES_Advice_', case$advice_key, '.html')
   sag_file <- paste0('SAG_', case$assessment_key, '.html')
   paths <- c(
@@ -54,7 +54,7 @@ for (i in seq_len(nrow(cases))) {
     stop('Cache the reviewed ICES sources before screening ', case$candidate_id, '.', call. = FALSE)
 
   sources <- data.frame(
-    file = c(advice_file, sag_file, '../ices_sandeel_area_1r_2026/HAWG_2026.pdf'),
+    file = c(advice_file, sag_file, '../../ices_sandeel_area_1r/ices_sandeel_area_1r_2026/HAWG_2026.pdf'),
     url = c(
       paste0('https://asd.ices.dk/viewAdvice/', case$advice_key),
       paste0('https://sg.ices.dk/ViewSourceData.aspx?key=', case$assessment_key),

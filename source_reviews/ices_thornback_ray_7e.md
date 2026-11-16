@@ -36,4 +36,4 @@ age-specific observation series for the official advice.
 
 The advice and full WGEF report, extracted relevant pages, source URLs,
 retrieval dates, versions, file sizes, and SHA-256 checksums are cached locally
-under `source_cache/raja_clavata/ices_thornback_ray_7e_2024/`.
+under `source_cache/ices_thornback_ray_7e/ices_thornback_ray_7e_2024/`.

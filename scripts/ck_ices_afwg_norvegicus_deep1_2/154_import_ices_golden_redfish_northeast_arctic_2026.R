@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache/sebastes_norvegicus/ck_ices_afwg_norvegicus_deep1_2")
+cache <- file.path(base, "source_cache/ck_ices_afwg_norvegicus_deep1_2/ices_golden_redfish_northeast_arctic_2026")
 assessment_id <- "ices_golden_redfish_northeast_arctic_2026"
 stock_id <- "ck_ices_afwg_norvegicus_deep1_2"
 advice_url <- "https://doi.org/10.17895/ices.advice.30932315.v1"

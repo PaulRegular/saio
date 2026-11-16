@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 root = Path(sys.argv[1])
-cache = root / 'source_cache/gadus_morhua/ices_cod_northeast_arctic_2026'
+cache = root / 'source_cache/ices_cod_northeast_arctic/ices_cod_northeast_arctic_2026'
 assessment = 'ices_cod_northeast_arctic_2026'
 stock_id = 'ices_cod_northeast_arctic'
 run = 'https://stockassessment.org/datadisk/stockassessment/userdirs/user3/NEAcod_2026_final/'

@@ -16,4 +16,4 @@ Sources:
 - [NOAA 2023 September Management Track Peer Review Panel Report](https://www.fisheries.noaa.gov/s3/2023-10/2023-September-Management-Track-Peer-Review-Panel-Report-good.pdf); direct public download returned HTTP 403 during retrieval.
 - [NOAA NEFSC Reference Document 22-06](https://repository.library.noaa.gov/view/noaa/39402), 2019 operational review context for the northern AIM model.
 
-Both per-stock assessment PDFs are cached in `source_cache/noaa_windowpane_2023/`; the local manifest records source URLs, assessment revision, retrieval time, bytes, and SHA-256 checksums. The peer-review PDF was not cached because the public download endpoint returned HTTP 403.
+Both per-stock assessment PDFs are cached in `source_cache/shared/noaa_windowpane_2023/`; the local manifest records source URLs, assessment revision, retrieval time, bytes, and SHA-256 checksums. The peer-review PDF was not cached because the public download endpoint returned HTTP 403.

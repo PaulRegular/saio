@@ -6,7 +6,7 @@ SAIO stock `noaa_petrale_sole_pacific_coast`. Assessments `noaa_petrale_sole_pac
 
 NOAA Stock SMART ID 10011 is the Pacific Coast U.S. management unit for *Eopsetta jordani*. It is distinct from Canadian petrale sole and the Alaska flatfish-complex entries. The latest full benchmark located is the 2023 Stock Synthesis assessment, fitted through 2022. The September 2025 catch-only projection updates removals using 2023-2024 information and provides two 2026 catch scenarios. NOAA's 2026 emergency action and the 2027-2028 harvest-specification analysis use the 2025 projection; the alternative Table 2 scenario is the basis for the adopted 2026 increase.
 
-The official 2023 assessment report, native model archive, and 2025 projection are cached under `source_cache/eopsetta_jordani/noaa_petrale_sole_pacific_coast_2023/`. Their retrieval dates, source links, sizes, and SHA-256 hashes are recorded in `provenance/noaa_petrale_sole_pacific_coast/sources.csv`. The native files identify Stock Synthesis 3.30.21.00, a final gradient of 0.00271749, final phase 7, 2,302 iterations, and total LogL 647.723.
+The official 2023 assessment report, native model archive, and 2025 projection are cached under `source_cache/noaa_petrale_sole_pacific_coast/noaa_petrale_sole_pacific_coast_2023/`. Their retrieval dates, source links, sizes, and SHA-256 hashes are recorded in `provenance/noaa_petrale_sole_pacific_coast/sources.csv`. The native files identify Stock Synthesis 3.30.21.00, a final gradient of 0.00271749, final phase 7, 2,302 iterations, and total LogL 647.723.
 
 ## Inputs retained
 

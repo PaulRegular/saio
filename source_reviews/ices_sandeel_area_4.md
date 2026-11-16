@@ -31,7 +31,7 @@ The official HTML source-data table is used for numerical values because it
 preserves more displayed precision than the accompanying SAG XML; the XML is
 used to verify category, series labels, blank units and absent stock outputs.
 Both files and their retrieval hashes are cached under
-`source_cache/ammodytes_dubius/ck_ices_hawg_dubius_ns/2026_san.sa.4/`.
+`source_cache/ck_ices_hawg_dubius_ns/supporting_sources/2026_san.sa.4/`.
 The separate import is reproducible from
 `scripts/ices_sandeel_area_4/180_import_ices_sandeel_area_4_2026_summary.R`.
 
@@ -152,7 +152,7 @@ not claimed complete. Regional recovery does not silently resolve the broad
 legacy catalogue entry or complete every North Sea sandeel unit.
 
 Cached originals, hashes, URLs, dates and revisions are recorded under
-`source_cache/ammodytes_dubius/ck_ices_hawg_dubius_ns/2025_san.sa.4/`. The yield and effort
+`source_cache/ck_ices_hawg_dubius_ns/supporting_sources/2025_san.sa.4/`. The yield and effort
 audits are numerical checks against the source equations/independent
 tables.
 
@@ -160,7 +160,7 @@ tables.
 
 - [HAWG 2025, version 5](https://doi.org/10.17895/ices.pub.28389008.v5), section 10.5 and Tables 9.1.5–9.1.7, 9.5.1–9.5.12.
 - [Official 2025 advice](https://asd.ices.dk/viewAdvice/3832), [SAG 19335](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=19335) and separate [2026 SAG 21271](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21271).
-- [SAG 21271 machine-readable XML](https://sag.ices.dk/SAG_API/StockXmlDownload/21271), cached with the source page and checksums under `source_cache/ammodytes_dubius/ck_ices_hawg_dubius_ns/2026_san.sa.4/`.
+- [SAG 21271 machine-readable XML](https://sag.ices.dk/SAG_API/StockXmlDownload/21271), cached with the source page and checksums under `source_cache/ck_ices_hawg_dubius_ns/supporting_sources/2026_san.sa.4/`.
 - [Pinned production repository](https://github.com/ices-advice/2025_san.sa.4/tree/5ccb6abb2595153a88c9c47ad628ad17f3ea3e06).
 - [Declared smsR source](https://github.com/nissandjac/smsR/tree/a097011f2fff959c9a263e5f6acb49795b9a53ad), particularly survey SDs, catch SD profiling and `Catchtot`.
 - [Sandeel benchmark, published 2024](https://doi.org/10.17895/ices.pub.21581151.v2).

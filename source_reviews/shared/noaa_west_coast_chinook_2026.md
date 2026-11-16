@@ -128,7 +128,7 @@ unresolved pending recovery of the unit-level production data.
 - [FRAM Appendices](https://framverse.github.io/fram_doc/calcs_appendices.html).
 
 The PFMC reports, Stock SMART dictionary, and FRAM pages are cached under the gitignored
-`source_cache/oncorhynchus_tshawytscha/noaa_puget_sound_chinook_2026/`; their retrieval date,
+`source_cache/shared/noaa_puget_sound_chinook_2026/`; their retrieval date,
 URLs, byte sizes, and SHA-256 checksums are in `sources.csv`. The cached NOAA
 Stock SMART summary and its pinned repository revision are documented in
 `source_cache/shared/noaa_stocksmart/sources.csv`.

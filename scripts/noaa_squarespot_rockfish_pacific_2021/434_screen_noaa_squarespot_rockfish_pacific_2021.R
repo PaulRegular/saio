@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/sebastes_hopkinsi/noaa_squarespot_rockfish_pacific_2021')
+cache <- file.path(root, 'source_cache/noaa_squarespot_rockfish_pacific_2021/source_material')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10442'
 unit_id <- 'noaa_squarespot_rockfish_california'
@@ -119,7 +119,7 @@ review <- list(
     'U.S. West Coast and discusses northern and southern management complexes divided at 40 degrees 10 minutes N.',
     'The model uses two sexes, 41 ages, deterministic recruitment, one removal fleet and one abundance-index fleet.',
     'No canonical records were added. The PDF and native model archive are cached in',
-    'source_cache/sebastes_hopkinsi/noaa_squarespot_rockfish_pacific_2021/sources.csv.'))
+    'source_cache/noaa_squarespot_rockfish_pacific_2021/source_material/sources.csv.'))
 
 initial <- register$match_status[row] == 'unreviewed' &&
   register$screening_status[row] == 'not_started' && register$eligibility[row] == 'unresolved' &&

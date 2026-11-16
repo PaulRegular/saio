@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "clupea_harengus/ck_ices_hawg_harengus_cs_6a_7b_7c")
+cache <- file.path(base, "source_cache/ck_ices_hawg_harengus_cs_6a_7b_7c/ices_herring_west_scotland_ireland_2020")
 stock_id <- "ck_ices_hawg_harengus_cs_6a_7b_7c"
 assessment_id <- "ices_herring_west_scotland_ireland_2020"
 report_url <- "https://doi.org/10.17895/ices.pub.6105"

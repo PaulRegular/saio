@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "anarhichas_lupus/ices_atlantic_wolffish_iceland_2026")
+cache <- file.path(root, "source_cache/ices_atlantic_wolffish_iceland_5a/ices_atlantic_wolffish_iceland_2026")
 assessment_id <- "ices_atlantic_wolffish_iceland_2026"
 stock_id <- "ices_atlantic_wolffish_iceland_5a"
 candidate_id <- "ICES:caa.27.5a"
@@ -599,7 +599,7 @@ candidates$decision_reason[candidate_row] <- paste(
   "Import as partial because the exact likelihood settings, index scaling, 2011 autumn-series provenance, and complete uncertainty are unresolved."
 )
 candidates$notes[candidate_row] <- paste(
-  "The source cache stores the 2026 MFRI report/advice/tables, ICES key 22633 data pages, and table exports under source_cache/anarhichas_lupus/ices_atlantic_wolffish_iceland_2026/.",
+  "The source cache stores the 2026 MFRI report/advice/tables, ICES key 22633 data pages, and table exports under source_cache/ices_atlantic_wolffish_iceland_5a/ices_atlantic_wolffish_iceland_2026/.",
   "The run uses data through 2025 and publishes a 2026 forecast.",
   "The MFRI assessment-summary landings field does not reconcile directly with the raw landings table and ICES series; this is documented in the stock source review.",
   "No current native SAM object was located in this execution environment; stockassessment is not installed here."

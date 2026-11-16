@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/lamna_nasus/ices_porbeagle_nea_2026')
+cache <- file.path(root, 'source_cache/ices_porbeagle_nea/ices_porbeagle_nea_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:por.27.nea'
 unit_id <- 'ices_porbeagle_nea'
@@ -98,7 +98,7 @@ review <- data.frame(
   notes = paste('The advice applies to 2027-2030 and is the current 2026 ICES assessment of the Northeast',
     'Atlantic and adjacent-waters porbeagle unit. Current advice and Standard Graphs pages, retrieval',
     'date, revisions, byte sizes, and SHA-256 checksums are recorded under',
-    'source_cache/lamna_nasus/ices_porbeagle_nea_2026/.',
+    'source_cache/ices_porbeagle_nea/ices_porbeagle_nea_2026/.',
     'translation were added.'),
   stringsAsFactors = FALSE,
   check.names = FALSE)

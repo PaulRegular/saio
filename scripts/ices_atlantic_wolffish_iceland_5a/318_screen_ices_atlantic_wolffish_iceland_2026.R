@@ -1,6 +1,6 @@
 root <- "."
 candidate_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache', 'anarhichas_lupus/ices_atlantic_wolffish_iceland_2026')
+cache <- file.path(root, 'source_cache/ices_atlantic_wolffish_iceland_5a/ices_atlantic_wolffish_iceland_2026')
 candidates <- read.csv(candidate_path, stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 stocks <- read.csv(file.path(root, 'database', 'stocks.csv'),
@@ -124,7 +124,7 @@ files <- c(
   'ices_stock_graphs_22633_2026.html',
   'ices_source_data_22633_2026.html',
   'wolffish_5a_stock_annex_2022.pdf',
-  '../../pleuronectes_platessa/ices_plaice_iceland_5a_2026/wkicemp_2022_framework.pdf'
+  '../../ices_plaice_iceland_5a/ices_plaice_iceland_5a_2026/wkicemp_2022_framework.pdf'
 )
 paths <- file.path(cache, files)
 if (!all(file.exists(paths)) || any(file.info(paths)$size == 0)) {

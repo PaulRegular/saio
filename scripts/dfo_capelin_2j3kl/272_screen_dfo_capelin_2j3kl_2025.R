@@ -77,7 +77,7 @@ review <- list(
     'publications from the review will follow. The cached Research Document',
     '2025/061 covers data through 2024 and is not a substitute for missing',
     'run-specific detail from the 2025 assessment. The 2025/061 PDF is cached',
-    'under source_cache/mallotus_villosus/dfo_capelin_2j3kl/. A local request for the',
+    'under source_cache/dfo_capelin_2j3kl/source_material/. A local request for the',
     '2026 PDF returned the publications portal archived-notice page, not a PDF.'
   )
 )

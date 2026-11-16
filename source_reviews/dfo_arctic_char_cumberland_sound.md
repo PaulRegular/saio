@@ -66,7 +66,7 @@ useful biological or aggregate stock information.
 ## Sources and local cache
 
 Retrieved 2026-10-29. Files and SHA-256 hashes are recorded in
-`source_cache/salvelinus_alpinus/dfo_arctic_char_cumberland_sound_2026/sources.csv`.
+`source_cache/dfo_arctic_char_cumberland_sound/dfo_arctic_char_cumberland_sound_2026/sources.csv`.
 
 | Source | URL | SHA-256 |
 |---|---|---|

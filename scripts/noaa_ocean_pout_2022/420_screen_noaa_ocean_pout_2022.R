@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache/zoarces_americanus/noaa_ocean_pout_2022')
+cache <- file.path(root, 'source_cache/noaa_ocean_pout_2022/source_material')
 mirror_file <- 'FallMT2022_text_mirror.html'
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

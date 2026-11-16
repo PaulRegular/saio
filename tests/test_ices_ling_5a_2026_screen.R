@@ -1,5 +1,5 @@
 root <- '.'
-cache <- file.path(root, 'source_cache/molva_molva/ices_ling_5a_2026')
+cache <- file.path(root, 'source_cache/ices_ling_5a/ices_ling_5a_2026')
 Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/ices_ling_5a/360_screen_ices_ling_5a_2026.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')

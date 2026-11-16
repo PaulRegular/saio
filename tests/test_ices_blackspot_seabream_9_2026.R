@@ -11,7 +11,7 @@ outputs <- read.csv(file.path(root, 'database', 'outputs.csv'), stringsAsFactors
   na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:sbr.27.9', , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews/ices_blackspot_seabream_9.md'), warn = FALSE), collapse = ' ')
-cache <- file.path(root, 'source_cache/pagellus_bogaraveo/ices_blackspot_seabream_9_2026')
+cache <- file.path(root, 'source_cache/ices_blackspot_seabream_9/ices_blackspot_seabream_9_2026')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 files <- c('ICES_advice_2026_record_7185.html', 'ICES_stock_graphs_2026_key_23734.html',
   'ICES_source_data_2026_key_23734.html', 'ICES_WKBSS3_2025_report.pdf',

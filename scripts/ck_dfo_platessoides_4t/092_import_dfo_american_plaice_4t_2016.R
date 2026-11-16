@@ -2,7 +2,7 @@
 
 root <- "."
 db <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "hippoglossoides_platessoides/dfo_american_plaice_4t_2016")
+cache <- file.path(root, "source_cache/ck_dfo_platessoides_4t/dfo_american_plaice_4t_2016")
 assessment_id <- "dfo_american_plaice_4t_2016"
 indicator_id <- "dfo_american_plaice_4t_2024_indicators"
 stock_id <- "ck_dfo_platessoides_4t"

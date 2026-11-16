@@ -1,5 +1,5 @@
 root <- "."
-cache_dir <- file.path(root, 'source_cache/mycteroperca_bonaci/noaa_black_grouper_sedar19')
+cache_dir <- file.path(root, 'source_cache/noaa_black_grouper_sedar19/source_material')
 register_path <- file.path(root, 'database/candidates.csv')
 manifest <- read.csv(file.path(cache_dir, 'sources.csv'), stringsAsFactors = FALSE)
 sha256_file <- function(path) {
@@ -65,7 +65,7 @@ review <- list(
     'https://apps-st.fisheries.noaa.gov/stocksmart/?stockid=14148', sep = '; '),
   review_date = '2026-11-02',
   decision_reason = paste('Screened; age-disaggregated eligibility remains unresolved. SEDAR 19 is the latest completed formal assessment (2010; data through 2008; Stock SMART assessment 5223, Full acceptance). Although the assessment uses an age-structured ASAP2 model and reports age-specific outputs, the numerical catch-at-age/composition inputs and exact final accepted index set have not been verified from public source files. The 2017 Stock Synthesis effort was suspended and is not a replacement production assessment.'),
-  notes = paste('NOAA Stock SMART ID 14148 represents one South Atlantic and Gulf of Mexico black grouper unit (Mycteroperca bonaci), not separate Gulf and Atlantic stocks. No matching canonical stock was found. The 2010 SEDAR 19 assessment is the latest completed formal assessment; the 2026 SAFMC review says the 2017 assessment attempt was suspended because catch records were uncertain and notes that data were revised in 2017. Sources are cached under source_cache/mycteroperca_bonaci/noaa_black_grouper_sedar19 with retrieval dates, URLs, revisions, file sizes and SHA-256 hashes. No canonical records were added.')
+  notes = paste('NOAA Stock SMART ID 14148 represents one South Atlantic and Gulf of Mexico black grouper unit (Mycteroperca bonaci), not separate Gulf and Atlantic stocks. No matching canonical stock was found. The 2010 SEDAR 19 assessment is the latest completed formal assessment; the 2026 SAFMC review says the 2017 assessment attempt was suspended because catch records were uncertain and notes that data were revised in 2017. Sources are cached under source_cache/noaa_black_grouper_sedar19/source_material with retrieval dates, URLs, revisions, file sizes and SHA-256 hashes. No canonical records were added.')
 )
 blank <- function(x) is.na(x) || !nzchar(x)
 initial <- register$match_status[row] == 'unreviewed' &&

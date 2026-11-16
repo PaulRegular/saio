@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "sebastes_entomelas/noaa_west_coast_widow_2025")
+cache <- file.path(root, "source_cache/noaa_west_coast_widow/noaa_west_coast_widow_2025")
 model_dir <- file.path(cache, "model_files")
 assessment_id <- "noaa_west_coast_widow_2025"
 stock_id <- "noaa_west_coast_widow"

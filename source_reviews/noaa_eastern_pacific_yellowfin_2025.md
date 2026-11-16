@@ -19,4 +19,4 @@ This unit is screened ineligible for the age-disaggregated source set because it
 - [Generated model output page, SW base model](https://www.iattc.org/StockAssessments/2025/YFTWebsite/SW_base-1/plots/_SS_output.html)
 - [NOAA Pacific yellowfin stock information](https://www.fisheries.noaa.gov/species/pacific-yellowfin-tuna/resources)
 
-The assessment PDF is cached in the gitignored `source_cache/thunnus_albacares/noaa_iattc_yellowfin_2025/`; its retrieval date and SHA-256 are recorded in `sources.csv`. IATTC run files were not downloaded because the output page restricts redistribution.
+The assessment PDF is cached in the gitignored `source_cache/iattc_eastern_pacific_yellowfin/noaa_iattc_yellowfin_2025/`; its retrieval date and SHA-256 are recorded in `sources.csv`. IATTC run files were not downloaded because the output page restricts redistribution.

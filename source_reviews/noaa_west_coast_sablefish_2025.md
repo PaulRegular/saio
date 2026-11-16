@@ -73,7 +73,7 @@ must remain explicit in any later.
 ## Sources and local cache
 
 The report and native model archive were retrieved on 2026-10-29 and are cached
-under `source_cache/anoplopoma_fimbria/noaa_sablefish_pacific_coast_2025/`. Their URLs, sizes,
+under `source_cache/noaa_sablefish_pacific_coast/noaa_sablefish_pacific_coast_2025/`. Their URLs, sizes,
 retrieval date, and SHA-256 checksums are recorded in the ignored `sources.csv`
 manifest.
 

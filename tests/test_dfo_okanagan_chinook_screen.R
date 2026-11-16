@@ -34,7 +34,7 @@ stopifnot(
   grepl('NOAA Stock SMART', review, fixed = TRUE)
 )
 
-cache <- 'source_cache/oncorhynchus_tshawytscha/dfo_okanagan_chinook_2023'
+cache <- 'source_cache/dfo_okanagan_chinook/dfo_okanagan_chinook_2023'
 manifest_path <- file.path(cache, 'sources.csv')
 if (file.exists(manifest_path)) {
   manifest <- read.csv(manifest_path, stringsAsFactors = FALSE)

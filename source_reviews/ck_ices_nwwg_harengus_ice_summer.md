@@ -68,7 +68,7 @@ Input and output status are `partial` because the production model's fitted data
 ## Source files cached locally
 
 The gitignored cache is
-`source_cache/clupea_harengus/ck_ices_nwwg_harengus_ice_summer/assessment_2026/`.
+`source_cache/ck_ices_nwwg_harengus_ice_summer/ices_herring_iceland_summer_2026/`.
 It contains the MFRI 2026 report, table page, advice page, ICES SAG 2026 XML,
 the 2024 WKICEHER report, and the 2024 ICES stock annex. The local manifest
 records retrieval URLs, dates and SHA-256 checksums.

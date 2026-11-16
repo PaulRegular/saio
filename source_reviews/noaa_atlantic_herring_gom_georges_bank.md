@@ -24,7 +24,7 @@ The assessment is imported as partial and age-data eligibility remains unresolve
 
 ## Source cache
 
-The official run archive was retrieved on 2026-10-29. Its source files are kept under the ignored `source_cache/clupea_harengus/noaa_atlantic_herring_gom_georges_bank_2026/` directory and are recorded with sizes, retrieval dates, and SHA-256 checksums in `provenance/noaa_atlantic_herring_gom_georges_bank_2026/sources.csv`.
+The official run archive was retrieved on 2026-10-29. Its source files are kept under the ignored `source_cache/noaa_atlantic_herring_gom_georges_bank/noaa_atlantic_herring_gom_georges_bank_2026/` directory and are recorded with sizes, retrieval dates, and SHA-256 checksums in `provenance/noaa_atlantic_herring_gom_georges_bank_2026/sources.csv`.
 
 - [2026 Management Track archive](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2026&species_id=21&stock_id=6&review_type_id=6&filename=2026_HER_UNIT.zip)
 - [June 2026 Management Track peer review](https://www.fisheries.noaa.gov/s3/2026-07/june-2026-management-track-peer-review-panel-report_508_20260710.pdf)

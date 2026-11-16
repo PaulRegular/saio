@@ -27,7 +27,7 @@ stopifnot(nrow(unit) == 1L,
   unit$matched_stock_id == 'wcpfc_south_pacific_albacore',
   unit$candidate_ids == 'NOAA:11688')
 
-cache_name <- 'thunnus_alalunga/wcpfc_south_pacific_albacore_2024'
+cache_name <- 'wcpfc_south_pacific_albacore/wcpfc_south_pacific_albacore_2024'
 cache_options <- c(file.path(root, 'source_cache', cache_name))
 cache_options <- cache_options[dir.exists(cache_options)]
 stopifnot(length(cache_options) > 0L)

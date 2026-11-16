@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "noaa_golden_tilefish_mid_atlantic"
 assessment_id <- paste0(stock_id, "_2024")
 candidate_id <- "NOAA:10385"
-cache <- file.path(root, "source_cache/lopholatilus_chamaeleonticeps/noaa_golden_tilefish_2024")
+cache <- file.path(root, "source_cache/noaa_golden_tilefish_mid_atlantic/noaa_golden_tilefish_2024")
 manifest_path <- file.path(root, "provenance", assessment_id, "sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 

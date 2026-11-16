@@ -67,7 +67,7 @@ review <- list(
     'hypotheses. IATTC output pages prohibit redistribution of native run',
     'files and derivative content without permission; only the public report',
     'was cached locally under',
-    'source_cache/thunnus_albacares/noaa_iattc_yellowfin_2025/.'
+    'source_cache/iattc_eastern_pacific_yellowfin/noaa_iattc_yellowfin_2025/.'
   )
 )
 

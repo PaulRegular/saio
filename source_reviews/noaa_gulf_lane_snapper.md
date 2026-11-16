@@ -47,5 +47,5 @@ attempted.
 - [NOAA Stock SMART, stock 10239](https://apps-st.fisheries.noaa.gov/stocksmart/?stockid=10239)
 
 The 2026 SSC review PDF is cached under
-`source_cache/lutjanus_synagris/noaa_gulf_lane_snapper_2026/`; its URL, retrieval date,
+`source_cache/noaa_gulf_lane_snapper/noaa_gulf_lane_snapper_2026/`; its URL, retrieval date,
 SHA-256 checksum, and description are in the local `sources.csv`.

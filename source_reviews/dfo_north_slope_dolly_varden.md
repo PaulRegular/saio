@@ -75,6 +75,6 @@ eligible new stock or add numerical canonical records at this stage.
 - [DFO Research Document 2026/053: Rat River mark-recapture information for 2015–2022](https://publications.gc.ca/collections/collection_2026/mpo-dfo/fs70-5/Fs70-5-2026-053-eng.pdf)
 
 The IFMP, 2017 advisory report, and both 2020 research documents are cached in
-`source_cache/dfo_north_slope_dolly_varden_20261029/`; `sources.csv`
+`source_cache/dfo_north_slope_dolly_varden/dfo_north_slope_dolly_varden_20261029/`; `sources.csv`
 records retrieval URLs and SHA-256 checksums. The 2025/050 and 2026/053 catalogue
 pages are cached there; the PDF retrieval limitation is noted above.

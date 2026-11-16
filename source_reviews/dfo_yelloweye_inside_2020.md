@@ -20,4 +20,4 @@ Survey age compositions are verified, while the lone commercial age-sampling tri
 - [DFO Research Document 2021/008](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41058136.pdf), detailed rebuilding analysis and age-structured OM documentation.
 - [Pinned source repository](https://github.com/pbs-assess/yelloweye-inside/tree/2f9a8a4), cited by the report and cached locally as a revision-specific archive.
 
-The cited PDFs and repository snapshot are cached in the gitignored `source_cache/sebastes_ruberrimus/dfo_yelloweye/`; `sources.csv` records retrieval dates, URLs, sizes, and SHA-256 checksums.
+The cited PDFs and repository snapshot are cached in the gitignored `source_cache/shared/dfo_yelloweye/`; `sources.csv` records retrieval dates, URLs, sizes, and SHA-256 checksums.

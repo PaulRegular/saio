@@ -67,7 +67,7 @@ review <- list(
     '2025 update notes movement and mixing between 4Sw and adjacent 4R and raises',
     'a possible future unit-boundary change, but no revised stock definition is',
     'yet adopted. Cached reports and checksums are under',
-    'source_cache/clupea_harengus/dfo_quebec_herring_4s_2025/. See',
+    'source_cache/dfo_quebec_4s_herring/dfo_quebec_herring_4s_2025/. See',
     'source_reviews/dfo_quebec_4s_herring.md.'
   )
 )

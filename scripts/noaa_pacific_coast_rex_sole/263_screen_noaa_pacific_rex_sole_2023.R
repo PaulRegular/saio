@@ -74,7 +74,7 @@ review <- list(
     '2007-2019 (350 female, 231 male, 39 unsexed). Cross-organization identity review,',
     'final-run timing, active M parameter status, output scales and uncertainty remain to',
     'be verified before import. See the source review and ignored source_cache/',
-    'glyptocephalus_zachirus/noaa_pacific_coast_rex_sole_2023/sources.csv.'
+    'noaa_pacific_coast_rex_sole/noaa_pacific_coast_rex_sole_2023/sources.csv.'
   )
 )
 

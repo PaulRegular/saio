@@ -33,8 +33,8 @@ and weights; those assumptions are recorded separately from the historical
 assessment inputs.
 
 The 2018 assessment PDF and extracted text are cached under
-`source_cache/scomber_scombrus/nefsc_atlantic_mackerel_2018/`; the 2025 materials are under
-`source_cache/scomber_scombrus/nefsc_atlantic_mackerel_2025/`.
+`source_cache/nefsc_atlantic_mackerel/nefsc_atlantic_mackerel_2018/`; the 2025 materials are under
+`source_cache/nefsc_atlantic_mackerel/nefsc_atlantic_mackerel_2025/`.
 
 ## Database records and source definitions
 

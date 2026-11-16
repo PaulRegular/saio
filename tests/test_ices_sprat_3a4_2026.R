@@ -9,7 +9,7 @@ inputs <- read.csv(file.path(root, 'database', 'inputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 outputs <- read.csv(file.path(root, 'database', 'outputs.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
-cache <- file.path(root, 'source_cache/sprattus_sprattus/ices_sprat_3a4_2026')
+cache <- file.path(root, 'source_cache/ices_sprat_3a4/ices_sprat_3a4_2026')
 candidate <- register[register$candidate_id == 'ICES:spr.27.3a4', , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews/ices_sprat_3a4.md'), warn = FALSE), collapse = ' ')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)

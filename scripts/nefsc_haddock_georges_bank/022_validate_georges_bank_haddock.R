@@ -4,7 +4,7 @@ x <- inputs[inputs$assessment_id == id, ]
 y <- outputs[outputs$assessment_id == id, ]
 a <- assessments[assessments$assessment_id == id, ]
 settings <- assumptions[assumptions$assessment_id == id, ]
-cache <- "source_cache/melanogrammus_aeglefinus/nefsc_haddock_georges_bank_2026"
+cache <- "source_cache/nefsc_haddock_georges_bank/nefsc_haddock_georges_bank_2026"
 text <- readLines(file.path(cache, "2026_assessment_text.txt"), encoding = "UTF-8", warn = FALSE)
 review <- paste(readLines(file.path(cache, "2026_peer_review_text.txt"), encoding = "UTF-8", warn = FALSE), collapse = "\n")
 source_values <- function(label) {

@@ -50,7 +50,7 @@ status is not treated as an independently fitted assessment.
 The official empirical method does not provide fitted N-at-age, F-at-age, SSB or recruitment. Its aggregate biomass indicator is not a population SSB estimate. Rejected or informational age-based models are not official production outputs.
 
 The assessment, 2026 data update, 2016 benchmark draft and extraction text are
-cached with provenance and checksums under `source_cache/glyptocephalus_cynoglossus/ck_nefsc_garmiii_cynoglossus_5y/`.
+cached with provenance and checksums under `source_cache/ck_nefsc_garmiii_cynoglossus_5y/supporting_sources/`.
 
 ## Sources
 

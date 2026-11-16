@@ -13,7 +13,7 @@ The three units are therefore screened as **ineligible** for age-structured sour
 ## Source cache
 
 The three assessment reports, the USVI Framework Action 3, and the 2026 final rule are cached under the ignored directory
-source_cache/balistes_vetula/noaa_caribbean_queen_triggerfish_2024/. Their source URLs, retrieval date, revisions, byte sizes, and SHA-256 checksums are recorded in sources.csv.
+source_cache/shared/noaa_caribbean_queen_triggerfish_2024/. Their source URLs, retrieval date, revisions, byte sizes, and SHA-256 checksums are recorded in sources.csv.
 
 ## Sources
 

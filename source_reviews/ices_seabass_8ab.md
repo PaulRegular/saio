@@ -80,6 +80,6 @@ outputs remain marked partial. This is a source-curation record, not a complete 
 - [WKBSEABASS 2025 benchmark report](https://doi.org/10.17895/ices.pub.25002488.v1)
 - [ICES XML assessment export, key 22538](https://sag.ices.dk/SAG_API/StockXmlDownload/22538)
 
-The gitignored local cache is `source_cache/dicentrarchus_labrax/ices_seabass_8ab_2026/`.
+The gitignored local cache is `source_cache/ices_seabass_8ab/ices_seabass_8ab_2026/`.
 Its `sources.csv` records URLs, retrieval date, pinned assessment identity,
 file sizes, and SHA-256 checksums for both 2026 and 2025 reference files.

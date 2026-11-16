@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/reinhardtius_hippoglossoides/ices_greenland_halibut_1_2_2026')
+cache <- file.path(root, 'source_cache/ices_greenland_halibut_1_2/ices_greenland_halibut_1_2_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:ghl.27.1-2'
 unit_id <- 'ices_greenland_halibut_1_2'
@@ -129,7 +129,7 @@ review <- list(
     'conducted outside ICES under the method agreed at the ICES 2023 benchmark. It is',
     'distinct from ICES ghl.27.561214 and the DFO Greenland halibut units. The 2026 report,',
     'advice, and 2024 IMR/NMDC source-code archive are cached under',
-    'source_cache/reinhardtius_hippoglossoides/ices_greenland_halibut_1_2_2026/sources.csv with retrieval',
+    'source_cache/ices_greenland_halibut_1_2/ices_greenland_halibut_1_2_2026/sources.csv with retrieval',
     'metadata and SHA-256 checksums. No canonical numerical records',
     'were added.')
 )

@@ -1,7 +1,7 @@
 assessment_id <- "ices_sole_eastern_channel_7d_2026"
 stock_id <- "ck_ices_wgnssk_solea_ns_7d"
 database_dir <- file.path("database")
-source_dir <- file.path("source_cache", "solea_solea/ices_sole_eastern_channel_7d_2026")
+source_dir <- file.path("source_cache/ck_ices_wgnssk_solea_ns_7d/ices_sole_eastern_channel_7d_2026")
 report_file <- file.path(source_dir, "wgnssk_2026.pdf")
 xml_file <- file.path(source_dir, "ICES_SAG_StockXml_22546.xml")
 report_ref <- "https://doi.org/10.17895/ices.pub.32676345"

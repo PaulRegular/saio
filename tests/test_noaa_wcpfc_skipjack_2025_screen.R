@@ -26,7 +26,7 @@ stopifnot(nrow(unit) == 1L,
   unit$import_status == 'not_started',
   unit$candidate_ids == 'NOAA:11691')
 
-cache <- file.path(root, 'source_cache/katsuwonus_pelamis/noaa_wcpfc_skipjack_2025')
+cache <- file.path(root, 'source_cache/noaa_wcpfc_skipjack_2025/source_material')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 required <- c('wcpfc_sc21_skipjack_assessment_2025_rev3.pdf',
   'wcpfc_sc21_skipjack_background_inputs_2025_rev1.pdf',

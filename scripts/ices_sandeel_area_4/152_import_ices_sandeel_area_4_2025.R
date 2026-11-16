@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache/ammodytes_dubius/ck_ices_hawg_dubius_ns/2025_san.sa.4")
+cache <- file.path(base, "source_cache/ck_ices_hawg_dubius_ns/supporting_sources/2025_san.sa.4")
 assessment_id <- "ices_sandeel_area_4_2025"
 stock_id <- "ices_sandeel_area_4"
 catalogue_id <- "ck_ices_hawg_dubius_ns"
@@ -17,7 +17,7 @@ verify <- function(file, expected) {
 }
 pages <- pdftools::pdf_text(verify("HAWG_2025.pdf", "06967082a29ef54ffb33ce7d2e8f89a4695dd6d1ca70f3e78510c03c6c813097"))
 settings <- readLines(verify("data.R", "680bdc6e76af4341905d23cf4411f08456edafe2eebb15ffe5e717c2188125be"))
-software <- readLines(verify("../../../ices_sandeel_area_1r_2026/get_tmb_parameters.R", "1dcd5b4699418b755fc163a2647e1d576f31496ecfa13a95f7959ced47b09205"))
+software <- readLines(verify("../../../ices_sandeel_area_1r/ices_sandeel_area_1r_2026/get_tmb_parameters.R", "1dcd5b4699418b755fc163a2647e1d576f31496ecfa13a95f7959ced47b09205"))
 sag_path <- verify("SAG_19335.html", "43550ab06121ae14a096a6ca1949a74b72764989fba2d8c46c2a5b104ace13ee")
 stopifnot(any(grepl("years <- 1993:2024", settings, fixed = TRUE)),
   any(grepl("CminageSeason = c(1, 1)", settings, fixed = TRUE)),

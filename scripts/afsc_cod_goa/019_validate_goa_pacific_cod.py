@@ -15,7 +15,7 @@ assert len(current)==12689
 counts=Counter(r['measure'] for r in current)
 assert counts=={'total_biomass':147,'total_numbers':52,'log_index_sd':52,'proportion_at_length':3822,'conditional_proportion_at_age':8570,'environmental_covariate':46},counts
 source=defaultdict(dict)
-for r in csv.DictReader((folder/'source_cache/gadus_macrocephalus/afsc_cod_goa_2026/native_observation_sections_raw.csv').open()):
+for r in csv.DictReader((folder/'source_cache/afsc_cod_goa/afsc_cod_goa_2026/native_observation_sections_raw.csv').open()):
  source[r['section']].setdefault(int(r['row']),{})[int(r['column'])]=float(r['value'])
 groups=defaultdict(list)
 for r in current:
@@ -34,7 +34,7 @@ for key,group in groups.items():
    assert float(r['length_bin_lower'])==original[7]
    assert float(r['length_bin_upper'])==original[8]
    assert int(r['age_error'])==original[6]
-native=(folder/'source_cache/gadus_macrocephalus/afsc_cod_goa_2026/accepted_model/GOAPcod2025Dec08.dat').read_text().splitlines()
+native=(folder/'source_cache/afsc_cod_goa/afsc_cod_goa_2026/accepted_model/GOAPcod2025Dec08.dat').read_text().splitlines()
 start=next(i for i,line in enumerate(native) if '#_year\tvariable\tindex' in line)+1
 expected={}
 for line in native[start:]:

@@ -1,5 +1,5 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
-cache <- file.path(root, "source_cache/melanogrammus_aeglefinus/ices_haddock_north_sea_2026")
+cache <- file.path(root, "source_cache/ices_haddock_north_sea/ices_haddock_north_sea_2026")
 input_file <- file.path(root, "database/inputs.csv")
 assessment_id <- "ices_haddock_north_sea_2026"
 model_url <- paste0(

@@ -40,7 +40,7 @@ The database records fitted N and F at age, fixed M at age, recruitment, SSB, Fb
 
 The 2025 fitted SAM age-0 abundance and recruitment are about 385,197 thousand fish, SSB is about 19,372 tonnes, and Fbar over ages 1–3 is about 0.0302 per year. These agree with the native fitted tables and the assessment report age and summary tables. The advice summary’s resampled 2025 recruitment forecast is a distinct quantity and is not substituted for fitted age-0 abundance.
 
-The source PDFs and native run are cached locally under source_cache/merlangius_merlangus/ices_whiting_west_scotland_2025/. The document manifest records retrieval URLs, date, byte size and SHA-256. Model-file provenance is recorded in the native bundle's model/source_manifest.csv.
+The source PDFs and native run are cached locally under source_cache/ck_ices_wgsce_merlangus_cs27_6a/ices_whiting_west_scotland_2025/. The document manifest records retrieval URLs, date, byte size and SHA-256. Model-file provenance is recorded in the native bundle's model/source_manifest.csv.
 
 The database record preserves the native fitted inputs and outputs.
 

@@ -87,7 +87,7 @@ review <- list(
     'entry are linked as one transboundary ICCAT unit. The ICCAT assessment',
     'calendar lists the West Atlantic assessment as 2021/2027 and Stock',
     'Synthesis 3.30.14. Public reports and their checksummed source manifest',
-    'are cached locally under source_cache/thunnus_thynnus/iccat_western_bluefin_2021/.',
+    'are cached locally under source_cache/shared/iccat_western_bluefin_2021/.',
     'No canonical database values were changed.'
   )
 )

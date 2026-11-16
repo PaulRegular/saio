@@ -18,7 +18,7 @@ x$output_evidence[i] <- 'MFRI 2026 tables provide N-at-age for 1955-2026, F-at-a
 x$detailed_source_url[i] <- paste('https://www.hafogvatn.is/static/extras/images/1_cod_2026_1_techreport_en.html', 'https://www.hafogvatn.is/static/extras/images/1_cod_2026_1_tables_en.html', 'https://doi.org/10.17895/ices.pub.32414577', sep = '; ')
 x$review_date[i] <- '2026-10-29'
 x$decision_reason[i] <- 'Matched to the existing Icelandic Division 5.a stock and 2026 production assessment. Official source tables establish age-based catches, two age-disaggregated survey indices, age-specific biology and population/mortality outputs. Canonical values are already imported; exact production timing/configuration and reported source discrepancies remain documented in source_reviews/ck_ices_nwwg_morhua_ice5a.md.'
-x$notes[i] <- 'The inventory row is now linked to the already curated 2026 assessment ices_cod_iceland_2026. See source_reviews/ck_ices_nwwg_morhua_ice5a.md and source_cache/gadus_morhua/ices_cod_iceland_2026/manifest.csv.'
+x$notes[i] <- 'The inventory row is now linked to the already curated 2026 assessment ices_cod_iceland_2026. See source_reviews/ck_ices_nwwg_morhua_ice5a.md and source_cache/ck_ices_nwwg_morhua_ice5a/ices_cod_iceland_2026/manifest.csv.'
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')
 if (length(lines) != nrow(x) + 1L) stop('Multiline CSV rows require a safe update method.', call. = FALSE)
 tmp <- tempfile(fileext = '.csv')

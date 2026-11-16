@@ -14,7 +14,7 @@ The 2023 benchmark is therefore recorded separately as the detailed source of
 the inherited age-composition, survey and biological inputs, and of the
 available fitted age surfaces. Its Stock Synthesis 3.30.20 model covers
 2008–2021. The reports and native archive are cached under
-`source_cache/scomber_japonicus/noaa_pacific_mackerel_2025/`; source URLs, retrieval
+`source_cache/noaa_pacific_mackerel_pacific_coast/noaa_pacific_mackerel_2025/`; source URLs, retrieval
 dates and checksums are in the adjacent provenance manifest. Checksums for the
 extracted native files are recorded in
 `provenance/noaa_pacific_mackerel_2023/sources.csv`.

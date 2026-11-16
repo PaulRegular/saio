@@ -2,7 +2,7 @@ assessment_id <- "ices_saithe_faroe_2025"
 stock_id <- "ck_ices_nwwg_virens_fa5b"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
-cache <- file.path(base, "source_cache", "pollachius_virens/ices_saithe_faroe_2025")
+cache <- file.path(base, "source_cache/ck_ices_nwwg_virens_fa5b/ices_saithe_faroe_2025")
 database <- file.path(base, "database")
 run_url <- paste0(
   "https://stockassessment.org/datadisk/stockassessment/userdirs/user3/",

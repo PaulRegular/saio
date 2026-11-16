@@ -1,7 +1,7 @@
 # Import the published production-assessment summary, not the constant-M candidate.
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "limanda_ferruginea/ck_dfo_nefsc_ferruginea_gb")
+cache <- file.path(base, "source_cache/ck_dfo_nefsc_ferruginea_gb/nefsc_yellowtail_georges_bank_2025")
 assessment_id <- "nefsc_yellowtail_georges_bank_2025"
 stock_id <- "ck_dfo_nefsc_ferruginea_gb"
 report_url <- "https://d23h0vhsm26o6d.cloudfront.net/Georges-Bank-Yellowtail-Flounder-Assessment-Update-2025.pdf"

@@ -10,7 +10,7 @@ AFMA's [HIMI fishery page](https://www.afma.gov.au/fisheries/heard-island-and-mc
 
 ## Sources and recovery
 
-- Assessment report: [2026 HIMI mackerel icefish assessment](https://www.afma.gov.au/sites/default/files/2026-11/Mackerel%20Icefish%20stock%20assessment%202026.pdf), cached locally as `source_cache/champsocephalus_gunnari/afma_himi_mackerel_icefish_2026/himi_mackerel_icefish_2026.pdf`.
+- Assessment report: [2026 HIMI mackerel icefish assessment](https://www.afma.gov.au/sites/default/files/2026-11/Mackerel%20Icefish%20stock%20assessment%202026.pdf), cached locally as `source_cache/afma_himi_mackerel_icefish/afma_himi_mackerel_icefish_2026/himi_mackerel_icefish_2026.pdf`.
 - AFMA fishery page: https://www.afma.gov.au/fisheries/heard-island-and-mcdonald-islands-fishery
 - The report identifies the March 2026 random stratified trawl survey (RSTS), three survey strata, CMIX length-mixture estimates and the Grym projection method.
 - No run-specific raw haul data, length-density vectors, source model object, or complete input files were found in the linked report material. The age-cohort densities below are CMIX estimates derived from survey length-density data, then used in the yield calculation; they are not raw age observations.

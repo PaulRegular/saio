@@ -1,7 +1,7 @@
 source("scripts/shared/candidate_reports.R", local = TRUE)
 
 root <- "."
-cache <- file.path(root, "source_cache", "molva_molva/ices_ling_5a_2026")
+cache <- file.path(root, "source_cache/ices_ling_5a/ices_ling_5a_2026")
 assessment_id <- "ices_ling_5a_2026"
 
 source_manifest <- read.csv(file.path(cache, "sources.csv"), stringsAsFactors = FALSE)

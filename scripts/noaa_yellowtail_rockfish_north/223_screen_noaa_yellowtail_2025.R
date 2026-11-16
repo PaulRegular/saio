@@ -72,7 +72,7 @@ x$notes[i] <- paste(
   'population ages and age-composition bins 1-30, and data through 2024.',
   'The report and model bundle identify Stock Synthesis 3.30.23.1. The',
   'report and native ZIP, retrieval details, and checksums are in',
-  'source_cache/sebastes_flavidus/noaa_yellowtail_rockfish_north_2025/sources.csv.'
+  'source_cache/noaa_yellowtail_rockfish_north/noaa_yellowtail_rockfish_north_2025/sources.csv.'
 )
 
 lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')

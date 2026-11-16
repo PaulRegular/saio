@@ -10,7 +10,7 @@ if (!requireNamespace("pdftools", quietly = TRUE)) {
 }
 
 cache_candidates <- c(
-  file.path(root, "source_cache/glyptocephalus_zachirus/noaa_goa_rex_2026")
+  file.path(root, "source_cache/noaa_goa_rex_sole/noaa_goa_rex_sole_2026")
 )
 cache <- cache_candidates[dir.exists(cache_candidates)][1L]
 if (is.na(cache)) stop("The gitignored GOA rex sole source cache is missing.", call. = FALSE)

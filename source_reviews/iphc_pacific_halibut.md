@@ -12,7 +12,7 @@ The assessment data cutoff was 31 October 2025. Some 2025 commercial WPUE and ag
 
 ### Sources and provenance
 
-The assessment report, data-source report, time-series workbooks, and supporting biological documents are cached locally under the ignored `source_cache/hippoglossus_stenolepis/iphc_pacific_halibut/` directory. Retrieval dates, source URLs, pinned revisions, file sizes, and SHA-256 checksums are recorded in `provenance/iphc_pacific_halibut/sources.csv`.
+The assessment report, data-source report, time-series workbooks, and supporting biological documents are cached locally under the ignored `source_cache/iphc_pacific_halibut/supporting_sources/` directory. Retrieval dates, source URLs, pinned revisions, file sizes, and SHA-256 checksums are recorded in `provenance/iphc_pacific_halibut/sources.csv`.
 
 - [2025 assessment, IPHC-2026-SA-01](https://www.iphc.int/uploads/2025/12/IPHC-2026-SA-01.pdf)
 - [Assessment data sources, IPHC-2026-SA-02](https://www.iphc.int/uploads/2025/12/IPHC-2026-SA-02.pdf)
@@ -146,5 +146,5 @@ not started.
 - [IPHC commercial landings by regulatory area](https://www.iphc.int/data/fishery-landings-by-iphc-regulatory-area/)
 
 The assessment PDFs, public FISS file, and relevant IPHC spreadsheets are
-cached under `source_cache/hippoglossus_stenolepis/iphc_pacific_halibut/`, with checksums,
+cached under `source_cache/iphc_pacific_halibut/supporting_sources/`, with checksums,
 retrieval date and pinned source identifiers recorded in `sources.csv`.

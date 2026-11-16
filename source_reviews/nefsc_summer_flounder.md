@@ -62,7 +62,7 @@ remove binary storage noise. Uncertainty was not inferred from plotted bands.
 The latest run's age-specific inputs and outputs remain unavailable; the 2018 age-based record remains separate.
 
 The report, peer review and pinned Stock SMART snapshot are cached locally
-under `source_cache/paralichthys_dentatus/nefsc_summer_flounder_2025/`. The importer verifies SHA-256
+under `source_cache/nefsc_summer_flounder/nefsc_summer_flounder_2025/`. The importer verifies SHA-256
 checksums and the report overlap. [2025 report](https://asmfc.org/wp-content/uploads/2025/08/SF_Management_Track_Assessment_2025.pdf),
 [peer review](https://www.fisheries.noaa.gov/s3/2025-07/2025-June-Management-Track-Peer-Review-Panel-Report-508.pdf),
 [Stock SMART snapshot](https://github.com/NOAA-EDAB/stocksmart/tree/664c4237e26520b260a090e1821a2cee5d1cdf07).

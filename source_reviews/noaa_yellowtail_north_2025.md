@@ -41,7 +41,7 @@ and fitted age-specific outputs.
 ## Sources and local cache
 
 The detailed report and native model archive were retrieved on 2026-10-29
-and cached under `source_cache/sebastes_flavidus/noaa_yellowtail_rockfish_north_2025/`. The manifest
+and cached under `source_cache/noaa_yellowtail_rockfish_north/noaa_yellowtail_rockfish_north_2025/`. The manifest
 records URLs, retrieval date, sizes, and SHA-256 checksums.
 
 - [2025 Northern Yellowtail Rockfish assessment report](https://www.pcouncil.org/documents/2026/01/status-of-the-yellowtail-rockfish-stock-off-the-u-s-west-coast-north-of-40-10-in-2025.pdf/)

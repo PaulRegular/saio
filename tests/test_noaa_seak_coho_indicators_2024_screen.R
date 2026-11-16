@@ -15,7 +15,7 @@ ids <- c('NOAA:10959', 'NOAA:10960', 'NOAA:10961')
 rows <- register[match(ids, register$candidate_id), , drop = FALSE]
 expected_units <- c('noaa_coho_berners_river',
   'noaa_coho_ford_arm_lake_discontinued', 'noaa_coho_hugh_smith_lake')
-cache <- file.path(root, 'source_cache/oncorhynchus_kisutch/noaa_seak_coho_2024')
+cache <- file.path(root, 'source_cache/shared/noaa_seak_coho_2024')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 expected_files <- c('southeast_alaska_coho_status_2024.pdf',
   'seak_coho_operational_plan_2022-2024.pdf')

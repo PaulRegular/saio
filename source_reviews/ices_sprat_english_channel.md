@@ -46,7 +46,7 @@ is scientifically useful.
 ## Sources and cached files
 
 All files below are cached under the gitignored
-`source_cache/sprattus_sprattus/ices_sprat_7de_2026/` folder.
+`source_cache/ices_sprat_7de_2026/source_material/` folder.
 The `sources.csv` manifest records retrieval date, source revision, URL and
 SHA-256 for each file.
 

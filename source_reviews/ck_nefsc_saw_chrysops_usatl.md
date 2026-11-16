@@ -13,7 +13,7 @@ The latest assessment with detailed source tables recovered for the canonical da
 - 2025 peer-review panel report: <https://www.fisheries.noaa.gov/s3/2025-07/2025-June-Management-Track-Peer-Review-Panel-Report-508.pdf>.
 - 2023 update materials were reviewed as an intermediate assessment and do not supersede the 2025 update or the 2015 detailed record.
 
-The reports and NOAA SASI bundles are cached locally under the gitignored `source_cache/stenotomus_chrysops/nefsc_scup_2015/` and `source_cache/stenotomus_chrysops/nefsc_scup_2025/` folders. The local `source_cache/nefsc_scup_source_manifest.json` records assessment/run identities, retrieval dates and SHA-256 checksums. Direct attachment URLs for the 2023 and 2025 bundles were not retained; their extracted documents are attributed to the NOAA SASI bundles, and this gap is explicit in the manifest.
+The reports and NOAA SASI bundles are cached locally under the gitignored `source_cache/ck_nefsc_saw_chrysops_usatl/nefsc_scup_2015/` and `source_cache/ck_nefsc_saw_chrysops_usatl/nefsc_scup_2025/` folders. The local `source_cache/nefsc_scup_source_manifest.json` records assessment/run identities, retrieval dates and SHA-256 checksums. Direct attachment URLs for the 2023 and 2025 bundles were not retained; their extracted documents are attributed to the NOAA SASI bundles, and this gap is explicit in the manifest.
 
 ## 2015 run structure and imported records
 
@@ -50,5 +50,5 @@ noise; no uncertainty is inferred. These values do not supply missing 2025
 age compositions or model controls.
 
 The [NOAA archive snapshot](https://github.com/NOAA-EDAB/stocksmart/tree/664c4237e26520b260a090e1821a2cee5d1cdf07)
-is cached in `source_cache/stenotomus_chrysops/nefsc_scup_2025/` with its revision and checksum in
+is cached in `source_cache/ck_nefsc_saw_chrysops_usatl/nefsc_scup_2025/` with its revision and checksum in
 `stocksmart_manifest.csv`.

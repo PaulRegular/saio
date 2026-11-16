@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache/sebastes_mentella/ices_pelagic_redfish_2026')
+cache <- file.path(root, 'source_cache/ices_pelagic_redfish_2026/source_material')
 sid_path <- file.path(root, 'source_cache', 'shared/ices_sid', 'stock_list_2026.json')
 
 expected <- data.frame(

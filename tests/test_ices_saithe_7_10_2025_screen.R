@@ -3,7 +3,7 @@ Sys.setenv(TAM_SOURCE_DRY_RUN = '1')
 source(file.path(root, 'scripts/ices_saithe_subareas_7_10/484_screen_ices_saithe_7_10_2025.R'))
 Sys.unsetenv('TAM_SOURCE_DRY_RUN')
 
-cache <- file.path(root, 'source_cache/pollachius_virens/ices_saithe_subareas_7_10_2025')
+cache <- file.path(root, 'source_cache/ices_saithe_subareas_7_10/ices_saithe_subareas_7_10_2025')
 register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- register[register$candidate_id == 'ICES:pok.27.7-10', , drop = FALSE]

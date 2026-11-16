@@ -85,6 +85,6 @@ rate proxy remain explicit in the imported output notes.
 - [SEDAR 22 project page](https://sedarweb.org/assessments/sedar-22/) — project and later data-triage materials.
 
 Authoritative PDFs and the NOAA resources page are cached locally under
-`source_cache/lopholatilus_chamaeleonticeps/noaa_gulf_golden_tilefish_2011/`. Retrieval dates,
+`source_cache/noaa_gulf_golden_tilefish/noaa_gulf_golden_tilefish_2011/`. Retrieval dates,
 revisions, sizes and SHA-256 checksums are listed in
 `provenance/noaa_gulf_golden_tilefish_2011/sources.csv`.

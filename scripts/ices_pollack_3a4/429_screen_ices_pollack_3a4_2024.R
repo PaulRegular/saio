@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/pollachius_pollachius/ices_pollack_3a4_2024')
+cache <- file.path(root, 'source_cache/ices_pollack_3a4/ices_pollack_3a4_2024')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:pol.27.3a4'
 unit_id <- 'ices_pollack_3a4'
@@ -103,7 +103,7 @@ register$review_date[row] <- '2026-10-30'
 register$decision_reason[row] <- paste0(
   'Ineligible for the age-disaggregated comparison set. The latest advice-linked assessment located is ICES assessment year 2024, category 5; its official source-data page reports only annual landings and discards, not the age-disaggregated inputs or population and mortality outputs required for comparison. The advice remains applicable through 2027. This screen concerns the current assessment sources and does not assert that age samples are absent elsewhere. No canonical numerical data were added.')
 register$notes[row] <- paste0(
-  'ICES unit pol.27.3a4 is pollack in Subarea 4 and Division 3.a, distinct from pollack in subareas 6-7. The 2024 advice record remains active for advice through 2027; its source-data table ends in 2023. URLs, retrieval date, revisions, file sizes, and SHA-256 hashes are recorded in source_cache/pollachius_pollachius/ices_pollack_3a4_2024/sources.csv. No canonical stock, assessment, input, or output records were added.')
+  'ICES unit pol.27.3a4 is pollack in Subarea 4 and Division 3.a, distinct from pollack in subareas 6-7. The 2024 advice record remains active for advice through 2027; its source-data table ends in 2023. URLs, retrieval date, revisions, file sizes, and SHA-256 hashes are recorded in source_cache/ices_pollack_3a4/ices_pollack_3a4_2024/sources.csv. No canonical stock, assessment, input, or output records were added.')
 
 source(file.path(root, 'scripts/shared/candidate_register_io.R'))
 if (!identical(Sys.getenv('TAM_SOURCE_DRY_RUN'), '1'))

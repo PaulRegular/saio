@@ -1,7 +1,7 @@
 root <- "."
 assessment_id <- "nafo_cod_3m_2026"
 stock_id <- "nafo_cod_3m"
-cache_dir <- file.path(root, "source_cache", "gadus_morhua/nafo_cod_3m_2026")
+cache_dir <- file.path(root, "source_cache/nafo_cod_3m/nafo_cod_3m_2026")
 report_path <- file.path(cache_dir, "nafo_scr26_023_cod3m_2026.pdf")
 
 if (!requireNamespace("pdftools", quietly = TRUE)) {

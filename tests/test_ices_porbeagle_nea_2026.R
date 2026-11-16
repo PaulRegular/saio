@@ -3,7 +3,7 @@ source("scripts/shared/candidate_reports.R", local = TRUE)
 root <- '.'
 candidate_id <- 'ICES:por.27.nea'
 unit_id <- 'ices_porbeagle_nea'
-cache <- file.path(root, 'source_cache/lamna_nasus/ices_porbeagle_nea_2026')
+cache <- file.path(root, 'source_cache/ices_porbeagle_nea/ices_porbeagle_nea_2026')
 
 register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))

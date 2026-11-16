@@ -64,7 +64,7 @@ criteria.
 ## Sources and local cache
 
 The PDFs and the current IFMP page are cached under
-`source_cache/salvelinus_alpinus/dfo_arctic_char_cambridge_bay_2026/`. Its `sources.csv`
+`source_cache/dfo_arctic_char_cambridge_bay/dfo_arctic_char_cambridge_bay_2026/`. Its `sources.csv`
 records retrieval date, URL and SHA-256 checksum.
 
 | Source | URL | SHA-256 |

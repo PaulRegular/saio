@@ -21,7 +21,7 @@ sources <- data.frame(
   file = c(
     "source_cache/chile_merluza_comun_2026/ifop_2026_link_01.pdf",
     "source_cache/chile_merluza_comun_2026/ifop_2026_link_02.pdf",
-    "source_cache/merluccius_gayi/ifop_merluza_comun_2026/ifop_2026_status.pdf",
+    "source_cache/ifop_merluza_comun_up/ifop_merluza_comun_2026/ifop_2026_status.pdf",
     "source_cache/chile_merluza_comun_2026/ifop_acoustic_2025.pdf",
     "source_cache/chile_merluza_comun_2026/ifop_acoustic_2025_annexes.zip",
     "source_cache/chile_merluza_comun_2026/subpesca_2025_quota_decree_202400159.pdf"

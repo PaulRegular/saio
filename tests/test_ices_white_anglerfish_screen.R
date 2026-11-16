@@ -19,8 +19,7 @@ for (suffix in c('78abd', '8c9a')) {
   code <- paste0('mon.27.', suffix)
   unit <- paste0('ices_white_anglerfish_', suffix)
   candidate <- register[register$candidate_id == paste0('ICES:', code), , drop = FALSE]
-  cache <- file.path(root, 'source_cache', 'lophius_piscatorius',
-    paste0('ices_white_anglerfish_', suffix, '_2026'))
+  cache <- file.path(root, 'source_cache', unit, paste0(unit, '_2026'))
   sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
   paths <- file.path(cache, sources$file)
   sha256_file <- function(path) {
@@ -50,7 +49,7 @@ for (suffix in c('78abd', '8c9a')) {
   )
 }
 
-shared <- file.path(root, 'source_cache/lophius_budegassa/ices_black_bellied_anglerfish_78abd_2026')
+shared <- file.path(root, 'source_cache/ices_black_bellied_anglerfish_78abd/ices_black_bellied_anglerfish_78abd_2026')
 shared_sources <- read.csv(file.path(shared, 'sources.csv'), stringsAsFactors = FALSE)
 shared_pdf <- file.path(shared, 'ICES_WGBIE_2026.pdf')
 stopifnot(

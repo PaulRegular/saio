@@ -1,7 +1,7 @@
 root <- "."
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "clupea_harengus/ices_her_27_irls_2026")
+cache <- file.path(root, "source_cache/ices_her_27_irls/ices_her_27_irls_2026")
 candidate_id <- "ICES:her.27.irls"
 stock_id <- "ices_her_27_irls"
 assessment_id <- "ices_her_27_irls_2026"

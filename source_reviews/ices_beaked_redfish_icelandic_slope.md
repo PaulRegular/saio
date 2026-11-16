@@ -57,5 +57,5 @@ No canonical stock, assessment, input, or output records were added.
   raw model outputs): https://data.hafro.is/assmt/readme.html
 
 Downloaded sources, retrieval dates, byte counts, and SHA-256 checksums are
-recorded in `source_cache/sebastes_mentella/ices_beaked_redfish_5a14_2026/sources.csv`;
+recorded in `source_cache/ices_beaked_redfish_icelandic_slope/ices_beaked_redfish_5a14_2026/sources.csv`;
 the cache is gitignored.

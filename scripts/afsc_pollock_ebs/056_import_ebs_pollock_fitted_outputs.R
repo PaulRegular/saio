@@ -3,7 +3,7 @@ source_revision <- "44e0cb0ac8698e1d3954273e8aaf760d7c76cba5"
 source_repo <- "https://github.com/noaa-afsc/EBS_pollock"
 report_url <- "https://www.npfmc.org/wp-content/PDFdocuments/SAFE/2024/EBSpollock.pdf"
 root <- "."
-cache <- file.path(root, "source_cache/gadus_chalcogrammus", assessment_id)
+cache <- file.path(root, "source_cache/afsc_pollock_ebs/afsc_pollock_ebs_2024")
 output_path <- file.path(root, "database", "outputs.csv")
 par_path <- file.path(cache, "pm_or.parxx")
 sel_path <- file.path(cache, "selvar24.dat")

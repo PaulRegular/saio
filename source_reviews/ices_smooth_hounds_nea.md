@@ -28,7 +28,7 @@ were added.
 
 ## Sources
 
-- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 21, printed pages 596–647. The full report PDF is cached under `source_cache/ices_dogfish_2025/`; its source manifest records retrieval date, revision, size and checksum.
+- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 21, printed pages 596–647. The full report PDF is cached under `source_cache/shared/ices_dogfish_2025/`; its source manifest records retrieval date, revision, size and checksum.
 
 The 2025 report says the `rfb` rule was first applied to this unit in 2023.
 The review uses the 2025 update as the current source and does not treat the

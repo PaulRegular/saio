@@ -12,7 +12,7 @@ ICES published 2026 advice and a source-data table with aggregate recruitment, S
 - [Final M9 fitted object](https://stockassessment.org/datadisk/stockassessment/userdirs/user3/tur4.m9/run/model.RData), corresponding data object and configuration under the same public `tur4.m9` run directory.
 - [ICES 2026 Advice View](https://asd.ices.dk/viewAdvice/5097) and [2026 Stock Assessment Graphs source table, key 22472](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22472).
 
-The report, fitted object, configuration, native input files and 2026 summary pages are cached locally under the gitignored `source_cache/scophthalmus_maximus/ices_turbot_north_sea_2025_benchmark/`. `manifest.csv` records retrieval URLs, UTC timestamps and SHA-256 checksums.
+The report, fitted object, configuration, native input files and 2026 summary pages are cached locally under the gitignored `source_cache/ck_ices_wgnssk_maximus_ns_4/ices_turbot_north_sea_2025_benchmark/`. `manifest.csv` records retrieval URLs, UTC timestamps and SHA-256 checksums.
 
 ## Recovered model inputs and assumptions
 

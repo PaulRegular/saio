@@ -8,7 +8,7 @@ The 2025 WKBNSCS benchmark selected SAM for advice, using ages 1–7 with age 7 
 
 ## Sources and cache
 
-URLs, retrieval date, pinned revision, and checksums for the source files are recorded in the ignored `source_cache/pleuronectes_platessa/ices_plaice_english_channel_7d_2026/manifest.csv`.
+URLs, retrieval date, pinned revision, and checksums for the source files are recorded in the ignored `source_cache/ck_ices_wgnssk_platessa_ns_7d/ices_plaice_english_channel_7d_2026/manifest.csv`.
 
 - [ICES 2026 advice for `ple.27.7d`](https://doi.org/10.17895/ices.advice.30932276)
 - [ICES SAG source data, assessment key 22484](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22484) · [SAG XML](https://sag.ices.dk/SAG_API/StockXmlDownload/22484)

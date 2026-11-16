@@ -124,7 +124,7 @@ not recovery of the exact input. The exact annual SPiCT object, software
 version/configuration, current index and its precision remain gaps.
 
 Sources are retained in the gitignored
-`source_cache/sebastes_norvegicus/ck_ices_afwg_norvegicus_deep1_2/`, with original URLs,
+`source_cache/ck_ices_afwg_norvegicus_deep1_2/ices_golden_redfish_northeast_arctic_2026/`, with original URLs,
 retrieval/verification dates and SHA-256 checksums. Older 2024 Gadget material
 remains cached for context and is not mixed into this assessment event.
 

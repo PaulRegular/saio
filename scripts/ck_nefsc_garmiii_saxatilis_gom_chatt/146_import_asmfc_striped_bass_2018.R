@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "morone_saxatilis/ck_nefsc_garmiii_saxatilis_gom_chatt")
+cache <- file.path(base, "source_cache/ck_nefsc_garmiii_saxatilis_gom_chatt/supporting_sources")
 assessment_id <- "asmfc_striped_bass_atlantic_2018"
 stock_id <- "ck_nefsc_garmiii_saxatilis_gom_chatt"
 report_url <- "https://repository.library.noaa.gov/view/noaa/23031/noaa_23031_DS1.pdf"

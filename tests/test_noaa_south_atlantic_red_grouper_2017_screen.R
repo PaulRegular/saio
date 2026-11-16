@@ -10,7 +10,7 @@ register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactor
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:10332', , drop = FALSE]
 gulf <- register[register$candidate_id == 'NOAA:10331', , drop = FALSE]
-cache <- file.path(root, 'source_cache/epinephelus_morio/noaa_red_grouper_sa_2017')
+cache <- file.path(root, 'source_cache/noaa_red_grouper_south_atlantic/noaa_red_grouper_south_atlantic_sedar53_2017')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

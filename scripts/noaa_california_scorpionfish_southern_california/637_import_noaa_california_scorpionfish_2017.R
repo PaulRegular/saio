@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "noaa_california_scorpionfish_southern_california"
 assessment_id <- "noaa_california_scorpionfish_southern_california_2017"
 candidate_id <- "NOAA:10461"
-cache <- file.path(root, "source_cache", "scorpaena_guttata/noaa_california_scorpionfish_southern_california_2017")
+cache <- file.path(root, "source_cache/noaa_california_scorpionfish_southern_california/noaa_california_scorpionfish_southern_california_2017")
 manifest_path <- file.path(root, "provenance/noaa_california_scorpionfish_southern_california_2017/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 .libPaths(c(file.path(root, "source_cache", "r-lib"), .libPaths()))

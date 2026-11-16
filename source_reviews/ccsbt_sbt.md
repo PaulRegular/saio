@@ -40,4 +40,4 @@ This stock is recorded as one partially curated assessment. Its age-data eligibi
 - [Public sbt model data documentation](https://www.quantifish.co.nz/sbt/articles/data.html)
 - [CCSBT OMMP14 information paper on model development and data](https://www.ccsbt.org/system/files/2024-05/OMMP14_info01_Report_2023_OMWorkshop_Tokyo.pdf)
 
-The three cached PDFs, source URLs, retrieval dates and SHA-256 checksums are recorded in provenance/ccsbt_sbt_2026/sources.csv. Cached PDFs are stored under the ignored source_cache/thunnus_maccoyii/ccsbt_sbt_2026/ folder.
+The three cached PDFs, source URLs, retrieval dates and SHA-256 checksums are recorded in provenance/ccsbt_sbt_2026/sources.csv. Cached PDFs are stored under the ignored source_cache/ccsbt_sbt/ccsbt_sbt_2026/ folder.

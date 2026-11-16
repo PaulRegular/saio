@@ -11,7 +11,7 @@ outputs <- read.csv('database/outputs.csv', stringsAsFactors = FALSE)
 unit_summary <- candidate_units()
 unit <- unit_summary[!is.na(unit_summary$candidate_unit_id) &
   unit_summary$candidate_unit_id == 'dfo_american_eel_maritimes', , drop = FALSE]
-cache <- 'source_cache/anguilla_rostrata/dfo_american_eel_maritimes_2026'
+cache <- 'source_cache/dfo_american_eel_maritimes/dfo_american_eel_maritimes_2026'
 manifest_path <- file.path(cache, 'sources.csv')
 review_path <- 'source_reviews/dfo_american_eel_maritimes.md'
 

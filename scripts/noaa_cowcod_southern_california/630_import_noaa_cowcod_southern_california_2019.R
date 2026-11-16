@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "noaa_cowcod_southern_california"
 assessment_id <- "noaa_cowcod_southern_california_2019"
 candidate_id <- "NOAA:10443"
-cache <- file.path(root, "source_cache/sebastes_levis/noaa_cowcod_southern_california_2019")
+cache <- file.path(root, "source_cache/noaa_cowcod_southern_california/noaa_cowcod_southern_california_2019")
 manifest_path <- file.path(root, "provenance/noaa_cowcod_southern_california_2019/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 .libPaths(c(file.path(root, "source_cache", "r-lib"), .libPaths()))

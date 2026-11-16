@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache/balistes_vetula/noaa_caribbean_queen_triggerfish_2024')
+cache <- file.path(root, 'source_cache/shared/noaa_caribbean_queen_triggerfish_2024')
 review_date <- '2026-11-02'
 
 spec <- data.frame(

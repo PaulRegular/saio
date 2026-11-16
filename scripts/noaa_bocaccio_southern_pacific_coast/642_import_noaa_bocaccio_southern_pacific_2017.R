@@ -1,5 +1,5 @@
 root <- "."
-source_dir <- file.path(root, "source_cache/sebastes_paucispinis/noaa_bocaccio_southern_pacific_2017")
+source_dir <- file.path(root, "source_cache/noaa_bocaccio_southern_pacific_coast/noaa_bocaccio_southern_pacific_2017")
 model_dir <- file.path(source_dir, "bocaccio_2017_model_files")
 assessment_id <- "noaa_bocaccio_southern_pacific_2017"
 stock_id <- "noaa_bocaccio_southern_pacific_coast"

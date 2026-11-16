@@ -1,7 +1,7 @@
 root <- "."
 assessment_id <- "noaa_vermilion_snapper_gulf_sedar67_2020"
 candidate_id <- "NOAA:10256"
-source_dir <- "source_cache/rhomboplites_aurorubens/noaa_vermilion_snapper_gulf_sedar67_2020"
+source_dir <- "source_cache/noaa_vermilion_snapper_gulf/noaa_vermilion_snapper_gulf_sedar67_2020"
 report_url <- paste0(
   "https://sedarweb.org/documents/",
   "sedar-67-gulf-of-mexico-vermilion-snapper-final-stock-assessment-report/"

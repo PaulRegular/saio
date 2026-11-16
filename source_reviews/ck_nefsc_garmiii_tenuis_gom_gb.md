@@ -40,4 +40,4 @@ The public run archive did not include a numerical ASAP .rep output. No full fit
 - [ASAP3 technical documentation and printed implementation](https://raw.githubusercontent.com/cmlegault/ASAPplots/75adfd7cf889a5a2b66b6ef0a4dbe22b51aa2084/pdf/Technical_Documentation_for_ASAP3.pdf)
 - [ASAP3 user manual](https://raw.githubusercontent.com/cmlegault/ASAPplots/75adfd7cf889a5a2b66b6ef0a4dbe22b51aa2084/pdf/User_Manual_for_ASAP3.pdf)
 
-The local, gitignored source cache and checksums are recorded in source_cache/urophycis_tenuis/ck_nefsc_garmiii_tenuis_gom_gb/manifest.csv.
+The local, gitignored source cache and checksums are recorded in source_cache/ck_nefsc_garmiii_tenuis_gom_gb/nefsc_white_hake_2025/manifest.csv.

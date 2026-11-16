@@ -39,6 +39,6 @@ aggregate assessment output for other comparisons.
 - NOAA Stock SMART source snapshot: `source_cache/shared/noaa_stocksmart/stock_assessment_summary.rda`, assessment 13892.
 
 The official SAFE chapter, SSC report, and meeting page are cached in the
-gitignored `source_cache/sebastes_ruberrimus/noaa_goa_yelloweye_2024/`. Their retrieval
+gitignored `source_cache/noaa_goa_yelloweye_2024/source_material/`. Their retrieval
 dates, URLs, byte lengths, and SHA-256 checksums are recorded in
 `sources.csv`.

@@ -2,7 +2,7 @@ source("scripts/shared/source_manifest_io.R", local = TRUE)
 
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "scomber_japonicus/noaa_pacific_mackerel_2025")
+cache <- file.path(root, "source_cache/noaa_pacific_mackerel_pacific_coast/noaa_pacific_mackerel_2025")
 model_files <- file.path(cache, "Mackerel_2023_Model_Files")
 assessment_2023 <- "noaa_pacific_mackerel_2023"
 assessment_2025 <- "noaa_pacific_mackerel_2025"

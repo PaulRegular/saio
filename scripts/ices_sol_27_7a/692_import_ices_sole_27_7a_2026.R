@@ -11,7 +11,7 @@ advice_url <- "https://doi.org/10.17895/ices.advice.30932405"
 framework_url <- "https://doi.org/10.17895/ices.pub.25471987.v1"
 repo_url <- "https://github.com/ices-advice/2026_sol.27.7a/tree/bff4518e75378685700c849a24c5ba9c86e5a575/2026_sol.27.7a_assessment"
 sag_url <- "https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22641"
-cache <- file.path(root, "source_cache/solea_solea/ices_sol_27_7a_2026")
+cache <- file.path(root, "source_cache/ices_sol_27_7a/ices_sol_27_7a_2026")
 provenance <- file.path(root, "provenance", assessment_id, "sources.csv")
 manifest <- read.csv(provenance, stringsAsFactors = FALSE,
   colClasses = "character", check.names = FALSE)

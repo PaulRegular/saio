@@ -8,7 +8,7 @@ stock_id <- "dfo_yellowtail_bc"
 report_url <- "https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41294804.pdf"
 native_url <- paste0("https://github.com/pbs-software/pbs-synth/tree/",
   "16f1d4368ad7d3e854219ca1c2d9d6353252c861/models/input/2024/YTR/BC/Base/B1.R02v2/02.01")
-cache <- file.path("source_cache/sebastes_flavidus", id)
+cache <- file.path("source_cache/dfo_yellowtail_bc/dfo_yellowtail_bc_2024")
 manifest <- read.csv(file.path("provenance", id, "sources.csv"),
   stringsAsFactors = FALSE, na.strings = "")
 paths <- setNames(file.path(cache, manifest$file), manifest$file)

@@ -35,7 +35,7 @@ No canonical stock, assessment, input or output rows were added.
 
 The 2026 advice, graph, source-data page and assessment XML are cached under the
 gitignored
-`source_cache/ices_alfonsinos_nea_2026/`
+`source_cache/ices_alfonsinos_nea/ices_alfonsinos_nea_2026/`
 folder. Its `sources.csv` manifest records URLs, retrieval date, revisions and
 SHA-256 checksums.
 

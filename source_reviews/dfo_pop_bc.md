@@ -11,7 +11,7 @@ three new stock cases. The production coastwide run is **R21v3 / 21.01**,
 Stock Synthesis 3.30.20, with 2,000 retained posterior draws. The
 [public production directory](https://github.com/pbs-software/pbs-synth/tree/16f1d4368ad7d3e854219ca1c2d9d6353252c861/models/input/2023/POP/CST/Base/R21v3/21.01)
 contains inputs, rather than those fitted draws. The report and
-native files are cached under `source_cache/sebastes_alutus/dfo_pop_bc/`; the pbs-synth
+native files are cached under `source_cache/dfo_pop_bc/dfo_pop_bc_2023/`; the pbs-synth
 revision is `16f1d4368ad7d3e854219ca1c2d9d6353252c861`.
 Use the validated 310-page Waves PDF. Two earlier DFO/publications downloads
 were HTML responses despite their PDF filenames and are not assessment evidence.
@@ -90,7 +90,7 @@ PBSdata are biological age/maturity observations. PBStools' `pop.rep` is a
 legacy example with a different age/year structure, not this SS3 production
 assessment. Neither is a substitute for the 2023 fitted outputs. Inventories,
 branch/release responses and supporting files are cached in
-`source_cache/sebastes_alutus/dfo_pop_bc/output_search/`, with URLs, revisions, retrieval dates
+`source_cache/dfo_pop_bc/dfo_pop_bc_2023/output_search/`, with URLs, revisions, retrieval dates
 and checksums in the existing manifest.
 
 The available constant sex-specific M, 2024 boundary biomass and terminal

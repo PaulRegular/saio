@@ -68,7 +68,7 @@ and the pooled indices lack a single documented fractional sampling time. Its
 distinct SSB definition and
 figure-based age inputs also limit direct comparison. Preserve the corrected
 production report and supporting working papers in the ignored local cache at
-`source_cache/epinephelus_morio/noaa_red_grouper_gom_2025/`; `sources.csv` records each
+`source_cache/noaa_red_grouper_gom/noaa_red_grouper_gom_sedar88_2025/`; `sources.csv` records each
 URL, retrieval date, revision, size and SHA-256.
 
 The partial import records 1,083 source input rows, 12 assessment assumptions,

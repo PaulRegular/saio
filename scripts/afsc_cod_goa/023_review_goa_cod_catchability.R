@@ -1,6 +1,6 @@
 # Record verified catchability controls from the official native configuration.
 root <- "."
-cache <- file.path(root, "source_cache/gadus_macrocephalus/afsc_cod_goa_2026")
+cache <- file.path(root, "source_cache/afsc_cod_goa/afsc_cod_goa_2026")
 control <- readLines(file.path(cache, "2025_mgmt_24.0_Model24_0.ctl"), warn = FALSE)
 parameter <- function(label) {
   line <- control[endsWith(trimws(control), paste0("#_", label))]

@@ -1,7 +1,7 @@
 assessment_id <- "ices_saithe_northeast_arctic_2026"
 stock_id <- "ck_ices_afwg_virens_nea_1_2"
 root <- "."
-cache_dir <- file.path(root, "source_cache", "pollachius_virens/ices_saithe_northeast_arctic_2026")
+cache_dir <- file.path(root, "source_cache/ck_ices_afwg_virens_nea_1_2/ices_saithe_northeast_arctic_2026")
 run_dir <- file.path(cache_dir, "NEA_saithe_2026_v2")
 
 required_files <- file.path(run_dir, c(

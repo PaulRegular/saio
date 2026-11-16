@@ -12,7 +12,7 @@ if (is.na(old_dry_run)) Sys.unsetenv('TAM_SOURCE_DRY_RUN') else Sys.setenv('TAM_
 register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:11342', , drop = FALSE]
-cache <- file.path(root, 'source_cache/lutjanus_analis/noaa_southeastern_us_mutton_snapper_sedar79_2024')
+cache <- file.path(root, 'source_cache/noaa_southeastern_us_mutton_snapper/noaa_southeastern_us_mutton_snapper_sedar79_2024')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

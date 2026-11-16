@@ -10,7 +10,7 @@ base <- paste0("https://raw.githubusercontent.com/pbs-software/pbs-synth/", revi
 native <- sub("raw.githubusercontent.com", "github.com", base, fixed = TRUE)
 native <- sub(paste0("/", revision, "/"), paste0("/tree/", revision, "/"), native, fixed = TRUE)
 report <- "https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41218875.pdf"
-cache <- file.path("source_cache/sebastes_pinniger", stock_id)
+cache <- file.path("source_cache/dfo_canary_bc/supporting_sources")
 cache_pacific_source(stock_id, report, "research_2023_070.pdf")
 cache_pacific_source(stock_id, "https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41097312.pdf",
                      "advice_2023_002.pdf")

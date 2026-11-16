@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/mycteroperca_phenax/noaa_scamp_sedar68oa')
+cache <- file.path(root, 'source_cache/noaa_scamp_sedar68oa_2022/noaa_scamp_sedar68oa')
 candidate_path <- file.path(root, 'database/candidates.csv')
 review_path <- file.path(root, 'source_reviews/noaa_scamp_sedar68oa_2022.md')
 manifest_path <- file.path(cache, 'manifest.csv')
@@ -148,7 +148,7 @@ reviews <- list(
       'Yellowmouth Grouper jointly because of species-identification concerns; do not treat',
       'the complex as Scamp-only. Stock SMART lists 2025 metadata, but NOAA FY2025 Q4 status',
       'and the 2025 projection report point to the 2022 full assessment. Source PDFs are in',
-      'the ignored source_cache/mycteroperca_phenax/noaa_scamp_sedar68oa/ with URL and checksum provenance.')),
+      'the ignored source_cache/noaa_scamp_sedar68oa_2022/noaa_scamp_sedar68oa/ with URL and checksum provenance.')),
   list(candidate_unit_id = candidate_units[2], match_status = 'new',
     screening_status = 'screened', eligibility = 'unresolved', import_status = 'not_started',
     catch_age_evidence = paste(
@@ -189,7 +189,7 @@ reviews <- list(
       'assesses Scamp and Yellowmouth Grouper because the species can be difficult to',
       'distinguish; preserve this complex identity. The assessment terminal year is 2021;',
       '2023 is the SSC review/output year. Sources are cached under',
-      'source_cache/mycteroperca_phenax/noaa_scamp_sedar68oa/ with URL and checksum provenance.'))
+      'source_cache/noaa_scamp_sedar68oa_2022/noaa_scamp_sedar68oa/ with URL and checksum provenance.'))
 )
 
 replace_csv_row <- function(path, row_index, data) {
@@ -243,6 +243,6 @@ source_review <- c(
   '- [South Atlantic operational assessment report](https://sedarweb.org/documents/sedar-68oa-south-atlantic-scamp-operational-assessment-final-stock-assessment-report/).',
   '- [South Atlantic age-composition working paper, SEDAR68OA-WP-05](https://sedarweb.org/documents/sedar68oa-wp05south-atlantic-u-s-scamp-mycteroperca-phenax-age-and-length-composition-from-the-recreational-fisheries/).',
   '- [South Atlantic SSC meeting output, July 2023](https://sedarweb.org/documents/sedar-68oa-south-atlantic-scamp-july-2023-ssc-meeting-output/).', '',
-  'All eight PDFs are cached locally under the ignored `source_cache/mycteroperca_phenax/noaa_scamp_sedar68oa/` directory. Its `manifest.csv` records source URLs, document revisions, retrieval time, byte size and SHA-256 checksums. These are discovery records only; no canonical stock, assessment, input or output data were added.')
+  'All eight PDFs are cached locally under the ignored `source_cache/noaa_scamp_sedar68oa_2022/noaa_scamp_sedar68oa/` directory. Its `manifest.csv` records source URLs, document revisions, retrieval time, byte size and SHA-256 checksums. These are discovery records only; no canonical stock, assessment, input or output data were added.')
 writeLines(source_review, review_path, useBytes = TRUE)
 cat('Screened NOAA Stock SMART Scamp rows against the Gulf and South Atlantic SEDAR 68OA sources.\n')

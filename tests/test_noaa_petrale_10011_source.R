@@ -141,7 +141,7 @@ manifest <- read.csv("provenance/noaa_petrale_sole_pacific_coast/sources.csv",
   stringsAsFactors = FALSE, check.names = FALSE)
 stopifnot(nrow(manifest) == 7L)
 for (j in seq_len(nrow(manifest))) {
-  path <- file.path("source_cache/eopsetta_jordani/noaa_petrale_sole_pacific_coast_2023", manifest$file[j])
+  path <- file.path("source_cache/noaa_petrale_sole_pacific_coast/noaa_petrale_sole_pacific_coast_2023", manifest$file[j])
   stopifnot(file.exists(path),
     file.info(path)$size == manifest$bytes[j],
     toupper(unname(tools::sha256sum(path))) == manifest$sha256[j])

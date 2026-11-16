@@ -39,4 +39,4 @@ added.
 - ICES, [2025 advice for seabass in divisions 8.c and 9.a](https://asd.ices.dk/viewAdvice/3920), assessment key 19602; [advice DOI](https://doi.org/10.17895/ices.advice.27202533).
 - ICES, [2025 Stock Assessment Graphs](https://standardgraphs.ices.dk/ViewCharts.aspx?key=19602), [source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=19602), and [XML](https://sag.ices.dk/SAG_API/StockXmlDownload/19602).
 - ICES, [2023 Grant agreement overview of advice categories](https://www.ices.dk/about-ICES/Documents/Cooperation%20agreements/EU/2023_Grant_DGMARE-ICES_web.pdf), which describes Category 5 as landings-only.
-- Gitignored `source_cache/dicentrarchus_labrax/ices_seabass_8c9a_2025/sources.csv` records retrieval date, file sizes, URLs, and SHA-256 checksums for cached sources.
+- Gitignored `source_cache/ices_seabass_8c9a/ices_seabass_8c9a_2025/sources.csv` records retrieval date, file sizes, URLs, and SHA-256 checksums for cached sources.

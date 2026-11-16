@@ -8,8 +8,8 @@ write_biological_assumptions_only <- "--write-biological-assumptions" %in% args
 dry_run <- !("--write" %in% args || write_assumptions_only || write_biological_assumptions_only)
 .libPaths(c(file.path(root, "source_cache", "R-library"), .libPaths()))
 
-assessment_pdf <- file.path(root, "source_cache", "macruronus_novaezelandiae/mpi_hoki_hok1_2025", "FAR-2026-04-Assessment-of-hoki-in-2025.pdf")
-input_pdf <- file.path(root, "source_cache", "macruronus_novaezelandiae/mpi_hoki_hok1_2025", "FAR-2025-42-Hoki-input-data.pdf")
+assessment_pdf <- file.path(root, "source_cache/mpi_hoki_hok1/mpi_hoki_hok1_2025", "FAR-2026-04-Assessment-of-hoki-in-2025.pdf")
+input_pdf <- file.path(root, "source_cache/mpi_hoki_hok1/mpi_hoki_hok1_2025", "FAR-2025-42-Hoki-input-data.pdf")
 manifest <- read.csv(file.path(root, "provenance/mpi_hoki_hok1_2025/sources.csv"), stringsAsFactors = FALSE)
 if (!requireNamespace("pdftools", quietly = TRUE) || !all(file.exists(c(assessment_pdf, input_pdf)))) {
   stop("Install pdftools and cache both verified Hoki reports before importing.", call. = FALSE)

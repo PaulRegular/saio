@@ -78,7 +78,7 @@ review <- list(
     '453e1166e1bf83b9062fe228b93f2225b1cbe1aa contains proposed runs ending in 2024, not',
     'run-matched final 2026 files. The final-report-linked Appendix E attachment is marked',
     'draft; confirm its correspondence to the final model before importing values. See the',
-    'source review and ignored source_cache/glyptocephalus_zachirus/noaa_goa_rex_2026/sources.csv.'
+    'source review and ignored source_cache/noaa_goa_rex_sole/noaa_goa_rex_sole_2026/sources.csv.'
   )
 )
 

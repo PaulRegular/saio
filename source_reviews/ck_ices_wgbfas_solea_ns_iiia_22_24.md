@@ -26,7 +26,7 @@ estimates for 2025 incomparable with earlier assessment estimates.
 
 Retrieved 2026-10-22. The report PDFs, SAG pages, model/data objects, model
 configuration, and source data files are cached locally under the gitignored
-`source_cache/solea_solea/ices_sole_20_24_2025/`. Its
+`source_cache/ck_ices_wgbfas_solea_ns_iiia_22_24/ices_sole_20_24_2025/`. Its
 `manifest.csv` records each cached source file's URL and SHA-256 checksum;
 `SOURCES.md` records the principal checksums and retrieval details. The fitted
 object identifies stockassessment version 0.12.0 and upstream SHA
@@ -102,7 +102,7 @@ record.
 - The 2026 report names the final SAM run sole20_24_2026_new. A request for its run/model.RData from the public SAM server failed with a connection reset, so no native input, model, or fitted object was available.
 
 The 2026 report, stock annex, and advice PDF are cached under the gitignored
-source_cache/solea_solea/ck_ices_wgbfas_solea_ns_iiia_22_24/assessment_2026/.
+source_cache/ck_ices_wgbfas_solea_ns_iiia_22_24/ices_sole_20_24_2026_summary/.
 That folder's manifest.csv records the URLs, retrieval date, and SHA-256
 checksums.
 

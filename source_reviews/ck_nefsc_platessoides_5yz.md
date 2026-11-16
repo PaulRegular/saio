@@ -75,9 +75,9 @@ Run29F4 outputs.
 ## Source cache
 
 The primary reports, native files, and review materials are cached under the
-gitignored `source_cache/hippoglossoides_platessoides/nefsc_american_plaice_5yz_2022_run29f4/` and
-`source_cache/nefsc_american_plaice_5yz_2024/` folders. The local
-`source_cache/hippoglossoides_platessoides/nefsc_american_plaice_5yz_2022_run29f4/manifest.csv` records file sizes,
+gitignored `source_cache/ck_nefsc_platessoides_5yz/nefsc_american_plaice_5yz_2022_run29f4/` and
+`source_cache/ck_nefsc_platessoides_5yz/nefsc_american_plaice_5yz_2024_mt/` folders. The local
+`source_cache/ck_nefsc_platessoides_5yz/nefsc_american_plaice_5yz_2022_run29f4/manifest.csv` records file sizes,
 SHA-256 checksums, local file dates, source URLs, and the pinned repository
 revision for the native model objects. Local timestamps are provenance, not
 publication dates. The direct endpoint for the cached 2024 archive was not

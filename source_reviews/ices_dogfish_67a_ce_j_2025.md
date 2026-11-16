@@ -33,7 +33,7 @@ were added.
 
 ## Sources
 
-- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 25.9.3, tables 25.9–25.10 and figures 25.13–25.15. The report PDF is downloaded from the Thünen repository at <https://literatur.thuenen.de/digbib_extern/dn070539.pdf> and cached locally under `source_cache/ices_dogfish_2025/`.
+- [ICES WGEF 2025 report, DOI 10.17895/ices.pub.30137623](https://doi.org/10.17895/ices.pub.30137623), section 25.9.3, tables 25.9–25.10 and figures 25.13–25.15. The report PDF is downloaded from the Thünen repository at <https://literatur.thuenen.de/digbib_extern/dn070539.pdf> and cached locally under `source_cache/shared/ices_dogfish_2025/`.
 - [ICES Standard Graphs source data, assessment key 21039](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21039).
 
 The ignored `sources.csv` manifest records both cached sources' retrieval

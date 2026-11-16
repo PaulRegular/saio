@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/isurus_oxyrinchus/noaa_shortfin_mako_north_atlantic_2026')
+cache <- file.path(root, 'source_cache/noaa_north_atlantic_shortfin_mako/noaa_shortfin_mako_north_atlantic_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 review_date <- '2026-11-01'
 

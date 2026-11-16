@@ -106,7 +106,7 @@ builder revision therefore remains unverified. All three completeness
 statuses remain **partial**; the missing native arrays prevent exact reconstruction of the source likelihood.
 
 Sources, checksums, pinned revisions and verification logs are cached in
-`source_cache/ammodytes_dubius/ck_ices_hawg_dubius_ns/2026_san.sa.3r/`. The manifest references
+`source_cache/ck_ices_hawg_dubius_ns/supporting_sources/2026_san.sa.3r/`. The manifest references
 the shared HAWG report, benchmark and software rather than duplicating them.
 
 ## Validation

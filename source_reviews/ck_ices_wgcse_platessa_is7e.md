@@ -117,7 +117,7 @@ were revised before the 2025 production advice, and the index revision also
 affects earlier standardized values.
 
 Official PDFs, pinned native scripts and provenance are cached under the
-gitignored `source_cache/pleuronectes_platessa/ck_ices_wgcse_platessa_is7e/`, with URLs, retrieval
+gitignored `source_cache/ck_ices_wgcse_platessa_is7e/ices_plaice_western_channel_7e_2025/`, with URLs, retrieval
 dates, checksums and repository revision in the manifest. The 2026 chapter
 is retained solely to establish current monitoring/advice status.
 

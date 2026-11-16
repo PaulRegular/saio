@@ -26,7 +26,7 @@ unit <- units[!is.na(units$candidate_unit_id) &
 stopifnot(nrow(unit) == 1L, unit$inventory_entries == 1L,
   unit$screening_status == 'screened', unit$eligibility == 'ineligible')
 
-cache <- file.path(root, 'source_cache/lamna_nasus/noaa_northwest_atlantic_porbeagle_2020')
+cache <- file.path(root, 'source_cache/noaa_northwest_atlantic_porbeagle/noaa_northwest_atlantic_porbeagle_2020')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 files <- c('ICCAT_2020_Porbeagle_assessment_meeting.pdf',

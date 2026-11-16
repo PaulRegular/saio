@@ -36,4 +36,4 @@ The public repository reads the revised maturity ogive from `mo.txt`, but the ca
 - [ICES Standard Graphs, advice key 22641](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22641)
 - [Pinned assessment repository](https://github.com/ices-advice/2026_sol.27.7a/tree/bff4518e75378685700c849a24c5ba9c86e5a575/2026_sol.27.7a_assessment)
 
-Cached source files, retrieval dates, revisions, byte sizes, and SHA-256 checksums are listed in `provenance/ices_sol_27_7a_2026/sources.csv`; local files are under the ignored `source_cache/solea_solea/ices_sol_27_7a_2026/` directory.
+Cached source files, retrieval dates, revisions, byte sizes, and SHA-256 checksums are listed in `provenance/ices_sol_27_7a_2026/sources.csv`; local files are under the ignored `source_cache/ices_sol_27_7a/ices_sol_27_7a_2026/` directory.

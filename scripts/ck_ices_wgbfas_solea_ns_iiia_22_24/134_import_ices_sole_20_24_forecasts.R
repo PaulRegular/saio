@@ -1,6 +1,6 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
-cache <- file.path(base, "source_cache", "solea_solea/ices_sole_20_24_2025")
+cache <- file.path(base, "source_cache/ck_ices_wgbfas_solea_ns_iiia_22_24/ices_sole_20_24_2025")
 database <- file.path(base, "database")
 assessment_id <- "ices_sole_20_24_2025"
 report_url <- "https://literatur.thuenen.de/digbib_extern/dn069788.pdf"

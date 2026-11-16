@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "clupea_harengus/ices_herring_north_sea_2026")
+cache <- file.path(root, "source_cache/ices_herring_north_sea/ices_herring_north_sea_2026")
 assessment_id <- "ices_herring_north_sea_2026"
 report <- "https://doi.org/10.17895/ices.pub.31424315"
 source_path <- file.path(cache, "North_Sea_herring_chapter.txt")

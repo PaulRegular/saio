@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache_dir <- file.path(root, 'source_cache/pristipomoides_filamentosus/noaa_mhi_deep7_2024')
+cache_dir <- file.path(root, 'source_cache/noaa_mhi_deep7_2024/source_material')
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),
@@ -97,7 +97,7 @@ review <- list(
     'https://apps-st.fisheries.noaa.gov/stocksmart', sep = '; '),
   review_date = '2026-10-30',
   decision_reason = 'The accepted assessment is an aggregate JABBA surplus-production model. Although the report also evaluates an Opakapaka-only age-structured Stock Synthesis model, its documented data inputs are catch, aggregate indices, length compositions, and weight compositions, not catch-at-age or observed age compositions. The assessment therefore does not meet the age-disaggregated input requirement.',
-  notes = paste('NOAA Stock SMART PIFSC ID 11827 is the Main Hawaiian Islands Deep 7 multispecies management complex; the 2024 assessment is ID 13362 and uses data through 2023. The seven species are one assessment complex, not seven candidate units. The report discusses an Opakapaka-only model separately; this component is not conflated with the complex or NOAA:12442, the separate Opakapaka candidate row. The NOAA landing page and WPSAR chair review are cached in source_cache/pristipomoides_filamentosus/noaa_mhi_deep7_2024/sources.csv. The primary report PDF is public at the cited NOAA repository URL, but a local download attempt returned HTTP 403 and was not retained. No canonical stock or numerical assessment records were added.')
+  notes = paste('NOAA Stock SMART PIFSC ID 11827 is the Main Hawaiian Islands Deep 7 multispecies management complex; the 2024 assessment is ID 13362 and uses data through 2023. The seven species are one assessment complex, not seven candidate units. The report discusses an Opakapaka-only model separately; this component is not conflated with the complex or NOAA:12442, the separate Opakapaka candidate row. The NOAA landing page and WPSAR chair review are cached in source_cache/noaa_mhi_deep7_2024/source_material/sources.csv. The primary report PDF is public at the cited NOAA repository URL, but a local download attempt returned HTTP 403 and was not retained. No canonical stock or numerical assessment records were added.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

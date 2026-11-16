@@ -7,7 +7,7 @@ candidate_id <- 'ICES:ple.27.89a'
 candidate <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 candidate <- candidate[candidate$candidate_id == candidate_id, , drop = FALSE]
-cache <- file.path(root, 'source_cache/pleuronectes_platessa/ices_plaice_89a_2025')
+cache <- file.path(root, 'source_cache/ices_plaice_89a/ices_plaice_89a_2025')
 sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 paths <- file.path(cache, sources$file)
 advice <- paste(readLines(paths[2L], warn = FALSE, encoding = 'UTF-8'), collapse = ' ')

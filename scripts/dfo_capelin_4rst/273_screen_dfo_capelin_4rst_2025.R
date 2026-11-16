@@ -70,7 +70,7 @@ review <- list(
     'also lists the last full assessment as 2024, so retain that date-field',
     'inconsistency in mind. Research Document 2026/007 covers the 2022-2023',
     'assessment and is not a replacement for detailed 2025-run inputs. Its PDF is',
-    'cached under source_cache/mallotus_villosus/dfo_capelin_4rst/. A local request for',
+    'cached under source_cache/dfo_capelin_4rst/source_material/. A local request for',
     'the 2026/014 PDF returned HTML rather than a PDF.'
   )
 )

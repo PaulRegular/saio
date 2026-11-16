@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "noaa_gray_snapper_gulf"
 assessment_id <- "noaa_gray_snapper_gulf_sedar75_2022"
 candidate_id <- "NOAA:10221"
-cache_name <- "lutjanus_griseus/noaa_gray_snapper_gulf_sedar75_2022"
+cache_name <- "noaa_gray_snapper_gulf/noaa_gray_snapper_gulf_sedar75_2022"
 report_url <- "https://sedarweb.org/assessments/sedar-75/"
 
 source(file.path(root, "scripts/shared/pacific_tables.R"))

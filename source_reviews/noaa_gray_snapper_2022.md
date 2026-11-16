@@ -8,7 +8,7 @@
 
 The assessment unit extends from the Texas/Mexico border east to the Atlantic side of Monroe County, including Florida Bay and adjacent fishing areas. It is distinct from the South Atlantic gray snapper unit. SEDAR 75 is the latest completed detailed operational assessment located for this Gulf unit; the next external update was scheduled for 2027, not completed at this review.
 
-The final assessment report and its supporting landings, life-history, and abundance-index papers are cached locally under `source_cache/lutjanus_griseus/noaa_gray_snapper_gulf_sedar75_2022/`. Their URLs, retrieval details, and SHA-256 hashes are recorded in `provenance/noaa_gray_snapper_gulf_sedar75_2022/sources.csv`.
+The final assessment report and its supporting landings, life-history, and abundance-index papers are cached locally under `source_cache/noaa_gray_snapper_gulf/noaa_gray_snapper_gulf_sedar75_2022/`. Their URLs, retrieval details, and SHA-256 hashes are recorded in `provenance/noaa_gray_snapper_gulf_sedar75_2022/sources.csv`.
 
 ## Inputs recovered
 

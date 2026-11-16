@@ -108,4 +108,4 @@ inputs and native codes.
   metadata snapshot cached with the discovery inventory.
 
 Reviewed 2026-11-10. The source files and checksums are recorded in the ignored
-local cache at `source_cache/rhomboplites_aurorubens/noaa_vermilion_snapper_gulf_sedar67_2020/sources.csv`.
+local cache at `source_cache/noaa_vermilion_snapper_gulf/noaa_vermilion_snapper_gulf_sedar67_2020/sources.csv`.

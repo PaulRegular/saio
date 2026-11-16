@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/sebastes_ruberrimus/noaa_goa_yelloweye_2024')
+cache <- file.path(root, 'source_cache/noaa_goa_yelloweye_2024/source_material')
 candidate_path <- file.path(root, 'database/candidates.csv')
 id <- 'NOAA:10425'
 unit_id <- 'noaa_goa_yelloweye_seo'

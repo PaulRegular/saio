@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'ices_turbot_3a_2026')
+cache <- file.path(root, 'source_cache/ices_turbot_3a/ices_turbot_3a_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 source_review_path <- file.path(root, 'source_reviews/ices_turbot_3a.md')
 manifest_path <- file.path(cache, 'manifest.csv')
@@ -107,7 +107,7 @@ review <- list(
   notes = paste('ICES WGNSSK 2026 reports a connection between Division 3.a and adjacent North Sea and',
     'Baltic populations and says genetic stock identity is still being evaluated. This biological',
     'boundary caveat does not alter the current ICES advice unit. Reviewed assessment chapter, advice',
-    'PDF and Standard Graphs source data are cached under source_cache/ices_turbot_3a_2026/.')
+    'PDF and Standard Graphs source data are cached under source_cache/ices_turbot_3a/ices_turbot_3a_2026/.')
 )
 for (column in names(review)) candidates[[column]][i] <- review[[column]]
 
@@ -147,7 +147,7 @@ source_review <- c(
   '- [ICES 2026 Advice View](https://asd.ices.dk/viewAdvice/5098), stock key 22416; catch advice for 2027.',
   '- [ICES Standard Graphs source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22416), stock key 22416.',
   '',
-  'The chapter, advice PDF and Standard Graphs source page are cached in the gitignored `source_cache/ices_turbot_3a_2026/`; `manifest.csv` records source URLs, retrieval time and SHA-256 checksums.'
+  'The chapter, advice PDF and Standard Graphs source page are cached in the gitignored `source_cache/ices_turbot_3a/ices_turbot_3a_2026/`; `manifest.csv` records source URLs, retrieval time and SHA-256 checksums.'
 )
 writeLines(source_review, source_review_path, useBytes = TRUE)
 replace_csv_row(candidate_path, i, candidates[i, , drop = FALSE])

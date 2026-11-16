@@ -3,7 +3,7 @@ source("scripts/shared/candidate_reports.R", local = TRUE)
 root <- '.'
 candidate_id <- 'NOAA:10559'
 unit_id <- 'noaa_goa_dusky'
-cache <- file.path(root, 'source_cache/sebastes_variabilis/noaa_goa_dusky_rockfish_2024')
+cache <- file.path(root, 'source_cache/noaa_goa_dusky_rockfish/noaa_goa_dusky_rockfish_2024')
 register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
 row <- register[register$candidate_id == candidate_id, , drop = FALSE]

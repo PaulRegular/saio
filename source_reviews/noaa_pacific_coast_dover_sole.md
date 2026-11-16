@@ -6,7 +6,7 @@ SAIO stock `noaa_pacific_coast_dover_sole`.
 
 NOAA Stock SMART ID 10022 is *Microstomus pacificus* assessed as one U.S. West Coast management unit. It is distinct from Dover sole in Canadian waters. The selected record is the 2021 production benchmark, fitted through 2020; the assessment materials reviewed show later harvest specifications continuing to use this benchmark, with no later full assessment located for this unit.
 
-The assessment report, 2021 STAR review, and run-matched Stock Synthesis model archive are cached under `source_cache/microstomus_pacificus/noaa_pacific_coast_dover_sole_2021/`. `sources.csv` records their source URLs, retrieval dates, byte counts, and SHA-256 checksums. The native archive identifies Stock Synthesis 3.30.16.02 and the exact `2021_dover.dat`, `2021_dover.ctl`, `Report.sso`, and `ss_summary.sso` used here. The report records final phase 6, 1,185 iterations, and a final gradient of 5.48845e-05.
+The assessment report, 2021 STAR review, and run-matched Stock Synthesis model archive are cached under `source_cache/noaa_pacific_coast_dover_sole/noaa_pacific_coast_dover_sole_2021/`. `sources.csv` records their source URLs, retrieval dates, byte counts, and SHA-256 checksums. The native archive identifies Stock Synthesis 3.30.16.02 and the exact `2021_dover.dat`, `2021_dover.ctl`, `Report.sso`, and `ss_summary.sso` used here. The report records final phase 6, 1,185 iterations, and a final gradient of 5.48845e-05.
 
 ## Imported source inputs
 

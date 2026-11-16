@@ -8,9 +8,9 @@ args <- commandArgs(trailingOnly = TRUE)
 write_mode <- "--write" %in% args
 .libPaths(c(file.path(root, "source_cache", "R-library"), .libPaths()))
 
-assessment_pdf <- file.path(root, "source_cache", "genypterus_blacodes/mpi_ling_lin34_2025", "FAR-2025-48-LIN3-4-assessment.pdf")
-support_pdf <- file.path(root, "source_cache", "genypterus_blacodes/mpi_ling_lin34_2025", "FAR-2025-47-LIN3-4-inputs.pdf")
-plenary_pdf <- file.path(root, "source_cache", "genypterus_blacodes/mpi_ling_lin34_2025", "Fisheries-Assessment-Plenary-2025-volume-2-ling.pdf")
+assessment_pdf <- file.path(root, "source_cache/mpi_ling_lin34/mpi_ling_lin34_2025", "FAR-2025-48-LIN3-4-assessment.pdf")
+support_pdf <- file.path(root, "source_cache/mpi_ling_lin34/mpi_ling_lin34_2025", "FAR-2025-47-LIN3-4-inputs.pdf")
+plenary_pdf <- file.path(root, "source_cache/mpi_ling_lin34/mpi_ling_lin34_2025", "Fisheries-Assessment-Plenary-2025-volume-2-ling.pdf")
 manifest_path <- file.path(root, "provenance/mpi_ling_lin34_2025/sources.csv")
 source_files <- c(assessment_pdf, support_pdf, plenary_pdf)
 expected_hash <- c(

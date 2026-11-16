@@ -1,5 +1,5 @@
 root <- "."
-source_dir <- file.path(root, "source_cache/sebastes_crameri/noaa_darkblotched_rockfish_2017")
+source_dir <- file.path(root, "source_cache/noaa_darkblotched_rockfish_pacific/noaa_darkblotched_rockfish_2017")
 model_dir <- file.path(source_dir, "model_files")
 assessment_id <- "noaa_darkblotched_rockfish_2017"
 stock_id <- "noaa_darkblotched_rockfish_pacific"

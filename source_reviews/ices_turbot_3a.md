@@ -16,4 +16,4 @@ Sources:
 - [ICES 2026 Advice View](https://asd.ices.dk/viewAdvice/5098), stock key 22416; catch advice for 2027.
 - [ICES Standard Graphs source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22416), stock key 22416.
 
-The chapter, advice PDF and Standard Graphs source page are cached in the gitignored `source_cache/ices_turbot_3a_2026/`; `manifest.csv` records source URLs, retrieval time and SHA-256 checksums.
+The chapter, advice PDF and Standard Graphs source page are cached in the gitignored `source_cache/ices_turbot_3a/ices_turbot_3a_2026/`; `manifest.csv` records source URLs, retrieval time and SHA-256 checksums.

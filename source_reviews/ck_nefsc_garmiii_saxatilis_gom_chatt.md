@@ -23,7 +23,7 @@ a newly fitted historical assessment.
 - [SAW 66 assessment report](https://doi.org/10.25923/nhqe-jd35), particularly Appendix B10: the non-migration single-stock model, survey timing/age links and parameter phases. The preceding migration-model code is a different model and is not used to establish this run's implementation.
 
 These files are cached under
-`source_cache/morone_saxatilis/ck_nefsc_garmiii_saxatilis_gom_chatt/`, with URLs, retrieval
+`source_cache/ck_nefsc_garmiii_saxatilis_gom_chatt/supporting_sources/`, with URLs, retrieval
 dates and SHA-256 checksums in `manifest.csv`. The importer pins the two 2024
 PDF hashes. Base-run labels and representative tables were visually checked.
 
@@ -144,7 +144,7 @@ management; its alternative two-stock migration model is not the accepted run.
 The historical record `asmfc_striped_bass_atlantic_2018` is separate from the
 2024 update, which remains the current assessment. The official assessment
 and its source tables are cached locally; the PDF URL, retrieval metadata and
-SHA-256 checksum are recorded in `source_cache/morone_saxatilis/ck_nefsc_garmiii_saxatilis_gom_chatt/manifest.csv`.
+SHA-256 checksum are recorded in `source_cache/ck_nefsc_garmiii_saxatilis_gom_chatt/supporting_sources/manifest.csv`.
 
 The 2018 importer records two-fleet total removals and age proportions for
 1982–2017, eight relative-abundance index series with annual CVs, recruitment

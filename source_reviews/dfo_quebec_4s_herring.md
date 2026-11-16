@@ -2,7 +2,7 @@
 
 Reviewed 2026-10-29 against the latest status update, the most recent full
 assessment report and the supporting survey-method documents. The official PDFs
-are cached under `source_cache/clupea_harengus/dfo_quebec_herring_4s_2025/`; `sources.csv`
+are cached under `source_cache/dfo_quebec_4s_herring/dfo_quebec_herring_4s_2025/`; `sources.csv`
 records each source URL, retrieval date, file size and SHA-256 checksum.
 
 ## Identity and current assessment

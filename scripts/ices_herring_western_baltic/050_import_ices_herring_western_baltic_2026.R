@@ -2,7 +2,7 @@ assessment_id <- "ices_herring_western_baltic_2026"
 stock_id <- "ices_herring_western_baltic"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
-cache <- file.path(base, "source_cache/clupea_harengus", assessment_id)
+cache <- file.path(base, "source_cache/ices_herring_western_baltic/ices_herring_western_baltic_2026")
 
 report_url <- "https://backend.orbit.dtu.dk/ws/portalfiles/portal/440308463/HAWG_2026_-_Full_Report.pdf"
 framework_url <- "https://doi.org/10.17895/ices.pub.31538287"

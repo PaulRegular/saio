@@ -48,7 +48,7 @@ recruitment or SSB.
 
 The [2026 working-group report](https://doi.org/10.17895/ices.pub.32614524.v2)
 and [SAG XML](https://sag.ices.dk/SAG_API/StockXmlDownload/23750) are cached
-under `source_cache/engraulis_encrasicolus/ices_anchovy_west_iberia_2026/` with URLs and checksums in
+under `source_cache/ices_anchovy_west_iberia/ices_anchovy_west_iberia_2026/` with URLs and checksums in
 `manifest.csv`. The [2026 advice](https://asd.ices.dk/viewAdvice/7195) confirms
 the stock code, assessment year and management advice. The stock identity and
 2024 split are described in the report's sections 3.1–3.2.

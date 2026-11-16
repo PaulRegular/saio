@@ -4,7 +4,7 @@ report_ref <- "https://doi.org/10.17895/ices.pub.32625759"
 sag_ref <- "https://sag.ices.dk/SAG_API/StockXmlDownload/22656"
 repository_ref <- "https://github.com/ices-advice/2026_sol.27.7e/tree/56b5e2aa66388e3e6709e4e4e84efacbad3324e9"
 database <- file.path("database")
-source_dir <- file.path("source_cache", "solea_solea/ices_sole_western_channel_7e_2026")
+source_dir <- file.path("source_cache/ck_ices_wgsce_solea_is7e/ices_sole_western_channel_7e_2026")
 pdf_file <- file.path(source_dir, "21 - Sole in 7e.pdf")
 xml_file <- file.path(source_dir, "ICES_SAG_StockXml_22656.xml")
 

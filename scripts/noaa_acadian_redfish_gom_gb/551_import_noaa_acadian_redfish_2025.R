@@ -1,7 +1,7 @@
 root <- "."
 dry_run <- "--dry-run" %in% commandArgs(trailingOnly = TRUE)
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "sebastes_fasciatus/noaa_acadian_redfish_gom_gb_2025")
+cache <- file.path(root, "source_cache/noaa_acadian_redfish_gom_gb/noaa_acadian_redfish_gom_gb_2025")
 candidate_path <- file.path(root, "database/candidates.csv")
 
 candidate_id <- "NOAA:10455"
@@ -653,7 +653,7 @@ if (!dry_run) {
     "The survey index physical multiplier and age-year uncertainty remain unavailable.")
   candidate_data$notes[candidate_row] <- paste(
     "Sources and provenance are cached under the gitignored",
-    "source_cache/sebastes_fasciatus/noaa_acadian_redfish_gom_gb_2025 directory. Native WHAM inputs are complete;",
+    "source_cache/noaa_acadian_redfish_gom_gb/noaa_acadian_redfish_gom_gb_2025 directory. Native WHAM inputs are complete;",
     "assumptions and outputs remain partial because the physical index multiplier",
     "and age-year uncertainty are not available. Derived abundance and SSB have",
     "no uncertainty. ")

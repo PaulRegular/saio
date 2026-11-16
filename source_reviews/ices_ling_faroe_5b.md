@@ -44,4 +44,4 @@ The native SAM fit/data objects, exact survey index scale and effort definition,
 - WKBARFAR 2021 benchmark report: https://doi.org/10.17895/ices.pub.7920
 - The report links the 2021 stock annex at https://www.ices.dk/sites/pub/Publication%20Reports/Stock%20Annexes/2021/lin.27.5b_SA.pdf; the annex material is also included in the cached benchmark report. The direct legacy annex URL returned HTTP 401 during retrieval.
 
-The files, retrieval dates, sizes, URLs, and SHA-256 checksums are in `source_cache/molva_molva/ices_ling_faroe_5b_2026/sources.csv`. The full WGDEEP report PDF is reused from the adjacent cached WGDEEP source directory; its provenance and checksum are recorded there.
+The files, retrieval dates, sizes, URLs, and SHA-256 checksums are in `source_cache/ices_ling_faroe_5b/ices_ling_faroe_5b_2026/sources.csv`. The full WGDEEP report PDF is reused from the adjacent cached WGDEEP source directory; its provenance and checksum are recorded there.

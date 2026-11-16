@@ -61,7 +61,7 @@ underlying fish lack age data.
 
 No canonical stock, assessment event, input, or output record was added. The
 three authoritative PDFs are cached locally under the gitignored
-`source_cache/clupea_harengus/dfo_nl_herring_2025/` folder; `sources.csv` records
+`source_cache/dfo_nl_herring_2025/source_material/` folder; `sources.csv` records
 retrieval date, source URLs and checksums.
 
 ## Sources

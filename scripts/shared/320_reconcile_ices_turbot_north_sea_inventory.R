@@ -78,7 +78,7 @@ review <- list(
   detailed_source_url = paste('https://doi.org/10.17895/ices.pub.28715180', 'https://asd.ices.dk/viewAdvice/5097', sep = '; '),
   review_date = '2026-10-30',
   decision_reason = paste('Matched by official ICES code tur.27.4, scientific name and North Sea area to the existing canonical stock. The latest 2026 advice summary and the detailed 2025 M9 benchmark are already recorded separately; the latter contains a complete age-structured input/output set. This inventory row is a crosswalk, not a new stock or assessment import.'),
-  notes = paste('The 2026 ICES Advice View is assessment year 2026 and is summary-only in the canonical database. The 2025 WKBNSCS benchmark M9 is a distinct detailed run and was not the model used for 2025 advice. See source_reviews/ck_ices_wgnssk_maximus_ns_4.md and the ignored local cache under source_cache/scophthalmus_maximus/ices_turbot_north_sea_2025_benchmark/.')
+  notes = paste('The 2026 ICES Advice View is assessment year 2026 and is summary-only in the canonical database. The 2025 WKBNSCS benchmark M9 is a distinct detailed run and was not the model used for 2025 advice. See source_reviews/ck_ices_wgnssk_maximus_ns_4.md and the ignored local cache under source_cache/ck_ices_wgnssk_maximus_ns_4/ices_turbot_north_sea_2025_benchmark/.')
 )
 if (!is.na(candidates$matched_stock_id[i]) && candidates$matched_stock_id[i] != stock_id) {
   stop('Inventory row is already linked to a different stock.', call. = FALSE)

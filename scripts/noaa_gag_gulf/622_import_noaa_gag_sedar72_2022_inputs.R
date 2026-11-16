@@ -1,7 +1,7 @@
 root <- "."
 cache_name <- "noaa_gag_sedar72_2022"
 cache_candidates <- c(
-  file.path(root, "source_cache", "mycteroperca_microlepis/noaa_gag_gulf_sedar72_srfs_2022"),
+  file.path(root, "source_cache/noaa_gag_gulf/noaa_gag_gulf_sedar72_srfs_2022"),
   file.path(root, "..", "..", cache_name)
 )
 cache_dir <- cache_candidates[dir.exists(cache_candidates)][1L]

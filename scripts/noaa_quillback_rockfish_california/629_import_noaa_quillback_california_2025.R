@@ -2,7 +2,7 @@ root <- "."
 stock_id <- "noaa_quillback_rockfish_california"
 assessment_id <- "noaa_quillback_california_2025"
 candidate_id <- "NOAA:15342"
-cache <- file.path(root, "source_cache", "sebastes_maliger/noaa_quillback_california_2025")
+cache <- file.path(root, "source_cache/noaa_quillback_rockfish_california/noaa_quillback_california_2025")
 manifest_path <- file.path(root, "provenance/noaa_quillback_california_2025/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE)
 .libPaths(c(file.path(root, "source_cache", "r-lib"), .libPaths()))

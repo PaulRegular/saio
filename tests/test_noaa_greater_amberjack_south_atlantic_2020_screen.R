@@ -10,7 +10,7 @@ register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactor
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:10208', , drop = FALSE]
 gulf <- register[register$candidate_id == 'NOAA:10207', , drop = FALSE]
-cache <- file.path(root, 'source_cache/seriola_dumerili/noaa_greater_amberjack_south_atlantic_sedar59_2020')
+cache <- file.path(root, 'source_cache/noaa_greater_amberjack_south_atlantic/noaa_greater_amberjack_south_atlantic_sedar59_2020')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))

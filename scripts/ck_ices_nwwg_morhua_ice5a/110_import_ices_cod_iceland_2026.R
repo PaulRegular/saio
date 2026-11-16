@@ -3,7 +3,7 @@ stock_id <- "ck_ices_nwwg_morhua_ice5a"
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "gadus_morhua/ices_cod_iceland_2026")
+cache <- file.path(base, "source_cache/ck_ices_nwwg_morhua_ice5a/ices_cod_iceland_2026")
 
 if (!requireNamespace("xml2", quietly = TRUE) ||
   !requireNamespace("jsonlite", quietly = TRUE)) {

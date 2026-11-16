@@ -1,8 +1,8 @@
 base <- "."
-.local_library <- file.path(base, "source_cache/urophycis_tenuis/Rlibrary")
+.local_library <- file.path(base, "source_cache/ck_nefsc_garmiii_tenuis_gom_gb/Rlibrary")
 if (dir.exists(.local_library)) .libPaths(c(.local_library, .libPaths()))
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "urophycis_tenuis/ck_nefsc_garmiii_tenuis_gom_gb")
+cache <- file.path(base, "source_cache/ck_nefsc_garmiii_tenuis_gom_gb/nefsc_white_hake_2025")
 assessment_id <- "nefsc_white_hake_2025"
 report_file <- file.path(cache, "2025_HKW_UNIT_RPT.pdf")
 stocksmart_file <- file.path(cache, "stock_assessment_data_664c4237.rda")

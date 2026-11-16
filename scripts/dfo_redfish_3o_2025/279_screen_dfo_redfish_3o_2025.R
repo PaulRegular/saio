@@ -52,7 +52,7 @@ review <- list(
   ),
   notes = paste(
     'The 2025 NAFO assessment is cached under',
-    'source_cache/dfo_redfish_3o_2025/ with retrieval date and',
+    'source_cache/dfo_redfish_3o_2025/source_material/ with retrieval date and',
     'SHA-256 checksum. No canonical numerical data were imported.'
   )
 )

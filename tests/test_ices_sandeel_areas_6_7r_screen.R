@@ -25,9 +25,8 @@ cases <- data.frame(
 for (i in seq_len(nrow(cases))) {
   case <- cases[i, ]
   candidate <- register[register$candidate_id == case$candidate_id, , drop = FALSE]
-  area <- if (case$candidate_id == 'ICES:san.sa.6') '6' else '7r'
-  cache <- file.path('source_cache',
-    paste0('ices_sandeel_area_', area, '_2023'))
+  cache <- file.path('source_cache', case$candidate_unit_id,
+    paste0(case$candidate_unit_id, '_2023'))
   sources <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
   paths <- file.path(cache, sources$file)
   advice <- paste(readLines(paths[grep('ICES_Advice', sources$file)], warn = FALSE),

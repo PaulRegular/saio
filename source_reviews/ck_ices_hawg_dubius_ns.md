@@ -28,5 +28,5 @@ older run and cannot replace the selected 2026 data. Current report tables
 and source code remain the verified numerical/methodological fallback.
 
 The original catalogue PDF, raw metadata/data snapshot, repository metadata
-and inspection logs are cached in `source_cache/ammodytes_dubius/ck_ices_hawg_dubius_ns/`.
+and inspection logs are cached in `source_cache/ck_ices_hawg_dubius_ns/supporting_sources/`.
 Actual assessment data and provenance are stored separately for each region.

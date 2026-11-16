@@ -15,7 +15,7 @@ following the ICES 2021 benchmark methodology.
 
 The detailed PDF, HTML, advice, run directory listings, fitted `model.RData`,
 configuration, and all twelve published `.dat` inputs are cached in the ignored
-`source_cache/gadus_morhua/ices_cod_northeast_arctic_2026/` directory. The fit is loaded for
+`source_cache/ices_cod_northeast_arctic/ices_cod_northeast_arctic_2026/` directory. The fit is loaded for
 inspection without executing its saved objective function or modifying it.
 
 ## Native model inventory

@@ -7,7 +7,7 @@ register <- read.csv(file.path(root, 'database/candidates.csv'),
   stringsAsFactors = FALSE, na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'NOAA:10524', , drop = FALSE]
 review <- paste(readLines(file.path(root, 'source_reviews/noaa_offshore_hake_us.md'), warn = FALSE), collapse = ' ')
-cache <- file.path(root, 'source_cache/merluccius_albidus/noaa_offshore_hake_2023')
+cache <- file.path(root, 'source_cache/noaa_offshore_hake_us/noaa_offshore_hake_2023')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 units <- candidate_units()

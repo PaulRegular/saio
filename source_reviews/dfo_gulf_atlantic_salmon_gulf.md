@@ -30,4 +30,4 @@ Sources:
 - The 2025/019 report identifies the separate river-level methods and reports the most recent full assessment year.
 
 The official 2025/019 PDF is cached locally with SHA-256 and retrieval details
-in the ignored `source_cache/salmo_salar/dfo_atlantic_salmon_2025/sources.csv`.
+in the ignored `source_cache/dfo_atlantic_salmon_2025/source_material/sources.csv`.

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'brosme_brosme/ices_tusk_5a14_2026')
+cache <- file.path(root, 'source_cache/ices_tusk_5a14/ices_tusk_5a14_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:usk.27.5a14'
 unit_id <- 'ices_tusk_5a14'
@@ -124,7 +124,7 @@ register$review_date[row] <- '2026-10-30'
 register$decision_reason[row] <- paste0(
   'Eligibility remains unresolved for the current 2026 ICES unit `usk.27.5a14`. The 2026 assessment is SAM and publicly documents age-structured commercial and Icelandic survey inputs for Division 5.a, plus aggregate official population and fishing-mortality outputs. However, the official unit includes Subarea 14, where the report states catch weight-at-age is unavailable, and the current source set does not establish the 14-area catch-age treatment, biological inputs, or whether those catches are represented in the model. The current stock annex is referenced but its metadata record has no attached file, and no current native model inputs were recovered. Do not infer a complete 5.a+14 age-structured input set from the Iceland-only figures or substitute the 2022 benchmark inputs. Revisit if current run-matched inputs or a complete stock annex become available.')
 register$notes[row] <- paste0(
-  'This is one current Greenland Sea/Icelandic Waters unit, distinct from ICES Tusk units in other areas. The MFRI 2026 report is the latest detailed source found and is tied to the 2026 ICES advice; the assessment reports historical estimates through 2025 and 2026 as a forecast. The 2022 benchmark and 2023 report provide method context, not current run-matched numerical data. Retrieved source files, URLs, dates, revisions, byte counts, and SHA-256 checksums are recorded in source_cache/brosme_brosme/ices_tusk_5a14_2026/sources.csv. No canonical stock, assessment, input, or output records were added.')
+  'This is one current Greenland Sea/Icelandic Waters unit, distinct from ICES Tusk units in other areas. The MFRI 2026 report is the latest detailed source found and is tied to the 2026 ICES advice; the assessment reports historical estimates through 2025 and 2026 as a forecast. The 2022 benchmark and 2023 report provide method context, not current run-matched numerical data. Retrieved source files, URLs, dates, revisions, byte counts, and SHA-256 checksums are recorded in source_cache/ices_tusk_5a14/ices_tusk_5a14_2026/sources.csv. No canonical stock, assessment, input, or output records were added.')
 
 source(file.path(root, 'scripts/shared/candidate_register_io.R'))
 if (!identical(Sys.getenv('TAM_SOURCE_DRY_RUN'), '1'))

@@ -1,6 +1,6 @@
 source("scripts/shared/pacific_tables.R")
 root <- "."
-cache <- file.path(root, "source_cache/sebastes_alutus/afsc_pop_bsai/native")
+cache <- file.path(root, "source_cache/afsc_pop_bsai/afsc_pop_bsai_2024/additional_sources/afsc_pop_bsai/native")
 id <- "afsc_pop_bsai_2024"
 revision <- jsonlite::fromJSON(file.path(dirname(cache), "repository_revision.json"))$sha
 repository <- "https://github.com/afsc-assessments/BSAI-POP"

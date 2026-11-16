@@ -47,6 +47,6 @@ canonical stock, assessment, input, or output records were added.
 - [Scottish Government 2026 North Sea Greater Silver Smelt Fisheries Management Plan](https://www.gov.scot/publications/north-sea-greater-silver-smelt-fisheries-management-plan/pages/10/)
 
 The reviewed files are cached locally under the gitignored
-`source_cache/argentina_silus/ices_greater_silver_smelt_123a4_2026/`. Its
+`source_cache/ices_greater_silver_smelt_123a4/ices_greater_silver_smelt_123a4_2026/`. Its
 `sources.csv` records source URLs, retrieval date, revision, file size, and
 SHA-256 checksums.

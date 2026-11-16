@@ -9,7 +9,7 @@ The current assessment is ICES `had.27.7b-k`, applied for 2026 advice. The WGCSE
 - [ICES 2026 assessment record, key 22561](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=22561).
 - Official [HAD7bk_2026 SAM model](https://stockassessment.org/datadisk/stockassessment/userdirs/user3/HAD7bk_2026/run/model.RData) and matching [data object](https://stockassessment.org/datadisk/stockassessment/userdirs/user3/HAD7bk_2026/run/data.RData), configuration, and native input files.
 
-The 2026 report chapter, official SAM model and data objects, configuration, native `.dat` inputs, and result tables are cached under `source_cache/melanogrammus_aeglefinus/ices_haddock_celtic_sea_7b_k_2026/`. `manifest.csv` records retrieval URLs, times, sizes, and SHA-256 checksums. The report says the TAF repository is empty and points to the named SAM run; the SAM run is therefore the source of the fitted model and inputs.
+The 2026 report chapter, official SAM model and data objects, configuration, native `.dat` inputs, and result tables are cached under `source_cache/ck_ices_afwg_aeglefinus_is7bc_ek/ices_haddock_celtic_sea_7b_k_2026/`. `manifest.csv` records retrieval URLs, times, sizes, and SHA-256 checksums. The report says the TAF repository is empty and points to the named SAM run; the SAM run is therefore the source of the fitted model and inputs.
 
 ## Inputs and assumptions
 

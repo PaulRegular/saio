@@ -2,7 +2,7 @@ assessment_id <- "dfo_herring_4tvn_spring_2024"
 summary_id <- "dfo_herring_4tvn_spring_2026"
 stock_id <- "dfo_herring_4tvn_spring"
 root <- "."
-source_dir <- file.path(root, "source_cache/clupea_harengus/dfo_sgsl_herring_spring_2023")
+source_dir <- file.path(root, "source_cache/dfo_herring_4tvn_spring/dfo_sgsl_herring_spring_2023")
 support_file <- file.path(source_dir, "2024_058_support.txt")
 if (!file.exists(support_file)) stop("The cached 2024/058 text is missing.")
 lines <- readLines(support_file, warn = FALSE, encoding = "UTF-8")

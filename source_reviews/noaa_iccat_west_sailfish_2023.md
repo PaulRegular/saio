@@ -20,7 +20,7 @@ Because the abundance inputs are fishery indices rather than seasonal surveys, a
 
 This is a **new, screened, ineligible candidate** for the age-disaggregated assessment set. The latest accepted operational assessment includes an internally age-structured Stock Synthesis platform, but the report states that no age data were included in that model. Its actual population observations are catches, CPUE and length compositions, and the official report does not provide age-specific population outputs. The biological age structure and fixed mortality assumption do not meet the required age-observation and output evidence.
 
-No canonical numerical records were added was attempted. The report and its retrieval date, pinned meeting revision, size and SHA-256 checksum are recorded in the ignored local cache at `source_cache/istiophorus_platypterus/noaa_iccat_west_sailfish_2023/sources.csv`.
+No canonical numerical records were added was attempted. The report and its retrieval date, pinned meeting revision, size and SHA-256 checksum are recorded in the ignored local cache at `source_cache/noaa_iccat_west_sailfish_2023/source_material/sources.csv`.
 
 ## Sources
 

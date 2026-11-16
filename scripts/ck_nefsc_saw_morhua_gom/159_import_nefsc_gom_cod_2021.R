@@ -1,6 +1,6 @@
 base <- "."
 database <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "gadus_morhua/nefsc_gom_cod_2021_m02")
+cache <- file.path(base, "source_cache/ck_nefsc_saw_morhua_gom/nefsc_gom_cod_2021_m02")
 archive <- file.path(cache, "2021_COD_GM.zip")
 assessment_id <- "nefsc_gom_cod_2021_m02"
 stock_id <- "ck_nefsc_saw_morhua_gom"

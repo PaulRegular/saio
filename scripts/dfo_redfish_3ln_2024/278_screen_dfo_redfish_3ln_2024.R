@@ -50,7 +50,7 @@ review <- list(
   ),
   notes = paste(
     'The 2024 assessment and 2025 MSE update are cached under',
-    'source_cache/dfo_redfish_3ln_2024/ with retrieval dates and',
+    'source_cache/dfo_redfish_3ln_2024/source_material/ with retrieval dates and',
     'SHA-256 checksums. No canonical numerical data were imported.'
   )
 )

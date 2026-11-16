@@ -2,7 +2,7 @@ source("scripts/shared/source_manifest_io.R", local = TRUE)
 
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "eopsetta_jordani/noaa_petrale_sole_pacific_coast_2023")
+cache <- file.path(root, "source_cache/noaa_petrale_sole_pacific_coast/noaa_petrale_sole_pacific_coast_2023")
 assessment_id <- "noaa_petrale_sole_pacific_coast_2023"
 projection_id <- "noaa_petrale_sole_pacific_coast_2025_projection"
 stock_id <- "noaa_petrale_sole_pacific_coast"

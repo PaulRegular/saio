@@ -8,7 +8,7 @@ The official assessment is the 2025 run summarized in DFO Science Advisory Repor
 
 DFO Research Document 2025/054 is the detailed report for the preceding 2024 assessment. It is used only for method and age-group context, never as a source of 2025 values. The current 2026/040 publication record's English and French PDF URLs both returned archived HTML responses on 2026-10-19; the responses are retained in the ignored local cache with their correct `.html` extensions. No PDF was available from those URLs during this import. The pinned model repository supplies the source files used for the 2025 assessment.
 
-Source files are cached under `source_cache/scomber_scombrus/dfo_northern_mackerel_2025/`. Its ignored `manifest.csv` records source URLs, retrieval date, checksums, repository revisions, and unsuccessful PDF retrievals.
+Source files are cached under `source_cache/ck_dfo_qc_scombrus_4t/dfo_northern_mackerel_2025/`. Its ignored `manifest.csv` records source URLs, retrieval date, checksums, repository revisions, and unsuccessful PDF retrievals.
 
 ## Model dimensions and inputs
 

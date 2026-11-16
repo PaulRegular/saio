@@ -1,7 +1,7 @@
 assessment_id <- "ices_cod_celtic_sea_2026"
 stock_id <- "ck_ices_wgcse_morhua_cs7e_k"
 root <- "."
-cache <- file.path(root, "source_cache/gadus_morhua", stock_id, "assessment_2026")
+cache <- file.path(root, "source_cache/ck_ices_wgcse_morhua_cs7e_k/supporting_sources", "assessment_2026")
 db <- file.path(root, "database")
 model_file <- file.path(cache, "SAM_Cod_CS_WG2026_model.RData")
 

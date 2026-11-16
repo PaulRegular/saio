@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/bathyraja_parmifera/noaa_bsai_alaska_skate_2026')
+cache <- file.path(root, 'source_cache/noaa_bsai_alaska_skate/noaa_bsai_alaska_skate_2026')
 candidate_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'NOAA:10736'
 unit_id <- 'noaa_bsai_alaska_skate'

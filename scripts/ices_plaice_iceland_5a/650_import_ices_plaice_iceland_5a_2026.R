@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "pleuronectes_platessa/ices_plaice_iceland_5a_2026")
+cache <- file.path(root, "source_cache/ices_plaice_iceland_5a/ices_plaice_iceland_5a_2026")
 manifest_path <- file.path(root, "provenance", "ices_plaice_iceland_5a_2026", "sources.csv")
 candidate_path <- file.path(root, "database/candidates.csv")
 

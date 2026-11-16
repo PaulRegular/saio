@@ -11,7 +11,7 @@ Charbonneau–Keith identifier: `ICES-WGCSE_morhua_IS7a`. The current ICES stock
 
 The current applied assessment is the 2026 WGCSE run, assessment key 23721, with data through 2025 and advice for 2027–2028. The report says the final assessment used Stock Synthesis 3 (SS3). The latest stock annex says the stock was last benchmarked in February 2022 and was updated in May 2025. Native 2026 SS3 data and control files were not found.
 
-The working-group chapter is divided into separate PDFs on Figshare. The cod chapter and the 2025 stock annex are cached locally with retrieval URLs, dates and checksums under `source_cache/gadus_morhua/ck_ices_wgcse_morhua_is7a/assessment_2026/`.
+The working-group chapter is divided into separate PDFs on Figshare. The cod chapter and the 2025 stock annex are cached locally with retrieval URLs, dates and checksums under `source_cache/ck_ices_wgcse_morhua_is7a/ices_cod_irish_sea_2026/`.
 
 ## Model dimensions and inputs
 

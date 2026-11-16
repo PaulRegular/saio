@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache_dir <- file.path(root, 'source_cache/merlangius_merlangus/ices_whiting_rockall_2024')
+cache_dir <- file.path(root, 'source_cache/ices_whiting_rockall_2024/source_material')
 
 sha256_file <- function(path) {
   output <- system2('certutil.exe', c('-hashfile', shQuote(normalizePath(path)), 'SHA256'),
@@ -83,7 +83,7 @@ review <- list(
     'https://doi.org/10.17895/ices.pub.32625759', sep = '; '),
   review_date = '2026-10-30',
   decision_reason = paste('The latest assessment year listed for Rockall whiting is 2024. ICES classifies it as Category 6.2, and the official source-data table contains landings only. It lacks the age-disaggregated inputs and comparable population outputs required for the age-structured inventory.'),
-  notes = paste('This is a distinct current ICES unit, separate from whg.27.6a, whg.27.47d, whg.27.7a, and whg.27.89a. The official 2026 WGCSE report lists the Rockall whiting stock annex as last updated May 2013; that report is cached and checksummed in source_cache/shared/ices_wgbie_2026/sources.csv. The 2024 advice and Standard Graphs pages are cached with retrieval dates and checksums in source_cache/merlangius_merlangus/ices_whiting_rockall_2024/sources.csv. No canonical stock or numerical records were added.')
+  notes = paste('This is a distinct current ICES unit, separate from whg.27.6a, whg.27.47d, whg.27.7a, and whg.27.89a. The official 2026 WGCSE report lists the Rockall whiting stock annex as last updated May 2013; that report is cached and checksummed in source_cache/shared/ices_wgbie_2026/sources.csv. The 2024 advice and Standard Graphs pages are cached with retrieval dates and checksums in source_cache/ices_whiting_rockall_2024/source_material/sources.csv. No canonical stock or numerical records were added.')
 )
 
 initial <- register$match_status[row] == 'unreviewed' &&

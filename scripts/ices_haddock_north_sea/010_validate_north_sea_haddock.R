@@ -41,7 +41,7 @@ for (measure in c("fraction_F_before_spawning", "fraction_M_before_spawning")) {
     setequal(x$year, 1972:2026), setequal(x$age, 0:8)
   )
   native <- read.csv(file.path(
-    "source_cache/melanogrammus_aeglefinus/ices_haddock_north_sea_2026",
+    "source_cache/ices_haddock_north_sea/ices_haddock_north_sea_2026",
     if (measure == "fraction_F_before_spawning") "native_propF.csv" else "native_propM.csv"
   ))
   joined <- merge(x, native, by = c("year", "age"))
@@ -59,7 +59,7 @@ stopifnot(
   nrow(power) == 3,
   setequal(paste(power$survey, power$age), c("delta-GAMNS-WCQ1 1", "delta-GAMNS-WCQ3+Q4 0", "delta-GAMNS-WCQ3+Q4 1"))
 )
-native_q <- read.csv("source_cache/melanogrammus_aeglefinus/ices_haddock_north_sea_2026/native_catchability.csv")
+native_q <- read.csv("source_cache/ices_haddock_north_sea/ices_haddock_north_sea_2026/native_catchability.csv")
 joined <- merge(q, native_q, by = c("measure", "survey", "age"))
 stopifnot(
   nrow(joined) == 20, all(abs(joined$value.x - exp(joined$log_estimate)) < 1e-10),
@@ -68,7 +68,7 @@ stopifnot(
 cat("Catchability power mapping and uncertainty scales verified.\n")
 
 model_env <- new.env()
-load("source_cache/melanogrammus_aeglefinus/ices_haddock_north_sea_2026/run_model.RData", model_env)
+load("source_cache/ices_haddock_north_sea/ices_haddock_north_sea_2026/run_model.RData", model_env)
 stopifnot(
   model_env$fit$conf$initState == 0,
   length(model_env$fit$pl$initN) == 0, length(model_env$fit$pl$initF) == 0,
@@ -136,7 +136,7 @@ stopifnot(
 
 cv_rows <- function(filename, survey) {
   path <- file.path(
-    "source_cache/melanogrammus_aeglefinus/ices_haddock_north_sea_2026",
+    "source_cache/ices_haddock_north_sea/ices_haddock_north_sea_2026",
     filename
   )
   header <- scan(path, skip = 2, n = 5, quiet = TRUE)

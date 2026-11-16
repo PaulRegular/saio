@@ -73,7 +73,7 @@ mixed with the 2022 VPA input matrices.
 - [2025 assessment bundle](https://apps-nefsc.fisheries.noaa.gov/saw/sasi_files.php?year=2025&species_id=10&stock_id=1&review_type_id=3&filename=2025_FLW_GB.zip)
 
 The source files are cached locally under the gitignored
-source_cache/pseudopleuronectes_americanus/ck_nefsc_americanus_5z/. The local
+source_cache/ck_nefsc_americanus_5z/supporting_sources/. The local
 manifest records retrieval date, source URLs, file contents and checksums.
 
 ## Additional 2025 historical trajectories
@@ -87,5 +87,5 @@ no uncertainty is inferred. The 2025 age-specific inputs and fitted age
 surfaces remain unavailable, and remain distinct from the 2022 detailed record.
 
 The [NOAA Stock SMART snapshot](https://github.com/NOAA-EDAB/stocksmart/tree/664c4237e26520b260a090e1821a2cee5d1cdf07)
-is cached locally under `source_cache/pseudopleuronectes_americanus/ck_nefsc_americanus_5z/` with revision
+is cached locally under `source_cache/ck_nefsc_americanus_5z/supporting_sources/` with revision
 and checksum in `stocksmart_manifest.csv`.

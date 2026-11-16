@@ -35,7 +35,7 @@ M-at-age, or SSB trajectories.
 Research Document 2026/007 provides detailed information for the earlier
 2022–2023 assessment. It supports understanding earlier methods and data, but
 cannot replace the latest 2025 assessment record. The detailed report is cached
-under `source_cache/mallotus_villosus/dfo_capelin_4rst/`. The 2026/014 advisory report
+under `source_cache/dfo_capelin_4rst/source_material/`. The 2026/014 advisory report
 was reviewed through the official publication viewer; local direct-download
 attempts returned HTML rather than the PDF.
 

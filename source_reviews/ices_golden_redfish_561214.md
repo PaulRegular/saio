@@ -67,7 +67,7 @@ native SAM configuration and age-specific uncertainty were not recovered.
 All source values remain separate from downstream transformations. The cached
 HTML sources, source URLs, retrieval date, assessment identifiers, revisions
 and SHA-256 checksums are recorded in the gitignored local cache
-source_cache/sebastes_norvegicus/ices_golden_redfish_561214_2026/.
+source_cache/ices_golden_redfish_561214/ices_golden_redfish_561214_2026/.
 
 ## Sources
 

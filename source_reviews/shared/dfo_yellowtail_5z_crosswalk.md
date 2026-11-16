@@ -25,4 +25,4 @@ This is a verified identity match to the canonical Georges Bank record, not a ne
 - [Final Framework 72 submission, April 2026](https://d23h0vhsm26o6d.cloudfront.net/260423_Groundfish_FW72_SIR_FINAL-Submission.pdf)
 - [NOAA Stock SMART assessment entry 10033](https://apps-st.fisheries.noaa.gov/stocksmart)
 
-The source documents are locally cached under `source_cache/limanda_ferruginea/ck_dfo_nefsc_ferruginea_gb/`. Manifests there record source URLs and checksums; the discovery cache is not duplicated.
+The source documents are locally cached under `source_cache/ck_dfo_nefsc_ferruginea_gb/nefsc_yellowtail_georges_bank_2025/`. Manifests there record source URLs and checksums; the discovery cache is not duplicated.

@@ -38,4 +38,4 @@ added.
 
 The advice copy, 2023 advice record, and source-data page were retrieved on
 2026-10-30. Their URLs and SHA-256 hashes are recorded in
-`source_cache/chelidonichthys_cuculus/ices_red_gurnard_2025/sources.csv`.
+`source_cache/ices_red_gurnard_3_8/ices_red_gurnard_2025/sources.csv`.

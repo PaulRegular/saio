@@ -26,7 +26,7 @@ input, or output rows were added.
 ## Sources and cached files
 
 The advice and Standard Graphs pages are cached in the gitignored
-`source_cache/lamna_nasus/ices_porbeagle_nea_2026/`
+`source_cache/ices_porbeagle_nea/ices_porbeagle_nea_2026/`
 folder. Its `sources.csv` manifest records URLs, retrieval date, assessment
 keys, byte sizes, and SHA-256 checksums.
 

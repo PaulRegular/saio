@@ -45,7 +45,7 @@ report's monkfish sections describe the methods and panel recommendations. The
 official NOAA repository PDF could not be downloaded in this session; its
 repository checksum and the distinct public HTML text mirror's URL, retrieval
 date, size, and checksum are recorded in the ignored local cache at
-source_cache/lophius_americanus/noaa_nefsc_fall_2022/. The mirror is for local
+source_cache/noaa_monkfish_2022/noaa_nefsc_fall_2022/. The mirror is for local
 reference and is not represented as the official PDF.
 
 Sources:

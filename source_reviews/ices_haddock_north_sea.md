@@ -35,7 +35,7 @@ It contains one total-catch fleet and two delta-GAM standardized survey indices:
 | IBTS Q1, ages 1–8+ | 1983–2026 | 352 | 0.125 |
 | IBTS Q3+Q4, ages 0–8+ | 1991–2025 | 315 | 0.75 |
 
-Native inputs, the final fitted object and detailed report are cached under `source_cache/melanogrammus_aeglefinus/ices_haddock_north_sea_2026/`.
+Native inputs, the final fitted object and detailed report are cached under `source_cache/ices_haddock_north_sea/ices_haddock_north_sea_2026/`.
 
 ### Population and fishing mortality
 

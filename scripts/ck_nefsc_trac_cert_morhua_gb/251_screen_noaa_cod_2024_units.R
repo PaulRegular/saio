@@ -39,7 +39,7 @@ updates <- list(
     detailed_source_url = paste(cod_urls['panel'], cod_urls['wgom'], 'https://d23h0vhsm26o6d.cloudfront.net/2.a.vi_Western_Gulf_of_Maine_cod_Update_4.pdf', cod_urls['amendment'], sep = '; '),
     review_date = '2026-10-29',
     decision_reason = paste('The 2024 WHAM assessment created the Western Gulf of Maine unit, distinct from the former combined Gulf of Maine stock and from the current Georges Bank unit. The peer-review panel found the assessment suitable for management advice and selected a final run excluding the 2023 spring BLLS point. The cache contains age-composition and biological figures plus aggregate outputs, but not numeric age inputs or fitted age-output arrays; source eligibility remains unresolved pending those arrays.'),
-    notes = paste('Provisional new unit pending completion of the NOAA/ICES/DFO cross-inventory reconciliation. Model years 1981-2023; age grid shown as 1-9+. Source bundle and manifest are cached under source_cache/gadus_morhua/noaa_cod_new_units_2024/.')
+    notes = paste('Provisional new unit pending completion of the NOAA/ICES/DFO cross-inventory reconciliation. Model years 1981-2023; age grid shown as 1-9+. Source bundle and manifest are cached under source_cache/ck_nefsc_trac_cert_morhua_gb/noaa_cod_new_units_2024/.')
   ),
   'NOAA:17281' = list(
     match_status = 'new', matched_stock_id = NA_character_, screening_status = 'screened',
@@ -54,7 +54,7 @@ updates <- list(
     detailed_source_url = paste(cod_urls['panel'], cod_urls['egom'], 'https://d23h0vhsm26o6d.cloudfront.net/2.a.viii_Eastern_Gulf_of_Maine_Atlantic_Cod_Update_2024_Post_Review.pdf', cod_urls['amendment'], sep = '; '),
     review_date = '2026-10-29',
     decision_reason = paste('The 2024 WHAM assessment created the Eastern Gulf of Maine unit, distinct from the former combined Gulf of Maine stock and from Eastern Georges Bank. The peer-review panel found the assessment suitable for management advice. The cache contains age-composition and biological figures plus aggregate outputs, but not numeric age inputs or fitted age-output arrays; recent fishery age compositions are also unavailable after 2013. Source eligibility remains unresolved pending recoverable run-specific age arrays.'),
-    notes = paste('Provisional new unit pending completion of the NOAA/ICES/DFO cross-inventory reconciliation. Model years 1981-2023; age grid shown as 1-9+. Source bundle and manifest are cached under source_cache/gadus_morhua/noaa_cod_new_units_2024/.')
+    notes = paste('Provisional new unit pending completion of the NOAA/ICES/DFO cross-inventory reconciliation. Model years 1981-2023; age grid shown as 1-9+. Source bundle and manifest are cached under source_cache/ck_nefsc_trac_cert_morhua_gb/noaa_cod_new_units_2024/.')
   ),
   'NOAA:17282' = list(
     match_status = 'new', matched_stock_id = NA_character_, screening_status = 'screened',
@@ -69,7 +69,7 @@ updates <- list(
     detailed_source_url = paste(cod_urls['panel'], cod_urls['sne'], 'https://d23h0vhsm26o6d.cloudfront.net/2.a.iv_Southern_New_England_Cod_2024_report_revised_projections.pdf', cod_urls['amendment'], sep = '; '),
     review_date = '2026-10-29',
     decision_reason = paste('The 2024 WHAM assessment created the Southern New England unit, which was formerly included in the broader Georges Bank unit. The peer-review panel found the assessment suitable for management advice. The cache includes age-composition and age-surface plots plus aggregate outputs, but not numeric age inputs or fitted age-output arrays. Limited recent biological samples leave source eligibility unresolved.'),
-    notes = paste('Provisional new unit pending completion of the NOAA/ICES/DFO cross-inventory reconciliation. Model years 1981-2023. The assessment is fit to spring NEFSC survey and recreational CPUE; the latter uses AR1 time-varying q and its age composition uses a Dirichlet-multinomial likelihood. Source bundle and manifest are cached under source_cache/gadus_morhua/noaa_cod_new_units_2024/.')
+    notes = paste('Provisional new unit pending completion of the NOAA/ICES/DFO cross-inventory reconciliation. Model years 1981-2023. The assessment is fit to spring NEFSC survey and recreational CPUE; the latter uses AR1 time-varying q and its age composition uses a Dirichlet-multinomial likelihood. Source bundle and manifest are cached under source_cache/ck_nefsc_trac_cert_morhua_gb/noaa_cod_new_units_2024/.')
   )
 )
 

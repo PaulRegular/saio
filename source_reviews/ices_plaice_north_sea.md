@@ -11,7 +11,7 @@ Sources:
 - [WKNSCS benchmark report](https://doi.org/10.17895/ices.pub.21558681), the 2022 benchmark framework adopted for plaice.
 - [2026 ICES advice](https://doi.org/10.17895/ices.advice.30932264).
 
-The official report chapter, survey/assessment XML, and other source files used for this record are cached locally under `source_cache/pleuronectes_platessa/ices_plaice_north_sea_2026/`. The public SAM archive search did not locate a fitted object for the official 2026 run; a public test directory contained data files but no fitted model object, so it was not used as a substitute.
+The official report chapter, survey/assessment XML, and other source files used for this record are cached locally under `source_cache/ices_plaice_north_sea/ices_plaice_north_sea_2026/`. The public SAM archive search did not locate a fitted object for the official 2026 run; a public test directory contained data files but no fitted model object, so it was not used as a substitute.
 
 ## Inputs and model structure
 

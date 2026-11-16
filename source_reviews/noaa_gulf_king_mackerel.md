@@ -77,4 +77,4 @@ were imported.
   metadata snapshot cached with the discovery inventory.
 
 Reviewed 2026-10-30. The listed PDF files and checksums are in the ignored local
-cache at `source_cache/scomberomorus_cavalla/noaa_gulf_king_mackerel_2020/sources.csv`.
+cache at `source_cache/noaa_gulf_king_mackerel/noaa_gulf_king_mackerel_2020/sources.csv`.

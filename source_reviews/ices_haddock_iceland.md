@@ -41,7 +41,7 @@ The official reference biomass represents fish measuring at least 45 cm and is d
 - [MFRI 2026 technical report](https://www.hafogvatn.is/static/extras/images/2_had_2026_1_techreport_en.html)
 - [ICES WKICEGAD 2025 benchmark report](https://doi.org/10.17895/ices.pub.28444499.v1)
 
-The numerical MFRI table exports used for the 2025 record are cached under the gitignored `source_cache/melanogrammus_aeglefinus/ices_haddock_iceland_2025/` directory. Their filenames and access notes are listed in that directory's README.
+The numerical MFRI table exports used for the 2025 record are cached under the gitignored `source_cache/ices_haddock_iceland/ices_haddock_iceland_2025/` directory. Their filenames and access notes are listed in that directory's README.
 
 ### Record summary
 
@@ -84,4 +84,4 @@ Inputs, assumptions and outputs remain marked partial because the public materia
 - [MFRI 2026 technical report](https://www.hafogvatn.is/static/extras/images/2_had_2026_1_techreport_en.html)
 - [ICES WKICEGAD 2025 benchmark report](https://doi.org/10.17895/ices.pub.28444499.v1)
 
-The official HTML tables, technical report and advice page were cached locally under `source_cache/melanogrammus_aeglefinus/ices_haddock_iceland_2026/`. The cache manifest records source URLs, retrieval date, file sizes and SHA-256 checksums.
+The official HTML tables, technical report and advice page were cached locally under `source_cache/ices_haddock_iceland/ices_haddock_iceland_2026/`. The cache manifest records source URLs, retrieval date, file sizes and SHA-256 checksums.

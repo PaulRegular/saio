@@ -67,9 +67,9 @@ if (!dry_run && any(assessments$assessment_id %in% c(assessment_2015, assessment
 }
 if (sum(stocks$stock_id == stock_id) != 1L) stop("Expected one scup stock record.", call. = FALSE)
 
-report_file <- file.path(cache, "stenotomus_chrysops/nefsc_scup_2015", "NEFSC_15-08_60th_SAW_Assessment_Report.txt")
-update_file <- file.path(cache, "stenotomus_chrysops/nefsc_scup_2025", "2025_SCP_UNIT", "2025_SCUP_UNIT_REPORT_2025-06-20.txt")
-a32_file <- file.path(cache, "stenotomus_chrysops/nefsc_scup_2015", "NEFSC_15-08_Table_A32_fall_numbers_at_age.csv")
+report_file <- file.path(cache, "ck_nefsc_saw_chrysops_usatl/nefsc_scup_2015", "NEFSC_15-08_60th_SAW_Assessment_Report.txt")
+update_file <- file.path(cache, "ck_nefsc_saw_chrysops_usatl/nefsc_scup_2025", "2025_SCP_UNIT", "2025_SCUP_UNIT_REPORT_2025-06-20.txt")
+a32_file <- file.path(cache, "ck_nefsc_saw_chrysops_usatl/nefsc_scup_2015", "NEFSC_15-08_Table_A32_fall_numbers_at_age.csv")
 if (!all(file.exists(c(report_file, update_file, a32_file)))) {
   stop("Scup source-cache files are missing; see the local source manifest.", call. = FALSE)
 }

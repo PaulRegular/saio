@@ -34,7 +34,7 @@ stopifnot(
   grepl('No canonical stock, assessment, input or output records were added.', review, fixed = TRUE)
 )
 
-cache <- file.path(root, 'source_cache/thaleichthys_pacificus/dfo_eulachon_fraser')
+cache <- file.path(root, 'source_cache/dfo_eulachon_fraser/source_material')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE)
 files <- file.path(cache, manifest$file)
 stopifnot(nrow(manifest) == 4L, all(file.exists(files)),

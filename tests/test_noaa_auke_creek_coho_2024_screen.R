@@ -26,7 +26,7 @@ stopifnot(nrow(row) == 1L,
     review, fixed = TRUE)),
   any(grepl('No canonical numerical', review, fixed = TRUE)))
 
-cache <- file.path(root, 'source_cache/oncorhynchus_kisutch/noaa_auke_creek_coho_2024')
+cache <- file.path(root, 'source_cache/noaa_auke_creek_coho_2024/source_material')
 manifest <- read.csv(file.path(cache, 'sources.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)
 stopifnot(all(c('Status_Deter_SE_AK_2024.pdf',

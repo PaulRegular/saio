@@ -41,4 +41,4 @@ SEDAR72-WP-17 Table 7 also provides age-sampling counts by fleet for 1991-2019; 
 - [SEDAR 105 Gulf Gag assessment project](https://sedarweb.org/assessments/sedar-105-gulf-gag-grouper/).
 - [NOAA 2026 Gulf Gag recreational season notice](https://www.fisheries.noaa.gov/bulletin/noaa-fisheries-announces-2026-gag-recreational-season-federal-waters-gulf).
 
-The five cited SEDAR PDFs are cached in the ignored `source_cache/mycteroperca_microlepis/noaa_gag_gulf_sedar72_srfs_2022/` directory with retrieval date, document revision, byte size and SHA-256 checksum recorded in `provenance/noaa_gag_gulf_sedar72_srfs_2022/sources.csv`.
+The five cited SEDAR PDFs are cached in the ignored `source_cache/noaa_gag_gulf/noaa_gag_gulf_sedar72_srfs_2022/` directory with retrieval date, document revision, byte size and SHA-256 checksum recorded in `provenance/noaa_gag_gulf_sedar72_srfs_2022/sources.csv`.

@@ -15,7 +15,7 @@ manifest <- read.csv(
   stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character"
 )
 cache_options <- c(
-  file.path("source_cache/lutjanus_campechanus/noaa_south_atlantic_red_snapper_2024")
+  file.path("source_cache/noaa_south_atlantic_red_snapper/noaa_south_atlantic_red_snapper_2024")
 )
 source_dir <- cache_options[
   vapply(cache_options, function(x) file.exists(file.path(x, "sources.csv")), logical(1))

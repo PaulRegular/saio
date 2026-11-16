@@ -30,4 +30,4 @@ Keep the candidate screened with eligibility unresolved. It is a strong source-r
 - [ICCAT, 2025 SCRS Report](https://iccat.int/Documents/Meetings/Docs/2025/Reports/2025_SCRS_ENG.pdf).
 - [ICCAT, 2026 Albacore Stock Assessment Meeting agenda](https://www.iccat.int/Documents/Meetings/Docs/2026/02859-26_ENG.pdf).
 
-The official PDFs, source URLs, retrieval dates, pinned report identifiers, and SHA-256 checksums are recorded in the gitignored local cache at `source_cache/thunnus_alalunga/noaa_north_atlantic_albacore_2023/sources.csv`.
+The official PDFs, source URLs, retrieval dates, pinned report identifiers, and SHA-256 checksums are recorded in the gitignored local cache at `source_cache/noaa_north_atlantic_albacore/noaa_north_atlantic_albacore_2023/sources.csv`.

@@ -30,4 +30,4 @@ The assessment has useful survey age-at-length inputs and fitted numbers-at-age,
 - [PFMC SSC adopted September 2025 minutes](https://www.pcouncil.org/documents/2025/12/ssc-sept-2025-minutes-adopted-final.pdf/)
 - [PFMC Amendment 37 stock-definition page](https://www.pcouncil.org/actions/phase-2-identification-of-groundfish-in-need-of-conservation-and-management-and-defining-their-stocks/)
 
-The locally cached assessment and supporting PDFs, source revisions, URLs, retrieval dates, sizes, and SHA-256 checksums are recorded in the gitignored directory `source_cache/sebastes_diploproa/noaa_splitnose_rockfish_2009/sources.csv`.
+The locally cached assessment and supporting PDFs, source revisions, URLs, retrieval dates, sizes, and SHA-256 checksums are recorded in the gitignored directory `source_cache/noaa_pacific_splitnose_rockfish_coastwide/noaa_splitnose_rockfish_2009/sources.csv`.

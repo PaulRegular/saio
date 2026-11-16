@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'lepidorhombus_boscii/ices_four_spot_megrim_8c9a_2026')
+cache <- file.path(root, 'source_cache/ices_four_spot_megrim_8c9a/ices_four_spot_megrim_8c9a_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:ldb.27.8c9a'
 unit_id <- 'ices_four_spot_megrim_8c9a'
@@ -90,7 +90,7 @@ review <- data.frame(
     'https://standardgraphs.ices.dk/ViewSourceData.aspx?key=26018'), collapse = '; '),
   review_date = '2026-10-30',
   decision_reason = paste('The current 2026 ICES assessment is an age-structured a4a model documented in the July 2026 Stock Annex, and its current Standard Graphs entry provides annual recruitment, SSB, and F ages 2–4 outputs with reported bounds. The stock is eligible for source curation. Numeric run-matched catch and survey age matrices and exact survey timing remain follow-ups; eligibility does not mean every input matrix has been recovered.'),
-  notes = paste('This is a new current ICES stock unit with no canonical database record. The Spanish survey coverage differs between the Annex narrative and its input tables and needs follow-up. The 2026 output row is a projection, not a fitted terminal year. The Stock Annex, current advice and Standard Graphs source data are cached with provenance under source_cache/lepidorhombus_boscii/ices_four_spot_megrim_8c9a_2026/. No canonical values were added.'),
+  notes = paste('This is a new current ICES stock unit with no canonical database record. The Spanish survey coverage differs between the Annex narrative and its input tables and needs follow-up. The 2026 output row is a projection, not a fitted terminal year. The Stock Annex, current advice and Standard Graphs source data are cached with provenance under source_cache/ices_four_spot_megrim_8c9a/ices_four_spot_megrim_8c9a_2026/. No canonical values were added.'),
   stringsAsFactors = FALSE,
   check.names = FALSE)
 

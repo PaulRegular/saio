@@ -25,7 +25,7 @@ stopifnot(
   all(catch$year <= 2025), any(catch$value == 0)
 )
 m <- x[x$type == "M", ]
-raw_m <- read.csv(file.path("source_cache/clupea_harengus/ices_herring_north_sea_2026", "report_tables_raw.csv"))
+raw_m <- read.csv(file.path("source_cache/ices_herring_north_sea/ices_herring_north_sea_2026", "report_tables_raw.csv"))
 raw_m <- raw_m[raw_m$table == "2.6.1.3", ]
 key <- function(year, age) paste(year, age, sep = ":")
 matched_m <- match(key(m$year, m$age), key(raw_m$year, raw_m$native_column))

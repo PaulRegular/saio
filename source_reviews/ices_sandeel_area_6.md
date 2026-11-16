@@ -30,7 +30,7 @@ numerical data were added.
   assessment year 2023, 2022 catch entry in tonnes.
 
 The report is reused from the shared ignored cache
-`source_cache/ices_sandeel_area_1r_2026/HAWG_2026.pdf`; its original retrieval
+`source_cache/ices_sandeel_area_1r/ices_sandeel_area_1r_2026/HAWG_2026.pdf`; its original retrieval
 date was not recorded, and it was verified on 2026-10-24. The advice page,
 stock-graph page, retrieval dates and checksums are stored under the ignored
-cache `source_cache/ices_sandeel_area_6_2023/`.
+cache `source_cache/ices_sandeel_area_6/ices_sandeel_area_6_2023/`.

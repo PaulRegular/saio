@@ -33,7 +33,7 @@ The stock and assessment records are marked partial because the exact run input 
 
 ## Sources and local cache
 
-Authoritative sources are cached under the gitignored source_cache/anarhichas_lupus/ices_atlantic_wolffish_iceland_2026/ directory. The local sources.csv records retrieval dates, pinned assessment identity, file sizes, and SHA-256 checksums for the report, advice, table page, ICES source data, and locally extracted table CSVs. The shared 2022 WKICEMP framework report is referenced from the adjacent Icelandic plaice cache.
+Authoritative sources are cached under the gitignored source_cache/ices_atlantic_wolffish_iceland_5a/ices_atlantic_wolffish_iceland_2026/ directory. The local sources.csv records retrieval dates, pinned assessment identity, file sizes, and SHA-256 checksums for the report, advice, table page, ICES source data, and locally extracted table CSVs. The shared 2022 WKICEMP framework report is referenced from the adjacent Icelandic plaice cache.
 
 - [MFRI 2026 technical report](https://www.hafogvatn.is/static/extras/images/09_caa_2026_1_techreport_en.html)
 - [MFRI 2026/2027 advice](https://www.hafogvatn.is/static/extras/images/09_caa_2026_1_advice_en.html)

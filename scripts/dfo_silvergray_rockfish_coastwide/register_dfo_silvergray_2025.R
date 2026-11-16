@@ -105,7 +105,7 @@ stopifnot(
   !candidate_unit_id %in% register$candidate_unit_id,
   !any(tolower(stocks$common_name) == "silvergray rockfish", na.rm = TRUE),
   identical(toupper(as.character(tools::sha256sum(
-    file.path("source_cache", "sebastes_brevispinis/dfo_silvergray_rockfish_coastwide", manifest$file)
+    file.path("source_cache/dfo_silvergray_rockfish_coastwide/source_material", manifest$file)
   ))), manifest$sha256)
 )
 

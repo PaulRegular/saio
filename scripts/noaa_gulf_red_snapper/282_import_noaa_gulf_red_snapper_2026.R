@@ -3,7 +3,7 @@ stock_id <- "noaa_gulf_red_snapper"
 assessment_id <- "noaa_gulf_red_snapper_2026"
 candidate_id <- "NOAA:10230"
 report_url <- "https://sedarweb.org/documents/sedar-98-gulf-red-snapper-final-stock-assessment-report/"
-source_dir <- file.path(root, "source_cache/lutjanus_campechanus/noaa_gulf_red_snapper_2026")
+source_dir <- file.path(root, "source_cache/noaa_gulf_red_snapper/noaa_gulf_red_snapper_2026")
 manifest_path <- file.path(root, "provenance/noaa_gulf_red_snapper_2026/sources.csv")
 write_mode <- "--write" %in% commandArgs(trailingOnly = TRUE) ||
   identical(Sys.getenv("SAIO_IMPORT_WRITE"), "true")
@@ -559,7 +559,7 @@ if (!write_mode) {
   )
   candidates$notes[candidate_row] <- paste(
     "The official final report and supporting data papers are cached under",
-    "source_cache/lutjanus_campechanus/noaa_gulf_red_snapper_2026/ with provenance and SHA-256 hashes.",
+    "source_cache/noaa_gulf_red_snapper/noaa_gulf_red_snapper_2026/ with provenance and SHA-256 hashes.",
     "Report-derived population outputs from Tables 12-22 and aggregate survey indices are imported; catch, age",
     "compositions and numeric biological inputs remain under source review."
   )

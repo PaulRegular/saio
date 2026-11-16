@@ -21,7 +21,7 @@ load(file.path(root, 'source_cache/shared/noaa_stocksmart',
   'stock_assessment_summary.rda'), envir = stocksmart_env)
 smart <- get('stock_assessment_summary', envir = stocksmart_env)
 smart_row <- smart[as.character(smart$stock_id) == '10448', , drop = FALSE]
-manifest <- read.csv(file.path(root, 'source_cache/sebastes_rufus/noaa_bank_rockfish_california',
+manifest <- read.csv(file.path(root, 'source_cache/noaa_bank_rockfish_california/source_material',
   'sources.csv'), stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'), check.names = FALSE)

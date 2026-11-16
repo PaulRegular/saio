@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache', 'mycteroperca_microlepis/noaa_gag_gulf_sedar72_srfs_2022')
+cache <- file.path(root, 'source_cache/noaa_gag_gulf/noaa_gag_gulf_sedar72_srfs_2022')
 candidate_path <- file.path(root, 'database/candidates.csv')
 manifest_path <- file.path(cache, 'manifest.csv')
 
@@ -160,7 +160,7 @@ review <- data.frame(
     'base report was superseded for management use by the September 2022 SRFS run,',
     'which replaced Florida private-mode MRIP-FES catch inputs with calibrated SRFS',
     'estimates and corrected headboat data. Cache files are kept in the ignored',
-    'source_cache/mycteroperca_microlepis/noaa_gag_gulf_sedar72_srfs_2022/ directory with URL and checksum provenance.'),
+    'source_cache/noaa_gag_gulf/noaa_gag_gulf_sedar72_srfs_2022/ directory with URL and checksum provenance.'),
   stringsAsFactors = FALSE
 )
 

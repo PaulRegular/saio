@@ -36,7 +36,7 @@ stopifnot(
 )
 catch_numbers <- x[x$type == "catch" & x$measure == "numbers_at_age", ]
 catch_numbers_source <- read.csv(
-  "source_cache/gadus_chalcogrammus/afsc_pollock_goa_2024/report_catch_numbers_at_age.csv"
+  "source_cache/afsc_pollock_goa/afsc_pollock_goa_2024/report_catch_numbers_at_age.csv"
 )
 catch_numbers <- catch_numbers[order(catch_numbers$year, catch_numbers$age), ]
 catch_numbers_source <- catch_numbers_source[order(
@@ -112,7 +112,7 @@ stopifnot(
 message("Partial GOA pollock F-at-age reconstruction matches the cohort equation and published rounding limits.")
 
 covariate <- x[x$type == "covariate", ]
-native <- read.csv("source_cache/gadus_chalcogrammus/afsc_pollock_goa_2024/native_inputs_raw.csv")
+native <- read.csv("source_cache/afsc_pollock_goa/afsc_pollock_goa_2024/native_inputs_raw.csv")
 stopifnot(
   nrow(covariate) == 40,
   identical(as.numeric(covariate$year), native$value[native$key == "Ecov_obs_year"]),
@@ -164,7 +164,7 @@ stopifnot(identical(q_sd, native$value[native$key == "q3_rwlk_sd"]))
 message("Active fishery and survey process-penalty scales match native values.")
 
 biomass <- y[y$measure == "total_biomass", ]
-source_biomass <- read.csv("source_cache/gadus_chalcogrammus/afsc_pollock_goa_2024/report_age3plus_biomass.csv")
+source_biomass <- read.csv("source_cache/afsc_pollock_goa/afsc_pollock_goa_2024/report_age3plus_biomass.csv")
 stopifnot(
   nrow(biomass) == 48, all(biomass$age_group == "3+"),
   identical(biomass$value, as.numeric(source_biomass$value)),

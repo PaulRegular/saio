@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 root=Path(sys.argv[1])
-cache=root/'source_cache/clupea_harengus/ices_herring_north_sea_2026'
+cache=root/'source_cache/ices_herring_north_sea/ices_herring_north_sea_2026'
 assessment='ices_herring_north_sea_2026'
 stock_id='ices_herring_north_sea'
 report='https://doi.org/10.17895/ices.pub.31424315'

@@ -80,7 +80,7 @@ stopifnot(sum(outputs_diag$measure == "numbers_at_age") == 56000L,
   all(is.na(outputs_diag$upr)))
 grid_sb <- outputs[outputs$scenario == "54-model grid median", ]
 source_grid_sb <- read.csv(
-  "source_cache/thunnus_albacares/wcpfc_wcpo_yellowfin_2023/notes/median_sb_time_series.csv",
+  "source_cache/wcpfc_wcpo_yellowfin/wcpfc_wcpo_yellowfin_2023/notes/median_sb_time_series.csv",
   check.names = FALSE)
 stopifnot(nrow(grid_sb) == 70L,
   identical(as.integer(grid_sb$year), as.integer(source_grid_sb$Year)),
@@ -95,7 +95,7 @@ annual_sb <- outputs[outputs$measure == "spawning_potential_biomass" &
   is.na(outputs$region) & is.na(outputs$season) &
   outputs$scenario == "Diagnostic2023 reference fit", ]
 source_summary <- read.csv(
-  "source_cache/thunnus_albacares/wcpfc_wcpo_yellowfin_2023/TAF/output/summary.csv")
+  "source_cache/wcpfc_wcpo_yellowfin/wcpfc_wcpo_yellowfin_2023/TAF/output/summary.csv")
 stopifnot(nrow(annual_sb) == 70L,
   isTRUE(all.equal(annual_sb$value, source_summary$sb, tolerance = 1e-12)))
 

@@ -4,13 +4,13 @@ write_mode <- "--write" %in% args
 inputs_only <- "--inputs-only" %in% args
 
 source_files <- c(
-  "source_cache/mpi_hake_hak1_2024/FAR-2026-01-HAK1-inputs.pdf",
-  "source_cache/mpi_hake_hak1_2024/FAR-2026-02-HAK1-2024-assessment.pdf",
-  "source_cache/mpi_hake_hak1_2024/FAR-2026-06-hake-ling-catch-at-age.pdf",
-  "source_cache/mpi_hake_hak1_2024/HAK-2025-Plenary-volume-1.pdf",
-  "source_cache/mpi_hake_hak7_2024/FAR-2025-03-HAK7-2024-assessment.pdf",
-  "source_cache/mpi_hake_hak7_2024/FAR-2026-06-hake-ling-catch-at-age.pdf",
-  "source_cache/mpi_hake_hak7_2024/HAK-2025-Plenary-volume-1.pdf"
+  "source_cache/mpi_hake_hak1_subantarctic/mpi_hake_hak1_subantarctic_2024/FAR-2026-01-HAK1-inputs.pdf",
+  "source_cache/mpi_hake_hak1_subantarctic/mpi_hake_hak1_subantarctic_2024/FAR-2026-02-HAK1-2024-assessment.pdf",
+  "source_cache/shared/mpi_hake_2024/mpi_hake_hak1_subantarctic/FAR-2026-06-hake-ling-catch-at-age.pdf",
+  "source_cache/shared/mpi_hake_2024/mpi_hake_hak1_subantarctic/HAK-2025-Plenary-volume-1.pdf",
+  "source_cache/mpi_hake_hak7_wcsi/mpi_hake_hak7_wcsi_2024/FAR-2025-03-HAK7-2024-assessment.pdf",
+  "source_cache/shared/mpi_hake_2024/mpi_hake_hak7_wcsi/FAR-2026-06-hake-ling-catch-at-age.pdf",
+  "source_cache/shared/mpi_hake_2024/mpi_hake_hak7_wcsi/HAK-2025-Plenary-volume-1.pdf"
 )
 expected_hash <- c(
   "55FD165C2E1FF65C52237B8133D286AF20350015A4F73D7305D83BBEF21D49B5",

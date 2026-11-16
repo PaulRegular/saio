@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/raja_clavata/ices_thornback_ray_6_2026')
+cache <- file.path(root, 'source_cache/ices_thornback_ray_6/ices_thornback_ray_6_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:rjc.27.6'
 unit_id <- 'ices_thornback_ray_6'
@@ -100,7 +100,7 @@ review <- list(
     'https://sg.ices.dk/SAG_API/StockXmlDownload/25842'),
   review_date = '2026-10-31',
   decision_reason = paste('The latest public ICES records are for assessment year 2026, Category 3, using an aggregate biomass-index/advice method. Official source data provide landings and an aggregate B_index with uncertainty, but no age-disaggregated observations or age-specific population outputs. The current unit is ineligible for the age-disaggregated assessment set.'),
-  notes = paste('This is a distinct ICES unit, rjc.27.6, covering thornback ray in Subarea 6 (West of Scotland); it is not a duplicate of the other Raja clavata advice units. The official 2026 advice limits landings to 51 tonnes in each of 2027 and 2028 and states that corresponding catches cannot be quantified. The advice PDF, advice record, Standard Graphs source-data page, and SAG XML are cached with provenance under source_cache/raja_clavata/ices_thornback_ray_6_2026. No canonical stock, assessment, input or output records were added.' )
+  notes = paste('This is a distinct ICES unit, rjc.27.6, covering thornback ray in Subarea 6 (West of Scotland); it is not a duplicate of the other Raja clavata advice units. The official 2026 advice limits landings to 51 tonnes in each of 2027 and 2028 and states that corresponding catches cannot be quantified. The advice PDF, advice record, Standard Graphs source-data page, and SAG XML are cached with provenance under source_cache/ices_thornback_ray_6/ices_thornback_ray_6_2026. No canonical stock, assessment, input or output records were added.' )
 )
 
 is_unreviewed <- candidates$match_status[row] == 'unreviewed' &&

@@ -1,6 +1,6 @@
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache", "urophycis_tenuis/ck_nefsc_garmiii_tenuis_gom_gb")
+cache <- file.path(root, "source_cache/ck_nefsc_garmiii_tenuis_gom_gb/nefsc_white_hake_2025")
 input_file <- file.path(cache, "RUN_005.DAT")
 table_file <- file.path(cache, "2025_HKW_UNIT_TAB_ALL.pdf")
 stock_id <- "ck_nefsc_garmiii_tenuis_gom_gb"

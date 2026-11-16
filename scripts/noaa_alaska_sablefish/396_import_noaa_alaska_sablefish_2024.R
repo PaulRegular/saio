@@ -1,7 +1,7 @@
 root <- "."
 assessment_id <- "noaa_alaska_sablefish_2024"
 stock_id <- "noaa_alaska_sablefish"
-cache <- file.path(root, "source_cache", "anoplopoma_fimbria/noaa_alaska_sablefish_2024")
+cache <- file.path(root, "source_cache/noaa_alaska_sablefish/noaa_alaska_sablefish_2024")
 revision <- "d080576086110b6dcfca2c37918bab3101fff44a"
 data_file <- file.path(cache, "alaska_sablefish_2024_input.dat")
 output_file <- file.path(cache, "alaska_sablefish_2024_output.rdat")

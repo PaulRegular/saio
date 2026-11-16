@@ -83,4 +83,4 @@ No canonical numerical records were imported during this discovery screen.
 
 The official PDFs, retrieval dates, source URLs, and SHA-256 checksums are
 stored in the ignored local cache
-`source_cache/reinhardtius_hippoglossoides/dfo_greenland_halibut_4rst_2024/`.
+`source_cache/dfo_greenland_halibut_4rst/dfo_greenland_halibut_4rst_2024/`.

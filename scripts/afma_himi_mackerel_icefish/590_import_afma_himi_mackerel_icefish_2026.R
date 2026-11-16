@@ -5,7 +5,7 @@ stock_id <- "afma_himi_mackerel_icefish"
 candidate_id <- "AFMA:HIMI_ICEFISH"
 assessment_url <- "https://www.afma.gov.au/sites/default/files/2026-11/Mackerel%20Icefish%20stock%20assessment%202026.pdf"
 fishery_url <- "https://www.afma.gov.au/fisheries/heard-island-and-mcdonald-islands-fishery"
-source_file <- "champsocephalus_gunnari/afma_himi_mackerel_icefish_2026/himi_mackerel_icefish_2026.pdf"
+source_file <- "afma_himi_mackerel_icefish/afma_himi_mackerel_icefish_2026/himi_mackerel_icefish_2026.pdf"
 source_path <- file.path("source_cache", source_file)
 source_hash <- "17FF6A46D444A633C4BEE736694C56E524B59899A32AA7498EBA6414591DE955"
 manifest_path <- "provenance/afma_himi_mackerel_icefish_2026/sources.csv"

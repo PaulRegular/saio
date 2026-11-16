@@ -37,9 +37,9 @@ current age-structured assessment.
 - [ICES Stock Assessment Graphs, assessment year 2025, key 19365](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=19365). This earlier graph contains landings history only and is not treated as the current 2026 assessment output.
 
 The HAWG report PDF is cached once as a shared source at
-`source_cache/clupea_harengus/ck_ices_hawg_harengus_cs6_a_s_7b_c/HAWG_2026_full_report.pdf`.
+`source_cache/ck_ices_hawg_harengus_cs6_a_s_7b_c/supporting_sources/HAWG_2026_full_report.pdf`.
 The candidate-specific cache under
-`source_cache/clupea_harengus/ices_herring_7ef_2026/` records the source URL,
+`source_cache/ices_herring_7ef/ices_herring_7ef_2026/` records the source URL,
 retrieval date, report revision, size, and SHA-256, and contains an extracted
 copy of pages 414–419 for quick review. The source itself is the shared ICES
 report, not the extracted text.

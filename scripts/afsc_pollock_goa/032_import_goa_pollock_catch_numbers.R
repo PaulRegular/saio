@@ -1,7 +1,7 @@
 args <- commandArgs(trailingOnly = TRUE)
 root <- if (length(args)) args[[1]] else "."
 root <- normalizePath(root, winslash = "/", mustWork = TRUE)
-cache <- file.path(root, "source_cache/gadus_chalcogrammus/afsc_pollock_goa_2024")
+cache <- file.path(root, "source_cache/afsc_pollock_goa/afsc_pollock_goa_2024")
 database <- file.path(root, "database/inputs.csv")
 pdf <- file.path(cache, "2024_GOA_pollock_SAFE_final.pdf")
 report_url <- "https://files.npfmc.org/SAFE/2024/GOApollock.pdf"

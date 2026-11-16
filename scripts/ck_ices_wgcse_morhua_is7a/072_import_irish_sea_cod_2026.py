@@ -9,7 +9,7 @@ import sys
 import pdfplumber
 
 root = pathlib.Path(sys.argv[1])
-cache = root / "source_cache/gadus_morhua/ck_ices_wgcse_morhua_is7a/assessment_2026"
+cache = root / "source_cache/ck_ices_wgcse_morhua_is7a/ices_cod_irish_sea_2026"
 assessment = "ices_cod_irish_sea_2026"
 stock_id = "ck_ices_wgcse_morhua_is7a"
 report = "https://ndownloader.figshare.com/files/66387206"

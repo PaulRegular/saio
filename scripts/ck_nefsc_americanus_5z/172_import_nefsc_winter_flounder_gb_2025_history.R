@@ -1,7 +1,7 @@
 base <- "."; db <- file.path(base, "database")
 id <- "nefsc_winter_flounder_gb_2025_wham"
 url <- "https://raw.githubusercontent.com/NOAA-EDAB/stocksmart/664c4237e26520b260a090e1821a2cee5d1cdf07/data/stock_assessment_data.rda"
-file <- file.path(base,"source_cache/pseudopleuronectes_americanus/ck_nefsc_americanus_5z/stock_assessment_data_664c4237.rda")
+file <- file.path(base,"source_cache/ck_nefsc_americanus_5z/supporting_sources/stock_assessment_data_664c4237.rda")
 stopifnot(digest::digest(readBin(file,"raw",n=file.info(file)$size),algo="sha256",serialize=FALSE)=="141db3599cbf37af3e019bd53d2323d829a719b273e8ab0226b73f6ad18620b0")
 e <- new.env(parent=emptyenv()); load(file,envir=e)
 x <- e$stock_assessment_data; x <- x[x$stock_name=="Winter flounder - Georges Bank" & x$assessment_year==2025,]

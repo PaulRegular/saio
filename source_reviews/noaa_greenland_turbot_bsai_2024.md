@@ -50,6 +50,6 @@ claim that the official Stock Synthesis assessment is not age structured.
 - [NOAA Stock SMART entry](https://apps-st.fisheries.noaa.gov/stocksmart/?app=browse_by_stock&stockid=10054)
 
 The three assessment and review files are cached with retrieval dates and
-checksums under `source_cache/reinhardtius_hippoglossoides/noaa_greenland_turbot_2024/`. No 2026
+checksums under `source_cache/noaa_greenland_turbot_2024/source_material/`. No 2026
 replacement model was treated as official because the retrieved September
 materials present preliminary alternatives for review.

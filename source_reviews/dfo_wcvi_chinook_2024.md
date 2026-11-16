@@ -8,7 +8,7 @@ The available information does not yet establish a complete, aligned age-structu
 
 ## Sources and local cache
 
-The official 2026 Research Document was reviewed through its indexed full text. The direct Government of Canada PDF URL redirected to an archived-page notice during local retrieval, so it could not be cached in this environment. The 2025 Science Response and selected supporting workbooks are cached in the gitignored local source cache; their source URLs, retrieval date, file sizes, checksums, and pinned supporting-repository revision are recorded in `source_cache/oncorhynchus_tshawytscha/dfo_wcvi_chinook_2024/sources.csv`.
+The official 2026 Research Document was reviewed through its indexed full text. The direct Government of Canada PDF URL redirected to an archived-page notice during local retrieval, so it could not be cached in this environment. The 2025 Science Response and selected supporting workbooks are cached in the gitignored local source cache; their source URLs, retrieval date, file sizes, checksums, and pinned supporting-repository revision are recorded in `source_cache/dfo_wcvi_chinook_2024/source_material/sources.csv`.
 
 - [DFO Research Document 2026/020: West Coast of Vancouver Island Natural-Origin Chinook Salmon Stock Assessment in 2024](https://publications.gc.ca/collections/collection_2026/mpo-dfo/fs70-5/Fs70-5-2026-020-eng.pdf)
 - [DFO Science Response 2025/021](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41293964.pdf)

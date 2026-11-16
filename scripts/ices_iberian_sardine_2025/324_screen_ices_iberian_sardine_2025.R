@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/sardina_pilchardus/ices_iberian_sardine_2025')
+cache <- file.path(root, 'source_cache/ices_iberian_sardine_2025/source_material')
 candidate_path <- file.path(root, 'database/candidates.csv')
 source_review_path <- file.path(root, 'source_reviews/ices_iberian_sardine_2025.md')
 manifest_path <- file.path(cache, 'manifest.csv')
@@ -141,7 +141,7 @@ source_review <- c(
   '- [ICES Advice 2025](https://doi.org/10.17895/ices.advice.27692337.v1), assessment year 2025.',
   '- [ICES Standard Graphs data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=21259), stock assessment key 21259.',
   '- [TAF assessment repository cited by the Stock Annex](https://github.com/ices-taf/2025_pil.27.8c9a_assessment); public GitHub metadata returned 404 during this review.', '',
-  'The report, Stock Annex, advice PDF, and Standard Graphs source page are cached in the gitignored source_cache/sardina_pilchardus/ices_iberian_sardine_2025/; the local manifest records URLs, pinned source revisions, retrieval time, file sizes, and SHA-256 checksums.'
+  'The report, Stock Annex, advice PDF, and Standard Graphs source page are cached in the gitignored source_cache/ices_iberian_sardine_2025/source_material/; the local manifest records URLs, pinned source revisions, retrieval time, file sizes, and SHA-256 checksums.'
 )
 writeLines(source_review, source_review_path, useBytes = TRUE)
 replace_csv_row(candidate_path, i, candidates[i, , drop = FALSE])

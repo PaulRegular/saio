@@ -1,7 +1,7 @@
 stock_id <- "noaa_red_grouper_gom"
 assessment_id <- paste0(stock_id, "_sedar88_2025")
 candidate_id <- "NOAA:10331"
-cache_name <- "epinephelus_morio/noaa_red_grouper_gom_2025"
+cache_name <- "noaa_red_grouper_gom/noaa_red_grouper_gom_sedar88_2025"
 report_file <- "sedar_88_red_grouper_final_updated_2025.pdf"
 report_url <- "https://sedarweb.org/documents/sedar-88-gulf-of-mexico-red-grouper-final-stock-assessment-report-updated-december-2025/"
 project_url <- "https://sedarweb.org/assessments/sedar-88-gulf-of-mexico-red-grouper/"

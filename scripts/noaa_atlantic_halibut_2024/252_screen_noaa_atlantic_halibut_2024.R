@@ -20,7 +20,7 @@ updates <- list(
   detailed_source_url = paste('https://apps-st.fisheries.noaa.gov/sis/docServlet?fileAction=download&fileId=9875', 'https://d23h0vhsm26o6d.cloudfront.net/SSC-report-groundfish-10_21_24.pdf', sep = '; '),
   review_date = '2026-10-29',
   decision_reason = 'The latest listed NOAA assessment is the 2024 FSD update through 2023. It is aggregate and empirical rather than age-structured, so it is ineligible for the current age-disaggregated candidate set. NOAA documents uncertainty about how its U.S. assessment unit relates to the larger halibut stock centered in Canadian waters; available sources do not support a one-to-one match to either DFO halibut unit.',
-  notes = 'NOAA Stock SMART ID 10056; 2024 run used for 2025 catch advice. Identity remains ambiguous relative to DFO Atlantic halibut units 3NOPs4VWX5Zc and 4RST. Detailed assessment and SSC report are cached under source_cache/hippoglossus_hippoglossus/noaa_atlantic_halibut_2024/.'
+  notes = 'NOAA Stock SMART ID 10056; 2024 run used for 2025 catch advice. Identity remains ambiguous relative to DFO Atlantic halibut units 3NOPs4VWX5Zc and 4RST. Detailed assessment and SSC report are cached under source_cache/noaa_atlantic_halibut_2024/source_material/.'
 )
 
 for (column in names(updates)) x[[column]][i] <- updates[[column]]

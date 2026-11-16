@@ -1,6 +1,6 @@
 root <- "."
 register_path <- file.path(root, 'database/candidates.csv')
-cache <- file.path(root, 'source_cache/urophycis_chuss/noaa_red_hake_2023')
+cache <- file.path(root, 'source_cache/shared/noaa_red_hake_2023')
 
 stock_ids <- c(10516L, 10517L)
 assessment_ids <- c(12885L, 12886L)
@@ -121,7 +121,7 @@ for (j in seq_along(rows)) {
   register$decision_reason[i] <- paste0(
     'Ineligible for the age-disaggregated assessment set. The latest accepted 2023 production update uses an empirical catchability/swept-area biomass method and reports catch, swept-area biomass, exploitation rates, survey biomass indices and length frequencies. The 2023 peer-review panel confirms the method does not estimate annual N-at-age, F-at-age, recruitment or SSB. Earlier AIM/index assessments are superseded by this current production method and are not substituted as if current.')
   register$notes[i] <- paste0(
-    'NOAA Stock SMART ID ', stock_id, ' is a distinct U.S. red hake management unit (Urophycis chuss): northern Gulf of Maine/northern Georges Bank for 10516; southern Georges Bank/Mid-Atlantic for 10517. These are separate current units and do not match another canonical Urophycis chuss stock in the database. 2023 assessment and peer-review sources are locally cached under source_cache/urophycis_chuss/noaa_red_hake_2023/sources.csv. No canonical assessment or numerical records were added.')
+    'NOAA Stock SMART ID ', stock_id, ' is a distinct U.S. red hake management unit (Urophycis chuss): northern Gulf of Maine/northern Georges Bank for 10516; southern Georges Bank/Mid-Atlantic for 10517. These are separate current units and do not match another canonical Urophycis chuss stock in the database. 2023 assessment and peer-review sources are locally cached under source_cache/shared/noaa_red_hake_2023/sources.csv. No canonical assessment or numerical records were added.')
 }
 
 source(file.path(root, 'scripts/shared/candidate_register_io.R'))

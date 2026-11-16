@@ -130,7 +130,7 @@ curation.
 
 No canonical database values were imported was
 attempted. Source files are cached locally in the gitignored directory
-`source_cache/rhomboplites_aurorubens/noaa_south_atlantic_vermilion_2026/`; its `sources.csv`
+`source_cache/noaa_vermilion_snapper_south_atlantic/noaa_south_atlantic_vermilion_2026/`; its `sources.csv`
 records source URLs, retrieval dates, revisions, byte sizes, and SHA-256 hashes.
 
 ### Sources

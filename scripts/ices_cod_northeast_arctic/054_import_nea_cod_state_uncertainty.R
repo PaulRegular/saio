@@ -1,7 +1,7 @@
 assessment_id <- "ices_cod_northeast_arctic_2026"
 root <- "."
 database <- file.path(root, "database")
-cache <- file.path(root, "source_cache/gadus_morhua", assessment_id)
+cache <- file.path(root, "source_cache/ices_cod_northeast_arctic/ices_cod_northeast_arctic_2026")
 model_path <- file.path(cache, "baserun_model.RData")
 if (!file.exists(model_path)) stop("The cached official SAM fit is missing.", call. = FALSE)
 

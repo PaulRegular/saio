@@ -36,4 +36,4 @@ No canonical stock, assessment, input, or output records were added.
 - ICES, [2024 advice record for pollack in Subarea 4 and Division 3.a](https://asd.ices.dk/viewAdvice/3768), assessment key 19286.
 - ICES, [2024 Standard Graphs](https://standardgraphs.ices.dk/ViewCharts.aspx?key=19286).
 - ICES, [2024 Standard Graphs source data](https://standardgraphs.ices.dk/ViewSourceData.aspx?key=19286).
-- The gitignored `source_cache/pollachius_pollachius/ices_pollack_3a4_2024/sources.csv` records retrieved source files, date, revision, file size, and SHA-256 checksum.
+- The gitignored `source_cache/ices_pollack_3a4/ices_pollack_3a4_2024/sources.csv` records retrieved source files, date, revision, file size, and SHA-256 checksum.

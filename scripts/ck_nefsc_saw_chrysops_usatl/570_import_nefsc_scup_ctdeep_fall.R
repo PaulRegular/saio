@@ -3,7 +3,7 @@
 assessment_id <- "nefsc_scup_2015"
 survey <- "CTDEEP fall trawl survey"
 source_ref <- "NEFSC Reference Document 15-08, Table A43, p. 133"
-pdf <- file.path("source_cache/stenotomus_chrysops", assessment_id, "NEFSC_15-08_60th_SAW_Assessment_Report.pdf")
+pdf <- file.path("source_cache/ck_nefsc_saw_chrysops_usatl/nefsc_scup_2015", "NEFSC_15-08_60th_SAW_Assessment_Report.pdf")
 source_hash <- "bba43370850717552189fc7a44d314e51a76a76d930e51443e51f2da7924cc6f"
 if (!file.exists(pdf)) stop("Cache the report identified in provenance/nefsc_scup_2015/sources.csv.")
 if (as.character(openssl::sha256(file(pdf))) != source_hash) stop("Unexpected source PDF checksum.")

@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/raja_undulata/ices_undulate_ray_7de_2024')
+cache <- file.path(root, 'source_cache/ices_undulate_ray_7de/ices_undulate_ray_7de_2024')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_id <- 'ICES:rju.27.7de'
 unit_id <- 'ices_undulate_ray_7de'
@@ -97,7 +97,7 @@ review <- list(
   notes = paste('The 2026 SID row is inventory membership, not an assessment run. The 2024 advice and',
     'Standard Graphs assessment key 19173 identify the current run; the 2022 WKELASMO benchmark',
     'documents the aggregate production-model approach. Cached source URLs, revisions, retrieval date,',
-    'sizes, and SHA-256 checksums are recorded under source_cache/raja_undulata/ices_undulate_ray_7de_2024/.',
+    'sizes, and SHA-256 checksums are recorded under source_cache/ices_undulate_ray_7de/ices_undulate_ray_7de_2024/.',
     'No canonical numerical records were added.')
 )
 

@@ -75,7 +75,7 @@ review <- list(
     'with a 2022 biomass value, older model version, and a 2024 last-data-year;',
     'the detailed report and Council adoption record identify the latest run.',
     'Run inputs and model details are cached in',
-    'source_cache/scomber_japonicus/noaa_pacific_mackerel_2025/.'
+    'source_cache/noaa_pacific_mackerel_pacific_coast/noaa_pacific_mackerel_2025/.'
   )
 )
 

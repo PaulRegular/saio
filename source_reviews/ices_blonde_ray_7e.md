@@ -30,6 +30,6 @@ or age-specific outputs. No canonical data were added.
 - [ICES SID 2026 stock list](https://sid.ices.dk/services/year/2026)
 
 The advice PDF and extracted source text are cached locally under
-`source_cache/raja_brachyura/ices_blonde_ray_7e_2024/`. The full WGEF report is
+`source_cache/ices_blonde_ray_7e/ices_blonde_ray_7e_2024/`. The full WGEF report is
 shared with the thornback ray source review and referenced in the local source
 manifest with its URL, retrieval date, version, size, and SHA-256.

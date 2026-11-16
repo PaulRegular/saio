@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/lutjanus_griseus/noaa_gray_snapper_gulf_sedar75_2022')
+cache <- file.path(root, 'source_cache/noaa_gray_snapper_gulf/noaa_gray_snapper_gulf_sedar75_2022')
 candidate_path <- file.path(root, 'database/candidates.csv')
 
 sources <- data.frame(

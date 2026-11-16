@@ -1,7 +1,7 @@
 root <- normalizePath(".", winslash = "/", mustWork = TRUE)
 base <- root
 db_dir <- file.path(base, "database")
-cache <- file.path(base, "source_cache", "scophthalmus_maximus/ices_turbot_north_sea_2025_benchmark")
+cache <- file.path(base, "source_cache/ck_ices_wgnssk_maximus_ns_4/ices_turbot_north_sea_2025_benchmark")
 id_benchmark <- "ices_turbot_north_sea_2025_benchmark"
 id_summary <- "ices_turbot_north_sea_2026_summary"
 stock_id <- "ck_ices_wgnssk_maximus_ns_4"

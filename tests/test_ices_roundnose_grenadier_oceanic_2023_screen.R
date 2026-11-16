@@ -9,7 +9,7 @@ register <- read.csv(file.path(root, 'database/candidates.csv'), stringsAsFactor
   na.strings = c('', 'NA'), check.names = FALSE)
 candidate <- register[register$candidate_id == 'ICES:rng.27.5a10b12ac14b', , drop = FALSE]
 manifest <- read.csv(file.path(root,
-  'source_cache/coryphaenoides_rupestris/ices_roundnose_grenadier_oceanic_2023/sources.csv'),
+  'source_cache/ices_roundnose_grenadier_oceanic/ices_roundnose_grenadier_oceanic_2023/sources.csv'),
   stringsAsFactors = FALSE)
 stocks <- read.csv(file.path(root, 'database/stocks.csv'), stringsAsFactors = FALSE,
   na.strings = c('', 'NA'))
@@ -33,7 +33,7 @@ stopifnot(
   grepl('cannot be quantified', candidate$catch_age_evidence, ignore.case = TRUE),
   nrow(manifest) == 1L,
   file.exists(file.path(root,
-    'source_cache/coryphaenoides_rupestris/ices_roundnose_grenadier_oceanic_2023/ICES_2023_advice.html')),
+    'source_cache/ices_roundnose_grenadier_oceanic/ices_roundnose_grenadier_oceanic_2023/ICES_2023_advice.html')),
   nchar(manifest$sha256) == 64L,
   !any(tolower(stocks$authority_stock_id) == 'rng.27.5a10b12ac14b', na.rm = TRUE),
   !any(assessments$stock_id == 'ices_roundnose_grenadier_oceanic'),

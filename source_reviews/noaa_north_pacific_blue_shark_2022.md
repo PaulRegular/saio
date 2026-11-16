@@ -8,7 +8,7 @@ The official assessment reports annual spawning-stock biomass, aggregate fishing
 
 ## Sources and local cache
 
-The assessment report and its Stock Synthesis data-file documentation are cached in the gitignored local source cache. Their retrieval dates, URLs, filenames, and SHA-256 checksums are recorded in `source_cache/prionace_glauca/noaa_north_pacific_blue_shark_2022/sources.csv`.
+The assessment report and its Stock Synthesis data-file documentation are cached in the gitignored local source cache. Their retrieval dates, URLs, filenames, and SHA-256 checksums are recorded in `source_cache/noaa_north_pacific_blue_shark_2022/source_material/sources.csv`.
 
 - [ISC 2022 North Pacific blue shark assessment, Annex 12](https://isc.fra.go.jp/pdf/ISC22/ISC22_ANNEX12_Stock_Assessment_for_Blue_Shark.pdf)
 - [ISC Stock Synthesis data-file paper, ISC/22/SHARKWG-2/4](https://isc.fra.go.jp/pdf/SHARK/ISC22_SHARK_2/ISC_22_SHARKWG_2_4.pdf)

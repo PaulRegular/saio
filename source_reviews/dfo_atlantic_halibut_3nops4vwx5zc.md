@@ -29,4 +29,4 @@ This DFO unit is **ineligible for the age-indexed candidate set**. SISCAL is age
 - [2024 stock status update](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41282760.pdf)
 - NOAA Atlantic halibut review: noaa_atlantic_halibut_2024.md
 
-The official PDFs and their retrieval dates and SHA-256 checksums are stored in the ignored local cache source_cache/hippoglossus_hippoglossus/dfo_atlantic_halibut_3nops_2022/.
+The official PDFs and their retrieval dates and SHA-256 checksums are stored in the ignored local cache source_cache/dfo_atlantic_halibut_3nops_2022/source_material/.

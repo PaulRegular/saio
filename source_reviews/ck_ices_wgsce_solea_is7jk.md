@@ -51,7 +51,7 @@ preserved as published, with no replacement values invented.
 The number scale, catch-total inconsistency, 10+ group construction and zero weights/observations in the historical 2019 assessment remain unresolved.
 
 The WGCSE 2026 report, advice page, and their checksums are cached under
-`source_cache/ck_ices_wgsce_solea_is7jk_2026/`.
+`source_cache/shared/ck_ices_wgsce_solea_is7jk_2026/`.
 
 ## Sources
 

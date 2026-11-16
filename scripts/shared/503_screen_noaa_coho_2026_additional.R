@@ -1,5 +1,5 @@
 root <- "."
-cache <- file.path(root, 'source_cache/oncorhynchus_kisutch/noaa_coho_2026')
+cache <- file.path(root, 'source_cache/shared/noaa_coho_2026')
 register_path <- file.path(root, 'database/candidates.csv')
 candidate_ids <- paste0('NOAA:', c(11869L, 11874L, 11875L))
 stock_ids <- c(11869L, 11874L, 11875L)

@@ -8,7 +8,7 @@ The assessment and ICES NWWG chapter are the newest detailed production sources 
 
 ## Sources and cache
 
-The source files, retrieval dates, URLs, and SHA-256 hashes are in the ignored local cache manifest at `source_cache/gadus_morhua/ices_cod_iceland_2026/manifest.csv`.
+The source files, retrieval dates, URLs, and SHA-256 hashes are in the ignored local cache manifest at `source_cache/ck_ices_nwwg_morhua_ice5a/ices_cod_iceland_2026/manifest.csv`.
 
 - [MFRI 2026 technical report](https://www.hafogvatn.is/static/extras/images/1_cod_2026_1_techreport_en.html)
 - [MFRI 2026 machine-readable tables](https://www.hafogvatn.is/static/extras/images/1_cod_2026_1_tables_en.html)

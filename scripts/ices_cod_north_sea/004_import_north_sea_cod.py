@@ -14,7 +14,7 @@ parser.add_argument("repository", type=pathlib.Path)
 parser.add_argument("--rscript", required=True)
 args = parser.parse_args()
 root = args.repository
-cache = root / "source_cache/gadus_morhua/ices_cod_north_sea_2025"
+cache = root / "source_cache/ices_cod_north_sea/ices_cod_north_sea_2025"
 assessment = "ices_cod_north_sea_2025"
 report = "https://ndownloader.figshare.com/files/59358443"
 revision = "390ff07e3d1de2e14b3a50b1ac27260566d73b62"
@@ -159,7 +159,7 @@ write.csv(do.call(rbind, rows), a[2], row.names=FALSE)
 native_script = cache / "export_native_surfaces.R"
 native_script.write_text(r_code, encoding="utf-8")
 subprocess.run([args.rscript, str(native_script),
-                str(root / "source_cache/gadus_morhua/ices_selectivity_2026/FLStocks.RData"), str(native)], check=True)
+                str(root / "source_cache/ices_cod_north_sea/ices_selectivity_2026/FLStocks.RData"), str(native)], check=True)
 expected = {}
 for table, slot, count in [("4.8", "harvest", 8), ("4.9", "stock.n", 8), ("4.13", "m", 7)]:
     for region, year, values in matrix(table, count, True):

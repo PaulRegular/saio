@@ -73,5 +73,5 @@ assessment records or numerical values were added.
 - [NOAA Stock SMART row 10207](https://apps-st.fisheries.noaa.gov/stocksmart/?stockid=10207)
 
 The reviewed PDFs are cached in the ignored local source cache under
-`source_cache/seriola_dumerili/noaa_gom_greater_amberjack_2021/`; its `sources.csv`
+`source_cache/noaa_gulf_greater_amberjack/noaa_gom_greater_amberjack_2021/`; its `sources.csv`
 manifest records the source URLs, retrieval date and SHA-256 checksums.
