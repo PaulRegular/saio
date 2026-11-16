@@ -1,5 +1,7 @@
 # Chilean common hake (IFOP, 2026 advice)
 
+> **Database inclusion:** This stock and assessment are not included in the canonical SAIO tables because the detailed assessment report is in Spanish. This source review is retained to document the evidence and the language-based exclusion.
+
 Review date: 2026-11-09
 
 ## Stock unit and current run

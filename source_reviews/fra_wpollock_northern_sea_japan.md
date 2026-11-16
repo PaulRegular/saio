@@ -1,5 +1,7 @@
 # FRA Northern Sea of Japan walleye pollock (FY2026)
 
+> **Database inclusion:** This stock and assessment are not included in the canonical SAIO tables because the detailed assessment report is in Japanese. This source review is retained to document the evidence and the language-based exclusion.
+
 ## Assessment identity
 
 The FRA FY2026 Hokkaido-block assessment meeting was held on 2026-09-05. The detailed report is FRA-SA2026-SC01-01 and estimates the stock through fishing year 2025. FRA currently labels the detailed report preliminary while formatting is finalized; check for a replacement before future reuse.

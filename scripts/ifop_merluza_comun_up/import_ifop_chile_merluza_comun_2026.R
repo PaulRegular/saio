@@ -1,3 +1,5 @@
+stop("This importer is retained for source-transcription review only. The detailed assessment report is in Spanish, so this case is excluded from the English-language SAIO tables.", call. = FALSE)
+
 source("scripts/shared/source_manifest_io.R", local = TRUE)
 
 assessment_id <- "ifop_merluza_comun_2026"

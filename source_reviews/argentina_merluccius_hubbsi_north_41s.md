@@ -1,5 +1,7 @@
 # Northern Argentine hake (2025 assessment)
 
+> **Database inclusion:** This stock and assessment are not included in the canonical SAIO tables because the detailed assessment report is in Spanish. This source review is retained to document the evidence and the language-based exclusion.
+
 ## Assessment and unit
 
 The latest detailed assessment located for the northern *Merluccius hubbsi*

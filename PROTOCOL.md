@@ -104,10 +104,18 @@ alone do not establish eligibility. Do not manufacture observations from fitted
 states or parameters. Preserve native likelihood inputs in the canonical database;
 perform analysis-specific conversions outside the canonical database.
 
-Prefer official English-language documentation when selecting new sources for
-an expansion batch, so reviewers can check the extracted values and assessment
-assumptions against the original documents. Record the source-language limitation
-when it prevents that review.
+Include canonical stock and assessment data only when the detailed, run-specific
+assessment report documenting those data is available in English. English-only
+documentation is a practical review limitation and makes SAIO geographically
+incomplete. Do not infer that a stock is unassessed or that its data are
+unavailable because no English report was found. If only a non-English detailed
+report is available, retain any candidate screening record and source-language
+review, but do not create canonical stock, assessment, input or output rows.
+Bilingual documents qualify when an English version contains the relevant report
+content. Supplementary source documents may be in other languages; identify their
+language and the values they support in the source review. Keep this separate
+from the language of the detailed assessment report. Note language status in
+source reviews and candidate notes.
 
 For an expansion batch, rank verified new stock units by recoverable inputs and
 outputs and access to native or machine-readable sources. Use underrepresented

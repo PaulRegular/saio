@@ -1,3 +1,5 @@
+stop("This importer is retained for source-transcription review only. The detailed assessment report is in Spanish, so this case is excluded from the English-language SAIO tables.", call. = FALSE)
+
 root <- "."
 cache <- file.path(root, "source_cache/inidep_merluccius_hubbsi_south_2025")
 report_file <- file.path(cache, "INIDEP_Official_Technical_Report_04742_2025.pdf")

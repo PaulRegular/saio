@@ -109,6 +109,12 @@ The Charbonneau–Keith Age-structured Marine Fish Database supplied SAIO’s in
 
 ## Scope and verification
 
+SAIO currently includes assessments whose detailed assessment documentation is
+available in English. This is a real coverage limitation: it leaves out
+assessments documented only in other languages and may underrepresent regions
+where English reporting is uncommon. A stock or assessment missing from SAIO
+should not be taken as evidence that no assessment or usable data exists.
+
 SAIO is a growing collection, not an exhaustive inventory of all assessments. The database was compiled with substantial AI assistance, and not all records have been independently checked by a person. Verify the values and definitions relevant to your work against the authoritative sources before research use. Automated checks and extraction-completeness labels do not establish scientific equivalence among assessments.
 
 Record the release tag used in your analysis and retain its manifest and assets. Cite the original assessment sources as well as SAIO, and retain their attribution and any source-specific reuse terms. No blanket licence is assigned to third-party assessment material. Repository code retains its attribution and GPL (>= 3) licence in [CODE_LICENSE.md](CODE_LICENSE.md).

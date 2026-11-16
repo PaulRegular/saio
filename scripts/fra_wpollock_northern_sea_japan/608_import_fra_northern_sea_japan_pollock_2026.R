@@ -1,3 +1,5 @@
+stop("This importer is retained for source-transcription review only. The detailed assessment report is in Japanese, so this case is excluded from the English-language SAIO tables.", call. = FALSE)
+
 root <- "."
 assessment_id <- "fra_northern_sea_japan_pollock_2026"
 candidate_id <- "FRA:FRA-SA2026-SC01-01"
