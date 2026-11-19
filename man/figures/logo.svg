@@ -1,103 +1,450 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" version="1.1" width="880" height="1016" viewBox="0 0 880 1016" role="img" aria-labelledby="logo-title logo-description">
-  <title id="logo-title">SAIO — Stock Assessment Input and Output</title>
-  <desc id="logo-description">A blue isometric database stack inside a navy hexagon. Three ivory fish face left on successive tiers: Atlantic herring, Atlantic cod and American plaice. SAIO is set into the centre tier of the right face.</desc>
-  <metadata>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="880"
+   height="1016"
+   viewBox="0 0 880 1016"
+   role="img"
+   aria-labelledby="logo-title logo-description"
+   id="svg15"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   inkscape:export-filename="logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview15"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.53798577"
+     inkscape:cx="277.88839"
+     inkscape:cy="434.02635"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="faces" />
+  <title
+     id="logo-title">SAIO — Stock Assessment Input and Output</title>
+  <desc
+     id="logo-description">A blue isometric database stack inside a navy hexagon. Three ivory fish face left on successive tiers: Atlantic herring, Atlantic cod and American plaice. SAIO is set into the centre tier of the right face.</desc>
+  <metadata
+     id="metadata1">
     <rdf:RDF>
-      <cc:Work rdf:about="#clupea-harengus">
+      <cc:Work
+         rdf:about="#clupea-harengus">
         <dc:title>Atlantic herring (Clupea harengus) silhouette</dc:title>
         <dc:creator>Alexandra Hahn</dc:creator>
-        <dc:source rdf:resource="https://www.phylopic.org/images/b8cee425-217c-4486-9345-4abfcc1bf6c4/clupea-harengus"/>
-        <cc:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <dc:source
+           rdf:resource="https://www.phylopic.org/images/b8cee425-217c-4486-9345-4abfcc1bf6c4/clupea-harengus" />
+        <cc:license
+           rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/" />
         <dc:description>Original PhyloPic outline recoloured and projected onto the left face.</dc:description>
       </cc:Work>
-      <cc:Work rdf:about="#gadus-morhua">
+      <cc:Work
+         rdf:about="#gadus-morhua">
         <dc:title>Atlantic cod (Gadus morhua) silhouette</dc:title>
         <dc:creator>Alexandra Hahn</dc:creator>
-        <dc:source rdf:resource="https://www.phylopic.org/images/483fe84e-23fb-4098-8cbf-9ba2d7e6b779/gadus-morhua"/>
-        <cc:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <dc:source
+           rdf:resource="https://www.phylopic.org/images/483fe84e-23fb-4098-8cbf-9ba2d7e6b779/gadus-morhua" />
+        <cc:license
+           rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/" />
         <dc:description>Original PhyloPic outline recoloured and projected onto the left face.</dc:description>
       </cc:Work>
-      <cc:Work rdf:about="#hippoglossoides-platessoides">
+      <cc:Work
+         rdf:about="#hippoglossoides-platessoides">
         <dc:title>American plaice (Hippoglossoides platessoides) silhouette</dc:title>
         <dc:creator>Nathan Hermann</dc:creator>
-        <dc:source rdf:resource="https://www.phylopic.org/images/b1d9363d-7ba2-4eda-9998-f45cd6d703f1/hippoglossoides-platessoides"/>
-        <cc:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <dc:source
+           rdf:resource="https://www.phylopic.org/images/b1d9363d-7ba2-4eda-9998-f45cd6d703f1/hippoglossoides-platessoides" />
+        <cc:license
+           rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/" />
         <dc:description>Original PhyloPic outline recoloured and projected onto the left face.</dc:description>
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <defs>
-    <linearGradient id="surface-blue" gradientUnits="userSpaceOnUse" x1="370" y1="32" x2="490" y2="518">
-      <stop offset="0" stop-color="#C3ECF5"/>
-      <stop offset="0.54" stop-color="#A1DBEC"/>
-      <stop offset="1" stop-color="#7CC8E1"/>
+  <defs
+     id="defs13">
+    <linearGradient
+       id="linearGradient32"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="474">
+      <stop
+         offset="0"
+         stop-color="#4DADD1"
+         id="stop28"
+         style="stop-color:#8ac0db;stop-opacity:1;" />
+      <stop
+         offset="0.48"
+         stop-color="#176C9C"
+         id="stop29" />
+      <stop
+         offset="0.648"
+         stop-color="#145C8A"
+         id="stop30" />
+      <stop
+         offset="0.703"
+         stop-color="#0B355E"
+         id="stop31" />
+      <stop
+         offset="1"
+         stop-color="#081A33"
+         id="stop32" />
     </linearGradient>
-    <linearGradient id="near-blue" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="474">
-      <stop offset="0" stop-color="#3BA4C8"/>
-      <stop offset="0.48" stop-color="#176C9C"/>
-      <stop offset="1" stop-color="#0E3A63"/>
+    <linearGradient
+       id="linearGradient25"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="474">
+      <stop
+         offset="0"
+         stop-color="#4298C5"
+         id="stop21"
+         style="stop-color:#8bc1db;stop-opacity:1;" />
+      <stop
+         offset="0.48"
+         stop-color="#15578B"
+         id="stop22" />
+      <stop
+         offset="0.648"
+         stop-color="#104573"
+         id="stop23" />
+      <stop
+         offset="0.703"
+         stop-color="#09264A"
+         id="stop24" />
+      <stop
+         offset="1"
+         stop-color="#020B1D"
+         id="stop25" />
     </linearGradient>
-    <linearGradient id="far-blue" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="474">
-      <stop offset="0" stop-color="#318AB8"/>
-      <stop offset="0.48" stop-color="#15578B"/>
-      <stop offset="1" stop-color="#061F40"/>
+    <linearGradient
+       id="surface-blue"
+       gradientUnits="userSpaceOnUse"
+       x1="370"
+       y1="32"
+       x2="490"
+       y2="518">
+      <stop
+         offset="0"
+         stop-color="#EEF9FF"
+         id="stop1"
+         style="stop-color:#ddf3ff;stop-opacity:1;" />
+      <stop
+         offset="0.15899582"
+         stop-color="#D2F0FC"
+         id="stop2" />
+      <stop
+         offset="0.91213387"
+         stop-color="#A3DFF2"
+         id="stop3" />
     </linearGradient>
+    <linearGradient
+       id="near-blue"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="474">
+      <stop
+         offset="0"
+         stop-color="#4DADD1"
+         id="stop4" />
+      <stop
+         offset="0.48"
+         stop-color="#176C9C"
+         id="stop5" />
+      <stop
+         offset="0.648"
+         stop-color="#145C8A"
+         id="stop6" />
+      <stop
+         offset="0.703"
+         stop-color="#0B355E"
+         id="stop7" />
+      <stop
+         offset="1"
+         stop-color="#081A33"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       id="far-blue"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="474">
+      <stop
+         offset="0"
+         stop-color="#4298C5"
+         id="stop9" />
+      <stop
+         offset="0.48"
+         stop-color="#15578B"
+         id="stop10" />
+      <stop
+         offset="0.648"
+         stop-color="#104573"
+         id="stop11" />
+      <stop
+         offset="0.703"
+         stop-color="#09264A"
+         id="stop12" />
+      <stop
+         offset="1"
+         stop-color="#020B1D"
+         id="stop13" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient25"
+       id="linearGradient15"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="474"
+       gradientTransform="matrix(1,-0.57735027,0,1,440,508)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#far-blue"
+       id="linearGradient16"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="474"
+       gradientTransform="matrix(1,-0.57735027,0,1,440,508)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#far-blue"
+       id="linearGradient17"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="474"
+       gradientTransform="matrix(1,-0.57735027,0,1,440,508)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient32"
+       id="linearGradient26"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="474"
+       gradientTransform="matrix(1,0.57735027,0,1,29.503959,271)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#near-blue"
+       id="linearGradient27"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="474"
+       gradientTransform="matrix(1,0.57735027,0,1,29.503959,271)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#near-blue"
+       id="linearGradient28"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="474"
+       gradientTransform="matrix(1,0.57735027,0,1,29.503959,271)" />
   </defs>
-  <g id="frame" inkscape:label="Hexagonal frame" inkscape:groupmode="layer">
-    <path id="navy-hexagon" d="M 440.0000,8.0000 873.0127,258.0000 873.0127,758.0000 440.0000,1008.0000 6.9873,758.0000 6.9873,258.0000 Z" fill="#082D4A" inkscape:label="Outer hexagon"/>
+  <g
+     id="frame"
+     inkscape:label="Hexagonal frame"
+     inkscape:groupmode="layer">
+    <path
+       id="navy-hexagon"
+       d="M 440.0000,8.0000 873.0127,258.0000 873.0127,758.0000 440.0000,1008.0000 6.9873,758.0000 6.9873,258.0000 Z"
+       fill="#082D4A"
+       inkscape:label="Outer hexagon"
+       style="fill:#051730;fill-opacity:1" />
   </g>
-  <g id="faces" inkscape:label="Blue database stack" inkscape:groupmode="layer">
-    <path id="interior-base" d="M 440.0000,34.0000 850.4960,271.0000 850.4960,745.0000 440.0000,982.0000 29.5040,745.0000 29.5040,271.0000 Z" fill="#337EA2" inkscape:label="Interior underlay"/>
-    <g id="near-face" transform="matrix(1 0.5773502692 0 1 29.50395861 271.00000000)" inkscape:label="Left face">
-      <path id="left-tier-1" d="M 0.0000,0.0000 410.4960,0.0000 410.4960,140.6667 0.0000,140.6667 Z" fill="url(#near-blue)" inkscape:label="Tier 1"/>
-      <path id="left-tier-2" d="M 0.0000,166.6667 410.4960,166.6667 410.4960,307.3333 0.0000,307.3333 Z" fill="url(#near-blue)" inkscape:label="Tier 2"/>
-      <path id="left-tier-3" d="M 0.0000,333.3333 410.4960,333.3333 410.4960,474.0000 0.0000,474.0000 Z" fill="url(#near-blue)" inkscape:label="Tier 3"/>
-    </g>
-    <g id="far-face" transform="matrix(1 -0.5773502692 0 1 440 508)" inkscape:label="Right face">
-      <path id="right-tier-1" d="M 0.0000,0.0000 410.4960,0.0000 410.4960,140.6667 0.0000,140.6667 Z" fill="url(#far-blue)" inkscape:label="Tier 1"/>
-      <path id="right-tier-2" d="M 0.0000,166.6667 410.4960,166.6667 410.4960,307.3333 0.0000,307.3333 Z" fill="url(#far-blue)" inkscape:label="Tier 2"/>
-      <path id="right-tier-3" d="M 0.0000,333.3333 410.4960,333.3333 410.4960,474.0000 0.0000,474.0000 Z" fill="url(#far-blue)" inkscape:label="Tier 3"/>
-    </g>
-    <path id="upper-surface" d="M 440.0000,34.0000 850.4960,271.0000 440.0000,508.0000 29.5040,271.0000 Z" fill="url(#surface-blue)" inkscape:label="Top diamond"/>
+  <g
+     id="faces"
+     inkscape:label="Blue database stack"
+     inkscape:groupmode="layer">
+    <path
+       id="interior-base"
+       d="M 440.0000,34.0000 850.4960,271.0000 850.4960,745.0000 440.0000,982.0000 29.5040,745.0000 29.5040,271.0000 Z"
+       fill="#337EA2"
+       inkscape:label="Interior underlay" />
+    <path
+       id="left-tier-1"
+       d="M 29.503959,271 439.99996,507.99998 v 140.6667 L 29.503959,411.6667 Z"
+       fill="url(#near-blue)"
+       inkscape:label="Tier 1"
+       style="fill:url(#linearGradient26)" />
+    <path
+       id="left-tier-2"
+       d="M 29.503959,437.6667 439.99996,674.66668 v 140.6666 L 29.503959,578.3333 Z"
+       fill="url(#near-blue)"
+       inkscape:label="Tier 2"
+       style="fill:url(#linearGradient27)" />
+    <path
+       id="left-tier-3"
+       d="M 29.503959,604.3333 439.99996,841.33328 v 140.6667 L 29.503959,745 Z"
+       fill="url(#near-blue)"
+       inkscape:label="Tier 3"
+       style="fill:url(#linearGradient28)" />
+    <path
+       id="right-tier-1"
+       d="M 440,508 850.496,271.00002 v 140.6667 L 440,648.6667 Z"
+       fill="url(#far-blue)"
+       inkscape:label="Tier 1"
+       style="fill:url(#linearGradient15)" />
+    <path
+       id="right-tier-2"
+       d="M 440,674.6667 850.496,437.66672 v 140.6666 L 440,815.3333 Z"
+       fill="url(#far-blue)"
+       inkscape:label="Tier 2"
+       style="fill:url(#linearGradient16)" />
+    <path
+       id="right-tier-3"
+       d="M 440,841.3333 850.496,604.33332 v 140.6667 L 440,982 Z"
+       fill="url(#far-blue)"
+       inkscape:label="Tier 3"
+       style="fill:url(#linearGradient17)" />
+    <path
+       id="upper-surface"
+       d="M 440.0000,34.0000 850.4960,271.0000 440.0000,508.0000 29.5040,271.0000 Z"
+       fill="url(#surface-blue)"
+       inkscape:label="Top diamond" />
   </g>
-  <g id="dividers" inkscape:label="Ivory dividers" inkscape:groupmode="layer">
-    <path id="divider-1" d="M 29.5040,411.6667 440.0000,648.6667 850.4960,411.6667 850.4960,437.6667 440.0000,674.6667 29.5040,437.6667 Z" fill="#FFFCF5" inkscape:label="Divider 1"/>
-    <path id="divider-2" d="M 29.5040,578.3333 440.0000,815.3333 850.4960,578.3333 850.4960,604.3333 440.0000,841.3333 29.5040,604.3333 Z" fill="#FFFCF5" inkscape:label="Divider 2"/>
+  <g
+     id="dividers"
+     inkscape:label="Ivory dividers"
+     inkscape:groupmode="layer">
+    <path
+       id="divider-1"
+       d="M 29.5040,411.6667 440.0000,648.6667 850.4960,411.6667 850.4960,437.6667 440.0000,674.6667 29.5040,437.6667 Z"
+       fill="#FFFCF5"
+       inkscape:label="Divider 1" />
+    <path
+       id="divider-2"
+       d="M 29.5040,578.3333 440.0000,815.3333 850.4960,578.3333 850.4960,604.3333 440.0000,841.3333 29.5040,604.3333 Z"
+       fill="#FFFCF5"
+       inkscape:label="Divider 2" />
   </g>
-  <g id="species" inkscape:label="Fish silhouettes" inkscape:groupmode="layer">
-    <g id="clupea-harengus" transform="translate(234.751979 459.833333)" inkscape:label="Atlantic herring · Pelagic">
-      <title>Atlantic herring (Clupea harengus)</title>
-      <desc>Silhouette by Alexandra Hahn via PhyloPic, CC0 1.0. Recoloured and positioned for SAIO.</desc>
-      <g id="clupea-harengus-profile" transform="matrix(-0.1945174247 -0.1123046875 -0.0980392157 0.1698089027 174.3893821528 42.9487298108)" fill="#FFFCF5" inkscape:label="PhyloPic outline"><g transform="translate(0.000000,510.000000) scale(0.100000,-0.100000)" stroke="none">
-<path d="M7433 5090 c-19 -6 -49 -31 -75 -62 -52 -63 -156 -167 -228 -228 -29 -24 -68 -68 -86 -96 -19 -29 -64 -88 -100 -131 -37 -43 -92 -116 -121 -161 -72 -111 -120 -162 -231 -244 -153 -113 -232 -197 -232 -245 0 -25 42 -63 183 -167 64 -47 117 -93 117 -101 0 -18 -46 -31 -290 -85 -102 -23 -457 -106 -790 -186 -1041 -250 -1162 -272 -1765 -331 -463 -44 -927 -36 -1285 23 -202 33 -339 94 -780 344 -394 223 -566 308 -845 419 -396 158 -756 228 -852 166 -34 -23 -57 -96 -50 -163 14 -144 132 -420 240 -561 84 -109 217 -253 518 -556 326 -329 339 -346 319 -415 -12 -40 -32 -68 -178 -239 -259 -305 -521 -677 -644 -916 -106 -208 -123 -296 -68 -358 46 -53 118 -79 231 -85 180 -9 315 35 689 222 471 236 886 486 1203 725 105 78 209 149 231 157 94 34 464 86 749 105 237 17 270 6 171 -58 -27 -17 -66 -46 -88 -64 -36 -31 -38 -36 -33 -77 9 -81 115 -188 412 -415 204 -157 457 -335 523 -369 57 -29 72 -32 155 -32 121 0 212 27 298 91 98 71 221 178 365 316 l131 126 134 -35 c346 -88 1057 -236 1409 -294 230 -37 290 -49 290 -59 0 -3 -27 -33 -61 -66 -96 -95 -104 -116 -104 -270 1 -117 4 -137 29 -205 73 -196 224 -433 305 -478 85 -48 251 -38 329 19 82 60 261 309 372 517 30 56 82 151 115 210 l60 107 77 -2 c42 -1 144 -11 225 -22 387 -54 778 -74 1433 -74 386 0 556 4 720 17 1067 84 1783 243 3110 686 674 225 1144 424 1405 594 112 73 237 196 266 262 20 44 21 59 15 168 -7 138 -17 160 -73 171 -58 11 -71 22 -83 68 -33 125 -135 208 -278 226 -92 12 -194 41 -385 113 -661 247 -1211 388 -2027 518 -715 114 -1438 204 -1975 245 -366 28 -506 35 -997 47 l-487 12 -122 98 c-109 86 -210 177 -627 561 -232 214 -493 423 -605 487 -51 29 -69 33 -145 36 -48 2 -101 -1 -119 -6z"/>
-</g>
-</g>
-
+  <g
+     id="species"
+     inkscape:label="Fish silhouettes"
+     inkscape:groupmode="layer">
+    <g
+       id="clupea-harengus"
+       transform="matrix(0.79898591,0,0,0.79898591,218.85202,449.74238)"
+       inkscape:label="Atlantic herring · Pelagic">
+      <title
+         id="title13">Atlantic herring (Clupea harengus)</title>
+      <desc
+         id="desc13">Silhouette by Alexandra Hahn via PhyloPic, CC0 1.0. Recoloured and positioned for SAIO.</desc>
+      <g
+         id="clupea-harengus-profile"
+         transform="matrix(-0.19451742,-0.11230469,-0.09803922,0.1698089,174.38938,42.94873)"
+         fill="#fffcf5"
+         inkscape:label="PhyloPic outline">
+        <g
+           transform="matrix(0.1,0,0,-0.1,0,510)"
+           stroke="none"
+           id="g13">
+          <path
+             d="m 7433,5090 c -19,-6 -49,-31 -75,-62 -52,-63 -156,-167 -228,-228 -29,-24 -68,-68 -86,-96 -19,-29 -64,-88 -100,-131 -37,-43 -92,-116 -121,-161 -72,-111 -120,-162 -231,-244 -153,-113 -232,-197 -232,-245 0,-25 42,-63 183,-167 64,-47 117,-93 117,-101 0,-18 -46,-31 -290,-85 -102,-23 -457,-106 -790,-186 -1041,-250 -1162,-272 -1765,-331 -463,-44 -927,-36 -1285,23 -202,33 -339,94 -780,344 -394,223 -566,308 -845,419 -396,158 -756,228 -852,166 -34,-23 -57,-96 -50,-163 14,-144 132,-420 240,-561 84,-109 217,-253 518,-556 326,-329 339,-346 319,-415 -12,-40 -32,-68 -178,-239 C 643,1766 381,1394 258,1155 152,947 135,859 190,797 c 46,-53 118,-79 231,-85 180,-9 315,35 689,222 471,236 886,486 1203,725 105,78 209,149 231,157 94,34 464,86 749,105 237,17 270,6 171,-58 -27,-17 -66,-46 -88,-64 -36,-31 -38,-36 -33,-77 9,-81 115,-188 412,-415 204,-157 457,-335 523,-369 57,-29 72,-32 155,-32 121,0 212,27 298,91 98,71 221,178 365,316 l 131,126 134,-35 c 346,-88 1057,-236 1409,-294 230,-37 290,-49 290,-59 0,-3 -27,-33 -61,-66 -96,-95 -104,-116 -104,-270 1,-117 4,-137 29,-205 73,-196 224,-433 305,-478 85,-48 251,-38 329,19 82,60 261,309 372,517 30,56 82,151 115,210 l 60,107 77,-2 c 42,-1 144,-11 225,-22 387,-54 778,-74 1433,-74 386,0 556,4 720,17 1067,84 1783,243 3110,686 674,225 1144,424 1405,594 112,73 237,196 266,262 20,44 21,59 15,168 -7,138 -17,160 -73,171 -58,11 -71,22 -83,68 -33,125 -135,208 -278,226 -92,12 -194,41 -385,113 -661,247 -1211,388 -2027,518 -715,114 -1438,204 -1975,245 -366,28 -506,35 -997,47 l -487,12 -122,98 c -109,86 -210,177 -627,561 -232,214 -493,423 -605,487 -51,29 -69,33 -145,36 -48,2 -101,-1 -119,-6 z"
+             id="path13" />
+        </g>
+      </g>
     </g>
-    <g id="gadus-morhua" transform="translate(234.751979 626.500000)" inkscape:label="Atlantic cod · Gadoid">
-      <title>Atlantic cod (Gadus morhua)</title>
-      <desc>Silhouette by Alexandra Hahn via PhyloPic, CC0 1.0. Recoloured and positioned for SAIO.</desc>
-      <g id="gadus-morhua-profile" transform="matrix(0.1860601453 0.1074218750 -0.0887521968 0.1537233142 -117.6441916244 -126.2342828911)" fill="#FFFCF5" inkscape:label="PhyloPic outline"><g transform="translate(0.000000,569.000000) scale(0.100000,-0.100000)" stroke="none">
-<path d="M6265 5684 c-384 -38 -690 -106 -855 -189 -197 -99 -421 -278 -750 -599 -85 -83 -185 -180 -221 -214 l-66 -63 -194 -30 c-467 -73 -909 -162 -1326 -269 -388 -99 -492 -137 -1199 -434 -204 -85 -515 -212 -690 -282 -448 -177 -705 -303 -860 -420 -92 -70 -104 -95 -104 -216 0 -108 9 -147 44 -189 22 -26 26 -40 26 -97 0 -74 20 -129 69 -191 52 -66 54 -76 37 -145 -22 -86 -22 -266 0 -308 15 -29 18 -30 29 -15 7 9 15 54 19 99 7 90 17 135 46 203 l19 44 123 -58 c151 -72 349 -146 663 -246 344 -110 475 -154 694 -235 249 -91 336 -115 551 -145 211 -31 500 -79 829 -139 274 -51 273 -50 311 -144 58 -143 347 -694 497 -947 121 -203 252 -360 348 -415 58 -33 129 -49 140 -31 3 7 -5 60 -19 119 -57 240 -56 324 8 529 47 150 59 213 60 321 1 90 0 95 -27 117 -31 27 -108 73 -282 166 -86 46 -113 65 -97 67 12 2 93 -8 179 -22 175 -29 371 -56 628 -87 220 -27 737 -36 1240 -20 402 13 497 22 835 82 l235 42 270 -98 c498 -180 1210 -413 1600 -526 337 -96 409 -72 506 169 41 101 118 258 342 693 110 215 117 243 93 366 -9 46 -14 88 -11 93 9 15 98 40 143 40 37 0 58 -9 129 -56 264 -176 947 -404 1223 -408 78 -1 91 2 160 35 131 63 341 228 400 314 16 23 37 73 46 111 22 90 51 155 116 262 69 112 78 134 78 188 0 38 4 46 24 54 43 16 247 30 441 30 l191 0 684 -343 c682 -342 1030 -510 1125 -542 86 -29 193 -45 298 -45 166 0 222 25 266 119 24 53 26 65 25 201 0 109 -8 196 -32 350 -43 281 -63 512 -64 720 -1 162 2 188 35 355 48 244 60 338 61 487 l1 128 -43 42 -42 43 -84 -2 c-289 -6 -663 -88 -1221 -270 -230 -75 -773 -267 -970 -344 -88 -34 -176 -67 -195 -74 -76 -28 -490 -49 -490 -25 0 5 40 41 90 80 147 117 218 210 205 271 -20 90 -268 260 -683 468 -259 130 -365 164 -509 162 -228 -2 -481 -93 -1064 -382 l-318 -158 -128 19 c-146 23 -223 39 -223 48 0 9 25 46 68 102 44 59 57 110 42 169 -17 67 -44 97 -176 190 -164 116 -270 202 -469 380 -93 84 -210 179 -260 213 -117 79 -360 200 -494 246 -104 36 -109 37 -256 36 -133 0 -160 -3 -235 -26 -183 -57 -406 -169 -755 -382 -195 -118 -379 -211 -462 -231 -50 -13 -77 -14 -147 -5 -87 11 -136 24 -136 36 0 10 76 132 203 324 115 174 189 315 206 390 6 25 11 77 11 115 0 119 -42 178 -148 212 -46 15 -316 26 -407 17z"/>
-</g>
-</g>
-
+    <g
+       id="gadus-morhua"
+       transform="matrix(0.82914008,0,0,0.82914008,224.1307,626.16014)"
+       inkscape:label="Atlantic cod · Gadoid">
+      <title
+         id="title14">Atlantic cod (Gadus morhua)</title>
+      <desc
+         id="desc14">Silhouette by Alexandra Hahn via PhyloPic, CC0 1.0. Recoloured and positioned for SAIO.</desc>
+      <g
+         id="gadus-morhua-profile"
+         transform="matrix(0.18606015,0.10742187,-0.0887522,0.15372331,-117.64419,-126.23428)"
+         fill="#fffcf5"
+         inkscape:label="PhyloPic outline">
+        <g
+           transform="matrix(0.1,0,0,-0.1,0,569)"
+           stroke="none"
+           id="g14">
+          <path
+             d="m 6265,5684 c -384,-38 -690,-106 -855,-189 -197,-99 -421,-278 -750,-599 -85,-83 -185,-180 -221,-214 l -66,-63 -194,-30 C 3712,4516 3270,4427 2853,4320 2465,4221 2361,4183 1654,3886 1450,3801 1139,3674 964,3604 516,3427 259,3301 104,3184 12,3114 0,3089 0,2968 c 0,-108 9,-147 44,-189 22,-26 26,-40 26,-97 0,-74 20,-129 69,-191 52,-66 54,-76 37,-145 -22,-86 -22,-266 0,-308 15,-29 18,-30 29,-15 7,9 15,54 19,99 7,90 17,135 46,203 l 19,44 123,-58 c 151,-72 349,-146 663,-246 344,-110 475,-154 694,-235 249,-91 336,-115 551,-145 211,-31 500,-79 829,-139 274,-51 273,-50 311,-144 58,-143 347,-694 497,-947 121,-203 252,-360 348,-415 58,-33 129,-49 140,-31 3,7 -5,60 -19,119 -57,240 -56,324 8,529 47,150 59,213 60,321 1,90 0,95 -27,117 -31,27 -108,73 -282,166 -86,46 -113,65 -97,67 12,2 93,-8 179,-22 175,-29 371,-56 628,-87 220,-27 737,-36 1240,-20 402,13 497,22 835,82 l 235,42 270,-98 c 498,-180 1210,-413 1600,-526 337,-96 409,-72 506,169 41,101 118,258 342,693 110,215 117,243 93,366 -9,46 -14,88 -11,93 9,15 98,40 143,40 37,0 58,-9 129,-56 264,-176 947,-404 1223,-408 78,-1 91,2 160,35 131,63 341,228 400,314 16,23 37,73 46,111 22,90 51,155 116,262 69,112 78,134 78,188 0,38 4,46 24,54 43,16 247,30 441,30 h 191 l 684,-343 c 682,-342 1030,-510 1125,-542 86,-29 193,-45 298,-45 166,0 222,25 266,119 24,53 26,65 25,201 0,109 -8,196 -32,350 -43,281 -63,512 -64,720 -1,162 2,188 35,355 48,244 60,338 61,487 l 1,128 -43,42 -42,43 -84,-2 c -289,-6 -663,-88 -1221,-270 -230,-75 -773,-267 -970,-344 -88,-34 -176,-67 -195,-74 -76,-28 -490,-49 -490,-25 0,5 40,41 90,80 147,117 218,210 205,271 -20,90 -268,260 -683,468 -259,130 -365,164 -509,162 -228,-2 -481,-93 -1064,-382 l -318,-158 -128,19 c -146,23 -223,39 -223,48 0,9 25,46 68,102 44,59 57,110 42,169 -17,67 -44,97 -176,190 -164,116 -270,202 -469,380 -93,84 -210,179 -260,213 -117,79 -360,200 -494,246 -104,36 -109,37 -256,36 -133,0 -160,-3 -235,-26 -183,-57 -406,-169 -755,-382 -195,-118 -379,-211 -462,-231 -50,-13 -77,-14 -147,-5 -87,11 -136,24 -136,36 0,10 76,132 203,324 115,174 189,315 206,390 6,25 11,77 11,115 0,119 -42,178 -148,212 -46,15 -316,26 -407,17 z"
+             id="path14" />
+        </g>
+      </g>
     </g>
-    <g id="hippoglossoides-platessoides" transform="translate(234.751979 793.166667)" inkscape:label="American plaice · Flatfish">
-      <title>American plaice (Hippoglossoides platessoides)</title>
-      <desc>Silhouette by Nathan Hermann via PhyloPic, CC0 1.0. Recoloured and positioned for SAIO.</desc>
-      <g id="hippoglossoides-platessoides-profile" transform="matrix(-0.1539224839 -0.0888671875 -0.0709413370 0.1228740000 144.2124676166 23.2166790032)" fill="#FFFCF5" inkscape:label="PhyloPic outline"><g transform="translate(0.000000,733.000000) scale(0.100000,-0.100000)" stroke="none">
-<path d="M7812 7319 c-24 -4 -86 -31 -136 -58 -109 -59 -200 -86 -337 -101 -197 -22 -278 -56 -406 -172 -166 -150 -265 -208 -358 -208 -73 0 -110 -21 -145 -83 -32 -57 -46 -66 -131 -86 -27 -6 -88 -38 -142 -73 -53 -35 -140 -88 -195 -120 -54 -31 -195 -128 -312 -216 -118 -87 -233 -168 -255 -180 -22 -11 -78 -52 -125 -90 -47 -39 -143 -113 -214 -164 -230 -166 -338 -254 -531 -430 -278 -253 -350 -315 -387 -334 -18 -9 -46 -27 -61 -40 -16 -13 -41 -24 -55 -24 -64 0 -202 -108 -362 -284 l-115 -126 -140 4 c-121 3 -158 8 -275 39 -118 31 -456 157 -695 260 -193 82 -649 230 -853 276 -72 16 -139 34 -149 39 -56 30 -655 121 -707 108 -16 -4 -57 -34 -90 -66 l-61 -59 19 -36 c17 -32 18 -37 5 -51 -9 -8 -39 -18 -69 -23 -58 -9 -67 -17 -106 -94 -14 -26 -40 -64 -58 -85 -18 -20 -36 -50 -40 -66 -4 -16 -29 -50 -57 -77 -27 -26 -49 -53 -49 -60 0 -7 -20 -34 -44 -59 -32 -32 -62 -83 -106 -179 l-63 -133 8 -122 c12 -183 11 -234 -5 -319 -14 -77 -14 -79 13 -155 16 -47 26 -96 26 -125 -1 -37 7 -63 35 -117 20 -39 43 -94 50 -124 17 -64 24 -78 76 -153 30 -42 40 -66 40 -94 0 -38 1 -39 55 -54 61 -18 58 -11 55 -122 -1 -65 1 -69 65 -122 14 -11 16 -24 10 -67 -11 -93 15 -96 345 -44 69 11 183 32 254 45 107 21 153 25 280 23 148 -2 156 -1 361 46 354 80 643 190 825 313 93 63 191 112 334 168 251 98 474 151 604 143 83 -6 112 -24 112 -70 0 -43 14 -64 109 -163 48 -49 115 -127 150 -171 42 -56 98 -111 174 -172 62 -49 171 -144 242 -211 169 -158 216 -190 290 -200 56 -8 75 -20 75 -53 0 -47 327 -393 485 -513 43 -33 124 -103 179 -155 56 -53 124 -108 151 -124 28 -16 73 -50 101 -76 28 -27 73 -59 100 -73 63 -32 200 -139 329 -257 55 -50 132 -116 172 -145 39 -30 80 -69 91 -87 23 -36 89 -90 167 -133 82 -47 164 -104 275 -193 142 -113 316 -228 366 -241 22 -6 49 -19 58 -30 9 -10 45 -29 79 -41 34 -12 91 -37 127 -55 89 -45 121 -52 325 -75 97 -11 192 -27 212 -35 20 -8 56 -33 80 -56 24 -22 47 -39 51 -37 50 27 96 39 186 48 123 14 136 12 207 -33 52 -32 53 -32 183 -32 103 1 140 5 171 18 55 25 99 33 255 52 221 25 310 53 455 140 43 26 94 36 310 59 96 11 159 23 200 40 35 14 120 33 204 45 149 22 148 21 241 91 20 14 53 20 155 27 117 8 134 12 170 36 22 15 49 27 61 27 12 0 54 13 92 30 39 16 81 30 92 30 12 0 52 13 90 30 38 16 76 30 85 30 8 0 33 9 54 19 21 11 78 27 127 36 137 26 191 50 255 114 66 67 100 133 133 261 21 81 30 99 59 125 47 41 298 174 428 228 59 24 137 63 174 86 37 24 82 45 101 48 56 9 55 -17 -4 -127 -51 -95 -82 -188 -82 -243 0 -29 1 -29 38 -23 20 3 47 9 60 12 22 6 22 6 22 -110 0 -128 -4 -122 69 -105 53 12 61 4 61 -61 0 -25 4 -51 8 -58 12 -18 39 -5 62 31 42 67 38 64 55 42 30 -39 53 -91 60 -138 4 -26 11 -49 15 -52 14 -9 67 55 109 133 175 320 302 762 271 942 -28 158 -32 140 52 227 41 43 141 156 223 251 242 284 290 315 720 473 183 67 279 118 345 182 67 65 252 296 289 360 71 122 386 465 456 496 73 32 115 121 101 214 -10 68 -33 87 -101 87 -66 0 -108 -16 -171 -64 -26 -20 -51 -36 -55 -36 -5 0 -9 12 -9 28 0 46 105 190 183 250 21 16 31 54 23 85 -15 61 -142 146 -321 217 -106 42 -171 79 -274 157 -103 78 -231 142 -299 150 -27 3 -55 9 -61 13 -6 3 -27 50 -46 103 -18 53 -49 125 -67 159 -41 78 -152 197 -214 229 -29 16 -50 35 -59 55 -7 19 -61 71 -131 131 -159 133 -235 188 -319 230 -38 19 -96 51 -127 70 -31 18 -83 41 -115 49 -75 19 -358 172 -425 230 -69 59 -141 100 -203 115 -27 7 -84 29 -125 49 -41 21 -115 50 -165 64 -49 15 -119 45 -155 65 -36 21 -90 46 -120 56 -30 10 -114 44 -186 76 -72 33 -136 59 -141 59 -6 0 -27 13 -48 30 -20 16 -54 32 -74 36 -20 3 -54 15 -77 25 -22 10 -62 19 -88 19 -47 0 -106 22 -106 40 0 19 -61 40 -161 55 -71 11 -127 26 -179 50 -42 19 -109 41 -150 50 -40 8 -85 22 -99 30 -62 34 -84 37 -282 44 l-205 7 -85 41 c-46 23 -112 49 -147 57 -34 9 -73 23 -86 32 -16 10 -66 19 -133 25 -59 6 -155 21 -213 34 -134 31 -363 61 -555 75 -385 27 -1077 38 -1173 19z"/>
-</g>
-</g>
-
-
+    <g
+       id="hippoglossoides-platessoides"
+       transform="matrix(0.82165695,0,0,0.82165695,210.07517,787.18499)"
+       inkscape:label="American plaice · Flatfish">
+      <title
+         id="title15">American plaice (Hippoglossoides platessoides)</title>
+      <desc
+         id="desc15">Silhouette by Nathan Hermann via PhyloPic, CC0 1.0. Recoloured and positioned for SAIO.</desc>
+      <g
+         id="hippoglossoides-platessoides-profile"
+         transform="matrix(-0.15392248,-0.08886719,-0.07094134,0.122874,144.21247,23.216679)"
+         fill="#fffcf5"
+         inkscape:label="PhyloPic outline">
+        <g
+           transform="matrix(0.1,0,0,-0.1,0,733)"
+           stroke="none"
+           id="g15">
+          <path
+             d="m 7812,7319 c -24,-4 -86,-31 -136,-58 -109,-59 -200,-86 -337,-101 -197,-22 -278,-56 -406,-172 -166,-150 -265,-208 -358,-208 -73,0 -110,-21 -145,-83 -32,-57 -46,-66 -131,-86 -27,-6 -88,-38 -142,-73 -53,-35 -140,-88 -195,-120 -54,-31 -195,-128 -312,-216 -118,-87 -233,-168 -255,-180 -22,-11 -78,-52 -125,-90 -47,-39 -143,-113 -214,-164 -230,-166 -338,-254 -531,-430 -278,-253 -350,-315 -387,-334 -18,-9 -46,-27 -61,-40 -16,-13 -41,-24 -55,-24 -64,0 -202,-108 -362,-284 l -115,-126 -140,4 c -121,3 -158,8 -275,39 -118,31 -456,157 -695,260 -193,82 -649,230 -853,276 -72,16 -139,34 -149,39 -56,30 -655,121 -707,108 -16,-4 -57,-34 -90,-66 l -61,-59 19,-36 c 17,-32 18,-37 5,-51 -9,-8 -39,-18 -69,-23 -58,-9 -67,-17 -106,-94 -14,-26 -40,-64 -58,-85 -18,-20 -36,-50 -40,-66 -4,-16 -29,-50 -57,-77 -27,-26 -49,-53 -49,-60 0,-7 -20,-34 -44,-59 -32,-32 -62,-83 -106,-179 L 7,4268 15,4146 c 12,-183 11,-234 -5,-319 -14,-77 -14,-79 13,-155 16,-47 26,-96 26,-125 -1,-37 7,-63 35,-117 20,-39 43,-94 50,-124 17,-64 24,-78 76,-153 30,-42 40,-66 40,-94 0,-38 1,-39 55,-54 61,-18 58,-11 55,-122 -1,-65 1,-69 65,-122 14,-11 16,-24 10,-67 -11,-93 15,-96 345,-44 69,11 183,32 254,45 107,21 153,25 280,23 148,-2 156,-1 361,46 354,80 643,190 825,313 93,63 191,112 334,168 251,98 474,151 604,143 83,-6 112,-24 112,-70 0,-43 14,-64 109,-163 48,-49 115,-127 150,-171 42,-56 98,-111 174,-172 62,-49 171,-144 242,-211 169,-158 216,-190 290,-200 56,-8 75,-20 75,-53 0,-47 327,-393 485,-513 43,-33 124,-103 179,-155 56,-53 124,-108 151,-124 28,-16 73,-50 101,-76 28,-27 73,-59 100,-73 63,-32 200,-139 329,-257 55,-50 132,-116 172,-145 39,-30 80,-69 91,-87 23,-36 89,-90 167,-133 82,-47 164,-104 275,-193 142,-113 316,-228 366,-241 22,-6 49,-19 58,-30 9,-10 45,-29 79,-41 34,-12 91,-37 127,-55 89,-45 121,-52 325,-75 97,-11 192,-27 212,-35 20,-8 56,-33 80,-56 24,-22 47,-39 51,-37 50,27 96,39 186,48 123,14 136,12 207,-33 52,-32 53,-32 183,-32 103,1 140,5 171,18 55,25 99,33 255,52 221,25 310,53 455,140 43,26 94,36 310,59 96,11 159,23 200,40 35,14 120,33 204,45 149,22 148,21 241,91 20,14 53,20 155,27 117,8 134,12 170,36 22,15 49,27 61,27 12,0 54,13 92,30 39,16 81,30 92,30 12,0 52,13 90,30 38,16 76,30 85,30 8,0 33,9 54,19 21,11 78,27 127,36 137,26 191,50 255,114 66,67 100,133 133,261 21,81 30,99 59,125 47,41 298,174 428,228 59,24 137,63 174,86 37,24 82,45 101,48 56,9 55,-17 -4,-127 -51,-95 -82,-188 -82,-243 0,-29 1,-29 38,-23 20,3 47,9 60,12 22,6 22,6 22,-110 0,-128 -4,-122 69,-105 53,12 61,4 61,-61 0,-25 4,-51 8,-58 12,-18 39,-5 62,31 42,67 38,64 55,42 30,-39 53,-91 60,-138 4,-26 11,-49 15,-52 14,-9 67,55 109,133 175,320 302,762 271,942 -28,158 -32,140 52,227 41,43 141,156 223,251 242,284 290,315 720,473 183,67 279,118 345,182 67,65 252,296 289,360 71,122 386,465 456,496 73,32 115,121 101,214 -10,68 -33,87 -101,87 -66,0 -108,-16 -171,-64 -26,-20 -51,-36 -55,-36 -5,0 -9,12 -9,28 0,46 105,190 183,250 21,16 31,54 23,85 -15,61 -142,146 -321,217 -106,42 -171,79 -274,157 -103,78 -231,142 -299,150 -27,3 -55,9 -61,13 -6,3 -27,50 -46,103 -18,53 -49,125 -67,159 -41,78 -152,197 -214,229 -29,16 -50,35 -59,55 -7,19 -61,71 -131,131 -159,133 -235,188 -319,230 -38,19 -96,51 -127,70 -31,18 -83,41 -115,49 -75,19 -358,172 -425,230 -69,59 -141,100 -203,115 -27,7 -84,29 -125,49 -41,21 -115,50 -165,64 -49,15 -119,45 -155,65 -36,21 -90,46 -120,56 -30,10 -114,44 -186,76 -72,33 -136,59 -141,59 -6,0 -27,13 -48,30 -20,16 -54,32 -74,36 -20,3 -54,15 -77,25 -22,10 -62,19 -88,19 -47,0 -106,22 -106,40 0,19 -61,40 -161,55 -71,11 -127,26 -179,50 -42,19 -109,41 -150,50 -40,8 -85,22 -99,30 -62,34 -84,37 -282,44 l -205,7 -85,41 c -46,23 -112,49 -147,57 -34,9 -73,23 -86,32 -16,10 -66,19 -133,25 -59,6 -155,21 -213,34 -134,31 -363,61 -555,75 -385,27 -1077,38 -1173,19 z"
+             id="path15" />
+        </g>
+      </g>
     </g>
   </g>
-  <g id="lettering" inkscape:label="SAIO lettering" inkscape:groupmode="layer">
-    <g id="wordmark-plane" transform="matrix(1 -0.5773502692 0 1 440 508)" inkscape:label="Right face projection">
-      <text id="saio-wordmark" x="205.248021" y="279.00000" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="112" fill="#FFFCF5" letter-spacing="0.5" inkscape:label="SAIO · editable text">SAIO</text>
+  <g
+     id="lettering"
+     inkscape:label="SAIO lettering"
+     inkscape:groupmode="layer">
+    <g
+       id="wordmark-plane"
+       transform="matrix(1 -0.5773502692 0 1 440 508)"
+       inkscape:label="Right face projection">
+      <text
+         id="saio-wordmark"
+         x="205.248021"
+         y="279.00000"
+         text-anchor="middle"
+         font-family="Arial Black, Arial, Helvetica, sans-serif"
+         font-weight="900"
+         font-size="112"
+         fill="#FFFCF5"
+         letter-spacing="0.5"
+         inkscape:label="SAIO · editable text">SAIO</text>
     </g>
   </g>
 </svg>
