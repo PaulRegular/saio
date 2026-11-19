@@ -152,6 +152,30 @@
   invisible(database_dir)
 }
 
+#' Download a SAIO data release
+#'
+#' Download the five compressed stock assessment tables and their manifest
+#' from a SAIO release on GitHub. The download checks the size and SHA-256
+#' checksum of each table against the manifest. R can read the compressed
+#' tables directly.
+#'
+#' @param release Use `"latest"` for the latest published data release,
+#'   or supply a release tag to download a specific version.
+#' @param database_dir Folder for the downloaded tables. The default is the
+#'   `release` subfolder of R's user data directory for SAIO. Supply a path
+#'   such as `"D:/SAIO/data"` to use another drive.
+#'
+#' @details
+#' The function reuses an intact copy of the requested release. Choose a
+#' new folder to keep another release or when the destination already
+#' contains other data. Include the release tag when reporting an analysis.
+#'
+#' @returns The absolute path to the local data folder, invisibly. Pass this
+#'   path as `database_dir` to the catalogue and read functions when using a
+#'   custom folder.
+#' @seealso [list_stocks()], [list_assessments()], [read_database()]
+#' @rdname saio-download
+#' @export
 download_database <- function(release = "latest",
                               database_dir = .saio_user_data_dir()) {
   .saio_download(release, database_dir)

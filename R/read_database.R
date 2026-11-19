@@ -82,6 +82,39 @@
   list(read = read, release = manifest$release[[1L]])
 }
 
+#' Read stock assessment data from SAIO
+#'
+#' Read the local SAIO tables for one stock, one assessment run, or the
+#' whole database. Use either `stock_id` or `assessment_id`. Omit both to
+#' read all rows of the requested tables.
+#'
+#' @param database_dir Folder containing the local tables. Omit it to use
+#'   the default download location. When running from the root of an SAIO
+#'   curation checkout, local plain CSV working tables take precedence
+#'   when present.
+#' @param stock_id One exact stock identifier. Selects all available
+#'   assessment runs for the stock. Find stock IDs with [list_stocks()].
+#' @param assessment_id One exact assessment identifier. Selects a single
+#'   assessment run and its stock. Find assessment IDs with
+#'   [list_assessments()].
+#' @param tables Names of the tables to return. For example, use
+#'   `c("inputs", "outputs")` to request those two tables.
+#'
+#' @details
+#' The function reads compressed tables directly from disk. A stock or
+#' assessment query keeps only the matching records in memory, though
+#' scanning a large table takes time. Reading the complete input and
+#' output tables can use substantial memory. Use [download_database()]
+#' to obtain a data release before reading it locally.
+#'
+#' @returns A named list with a data frame for each requested table, plus
+#'   `database_source` and `commit` provenance fields. For a compressed data
+#'   release, the list also includes `database_release`, the release tag to
+#'   record with your analysis. The `commit` field is `NA` for a compressed
+#'   data release.
+#' @seealso [download_database()], [list_stocks()], [list_assessments()]
+#' @rdname saio-read
+#' @export
 read_database <- function(database_dir = NULL, stock_id = NULL,
                           assessment_id = NULL, tables = c("stocks", "assessments",
                             "assumptions", "inputs", "outputs")) {
@@ -136,6 +169,27 @@ read_database <- function(database_dir = NULL, stock_id = NULL,
   result
 }
 
+#' Find stocks and assessment runs
+#'
+#' Search the stock catalogue and find the assessment runs associated with
+#' each stock. These functions use the small local catalogue tables.
+#'
+#' @param search Text to look for in stock names or identifiers. The
+#'   search ignores case. Omit it to list all stocks.
+#' @param database_dir Folder containing the local tables. Omit it to use
+#'   the default location, or pass the path returned by
+#'   [download_database()] if you chose a custom folder.
+#'
+#' @details
+#' Check the stock area and assessment year before selecting an assessment.
+#' The assessment table includes source links and shows which inputs,
+#' assumptions and outputs are available.
+#'
+#' @returns A data frame with one row per matching stock or assessment run.
+#'   Use its `stock_id` or `assessment_id` with [read_database()].
+#' @seealso [download_database()], [read_database()]
+#' @rdname saio-catalogue
+#' @export
 list_stocks <- function(search = NULL, database_dir = NULL) {
   if (!is.null(search)) .saio_argument(search, "search")
   stocks <- read_database(database_dir, tables = "stocks")$stocks
@@ -150,6 +204,10 @@ list_stocks <- function(search = NULL, database_dir = NULL) {
   stocks
 }
 
+#' @param stock_id One exact stock identifier, as shown in the `stock_id`
+#'   column of [list_stocks()]. Omit it to list all assessments.
+#' @rdname saio-catalogue
+#' @export
 list_assessments <- function(stock_id = NULL, database_dir = NULL) {
   read_database(database_dir, stock_id = stock_id, tables = "assessments")$assessments
 }
