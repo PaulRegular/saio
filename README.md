@@ -1,6 +1,6 @@
-# SAIO — Stock Assessment Inputs and Outputs Database <a><img src="man/figures/logo.png" align="right" height="138"/></a>
+# SAIO <a><img src="man/figures/logo.png" align="right" height="138"/></a>
 
-SAIO brings together publicly available data and results from official fish stock assessments. It is intended for stock assessment biologists and researchers who want to find, understand and reuse assessment inputs and outputs.
+SAIO (Stock Assessment Inputs and Outputs Database) brings together publicly available data and results from official fish stock assessments. It is intended for stock assessment biologists and researchers who want to find, understand and reuse assessment inputs and outputs.
 
 The collection currently focuses on finfish and age-disaggregated information: catch and survey data, weights, maturity, mortality assumptions, and estimates of abundance, recruitment, fishing mortality and spawning-stock biomass. Coverage varies among stocks. Records retain their source units, biological definitions and references to the original assessment material.
 

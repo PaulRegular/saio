@@ -29,19 +29,19 @@
   </metadata>
   <defs>
     <linearGradient id="surface-blue" gradientUnits="userSpaceOnUse" x1="370" y1="32" x2="490" y2="518">
-      <stop offset="0" stop-color="#A6DDEC"/>
-      <stop offset="0.54" stop-color="#82C9DF"/>
-      <stop offset="1" stop-color="#63B4D1"/>
+      <stop offset="0" stop-color="#C3ECF5"/>
+      <stop offset="0.54" stop-color="#A1DBEC"/>
+      <stop offset="1" stop-color="#7CC8E1"/>
     </linearGradient>
     <linearGradient id="near-blue" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="474">
-      <stop offset="0" stop-color="#298FB5"/>
+      <stop offset="0" stop-color="#3BA4C8"/>
       <stop offset="0.48" stop-color="#176C9C"/>
-      <stop offset="1" stop-color="#104A79"/>
+      <stop offset="1" stop-color="#0E3A63"/>
     </linearGradient>
     <linearGradient id="far-blue" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="474">
-      <stop offset="0" stop-color="#1F75A7"/>
+      <stop offset="0" stop-color="#318AB8"/>
       <stop offset="0.48" stop-color="#15578B"/>
-      <stop offset="1" stop-color="#0A355F"/>
+      <stop offset="1" stop-color="#061F40"/>
     </linearGradient>
   </defs>
   <g id="frame" inkscape:label="Hexagonal frame" inkscape:groupmode="layer">
