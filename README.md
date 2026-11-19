@@ -1,4 +1,4 @@
-# SAIO — Stock Assessment Inputs and Outputs Database
+# SAIO — Stock Assessment Inputs and Outputs Database <a><img src="man/figures/logo.png" align="right" height="138"/></a>
 
 SAIO brings together publicly available data and results from official fish stock assessments. It is intended for stock assessment biologists and researchers who want to find, understand and reuse assessment inputs and outputs.
 
