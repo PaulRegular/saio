@@ -4,6 +4,31 @@ SAIO brings together publicly available data and results from official fish stoc
 
 The collection currently focuses on finfish and age-disaggregated information: catch and survey data, weights, maturity, mortality assumptions, and estimates of abundance, recruitment, fishing mortality and spawning-stock biomass. Coverage varies among stocks. Records retain their source units, biological definitions and references to the original assessment material.
 
+## Use SAIO
+
+Install the package once in R. You can then use SAIO from any project.
+
+```r
+install.packages("pak")
+pak::pak("PaulRegular/saio")
+```
+
+Download the latest data release, then search for a stock and choose an assessment:
+
+```r
+library(saio)
+download_database()
+
+list_stocks("cod")
+list_assessments("dfo_cod_2j3kl")
+cod <- read_database(assessment_id = "dfo_cod_2j3kl_2025")
+cod$database_release
+```
+
+The catalogue searches are quick. An assessment query scans the compressed input and output tables and keeps only the matching rows in memory. This can take a minute or more for a large release. Use `cod$inputs`, `cod$assumptions`, and `cod$outputs` to work with the selected data. Record `cod$database_release` with your analysis so you can use the same data again.
+
+To browse without R, download the two small catalogue tables from the latest release. [Stocks CSV](https://github.com/PaulRegular/saio/releases/latest/download/stocks.csv.gz) · [Assessments CSV](https://github.com/PaulRegular/saio/releases/latest/download/assessments.csv.gz)
+
 ## How the database is organized
 
 SAIO releases contain five linked CSV tables. The Git repository holds the schema, [import and validation scripts](scripts/), [source reviews](source_reviews/), [source manifests](provenance/) and [published release manifests](database/releases/).
@@ -43,55 +68,33 @@ For NOAA Pacific Coast petrale sole, see the [stock source review](source_review
 
 ## Getting the data
 
-Download the five `.csv.gz` assets and `manifest.csv` for a named release from
-[GitHub Releases](https://github.com/PaulRegular/saio/releases). Keep the release
-tag with any analysis that uses the data. The manifest records the schema,
-row counts and SHA-256 checksums.
+`download_database()` verifies the five compressed tables against the release manifest and shows where it saved them. The catalogue and read functions use your local files, including when you are offline. By default, all your RStudio projects can use the same local copy. The November 2026 release occupies about 77 MB compressed.
 
-To restore the tables into an SAIO checkout, install the R package
-`openssl`, then run this command from the repository root:
+Use the release tag to reproduce an analysis. To store the data on another drive, choose a new folder and pass the returned path to the readers:
 
-```sh
-Rscript scripts/003_restore_release.R path/to/downloaded/assets
+```r
+saio_dir <- download_database(
+  release = "saio-2026-11-16-curation",
+  database_dir = "D:/SAIO/curation"
+)
+list_stocks("cod", database_dir = saio_dir)
 ```
 
-The restore script checks the compressed assets and the resulting CSVs before
-installing them under `database/`. An explicit second argument selects a
-different directory. Choose a destination without existing tables.
-Downloaded source reports and native assessment files remain available through
-the citations and source manifests.
+A repeat download reuses an intact copy of the requested release. Choose another folder if you want to keep more than one release or the destination is already occupied.
+
 
 ## Accessing a stock in R
 
-From a local copy of SAIO, set R's working directory to the `saio` folder. You can search the two small catalogue tables before loading the larger data tables:
+Use `assessment_id` for one assessment or `stock_id` for all assessments associated with a stock. Each run retains its assessment ID. Request only the tables you need with `tables`:
 
 ```r
-stocks <- read.csv("database/stocks.csv", stringsAsFactors = FALSE)
-assessments <- read.csv("database/assessments.csv", stringsAsFactors = FALSE)
+cod_outputs <- read_database(stock_id = "dfo_cod_2j3kl", tables = "outputs")
 
-subset(stocks, grepl("cod", common_name, ignore.case = TRUE),
-  select = c(stock_id, common_name, area, authority))
-
-subset(assessments, stock_id == "dfo_cod_2j3kl",
-  select = c(assessment_id, assessment_year, terminal_year,
-    is_current, inputs_status, outputs_status))
+ssb <- subset(cod_outputs$outputs, measure == "SSB")
+head(ssb[c("assessment_id", "year", "value", "lwr", "upr", "unit")])
 ```
 
-For example, the detailed 2025 Northern cod assessment has the identifier `dfo_cod_2j3kl_2025`. The supplied R helpers read the five tables and select the records for that assessment:
-
-```r
-source("R/read_database.R")
-database <- read_database()
-cod <- read_assessment("dfo_cod_2j3kl_2025", database)
-
-unique(cod$inputs[c("type", "measure", "unit")])
-unique(cod$outputs[c("type", "measure", "unit")])
-
-ssb <- subset(cod$outputs, measure == "SSB")
-head(ssb[c("year", "value", "lwr", "upr", "unit", "notes")])
-```
-
-The helpers load the full database before selecting an assessment, so allow time and memory for the large tables. The selected records are available as `cod$stocks`, `cod$assessment`, `cod$inputs`, `cod$assumptions` and `cod$outputs`. You can also read any CSV directly with your preferred software.
+Pass `database_dir` to `read_database()` or `list_assessments()` if you stored the data in a custom folder. Calling `read_database()` without a stock or assessment ID can load the full tables into memory.
 
 ## Interpreting the records
 

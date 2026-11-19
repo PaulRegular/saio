@@ -1,0 +1,15 @@
+Package: saio
+Title: Access the Stock Assessment Inputs and Outputs Database
+Version: 0.1.0
+Authors@R: person("Paul", "Regular", email = "Paul.Regular@dfo-mpo.gc.ca",
+    role = c("aut", "cre"))
+Description: Access versioned releases of the Stock Assessment Inputs and Outputs
+    Database. Browse fish stocks and assessment runs, and read official inputs,
+    assumptions, and outputs from local compressed files.
+License: GPL (>= 3)
+Encoding: UTF-8
+Depends: R (>= 4.0.0)
+Imports: openssl, tools, utils
+NeedsCompilation: no
+URL: https://github.com/PaulRegular/saio
+BugReports: https://github.com/PaulRegular/saio/issues

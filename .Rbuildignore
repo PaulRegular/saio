@@ -1,0 +1,17 @@
+^AGENTS[.]md$
+^CODE_LICENSE[.]md$
+^DATABASE_STRUCTURE[.]md$
+^PROTOCOL[.]md$
+^TODO[.]md$
+^database$
+^lfs_storage$
+^provenance$
+^results$
+^scripts$
+^source_cache$
+^source_reviews$
+^tmp$
+^tests/(test_|helper_|_snaps)
+^[.]gitattributes$
+^.*\.Rproj$
+^\.Rproj\.user$
