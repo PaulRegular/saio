@@ -31,7 +31,7 @@ To browse without R, download the two small catalogue tables from the latest rel
 
 ## How the database is organized
 
-SAIO releases contain five linked CSV tables. The Git repository holds the schema, [import and validation scripts](scripts/), [source reviews](source_reviews/), [source manifests](provenance/) and [published release manifests](database/releases/).
+SAIO releases contain five linked CSV tables. See the [data dictionary](DATABASE_STRUCTURE.md) for column definitions and the [release manifests](database/releases/) for the contents and checksums of each published release.
 
 | Table | What it contains |
 |---|---|
@@ -58,13 +58,13 @@ The assessment table distinguishes:
 
 The `inputs_status`, `assumptions_status` and `outputs_status` columns describe how much of the official assessment has been captured. A `partial` record contains useful information but has documented gaps; `complete` refers to extraction coverage, rather than independent scientific verification. Some stocks have catalogue information only and no assessment data yet.
 
-Assessment records link to the original reports and, where available, data files and assessment objects. The [source reviews](source_reviews/) explain what was recovered, how values were interpreted or reconstructed, and what remains unavailable. The [candidate register](database/candidates.csv) records stocks under review and progress toward adding them.
+Assessment records link to the original reports and, where available, data files and assessment objects. The [source reviews](data-raw/source_reviews/) explain what was recovered, how values were interpreted or reconstructed, and what remains unavailable. The [candidate register](database/candidates.csv) records stocks under review and progress toward adding them.
 
-To retrace an import, use the stock ID to find its review and [processing scripts](scripts/). The [source manifest](provenance/) for the assessment ID lists the exact files, versions and checksums used. Cache those source files locally under `source_cache/<stock_id>/<assessment_id>/`. The stock ID matches the script folder. Use `source_cache/shared/` for files used by several stocks.
+The [source manifests](data-raw/provenance/) list the files, versions and checksums used for each assessment. For a published release, view its Git tag to see the evidence as it stood at publication.
 
-For the Greenland halibut unit in NAFO Subarea 2 and Divisions 3KLMNO, see the [stock source review](source_reviews/dfo_greenland_halibut_2_3klmno.md).
+For the Greenland halibut unit in NAFO Subarea 2 and Divisions 3KLMNO, see the [stock source review](data-raw/source_reviews/dfo_greenland_halibut_2_3klmno.md).
 
-For NOAA Pacific Coast petrale sole, see the [stock source review](source_reviews/noaa_petrale_sole_pacific_coast.md).
+For NOAA Pacific Coast petrale sole, see the [stock source review](data-raw/source_reviews/noaa_petrale_sole_pacific_coast.md).
 
 ## Getting the data
 
@@ -103,12 +103,12 @@ Pass `database_dir` to `read_database()` or `list_assessments()` if you stored t
 - **Treat missing values as missing.** A blank value is not zero. Blank years or ages can also indicate a time-invariant or aggregate quantity. The `year_basis` field identifies calendar-year, model-year or cohort indexing for inputs.
 - **Check output definitions and uncertainty.** Recruitment age, spawning time, sex convention and the age range used for mean F can differ among assessments. `se` is a standard error; its scale is documented in the notes. `lwr` and `upr` retain available interval limits, with their level and construction described where known. Missing uncertainty has not been filled in.
 
-Use `source_reference`, `source_type`, `transformation` and `notes` to trace a record to its source and understand any reconstruction. Detailed column definitions are in [DATABASE_STRUCTURE.md](DATABASE_STRUCTURE.md); source-selection and recovery rules are in [PROTOCOL.md](PROTOCOL.md).
+Use `source_reference`, `source_type`, `transformation` and `notes` to trace a record to its source and understand any reconstruction. Detailed column definitions are in the [data dictionary](DATABASE_STRUCTURE.md).
 
 ## Where SAIO started
 
 The Charbonneau–Keith Age-structured Marine Fish Database supplied SAIO’s initial list of stocks. The optional `charbonneau_id` column preserves the link to that catalogue. Use `stock_id` to join the SAIO tables.
-[Charbonneau–Keith catalogue](https://github.com/JulieCharbonneau/Age-structured-marine-fish-database) · [Pinned Master CSV](https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/Master.csv) · [SAIO catalogue review](source_reviews/shared/charbonneau_keith_master_catalogue.md)
+[Charbonneau–Keith catalogue](https://github.com/JulieCharbonneau/Age-structured-marine-fish-database) · [Pinned Master CSV](https://raw.githubusercontent.com/JulieCharbonneau/Age-structured-marine-fish-database/7e4daca3cbfc14ce7fa0b28ed824eebe7113249b/Master.csv) · [SAIO catalogue review](data-raw/source_reviews/shared/charbonneau_keith_master_catalogue.md)
 
 ## Scope and verification
 
@@ -122,4 +122,4 @@ SAIO is a growing collection, not an exhaustive inventory of all assessments. Th
 
 Record the release tag used in your analysis and retain its manifest and assets. Cite the original assessment sources as well as SAIO, and retain their attribution and any source-specific reuse terms. No blanket licence is assigned to third-party assessment material. Repository code retains its attribution and GPL (>= 3) licence in [CODE_LICENSE.md](CODE_LICENSE.md).
 
-For curation and archiving, see [Batch commits and snapshots](PROTOCOL.md#batch-commits-and-snapshots).
+To add assessments or verify an import, see the [curation guide](data-raw/).

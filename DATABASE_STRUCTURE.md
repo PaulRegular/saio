@@ -22,7 +22,7 @@ All canonical tables should remain ordinary CSV files so they can be inspected d
 
 This document defines the canonical source records and database schema. It does
 not define stock-specific analysis transformations, model settings, or
-comparisons. Use `PROTOCOL.md` to obtain, verify, or repair records. If a
+comparisons. Use `data-raw/PROTOCOL.md` to obtain, verify, or repair records. If a
 downstream analysis reveals a source-data gap, validate and revise the affected
 database records while keeping analysis-specific choices separate.
 
@@ -144,7 +144,7 @@ One row per assessment event or model run represented in the database.
 | `assessment_type` | Annual, update, benchmark, framework, etc. |
 | `model_family` | SAM, Stock Synthesis, WHAM, NCAM, VPA/ADAPT, etc. |
 | `model_version` | Model/package/version identifier where known |
-| `is_current` | The selected publicly accessible detailed official assessment for this stock record, following `PROTOCOL.md`. It may be partial or predate newer summary-only advice. A selected assessment for an earlier stock record does not mean that historical unit is the latest stock unit; document any boundary change and fallback in notes. |
+| `is_current` | The selected publicly accessible detailed official assessment for this stock record, following `data-raw/PROTOCOL.md`. It may be partial or predate newer summary-only advice. A selected assessment for an earlier stock record does not mean that historical unit is the latest stock unit; document any boundary change and fallback in notes. |
 | `is_applied` | Whether this assessment was applied for advice in its assessment cycle. A current detailed benchmark can be `FALSE` if it has not yet been used for advice; more than one historical assessment can be `TRUE`. |
 | `framework_year` | Benchmark/framework year defining the current model, if distinct |
 | `assessment_url` | Main authoritative assessment/report URL |
