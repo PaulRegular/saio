@@ -1,3 +1,9 @@
+<!-- badges: start -->
+
+[![R CMD check](https://github.com/PaulRegular/saio/actions/workflows/R-CMD-check.yaml/badge.svg?branch=main)](https://github.com/PaulRegular/saio/actions/workflows/R-CMD-check.yaml) [![Codecov test coverage](https://codecov.io/gh/PaulRegular/saio/branch/main/graph/badge.svg)](https://app.codecov.io/gh/PaulRegular/saio)
+
+<!-- badges: end -->
+
 # SAIO <a><img src="man/figures/logo.png" align="right" height="138"/></a>
 
 SAIO (Stock Assessment Inputs and Outputs Database) brings together publicly available data and results from official fish stock assessments. It is intended for stock assessment biologists and researchers who want to find, understand and reuse assessment inputs and outputs.

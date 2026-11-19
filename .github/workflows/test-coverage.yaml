@@ -11,6 +11,9 @@ permissions:
 jobs:
   coverage:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
@@ -40,21 +43,11 @@ jobs:
           path: cobertura.xml
           if-no-files-found: error
 
-      - name: Check whether Codecov is configured
-        id: codecov
-        shell: bash
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        run: |
-          if [ -n "$CODECOV_TOKEN" ]; then
-            echo "configured=true" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Upload coverage to Codecov
-        if: steps.codecov.outputs.configured == 'true'
+        if: github.event_name == 'push' || (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]')
         uses: codecov/codecov-action@v5
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          use_oidc: true
           files: cobertura.xml
           disable_search: true
           plugins: noop
